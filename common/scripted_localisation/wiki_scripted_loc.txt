@@ -1,0 +1,97 @@
+defined_text = {
+	name = GetWikiTitle #This helps determine the header at every slide of the wiki
+	text = {
+		trigger = {
+			check_variable = { aeiou_wiki = 0 }
+		}
+		localization_key = "Mod Description"
+	}
+	text = {
+		trigger = {
+			check_variable = { aeiou_wiki = 1 }
+		}
+		localization_key = "[Root.GetNameDEF]"
+	}
+	text = {
+		trigger = {
+			check_variable = { aeiou_wiki = 2 }
+		}
+		localization_key = "Region Description"
+	}
+	text = {
+		trigger = {
+			check_variable = { aeiou_wiki = 3 }
+		}
+		localization_key = "Religion Description"
+	}
+	text = {
+		trigger = {
+			check_variable = { aeiou_wiki = 4 }
+		}
+		localization_key = "Mechanics"
+	}
+	text = {
+		localization_key = "Mod Description"
+	}
+}
+
+defined_text = {
+	name = GetWikiText  #This helps determine the main text displayed at every slide of the wiki
+	text = {
+		trigger = {
+			check_variable = { aeiou_wiki = 0 }
+		}
+		localization_key = "AEIOU_WIKI_MOD_DESCRIPTION_TEXT"
+	}
+	text = {
+		trigger = {
+			check_variable = { aeiou_wiki = 1 }
+		}
+		localization_key = "AEIOU_WIKI_COUNTRY_DESCRIPTION_TEXT"
+	}
+	text = {
+		trigger = {
+			check_variable = { aeiou_wiki = 2 }
+		}
+		localization_key = "AEIOU_WIKI_REGION_DESCRIPTION_TEXT"
+	}
+	text = {
+		trigger = {
+			check_variable = { aeiou_wiki = 3 }
+		}
+		localization_key = "AEIOU_WIKI_RELIGION_DESCRIPTION_TEXT"
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = GetWikiTextCountryDesc #This helps determine the country lore text displayed 
+	text = {
+		trigger = {
+		    check_variable = { aeiou_wiki = 1 }
+			tag = AUS #In order to add a text for a country just add to a new script loc entry with a tag trigger as here
+		}
+		localization_key = AEIOU_WIKI_COUNTRY_DESCRIPTION_TEXT_AUS #Keep all country lore organised in the localisation files following this format
+	}
+	text = {
+		trigger = {
+	        check_variable = { aeiou_wiki = 1 }
+		}
+		localization_key = "AEIOU_WIKI_COUNTRY_DESCRIPTION_TEXT_PLACEHOLDER" #This is a placeholder for countries without text
+	}
+}
+
+defined_text = {
+	name = GetWikiMechanicsText #This helps determine which mechanic text is displayed 
+	text = {
+		trigger = {
+		    check_variable = { aeiou_wiki_mechanics = 0 } 
+		}
+		localization_key = AEIOU_WIKI_MECHANICS_NEW_IDEOLOGY_DESCRIPTION_TEXT #This is the actual description. Please keep the format consistent for localisation entries
+	}
+	text = {
+		localization_key = ""
+	}
+}

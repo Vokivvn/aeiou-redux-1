@@ -1,0 +1,16 @@
+state={
+	id=867
+	name="STATE_867"
+
+	history={
+		owner = GEL
+		add_core_of = GEL
+	}
+
+	provinces={
+		13231 13232 4995 2063 8164 10928
+	}
+	manpower = 10
+	buildings_max_level_factor = 1.000
+	state_category = rural
+}

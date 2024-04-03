@@ -1,0 +1,80 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ideology_absolutist_group"
+		texturefile = "gfx/interface/ideologies/ideology_monarchy_absolutist.dds"
+	}   
+	spriteType = {                                                                                                                                                                                                                                                                                                                                                                
+		name = "GFX_ideology_absolute_group"
+		texturefile = "gfx/interface/ideologies/ideology_monarchy_absolute.dds"
+	}
+	spriteType = {                   
+		name = "GFX_ideology_constitutional_group"                      
+		texturefile = "gfx/interface/ideologies/ideology_monarchy_constitutional.dds"
+	}    
+	spriteType = {
+		name = "GFX_ideology_elective_group"   
+		texturefile = "gfx/interface/ideologies/ideology_monarchy_elective.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_theocracy_group"   
+		texturefile = "gfx/interface/ideologies/ideology_theocracy.dds"      
+	}
+	spriteType = {
+		name = "GFX_ideology_oligarchic_group"   
+		texturefile = "gfx/interface/ideologies/ideology_oligarchic_conservative.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_free_city_group"   
+		texturefile = "gfx/interface/ideologies/ideology_free_city.dds"      
+	}
+	spriteType = {
+		name = "GFX_ideology_conservative_group"   
+		texturefile = "gfx/interface/ideologies/ideology_conservative.dds"      
+	}
+	
+	
+	spriteType = {                                
+		name = "GFX_new_ideologies_bg_ruling"   
+		texturefile = "gfx/interface/new_ideologies_bg_ruling.dds"
+	}
+	spriteType = {                                
+		name = "GFX_new_ideologies_ruling_icon"   
+		texturefile = "gfx/interface/new_ideologies_ruling_icon.dds"
+	}
+	spriteType = {                                
+		name = "GFX_new_ideologies_coalition_icon"   
+		texturefile = "gfx/interface/new_ideologies_coalition_icon.dds"
+	}
+	spriteType = {                                
+		name = "GFX_new_ideologies_chauvinism_icon"   
+		texturefile = "gfx/interface/new_ideology_chauvinism.dds"
+	}
+	spriteType = {                                
+		name = "GFX_new_ideologies_despotism_icon"   
+		texturefile = "gfx/interface/new_ideology_despotism.dds"
+	}
+	spriteType = {                                
+		name = "GFX_new_ideologies_conservatism_icon"   
+		texturefile = "gfx/interface/new_ideology_conservatism.dds"
+	}
+	spriteType = {                                
+		name = "GFX_new_ideologies_liberalism_icon"   
+		texturefile = "gfx/interface/new_ideology_liberalism.dds"
+	}
+	spriteType = {                                
+		name = "GFX_new_ideologies_progressivism_icon"   
+		texturefile = "gfx/interface/new_ideology_progressivism.dds"
+	}
+	spriteType = {                                
+		name = "GFX_new_ideologies_socialism_icon"   
+		texturefile = "gfx/interface/new_ideology_socialism.dds"
+	}
+	spriteType = {                                
+		name = "GFX_new_ideologies_communism_icon"   
+		texturefile = "gfx/interface/new_ideology_communism.dds"
+	}
+	spriteType = {                                
+		name = "GFX_new_ideologies_anarchism_icon"   
+		texturefile = "gfx/interface/new_ideology_anarchism.dds"
+	}
+}   

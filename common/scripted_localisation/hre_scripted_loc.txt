@@ -1,0 +1,235 @@
+defined_text = {
+		name = HREEmperorTag
+		text = {
+			localization_key = "[?global.hre_emperor.GetTag]"
+		}
+}
+
+defined_text = {
+	name = GetEmperorName
+	text = {
+		trigger = { 
+			OR = {
+				check_variable = { global.hre_emperor = 0 }
+				has_global_flag = no_hre_emperor
+			}
+		}
+		localization_key = HRE_EMPEROR_NO_EMPEROR
+	}
+	text = {
+	    localization_key = HRE_EMPEROR_NAME
+	}
+}
+
+defined_text = {
+	name = GetActionName
+	text = {
+		trigger = { 
+			check_variable = { hre_decisions_array^i = 1 }
+		}
+		localization_key = "Call to Arms"
+	}
+	text = {
+		trigger = { 
+			check_variable = { hre_decisions_array^i = 2 }
+		}
+		localization_key = "Tour the HRE"
+	}
+	text = {
+		trigger = { 
+			check_variable = { hre_decisions_array^i = 3 }
+		}
+		localization_key = "Support the Emperor"
+	}
+	text = {
+		trigger = { 
+			check_variable = { hre_decisions_array^i = 4 }
+		}
+		localization_key = "Consolidate the HRE"
+	}
+	text = {
+		trigger = { 
+			check_variable = { hre_decisions_array^i = 5 }
+		}
+		localization_key = "Distance from HRE"
+	}
+	text = {
+		trigger = { 
+			check_variable = { hre_decisions_array^i = 6 }
+		}
+		localization_key = "Imperial Reforms"
+	}
+	text = {
+		trigger = { 
+			check_variable = { hre_decisions_array^i = 7 }
+		}
+		localization_key = "Imperial Prominence"
+	}
+	text = {
+		trigger = { 
+			check_variable = { hre_decisions_array^i = 8 }
+		}
+		localization_key = "Early Mobilization Reform"
+	}
+	text = {
+		trigger = { 
+			check_variable = { hre_decisions_array^i = 9 }
+		}
+		localization_key = "The Imperial Army"
+	}
+	text = {
+		trigger = { 
+			check_variable = { hre_decisions_array^i = 10 }
+		}
+		localization_key = "Loyal Militaristic Oath"
+	}
+	text = {
+		trigger = { 
+			check_variable = { hre_decisions_array^i = 11 }
+		}
+		localization_key = "Defense of the Empire"
+	}
+	text = {
+		trigger = { 
+			check_variable = { hre_decisions_array^i = 12 }
+		}
+		localization_key = "Call of the Empire"
+	}
+	text = {
+		trigger = { 
+			check_variable = { hre_decisions_array^i = 13 }
+		}
+		localization_key = "Emperor's Economy"
+	}
+	text = {
+		trigger = { 
+			check_variable = { hre_decisions_array^i = 14 }
+		}
+		localization_key = "Emperor's Military Industry"
+	}
+	text = {
+		trigger = { 
+			check_variable = { hre_decisions_array^i = 15 }
+		}
+		localization_key = "Excommunication of the Pope"
+	}
+	text = {
+	    localization_key = "Unknown Action"
+	}
+}
+
+defined_text = {
+	name = GetElectorOpinion
+	text = {
+		trigger = { 
+			set_temp_variable = { hre_elector_opinion_temp = global.elector_tag_array^i }
+		}
+		localization_key = "[?hre_elector_opinion_temp:opinion@global.hre_emperor|=+0]"
+	}
+}
+
+defined_text = {
+	name = GetElectorPickFlag
+	text = {
+		trigger = { 
+			set_temp_variable = { hre_elector_pick_temp = global.elector_tag_array^i }
+		}
+		localization_key = "[?hre_elector_pick_temp:hre_emperor_vote.GetFlag]"
+	}
+}
+
+defined_text = {
+	name = GetElectorPickName
+	text = {
+		trigger = { 
+			set_temp_variable = { hre_elector_pick_temp = global.elector_tag_array^i }
+		}
+		localization_key = "[?hre_elector_pick_temp:hre_emperor_vote.GetNameDef]"
+	}
+}
+
+defined_text = {
+	name = GetControllerTooltip
+	text = {
+		trigger = { 
+			OR = {
+				has_idea = hre_idea_elector
+				has_idea = hre_idea_prince
+				has_idea = hre_idea_free_city
+				has_idea = hre_idea_republic
+				has_idea = hre_idea_conservative
+			}
+		}
+		localization_key = "Leave the HRE"
+	}
+	text = {
+		trigger = { 
+			has_idea = hre_idea_emperor
+		}
+		localization_key = "Unable to Leave the HRE"
+	}
+	text = {
+		trigger = { 
+			check_variable = { score_array_position_var > 16 }
+			any_owned_state = {
+				is_capital = yes
+				is_on_continent = europe
+			}
+			OR = {
+				tag = PRS
+				tag = BRD
+				tag = SAX
+				tag = THU
+				tag = MCK
+				tag = LBK
+				tag = SCH
+				tag = HAM
+				tag = HAN
+				tag = BRE
+				tag = OLD
+				tag = MUN
+				tag = KLE
+				tag = DOR
+				tag = MRK
+				tag = KSS
+				tag = NSS
+				tag = JUL
+				tag = KOL
+				tag = TRI
+				tag = FRK
+				tag = WRZ
+				tag = ANB
+				tag = NUR
+				tag = BAD
+				tag = WUR
+				tag = ULM
+				tag = BAV
+				tag = AUS
+				tag = GEN
+				tag = PIE
+				tag = MIL
+				tag = VNC
+				tag = TUS
+				tag = PAP
+				tag = NAP
+				tag = SWI
+				tag = HOL
+				tag = LIE
+			}
+			any_neighbor_country = {
+				OR = {
+					has_idea = hre_idea_emperor
+					has_idea = hre_idea_elector
+					has_idea = hre_idea_prince
+					has_idea = hre_idea_free_city
+					has_idea = hre_idea_republic
+					has_idea = hre_idea_conservative
+				}
+			}
+		}
+		localization_key = "Join the HRE"
+	}
+	text = {
+	    localization_key = "Unable to Join the HRE"
+	}
+}

@@ -1,0 +1,114 @@
+defined_text = {
+	name = GetAusUprisingUnity
+	text = {
+		trigger = { 
+			check_variable = { global.aus_var_opposition_unity < 0.25 }
+		}
+		localization_key = "AusUprisingUnityVLow"
+	}
+	text = {
+		trigger = { 
+			AND = {
+				check_variable = { global.aus_var_opposition_unity > 0.25 }
+				check_variable = { global.aus_var_opposition_unity < 0.5 }
+			}
+		}
+		localization_key = "AusUprisingUnityLow"
+	}
+	text = {
+		trigger = { 
+			AND = {
+				check_variable = { global.aus_var_opposition_unity > 0.5 }
+				check_variable = { global.aus_var_opposition_unity < 0.75 }
+			}
+		}
+		localization_key = "AusUprisingUnityModerate"
+	}
+	text = {
+		trigger = { 
+			AND = {
+				check_variable = { global.aus_var_opposition_unity > 0.75 }
+			}
+		}
+		localization_key = "AusUprisingUnityHigh"
+	}
+}
+
+defined_text = {
+	name = GetAusUprisingIntensity
+	text = {
+		trigger = { 
+			check_variable = { global.aus_var_opposition_intensity < 0.25 }
+		}
+		localization_key = "AusUprisingIntensityVLow"
+	}
+	text = {
+		trigger = { 
+			AND = {
+				check_variable = { global.aus_var_opposition_intensity > 0.25 }
+				check_variable = { global.aus_var_opposition_intensity < 0.5 }
+			}
+		}
+		localization_key = "AusUprisingIntensityLow"
+	}
+	text = {
+		trigger = { 
+			AND = {
+				check_variable = { global.aus_var_opposition_intensity > 0.5 }
+				check_variable = { global.aus_var_opposition_intensity < 0.75 }
+			}
+		}
+		localization_key = "AusUprisingIntensityModerate"
+	}
+	text = {
+		trigger = { 
+			AND = {
+				check_variable = { global.aus_var_opposition_intensity > 0.75 }
+			}
+		}
+		localization_key = "AusUprisingIntensityHigh"
+	}
+}
+
+defined_text = {
+	name = GetAusPopesReply
+	text = {
+		trigger = { 
+			has_global_flag = AUS_Austrian_Catholic_Concordat
+		}
+		localization_key = "AusPopeSaysYes"
+	}
+	text = {
+		trigger = { 
+			NOT = { has_global_flag = AUS_Austrian_Catholic_Concordat }
+		}
+		localization_key = "AusPopeSaysNo"
+	}
+}
+
+
+
+
+
+
+
+
+
+defined_text = {
+	name = GetAusCooldownDate
+	text = {
+		trigger = { 
+			check_variable = { global.auswarcooldown < global.date }
+		}
+		localization_key = "AusNoDateExists"
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { global.auswarcooldown = global.date }
+				check_variable = { global.auswarcooldown > global.date }	
+			}
+		}
+		localization_key = "AusDateExists"
+	}
+}

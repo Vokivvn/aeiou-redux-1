@@ -1,0 +1,27 @@
+state=
+{
+	id=8
+	name="STATE_8"
+	
+	state_category = town
+	
+	manpower = 187249
+	resources={
+	    wood=2
+	}
+
+	history=
+	{
+		owner = SPN
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = { 6583 5 }
+	    victory_points = { 11435 1 }
+		add_core_of = SPN
+	}
+
+	provinces=
+	{
+6583 11435 }
+}

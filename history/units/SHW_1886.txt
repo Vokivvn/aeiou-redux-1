@@ -1,0 +1,20 @@
+division_template = {
+	name = "Shawnee Tribesmen"
+
+	division_names_group = SHW_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "Shawnee Tribesmen"
+		location = 6890
+		division_template = "Shawnee Tribesmen"
+		start_experience_factor = 0.5
+	}
+}

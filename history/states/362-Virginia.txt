@@ -1,0 +1,41 @@
+
+state={
+	id=362
+	name="STATE_362"
+	manpower = 650402
+	
+	state_category = town
+
+	resources={
+		fabric=1
+		wood=3
+		steel=1
+		gunpowder=1
+	}
+
+	history={
+		owner = NEN
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+			dockyard = 1
+			788 = {
+				naval_base = 1
+
+			}
+		}
+		add_core_of = NEN
+		victory_points = {
+			788 10
+		}
+		victory_points = {
+			10412 15
+		}
+
+	}
+
+	provinces={
+		788 865 873 951 1506 3823 3925 6846 6958 9931 10343 10412 10439 11738 11841 11873 11888 11892 3957 7558
+	}
+}

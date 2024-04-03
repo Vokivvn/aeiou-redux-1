@@ -1,0 +1,27 @@
+state= {
+	id=905
+	name="STATE_905"
+	manpower = 1390048
+	resources={
+		wood=2
+	}
+	
+	state_category = pastoral
+
+	history= {
+		owner = SLW
+		add_core_of = SLW
+        victory_points = {
+			10263 3 
+		}
+		buildings = {
+			infrastructure = 2
+			10263 = {
+				naval_base = 2
+			}
+		}
+	}
+	provinces={
+	   10263 4349 1589 10464 7598 12330 4308 1561 7336 4537 4564 10450 12444 10222
+	}
+}

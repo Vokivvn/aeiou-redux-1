@@ -1,0 +1,38 @@
+
+state={
+	id=157
+	name="STATE_157"
+	manpower = 1611410
+	
+	state_category = city
+	
+	resources = {
+	    wood = 2
+		horses=2
+	}
+
+	history={
+		owner = PAP
+		victory_points = {
+			925 1 
+		}
+	    victory_points = {
+	    	6606 3 
+	    }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			925 = {
+				naval_base = 2
+			}
+			782 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = PAP
+	}
+
+	provinces={
+		925 967 6926 9838 11790 11861 9924 782 6793 6606 6985 
+	}
+}

@@ -1,0 +1,43 @@
+﻿capital = 808
+
+set_oob = "TRI_1886"
+
+set_research_slots = 2
+
+set_technology = {
+	muskets0 = 1
+	melee = 1
+	basic_cavalry = 1
+	melee_improvements = 1
+}
+
+add_ideas = {
+	hre_idea_elector
+	tri_idea_university
+	tri_idea_church_taxes
+	tri_idea_rhenish_trade
+}
+
+set_convoys = 10
+
+set_politics = {
+	ruling_party = theocratic
+	elections_allowed = no
+}
+set_popularities = {
+	theocratic = 100
+}
+
+create_country_leader = {
+	name = "Felix Korum"
+	desc = "POLITICS_ALBERT_SAXONY"
+	picture = "Portrait_TRI_Felix_Korum.dds"
+	expire = "1902.6.19"
+	ideology = theocratic_moderate
+	traits = {
+		#traits here need to also be added to events britain.9 and britain.10. Don't ask why.
+	}
+}
+
+add_to_array = { national_religion_array =  2 }
+set_variable = { hre_emperor_vote = AUS.id }

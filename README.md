@@ -1,0 +1,1 @@
+Welcome to A.E.I.O.U. 1886! This is the dev version of the git and it is expected that all of you dev with caution and responsability. Other than that, good developement!

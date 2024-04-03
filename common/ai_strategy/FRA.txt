@@ -1,0 +1,197 @@
+FRA_area_priority = {
+	enable = {
+		original_tag = FRA
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = europe
+		value = 120 #more focus here
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = scandinavia
+		value = 40
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = north_america
+		value = 40
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = south_america
+		value = 20
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = asia
+		value = 35
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = middle_east
+		value = 15
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = africa
+		value = 10
+	}
+	ai_strategy = {
+        type = area_priority
+        id = suez
+        value = -50
+    }
+	
+	ai_strategy = {
+		type = area_priority
+		id = pacific
+		value = 10 #less focus here
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = oceania
+		value = 10
+	}
+	
+	ai_strategy = {
+		type = prepare_for_war
+		id = "SPR"
+		value = 20
+	}
+}
+FRA_research_priority = {
+	enable = {
+		original_tag = FRA
+		NOT = { has_dlc = "Man the Guns" }
+	}
+	add_ai_strategy = {
+		type = research_tech
+		id = "transport"
+		value = 200
+	}
+}
+FRA_research_priority_mtg = {
+	enable = {
+		original_tag = FRA
+		has_dlc = "Man the Guns"
+	}
+	add_ai_strategy = {
+		type = research_tech
+		id = "mtg_transport"
+		value = 200
+	}
+}
+
+FRA_LOU = {
+	allowed = {
+		tag = FRA
+	}
+	enable = {
+		LOU = {
+			is_subject_of = FRA
+		}
+		NOT = {	has_country_flag = FRA_nativefireworks }
+		
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = put_unit_buffers
+		
+		order_id = 2
+		
+		states = { 
+			370
+			371
+			395
+			861
+			863
+		}
+		
+		ratio = 0.5
+		area = north_america
+		
+	}
+	
+	subtract_invasions_from_need = no
+	
+	ai_strategy = {
+		type = protect
+		id = "LOU"			
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "LOU"			
+		value = 25
+	}
+}
+
+FRA_LOU2 = {
+	allowed = {
+		tag = FRA
+	}
+	enable = {
+		LOU = {
+			is_subject_of = FRA
+		}
+		has_global_flag = FRA_Lak_war
+		
+	}
+	
+	abort_when_not_enabled = yes
+	
+	subtract_invasions_from_need = no
+	
+	ai_strategy = {
+		type = protect
+		id = "LOU"			
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = "LOU"			
+		value = 100
+	}
+}
+
+FRA_Protect_India = {
+	allowed = {
+		tag = FRA
+	}
+	
+	enable = {
+		always = yes
+	}
+	subtract_invasions_from_need = yes
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = put_unit_buffers
+		
+		order_id = 3
+		
+		states = { 
+			424
+			427
+			847
+			848
+			886
+		}
+		
+		ratio = 0.4
+		area = asia
+		
+	}
+}

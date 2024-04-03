@@ -1,0 +1,21 @@
+state= {
+	id=380
+	name="STATE_380"
+	manpower = 37430
+	
+	state_category = pastoral
+	
+	resources={
+	}
+
+	history={
+		owner = MEX
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = MEX
+	}
+	provinces={
+		10651 12573 12699 13153
+	}
+}

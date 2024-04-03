@@ -1,0 +1,30 @@
+state=
+{
+	id=318
+	name="STATE_318"
+	manpower = 412800
+	
+	state_category = rural
+	
+	resources={
+		wood=2 # was: 3
+	}
+	history=
+	{
+		owner = SPW
+		buildings = {
+			infrastructure = 3
+			4641 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = SPW
+		victory_points = {
+			4641 5 
+		}
+
+	}
+	provinces={
+		1594 1635 4641
+	}
+}

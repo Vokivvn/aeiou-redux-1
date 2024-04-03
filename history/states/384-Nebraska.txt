@@ -1,0 +1,28 @@
+
+state={
+	id=384
+	name="STATE_384"
+	manpower = 229402
+	
+	state_category = rural
+
+	resources={
+		wood=1
+	}
+
+	history={
+		owner = LOU
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = LOU
+		victory_points = {
+			12586 1 
+		}
+
+	}
+
+	provinces={
+	 3708 4830 10606 10676 12586 
+	}
+}

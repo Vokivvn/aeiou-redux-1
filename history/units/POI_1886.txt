@@ -1,0 +1,86 @@
+﻿division_template = {
+	name = "Royal Guard"
+
+	division_names_group = POI_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Cavalry Division"
+
+	division_names_group = POI_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Colonial Guard"
+
+	division_names_group = POI_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+	}
+	priority = 0
+}
+
+units = {
+	division = {
+		name = "Royal Indian Division"
+		location = 10201
+		division_template = "Royal Guard"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Royal Indian Division"
+		location = 10201
+		division_template = "Royal Guard"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Royal Indian medium_cavalry"
+		location = 8067
+		division_template = "Royal Cavalry Division"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "Indian Colonial Guard"
+		location = 10278
+		division_template = "Colonial Guard"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "Indian Colonial Guard"
+		location = 7265
+		division_template = "Colonial Guard"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "Indian Colonial Guard"
+		location = 4967
+		division_template = "Colonial Guard"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "Indian Colonial Guard"
+		location = 1273
+		division_template = "Colonial Guard"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "Indian Colonial Guard"
+		location = 4187
+		division_template = "Colonial Guard"
+		start_experience_factor = 0.5
+	}
+}

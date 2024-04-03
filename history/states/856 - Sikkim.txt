@@ -1,0 +1,27 @@
+
+state={
+	id=856
+	name="STATE_856" 
+	manpower = 50000
+	resources={
+		
+	}
+	
+	state_category = town
+
+	history={
+		owner = SKM
+		add_core_of = SKM
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		victory_points = {
+			4435 1
+		}		
+	}
+
+	provinces={
+		4435
+	}
+}

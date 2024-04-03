@@ -1,0 +1,27 @@
+state=
+{
+	id=102
+	name="STATE_102"
+	manpower = 710000
+	
+	state_category = large_town
+
+	resources={
+		wood = 5
+		fabric = 3
+	}
+	
+	history =
+	{
+		owner = AUS
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			9627 3 
+		}
+		add_core_of = AUS
+	}
+	provinces={
+		599 3631 6650 9627 }
+	}

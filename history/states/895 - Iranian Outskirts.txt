@@ -1,0 +1,24 @@
+
+state={
+	id=895
+	name="STATE_895" 
+	manpower = 125613
+	resources={
+		wood=2
+	}
+	
+	state_category = town
+
+	history={
+		owner = PER
+		add_core_of = PER
+		buildings = {
+			infrastructure = 2
+		}
+		
+	}
+
+	provinces={
+	   12359 10510 12333 7491 7560 4958 10357
+	}
+}

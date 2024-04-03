@@ -1,0 +1,24 @@
+state={
+	id=882
+	name="STATE_882"
+	
+	resources={
+		wood=2
+		fabric=2
+	}
+    
+	history={
+		owner = SAL
+		add_core_of = SAL
+		buildings = {
+			infrastructure = 2
+		}
+	}
+
+	provinces={
+      4296 10242 4398 7386 10271 10183 12211 4380 
+	}
+	manpower = 5663
+	buildings_max_level_factor = 1.000
+	state_category = pastoral
+}

@@ -1,0 +1,25 @@
+state={
+	id=699
+	name="STATE_699"
+	manpower = 6856
+	
+	state_category = wasteland
+
+	history={
+		owner = SAH
+		add_core_of = SAH
+		buildings = {
+			infrastructure = 1
+			10875 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			10875 1
+		}
+	}
+	
+	provinces={
+		7992 8035 10875
+	}
+}

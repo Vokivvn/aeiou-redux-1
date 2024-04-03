@@ -1,0 +1,49 @@
+state={
+	id=799
+	name="STATE_799"
+
+	state_category = large_town
+
+	resources={
+		steel=2
+		gunpowder=2
+		iron=4
+		wood=3
+		fabric=1
+	}
+
+	history={
+		owner = MAS
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 2
+			dockyard = 1
+			6732 = {
+				naval_base = 4
+
+			}
+			9832 = {
+				naval_base = 1
+
+			}
+		}
+		add_core_of = MAS
+		victory_points = {
+			6732 20 
+		}
+		victory_points = {
+			12459 1 
+		}
+		victory_points = {
+			9832 1 
+		}
+
+	}
+
+	provinces={
+		905 3906 6732 11830 3710 715 9832 718 908 9850 6909 9847 6911 3806 9774 9673 9693
+	}
+	manpower=1207042
+	buildings_max_level_factor=1.000
+}

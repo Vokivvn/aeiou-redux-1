@@ -1,0 +1,33 @@
+﻿#########################################
+      #Pirates, begone!
+#######################################
+
+
+add_namespace = Pirateexpedition
+
+country_event = {
+		id = Pirateexpedition.1
+		title = Pirateexpedition.1.t
+		desc = Pirateexpedition.1.d
+		
+		trigger = {
+			OR = {
+			tag = FRA
+			tag = SPR
+			tag = POR
+				}
+		}
+		
+		mean_time_to_happen = {
+		days = 300
+		}
+		
+		picture = #GFX_country_event_borneo_01.dds
+		
+		option = {
+		name = Pirateexpedition.1.a
+		ai_chance = { factor = 100 }
+		add_political_power = -50
+		PIR = { add_political_power = 10 }
+	}
+}

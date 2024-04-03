@@ -1,0 +1,35 @@
+
+state={
+	id=156
+	name="STATE_156"
+	manpower = 2209065
+	
+	state_category = city
+	 
+	resources = {
+	    wood=1
+		gunpowder =8
+	}
+	
+	history={
+		owner = NAP
+		victory_points = {
+			11837 5 
+		}
+		buildings = {
+			infrastructure = 3
+			dockyard = 1
+			11837 = {
+				naval_base = 4
+			}
+			11998 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = NAP
+	}
+
+	provinces={
+		3901 6979 9784 9856 9990 10027 11837 11998 12066 12098 
+	}
+}

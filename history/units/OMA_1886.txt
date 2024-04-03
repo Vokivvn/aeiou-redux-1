@@ -1,0 +1,56 @@
+division_template = {
+	name = "Royal Omani Guard Battalion"
+
+	division_names_group = OMA_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+		line_infantry = { x = 0 y = 4 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Omani Cavalry Division"
+
+	division_names_group = OMA_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Omani Warrior Brigade"
+
+	division_names_group = OMA_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Royal Omani Guard Battalion"
+		location = 10760
+		division_template = "Royal Omani Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Omani Cavalry Division"
+		location = 2059
+		division_template = "Royal Omani Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Omani Warrior Brigade"
+		location = 4993
+		division_template = "Royal Omani Warrior Brigade"
+		start_experience_factor = 0.3
+	}
+}

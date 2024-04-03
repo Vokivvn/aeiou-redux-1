@@ -1,0 +1,32 @@
+
+state={
+	id=131
+	name="STATE_131"
+	manpower = 1528860
+	
+	state_category = rural 
+	resources={
+		wood=2
+		iron=5
+	}
+
+	history={
+		owner = ENG
+		victory_points = {
+			351 5 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			dockyard = 1
+			351 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = ENG
+	}
+
+	provinces={
+		219 351 3311 6399 9285 11270 11299 11332 
+	}
+}

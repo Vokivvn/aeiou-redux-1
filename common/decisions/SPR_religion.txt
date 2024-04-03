@@ -1,0 +1,356 @@
+religious_actions = {
+	continue_spanish_inquisition = {
+
+		icon = oppression
+
+		allowed = {
+			tag = SPR
+		}
+
+		available = {
+			check_variable = { spr_var_catholic_influence < 1.00 }
+			has_manpower > 500
+			tag = SPR
+		}
+		
+		cancel_trigger = {
+			hidden_trigger = {
+				has_country_flag = Ended_Spanish_Inquisition
+			}
+		}
+
+		selectable_mission = yes
+		days_mission_timeout = 180
+		is_good = no
+		fire_only_once = no
+
+
+		days_remove = 30
+		days_re_enable = 180
+
+		cost = 50
+
+		complete_effect = {
+			add_manpower = -500
+			add_stability = 0.01
+			add_to_variable = { spr_var_catholic_influence = 0.01 }
+		}
+		
+		timeout_effect = {
+			add_stability = -0.02
+			add_to_variable = { spr_var_catholic_influence = -0.02 }
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 2
+				has_manpower > 500
+			}
+		}
+	}
+	end_spanish_inquisition = {
+
+		icon = oppression
+
+		available = {
+			NOT = { has_country_flag = Ended_Spanish_Inquisition }
+		}
+		
+		visible = {
+			tag = SPR
+			check_variable = { spr_var_catholic_influence < 0.80 }
+		}
+		
+		fire_only_once = yes
+
+		days_remove = 30
+
+		cost = 100
+
+		complete_effect = {
+			add_stability = -0.03
+			add_to_variable = { spr_var_catholic_influence = -0.05 }
+			set_country_flag = Ended_Spanish_Inquisition
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	benefit_religious_teachings = {
+
+		icon = generic_independence
+		
+		available = {
+			check_variable = { spr_var_catholic_influence < 1.00 }
+			NOT = { has_idea = spr_idea_pursue_scientific_discovery }
+		}
+		
+		visible = {
+			tag = SPR
+			SPR = { has_completed_focus = SPR_benefit_religious_teachings }
+		}
+		
+		fire_only_once = no
+		
+		days_remove = 90
+		days_re_enable = 90
+		
+		cost = 75
+
+		complete_effect = {
+			add_stability = -0.01
+			add_to_variable = { spr_var_catholic_influence = 0.01 }
+			add_timed_idea = {
+				idea = spr_idea_religious_teaching
+				days = 180
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				check_variable = { spr_var_catholic_influence > 0.40 }
+			}
+		}
+	}
+	encourage_scientific_pursuit = {
+
+		icon = generic_research
+		
+		available = {
+			check_variable = { spr_var_catholic_influence > 0.01 }
+			NOT = { has_idea = spr_idea_religious_teaching }
+		}
+		
+		visible = {
+			tag = SPR
+		}
+		
+		fire_only_once = no
+		
+		days_remove = 90
+		days_re_enable = 90
+		
+		cost = 75
+
+		complete_effect = {
+			add_stability = -0.01
+			add_to_variable = { spr_var_catholic_influence = -0.02 }
+			add_timed_idea = {
+				idea = spr_idea_pursue_scientific_discovery
+				days = 180
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				check_variable = { spr_var_catholic_influence < 0.60 }
+			}
+		}
+	}
+	praise_moderation = {
+
+		icon = generic_political_discourse
+		
+		available = {
+			OR = {
+				check_variable = { spr_var_catholic_influence < 0.40 }
+				check_variable = { spr_var_catholic_influence > 0.60 }
+			}
+		}
+		
+		visible = {
+			tag = SPR
+		}
+		
+		fire_only_once = no
+		
+		days_remove = 30
+		days_re_enable = 360
+		
+		cost = 50
+
+		complete_effect = {
+			add_stability = -0.01
+			if = {
+				LIMIT = {
+					check_variable = { spr_var_catholic_influence < 0.40 }
+				}
+				add_to_variable = { spr_var_catholic_influence = -0.02 }
+			}
+			else = {
+				add_to_variable = { spr_var_catholic_influence = -0.02 }
+			}
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	expand_spanish_inquisition_MOR = {
+
+		icon = oppression
+
+		available = {
+			check_variable = { spr_var_catholic_influence > 0.96 } 
+		}
+		
+		visible = {
+			tag = SPR
+			has_idea = spr_idea_religious_xenophobia
+			NOT = { has_country_flag = Ended_Spanish_Inquisition }
+			country_exists = MOR
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+		cost = 150
+
+		complete_effect = {
+			add_stability = -0.10
+			add_to_variable = { spr_var_catholic_influence = -0.01 }
+			MOR = {
+				activate_targeted_decision = { target = ROOT decision = SPR_conflict_warning_MOR }
+			}
+		}
+		
+		remove_effect = {
+			SPR = {
+				declare_war_on = {
+					target = MOR
+					type = spanish_inquisition_wargoal
+					generator = { 461 462 927 }
+				}
+				set_country_flag = SPR_invade_MOR
+			}
+			MOR = {
+				add_ideas = mor_idea_home_advantage
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 2
+				has_army_manpower = { size > 210000 }
+			}
+		}
+	}
+	
+	SPR_conflict_warning_MOR = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		war_with_target_on_timeout = yes
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+		
+		timeout_effect = {
+		}
+	}
+	expand_spanish_inquisition_SAH = {
+
+		icon = oppression
+
+		available = {
+			check_variable = { spr_var_catholic_influence > 0.98 }
+			not = {
+			has_global_flag = MOR_victory
+			}
+		}
+		
+		visible = {
+			tag = SPR
+			has_idea = spr_idea_religious_xenophobia
+			NOT = { has_country_flag = Ended_Spanish_Inquisition }
+			has_country_flag = SPR_invade_MOR
+			country_exists = SAH
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+		cost = 250
+
+		complete_effect = {
+			add_stability = -0.15
+			add_to_variable = { spr_var_catholic_influence = -0.02 }
+			SAH = {
+				activate_targeted_decision = { target = ROOT decision = SPR_conflict_warning_SAH }
+			}
+		}
+		
+		remove_effect = {
+			SPR = {
+				declare_war_on = {
+					target = SAH
+					type = spanish_inquisition_wargoal
+					generator = { 699 925 926 }
+				}
+			}
+			SAH = {
+				add_ideas = mor_idea_home_advantage
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 2
+				has_army_manpower = { size > 210000 }
+			}
+		}
+	}
+	
+	SPR_conflict_warning_SAH = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		war_with_target_on_timeout = yes
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+		
+		timeout_effect = {
+		}
+	}
+}

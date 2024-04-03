@@ -1,0 +1,15 @@
+state= {
+	id=913
+	name="STATE_913"
+	manpower = 1656
+	
+	state_category = wasteland
+
+	history= {
+		owner = INK
+		add_core_of = INK
+	}
+	provinces={
+		2947 2976 4272 5239 7901 8962 10527 10585 10721 13075 13188 13189 13190
+	}
+}

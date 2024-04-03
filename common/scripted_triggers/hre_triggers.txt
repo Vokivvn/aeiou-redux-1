@@ -1,0 +1,133 @@
+add_elector_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = ADD_ELECTOR_TOOLTIP
+		check_variable = { global.hre_elector_amount < 7 }
+	}
+}
+
+imperial_authority_check_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = IMPERIAL_AUTHORITY_CHECK_TOOLTIP
+		check_variable = { global.imperial_authority > imperial_authority_check_temp }
+	}
+}
+
+imperial_centralization_check_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = IMPERIAL_CENTRALIZATION_CHECK_TOOLTIP
+		check_variable = { 
+			var = global.imperial_centralization
+			value = imperial_centralization_check_temp 
+			compare = greater_than_or_equals
+		}
+	}
+}
+
+hre_not_caled_to_war_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = HRE_NOT_CALLED_TO_WAR_TOOLTIP
+		NOT = { has_global_flag = HRE_called_to_war }
+	}
+}
+
+hre_defensive_war_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = HRE_DEFENSIVE_WAR_CHECK_TOOLTIP
+		if = {
+			LIMIT = {
+				has_global_flag = HRE_CALL_TO_WAR_I
+			}
+			set_temp_variable = { imperial_authority_check_temp_def = 1 }
+		}
+		else = {
+			set_temp_variable = { imperial_authority_check_temp_def = 5 }
+		}
+		AND = {
+			has_defensive_war = yes
+			check_variable = { global.imperial_authority > imperial_authority_check_temp_def }
+		}
+	}
+}
+
+hre_offensive_war_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = HRE_OFFENSIVE_WAR_CHECK_TOOLTIP
+		if = {
+			LIMIT = {
+				has_global_flag = HRE_CALL_TO_WAR_II
+			}
+			set_temp_variable = { imperial_authority_check_temp_off = 5 }
+		}
+		else = {
+			set_temp_variable = { imperial_authority_check_temp_off = 15 }
+		}
+		AND = {
+			has_offensive_war = yes
+			check_variable = { global.imperial_authority > imperial_authority_check_temp_off }
+		}
+	}
+}
+
+hre_not_toured = {
+	custom_trigger_tooltip = {
+		tooltip = HRE_NOT_TOURED_TOOLTIP
+		NOT = { has_global_flag = has_toured_recently }
+	}
+}
+
+hre_AUS = {
+	if = {
+		LIMIT = {
+			tag = AUS
+		}
+		custom_trigger_tooltip = {
+			tooltip = HRE_AUS_FOCUS_TOOLTIP
+		}
+	}
+}
+
+hre_allowed_countries = {
+	OR = {
+		tag = PRS
+		tag = BRD
+		tag = SAX
+		tag = THU
+		tag = MCK
+		tag = LBK
+		tag = SCH
+		tag = HAM
+		tag = HAN
+		tag = BRE
+		tag = OLD
+		tag = MUN
+		tag = KLE
+		tag = DOR
+		tag = MRK
+		tag = KSS
+		tag = NSS
+		tag = JUL
+		tag = KOL
+		tag = TRI
+		tag = FRK
+		tag = WRZ
+		tag = ANB
+		tag = NUR
+		tag = BAD
+		tag = WUR
+		tag = ULM
+		tag = BAV
+		tag = AUS
+		tag = GEN
+		tag = PIE
+		tag = MIL
+		tag = VNC
+		tag = TUS
+		tag = PAP
+		tag = NAP
+		tag = SWI
+		tag = HOL
+		tag = LIE
+		tag = LOR
+		tag = VOS
+	}
+}

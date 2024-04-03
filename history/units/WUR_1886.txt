@@ -1,0 +1,60 @@
+﻿division_template = {
+	name = "Royal Württemberger Guard Battalion"
+
+	division_names_group = WUR_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Württemberger Cavalry Division"
+
+	division_names_group = WUR_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Württemberger Knight Brigade"
+
+	division_names_group = WUR_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Royal Württemberger Guard Battalion"
+		location = 9517
+		division_template = "Royal Württemberger Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Württemberger Cavalry Division"
+		location = 694
+		division_template = "Royal Württemberger Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Württemberger Knight Brigade"
+		location = 9655
+		division_template = "Royal Württemberger Knight Brigade"
+		start_experience_factor = 0.3
+	}
+}

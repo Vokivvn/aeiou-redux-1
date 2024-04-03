@@ -1,0 +1,23 @@
+
+state={
+	id=389
+	name="STATE_389"
+	manpower = 4987
+	state_category = pastoral
+	resources={
+		wood=2
+		iron=1
+	}
+
+	history={
+		owner = SIX
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SIX
+	}
+
+	provinces={
+		1752 1870 3719 10709 12685 1848 12145 4790
+	}
+}

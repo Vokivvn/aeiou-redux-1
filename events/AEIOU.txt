@@ -1,0 +1,500 @@
+﻿###########################
+# AEIOU Events
+###########################
+
+add_namespace = test	
+
+news_event = {
+	id = test.1
+	title = test.1.t
+	desc = test.1.d
+	
+	picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = test.1.a
+		every_country = {
+				country_event = scriptedpeacedeals.14
+			}
+	}
+}
+
+news_event = {
+	id = test.2
+	title = test.2.t
+	desc = test.2.d
+	
+	picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = test.2.a 
+		FRA_revolt_check = yes
+	}
+}
+
+news_event = {
+	id = test.3
+	title = test.3.t
+	desc = test.3.d
+	
+	picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = test.3.a 
+		set_temp_variable = { noble_support_temp = -0.30 }
+			FRA_noble_support = yes
+	}
+}
+
+
+add_namespace = story_news_events
+
+news_event = {
+	id = story_news_events.1 #Birth of Karl 
+	title = story_news_events.1.t
+	desc = story_news_events.1.d
+	
+	picture = GFX_report_news_event_constantinople_01
+	fire_only_once = yes 
+	
+	trigger = {
+	    date > 1887.01.08
+		is_ai = no 
+	}
+	
+	option = {
+		name = story_news_events.1.a
+	}
+}
+
+news_event = {
+	id = story_news_events.2 #Ivory Market Crash
+	title = story_news_events.2.t
+	desc = story_news_events.2.d
+	
+	picture = GFX_report_news_event_stockholm_01
+	fire_only_once = yes 
+	
+	trigger = {
+	    date > 1886.08.27
+		is_ai = yes
+	}
+	
+	option = {
+		name = story_news_events.2.a
+		hidden_effect = {
+			SPR = { country_event = { days = 2 id = SPREarlyfelipe.17 }}
+			FRA = { country_event = { days = 2 id = FRAIvorymarket.1 }}
+			AUS = { country_event = { days = 2 id = Ausrudolf.32 }}
+			SWE = { country_event = { days = 2 id = SWEMarketcrash.1}}
+			ENG = { country_event = { days = 2 id = ENGMarketcrash.1}}
+		}
+	}
+}
+
+news_event = {
+	id = story_news_events.3 #Invention of the steam engine
+	title = story_news_events.3.t
+	desc = story_news_events.3.d
+	
+	picture = GFX_report_news_event_prague_01
+	fire_only_once = yes 
+	
+	trigger = {
+	    date > 1887.02.01
+	}
+	
+	option = {
+		name = story_news_events.3.a
+		hidden_effect = {
+			set_global_flag = spanishindustrialization
+		}
+	}
+}
+news_event = {
+	id = story_news_events.4 #Fourth Bruneian-Dayak War
+	title = story_news_events.4.t
+	desc = story_news_events.4.d
+	
+	picture = GFX_report_news_event_prague_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = story_news_events.4.a
+	}
+}
+news_event = {
+	id = story_news_events.5 #Assassination of Calixto
+	title = story_news_events.5.t
+	desc = story_news_events.5.d
+	
+	picture = GFX_report_news_event_centroamerica_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = story_news_events.5.a
+	}
+}
+news_event = {
+	id = story_news_events.6 #Assassination attempt on Calixto
+	title = story_news_events.6.t
+	desc = story_news_events.6.d
+	
+	picture = GFX_report_news_event_centroamerica_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = story_news_events.6.a
+	}
+}
+news_event = {
+	id = story_news_events.7 #Collapse of Central America
+	title = story_news_events.7.t
+	desc = story_news_events.7.d
+	
+	picture = GFX_report_news_event_centroamerica_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = story_news_events.7.a
+	}
+}
+news_event = {
+	id = story_news_events.8 #Spanish Catholic Empire
+	title = story_news_events.8.t
+	desc = story_news_events.8.d
+	
+	picture = GFX_report_news_event_spain_01
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = story_news_events.8.a
+	}
+}
+
+news_event = {
+	id = story_news_events.9 #Spanish bombing of Fuzhou and Karansebes thing
+	title = story_news_events.9.t
+	desc = story_news_events.9.d
+	
+	picture = GFX_report_news_event_spain_01
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = story_news_events.9.a
+	}
+}
+
+news_event = {
+	id = story_news_events.10 #Chinese declaration of war
+	title = story_news_events.10.t
+	desc = story_news_events.10.d
+	
+	picture = GFX_report_news_event_spain_01
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = story_news_events.10.a
+		}
+}
+
+news_event = {
+	id = story_news_events.11 #Spanish victory
+	title = story_news_events.11.t
+	desc = story_news_events.11.d
+	
+	picture = GFX_report_news_event_spain_01
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = story_news_events.11.a
+		}
+}
+
+news_event = {
+	id = story_news_events.12 #Chinese victory
+	title = story_news_events.12.t
+	desc = story_news_events.12.d
+	
+	picture = GFX_report_news_event_spain_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = story_news_events.12.a
+		}
+}
+
+news_event = {
+	id = story_news_events.13 #Cuba declares independence
+	title = story_news_events.13.t
+	desc = story_news_events.13.d
+	
+	picture = GFX_report_news_event_spain_01
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = story_news_events.13.a
+		}
+}
+
+news_event = {
+	id = story_news_events.14 #Cuba wins
+	title = story_news_events.14.t
+	desc = story_news_events.14.d
+	
+	picture = GFX_report_news_event_spain_01
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = story_news_events.14.a
+		hidden_effect = {
+			random_list = {
+				75 = { CUB = { country_event = { days = 20 id = SPRCuba.10 }}}
+				25 = { CUB = { country_event = { days = 20 id = SPRCuba.9 }}}
+			}
+		}
+	}
+}
+
+news_event = {
+	id = story_news_events.15 #Franco-Spanish border war
+	title = story_news_events.15.t
+	desc = story_news_events.15.d
+	
+	picture = GFX_report_news_event_spain_01
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = story_news_events.15.a
+	}
+}
+
+news_event = {
+	id = story_news_events.16 #Taiwanese Revolution
+	title = story_news_events.16.t
+	desc = story_news_events.16.d
+	
+	picture = GFX_report_news_event_spain_01
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = story_news_events.16.a
+	}
+}
+
+news_event = {
+	id = story_news_events.17 #Before the Blaze
+	title = story_news_events.17.t
+	desc = story_news_events.17.d
+	
+	picture = GFX_report_news_event_constantinople_01
+	fire_only_once = yes 
+	
+	trigger = {
+	    date > 1889.01.08
+		is_ai = no 
+	}
+	
+	option = {
+		name = story_news_events.17.a
+	}
+}
+
+news_event = {
+	id = story_news_events.18 #Fall of Nouvelle Orleans
+	title = story_news_events.18.t
+	desc = story_news_events.18.d
+	
+	picture = GFX_report_news_event_constantinople_01
+	fire_only_once = yes 
+	
+	trigger = {
+	    LAK = {
+			controls_state = 371
+		}
+	}
+	
+	option = {
+		name = story_news_events.18.a
+	}
+}
+
+news_event = {
+	id = story_news_events.19 #HRE is Disbanded
+	title = story_news_events.19.t
+	desc = story_news_events.19.d
+	
+	picture = GFX_report_news_event_constantinople_01
+	fire_only_once = no 
+	is_triggered_only = yes
+	
+	option = {
+		name = story_news_events.19.a
+	}
+}
+
+news_event = {
+	id = story_news_events.20 #HRE election in two weeks
+	title = story_news_events.20.t
+	desc = story_news_events.20.d
+	
+	picture = GFX_report_news_event_constantinople_01
+	fire_only_once = no 
+	is_triggered_only = yes
+	
+	option = {
+		name = story_news_events.20.a
+	}
+}
+
+news_event = {
+	id = story_news_events.21 #HRE election effects
+	title = story_news_events.21.t
+	desc = story_news_events.21.d
+	
+	picture = GFX_report_news_event_constantinople_01
+	fire_only_once = no 
+	is_triggered_only = yes
+	hidden = yes
+	
+	immediate = {
+		hre_next_emperor = yes
+		every_country = {
+			country_event = story_news_events.22
+		}
+		#clear votes
+		every_country = {
+			limit = {
+				check_variable = {votes_temp > 0}
+			}
+			clear_variable = votes_temp
+		}
+	}
+	
+	option = {
+		name = story_news_events.21.a
+	}
+}
+
+news_event = {
+	id = story_news_events.22 #HRE election
+	title = story_news_events.22.t
+	desc = story_news_events.22.d
+	
+	picture = GFX_report_news_event_constantinople_01
+	fire_only_once = no 
+	is_triggered_only = yes
+	
+	option = {
+		name = story_news_events.22.a
+	}
+}
+
+news_event = {
+	id = story_news_events.23 #HRE forms
+	title = story_news_events.23.t
+	desc = story_news_events.23.d
+	
+	picture = GFX_report_news_event_constantinople_01
+	fire_only_once = no 
+	is_triggered_only = yes
+	
+	option = {
+		name = story_news_events.23.a
+	}
+}
+
+news_event = {
+	id = story_news_events.24 #HRE civil war
+	title = story_news_events.24.t
+	desc = story_news_events.24.d
+	
+	picture = GFX_report_news_event_constantinople_01
+	fire_only_once = no 
+	is_triggered_only = yes
+	
+	option = {
+		name = story_news_events.24.a
+		trigger = {
+			NOT = {
+				OR = {
+					has_idea = hre_idea_emperor
+					has_idea = hre_idea_elector
+					has_idea = hre_idea_prince
+					has_idea = hre_idea_free_city
+					has_idea = hre_idea_republic
+					has_idea = hre_idea_conservative
+				}
+			{
+		}
+	}
+	
+	option = {
+		name = story_news_events.24.b
+		trigger = {
+			OR = {
+				has_idea = hre_idea_emperor
+				has_idea = hre_idea_elector
+				has_idea = hre_idea_prince
+				has_idea = hre_idea_free_city
+				has_idea = hre_idea_republic
+				has_idea = hre_idea_conservative
+			}
+		}
+	}
+}
+
+news_event = {
+	id = story_news_events.25 #Spanish Netherlands
+	title = story_news_events.25.t
+	desc = story_news_events.25.d
+	
+	picture = GFX_report_news_event_constantinople_01
+	fire_only_once = no 
+	is_triggered_only = yes
+	
+	option = {
+		name = story_news_events.25.a
+	}
+}
+
+news_event = {
+	id = story_news_events.26 #Anglo-Scottish war
+	title = story_news_events.26.t
+	desc = story_news_events.26.d
+	
+	picture = GFX_report_news_event_constantinople_01
+	fire_only_once = no 
+	is_triggered_only = yes
+	
+	option = {
+		name = story_news_events.26.a
+	}
+}

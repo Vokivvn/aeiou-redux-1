@@ -1,0 +1,63 @@
+﻿division_template = {
+	name = "Royal Guard"
+
+	division_names_group = VIJ_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Cavalry Division"
+
+	division_names_group = VIJ_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+
+units = {
+	division = {
+		name = "Royal Vijayanagar Division"
+		location = 12180
+		division_template = "Royal Guard"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Royal Vijayanagar Division"
+		location = 12180
+		division_template = "Royal Guard"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Royal Vijayanagar Division"
+		location = 12180
+		division_template = "Royal Guard"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Royal Vijayanagar Division"
+		location = 5032
+		division_template = "Royal Guard"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Royal Vijayanagar Division"
+		location = 12180
+		division_template = "Royal Guard"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Royal Vijayanagar medium_cavalry"
+		location = 4414
+		division_template = "Royal Cavalry Division"
+		start_experience_factor = 0.5
+	}
+}

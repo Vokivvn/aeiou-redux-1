@@ -1,0 +1,96 @@
+﻿division_template = {
+	name = "Royal Venetian Guard Battalion"
+
+	division_names_group = VNC_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+		line_infantry = { x = 0 y = 4 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+		line_infantry = { x = 1 y = 2 }
+		line_infantry = { x = 1 y = 3 }
+		line_infantry = { x = 1 y = 4 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Venetian Cavalry Division"
+
+	division_names_group = VNC_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 0 y = 2 }
+		medium_cavalry = { x = 0 y = 3 }
+		medium_cavalry = { x = 0 y = 4 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+		medium_cavalry = { x = 1 y = 2 }
+		medium_cavalry = { x = 1 y = 3 }
+		medium_cavalry = { x = 1 y = 4 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Venetian Knight Brigade"
+
+	division_names_group = VNC_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Royal Venetian Guard Battalion"
+		location = 11584
+		division_template = "Royal Venetian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Venetian Guard Battalion"
+		location = 3776
+		division_template = "Royal Venetian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3rd Royal Venetian Guard Battalion"
+		location = 3943
+		division_template = "Royal Venetian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4th Royal Venetian Guard Battalion"
+		location = 9821
+		division_template = "Royal Venetian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+		division = {
+		name = "5th Royal Venetian Guard Battalion"
+		location = 9914
+		division_template = "Royal Venetian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Venetian Cavalry Division"
+		location = 3604
+		division_template = "Royal Venetian Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Venetian Knight Brigade"
+		location = 9613
+		division_template = "Royal Venetian Knight Brigade"
+		start_experience_factor = 0.3
+	}
+}

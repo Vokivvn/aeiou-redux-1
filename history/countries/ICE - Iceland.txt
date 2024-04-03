@@ -1,0 +1,20 @@
+﻿capital = 100 #Iceland
+
+#oob = "ICE_1936"
+
+set_research_slots = 3
+
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+}
+
+set_politics = {
+	ruling_party = conservative
+	last_election = "1933.10.16"
+	election_frequency = 36
+	elections_allowed = yes
+}
+set_popularities = {
+	conservative = 100
+}

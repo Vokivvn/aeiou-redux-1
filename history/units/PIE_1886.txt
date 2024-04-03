@@ -1,0 +1,66 @@
+﻿division_template = {
+	name = "Royal Savoyard Guard Battalion"
+
+	division_names_group = PIE_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Savoyard Cavalry Division"
+
+	division_names_group = PIE_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Savoyard Knight Brigade"
+
+	division_names_group = PIE_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Royal Savoyard Guard Battalion"
+		location = 6780
+		division_template = "Royal Savoyard Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Savoyard Guard Battalion"
+		location = 778
+		division_template = "Royal Savoyard Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Savoyard Cavalry Division"
+		location = 11730
+		division_template = "Royal Savoyard Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Savoyard Knight Brigade"
+		location = 771
+		division_template = "Royal Savoyard Knight Brigade"
+		start_experience_factor = 0.3
+	}
+}

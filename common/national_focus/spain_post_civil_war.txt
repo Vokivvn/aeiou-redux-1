@@ -1,0 +1,1055 @@
+
+focus_tree = {
+	id = Spain_post_civil_war
+	
+	country = {
+		factor = 0
+		
+	}
+	default = no
+	continuous_focus_position = { x = 50 y = 2000 }
+
+
+	###########
+	#  Start  #
+	###########
+	
+	focus = { 
+		id = SPR_unity_in_spain_at_last
+		icon = GFX_SPR_National_Salvation_Movement
+		
+	
+		x = 12
+		y = 0
+		cost = 50
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	###################
+	#  Regency  #
+	###################
+	
+	focus = { 
+		id = SPR_under_nobles
+		icon = GFX_generic_noble_support
+		cost = 35
+		
+		available = {
+			NOT = {
+				has_country_flag = SPR_Felipe_Won
+				has_country_flag = SPR_Enrique_Won
+			}
+		}
+		prerequisite = { focus = SPR_unity_in_spain_at_last }
+		relative_position_id = SPR_unity_in_spain_at_last
+		mutually_exclusive = { focus = SPR_old_colonies_new_colonies }
+	
+		x = -9
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	
+	focus = { 
+		id = SPR_formalize_decentralization
+		icon = GFX_focus_generic_redistribution_of_powers
+		cost = 50
+
+		prerequisite = { focus = SPR_under_nobles }
+		relative_position_id = SPR_under_nobles
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			set_cosmetic_tag = SPR_COUNCIL
+		}
+	}
+	
+	#International Relations
+	
+	focus = { 
+		id = SPR_council_in_europe
+		icon = GFX_SPR_wealthy_universities
+		cost = 40
+		
+		prerequisite = { focus = SPR_formalize_decentralization }
+		relative_position_id = SPR_formalize_decentralization
+	
+		x = -2
+		y = 1
+		
+		completion_reward = {
+			country_event = SPRRegency.11
+		}
+	}
+	
+	focus = { 
+		id = SPR_side_france
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 10
+		
+		available = {
+			always = no
+		}
+		
+		mutually_exclusive = { focus = SPR_side_savoy }
+		mutually_exclusive = { focus = SPR_denounce_loss_of_sardinia }
+		prerequisite = { focus = SPR_council_in_europe }
+		relative_position_id = SPR_council_in_europe
+	
+		x = -2
+		y = 1
+		
+		completion_reward = {
+			add_opinion_modifier = {
+				target = FRA
+				modifier = SPR_side_FRA
+			}
+			FRA = {
+				add_opinion_modifier = {
+					target = SPR
+					modifier = SPR_side_FRA
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_side_savoy
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 10
+		
+		available = {
+			always = no
+		}
+		
+		mutually_exclusive = { focus = SPR_denounce_loss_of_sardinia }
+		mutually_exclusive = { focus = SPR_side_france }
+		prerequisite = { focus = SPR_council_in_europe }
+		relative_position_id = SPR_council_in_europe
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_opinion_modifier = {
+				target = PIE
+				modifier = SPR_side_PIE
+			}
+			PIE = {
+				add_opinion_modifier = {
+					target = SPR
+					modifier = SPR_side_PIE
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_surplus_guns_for_economic_aid
+		icon = GFX_goal_generic_military_sphere
+		cost = 40
+		
+		available = {
+			has_equipment = {
+				infantry_equipment > 2000
+			}
+		}
+		
+		prerequisite = { focus = SPR_side_savoy focus = SPR_side_france }
+		relative_position_id = SPR_side_savoy
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -2000
+			}
+			add_ideas = spr_idea_international_workforce
+			if = {
+				LIMIT = { 
+					has_country_flag = SPR_has_sided_FRA
+				}
+				FRA = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 2000
+						producer = SPR
+					}
+				}
+				else = {
+					PIE = {
+						add_equipment_to_stockpile = {
+							type = infantry_equipment
+							amount = 2000
+							producer = SPR
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_denounce_loss_of_sardinia
+		icon = GFX_SPR_the_spanish_bull
+		cost = 10
+		
+		available = {
+			always = no
+		}
+		
+		mutually_exclusive = { focus = SPR_side_savoy }
+		mutually_exclusive = { focus = SPR_side_france }
+		prerequisite = { focus = SPR_council_in_europe }
+		relative_position_id = SPR_council_in_europe
+	
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			add_opinion_modifier = {
+				target = FRA
+				modifier = SPR_after_sardinia
+			}
+			add_opinion_modifier = {
+				target = PIE
+				modifier = SPR_after_sardinia
+			}
+			add_opinion_modifier = {
+				target = TUS
+				modifier = SPR_after_sardinia
+			}
+			FRA = {
+				add_opinion_modifier = {
+					target = SPR
+					modifier = SPR_after_sardinia
+				}
+			}
+			PIE = {
+				add_opinion_modifier = {
+					target = SPR
+					modifier = SPR_after_sardinia
+				}
+			}
+			TUS = {
+				add_opinion_modifier = {
+					target = SPR
+					modifier = SPR_after_sardinia
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_purge_of_backstabbers
+		icon = GFX_SPR_The_regency_shall_live_on
+		cost = 40
+		
+		prerequisite = { focus = SPR_denounce_loss_of_sardinia }
+		relative_position_id = SPR_denounce_loss_of_sardinia
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			country_event = SPRRegency.12
+		}
+	}
+	
+	#International Relations
+	
+	focus = { 
+		id = SPR_cohession_in_dispersion
+		icon = GFX_SPR_rally_portuguese
+		cost = 40
+		
+		prerequisite = { focus = SPR_formalize_decentralization }
+		relative_position_id = SPR_formalize_decentralization
+	
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			add_political_power = 100
+			add_ideas = spr_idea_spanish_nationalism
+		}
+	}
+	
+	focus = { 
+		id = SPR_secure_peasant_economy
+		icon = GFX_generic_decentralized_economy
+		cost = 30
+		
+		prerequisite = { focus = SPR_cohession_in_dispersion }
+		relative_position_id = SPR_cohession_in_dispersion
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = spr_idea_civil_war_recovery01 }
+				swap_ideas = {
+					remove_idea = spr_idea_civil_war_recovery01
+					add_idea = spr_idea_civil_war_recovery11
+				}
+			} else = {
+				swap_ideas = {
+					remove_idea = spr_idea_civil_war_recovery
+					add_idea = spr_idea_civil_war_recovery10
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_boost_industrialization
+		icon = GFX_focus_generic_industry_2
+		cost = 30
+		
+		prerequisite = { focus = SPR_cohession_in_dispersion }
+		relative_position_id = SPR_cohession_in_dispersion
+	
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = spr_idea_civil_war_recovery10 }
+				swap_ideas = {
+					remove_idea = spr_idea_civil_war_recovery10
+					add_idea = spr_idea_civil_war_recovery11
+				}
+			} else = {
+				swap_ideas = {
+					remove_idea = spr_idea_civil_war_recovery
+					add_idea = spr_idea_civil_war_recovery01
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_promised_constitution
+		icon = GFX_SPR_regency_legitimized_government
+		cost = 40
+		
+		prerequisite = { focus = SPR_boost_industrialization }
+		prerequisite = { focus = SPR_secure_peasant_economy }
+		relative_position_id = SPR_secure_peasant_economy
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_ideas = spr_idea_constitution
+		}
+	}
+	
+	focus = { 
+		id = SPR_rise_of_regionalism
+		icon = GFX_focus_generic_revolutionary_sentiment
+		cost = 60
+		
+		prerequisite = { focus = SPR_promised_constitution }
+		relative_position_id = SPR_promised_constitution
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			set_party_name = { ideology = apolitical long_name = SPR_apolitical_party_regency_long name = SPR_apolitical_party_regency }
+			hidden_effect = {
+				add_popularity = {
+					ideology = apolitical
+					popularity = 0.95
+				}
+				set_politics = {
+					ruling_party = apolitical
+					elections_allowed = no
+				}
+				retire_country_leader = yes
+				create_country_leader = {
+					name = "Regency Council"
+					desc = "SPR_LEADER_DESC_REGENCY_COUNCIL"
+					picture = "Portrait_SPR_Regency_Council.dds"
+					expire = "1965.1.1"
+					ideology = apolitical_sub
+					traits = {
+					}
+				}
+				hidden_effect = {
+					remove_ideas = spr_idea_civil_war_recovery11
+					add_timed_idea = {
+						idea = spr_idea_civil_war_recovery11
+						days = 365
+					}
+				}
+			}
+		}
+	}
+	
+	###################
+	#  Felipe  #
+	###################
+	
+	focus = { 
+		id = SPR_under_absolutism
+		icon = GFX_SPR_focus_kings_duty
+		cost = 35
+		
+		available = {	
+			has_country_flag = SPR_Felipe_Won
+		}
+		prerequisite = { focus = SPR_unity_in_spain_at_last }
+		relative_position_id = SPR_unity_in_spain_at_last
+		mutually_exclusive = { focus = SPR_old_colonies_new_colonies }
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	
+	#Tuscany
+	
+	focus = { 
+		id = SPR_send_help_to_tuscany
+		icon = GFX_SPR_Envoy_to_Tuscany
+		cost = 40
+		
+		available = {
+			has_equipment = {
+				infantry_equipment > 2000
+			}
+		}
+		
+		prerequisite = { focus = SPR_under_absolutism }
+		relative_position_id = SPR_under_absolutism
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_ideas = spr_idea_international_workforce
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -2000
+			}
+			PIE = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 2000
+					producer = SPR
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_arm_foreign_militias
+		icon = GFX_SPR_safe_borders
+		cost = 35
+		
+		mutually_exclusive = { focus = SPR_join_war_effort }
+		prerequisite = { focus = SPR_send_help_to_tuscany }
+		relative_position_id = SPR_send_help_to_tuscany
+	
+		x = -2
+		y = 1
+		
+		completion_reward = {
+			add_manpower = -1000
+			set_rule = { can_send_volunteers = yes }
+			TUS = {
+				add_manpower = 1000
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_join_war_effort
+		icon = GFX_SPR_Absolutist_Defence_Pact
+		cost = 35
+		
+		mutually_exclusive = { focus = SPR_arm_foreign_militias }
+		prerequisite = { focus = SPR_send_help_to_tuscany }
+		relative_position_id = SPR_send_help_to_tuscany
+	
+		x = -0
+		y = 1
+		
+		completion_reward = {
+			SPR = {
+				create_faction = SPR_MADRID_ALLIANCE_FACTION
+				add_to_faction = TUS
+			}
+		}
+	}
+	
+	#Rebuilding
+	
+	focus = { 
+		id = SPR_loyalist_relief_fund
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		cost = 40
+		
+		prerequisite = { focus = SPR_under_absolutism }
+		relative_position_id = SPR_under_absolutism
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = spr_idea_civil_war_recovery
+				add_idea = spr_idea_civil_war_recovery2
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_dictatorship_on_menu
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		cost = 40
+		
+		prerequisite = { focus = SPR_loyalist_relief_fund }
+		relative_position_id = SPR_loyalist_relief_fund
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_political_power = 100
+			add_stability = -0.05
+		}
+	}
+	
+	focus = { 
+		id = SPR_redistribute_burgeois_lands
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 40
+		
+		prerequisite = { focus = SPR_dictatorship_on_menu }
+		relative_position_id = SPR_dictatorship_on_menu
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.10
+			if = {
+				limit = { has_idea = spr_idea_civil_war_recovery201 }
+				swap_ideas = {
+					remove_idea = spr_idea_civil_war_recovery201
+					add_idea = spr_idea_civil_war_recovery211
+				}
+			} else = {
+				swap_ideas = {
+					remove_idea = spr_idea_civil_war_recovery2
+					add_idea = spr_idea_civil_war_recovery210
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_help_impoverished_nobility
+		icon = GFX_focus_CZE_german_puppet
+		cost = 40
+		
+		prerequisite = { focus = SPR_redistribute_burgeois_lands }
+		relative_position_id = SPR_redistribute_burgeois_lands
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = spr_idea_civil_war_recovery211 }
+				swap_ideas = {
+					remove_idea = spr_idea_civil_war_recovery211
+					add_idea = spr_idea_civil_war_recovery221
+				}
+			} else = {
+				swap_ideas = {
+					remove_idea = spr_idea_civil_war_recovery210
+					add_idea = spr_idea_civil_war_recovery220
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_reform_roadway_system
+		icon = GFX_SPR_north_to_south
+		cost = 40
+		
+		prerequisite = { focus = SPR_loyalist_relief_fund }
+		relative_position_id = SPR_loyalist_relief_fund
+	
+		x = 4
+		y = 1
+		
+		completion_reward = {
+			41 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			165 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_crack_down_bandoleers
+		icon = GFX_focus_mex_arrest_general_cedillo
+		cost = 40
+		
+		prerequisite = { focus = SPR_reform_roadway_system }
+		relative_position_id = SPR_reform_roadway_system
+	
+		x = 0
+		y = 2
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = { 
+		id = SPR_fund_public_schooling
+		icon = GFX_SPR_boost_noble_scholarships
+		cost = 40
+		
+		prerequisite = { focus = SPR_dictatorship_on_menu }
+		prerequisite = { focus = SPR_reform_roadway_system }
+		relative_position_id = SPR_dictatorship_on_menu
+	
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = spr_idea_civil_war_recovery220 }
+				swap_ideas = {
+					remove_idea = spr_idea_civil_war_recovery220
+					add_idea = spr_idea_civil_war_recovery221
+				}
+			} else = {
+				if = {
+					limit = { has_idea = spr_idea_civil_war_recovery210 }
+					swap_ideas = {
+						remove_idea = spr_idea_civil_war_recovery210
+						add_idea = spr_idea_civil_war_recovery211
+					}
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = spr_idea_civil_war_recovery2
+						add_idea = spr_idea_civil_war_recovery201
+					}
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_under_christian_faith
+		icon = GFX_SPR_catholic_teaching
+		cost = 40
+		
+		prerequisite = { focus = SPR_fund_public_schooling }
+		relative_position_id = SPR_fund_public_schooling
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.10
+		}
+	}
+	
+	focus = { 
+		id = SPR_collapse_of_feudalism
+		icon = GFX_focus_generic_monarchy_1
+		cost = 60
+		
+		prerequisite = { focus = SPR_help_impoverished_nobility }
+		prerequisite = { focus = SPR_under_christian_faith }
+		prerequisite = { focus = SPR_crack_down_bandoleers }
+		relative_position_id = SPR_under_christian_faith
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			hidden_effect = {
+				remove_ideas = spr_idea_civil_war_recovery221
+				add_timed_idea = {
+					idea = spr_idea_civil_war_recovery221
+					days = 365
+				}
+			}
+		}
+	}
+	
+	###################
+	#  Enrique  #
+	###################
+	
+	focus = { 
+		id = SPR_under_constitutionalism
+		icon = GFX_AUS_focus_Promises_People
+		cost = 35
+		
+		available = {	
+			has_country_flag = SPR_Enrique_Won
+		}
+		prerequisite = { focus = SPR_unity_in_spain_at_last }
+		relative_position_id = SPR_unity_in_spain_at_last
+		mutually_exclusive = { focus = SPR_old_colonies_new_colonies }
+	
+		x = 9
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	
+	focus = { 
+		id = SPR_abandon_french_pretensions
+		icon = GFX_SPR_focus_on_the_enemy
+		cost = 25
+		
+		available = {
+			NOT = {
+				has_country_flag = FRA_helped
+			}
+		}
+		mutually_exclusive = { focus = SPR_join_french_sphere }
+		prerequisite = { focus = SPR_under_constitutionalism }
+		relative_position_id = SPR_under_constitutionalism
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = { 
+		id = SPR_join_french_sphere
+		icon = GFX_focus_chi_reach_out_to_france
+		cost = 25
+		
+		available = {	
+			has_country_flag = FRA_helped
+		}
+		mutually_exclusive = { focus = SPR_abandon_french_pretensions }
+		prerequisite = { focus = SPR_under_constitutionalism }
+		relative_position_id = SPR_under_constitutionalism
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			FRA = {
+				if = { 
+					LIMIT = {
+						is_in_faction = no
+					}
+					create_faction = FRA_ENTENTE_ALLIANCE_FACTION
+				}
+				add_to_faction = SPR
+			}
+			add_political_power = -50
+		}
+	}
+	
+	focus = { 
+		id = SPR_revoke_noble_privileges
+		icon = GFX_AUS_focus_Threats_Actions
+		cost = 40
+		
+		prerequisite = { focus = SPR_abandon_french_pretensions focus = SPR_join_french_sphere }
+		relative_position_id = SPR_abandon_french_pretensions
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_stability = -0.10
+			add_political_power = 100
+		}
+	}
+	
+	focus = { 
+		id = SPR_subdue_regionalists
+		icon = GFX_goal_generic_political_pressure
+		cost = 40
+		
+		prerequisite = { focus = SPR_revoke_noble_privileges }
+		relative_position_id = SPR_revoke_noble_privileges
+	
+		x = -2
+		y = 1
+		
+		completion_reward = {
+			add_stability = -0.05
+		}
+	}
+	
+	focus = { 
+		id = SPR_arm_people
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 40
+		
+		prerequisite = { focus = SPR_subdue_regionalists }
+		relative_position_id = SPR_subdue_regionalists
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			174 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { has_idea = spr_idea_civil_war_recovery3111 }
+				swap_ideas = {
+					remove_idea = spr_idea_civil_war_recovery3110
+					add_idea = spr_idea_civil_war_recovery3111
+				}
+			} else = {
+				if = {
+					limit = { has_idea = spr_idea_civil_war_recovery3100 }
+					swap_ideas = {
+						remove_idea = spr_idea_civil_war_recovery3100
+						add_idea = spr_idea_civil_war_recovery3101
+					}
+				}
+				else = {
+					if = {
+						limit = { has_idea = spr_idea_civil_war_recovery3010 }
+						swap_ideas = {
+							remove_idea = spr_idea_civil_war_recovery3010
+							add_idea = spr_idea_civil_war_recovery3011
+						}
+					}
+					else = {
+						if = {
+							limit = { has_idea = spr_idea_civil_war_recovery3 }
+							swap_ideas = {
+								remove_idea = spr_idea_civil_war_recovery3
+								add_idea = spr_idea_civil_war_recovery3001
+							}
+						}
+						else = {
+							swap_ideas = {
+								remove_idea = spr_idea_civil_war_recovery
+								add_idea = spr_idea_civil_war_recovery0001
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_illustrated_despotism
+		icon = GFX_focus_rom_abdicate
+		cost = 40
+		
+		prerequisite = { focus = SPR_revoke_noble_privileges }
+		relative_position_id = SPR_revoke_noble_privileges
+	
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			add_political_power = 100
+			if = {
+				limit = { has_idea = spr_idea_civil_war_recovery0001 }
+				swap_ideas = {
+					remove_idea = spr_idea_civil_war_recovery0001
+					add_idea = spr_idea_civil_war_recovery3001
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = spr_idea_civil_war_recovery
+					add_idea = spr_idea_civil_war_recovery3
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_new_system_for_Spain
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		cost = 40
+		
+		prerequisite = { focus = SPR_illustrated_despotism }
+		relative_position_id = SPR_illustrated_despotism
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = spr_idea_civil_war_recovery3101 }
+				swap_ideas = {
+					remove_idea = spr_idea_civil_war_recovery3101
+					add_idea = spr_idea_civil_war_recovery3111
+				}
+			} else = {
+				if = {
+					limit = { has_idea = spr_idea_civil_war_recovery3100 }
+					swap_ideas = {
+						remove_idea = spr_idea_civil_war_recovery3100
+						add_idea = spr_idea_civil_war_recovery3110
+					}
+				}
+				else = {
+					if = {
+						limit = { has_idea = spr_idea_civil_war_recovery3001 }
+						swap_ideas = {
+							remove_idea = spr_idea_civil_war_recovery3001
+							add_idea = spr_idea_civil_war_recovery3011
+						}
+					}
+					else = {
+						swap_ideas = {
+							remove_idea = spr_idea_civil_war_recovery3
+							add_idea = spr_idea_civil_war_recovery3010
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_give_back_profits
+		icon = GFX_focus_mex_privatisation
+		cost = 40
+		
+		prerequisite = { focus = SPR_subdue_regionalists }
+		prerequisite = { focus = SPR_illustrated_despotism }
+		relative_position_id = SPR_subdue_regionalists
+	
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = spr_idea_civil_war_recovery3011 }
+				swap_ideas = {
+					remove_idea = spr_idea_civil_war_recovery3011
+					add_idea = spr_idea_civil_war_recovery3111
+				}
+			} else = {
+				if = {
+					limit = { has_idea = spr_idea_civil_war_recovery3010 }
+					swap_ideas = {
+						remove_idea = spr_idea_civil_war_recovery3010
+						add_idea = spr_idea_civil_war_recovery3110
+					}
+				}
+				else = {
+					if = {
+						limit = { has_idea = spr_idea_civil_war_recovery3001 }
+						swap_ideas = {
+							remove_idea = spr_idea_civil_war_recovery3001
+							add_idea = spr_idea_civil_war_recovery3101
+						}
+					}
+					else = {
+						swap_ideas = {
+							remove_idea = spr_idea_civil_war_recovery3
+							add_idea = spr_idea_civil_war_recovery3100
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_royal_funded_senate
+		icon = GFX_SPR_meeting_the_challengers
+		cost = 60
+		
+		prerequisite = { focus = SPR_arm_people }
+		prerequisite = { focus = SPR_new_system_for_Spain }
+		prerequisite = { focus = SPR_give_back_profits }
+		relative_position_id = SPR_give_back_profits
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			set_temp_variable = { hog_name = 2003 }
+			set_variable = { hog_name = hog_name }
+			custom_effect_tooltip = NEW_HOG_TOOLTIP
+			set_variable = { hog_party = 3 }
+			set_variable = { hog_loyalty = 0.8000 }
+			set_variable = { hog_exp = 0 }
+			set_variable = { hog_political_skill = 0 }
+			set_variable = { hog_unity_skill = 0 }
+			set_variable = { hog_industrial_skill = 0 }
+			set_variable = { hog_military_skill = 0.025 }
+			set_country_flag = has_hog
+			add_stability = 0.10
+		}
+	}
+	
+	focus = { 
+		id = SPR_liberal_constitution
+		icon = GFX_SPR_Popular_laws
+		cost = 60
+		
+		prerequisite = { focus = SPR_royal_funded_senate }
+		relative_position_id = SPR_royal_funded_senate
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = spr_idea_civil_war_recovery3111
+				add_idea = spr_idea_liberal_constitution
+			}
+		}
+	}
+	
+}

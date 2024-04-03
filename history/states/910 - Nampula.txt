@@ -1,0 +1,24 @@
+state= {
+	id=910
+	name="STATE_910"
+	manpower = 241370
+	
+	state_category = rural
+
+	history= {
+		owner = POR
+		add_core_of = POR
+        victory_points = {
+			12958 1 
+		}
+		buildings = {
+			infrastructure = 1
+			2123 = {
+			    naval_base = 1
+			}
+		}
+	}
+	provinces={
+	   12908 12971 2180 2159 2217 2202 2123 5164 10972
+	}
+}

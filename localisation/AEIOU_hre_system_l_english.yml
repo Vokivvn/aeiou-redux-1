@@ -1,0 +1,56 @@
+﻿l_english:
+ #Interface
+ HRE_EMPEROR_NAME:0 "§Y[?global.hre_emperor.GetLeader]§! is the Emperor"
+ HRE_EMPEROR_NO_EMPEROR:0 "There is Currently §RNo Emperor§!"
+ HRE_ELECTOR_RELATION:0 "[?global.prince_tag_array^i:opinion@SPR]"
+ HRE_ACTION_SUBSET:0 "Only available to\nmembers of the HRE"
+
+ #Tooltips
+ HRE_MAIN_BUTTON_TOOLTIP:0 "Holy Roman Empire"
+ HRE_EMPEROR_TOOLTIP:0 "[?global.hre_emperor.GetName]"
+ HRE_ELECTOR_TOOLTIP:0 "[?global.elector_tag_array^i.GetName]"
+ HRE_ELECTOR_PICK_TOOLTIP:0 "[?global.elector_tag_array^i.GetName] currently supports [GetElectorPickName] for the position of emperor within the HRE"
+ HRE_PRINCE_TOOLTIP:0 "[?global.prince_tag_array^i.GetName]"
+ HRE_FREE_CITY_TOOLTIP:0 "[?global.free_city_tag_array^i.GetName]"
+ HRE_CONTROLLER_TOOLTIP:0 "[GetControllerTooltip]"
+ HRE_DISBAND_TOOLTIP:0 "§YDisband the HRE§!\nDisbanding the HRE requires us to §Roccupy the current emperor's capital§! as well as all electors to §Gbe in our faction§! or §Rhave lost their capital as well§!. Performing this action would gain us §G50 prestige§! and §Ypermanently disable the HRE mechanic§!."
+ HRE_IMPERIAL_AUTHORITY_TOOLTIP:0 "§YImperial Authority§!\nImperial Authority represents the emperor's ability to perform actions within the HRE, be it reforms or foreign relations. The HRE currently has [?global.imperial_authority|+2] Imperial Authority and gains [?global.imperial_authority_gain|=+2] per month at [?global.imperial_authority_gain_efficiency|%2Y] efficiency."
+ HRE_IMPERIAL_STABILITY_TOOLTIP:0 "§YImperial Stability§!\nImperial Stability represents the unity within the HRE. High levels of stability results in a §Ggreater acceptance for the emperor and makes reforms easier to pass§!. Low levels of stability results in more division within the HRE and can cause a §Rcivil war§!."
+ HRE_IMPERIAL_CENTRALIZATION_TOOLTIP:0 "§YImperial Centralization§!\nImperial Centralization represents the HRE's ability to act as a single entitiy. Even though the §Yemperor§! can §Yunite the HRE§! before §Y100% centralization§!, §Ghigher centralization levels can result in more members joining in this new HRE§!."
+ ADD_ELECTOR_TOOLTIP:0 "There are currently less than §Y7 electors§!"
+ IMPERIAL_AUTHORITY_CHECK_TOOLTIP:0 "The HRE needs at least §Y[?imperial_authority_check_temp] imperial authority§!"
+ IMPERIAL_CENTRALIZATION_CHECK_TOOLTIP:0 "The HRE needs to be at least §Y[?imperial_centralization_check_temp|%0] centralized§! for this action."
+ HRE_AUS_FOCUS_TOOLTIP:0 "§GThis action is taken through an AUSTRIAN focus§!"
+ IMPERIAL_AUTHORITY_CHANGE:0 "§YImperial Authority§! will change by [?base_imperial_gain_temp|+=0]"
+ IMPERIAL_STABILITY_CHANGE:0 "§YImperial Stability§! will change by [?base_imperial_stability_gain_temp|%+=1]"
+ IMPERIAL_CENTRALIZATION_CHANGE:0 "§YImperial Centralization§! will increase by [?base_imperial_centralization_gain_temp|%+0]"
+ IMPERIAL_AUTHORITY_EFFICIENCY_CHANGE:0 "§YImperial Authority Efficiency§! will increase by [?base_imperial_efficiency_gain_temp|%+0]"
+ CIVIL_WAR_CHECK:0 "§RWhen selecting this action, low Imperial Stability can result in a CIVIL WAR!§!"
+ HRE_MILITARY_ACCESS:0 "We will gain §YMilitary Access§! to everyone within the §YHRE§!"
+ HRE_MILITARY_ACCESS_II:0 "All §Yarmies under the HRE banner§! will be allowed to travel the entire §YHRE§!"
+ HRE_MILITARISTUC_OATH:0 "§YHRE members§! will no longer be able to refuse the §YCall to Arms§!"
+ HRE_EMPIRE_DEFENSE:0 "§YCalling the empire to arms§! in a §Ydefensive war§! will be §Ycheaper§!"
+ HRE_CALL_OF_EMPIRE:0 "§YCalling the empire to arms§! in an §Yoffensive war§! will be §Ycheaper§!"
+ HRE_EMPEROR_INDUSTRY:0 "Every §Ymember of the HRE§! will now support the §Yemperor§! with §Y1 Civilian Factory§!"
+ HRE_EMPEROR_INDUSTRY_II:0 "Every §Ymember of the HRE§! will now support the §Yemperor§! with §G1 Military Factory§!"
+
+ #ACTION Tooltips
+ HRE_ACTION_TOOLTIP:0 "§Y[GetActionName]\n\nPrerequisites:§!\n[!hre_actions_button_click_enabled]\n§YEffects:§!\n[!hre_actions_button_click]"
+ HRE_NOT_CALLED_TO_WAR_TOOLTIP:0 "The HRE has not already been called to war"
+ HRE_DEFENSIVE_WAR_CHECK_TOOLTIP:0 "The emperor is in a §Ydefensive war§! with more than §Y[?imperial_authority_check_temp_def|0] imperial authority§!"
+ HRE_OFFENSIVE_WAR_CHECK_TOOLTIP:0 "The emperor is in a §Yoffensive war§! with more than §Y[?imperial_authority_check_temp_off|0] imperial authority§!"
+ HRE_NOT_TOURED_TOOLTIP:0 "The §Yemperor§! has not toured recently"
+ 
+ #Opinion
+ HRE_lost_elector_status:0 "Recently Lost Elector Status"
+ HRE_emperor_tour:0 "Emperor Recently Toured HRE"
+ HRE_distance:0 "Distanced from the HRE"
+ HRE_disliked_reform:0 "Recent Disliked Reform"
+ 
+ #Diplomacy
+ ADD_HRE_ELECTOR_TITLE:0 "Grant Electoral Status"
+ ADD_HRE_ELECTOR_ACTION_DESC:0 "Grants this nation the ability to vote for the next emperor within the HRE."
+ REMOVE_HRE_ELECTOR_TITLE:0 "Remove Electoral Status"
+ REMOVE_HRE_ELECTOR_ACTION_DESC:0 "Takes away this nation's ability to vote for the next emperor within the HRE. This also damages their relation to us."
+ HRE_ELECTOR_PICK_TITLE:0 "Support HRE Emperorship"
+ HRE_ELECTOR_PICK_ACTION_DESC:0 "We will support this country to be the next emperor of the HRE"

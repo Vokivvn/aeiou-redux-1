@@ -1,0 +1,17 @@
+﻿capital = 106
+
+set_research_slots = 3
+
+# Starting tech
+# clone of Yugoslavia
+set_technology = {
+	tech_support = 1		
+	tech_engineers = 1
+	grenade = 1
+	muskets0 = 1
+	bayonet = 1
+}
+
+set_popularities = {
+	conservative = 100
+}

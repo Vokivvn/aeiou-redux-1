@@ -1,0 +1,22 @@
+﻿capital = 440
+
+oob = "PAK_1936"
+
+# Starting tech
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+	
+}
+
+set_convoys = 20
+
+set_politics = {
+	ruling_party = conservative
+	last_election = "1935.11.14"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	conservative = 100
+}

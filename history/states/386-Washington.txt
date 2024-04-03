@@ -1,0 +1,27 @@
+
+state={
+	id=386
+	name="STATE_386"
+	manpower = 4212‬
+	
+	state_category = pastoral
+
+	resources={
+		wood=2 
+	}
+
+	history={
+		owner = SPO
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = SPO
+		victory_points = {
+			7315 10 
+		}
+	}
+
+	provinces={
+		1320 1408 4413 4428 7255 7315 7414 7442 7677 7753 10155 10157 10198 10690 12155 12214 
+	}
+}

@@ -1,0 +1,64 @@
+division_template = {
+	name = "Royal Rashidi Guard Battalion"
+
+	division_names_group = JAB_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+		line_infantry = { x = 0 y = 4 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+		line_infantry = { x = 1 y = 2 }
+		line_infantry = { x = 1 y = 3 }
+		line_infantry = { x = 1 y = 4 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Rashidi Cavalry Division"
+
+	division_names_group = JAB_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Rashidi Warrior Brigade"
+
+	division_names_group = JAB_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Royal Rashidi Guard Battalion"
+		location = 4968
+		division_template = "Royal Rashidi Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Rashidi Cavalry Division"
+		location = 8101
+		division_template = "Royal Rashidi Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Rashidi Warrior Brigade"
+		location = 5024
+		division_template = "Royal Rashidi Warrior Brigade"
+		start_experience_factor = 0.3
+	}
+}

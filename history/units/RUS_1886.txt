@@ -1,0 +1,130 @@
+division_template = {
+	name = "Royal Russian Guard Battalion"
+
+	division_names_group = RUS_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+		line_infantry = { x = 0 y = 4 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+		line_infantry = { x = 1 y = 2 }
+		line_infantry = { x = 1 y = 3 }
+		line_infantry = { x = 1 y = 4 }
+		line_infantry = { x = 2 y = 0 }
+		line_infantry = { x = 2 y = 1 }
+		line_infantry = { x = 2 y = 2 }
+		line_infantry = { x = 2 y = 3 }
+		line_infantry = { x = 2 y = 4 }
+		line_infantry = { x = 3 y = 0 }
+		line_infantry = { x = 3 y = 1 }
+		line_infantry = { x = 3 y = 2 }
+		line_infantry = { x = 3 y = 3 }
+		line_infantry = { x = 3 y = 4 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Russian Cavalry Division"
+
+	division_names_group = RUS_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 0 y = 2 }
+		medium_cavalry = { x = 0 y = 3 }
+		medium_cavalry = { x = 0 y = 4 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+		medium_cavalry = { x = 1 y = 2 }
+		medium_cavalry = { x = 1 y = 3 }
+		medium_cavalry = { x = 1 y = 4 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Russian Knight Brigade"
+
+	division_names_group = RUS_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Royal Russian Guard Battalion"
+		location = 6380
+		division_template = "Royal Russian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Russian Guard Battalion"
+		location = 3529
+		division_template = "Royal Russian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3rd Royal Russian Guard Battalion"
+		location = 11234
+		division_template = "Royal Russian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4th Royal Russian Guard Battalion"
+		location = 3734
+		division_template = "Royal Russian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "5th Royal Russian Guard Battalion"
+		location = 9417
+		division_template = "Royal Russian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "6th Royal Russian Guard Battalion"
+		location = 9417
+		division_template = "Royal Russian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "7th Royal Russian Guard Battalion"
+		location = 9417
+		division_template = "Royal Russian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "8th Royal Russian Guard Battalion"
+		location = 9417
+		division_template = "Royal Russian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "9th Royal Russian Guard Battalion"
+		location = 9417
+		division_template = "Royal Russian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Russian Cavalry Division"
+		location = 6262
+		division_template = "Royal Russian Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Russian Cavalry Division"
+		location = 9098
+		division_template = "Royal Russian Cavalry Division"
+		start_experience_factor = 0.3
+	}
+}

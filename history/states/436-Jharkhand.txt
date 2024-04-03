@@ -1,0 +1,25 @@
+
+state={
+	id=436
+	name="STATE_436" # Jabalpur
+	manpower = 14123100
+	
+	state_category = rural
+	
+	resources={
+		wood=4 # was: 6
+	}
+
+	history={
+		owner = MAR
+		add_core_of = MAR
+		buildings = {
+			infrastructure = 4
+		}
+
+	}
+
+	provinces={
+		1510 4557 4883 4950 4953 5019 7497 7574 7619 8120 10030 10401 10511 10801 12375 12420 12480 12781 12799 12854 
+	}
+}

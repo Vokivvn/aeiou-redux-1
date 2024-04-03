@@ -1,0 +1,31 @@
+spriteTypes = {
+	                                        
+	spriteType = {
+		name = "GFX_report_news_event_rome_01"
+		texturefile = "gfx/event_pictures/news_events/newsevent_AEIOU_01.dds"
+	}
+	spriteType = {
+		name = "GFX_report_news_event_constantinople_01"
+		texturefile = "gfx/event_pictures/news_events/newsevent_AEIOU_02.dds"
+	}                                         
+	spriteType = {
+		name = "GFX_report_news_event_prague_01"
+		texturefile = "gfx/event_pictures/news_events/newsevent_AEIOU_03.dds"
+	}
+	spriteType = {
+		name = "GFX_report_news_event_stockholm_01"
+		texturefile = "gfx/event_pictures/news_events/newsevent_AEIOU_04.dds"
+	}
+	spriteType = {
+		name = "GFX_report_news_event_centroamerica_01"
+		texturefile = "gfx/event_pictures/news_events/newsevent_AEIOU_05.dds"
+	}
+	spriteType = {
+		name = "GFX_report_news_event_spain_01"
+		texturefile = "gfx/event_pictures/news_events/newsevent_AEIOU_06.dds"
+	}
+	spriteType = {
+		name = "GFX_country_event_borneo_01.dds"
+		texturefile = "gfx/event_pictures/country_events/countryevent_AEIOU_01.dds"
+	}
+}

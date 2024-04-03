@@ -1,0 +1,31 @@
+division_template = {
+	name = "Tribal Sahrawi Warrior"
+
+	division_names_group = SAH_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Tribal Sahrawi Warrior"
+		location = 10875
+		division_template = "Tribal Sahrawi Warrior"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Tribal Sahrawi Warrior"
+		location = 1958
+		division_template = "Tribal Sahrawi Warrior"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3rd Tribal Sahrawi Warrior"
+		location = 7979
+		division_template = "Tribal Sahrawi Warrior"
+		start_experience_factor = 0.3
+	}
+}

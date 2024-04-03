@@ -1,0 +1,13 @@
+﻿units = {	
+	fleet = {
+		name = "French Naval Group"			
+		naval_base = 9737
+		task_force = {
+			name = "French Naval Group"
+			location = 9737
+			ship = { name = "French Privateer" definition = destroyer equipment = { destroyer_1 = { amount = 3 owner = FRA creator = FRA version_name = "Acadia Class" } } }
+			ship = { name = "French Privateer" definition = destroyer equipment = { destroyer_1 = { amount = 3 owner = FRA creator = FRA version_name = "Acadia Class" } } }
+			ship = { name = "French Privateer" definition = destroyer equipment = { destroyer_1 = { amount = 3 owner = FRA creator = FRA version_name = "Acadia Class" } } }
+		}								
+	}
+}

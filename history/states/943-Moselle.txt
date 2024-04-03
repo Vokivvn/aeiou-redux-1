@@ -1,0 +1,26 @@
+
+state={
+	id=943
+	name="STATE_943" 
+	manpower = 376480
+	
+	state_category = rural
+	resources={
+        iron = 5
+	}
+
+	history={
+		owner = FRA
+		#victory_points = { 6529 1 }
+		#victory_points = { 549 1 }		
+		victory_points = { 9559 10 }
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = FRA
+	}
+
+	provinces={
+		3629 9559 11502 
+	}
+}

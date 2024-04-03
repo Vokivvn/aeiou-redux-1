@@ -1,0 +1,25 @@
+ideas = {
+	
+	country = {
+
+		hol_ongoing_industrialisation = {
+            picture = SPN_Ongoing_Industrialisation
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+
+            modifier = {
+				production_factory_max_efficiency_factor = 0.15
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				line_change_production_efficiency_factor = 0.08
+            }
+        }
+	}
+}

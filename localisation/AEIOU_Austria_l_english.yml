@@ -1,0 +1,2524 @@
+﻿l_english:
+
+ ###Political Advisors
+ AUS_Alois_Lexa_von_Aehrenthal:0 "Alois Lexa von Aehrenthal"
+ AUS_Gyula_Andrassy:0 "Gyula Andrássy"
+ AUS_Albert_Apponyi:0 "Albert Apponyi"
+ AUS_Leopold_Berchtold:0 "Leopold Berchtold"
+ AUS_Bela_Grunwald:0 "Béla Grünwald"
+ AUS_Konrad_zu_Hohenlohe_Schillingsfurst:0 "Konrad zu Hohenlohe-Schillingsfürst"
+ AUS_Karl_Sigmund_von_Hohenwart:0 "Karl Sigmund von Hohenwart"
+ AUS_Sandor_Hollan_Sr:0 "Sándor Hollán Sr."
+ AUS_Gustav_Kalnoky:0 "Gustav Kálnoky"
+ AUS_Anton_Pace_von_Friedensberg:0 "Anton Pace von Friedensberg"
+ AUS_Albert_Schaffle:0 "Albert Schäffle"
+ AUS_Alexander_Spitzmuller:0 "Alexander Spitzmüller"
+ AUS_Emil_Steinbach:0 "Emil Steinbach"
+ AUS_Ivan_Sustersic:0 "Ivan Šusteršič"
+ AUS_Carol_Telbisz:0 "Carol Telbisz"
+ AUS_Joseph_Unger:0 "Joseph Unger"
+ AUS_Eduard_Taaffe:0 "Eduard Taaffe"
+ 
+ AUS_Paul_Puhallo_von_Brlog:0 "Paul Puhallo von Brlog"
+ AUS_Svetozar_Boroevic:0 "Svetozar Boroević"
+ AUS_Franz_Conrad_von_Hotzendorf_th:0 "Franz Conrad von Hötzendorf"
+ AUS_Anton_von_Schonfeld:0 "Anton von Schönfeld"
+ AUS_Anton_Haus:0 "Amton Haus"
+
+ AUS_Arthur_Arz_von_Straussenburg:0 "Arthur Arz von Straußenburg"
+ AUS_Archduke_Friedrich:0 "Archduke Friedrich"
+ AUS_Carlo_Caneva:0 "Carlo Caneva"
+ AUS_Alexander_von_Krobatin:0 "Alexander von Krobatin"
+
+ AUS_Rudolf_Montecuccoli:0 "Rudolf Montecuccoli"
+ AUS_Maximilian_Njegovan:0 "Maximilian Njegovan"
+ AUS_Hermann_von_Spaun:0 "Hermann von Spaun"
+
+ AUS_Antonio_Baldissera:0 "Antonio Baldissera"
+ AUS_Eduard_von_Bohm_Ermolli:0 "Eduard von Böhm-Ermolli"
+ AUS_Franz_Conrad_von_Hotzendorf_hc:0 "Franz Conrad von Hötzendorf"
+ AUS_Archduke_Eugen:0 "Archduke Eugen"
+ AUS_Hermann_Kovess_von_Kovesshaza:0 "Hermann Kövess von Kövessháza"
+ AUS_Franz_Kuhn_von_Kuhnenfeld:0 "Franz Kuhn von Kuhnenfeld"
+ AUS_Blasius_von_Schemua:0 "Blasius von Schemua"
+ AUS_Archduke_Charles_Stephen:0 "Archduke Charles Stephen"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ ###Decisions
+ austria_rudolf_mechanics_category:0 "The State of the Nation"
+ austria_rudolf_mechanics_category_desc:0 "§gHabsburg Nobility§!:   §G[?aus_var_habsburg_nobility|%]§! \n§OHigh Nobility§!:            §G[?aus_var_major_nobility|%]§! \n§LProvincial Nobility§!: §G[?aus_var_minor_nobility|%]§! \n§YClergy§!:                         §G[?aus_var_clergy|%]§!  \n§CPeople§!:                         §G[?aus_var_people|%]§!"
+ austria_uprising_status:0 "Status of the Civil Unrest"
+ austria_uprising_status_desc:0 "Throughout the years of Austrian domination in Europe, the Empire has managed to acquire a number of foreign territories. Although alien in nature, they have been deemed as core parts of Austria for centuries, leaving the local people wandering: §Y'How can one call themselves Austrian if they speak a distinct language, follow peculiar traditions and worship a different God?'§!. As long as these questions have been present throughout generations of people living in the Empire, there have also been actions taken by nationalist organisations, albeit to no avail. This all can change at any moment, as separatism has awoken from works and manifests of activists. §RIt is clear that something will come, something never seen before.§!\n\nCurrently, the Opposition is [GetAusUprisingUnity] and active [GetAusUprisingIntensity]."
+
+ AUS_placeholder_decision:0 "murder basque"
+ 
+ ###Ideas
+
+ aus_idea_winds_of_change:0 "Winds of Change"
+ aus_idea_winds_of_change_desc:0 "The crowning of Rudolph represented a much-needed turning point with the Austrian Empire. The empire had been mired in absolutism and conservatism, the new emperor symbolizes a push towards modernity and progress. Through his patronage, the liberals and progressives have managed to become an influential faction within the Empire, formerly relegated to the fringes of court. Made up of intellectuals and a small fraction of nobility within the empire the group wants to push progressive ideals and modernize the country in order for it to function in the world around them.\n\nHowever, such changes are not without opposition or cost. Much of the Empire is still controlled by the nobility who see any changes to the regime they have known for centuries as a threat to their power. Changes are met with obstructionism or outright hostility and tensions are high between political factions. As a result, the empire seems to be on a tipping point, no one knows exactly what amount of change will break the balance."
+
+ aus_idea_disorganized_army:0 "Disorganized Army"
+ aus_idea_disorganized_army_desc:0 "The Austrian Army is in a state of disarray and is not the vaulted fighting force that it once was. While it remains one of the largest in Europe. It suffers from mismanagement and hasn’t actually engaged in combat for some time now. Previous Emperors, looking to satisfy political opposition often used positions and titles in the army to reward loyal followers and calm rebellious nobles. While this may have worked in the short term it has put the army in a terrible position. Nobles of high birth are placed into positions they have no experience or talent for, and lower ranks are discontent. These nobles often bring contingents, of their own men, and mercenaries are commonplace within the ranks. The result is an army that identifies more with the region or noble that it came from.\n\nThe army has also not seen combat for some time, owing to their preeminent position in Europe discouraging any would-be challengers. While the largest army, having no combat experience is worrying for many of the military planners. Numbers alone cannot sustain the army, especially when many have never been in the heat of battle or under fire. Major reform is needed to bring the army up to standard."
+
+ aus_idea_high_feudalism:0 "High Feudalism"
+ aus_idea_high_feudalism_desc:0 "The Empire of the Habsburgs is not one contiguous realm. Over the years the Habsburg family has accumulated a number of different titles and domains to add onto their original Grand-Duchy of Austria. From the Kingdom of Hungary to the east, to the Kingdom of Bohemia in the west, the Habsburg domain is made up of various duchies, kingdoms, and countries. This translates to more court traditions and procedures than anyone courtier could hope to remember, what may be appropriate in one court may be a faux pas among others. Juggling such complicated court rituals is a headache.\n\nThough that isn’t the worst part of having such a highly fractured realm. The nobles of the various constituting areas still hold much power within the Empire. This is most apparent in Hungary, where Magyar nobles are powerful landowners. Though these lords contribute to the overall army, the men are more loyal to the lords they follow then the emperor. Any attempt to step on the nobilities’ power may have consequences."
+
+ aus_idea_habsburg_dynasty:0 "The Habsburg Dynasty"
+ aus_idea_habsburg_dynasty_desc:0 "The Habsburg family has been a rising star in Central Europe ever since they were granted land and a castle by the Count of Klettgau. Since then they have accumulated a number of titles including, the Kingdom of Bohemia, the Kingdom of Hungary, and the Archduchy of Austria. They have also spread their family roots far and wide throughout Europe, marrying into a number of other families. Marriage has proved a tool as effective as war, binding many allies to the Austrian cause and used as a political expedient against war.\n\nThe extensive power of the dynasty spreading has given the family a surplus of soft power. Wien is the cultural center of Europe and many come to try their luck with court politics, only serving to make the prestige of Austria greater. With the extensive court, diplomats from even the most minor state make sure that they are represented. Though from years of experience, Habsburg rulers have perfected the art of making diplomatic deals benefit the family and their crown."
+ 
+ aus_idea_inspiration_athens:0 "Inspiration from Athens"
+ aus_idea_inspiration_athens_desc:0 ""
+ 
+ aus_idea_inspiration_rome:0 "Inspiration from Rome"
+ aus_idea_inspiration_rome_desc:0 ""
+ 
+ aus_idea_rudolfian_democracy:0 "Rudolfian Democracy"
+ aus_idea_rudolfian_democracy_desc:0 ""
+ 
+ aus_idea_promise_end_serfdom:0 "Promised to End Serfdom"
+ aus_idea_promise_end_serfdom_desc:0 ""
+ 
+ aus_idea_state_clergy:0 "The Clergy Subjugated"
+ aus_idea_state_clergy_desc:0 ""
+ 
+ aus_idea_moderate_secularization:0 "Moderate Secularization"
+ aus_idea_moderate_secularization_desc:0 ""
+ 
+ aus_idea_aggressive_secularization:0 "Aggressive Secularization"
+ aus_idea_aggressive_secularization_desc:0 ""
+
+ aus_idea_agreement_with_church:0 "Agreement with the Church"
+ aus_idea_agreement_with_church_desc:0 ""
+
+ aus_idea_land_redistribution:0 "Land Redistribution"
+ aus_idea_land_redistribution_desc:0 ""
+
+ aus_idea_increasing_centralization:0 "Increasing Centralisation"
+ aus_idea_increasing_centralization_desc:0 ""
+
+ aus_idea_freed_ideas:0 "Freed Ideas"
+ aus_idea_freed_ideas_desc:0 ""
+
+ aus_idea_cut_off_popes_influence:0 "Cut off papal Influence"
+ aus_idea_cut_off_popes_influence_desc:0 ""
+
+ aus_idea_pact_with_bourgeoisie:0 "Pact with Bourgeoisie"
+ aus_idea_pact_with_bourgeoisie_desc:0 ""
+
+ aus_idea_political_christianity:0 "Political Christianity"
+ aus_idea_political_christianity_desc:0 ""
+
+ aus_idea_wave_of_new_concepts:0 "Wave of new Concepts"
+ aus_idea_wave_of_new_concepts_desc:0 ""
+
+ aus_idea_fight_against_illiteracy:0 "Fight against Illiteracy"
+ aus_idea_fight_against_illiteracy_desc:0 ""
+
+ aus_idea_literate_peasantry:0 "Literate Peasantry"
+ aus_idea_literate_peasantry_desc:0 ""
+
+ aus_idea_inspired_by_the_prince:0 "Inspired by "The Prince""
+ aus_idea_inspired_by_the_prince_desc:0 ""
+
+
+ aus_idea_democracy_1:0 "Rudolf's Reforms"
+ aus_idea_democracy_2_1:0 "Rudolf's Reforms"
+ aus_idea_democracy_2_2:0 "Rudolf's Reforms"
+ aus_idea_democracy_3:0 "Rudolf's Reforms"
+
+ aus_idea_absolutism_1:0 "Rudolf's Reforms"
+ aus_idea_absolutism_2_1:0 "Rudolf's Reforms"
+ aus_idea_absolutism_2_2:0 "Rudolf's Reforms"
+ aus_idea_absolutism_3:0 "Rudolf's Reforms"
+
+ aus_idea_oligarchy_1:0 "Rudolf's Reforms"
+ aus_idea_oligarchy_2_1:0 "Rudolf's Reforms"
+ aus_idea_oligarchy_2_2:0 "Rudolf's Reforms"
+ aus_idea_oligarchy_3:0 "Rudolf's Reforms"
+
+
+ aus_idea_free_government:0 "Free Government"
+ aus_idea_free_government_desc:0 ""
+
+ aus_idea_guidance_to_liberty:0 "Guidance to Liberty"
+ aus_idea_guidance_to_liberty_desc:0 ""
+
+ aus_idea_democracy_for_the_chosen:0 "Democracy for the Chosen"
+ aus_idea_democracy_for_the_chosen_desc:0 ""
+
+ aus_idea_moderate_feudalism:0 "Moderate Feudalism"
+ aus_idea_moderate_feudalism_desc:0 ""
+
+ aus_idea_minor_riots:0 "Minor Riots"
+ aus_idea_minor_riots_desc:0 ""
+
+
+
+
+
+
+ ###Focus Tree
+ Austria_intro:0 "Austria Intro"
+ Austria_rudolf_reforms:0 "Rudolf's Reforms"
+
+ AUS_rudolfs_bane:0 "Rudolf's Bane"
+ AUS_rudolfs_bane_desc:0 ""
+
+ AUS_promises_to_the_people:0 "Promises to the People"
+ AUS_promises_to_the_people_desc:0 ""
+
+ AUS_deal_with_the_nobility:0 "Deal with the Nobility"
+ AUS_deal_with_the_nobility_desc:0 ""
+
+ AUS_a_visit_to_rome:0 "A Visit to Rome"
+ AUS_a_visit_to_rome_desc:0 ""
+
+ AUS_emancipation:0 "Emancipation"
+ AUS_emancipation_desc:0 ""
+
+ AUS_equality:0 "Equality"
+ AUS_equality_desc:0 ""
+
+ AUS_salvation:0 "Salvation"
+ AUS_salvation_desc:0 ""
+
+ AUS_threats_and_action:0 "Threats and Action"
+ AUS_threats_and_action_desc:0 ""
+
+ AUS_presents_and_cajoling:0 "Presents and Cajoling"
+ AUS_presents_and_cajoling_desc:0 ""
+
+ AUS_to_koln:0 "To Köln..."
+ AUS_to_koln_desc:0 ""
+
+ AUS_and_to_konigsberg:0 "...And to Königsberg"
+ AUS_and_to_konigsberg_desc:0 ""
+
+ AUS_the_peoples_emperor:0 "The People's Emperor"
+ AUS_the_peoples_emperor_desc:0 ""
+
+ AUS_call_for_council:0 "Call for Council"
+ AUS_call_for_council_desc:0 ""
+
+ AUS_end_temporal_authority:0 "End Temporal Authority"
+ AUS_end_temporal_authority_desc:0 ""
+
+ AUS_inspiration_from_athens:0 "Inspiration from Athens..."
+ AUS_inspiration_from_athens_desc:0 ""
+
+ AUS_or_rome:0 "...Or Rome"
+ AUS_or_rome_desc:0 ""
+
+ AUS_speak_with_the_family:0 "Speak with the Family"
+ AUS_speak_with_the_family_desc:0 ""
+
+ AUS_the_nobles_from_home:0 "...The Nobles from Home..."
+ AUS_the_nobles_from_home_desc:0 ""
+
+ AUS_and_the_rest:0 "...And the Rest"
+ AUS_and_the_rest_desc:0 ""
+
+ AUS_with_gifts:0 "With Gifts"
+ AUS_with_gifts_desc:0 ""
+
+ AUS_with_nothing:0 "With Nothing"
+ AUS_with_nothing_desc:0 ""
+
+ AUS_i_present_you_democracy:0 "I Present to You Democracy"
+ AUS_i_present_you_democracy_desc:0 ""
+
+ AUS_miserere_nobis:0 "Miserere Nobis"
+ AUS_miserere_nobis_desc:0 ""
+
+ AUS_the_peoples_freedom:0 "The People's Freedom"
+ AUS_the_peoples_freedom_desc:0 ""
+
+ AUS_the_clergys_fate:0 "The Clergy's Fate"
+ AUS_the_clergys_fate_desc:0 ""
+
+ AUS_neue_gesellschaft:0 "Neue Gesellschaft"
+ AUS_neue_gesellschaft_desc:0 ""
+
+ AUS_the_beginning:0 "The Beginning"
+ AUS_the_beginning_desc:0 ""
+
+ AUS_the_first_estate:0 "The First Estate"
+ AUS_the_first_estate_desc:0 ""
+
+ AUS_the_second_estate:0 "The Second Estate"
+ AUS_the_second_estate_desc:0 ""
+ 
+AUS_what_is_the_third_estate:0 "What is the Third Estate?"
+AUS_what_is_the_third_estate_desc:0 ""
+
+AUS_the_emancipation:0 "The Emancipation"
+AUS_the_emancipation_desc:0 ""
+
+AUS_all_roads_lead_to_vienna:0 "All Roads Lead to Vienna"
+AUS_all_roads_lead_to_vienna_desc:0 ""
+
+AUS_initiate_land_redistribution:0 "Initiate the Land Redistribution"
+AUS_initiate_land_redistribution_desc:0 ""
+
+AUS_third_estate_is_everything:0 "The Third Estate is Everything"
+AUS_third_estate_is_everything_desc:0 ""
+
+AUS_all_taxes_belong_to_the_state:0 "All Taxes Belong to the State"
+AUS_all_taxes_belong_to_the_state_desc:0 ""
+
+AUS_all_nobles_obey_to_emperor:0 "All Nobles Must Obey the Emperor"
+AUS_all_nobles_obey_to_emperor_desc:0 ""
+
+AUS_weaken_the_high_nobility:0 "Weaken the High Nobility"
+AUS_weaken_the_high_nobility_desc:0 ""
+
+AUS_destroy_the_provincial_nobility:0 "Destroy the Provincial Nobility"
+AUS_destroy_the_provincial_nobility_desc:0 ""
+
+AUS_dissolution_of_monasteries:0 "The Dissolution of the Monasteries"
+AUS_dissolution_of_monasteries_desc:0 ""
+
+AUS_end_the_tithe:0 "End the Tithe"
+AUS_end_the_tithe_desc:0 ""
+
+AUS_the_state_clergy:0 "The State Clergy"
+AUS_the_state_clergy_desc:0 ""
+
+AUS_listen_to_locke_and_voltaire:0 "Listen to Locke and Voltaire"
+AUS_listen_to_locke_and_voltaire_desc:0 ""
+
+AUS_listen_to_nietzsche:0 "Listen to Nietzsche"
+AUS_listen_to_nietzsche_desc:0 ""
+
+AUS_edmond_burke_questionmark:0 "Edmond Burke?"
+AUS_edmond_burke_questionmark_desc:0 ""
+
+AUS_habsburg_primacy:0 "The Habsburg Primacy"
+AUS_habsburg_primacy_desc:0 ""
+
+AUS_redistribute_the_land:0 "Redistribute the Land"
+AUS_redistribute_the_land_desc:0 ""
+
+AUS_direct_rule_from_vienna:0 "Direct Rule from Vienna"
+AUS_direct_rule_from_vienna_desc:0 ""
+
+AUS_an_agreement_with_church:0 "An Agreement with the Church"
+AUS_an_agreement_with_church_desc:0 ""
+
+AUS_confiscate_clerical_property:0 "Confiscate the Clerical Property"
+AUS_confiscate_clerical_property_desc:0 ""
+
+AUS_pact_with_bourgeoisie:0 "Pact with the Bourgeoisie"
+AUS_pact_with_bourgeoisie_desc:0 ""
+
+AUS_the_right_to_vote:0 "The Right to Vote"
+AUS_the_right_to_vote_desc:0 ""
+
+AUS_the_social_contract:0 "The Social Contract"
+AUS_the_social_contract_desc:0 ""
+
+AUS_create_the_ubermensch:0 "Create the Übermensch"
+AUS_create_the_ubermensch_desc:0 ""
+
+AUS_read_machiavelli:0 "Read Machiavelli"
+AUS_read_machiavelli_desc:0 ""
+
+AUS_abolish_social_classes:0 "Abolish Social Classes"
+AUS_abolish_social_classes_desc:0 ""
+
+AUS_political_christianity:0 "Political Christianity"
+AUS_political_christianity_desc:0 ""
+
+AUS_democracy_for_the_wise:0 "Democracy for the Wise"
+AUS_democracy_for_the_wise_desc:0 ""
+
+AUS_the_virtuous_plebian:0 "The Virtuous Plebian"
+AUS_the_virtuous_plebian_desc:0 ""
+
+AUS_confiscate_the_gold:0 "Confiscate the Gold"
+AUS_confiscate_the_gold_desc:0 ""
+
+AUS_abolish_regional_diets:0 "Abolish Regional Diet"
+AUS_abolish_regional_diets_desc:0 ""
+
+AUS_recognise_popes_authority:0 "Recognise Pope's Authority"
+AUS_recognise_popes_authority_desc:0 ""
+
+AUS_freedom_of_conscience:0 "The Freedom of Conscience"
+AUS_freedom_of_conscience_desc:0 ""
+
+AUS_support_gallicanism:0 "Support Gallicanism"
+AUS_support_gallicanism_desc:0 ""
+
+AUS_freedom_of_religion:0 "Freedom of Religion"
+AUS_freedom_of_religion_desc:0 ""
+
+AUS_we_need_capitalism:0 "We Need Capitalism"
+AUS_we_need_capitalism_desc:0 ""
+
+AUS_austrian_parliament:0 "The Austrian Parliament"
+AUS_austrian_parliament_desc:0 ""
+
+AUS_educate_the_poor:0 "Educate the Poor"
+AUS_educate_the_poor_desc:0 ""
+
+AUS_equal_inequality:0 "Equal Inequality"
+AUS_equal_inequality_desc:0 ""
+
+AUS_forced_Germanisation:0 "Forced Germanisation"
+AUS_forced_Germanisation_desc:0 ""
+
+AUS_the_weak_and_the_strong:0 "The Weak and the Strong"
+AUS_the_weak_and_the_strong_desc:0 ""
+
+AUS_embrace_tradition:0 "Embrace Tradition"
+AUS_embrace_tradition_desc:0 ""
+
+AUS_tolerated_minorities:0 "Tolerated Minorities"
+AUS_tolerated_minorities_desc:0 ""
+
+AUS_inspiration_from_england:0 "Inspiration from England"
+AUS_inspiration_from_england_desc:0 ""
+
+AUS_kulturkampf:0 "Kulturkampf"
+AUS_kulturkampf_desc:0 ""
+
+AUS_austrian_democracy:0 "The Austrian Democracy"
+AUS_austrian_democracy_desc:0 ""
+
+AUS_i_am_austria:0 "I am Austria!"
+AUS_i_am_austria_desc:0 ""
+
+AUS_emperor_and_his_flock:0 "The Emperor and his Flock"
+AUS_emperor_and_his_flock_desc:0 ""
+
+ ### EVENTS ###
+ ## Rudolf ##
+ Ausrudolf.1.t:0 "A Report for the Emperor"
+ Ausrudolf.1.d:0 "The Empire that you have inherited is one of the most powerful and most diverse empires in the world at this point. From the Kingdom of Bohemia in the west to the Kingdom of Hungary in the east, your domains are an economic powerhouse in Europe. Prag and Wien are cultural and economic centers, flourishing with new ideas. However, because your empire is made up of so many different titles and people there are a number of problems plaguing your empire.\n\nWhile the areas of Austria proper and Bohemia-Moravia are some of the most prosperous areas in Europe, the rest of our land is mostly rural backwater. This is the truest in the Kingdom of Hungary, where Magyar nobles exert power as major landowners. It is also important to note that the control of each of your constitutes isn’t absolute. The various peerage of the land hold onto large amounts of influence and power, and the imperial diets do most of the regional policy so you as the Emperor can focus on the empire as a whole.\n\nThere is also a sizeable problem with our army and navy of the Empire. While the imperial army is one of the largest in the world, we have not seen combat for some time. Not being battle-tested has meant that the tactics being used are rather archaic and the men untested in the heat of battle. Unfortunately, the army also suffers from mismanagement, many of our leaders being nobles who bought their way into the position. The naval position is almost non-existent, for the empire relies on the conservative of Venice for naval support.\n\nYou have found yourself at the head of a political movement of Liberals. Though membership is limited to intellectuals and a few nobles they have the backing of yourself, their ideals lining up with your own. Luckily for your eminence your opposition who have organized under the banner of Traditionalists, while powerful are not united. Split down the middle, the Traditionalists bicker over whether to support the Spanish Habsburg or the Habsburg branch in Lorraine. Another smaller group of troublemakers  is made up of Regionalists, mainly Magyar nobles who want greater autonomy or even independence from the crown. \n\nWe look to you, your Majesty, to guide the Empire through these times.\nChancellor von Schmerling"
+ Ausrudolf.1.a:0 "Excellent!"
+ Ausrudolf.2.t:0 "Rudolf's Promises"
+ Ausrudolf.2.d:0 "The new Emperor of the Holy Roman Empire and all of the Austrian Habsburg domains has the vision to reform his holdings to more suit the changing and modern world. There is much to be done in Rudulph's eyes, many institutions that need to be modified and put to his way of thinking. One of the most initial reforms that are needed is the emancipation of the serfs. The Austrian holdings are firmly held within the absolutist grasp, none more so than the Hungarian heartlands. Lords have almost complete control over the lives of their people, able to determine how and where they live. This has prevented some vital urbanization and reorganization of farmland, inhibiting efficiency. More importantly, it symbolizes the strong power of the nobles within the crown and their independence from the Emperor. Rudulph sees this system as archaic and oppressive and has begun mobilizing his supporters to make a change for it.\n\nAppearing at the Herrenhaus building, Rudolph readied himself for a speech that would make him many enemies among the peerage of the realm. Always a charismatic speaker, Rudolph opened up his speech with broad pronouncements and promises. He called upon the landholders and the nobles to release their serfs and allowed them to pick up and move. He reasoned that the freedom of movement would actually promote prosperity for all parties and is needed for the health of the empire as a whole. The ambitious Emperor ended his speech saying that his plans didn't end with these promises. Despite the thundering applause and roars of approval the actual reception of the speech was less than ideal. The lords of the land began gathering in greater numbers to discuss what the words of this Emperor would mean for their powerbases. Rivalries have begun to be put aside to thwart any fulfillment of the promises. Everyone under the influence of the Crown, to even neighbors in Europe, watch the situation with interest to see if the Emperor intends to make good on his words."
+ Ausrudolf.2.a:0 "Freedom in our Time!"
+ Ausrudolf.3.t:0 "Meeting with the Pope"
+ Ausrudolf.3.d:0 "Today our Emperor Rudolf met with Pope Leo XIII. They agreed to hold the meeting to discuss matters involving future of Austrian priests and the importance of Catholicism in Austria. If Rudolf wants to change Austria from the inside, he will need the Pope’s recognition and permission before he does anything about Austrian clergy. As we now know, Pope Leo had agreed on the changes to the priesthood of Austria and it’s loss of some privileges. The Pope supports Rudolf’s view on how big of a problem has become the disaccord between the imperial head and the local churches as well as the influence of the church on life of commoners, nobles and even the Emperor himself, and is willing to take serious steps onto taking away some power from the church.\n\nThe church will no longer get any sponsorship from the state, priests will be obligated to live in modesty, "heretics" such as protestants will be allowed to hold their own masses and many more reforms to come…"
+ Ausrudolf.3.a:0 "The pope is with us"
+ Ausrudolf.4.t:0 "Threaten the Nobility"
+ Ausrudolf.4.d:0 "After successfully gaining support from The Pope in dealing with the Austrian clergy, Rudolf has decided to take care of the Austrian nobles which see nothing besides their own pockets filled with treasures an average Austrian can’t even think of, and their ignorance towards Emperor’s will to change Austria for a 'better place for all its citizens'.\n\nAristocrats seek only new ways of making money and growing richer and richer, they don’t care about the rest of citizens nor about Austria itself. Rudolf has had enough of it all, he chose to threaten the nobility, either they accept Rudolf’s ideas and new ways or they will have to be stripped of their rights, privileges and treasures.\n\nBig changes in life of Austrian nobles shocked not only the wellborn, but, oh bitter irony, rustics too. From now on, Aristocratic deserters won’t be treated differently than average deserter, which means they will be executed when caught by Austrian forces on “leaving battles too early”. Nobles will pay higher taxes, nobles won’t be allowed to possess more than 450 hectares of soil nor to hold influential power in more than one Empire’s province, nobles will lose the possibility to bribe priests and bishops to get absolution of sins, if any noble gets caught on such hideous act will now have to ante ten times as much to country’s vault.  And finally, Every and any Noblemen will not be allowed to have more than 2 sons, however, our beloved Emperor do not give any restrictions when it comes to number of daughters one wellborn may have."
+ Ausrudolf.4.a:0 "Amici fures temporum"
+ Ausrudolf.5.t:0 "Bribe the Nobility"
+ Ausrudolf.5.d:0 "Rudolf has announced hat he would like to gather nobles throughout the country to meet in a special council in Vienna. \n\nThe Nobility, Rudolf’s longtime enemy to his modernization schemes, are reportedly happy to attend. Rudolf has allegedly bribed many of the nobles and cajoled them with promises of special privileges. They know that going to the council would serve as a repayment of sorts to Rudolf.\n\nRudolf hopes his bribes will pay off at the Council meeting, so that they will support his plan for the restoration of the Holy Roman Empire and support his plans for turning Austria into a modern state."
+ Ausrudolf.5.a:0 "Welcome, friends!"
+ Ausrudolf.6.t:0 "Meeting with the Deutschesmeister"
+ Ausrudolf.6.d:0 "Rudolf must do more than just secure his power in Austria, for Rudolf his more than the Archduke. He is the Holy Roman Emperor. To this end, he has met with the leaders of the four most powerful states within the Holy Roman Empire, the Deutsches Meister. From Brandenburg comes Ludwig IV of Hesse-Brandenburg, from Bavaria Ludwig II von Bayern, from Wurttemberg Karl I, and from Saxony comes Albert I. Barring Rudolf these men are the most powerful within the HRE, even wielding some influence beyond. To lose their support is to lose the crown of the HRE, something Rudolf has no intention of doing.\n\nMeeting over a dinner suitably resplendent of the five most powerful men in Germany, Rudolf put his best side and his best clothes on display. Though the Deutsches Meister are yet to hear of Rudolf’s plans for the HRE, they have heard plenty of his personality, and he their's. Though the compliments to the chef of the four leaders are far from a declaration of support, the Deutsches Meister are on amicable terms with Rudolf, something which will go a long way should Rudolf wish to remain Emperor."
+ Ausrudolf.6.a:0 "Good work"
+ Ausrudolf.7.t:0 "Meeting with the Hochmeister"
+ Ausrudolf.7.d:0 "Earlier this week, Emperor Rudulph would meet with Hochmeister Hermann von Sachsen-Weimar of the Teutonic Order in Prag. The Hochmeister had come to the Austrian lands on the pretense of visiting the Teutonic holdings in the area. While sharing the same core beliefs the two men could not have been more different. The young Emperor of the Holy Roman Empire is a man of progressive thought and reform, who has a core belief of decreasing the power of the clergy. While Catholic, Rudolph holds no plans to specifically persecute the Protestant followers within the Empire. Von Sachsen-Weimar, on the other hand, leads a state whose very existence seems to rest on the idea of purging what they see as heresy from the land.\n\nIndeed the words exchange between the two leaders were terse and more heated than some may have expected. Foremost among the topics discussed was the breadth of Teutonic influence within the Holy Roman Empire and Germany as a whole. The Order has a number of castles, estates, and businesses that are under its command. These demense take much potential wealth out of the Empire and move it to the Teutonic Order, much to the frustration of the Empire and some of the Protestant princes.\n\nThis is none more apparent than the Order's control and influence over the Electoral State in Cologne. The leader of the Electorate, Wilhelm Franz von Habsburg, is the leader of all the German possessions within the Empire. Rudolph believes it distasteful for one of the electors being so directly influenced by an outside power. Von Sachsen-Weimar took the opposite view, informing the Emperor that the order needed more power within the bounds of the Empire in order for it to be rid of the Protestant princes. Though many heated words were exchanged, both leaders would tell the public that it was a successful meeting. Whichever is true, the meeting was incredibly important for the future of both states. Time will tell if it makes them enemies or closer allies."
+ Ausrudolf.7.a:0 "Good work"
+ Ausrudolf.8.t:0 "Call for Council"
+ Ausrudolf.8.d:0 "Rudolf has announced hat he would like to gather nobles throughout the country to meet in a special council in Vienna.\n\nThe Nobility, Rudolf’s longtime enemy to his modernization schemes, are reported to be reluctant to attend. Rudolf has reportedly threatened many of the nobles, saying he would strip them of their wealth and land if they did not respond. They know that going to the council would serve as a way to preserve their power and not anger Rudolf further.\n\nRudolf hopes his threats will pay off at the Council meeting, so that they will support his plan for the reunion of the Holy Roman Empire and his plans for turning Austria into a modern state."
+ Ausrudolf.8.a:0 "Set it in motion"
+ Ausrudolf.9.t:0 "The Council Meets"
+ Ausrudolf.9.d:0 "Today, Rudolf entered the conference room with the nobles and had no idea what was going to happen. He walked out four hours later with a plan for Austria that had the support of the nobles.\n\nRudolf and his nobles deliberated on many subjects, including nobles’ rights, a democratic transition, and the power of the clergy. Rudolf and the Nobility had many disagreements, and two Hungarian nobles stormed out of the meeting. However, that was an extreme case. The rest of the nobles stay put and eventually agreed to support Rudolf.\n\nNow that Rudolf finally has the Nobility on his side, he can begin to push for general reforms, both in uniting the Holy Roman Empire and reforming Austrian society to better fit in with the future."
+ Ausrudolf.9.a:0 "Let’s see what the future holds for the Nobles"
+ Ausrudolf.10.t:0 "Confront the Church"
+ Ausrudolf.10.d:0 "Earlier this morning, Rudolf announced that he would like the most powerful clergymen from around the Austrian Empire to meet him in Vienna. He stated he wanted to discuss the clergy’s authority over Austria.\n\nThe clergy are wary, however, as they feared that Rudolf was calling them to Vienna to strip them of their power so he could more easily pass his reforms.\n\nThe clergy has been Rudolf’s greatest enemy to his reforms, and his previous actions against them have greatly reduced their support of him. Some more liberal-minded clergymen who do support Rudolf have saved Austria from a complete collapse in stability, and for that Rudolf is grateful.\n\nNow that Rudolf has gathered most of the clergy in Vienna, it is time for him to attempt to overcome his greatest obstacle since the start of his ambitions."
+ Ausrudolf.10.a:0 "They will submit!"
+ Ausrudolf.11.t:0 "Meeting with the Relatives"
+ Ausrudolf.11.d:0 "The Habsburg has held influence in the Holy Roman Empire and their own domains for hundreds of years. Though marriage, named threats and many other methods the family has connections with various gentry among the countryside. The Emperor, Rudolph would travel around his domain dukes, barons, and all manner of other nobles to support his reforms. The Emperor has faced opposition from the nobles, among others, to his more progressive reforms. He has gotten some support from the Liberal Party though that may be because of his patronage of him. If he is to pass his reforms, he needs the support of the nobles one way or another.\n\nThe Emperor proved worthy of the Habsburg name, weaving through all the court intrigue from the smaller ducal courts. Instead of making brash threats against those who has made his dream of a powerful Austria so difficult, opposing Carl Menger in his work, Rudolph made a more tactful approach. By giving some minor concessions and court titles he was able to win over some of the more minor gentry of the land to his cause. Maybe even a few things he said were stretches of the truth, promising powers to not be taken away. The large and powerful nobility will always be opposed to Rudolph’s more major reforms but against the tide of the people and support from the lesser nobility Austria will proceed on its course."
+ Ausrudolf.11.a:0 "My familly..."
+ Ausrudolf.11.b:0 "No promises"
+ Ausrudolf.12.t:0 "Meeting the German nobility"
+ Ausrudolf.12.d:0 "The Habsburgs may dominate the politics of the Austrian Empire, but they are not the only German noble family found within, far from it. From Wien to Prag many noble families of German origin can be found, and few were yet to see the benefit of reform. For centuries they had lived lavishly on their private estates, why should they support reforms that would change that? Few held that opinion after a visit from Rudolf. The truth was that beneath the facade of luxury many of the lesser German nobles were frustrated. In their eyes they were overtaxed and underrepresented, unable to progress in a political landscape dominated by the Habsburgs. And now a Habsburg, the Emperor no less, had visited them. He had told them of a new Austria, one where marrying a Habsburg was not required to advance politically, one where they could air their grievances and be heard, one where the state would help provide for their workers when they could not. Soon all but the most traditionalist nobles were convinced. These reforms were necessary.\n\nOf course what he had told the nobles was not the whole truth, and even then a concession was made here and another there. Such is the nature of statecraft. But by all means Rudolf’s tour had been a success. Few among the minor German nobles would challenge his reforms, many happy to return to their ivory towers now that their coffers were secure. With each family convinced, Rudolf not only proved that his reforms were viable but he was every bit as competent as the greatest of Habsburgs. And with the support of the lesser German nobles secure, he may become the greatest Habsburg yet."
+ Ausrudolf.12.a:0 "My people..."
+ Ausrudolf.12.b:0 "No promises"
+ Ausrudolf.13.t:0 "Meeting the Provincial nobility"
+ Ausrudolf.13.d:0 "The Austrian Empire is, as its name suggests, an empire first and foremost for Austrians. Despite this, the nobles of Hungary still wield much political influence with the Empire. From Pesth to Agram one can find enough dissatisfied Hungarian nobility to fill the Adriatic. Even the most slothish of these nobles understood the necessity of reform, yet it would still take some convincing for Rudolf to win their support. Initially he was dismissed by many as “just another Habsburgs” making empty promises to a people they had oppressed for decades. Yet few could find such words when they met the charismatic young Emperor in person. Slowly but surely Rudolf did what all Habsburgs who had come before could not: earn the trust of the Hungarians. Among the Hungarians he needed few halftruths nor to make many concessions. Equality and autonomy were always on his agenda. They needn't be told that this autonomy would extend to Transylvania, what they didn’t know couldn’t hurt them.\n\nAnd so Rudolf had entered a Hungary that was on the brink of a revolt and returned leaving one that was on the brink of reform. The trust of the Hungarians may be tentative and finite, but it was also crucial to implementing the reforms Austria so sorely needed and Hungary so sorely wanted. Perhaps the archduchy could be saved yet, and dragged into modernity. Preferably without kicking and screaming. And kick and scream Hungary would not, so long as Rudolf’s idealistic promises materialised. Failure was something the Hungarians would not tolerate and with their support, fail Rudolf will not."
+ Ausrudolf.13.a:0 "My subjects..."
+ Ausrudolf.13.b:0 "No promises"
+ Ausrudolf.14.t:0 "My People Will be Free"
+ Ausrudolf.14.d:0 "Emperor Rudolf III emerged on steps of Hofburg Palace, escorted by his bodyguards, and gave a speech. This speech, immortalized in the final line “My people will be free!” would become one of, if not the most, important speeches in Austrian history.\n\nRudolf declared that he, nobles from each region, and peasant committees from each region would be gathering in Hofburg Palace for the foreseeable future, drafting the first Austrian Constitution.\n\nRudolf also spoke about the creation of united Austrian identity, a nation in which people could express their own cultures and traditions freely, yet still feel a great sense of pride when united behind the Austrian banner. He wanted the term Austrian to be a uniting, not divisive, term that could represent all of the glorious citizens in his empire, not just the Austrians.\n\nRudolf had, at this point, been orating for two hours. He discussed how the power of the nobles would be curved, thus empowering even the most humble of Austrians. He spoke passionately about the decreased role of the clergy, thus allowing formerly persecuted religious minorities to express their beliefs without fear of retribution. Rudolf then declared an end to the serfdom, liberating millions of peasants from a lifetime of servitude, and giving them the chance of a new and free life. \n\nAustria is the first empire to be radically reformed, and it is unsure whether these ideas will catch on elsewhere."
+ Ausrudolf.14.a:0 "A new era of Austrian history has begun!"
+ Ausrudolf.15.t:0 "My Priests Will be Subjugated"
+ Ausrudolf.15.d:0 "Emperor Rudolf had been making preparations for a long while to take down his greatest obstacle: the Clergy. \n\nThe Clergy and their ministers have tried to block Rudolf’s every move at reforming Austria. However, the priest at St. Stephen’s Cathedral, Heinrich Blücher, is a firebrand liberal and has helped Rudolf immensely in convincing the populace the traditionalist Clergy was wrong.\n\nWith Father Heinrich’s support, Rudolf has been pushing out anti-clerical reforms without much dissent. His last reform, however, planned to eliminate clerical influence in the government and sharply reduce their power to allow for freedom of religion without persecution.\n\nRudolf anxiously awaited a response, but got none. The reform was passed later that day. With it, all power the Clergy had was gone."
+ Ausrudolf.15.a:0 "They do not matter anymore"
+ Ausrudolf.16.t:0 "And So It Begins..."
+ Ausrudolf.16.d:0 "The clergy has been dealt its death blows.  The serfs know that they are to be liberated. These are the last days of the Hapsburg Monarchy and the first days of an Austrian Empire chosen by those it will rule.  Even Rudolf does not know exactly what shape this new experiment will take over the next few years, even less so over the coming decades and centuries.  Will this experiment be a brief flash in the pan? A spark of enlightenment dashed away like the Athenian democracy of so long ago? Or will this moment be the start of a thousand year empire in the model of the mighty Rome, a great republic before its fall to tyrants? Only one thing is for sure: Rudolf, like Lucius Junius Brutus standing at the gates of Rome after exiling the city’s last king Tarquinius, has laid the groundwork for democracy.  Now it is time for him to actually build that democracy. Once more Rudolf will address his subjects, soon to be his countrymen, and tell them that this is one of the last addresses he will be giving as a monarch. He will tell them of the “New Society” that he hopes to build."
+ Ausrudolf.16.a:0 "Finally"
+ Ausrudolf.17.t:0 "Austria Requests a Concordat"
+ Ausrudolf.17.d:0 "The Office of Papal Diplomats has received an offer from Emperor Rudolf this evening.  The Emperor is proposing a concordat of sorts, not an official alliance, but a promise to maintain positive relations and to respect each other’s sovereign boundaries, including politically.  What Rudolf is asking for is a promise to refrain from speaking out about his ambitious project of reforms to society, and in exchange is promising to respect our right to exist and run the country without interference from Austria. Agreeing to this concordat will mean that Rudolf will have an easier time of secularizing his clergy.  We would be giving up most of our influence in Austria in exchange for a guarantee of Austria doing the same in the Papal States. Now the Pope must consult with God to decide if this concordat is divinely ordained, and, if it isn’t, whether it’s worth evoking Austria’s wrath. "
+ Ausrudolf.17.a:0 "It is for the better of the Church to agree"
+ Ausrudolf.17.b:0 "The Pope submits to none!"
+ Ausrudolf.18.t:0 "The Pope's Reply"
+ Ausrudolf.18.d:0 "[GetAusPopesReply]"
+ Ausrudolf.18.a:0 "It was wise of him to agree"
+ Ausrudolf.18.b:0 "Wrong choice"
+ Ausrudolf.19.t:0 "A Delegation from Austria"
+ Ausrudolf.19.d:0 ""
+ Ausrudolf.19.a:0 "Acceptance is a political necessity"
+ Ausrudolf.19.b:0 "The Church bows to none!"
+ Ausrudolf.20.t:0 "The Deutschesmeister's Reply"
+ Ausrudolf.20.d:0 ""
+ Ausrudolf.20.a:0 "He has proven himself a good friend"
+ Ausrudolf.20.b:0 "He has made a great error"
+ Ausrudolf.21.t:0 "A Delegation from Austria"
+ Ausrudolf.21.d:0 ""
+ Ausrudolf.21.a:0 "Acceptance is a political necessity"
+ Ausrudolf.21.b:0 "The Church bows to none!"
+ Ausrudolf.22.t:0 "The Hochmeister's answer"
+ Ausrudolf.22.d:0 ""
+ Ausrudolf.22.a:0 "Excellent!"
+ Ausrudolf.22.b:0 "Then, this is war!"
+
+
+
+ Ausrudolf.30.t:0 ""
+ Ausrudolf.30.d:0 ""
+ Ausrudolf.30.a:0 ""
+ Ausrudolf.30.b:0 ""
+
+ Ausrudolf.31.t:0 "Reforming the First Estate"
+ Ausrudolf.31.d:0 ""
+ Ausrudolf.31.a:0 ""
+
+ Ausrudolf.32.t:0 "Reaction to the Ivory Market Crash"
+ Ausrudolf.32.d:0 "Austria has never been a trading nation, that's for sure. For hundreds of years most of the goods have come through the ports of Venice and the Adriatic, with the exception of a few trades imported directly from inside of the Holy Roman Empire.\n\nOur nation is surely very lucky to have not participated in the ongoing Ivory trade or any of the other trades the Hanseatic League prided of participating because now all of that built up bubble has now completely collapsed. The port cities of Lübeck, Hamburg and Bremen, the flagships of the old confederation, are now living in poverty following the dark news that came from the stock market in Stockholm.\n\nAs the head of the Holy Roman Empìre, it is our duty to protect each and every member of the Empire no matter if it's economically, militarily or diplomatically. We may not interfere in their local interests but whatever troubles their nation as a whole troubles us, such is the way of the Imperial brethren."
+ Ausrudolf.32.a:0 "There are no cracks in this Empire!"
+
+ Ausrudolf.33.t:0 "Reforming the Second Estate"
+ Ausrudolf.33.d:0 ""
+ Ausrudolf.33.a:0 ""
+
+ Ausrudolf.34.t:0 "Decisive Question"
+ Ausrudolf.34.d:0 ""
+ Ausrudolf.34.a:0 "God will help me decide"
+
+ Ausrudolf.35.t:0 "" #two in one
+ Ausrudolf.35.d:0 ""
+ Ausrudolf.35.a:0 ""
+ Ausrudolf.35.b:0 ""
+
+ Ausrudolf.36.t:0 "Inspired by Locke and Voltaire"
+ Ausrudolf.36.d:0 ""
+ Ausrudolf.36.a:0 ""
+
+ Ausrudolf.37.t:0 "Inspired by Nietzsche"
+ Ausrudolf.37.d:0 ""
+ Ausrudolf.37.a:0 ""
+
+ Ausrudolf.38.t:0 "Inspired by Burke"
+ Ausrudolf.38.d:0 ""
+ Ausrudolf.38.a:0 ""
+
+ Ausrudolf.39.t:0 "Reading "The Prince""
+ Ausrudolf.39.d:0 ""
+ Ausrudolf.39.a:0 ""
+
+ Ausrudolf.41.t:0 "Peasantry educated"
+ Ausrudolf.41.d:0 ""
+ Ausrudolf.41.a:0 ""
+
+ Ausrudolf.42.t:0 "Cutting off Clergy's Influence"
+ Ausrudolf.42.d:0 ""
+ Ausrudolf.42.a:0 ""
+
+ Ausrudolf.43.t:0 "People's Voice"
+ Ausrudolf.43.d:0 ""
+ Ausrudolf.43.a:0 "Another step closer!"
+ Ausrudolf.43.b:0 "Why don't they understand?"
+
+ Ausrudolf.44.t:0 "Rioters Strike"
+ Ausrudolf.44.d:0 ""
+ Ausrudolf.44.a:0 ""
+
+ Ausrudolf.46.t:0 "The Increasing Control"
+ Ausrudolf.46.d:0 ""
+ Ausrudolf.46.a:0 ""
+
+ Ausrudolf.47.t:0 "Coalition forms"
+ Ausrudolf.47.d:0 ""
+ Ausrudolf.47.a:0 ""
+
+ Ausrudolf.48.t:0 "The Final Strike"
+ Ausrudolf.48.d:0 ""
+ Ausrudolf.48.a:0 ""
+
+
+
+ Ausrudolf.1000.t:0 "[?global.aus_var_opposition_unity|%]"
+
+###Scripted Loc
+AusUprisingUnityVLow:0 "§GHeavily Disorganised§!"
+AusUprisingUnityLow:0 "§GDisorganised§!"
+AusUprisingUnityModerate:0 "§YModerately Organised§!"
+AusUprisingUnityHigh:0 "§RHighly Organised§!"
+AusUprisingIntensityVLow:0 "§GRurally§!"
+AusUprisingIntensityLow:0 "§GProvincially§!"
+AusUprisingIntensityModerate:0 "§YLocally§!"
+AusUprisingIntensityHigh:0 "§RRegionally§!"
+AusPopeSaysYes:0 "Rudolf has received word this morning that the Pope has agreed to the concordat as proposed. With the ratification of this concordat yet another barrier to Rudolf’s reforms has been removed.  Rudolf will now be able to move forward without fear that Pope may stir up the Austrian clergy against him. Now it is time to take the final steps towards Empire wide secularization."
+AusPopeSaysNo:0 "Rudolf has received word this morning that the Pope has refused the concordat as proposed. Although the concordat would have fully secured Rudolf’s clerical reforms, this outcome was not unforeseen.  Rudolf will have to be more careful moving forward, lest the Pope make moves to stir up the Austrian clergy against him. The silver lining to this news is that Rudolf will be able to exert the full extent of his powers on to the Papal State once he has finished his domestic projects. Some day soon the Pope will pay for his shortsightedness."
+
+###Tooltips
+aus_nobles_add_tt:0 "This will §Gincrease§! §YAll Nobles'§! opinion of §Ythe Emperor§!"
+aus_nobles_remove_tt:0 "This will §Rdecrease§! §YAll Nobles'§! opinion of §Ythe Emperor§!"
+aus_nobles_furious_tt:0 "§RHatred for Rudolf strengthens...§!"
+
+aus_nobles_hab_add_tt:0 "This will §Gincrease§! the §gHabsburg Nobility's§! opinion of §Ythe Emperor§!"
+aus_nobles_hab_remove_tt:0 "This will §Rdecrease§! the §gHabsburg Nobility's§! opinion of §Ythe Emperor§!"
+aus_nobles_hab_big_remove_tt:0 "This will §Rhighly decrease§! the §gHabsburg Nobility's§! opinion of §Ythe Emperor§!"
+
+aus_nobles_maj_add_tt:0 "This will §Gincrease§! the §OHigh Nobility's§! opinion of §Ythe Emperor§!"
+aus_nobles_maj_remove_tt:0 "This will §Rdecrease§! the §OHigh Nobility's§! opinion of §Ythe Emperor§!"
+
+aus_nobles_min_add_tt:0 "This will §Gincrease§! the §LProvincial Nobility's§! opinion of §Ythe Emperor§!"
+aus_nobles_min_remove_tt:0 "This will §Rdecrease§! the §LProvincial Nobility's§! opinion of §Ythe Emperor§!"
+
+aus_clergy_add_tt:0 "This will §Gincrease§! the §YClergy's§! opinion of §Ythe Emperor§!"
+aus_clergy_remove_tt:0 "This will §Rdecrease§! the §YClergy's§! opinion of §Ythe Emperor§!"
+aus_clergy_furious_tt:0 "§RGod is againts Rudolf...§!"
+
+aus_people_add_tt:0 "This will §Gincrease§! the §CPeople's§! opinion of §Ythe Emperor§!"
+aus_people_remove_tt:0 "This will §Rdecrease§! the §CPeople's§! opinion of §Ythe Emperor§!"
+
+
+AUS_OPINION_ADD_PEOPLE:0 "§GThis will increase the People's opinion of §Ythe Emperor§!"
+AUS_OPINION_ADD_MAJOR_NOBILITY:0 "§GThis will increase the High Nobility's opinion of §Ythe Emperor§!"
+AUS_OPINION_ADD_MINOR_NOBILITY:0 "§GThis will increase the Provincial Nobility's opinion of §Ythe Emperor§!"
+AUS_OPINION_ADD_HABSBURG_NOBILITY:0 "§GThis will increase the Habsburg Nobility's opinion of §Ythe Emperor§!"
+AUS_OPINION_ADD_CLERGY:0 "§GThis will increase the Clergy's opinion of §Ythe Emperor§!"
+AUS_OPINION_REMOVE_PEOPLE:0 "§RThis will decrease the People's opinion of §Ythe Emperor§!"
+AUS_OPINION_REMOVE_MAJOR_NOBILITY:0 "§RThis will decrease the High Nobility's opinion of §Ythe Emperor§!"
+AUS_OPINION_REMOVE_MINOR_NOBILITY:0 "§RThis will decrease the Provincial Nobility's opinion of §Ythe Emperor§!"
+AUS_OPINION_REMOVE_HABSBURG_NOBILITY:0 "§RThis will decrease the Habsburg Nobility's opinion of §Ythe Emperor§!"
+AUS_OPINION_REMOVE_CLERGY:0 "§RThis will decrease the Clergy's opinion of §Ythe Emperor§!"
+AUS_the_beginning_tt:0 "Unlocks the §YPeople's Opinion§! Mechanic"
+
+
+aus_opposition_organise_less:0 "The Opposition will become §Gless organised§!"
+aus_opposition_organise_slightly_less:0 "The Opposition will become §Yslightly less organised§!"
+aus_opposition_organise_more:0 "The Opposition will become §Rmore organised§!"
+
+aus_opposition_active_less:0 "The Opposition will become §Gless active§!"
+aus_opposition_active_slightly_less:0 "The Opposition will become §Yslightly less active§!"
+aus_opposition_active_more:0 "The Opposition will become §Rmore active§!"
+
+
+aus_strike_habsburg_noble_tt:0 "§gHabsburg Noble§! §RInjured§!"
+aus_strike_major_noble_tt:0 "§OHigh Noble§! §RInjured§!"
+aus_strike_minor_noble_tt:0 "§LProvincial Noble§! §RInjured§!"
+
+aus_strike_infrastructure_damaged_tt:0 "§RInfrastructure Damaged§!"
+
+aus_strike_people_pacified_tt:0 "§GPeople Pacified§!"
+aus_strike_incompetent_soldiers_tt:0 "§YIncompetent Soldiers§!"
+aus_strike_slaughter_on_the_strikers_tt:0 "§RSlaughter on the Strikers§!"
+
+
+
+aus_promote_hermann_von_spaun_tt:0 "§YHeinz Schmidt§! will become available as §YChief of Navy§!"
+aus_hermann_von_spaun_promoted_tt:0 "Has been promoted"
+
+
+### opinion modifiers
+
+AUS_recognised_popes_authority:0 "Recognised Pope's Authority"
+
+AUS_supported_gallicanism:0 "Supported Gallicanism"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#################
+###EUGEN STUFF###
+#################
+
+
+
+########## focus tree
+
+
+# > 1 < #
+
+AUS_new_hope:0 "The New Hope"
+AUS_new_hope_desc:0 ""
+
+AUS_restoring_past_order:0 "Restoring Past Order"
+AUS_restoring_past_order_desc:0 ""
+
+AUS_criticise_the_decrease_of_traditionalism:0 "Criticise the Decrease of Traditionalism"
+AUS_criticise_the_decrease_of_traditionalism_desc:0 ""
+
+AUS_true_faith:0 "True Faith"
+AUS_true_faith_desc:0 ""
+
+AUS_brother_against_brother:0 "Brother Against Brother"
+AUS_brother_against_brother_desc:0 ""
+
+AUS_dissaprove_agressive_expansion:0 "Dissaprove Agressive Expansion"
+AUS_dissaprove_agressive_expansion_desc:0 ""
+
+AUS_one_king_for_all:0 "One King for All"
+AUS_one_king_for_all_desc:0 ""
+
+AUS_send_missions:0 "Send Missions"
+AUS_send_missions_desc:0 ""
+
+AUS_negotiations_with_electors:0 "Negotiations with Electors"
+AUS_negotiations_with_electors_desc:0 ""
+
+AUS_reasure_the_loyalty_of_princes:0 "Reasure the Loyalty of Princes"
+AUS_reasure_the_loyalty_of_princes_desc:0 ""
+
+AUS_gemeinsame_armee:0 "Gemeinsame Armee"
+AUS_gemeinsame_armee_desc:0 ""
+
+AUS_renew_alliance_with_venice:0 "Renew Alliance with Venice"
+AUS_renew_alliance_with_venice_desc:0 ""
+
+AUS_konigliche_krigsmarine:0 "Königliche Krigsmarine"
+AUS_konigliche_krigsmarine_desc:0 ""
+
+AUS_peasants_recruits:0 "Peasants Recruits"
+AUS_peasants_recruits_desc:0 ""
+
+AUS_better_payments:0 "Better Payments"
+AUS_better_payments_desc:0 ""
+
+AUS_cooperation_with_venice:0 "Cooperation with Venice"
+AUS_cooperation_with_venice_desc:0 ""
+
+AUS_fund_the_royal_navy:0 "Fund the Royal Navy"
+AUS_fund_the_royal_navy_desc:0 ""
+
+AUS_recruit_new_admirals:0 "Recruit new Admirals"
+AUS_recruit_new_admirals_desc:0 ""
+
+AUS_war_propaganda:0 "War Propaganda"
+AUS_war_propaganda_desc:0 ""
+
+AUS_modernize_the_army:0 "Modernize the Army"
+AUS_modernize_the_army_desc:0 ""
+
+AUS_ready_for_war:0 "Ready for War"
+AUS_ready_for_war_desc:0 ""
+
+AUS_kings_promises:0 "King's Promises"
+AUS_kings_promises_desc:0 ""
+
+AUS_start_industrial_campaign:0 "Start Industrial Campaign"
+AUS_start_industrial_campaign_desc:0 ""
+
+AUS_wien_ofen_pesth_plan:0 "Wien - Ofen-Pesth Plan"
+AUS_wien_ofen_pesth_plan_desc:0 ""
+
+AUS_increase_militarization:0 "Increase Militarization"
+AUS_increase_militarization_desc:0 ""
+
+AUS_take_care_of_heretics:0 "Take Care of Heretics"
+AUS_take_care_of_heretics_desc:0 ""
+
+AUS_fund_hungarian_university:0 "Fund Hungarian University"
+AUS_fund_hungarian_university_desc:0 ""
+
+AUS_bypass_the_obligation:0 "Bypass the Obligation"
+AUS_bypass_the_obligation_desc:0 ""
+
+AUS_bigger_taxes:0 "Bigger Taxes"
+AUS_bigger_taxes_desc:0 ""
+
+AUS_help_the_peasantry:0 "Help the Peasantry"
+AUS_help_the_peasantry_desc:0 ""
+
+AUS_fight_with_illiteracy:0 "Fight with Illiteracy"
+AUS_fight_with_illiteracy_desc:0 ""
+
+AUS_completion_of_the_initial_program:0 "Completion of the Initial Program"
+AUS_completion_of_the_initial_program_desc:0 ""
+
+AUS_just_the_beginning:0 "Just the Beginning"
+AUS_just_the_beginning_desc:0 ""
+
+
+# > 2 < #
+
+AUS_enhance_emperors_power:0 "Ehance Emperor's Power"
+
+AUS_continue_actions_in_hre:0 "Continue Actions in HRE"
+
+AUS_protect_fragmentation:0 "Protect Fragmentation"
+
+AUS_preparations_for_invasion:0 "Preparations for Invasion"
+
+AUS_fund_royal_hungarian_landwehr:0 "Fund Royal Hungarian Landwehr"
+
+AUS_ten_divisions_plan:0 "Ten Divisions Plan"
+
+AUS_boost_army_morale:0 "Boost Army Morale"
+
+AUS_fortifications_on_the_east:0 "Fortifications on the East"
+
+AUS_adopt_new_weapons:0 "Adopt new Weapons"
+
+AUS_establish_factories_in_banat:0 "Establish Factories in Banat"
+
+AUS_bring_industrialization_to_transylvania:0 "Bring Industrialization to Transylvania"
+
+AUS_develop_bohemia:0 "Develop Bohemia"
+
+AUS_silesian_forts:0 "Silesian Forts"
+
+AUS_invest_in_moravian_steel_mills:0 "Invest in Moravian Steel Mills"
+
+AUS_improve_working_conditions:0 "Improve Working Conditions"
+
+AUS_ultimatum_for_bavaria:0 "Ultimatum for Bavaria"
+
+
+
+
+
+
+# > 3 < 
+
+AUS_help_for_bavaria:0 "Help for Bavaria"
+AUS_help_for_bavaria_desc:0 ""
+
+AUS_imperial_alliance:0 ""Kaiserliche Allianz""
+AUS_imperial_alliance_desc:0 ""
+
+AUS_eager_for_war:0 "Eager for War"
+AUS_eager_for_war_desc:0 ""
+
+AUS_the_great_gathering:0 "The Great Gathering"
+AUS_the_great_gathering_desc:0 ""
+
+AUS_balkan_development:0 "Balkan Development"
+AUS_balkan_development_desc:0 ""
+
+AUS_accelerated_trade:0 "Accelerated Trade"
+AUS_accelerated_trade_desc:0 ""
+
+AUS_cooperation_with_serbia:0 "Cooperation with Serbia"
+AUS_cooperation_with_serbia_desc:0 ""
+
+AUS_warm_up_relations_with_ottomans:0 "Warm up Relations with Ottomans"
+AUS_warm_up_relations_with_ottomans_desc:0 ""
+
+AUS_increased_influence_of_the_upper_class:0 "Increased Influence of the Upper Class"
+AUS_increased_influence_of_the_upper_class_desc:0 ""
+
+AUS_support_for_feudal_system:0 "Support for Feudal System"
+AUS_support_for_feudal_system_desc:0 ""
+
+AUS_blind_worship:0 "Blind Worship"
+AUS_blind_worship_desc:0 ""
+
+AUS_glorify_aristocrats:0 "Glorify Aristocrats"
+AUS_glorify_aristocrats_desc:0 ""
+
+AUS_play_vabanque:0 "Play Vabanque"
+AUS_play_vabanque_desc:0 ""
+
+AUS_pathetic_fail:0 "Pathetic Fail"
+AUS_pathetic_fail_desc:0 ""
+
+AUS_heroic_victory:0 "Heroic Victory"
+AUS_heroic_victory_desc:0 ""
+
+AUS_emergency_defensive_line:0 "Emergency Defensive Line"
+AUS_emergency_defensive_line_desc:0 ""
+
+AUS_instant_aid_for_infantry:0 "Instant Aid for the Infantry"
+AUS_instant_aid_for_infantry_desc:0 ""
+
+AUS_the_last_standing_bastion:0 "The Last Standing Bastion"
+AUS_the_last_standing_bastion_desc:0 ""
+
+AUS_national_propaganda:0 "National Propaganda"
+AUS_national_propaganda_desc:0 ""
+
+AUS_reduced_army_qualifications:0 "Reduced Army Qualifications"
+AUS_reduced_army_qualifications_desc:0 ""
+
+AUS_new_supply_lines:0 "New Supply Lines"
+AUS_new_supply_lines_desc:0 ""
+
+
+
+
+
+
+AUS_emperor_of_all_germans:0 "Emperor of All Germans"
+AUS_emperor_of_all_germans_desc:0 ""
+
+AUS_let_all_roads_lead_to_wien:0 "Let All Roads lead to Wien"
+AUS_let_all_roads_lead_to_wien_desc:0 ""
+
+AUS_stabilize_emperors_position:0 "Stabilize Emperor's position"
+AUS_stabilize_emperors_position_desc:0 ""
+
+AUS_help_members_with_industrialization:0 "Help Members with Industrialization"
+AUS_help_members_with_industrialization_desc:0 ""
+
+AUS_initiate_kaiserliche_zusammenarbeit:0 "Initiate Kaiserliche Zusammenarbeit"
+AUS_initiate_kaiserliche_zusammenarbeit_desc:0 ""
+
+AUS_issue_with_german_nobility:0 "Issue with German Nobility"
+AUS_issue_with_german_nobility_desc:0 ""
+
+AUS_purge_them:0 "Purge Them"
+AUS_purge_them_desc:0 ""
+
+AUS_grant_them_titles:0 "Grant Them Titles"
+AUS_grant_them_titles_desc:0 ""
+
+AUS_problem_with_opposition:0 "Problem with Opposition"
+AUS_problem_with_opposition_desc::0 ""
+
+AUS_speech_to_my_people:0 "Speech to my People"
+AUS_speech_to_my_people_desc::0 ""
+
+AUS_act_of_terror:0 "Act of Terror"
+AUS_act_of_terror_desc::0 ""
+
+AUS_abolish_outer_influences:0 "Abolish Outer Influences"
+AUS_abolish_outer_influences_desc:0 ""
+
+AUS_strive_to_german_discipline:0 "Strive to German Discipline"
+AUS_strive_to_german_discipline_desc:0 ""
+
+AUS_spread_catholicism_to_the_north:0 "Spread Catholicism to the North"
+AUS_spread_catholicism_to_the_north_desc:0 ""
+
+AUS_separate_the_navy_from_the_infantry:0 "Separate the Navy from the Infantry"
+AUS_separate_the_navy_from_the_infantry_desc:0 ""
+
+AUS_invest_in_better_equipment:0 "Invest in Better Equipment"
+AUS_invest_in_better_equipment_desc:0 ""
+
+AUS_cut_down_slovakian_forests:0 "Cut down Slovakian Forests"
+AUS_cut_down_slovakian_forests_desc:0 ""
+
+AUS_promote_wien_university:0 "Promote Wien University"
+AUS_promote_wien_university_desc:0 ""
+
+AUS_imperial_conscription:0 "Imperial Conscription"
+AUS_imperial_conscription_desc:0 ""
+
+AUS_imperial_free_trade:0 "Imperial Free Trade"
+AUS_imperial_free_trade_desc:0 ""
+
+AUS_exploit_german_resources:0 "Exploit German Resources"
+AUS_exploit_german_resources_desc:0 ""
+
+AUS_help_for_all:0 "Help for All"
+AUS_help_for_all_desc:0 ""
+
+AUS_help_for_the_chosen:0 "Help for the Chosen"
+AUS_help_for_the_chosen_desc:0 ""
+
+AUS_advisors_from_wien:0 "Advisors from Wien"
+AUS_advisors_from_wien_desc:0 ""
+
+AUS_advisors_to_wien:0 "Advisors to Wien"
+AUS_advisors_to_wien_desc:0 ""
+
+AUS_restoration_of_an_old_empire:0 "Restoration of an Old Empire"
+AUS_restoration_of_an_old_empire_desc:0 ""
+
+
+
+
+AUS_our_own_reconquista:0 "Our Own Reconquista"
+AUS_our_own_reconquista_desc:0 ""
+
+AUS_last_efforts_in_the_economy:0 "Last Efforts in the Economy"
+AUS_last_efforts_in_the_economy_desc:0 ""
+
+AUS_beck_rzikowsky_doctrine:0 "Beck-Rzikowsky Doctrine"
+AUS_beck_rzikowsky_doctrine_desc:0 ""
+
+AUS_finish_industrialisierungsplan:0 "Finish Industrialisierungsplan"
+AUS_finish_industrialisierungsplan_desc:0 ""
+
+AUS_get_empire_ready_for_war:0 "Get Empire Ready for War"
+AUS_get_empire_ready_for_war_desc:0 ""
+
+AUS_final_naval_reform:0 "Final Naval Reform"
+AUS_final_naval_reform_desc:0 ""
+
+AUS_restore_austrian_netherlands:0 "Restore Austrian Netherlands"
+AUS_restore_austrian_netherlands_desc:0 "[GetAusCooldownDate]"
+
+AUS_fate_of_empires_oldest_enemy:0 "Fate of Empire's Oldest Enemy"
+AUS_fate_of_empires_oldest_enemy_desc:0 "[GetAusCooldownDate]"
+
+AUS_problems_with_estates:0 "Problems with Estates"
+AUS_problems_with_estates_desc:0 ""
+
+AUS_clergys_influence:0 "Clergy's Influence?"
+AUS_clergys_influence_desc:0 ""
+
+AUS_nobles_privileges:0 "Nobles' Privileges?"
+AUS_nobles_privileges_desc:0 ""
+
+AUS_serfdom_issue:0 "Serfdom Issue"
+AUS_serfdom_issue_desc:0 ""
+
+AUS_true_war_machine:0 "True War Machine"
+AUS_true_war_machine_desc:0 ""
+
+AUS_reclamation_of_the_ancient_territories:0 "Reclamation of the Ancient Territories"
+AUS_reclamation_of_the_ancient_territories_desc:0 ""
+
+
+
+
+AUS_continue_proaustrian_propaganda:0 "Continue Pro-Austrian Propaganda"
+AUS_continue_proaustrian_propaganda_desc:0 ""
+
+AUS_death_to_spies:0 "Death to Spies!"
+AUS_death_to_spies_desc:0 ""
+
+AUS_bigger_the_better:0 "Bigger the Better!"
+AUS_bigger_the_better_desc:0 ""
+
+AUS_pass_the_vereinigungsgesetz:0 "Pass the Vereinigungsgesetz"
+AUS_pass_the_vereinigungsgesetz_desc:0 ""
+
+AUS_incompetence_of_the_commanders:0 "Incompetence of the Commanders"
+AUS_incompetence_of_the_commanders_desc:0 ""
+
+AUS_limit_generals_privileges:0 "Limit Generals' Privileges"
+AUS_limit_generals_privileges_desc:0 ""
+
+AUS_decentralize_army_leadership:0 "Decentralize Army Leadership"
+AUS_decentralize_army_leadership_desc:0 ""
+
+AUS_absolve_the_guilty:0 "Absolve the Guilty"
+AUS_absolve_the_guilty_desc:0 ""
+
+AUS_admission_of_guilt:0 "Admission of the Guilt"
+AUS_admission_of_guilt_desc:0 ""
+
+AUS_forgive_me_father:0 "Forgive me Father!"
+AUS_forgive_me_father_desc:0 ""
+
+AUS_privileges_as_a_recompense:0 "Privileges as a recompense"
+AUS_privileges_as_a_recompense_desc:0 ""
+
+AUS_better_army_conditions:0 "Better Army Conditions"
+AUS_better_army_conditions_desc:0 ""
+
+AUS_armys_fault:0 "Army's Fault"
+AUS_armys_fault_desc:0 ""
+
+AUS_greater_training_difficulty:0 "Greater Training Difficulty"
+AUS_greater_training_difficulty_desc:0 ""
+
+AUS_control_armys_loyalty:0 "Control Army's Loyalty"
+AUS_control_armys_loyalty_desc:0 ""
+
+AUS_rifles_from_reserves:0 "Rifles from Reserves"
+AUS_rifles_from_reserves_desc:0 ""
+
+AUS_focus_on_restoring_the_power:0 "Focus on Restoring the Power"
+AUS_focus_on_restoring_the_power_desc:0 ""
+
+AUS_listen_to_new_architects:0 "Listen to new Architects"
+AUS_listen_to_new_architects_desc:0 ""
+
+AUS_rebuild_the_villages_from_the_ashes:0 "Rebuild Villages from the Ashes"
+AUS_rebuild_the_villages_from_the_ashes_desc:0 ""
+
+AUS_austria_above_all:0 "Austria above All"
+AUS_austria_above_all_desc:0 ""
+
+AUS_military_fanaticism:0 "Military Fanaticism"
+AUS_military_fanaticism_desc:0 ""
+
+AUS_back_to_normal:0 "Back to Normal"
+AUS_back_to_normal_desc:0 ""
+
+
+
+
+
+
+
+
+
+AUS_absolute_control:0 "Absolute Control"
+AUS_absolute_control_desc:0 ""
+
+AUS_nobility_dependant_on_the_king:0 "Nobility Dependant on the King..."
+AUS_nobility_dependant_on_the_king_desc:0 ""
+
+AUS_bribe_the_generals:0 "Bribe the Generals"
+AUS_bribe_the_generals_desc:0 ""
+
+AUS_protect_the_king:0 "Protect the King!"
+AUS_protect_the_king_desc:0 ""
+
+AUS_and_the_peasantry_dependant_on_the_nobility:0 "...and the Peasantry Dependant on the Nobility"
+AUS_and_the_peasantry_dependant_on_the_nobility_desc:0 ""
+
+AUS_injuctions_from_rome:0 "Injuctions from Rome"
+AUS_injuctions_from_rome_desc:0 ""
+
+AUS_desire_for_revenge:0 "Desire for Revenge"
+AUS_desire_for_revenge_desc:0 ""
+
+AUS_trust_in_swiss_banks:0 "Trust in Swiss Banks"
+AUS_trust_in_swiss_banks_desc:0 ""
+
+AUS_assemble_the_armies:0 "Assemble the Armies"
+AUS_assemble_the_armies_desc:0 ""
+
+AUS_anti_protestant_propaganda:0 "Anti-Protestant Porpaganda"
+AUS_anti_protestant_propaganda_desc:0 ""
+
+AUS_catholic_fanatism:0 "Catholic Fanatism"
+AUS_catholic_fanatism_desc:0 ""
+
+AUS_incite_one_against_another:0 "Incite One against Another"
+AUS_incite_one_against_another_desc:0 ""
+
+AUS_let_the_empire_burn:0 "Let the Empire Burn"
+AUS_let_the_empire_burn_desc:0 ""
+
+AUS_join_the_chaos:0 "Join the Chaos"
+AUS_join_the_chaos_desc:0 ""
+
+AUS_challenge_the_spaniards:0 "Challenge the Spaniards"
+AUS_challenge_the_spaniards_desc:0 ""
+
+AUS_complete_navy_modernization:0 "Complete Modernization of Navy"
+AUS_complete_navy_modernization_desc:0 ""
+
+AUS_interest_in_galicia:0 "Interest in Galicia"
+AUS_interest_in_galicia_desc:0 ""
+
+AUS_revised_supply_lines:0 "Revised Supply Lines"
+AUS_revised_supply_lines_desc:0 ""
+
+AUS_slovakian_forts:0 "Slovakian Forts"
+AUS_slovakian_forts_desc:0 ""
+
+AUS_stand_against_the_orthodox:0 "Stand against the Orthodox"
+AUS_stand_against_the_orthodox_desc:0 ""
+
+AUS_intense_mobilization:0 "Intense Mobilization"
+AUS_intense_mobilization_desc:0 ""
+
+AUS_seek_partners_in_the_east:0 "Seek Partners in the East"
+AUS_seek_partners_in_the_east_desc:0 ""
+
+AUS_annouce_official_claims:0 "Announce Official Claims"
+AUS_annouce_official_claims_desc:0 ""
+
+AUS_strike_the_commonwealth:0 "Strike the Commonwealth"
+AUS_strike_the_commonwealth_desc:0 ""
+
+
+
+
+
+
+########## events
+
+
+# > 1st focus tree < #
+
+Auseugen.1.t:0 "Restoring past order"
+Auseugen.1.d:0 "Emperor Eugen I of Austria has, today, on the steps of the Royal Palace, expressed his desire to restore the power and the order that the Holy Roman Empire once possessed. He dreams of recreating the glory the HRE basked in during the days of Otto I.\n\nAlthough not explicitly stated in the speech, many could infer that Eugen wants to fully centralize the HRE into one divine state, under the Kaiser in God’s light. Eugen realizes  the many obstacles in his plan, including Austrian geographical isolation from the many German princes. He would also have to settle the liberals and ethnic minorities in his empire before even thinking about incorporating the German princes.\n\nSpeaking of the German princes, only God himself would know how they would react to being annexed into an Austrian-dominated centralized state."
+Auseugen.1.a:0 "Why didn't we think of this earlier?"
+
+Auseugen.2.t:0 "Austria wants to restore past order"
+Auseugen.2.d:0 "News of Eugen’s recent declaration is slowly spreading out from Austria, perturbing even the most conservative rulers within the HRE. Eugen’s desire to return to the past is not shared among his constituents, with liberals clamouring for modernisation, many more seeking to maintain the status quo, and even the conservatives wishing at most for a continuation of tradition, not a reversion to centuries past.\n\nAlready Eugen’s announcement has rattled the Empire, and rumors are spreading like wildfire. Some claim he wants a return to the Dark Ages, some that he seeks to restore the old Rome, others going further still, claiming he is in league with the political boogeyman of Europe, the anarchoprimitivists. Whether any of these rumours are true only time will tell. Regardless, change is coming to the HRE whether the many disparate German states like it or, more likely, not."
+Auseugen.2.a:0 "Oh no..."
+Auseugen.2.a:0 "It won't end well..."
+
+Auseugen.3.t:0 "Eugen criticises the decrease of traditionalism"
+Auseugen.3.d:0 "In his infinite wisdom, Emperor Eugen has seen fit to criticise the lack of tradition among members of the HRE. A nation without tradition is like a tree without roots, and a tree without roots cannot stand. This simple phrase, spoken by Eugen and echoed by his supporters encapsulates his argument. The Holy Roman Empire has a tradition spanning over two and a half millennia, and Emperor Eugen will not allow a few idealistic liberals or misguided German nationalists to erode that.\n\nThe Emperor has called on all the rulers of the HRE to embrace his message and begin the reforms to education, justice, and government necessary to preserve tradition. Should any member of the HRE refuse, the implication was clear: the tree shall not fall. For Eugen is a gardener, and under his rule the deep roots that have sustained the Empire will grow deeper still."
+Auseugen.3.a:0 "The order should be restored!"
+
+Auseugen.4.t:0 "Austria criticises the decrease of traditionalism"
+Auseugen.4.d:0 "Austria has called on us and all the other members of the HRE to join them in preserving tradition, and we will answer their call. In a now famous speech Emperor Eugen asked all the members of the HRE, including us, to make reforms to our education, justice, and government to ensure that tradition is not lost. It is good to see an Emperor who finally understands what is needed to help the HRE flourish, and we will make the reforms. Our traditions span millenia, and as Eugen himself said: like the roots of a mighty tree they give us strength."
+Auseugen.4.a:0 "Times change!"
+
+Auseugen.5.t:0 "Eugen speaks against protestant heretics"
+Auseugen.5.d:0 "Our Emperor has continued his righteous crusade against elements that would erode our traditions and culture. Perhaps the greatest of these threats is Protestantism. Protestantism may be a religion, and a religion that spawned from Catholicism, but it is unholy to the nth degree. To allow it to continue to exist in the Holy Roman Empire is an affront, to the Emperor, the Pope, and God himself. These heretics must be denounced in no uncertain terms, and that is just what Eugen has done.\n\nThe Emperor has called for all Christians and men of good morals to end their association with the Protestant heretics. Embargoes, boycotts, disenfranchisement, and even violence have been encouraged to root out this grave threat to the Empire. Eugen’s speech was short, but clear, and its effects will echo long into the future."
+Auseugen.5.a:0 "For God and Empire!"
+
+Auseugen.6.t:0 "Eugen condemns heretics"
+Auseugen.6.d:0 "In a stroke of what can only be described as divine inspiration, Emperor Eugen has reversed the mistakes of his predecessors and at long last denounced the Protestant heretics who stain our lands with their presence. He has made it clear that all upstanding members of the Holy Roman Empire should do everything in their power to root out the heretics and see that our lands are resanctified. Even if that should require war, unlikely as that is.\n\nAt last we have an Emperor who understands the true nature of the HRE: a catholic Empire endorsed by God himself. One cannot disagree with the Almighty Father, and Eugen has spoken his will. Any true Catholic understands what he is saying is right, and we are true Catholics. We will assist the Emperor in his crusade."
+Auseugen.6.a:0 "God is with Eugen."
+
+Auseugen.7.t:0 "Eugen condemns us!"
+Auseugen.7.d:0 "Eugen may be the Holy Roman Emperor, but the devil is with him. He has had the gall to renounce our religion as heresy, and called upon all Catholics to root us out. Though it is unlikely we will see a return of the religious wars of decades past, even if Eugen would prefer otherwise, tough times are ahead.\n\nWe will face embargos, sanctions, and boycotts that will leave our economy in shambles unless we take the initiative and prepare. That the Emperor would take such action is an affront to his crown, but he has taken it nonetheless. In time he will pay for his wrongdoings, but for now our own survival, economic and otherwise, is paramount."
+Auseugen.7.a:0 "We must prepare ourselves."
+
+Auseugen.8.t:0 "Imperial Meeting in Vienna"
+Auseugen.8.d:0 ""
+Auseugen.8.a:0 "The Empire has been made stronger"
+
+Auseugen.9.t:0 "Austria dissaproves expansion of HRE members"
+Auseugen.9.d:0 ""
+Auseugen.9.a:0 "Austria shouldn't intervene in our affairs!"
+
+Auseugen.10.t:0 "One King for them All"
+Auseugen.10.d:0 "Emperor Eugen has today made a claim that caused outcry among all but the most nationalistic Germans. The logic behind this claim is simple, yet already scores of indignant letters have been sent from the many kings, electors, and so forth of the Holy Roman Empire. And what has Eugen claimed to have drawn such ire? That if he is the Holy Roman Emperor, then he is the Emperor of all states of the Holy Roman Empire. Not their false kings who bicker and weaken the power of the Emperor. Blinded by their sins of indulgence they cannot see that what Eugen has done is not just logical and just, it is necessary.\n\nEugen watches from Austria as the many illegitimate and disparate states scramble equally disparate responses to his declaration. They only delay the inevitable. Eugen will unite the HRE, as it should be. Those that cooperate will be rewarded for their service, those that resist are enemies of the Holy Roman Empire, and thus the enemy of God himself. Eugen’s cause is righteous and holy. Destiny cannot be defied. There must be one king to rule them all."
+Auseugen.10.a:0 "Austria has always been head of HRE"
+
+Auseugen.11.t:0 "Austria claims absolute power over us!"
+Auseugen.11.d:0 ""
+Auseugen.11.a:0 "IT'S MADNESS!"
+
+Auseugen.26.t:0 "Brother against Brother"
+Auseugen.26.d:0 "Today, Emperor Eugen stated that he would no longer tolerate wars between Princes in the Holy Roman Empire. He decried them, saying that factionalism and warfare within the HRE only causes it to become destabilized and weak.\n\n'Brother should not turn against brother,' Eugen declared,ias it only serves to weaken the family as a whole.'\n\nEugen’s new policy of “enforced peace” within the Empire plans to forbid warfare within it, and will severely penalize any warring state that tries. While peaceful states have celebrated across the Empire, the states that thrived on combat have found that their way of life has been stripped down before their eyes. They are clearly enraged, but know that they cannot make a move without facing Eugen’s retribution."
+Auseugen.26.a:0 "We shall stop the warmongers"
+
+Auseugen.27.t:0 "Eugen speaks against fratricide"
+Auseugen.27.d:0 ""
+Auseugen.27.a:0 "Fight in inevitable!"
+
+Auseugen.28.t:0 "Eugen speaks against fratricide"
+Auseugen.28.d:0 ""
+Auseugen.28.a:0 "He has a point"
+
+Auseugen.12.t:0 "Austria wants to renew the alliance"
+Auseugen.12.d:0 "For many years, the Italian peninsula has been the home of many merchant countries, one in particular is Venice, as it is the most successful merchant nation in the entire Mediterranean, having ports from Albania, to bits of Croatia, and to themselves, and the Habsburg Domain on the other hand only has one port near the Adriatic Sea on Vodice and as it is the only place where they get the imports. The Domain dealt with the Venicians before, so they had a deal so that the Domain could safely drive their ships through the Border, the old deal however was not concrete and so the the Emperor of Austria, Eugen, sent some negotiators to Venice to once again deal with the Venician government. The Venetian Negotiator and leader of the Foreign Affairs of Venice waited patiently for the Habsburgian Negotiators and sat at a chair directly imported from India, behind him were two hired Swiss Guards that were promised they would get a higher pay than what they get at Brandenburg, and in front of the man was the un-signed treaty, two feather pens, the ink of the two pens, old wine dated 1795, and some imported and finely crafted wine glass from France on top of the long table. When the Habsburgian Negotiators came in and sat on the five chairs in front of the table, they talked about the renewal of the old and futile treaty, the Venician Negotiator said that the money given by the Habsburgs wasn’t good enough and needed a more satisfying exchange with them, and so they argued over what would be the better Habsburgian exchange, they sipped some of the French Wine in between of the talking, and then they finally settled on the terms. The Habsburgs would give to the Venicians some access to the Habsburgian military and economic help if they went bankrupt instead of giving millions money to Venice and the Habsburgs would once again get access of Venetian Ports, so it seemed like a good deal and exchange between the two negotiators, and they signed the treaty and called the deal closed. The Habsburgian Negotiators went back to their royal domain and told the Emperor about their success, while the Venetian Negotiator continued to talk with other countries’ negotiators over other unimportant deals."
+Auseugen.12.a:0 "The opportunity of alliance is great indeed"
+Auseugen.12.b:0 "Austrians should pay us more"
+Auseugen.12.c:0 "Venetians aren't appeased with this kind of offer"
+
+Auseugen.13.t:0 "Venice demands payment"
+Auseugen.13.d:0 "It seems the Venetian diplomats have been instructed to renegotiate the terms of our previous arrangement with them. Their diplomats have placed a non-negotiable “request” of a one time “contribution” to the coffers of the Doge.  Their diplomats have explained that this influx of funds would help them upkeep and improve their docking and shipping facilities and would thus be mutually beneficial to us.\n\nWhile the sentiment of this argument does hold a grain of truth, it is obvious that the Doge’s diplomats are demanding a bribe on his behalf. All of Europe knows that the Venetian docks are the finest in the world, and this so called “contribution”, while substantial, does not compare to the massive amount of wealth that Venice brings in yearly from trade.  This is a thinly veiled attempt to exert power over the Kingdom of Austria.  The question is whether showing weakness now is worth guaranteed access to not only the Mediterranean, but it’s finest fleet, later."
+Auseugen.13.a:0 "Then they'll get paid"
+Auseugen.13.b:0 "Austrian power won't please Venice"
+
+Auseugen.14.t:0 "Austria agrees"
+Auseugen.14.d:0 "The Austrian diplomats have returned to us with an answer after deliberating among themselves for a day. They have assured us that they will be able to secure the contribution that we have asked for and that they are looking forward to drafting a joint announcement to the world about our newly strengthened alliance. This is the best outcome we could have hoped for!\n\nThe Doge will be very pleased. Not only does this new alliance guarantee our continued existence in Europe, but we have been able to exert power over the all-powerful Kingdom of Austria, and he has become that much richer. Merchant kingdoms and empires alike will have to bow to our whims or risk the wrath of the behemoth that is the Austrian war machine."
+Auseugen.14.a:0 "Let our alliance last for centuries"
+
+Auseugen.15.t:0 "Austria doesn't agree"
+Auseugen.15.d:0 " When the Austrian diplomats return from their deliberations they come stone faced.  Their lead diplomat informs the room that they will be unable fulfill our request for payment. While this was not the answer that we were hoping for, our people have a reputation for negotiation.\n\nIt is public knowledge that our ports are an invaluable resource to the Austrians, and they may see sense if we double down on our demand. However, our position on the continent is tenuous at best and until now it has been the protection of Austria’s land forces that have let us keep our beloved home city safe from the greedy hands of our many enemies. Our best option may be to back down and accept a renewal of our alliance on even terms."
+Auseugen.15.a:0 "Then we won't sign this pact"
+Auseugen.15.b:0 "We should back down"
+
+Auseugen.16.t:0 "Venice backs down"
+Auseugen.16.d:0 " When our lead diplomat informed the Venetian delegation that Austria would not provide the requested funds, their reactions were muted. Although Austria’s diplomatic corps are well trained, the Venetians have had a lifetime of experience making trade deals with peoples across the world, from Italy to China.  Their expressions were unreadable, and it was impossible to tell what their response would be.\n\nHowever, it seems our decision to refuse payment was the right one to make.  The Venetian diplomats returned from their deliberations with a smile, and on behalf of their Doge extended us an offer of alliance, no strings attached.  Rudolf, and all Austrian merchants, will be pleased by this turn of events.  We have managed to secure an important ally through our reputation and negotiating power alone."
+Auseugen.16.a:0 "Good for them"
+
+Auseugen.17.t:0 "Venice doesn't yield"
+Auseugen.17.d:0 " When our lead diplomat informed the Venetian delegation that Austria would not provide the requested funds, their reactions were muted. Although Austria’s diplomatic corps. are well trained, the Venetians have had a lifetime of experience making trade deals with peoples across the world, from Italy to China.  Their expressions were unreadable, and it was impossible to tell what their response would be.\n\n As we feared, it seems our decision to refuse payment has been the final straw in our negotiations.  The Venetian diplomats returned from their deliberations with blank expressions, told us that these negotiations have been a failure.  The lead Venetian diplomat has made it clear that the Doge will accept an alliance only upon payment of the requested funds.  Rudolf, and all Austrian merchants, will be displeased by this turn of events.  We have managed to scuttle an important and centuries old alliance, an act that will certainly have consequences on Austria’s diplomatic reputation and may even spark a larger conflict between two countries that were formerly the closest of friends."
+Auseugen.17.a:0 "Embargo them!"
+
+Auseugen.18.t:0 "Austria embargoed us"
+Auseugen.18.d:0 "When our diplomatic relations broke down with Austria our biggest concern was for our safety.  Immediately the Doge ordered shipments of weapons and began to draft more men into our armies.  He also went about ensuring Venice’s relationship with several mercenary bands in the event that they may be necessary for the defense of the Grand City.  After all, Venice’s safety had until now been guaranteed by promises from the Austrian crown.\n\nWhat was unexpected however, was the arrival of empty ships into our ports. In a shocking turn of events it seems that during their journey our merchant ships were stopped in Vodice, Austria’s single port. The Austrian port authority proceeded to relieve the merchants of their shipments of fine goods and arms, confiscating them under the authority of the Austrian Crown. In the most disruptive way possible, Doge Manin has been informed of an Austrian retaliatory embargo on our Kingdom! Now any Austrian port, and ports in nations loyal to Austria, will at best refuse to do business with our merchants, and at worst confiscate their goods."
+Auseugen.18.a:0 "It won't be so bad"
+
+Auseugen.19.t:0 "Venice refuses to our offer"
+Auseugen.19.d:0 "When we sent our diplomats to open negotiations with the Venetians, we believed that the outcome would be an agreement, favorable to all, which modernized and repaired our faltering alliance with an old friend.  Instead the unthinkable has occurred.  After hearing our diplomats out, the Venetian delegation has flatly refused our offer of renewal and have stated that they prefer to walk into the next century without our aid.\n\nWe now have a choice to make.  Venice’s ports and fleet are essential to our Kingdom’s survival and having access to those ports is a matter of the utmost importance.  We would be well within our rights to issue an ultimatum to the Venetians demanding that they renew the alliance. However, Venice has been a close ally of ours for many years and demanding an alliance with the threat of force is not generally a good way to maintain the relationship between two Kingdoms. This is a decision that only Rudolf can make."
+Auseugen.19.a:0 "Maybe an ultimatum would make them wiser"
+Auseugen.19.b:0 "We'll see what they can do without us!"
+
+Auseugen.20.t:0 "Austria gives up offer"
+Auseugen.20.d:0 "Doge Manin’s decision to flatly reject Austria’s renewed offer of alliance was certainly a bold one. Few of the Doge’s diplomats and advisors agreed that it was the right course of action to provoke the Austrians, but the Doge has been insistent on freeing Venice from the encroaching influence of the Austrian goliath. As the negotiations approached, the Venetian delegation hoped that they would be able to present a sound enough argument that the Austrians would be convinced to accept this rejection on good terms.  But every man in the room when they delivered the Doge’s message could plainly see that the Austrians were completely rattled by this turn of events. Few expected a positive outcome.\n\nNow those few optimists have been proven right. Our diplomats have received word that King Rudolf himself has granted his diplomats the power to dissolve the Austro-Venetian alliance. Now none can deny that our Doge is an expert negotiator.  He has the impossible and removed the influence of every major European power from the city of Venetia. Now, for better or worse, Venice’s fate is hers to decide, and hers alone."
+Auseugen.20.a:0 "Good"
+
+Auseugen.21.t:0 "Austria gives us ultimatum"
+Auseugen.21.d:0 "Doge Manin’s decision to flatly reject Austria’s renewed offer of alliance was certainly a bold one. Few of the Doge’s diplomats and advisors agreed that it was the right course of action to provoke the Austrians, but the Doge has been insistent on freeing Venice from the encroaching influence of the Austrian goliath. As the negotiations approached, the Venetian delegation hoped that they would be able to present a sound enough argument that the Austrians would be convinced to accept this rejection on good terms.  But every man in the room when they delivered the Doge’s message could plainly see that the Austrians were completely rattled by this turn of events. Few expected a positive outcome. Now those pessimists have been proven right. Our diplomats have received word that Emperor Rudolf himself has issued an ultimatum to Doge Manin. Either agree to renew the alliance or prepare for the worst. Now our Doge must make a most impossible choice; either give in to the Austrians’ demands, or prepare for hostile action from possibly the most powerful nation on the planet, a nation that was once our friend and protector."
+Auseugen.21.a:0 "We'll reconsider options"
+Auseugen.21.b:0 "We won't yield"
+
+Auseugen.22.t:0 "Venice agrees to renew the alliance"
+Auseugen.22.d:0 "As part of Emperor Rudolf’s planned reforms, the he dispatched diplomats to update and modernize the terms of our alliance with Venice.  Rudolf’s goals were to ensure Austria’s access to the Mediterranean and access to the grand fleets of Venice, and in doing so improve the flow of goods and wealth into Austria’s lands during times of both war and peace. After days of deliberation in the Grand City of Venice, the diplomatic delegations have reached a conclusion.\n\nAlthough there were moments when the Venetian delegation were considering asking for more, or even declining the offer outright, it seems the negotiations have succeeded without a hitch.  Our diplomats are eager to report that Austria’s relationship with Venice has been secured and that come what may in the 20th century, our two nations will enter into it side by side. This accomplishment benefits not only both nations’ security, but also bolsters Rudolf’s efforts in dragging the aging Austrian Empire into a new day."
+Auseugen.22.a:0 "Wise decision"
+
+Auseugen.23.t:0 "Venice doesn't back down"
+Auseugen.23.d:0 "Emperor Rudolf’s diplomats have been attempting to secure one of Rudolf’s planned reforms for the Empire; the modernization of our alliance with Venice.  Rudolf’s goals were to peacefully ensure Austria’s access to the Mediterranean and to the grand fleets of Venice. In doing so he hoped to improve the flow of goods and wealth into Austria’s lands during times of both war and peace. However, Doge Manin forced the Emperor’s hand, rejecting our request outright. In response Rudolf resorted to the threat of force to bring Venice onside and issued an ultimatum, agree to the alliance or face the consequences.\n\nAlthough there were moments when the Venetian delegation seemed to genuinely consider to backing down, it seems the negotiations have finally collapsed.  Our diplomats regretfully informed Rudolf that there would be no alliance with Venice, and that the Doge Manin is determined to enter the 20th century alone. Although this turn of events is a blow to Rudolf’s reforms, he now has an opportunity to show the world just what happens to those who would thwart the Austrian Empire."
+Auseugen.23.a:0 "Embargo will solve the problem!"
+Auseugen.23.b:0 "War is only right anwser to that!"
+
+Auseugen.24.t:0 "Austria wants to fight us!"
+Auseugen.24.d:0 "When Doge Manin decided to end our alliance with Austria, he did not do so without first taking precautions. For months the Doge has been making bulk orders of weapons.  He took further precautions to reinforce Venice’s good relations with several mercenary bands, ensuring their loyalty if war broke out. In all, Manin was determined to prepare Venice for any likely threat in defense of the Grand City.\n\nBut now the unthinkable has happened. In a shocking turn of events it seems that Emperor Rudolf of Austria has given a single command: “Take Venice.” Even the most astute student of world politics couldn’t have predicted such a sudden turn in relations between these two nations.  Now the largest land army in Europe marches for the ports of Venice, and the enemy is at the gates.  Venice is one of the richest nations of Europe, and while our chances are slim, they are not non-existent. We will fight to the last man to defend our homes, even against those we considered brothers just days ago.\n\nGod Save Venetia, God Save Us All."
+Auseugen.24.a:0 "It'll be hell on earth!"
+
+Auseugen.25.t:0 "Venice agrees to renew the alliance"
+Auseugen.25.d:0 "Emperor Rudolf’s diplomats have been attempting to secure one of Rudolf’s planned reforms for the Empire; the modernization of our alliance with Venice.  Rudolf’s goals were to peacefully ensure Austria’s access to the Mediterranean and to the grand fleets of Venice. In doing so he hoped to improve the flow of goods and wealth into Austria’s lands during times of both war and peace. However, Doge Manin forced the Emperor’s hand, rejecting our request outright. In response Rudolf resorted to the threat of force to bring Venice onside and issued an ultimatum, agree to the alliance or face the consequences.\n\nAlthough there were moments when the Venetian delegation seemed to consider refusing to back down, it seems the negotiations have finally succeeded.  Our diplomats are eager to report that Austria’s dominance over Venice has been secured and that, willingly or not, Venice will follow us as an ally into the 20th century. This accomplishment is a great boon to the Austrian Empire, and bolsters Rudolf’s efforts in dragging the aging state into a new day."
+Auseugen.25.a:0 "Good"
+
+Auseugen.29.t:0 "Austra proposes military cooperation"
+Auseugen.29.d:0 ""
+Auseugen.29.a:0 "This will benefit both of our nations"
+Auseugen.29.b:0 "We shouldn't trust the Austrians"
+
+Auseugen.30.t:0 "Venice accepts our offer"
+Auseugen.30.d:0 ""
+Auseugen.30.a:0 "That's very reasonable of them"
+
+Auseugen.31.t:0 "Venice doesn't accept our offer"
+Auseugen.31.d:0 ""
+Auseugen.31.a:0 "They don't know what chance they missed!"
+
+Auseugen.32.t:0 "Austria calls to war"
+Auseugen.32.d:0 "Our great ally, [AUS.GetName] requests our assistance in their military actions. Within next 20 days we will join their war."
+Auseugen.32.a:0 "We shall honor our alliance"
+Auseugen.33.t:0 "We've been called to war"
+Auseugen.33.d:0 "We've joined [AUS.GetName] in their war"
+Auseugen.33.a:0 "Our enemies will suffer!"
+
+Auseugen.34.t:0 "Venice calls to war"
+Auseugen.34.d:0 "Our great ally, [VNC.GetName] requests our assistance in their military actions. Within next 20 days we will join their war."
+Auseugen.34.a:0 "We shall honor our alliance"
+Auseugen.35.t:0 "We've been called to war"
+Auseugen.35.d:0 "We've joined [VNC.GetName] in their war"
+Auseugen.35.a:0 "Our enemies will suffer!"
+
+
+# > HRE fragmentation < #
+
+Auseugen.40.t:0 "Austria demands return of Moselland"
+Auseugen.40.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Moselland. As insulting as it is, we shouldn't exclude option of freeing Moselland since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.40.a:0 "We can't risk war right now"
+Auseugen.40.b:0 "[AUS.getName] will have to get \nMoselland with their blood!"
+
+Auseugen.41.t:0 "Austria demands return of Berg"
+Auseugen.41.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Berg. As insulting as it is, we shouldn't exclude option of freeing Berg since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.41.a:0 "We can't risk war right now"
+Auseugen.41.b:0 "[AUS.getName] will have to get \nBerg with their blood!"
+
+Auseugen.42.t:0 "Austria demands return of Oberbayern"
+Auseugen.42.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Oberbayern. As insulting as it is, we shouldn't exclude option of freeing Oberbayern since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.42.a:0 "We can't risk war right now"
+Auseugen.42.b:0 "[AUS.getName] will have to get \nOberbayern with their blood!"
+
+Auseugen.43.t:0 "Austria demands return of Niederbayern"
+Auseugen.43.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Niederbayern. As insulting as it is, we shouldn't exclude option of freeing Niederbayern since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.43.a:0 "We can't risk war right now"
+Auseugen.43.b:0 "[AUS.getName] will have to get \nNiederbayern with their blood!"
+
+Auseugen.44.t:0 "Austria demands return of Franken"
+Auseugen.44.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Franken. As insulting as it is, we shouldn't exclude option of freeing Franken since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.44.a:0 "We can't risk war right now"
+Auseugen.44.b:0 "[AUS.getName] will have to get \nFranken with their blood!"
+
+Auseugen.45.t:0 "Austria demands return of Kassel"
+Auseugen.45.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Kassel. As insulting as it is, we shouldn't exclude option of freeing Kassel since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.45.a:0 "We can't risk war right now"
+Auseugen.45.b:0 "[AUS.getName] will have to get \nKassel with their blood!"
+
+Auseugen.46.t:0 "Austria demands return of Münster"
+Auseugen.46.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Münster. As insulting as it is, we shouldn't exclude option of freeing Münster since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.46.a:0 "We can't risk war right now"
+Auseugen.46.b:0 "[AUS.getName] will have to get \nMünster with their blood!"
+
+Auseugen.47.t:0 "Austria demands return of Ulm"
+Auseugen.47.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Ulm. As insulting as it is, we shouldn't exclude option of freeing Ulm since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.47.a:0 "We can't risk war right now"
+Auseugen.47.b:0 "[AUS.getName] will have to get \nUlm with their blood!"
+
+Auseugen.48.t:0 "Austria demands return of Holstein"
+Auseugen.48.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Holstein. As insulting as it is, we shouldn't exclude option of freeing Holstein since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.48.a:0 "We can't risk war right now"
+Auseugen.48.b:0 "[AUS.getName] will have to get \nHolstein with their blood!"
+
+Auseugen.49.t:0 "Austria demands return of Hannover"
+Auseugen.49.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Hannover. As insulting as it is, we shouldn't exclude option of freeing Hannover since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.49.a:0 "We can't risk war right now"
+Auseugen.49.b:0 "[AUS.getName] will have to get \nHannover with their blood!"
+
+Auseugen.50.t:0 "Austria demands return of Thüringen"
+Auseugen.50.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Thüringen. As insulting as it is, we shouldn't exclude option of freeing Thüringen since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.50.a:0 "We can't risk war right now"
+Auseugen.50.b:0 "[AUS.getName] will have to get \nThüringen with their blood!"
+
+Auseugen.51.t:0 "Austria demands return of Mecklenburg"
+Auseugen.51.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Mecklenburg. As insulting as it is, we shouldn't exclude option of freeing Mecklenburg since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.51.a:0 "We can't risk war right now"
+Auseugen.51.b:0 "[AUS.getName] will have to get \nMecklenburg with their blood!"
+
+Auseugen.52.t:0 "Austria demands return of Vorpommern"
+Auseugen.52.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Vorpommern. As insulting as it is, we shouldn't exclude option of freeing Vorpommern since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.52.a:0 "We can't risk war right now"
+Auseugen.52.b:0 "[AUS.getName] will have to get \nVorpommern with their blood!"
+
+Auseugen.53.t:0 "Austria demands return of Hinterpommern"
+Auseugen.53.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Hinterpommern. As insulting as it is, we shouldn't exclude option of freeing Hinterpommern since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.53.a:0 "We can't risk war right now"
+Auseugen.53.b:0 "[AUS.getName] will have to get \nHinterpommern with their blood!"
+
+Auseugen.54.t:0 "Austria demands return of Brandenburg"
+Auseugen.54.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Brandenburg. As insulting as it is, we shouldn't exclude option of freeing Brandenburg since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.54.a:0 "We can't risk war right now"
+Auseugen.54.b:0 "[AUS.getName] will have to get \nBrandenburg with their blood!"
+
+Auseugen.55.t:0 "Austria demands return of Sachen"
+Auseugen.55.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Sachen. As insulting as it is, we shouldn't exclude option of freeing Sachen since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.55.a:0 "We can't risk war right now"
+Auseugen.55.b:0 "[AUS.getName] will have to get \nSachen with their blood!"
+
+Auseugen.56.t:0 "Austria demands return of Ostmark"
+Auseugen.56.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Ostmark. As insulting as it is, we shouldn't exclude option of freeing Ostmark since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.56.a:0 "We can't risk war right now"
+Auseugen.56.b:0 "[AUS.getName] will have to get \nOstmark with their blood!"
+
+Auseugen.57.t:0 "Austria demands return of Hamburg"
+Auseugen.57.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Hamburg. As insulting as it is, we shouldn't exclude option of freeing Hamburg since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.57.a:0 "We can't risk war right now"
+Auseugen.57.b:0 "[AUS.getName] will have to get \nHamburg with their blood!"
+
+Auseugen.58.t:0 "Austria demands return of Lübeck"
+Auseugen.58.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Lübeck. As insulting as it is, we shouldn't exclude option of freeing Lübeck since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.58.a:0 "We can't risk war right now"
+Auseugen.58.b:0 "[AUS.getName] will have to get \nLübeck with their blood!"
+
+Auseugen.59.t:0 "Austria demands return of Hessen"
+Auseugen.59.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Hessen. As insulting as it is, we shouldn't exclude option of freeing Hessen since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.59.a:0 "We can't risk war right now"
+Auseugen.59.b:0 "[AUS.getName] will have to get \nHessen with their blood!"
+
+Auseugen.60.t:0 "Austria demands return of Pfalz"
+Auseugen.60.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Pfalz. As insulting as it is, we shouldn't exclude option of freeing Pfalz since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.60.a:0 "We can't risk war right now"
+Auseugen.59.b:0 "[AUS.getName] will have to get \nPfalz with their blood!"
+
+Auseugen.60.t:0 "Austria demands return of Trier"
+Auseugen.60.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Trier. As insulting as it is, we shouldn't exclude option of freeing Trier since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.60.a:0 "We can't risk war right now"
+Auseugen.60.b:0 "[AUS.getName] will have to get \nTrier with their blood!"
+
+Auseugen.61.t:0 "Austria demands return of Trier"
+Auseugen.61.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Trier. As insulting as it is, we shouldn't exclude option of freeing Trier since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.61.a:0 "We can't risk war right now"
+Auseugen.61.b:0 "[AUS.getName] will have to get \nTrier with their blood!"
+
+Auseugen.62.t:0 "Austria demands return of Baden"
+Auseugen.62.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Baden. As insulting as it is, we shouldn't exclude option of freeing Baden since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.62.a:0 "We can't risk war right now"
+Auseugen.62.b:0 "[AUS.getName] will have to get \nBaden with their blood!"
+
+Auseugen.63.t:0 "Austria demands return of Württemberg"
+Auseugen.63.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Württemberg. As insulting as it is, we shouldn't exclude option of freeing Württemberg since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.63.a:0 "We can't risk war right now"
+Auseugen.63.b:0 "[AUS.getName] will have to get \nWürttemberg with their blood!"
+
+Auseugen.64.t:0 "Austria demands return of Nuremberg"
+Auseugen.64.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Nuremberg. As insulting as it is, we shouldn't exclude option of freeing Nuremberg since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.64.a:0 "We can't risk war right now"
+Auseugen.64.b:0 "[AUS.getName] will have to get \nNuremberg with their blood!"
+
+Auseugen.65.t:0 "Austria demands return of Ansbach"
+Auseugen.65.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Ansbach. As insulting as it is, we shouldn't exclude option of freeing Ansbach since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.65.a:0 "We can't risk war right now"
+Auseugen.65.b:0 "[AUS.getName] will have to get \nAnsbach with their blood!"
+
+Auseugen.66.t:0 "Austria demands return of Bayreuth"
+Auseugen.66.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Bayreuth. As insulting as it is, we shouldn't exclude option of freeing Bayreuth since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.66.a:0 "We can't risk war right now"
+Auseugen.66.b:0 "[AUS.getName] will have to get \nBayreuth with their blood!"
+
+Auseugen.67.t:0 "Austria demands return of Oldenburg"
+Auseugen.67.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Oldenburg. As insulting as it is, we shouldn't exclude option of freeing Oldenburg since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.67.a:0 "We can't risk war right now"
+Auseugen.67.b:0 "[AUS.getName] will have to get \nOldenburg with their blood!"
+
+Auseugen.68.t:0 "Austria demands return of Ostfriesland"
+Auseugen.68.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Ostfriesland. As insulting as it is, we shouldn't exclude option of freeing Ostfriesland since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.68.a:0 "We can't risk war right now"
+Auseugen.68.b:0 "[AUS.getName] will have to get \nOstfriesland with their blood!"
+
+Auseugen.69.t:0 "Austria demands return of Köln"
+Auseugen.69.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Köln. As insulting as it is, we shouldn't exclude option of freeing Köln since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.69.a:0 "We can't risk war right now"
+Auseugen.69.b:0 "[AUS.getName] will have to get \nKöln with their blood!"
+
+Auseugen.70.t:0 "Austria demands return of Frankfurt"
+Auseugen.70.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Frankfurt. As insulting as it is, we shouldn't exclude option of freeing Frankfurt since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.70.a:0 "We can't risk war right now"
+Auseugen.70.b:0 "[AUS.getName] will have to get \nFrankfurt with their blood!"
+
+Auseugen.71.t:0 "Austria demands return of Kleve"
+Auseugen.71.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Kleve. As insulting as it is, we shouldn't exclude option of freeing Kleve since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.71.a:0 "We can't risk war right now"
+Auseugen.71.b:0 "[AUS.getName] will have to get \nKleve with their blood!"
+
+Auseugen.72.t:0 "Austria demands return of Bremen"
+Auseugen.72.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Bremen. As insulting as it is, we shouldn't exclude option of freeing Bremen since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.72.a:0 "We can't risk war right now"
+Auseugen.72.b:0 "[AUS.getName] will have to get \nBremen with their blood!"
+
+Auseugen.73.t:0 "Austria demands return of Gottingen"
+Auseugen.73.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Gottingen. As insulting as it is, we shouldn't exclude option of freeing Gottingen since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.73.a:0 "We can't risk war right now"
+Auseugen.73.b:0 "[AUS.getName] will have to get \nGottingen with their blood!"
+
+Auseugen.74.t:0 "Austria demands return of Dortmund"
+Auseugen.74.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Dortmund. As insulting as it is, we shouldn't exclude option of freeing Dortmund since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.74.a:0 "We can't risk war right now"
+Auseugen.74.b:0 "[AUS.getName] will have to get \nDortmund with their blood!"
+
+Auseugen.75.t:0 "Austria demands return of Mark"
+Auseugen.75.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Mark. As insulting as it is, we shouldn't exclude option of freeing Mark since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.75.a:0 "We can't risk war right now"
+Auseugen.75.b:0 "[AUS.getName] will have to get \nMark with their blood!"
+
+Auseugen.76.t:0 "Austria demands return of Nassau"
+Auseugen.76.d:0 "The Holy Roman Emperor - Austria is requesting us to return our rightful territory of Nassau. As insulting as it is, we shouldn't exclude option of freeing Nassau since Austria could declare war on us. On the other hand after liberation Emperor can easily expand its influence in the region. \n\nWhat should we do?"
+Auseugen.76.a:0 "We can't risk war right now"
+Auseugen.76.b:0 "[AUS.getName] will have to get \nNassau with their blood!"
+
+Auseugen.77.t:0 "Messege from [FROM.getName]"
+Auseugen.77.d:0 "[FROM.getName] decided to give back their unlawful territory"
+Auseugen.77.a:0 "That's very wise of them"
+
+Auseugen.78.t:0 "Messege from [FROM.getName]"
+Auseugen.78.d:0 "[FROM.getName] refused to our request to give back unlawful HRE territory"
+Auseugen.78.a:0 "Then war it is!"
+
+
+# > 2nd focus tree < #
+
+Auseugen.79.t:0 "Austrian Ultimatum received"
+Auseugen.79.d:0 "Early this morning a bureaucrat informed King Ludwig that a message from Emperor Eugen had arrived.  The contents of this message were an ultimatum from the newly crowned Hapsburg. Either submit his person and the lands of Bavaria to the Austrian Empire, or face the consequences.  The letter was sent ahead of an Austrian diplomat traveling to München to receive Ludwig’s answer, and the man is expected to arrive within the hour. Ludwig now has a decision to make, will he abdicate his throne and open the gates to the Austrian army, or stand his ground and risk the total destruction of his kingdom?"
+Auseugen.79.a:0 "Austria is not aware of the strength of our armies!"
+Auseugen.79.b:0 "We have no other choice that to surrender"
+
+Auseugen.80.t:0 "Bavaria refuses our offer"
+Auseugen.80.d:0 "The diplomat that Eugen had dispatched to King Ludwig has returned with a simple message from the “Fairy Tale King”.  He has responded that he would rather see his country and people burn before handing the sovereign Kingdom of Bavaria over to a man with overblown imperial ambitions. Ludwig has made it clear that he intends to take up arms against the Austrian Empire, and Eugen’s generals are more than confident that the Austrian Imperial Army could easily crush Ludwig’s forces. However, some of Eugen’s advisors are afraid that taking such aggressive action could anger the other princes, even create a martyr of Ludwig.  Eugen must decide if open conflict is truly the best option."
+Auseugen.80.a:0 "War it is then"
+
+Auseugen.81.t:0 "Bavaria submits"
+Auseugen.81.d:0 "The diplomat that Eugen had dispatched to King Ludwig has returned with the King’s response.  He has agreed to abdicate his throne and title in exchange for the lives and freedom of himself and his family. Reports indicate that Ludwig has ordered the Bavarian forces to stand down and prepare the country for occupation by the Austrian Imperial Army. This news has made many of Eugen’s advisors ecstatic, as they believe that Ludwig’s decision will prove to be a strong example for the other princes of the Empire. The path is now clear for Eugen to continue his program of imperial reform."
+Auseugen.81.a:0 "He made a right decision"
+
+Auseugen.82.t:0 "Bavaria surrenders"
+Auseugen.82.d:0 "The tides that control the rise and fall of Kingdoms have eroded yet another nation from the face of Europe. Today the Austrian Empire took full control of what was once the Kingdom of Bavaria from the former King Ludwig.  The transfer of power was relatively peaceful, although marked by several small riots seemingly incited by jilted members of the Bavarian nobility. These were put down quickly but without major incident.  The Bavarian army has been absorbed into the Austrian Imperial Forces and are being shipped to a distant front to dissuade any kind of dissent. The Kingdom of Bavaria is no more."
+Auseugen.82.a:0 "Bavarians overstimated theirselves"
+
+Auseugen.83.t:0 "Our country falls"
+Auseugen.83.d:0 "The tides that control the rise and fall of Kingdoms have eroded yet another nation from the face of Europe. Today the Austrian Empire took full control of what was once the Kingdom of Bavaria from the former King Ludwig.  The transfer of power was relatively peaceful, although marked by several small riots seemingly incited by jilted members of the Bavarian nobility. These were put down quickly but without major incident.  The Bavarian army has been absorbed into the Austrian Imperial Forces and are being shipped to a distant front to dissuade any kind of dissent. The Kingdom of Bavaria is no more."
+Auseugen.83.a:0 "Long Live Emperor Eugen, Long Live the Austrian Empire!"
+
+# > last ft < #
+
+Auseugen.84.t:0 "Army Morale Increases"
+Auseugen.84.d:0 ""
+Auseugen.84.a:0 "Soon we will return to our past glory"
+
+Auseugen.85.t:0 "Army Morale Increases"
+Auseugen.85.d:0 ""
+Auseugen.85.a:0 "Soon we will return to our past glory"
+
+Auseugen.86.t:0 "Army Morale is in Normal State"
+Auseugen.86.d:0 ""
+Auseugen.86.a:0 "Now no one can stop us!"
+
+Auseugen.87.t:0 "More Loyal Generals"
+Auseugen.87.d:0 ""
+Auseugen.87.a:0 "Soon we will return to our past glory"
+
+Auseugen.88.t:0 "More Loyal Generals"
+Auseugen.88.d:0 ""
+Auseugen.88.a:0 "Soon we will return to our past glory"
+
+Auseugen.89.t:0 "Generals are now Truly Loyal"
+Auseugen.89.d:0 ""
+Auseugen.89.a:0 "Now no one can stop us!"
+
+
+Auseugen.90.t:0 "Austria invites us to their faction"
+Auseugen.90.d:0 ""
+Auseugen.90.a:0 "We can't refuse"
+
+Auseugen.91.t:0 "The Great Gathering"
+Auseugen.91.d:0 ""
+Auseugen.91.a:0 "We won't submit to anyone!"
+Auseugen.91.b:0 "We should accept our fate"
+
+Auseugen.92.t:0 "[FROM.GetName] refused to join us!"
+Auseugen.92.d:0 ""
+Auseugen.92.a:0 "Damn them!"
+
+Auseugen.93.t:0 "[FROM.GetName] has accepted our offer"
+Auseugen.93.d:0 ""
+Auseugen.93.a:0 "Wise move"
+
+Auseugen.94.t:0 "The Great Gathering"
+Auseugen.94.d:0 ""
+Auseugen.94.a:0 "Now we have to wait"
+
+Auseugen.95.t:0 "You shall not see this event" #EVENT NOT WORKING, NO DESCRIPTION NEEDED
+Auseugen.95.d:0 ""
+Auseugen.95.a:0 "I'm sorry for my sins"
+
+Auseugen.96.t:0 "Austria increased influence"
+Auseugen.96.d:0 ""
+Auseugen.96.a:0 "Coalition will scare them off"
+
+Auseugen.97.t:0 "Invitation to the Coalition"
+Auseugen.97.d:0 "A new shift in German politics has just recently taken place, with Margrave Ludwig IV of Brandenburg proclaiming himself the anthitesis of Vienna's Rudolf's measures. In his public announcement the Margrave accused the Kaiser of attempting to undermine the whole morals and the core basis of the Holy Roman Empire, as well as plotting to get rid of the dissenters that opposed his radical, extremist, ideas. Of course, his own idea was to establish himself as the head of the opposition without hesitation and then proceed to message the other members of the Empire in an attempt to get them to join in the fray. \nWhether others will accept him unilaterally deciding to basically proclaim himself emperor or not, we're not un a crossroad of loyalties, and we must decide where our militaries will go, as there doesn't seem to be an option for neutrality. On one hand, Kaiser Rudolf, the legitimate emperor of the whole realm, including Brandenburg. His armies are vast and his funds are equally large, however, his real diplomatic reach is far from acceptable. The most distant realms are the most likely to ignore the demands and edicts decreed from Vienna, as no retaliation is to be expected. On the other hand we've got Margrave Ludwig, although he now wishes to portray himself openly as King Ludwig, a show of rebellion against the Kaiser. He is an ambitious man, much like Rudolf, however, that's all they have in common. His lust for power has clearly been put to show with the recent developments as he is, by law, nothing more than a usurper. However, angering the would-be emperor wouldn't be the wisest of the actions to take.\nSo, what shall we answer to Ludwig's petition of assistance?"
+Auseugen.97.a:0 "We will gladly join our brothers"
+Auseugen.97.b:0 "We rather stay neutral"
+
+Auseugen.98.t:0 "Messege from [FROM.getName]"
+Auseugen.98.d:0 "They joined coalition"
+Auseugen.98.a:0 "Good"
+
+Auseugen.99.t:0 "Messege from [FROM.getName]"
+Auseugen.99.d:0 "They don't want to join"
+Auseugen.99.a:0 "Idiots"
+
+Auseugen.100.t:0 "German Coalition forms!"
+Auseugen.100.d:0 ""
+Auseugen.100.a:0 "We should start mobilizing"
+
+Auseugen.101.t:0 "Austria starts to mobilize!"
+Auseugen.101.d:0 ""
+Auseugen.101.a:0 "We better do that too!"
+
+Auseugen.102.t:0 "Brandenburg mobilizes!"
+Auseugen.102.d:0 ""
+Auseugen.102.a:0 "War it is"
+
+Auseugen.103.t:0 "We are 50% towards capitulation!" #our country is almost capitulated
+Auseugen.103.d:0 ""
+Auseugen.103.a:0 "Perhaps surrender could be beneficial"
+Auseugen.103.b:0 "Austria will never fall!"
+
+Auseugen.104.t:0 "We are 75% towards capitulation!" #our country capitulates
+Auseugen.104.d:0 ""
+Auseugen.104.a:0 "There's no other option than to surrender"
+
+Auseugen.105.t:0 "Austria surrenders!" #brandenburg pov
+Auseugen.105.d:0 ""
+Auseugen.105.a:0 "They shall transfer their enclave"
+Auseugen.105.b:0 "We need both their territories and war reparations"
+Auseugen.105.c:0 "Silesia shall be independant"
+Auseugen.105.d:0 "Bohemia will be realised"
+
+Auseugen.106.t:0 "Austria surrenders!" #other members pov
+Auseugen.106.d:0 ""
+Auseugen.106.a:0 "The menace has been beaten"
+
+Auseugen.107.t:0 "Message from Brandenburg" #events for rework!
+Auseugen.107.d:0 ""
+Auseugen.107.a:0 ""
+
+Auseugen.108.t:0 "Brandenburg mobilizes!" #events for rework!
+Auseugen.108.d:0 ""
+Auseugen.108.a:0 "War it is"
+
+Auseugen.109.t:0 "Brandenburg mobilizes!" #events for rework!
+Auseugen.109.d:0 ""
+Auseugen.109.a:0 "War it is"
+
+Auseugen.110.t:0 "Brandenburg mobilizes!" #events for rework!
+Auseugen.110.d:0 ""
+Auseugen.110.a:0 "War it is"
+
+Auseugen.111.t:0 "Brandenburg mobilizes!" #events for rework!
+Auseugen.111.d:0 ""
+Auseugen.111.a:0 "War it is"
+
+Auseugen.112.t:0 "Brandenburg mobilizes!" #events for rework!
+Auseugen.112.d:0 ""
+Auseugen.112.a:0 "War it is"
+
+Auseugen.113.t:0 "Issue with German nobility"
+Auseugen.113.d:0 ""
+Auseugen.113.a:0 "We should decide what to do"
+
+
+
+Auseugen.115.t:0 "Austrian threat defeated"
+Auseugen.115.d:0 ""
+Auseugen.115.a:0 "The alliance can no longer exist"
+
+Auseugen.116.t:0 "The German alliance dissolves"
+Auseugen.116.d:0 ""
+Auseugen.116.a:0 "It couldn't lasted too long"
+
+
+
+
+Auseugen.117.t:0 "Austrian offer"
+Auseugen.117.d:0 ""
+Auseugen.117.a:0 "yes"
+Auseugen.117.b:0 "no"
+
+Auseugen.118.t:0 "Messege from Serbia" # accepted
+Auseugen.118.d:0 ""
+Auseugen.118.a:0 ""
+
+Auseugen.119.t:0 "Messege from Serbia" # not accepted
+Auseugen.119.d:0 ""
+Auseugen.119.a:0 ""
+
+Auseugen.120.t:0 "Austrian envoy at our doors"
+Auseugen.120.d:0 ""
+Auseugen.120.a:0 "accept"
+Auseugen.120.b:0 "decline"
+
+Auseugen.121.t:0 "Ottoman reply" #accepted
+Auseugen.121.d:0 ""
+Auseugen.121.a:0 ""
+
+Auseugen.122.t:0 "Ottoman reply" #declined
+Auseugen.122.d:0 ""
+Auseugen.122.a:0 ""
+
+Auseugen.123.t:0 "Viennese Speech"
+Auseugen.123.d:0 ""
+Auseugen.123.a:0 ""
+
+Auseugen.124.t:0 "Aristocrats pleased"
+Auseugen.124.d:0 ""
+Auseugen.124.a:0 ""
+
+Auseugen.125.t:0 "Noble Tyranny continues"
+Auseugen.125.d:0 ""
+Auseugen.125.a:0 ""
+
+
+Auseugen.126.t:0 "The Great Slaughter"
+Auseugen.126.d:0 ""
+Auseugen.126.a:0 ""
+
+Auseugen.127.t:0 "Prag Awards"
+Auseugen.127.d:0 ""
+Auseugen.127.a:0 ""
+
+Auseugen.128.t:0 "Speech to the People"
+Auseugen.128.d:0 "In an attempt to assess the troubled situation in which Kaiser Eugen has found himself, with the majority of the Imperial nobility turning his back against him, the emperor has given a rousing speech to the public of our capital, in an attempt to restrengthen the weakened ties that had once tightly bonded the two factions of the upper nobility. \n\nIn what's now beginning to be treated as a historical speech, according to those who were present in the delivery, the Kaiser directly reminded the nobility of their duties and their part as a piece of the greater cause that is the Empire and its continuity througout the coming years, which now begin to look darker and darker and with many unthinkable conflicts laying in the near distance. As subordinates of the Kaiser, Eugen reminded them, it was their duty to accept the Emperor's word, whether they liked it or not, and called the masses that had gathered to pressure the dissidents, many of whom came from the most distant limits of the Habsburg Realm, in an attempt to strengthen the capital city's position towards the provincial nobility. \n\nEmperor Eugen's direct strike against those who could defy his intentions has shown that he has nothing to do with previous emperor Rudolf, of weak hands and weak words. In his speech, he's made it clear that the power comes from the noble Habsburg house, elected by God to rule, and as secondary powers in this power-struggle, as that is exactly what it is, Kaiser Eugen said, it's their obligation to remain under his rule, or the consequences will be severe. \n\nIn this speech, made from the balcony of the Imperial Palace, in full military garbs and accompanied by the royal family as a show of Imperial strenght, Kaiser Eugen has also thanked those who have supported him, and has promised that, should the struggle end in a peaceful manner, the affair will be forgotten by the Habsburg house." 
+Auseugen.128.a:0 "Our nation won't be divided!"
+
+Auseugen.12800.t:0 "The Secret Plan"
+Auseugen.12800.d:0 "In a secret meeting that has taken place in one of the many secret chambers of the Habsburg royal palace just recently, unbeknownst to the vast majority of the inhabitants of the aforementioned building, Kaiser Eugen adressed with deep concerns the situation in which the royal family was currently in. It was a widely known fact that he had become a laughingstock for the many nobles that, all across the empire, were now threatening his reign. \n\nMuch like Kaiser Rudolf before him, he was now seen unfitting and weak, even if in the beginning he made the nobility believe he would be different. However, unlike Rudolf, he wasn't going to go down without a fight. The exact objective of the meeting that had just happened was to establish the path that Eugen's loyalists and himself were to follow. Eugen's aides proposed, to the dismay of the Kaiser, that certain... unnatural events could happen to those dissidents that had been spreading lies and hostility all across the Habsburg realm, in an attempt to quiet them. Despite his reluctancy to partake in such unholy, dishonorable, measures, he comprehended that if he wanted to remain seated and his family safe from the streets, he had no other option to go along with the murderous plotters. \n\nWho would be murdered or, at least, silenced, now was in other people's hands, as he himself had demanded to know as little as possible, in an attempt to hide his involvement should the ordeal result in failure. "
+Auseugen.12800.a:0 "There was no other option left"
+
+Auseugen.129.t:0 "Nobles Satisfied"
+Auseugen.129.d:0 "Great news are coming from everywhere in our vast country. It looks like the recent speech given by our dear emperor has made our previously dissident nobles become as loyal as the best.\n\nKaiser Eugen's strong words and unyielding energy and effort have proven the best answer against those who had been trying to undermine his reign since the very beginning. Swearing to continue their service under the true holder of the Holy Roman Crown, every noble who was even remotely critic of the Kaiser has eaten their pride and has bowed down again to the light of the Habsburg Dynasty. \n\nWith this show of prowess and power, Eugen's rule has been cemented as one of strong national unity and a great sense of duty. Needless to say, following this show of loyalism, very hard to find in these trying times, Emperor Eugen has given another speech, far more benevolent than the previous one, thanking each and every noble, from the highest of ranks to the humblest of the barons, and has promised moderate reforms and taxing permits to those who remained loyal to the dynasty since the very beginning."
+Auseugen.129.a:0 "Truly, we're in the footsteps of a new era of Habsburg politics!"
+
+Auseugen.130.t:0 "Speech Unsuccesful"
+Auseugen.130.d:0 "Even if in the beginning the results of Kaiser Eugen's speech seemed to be quite positive, recent events, such as a demonstration against Habsburg rule in some distant city where Habsburg rule has always been doubted, have shown that the Emperor's speech has actually achieved naught.\n\nThe failure of the speech shows how a shift in Habsburg politics is taking place under the very eyes of Eugen, who can only watch in disbelief as those far enough for his diplomats to reach turn their back to their true emperor, and instead mock him with the security that no action will be taken against them. Even if none of them are in open revolt, Kaiser Eugen has proven himself to be a repetition of his predecessor, who achieved nothing of worth and was quickly disposed of when his social creditability clock hit midnight. Now, the entire royal family fears that Eugen's own might be running out of time, with murmurs of plotting and disaster sounding through every hall of the Imperial Palace.\n\nRumbles have also been felt all around the Holy Roman Empire, with many of the most powerful vassals seeing Eugen as nothing but a stepping stone to achieve greater power. Now the weakened emperor must await for things to take place around him, as he's proven to not have the necessary power to take direct action himself."
+Auseugen.130.a:0 "This took a toll on us..."
+
+Auseugen.131.t:0 "Opposition becomes silent"
+Auseugen.131.d:0 "Although Kaiser Eugen had had his doubts regarding the efficacy of the murderous plots that were being organized against those few vocal nobles who were attacking the Habsburg realm, he's now got no other option but to admit that everything has worked out exactly as planned. A certain duke from northeastern Hungary, who had been badmouhting the Emperor for the longest time, was casually hit in the head by a collapsing wall of an old building and was now in a coma from which he doesn't seem to be going to wake up. Another unmentionable member of a powerful family from Czechia had been stabbed by a crazy homeless man in the streets, dying soon after. The homeless man would be immediately killed by the nobleman's personal guard and no fingers would ever be pointed against the Royal Palace's darkest rooms. \n\nThose dissidents who are still in one piece, seeing how others who had badmouthed the royal family, even threatening with deposing the Emperor, were falling one by one, many have decided to go into hiding or to publicly make a show of loyalty towards Kaiser Eugen."
+Auseugen.131.a:0 "The scheme couldn't have gone better"
+
+Auseugen.132.t:0 "People are Furious"
+Auseugen.132.d:0 "Disaster! As Kaiser Eugen had foreseen, his aides' plans to eliminate the dissidents that trouble the Empire have failed miserably. Although they seemed to be going well the entire scheme came crashing down when a homeless man was captured after stabbing a famous Czech nobleman. Even though the original plan was that he would be immediately executed by the loyalist population, with the intent of avenging the dead Count, he was quickly grabbed and taken into custody by the nobleman's bodyguards, who questioned the homeless man. Even though most of his words were senseless ramblings made by a mentally ill person, some important information was revealed, such as who gave him the dagger used in the murder. Even though this information hasn't been made public, it seems that the affair has become louder and louder after doubts are being made regarding other recent... "accidents" that have casually resulted in the death or inhabilitation of other disloyal members of the Habsburg Empire. \n\nEven though nothing can be traced back to Kaiser Eugen, the looming image of his hand being extended, ordering the murder of innocent men and women, now is making the entire Royal Palace tremble in fear of retaliation. Eugen's aides have gone completely into damage control, denying the accusations and using threats to those vocal against his murderous plots. "
+Auseugen.132.a:0 "We must now wait and see how this ungraceful affair will progress"
+
+Auseugen.133.t:0 "Restoration of an Old Empire"
+Auseugen.133.d:0 ""
+Auseugen.133.a:0 ""
+
+Auseugen.134.t:0 "Austria requests release of our puppet"
+Auseugen.134.d:0 ""
+Auseugen.134.a:0 ""
+
+Auseugen.135.t:0 "Imperial Conscription"
+Auseugen.135.d:0 ""
+Auseugen.135.a:0 ""
+
+Auseugen.136.t:0 "Results of the Imperial Conscription"
+Auseugen.136.d:0 ""
+Auseugen.136.a:0 ""
+
+Auseugen.137.t:0 "Imperial Reconquista"
+Auseugen.137.d:0 ""
+Auseugen.137.a:0 ""
+
+Auseugen.138.t:0 "Three Pillars of the Nation"
+Auseugen.138.d:0 ""
+Auseugen.138.a:0 ""
+
+Auseugen.139.t:0 "Clergy's New Significance"
+Auseugen.139.d:0 ""
+Auseugen.139.a:0 ""
+
+Auseugen.140.t:0 "Clergy's New Significance"
+Auseugen.140.d:0 ""
+Auseugen.140.a:0 ""
+
+Auseugen.141.t:0 "Limitation of Nobility's Immunity"
+Auseugen.141.d:0 ""
+Auseugen.141.a:0 ""
+
+Auseugen.142.t:0 "Fate of the Poor"
+Auseugen.142.d:0 ""
+Auseugen.142.a:0 ""
+
+
+
+
+
+Auseugen.143.t:0 "Austro-Spanish war"
+Auseugen.143.d:0 ""
+Auseugen.143.a:0 "Let's see who wins"
+
+Auseugen.144.t:0 "Situation with Liege"
+Auseugen.144.d:0 ""
+Auseugen.144.a:0 "Send them ultimatum"
+
+Auseugen.145.t:0 "Ultimatum from Austria"
+Auseugen.145.d:0 ""
+Auseugen.145.a:0 "There's no other option than to join them"
+Auseugen.145.b:0 "We respect Spaniards much more"
+
+Auseugen.146.t:0 "Austro-French war"
+Auseugen.146.d:0 ""
+Auseugen.146.a:0 "Yet again we see Austrian aggression"
+
+Auseugen.147.t:0 "We have capitulated"
+Auseugen.147.d:0 ""
+Auseugen.147.a:0 "Send a messege to Spain"
+
+Auseugen.148.t:0 "[SPN.getName] surrender"
+Auseugen.148.d:0 ""
+Auseugen.148.a:0 "We shall sign a peace deal with Austrians"
+
+Auseugen.149.t:0 "We have surrendered"
+Auseugen.149.d:0 ""
+Auseugen.149.a:0 "We are at mercy of Austrians"
+
+Auseugen.150.t:0 "People demand peace!"
+Auseugen.150.d:0 ""
+Auseugen.150.a:0 "Then there will be peace!"
+Auseugen.150.b:0 "Their opinion is not important!"
+
+Auseugen.151.t:0 "Plans with Belgian lands"
+Auseugen.151.d:0 ""
+Auseugen.151.a:0 "United Belgium"
+Auseugen.151.b:0 "Balkanized region"
+Auseugen.151.c:0 "Occupation"
+
+Auseugen.152.t:0 "Plans with Luxembourg"
+Auseugen.152.d:0 ""
+Auseugen.152.a:0 "Puppet State"
+Auseugen.152.b:0 "Add it to Belgium"
+Auseugen.152.c:0 "Integrate"
+
+Auseugen.153.t:0 "Plans with Eastern France"
+Auseugen.153.d:0 ""
+Auseugen.153.a:0 "Lorraine and Vosges"
+Auseugen.153.b:0 "Integrate Alsace, puppet the rest"
+Auseugen.153.c:0 "Integrate Alsace and Moselle, the rest shall be occupied"
+
+Auseugen.154.t:0 "Reconquista continues"
+Auseugen.154.d:0 ""
+Auseugen.154.a:0 "Gott mit uns"
+
+Auseugen.155.t:0 "Plans with western Poland and Prussia"
+Auseugen.155.d:0 ""
+Auseugen.155.a:0 "Unify kingdom of Prussia"
+Auseugen.155.b:0 "Balkanize the region and give Posen to Brandenburg"
+Auseugen.155.c:0 "Occupy Posen, puppet Prussia and cede Danzig to them"
+Auseugen.155.e:0 "Balkanize the whole region"
+
+Auseugen.156.t:0 "Plans with Holstein"
+Auseugen.156.d:0 ""
+Auseugen.156.a:0 "Cede it to [SCH.getName]"
+Auseugen.156.b:0 "Create new puppet state"
+Auseugen.156.c:0 "Occupy it!"
+
+
+
+
+
+
+
+Auseugen.157.t:0 "Austria Unified more than Ever!"
+Auseugen.157.d:0 ""
+Auseugen.157.a:0 ""
+
+Auseugen.158.t:0 "Declaration of Vereinigungsgesetz"
+Auseugen.158.d:0 ""
+Auseugen.158.a:0 ""
+
+Auseugen.159.t:0 "Generals are Furious"
+Auseugen.159.d:0 ""
+Auseugen.159.a:0 ""
+
+Auseugen.160.t:0 "Significance of the Emperor weakens"
+Auseugen.160.d:0 ""
+Auseugen.160.a:0 ""
+
+Auseugen.161.t:0 "Massive Desertions Occur"
+Auseugen.161.d:0 ""
+Auseugen.161.a:0 ""
+
+Auseugen.162.t:0 "The Amnesty"
+Auseugen.162.d:0 ""
+Auseugen.162.a:0 ""
+
+Auseugen.163.t:0 "Grazer Penance"
+Auseugen.163.d:0 ""
+Auseugen.163.a:0 ""
+
+Auseugen.164.t:0 "Attempt to control the Army"
+Auseugen.164.d:0 ""
+Auseugen.164.a:0 ""
+
+Auseugen.165.t:0 "Glory and Order!"
+Auseugen.165.d:0 ""
+Auseugen.165.a:0 ""
+
+Auseugen.166.t:0 "Situation of the Country"
+Auseugen.166.d:0 ""
+Auseugen.166.a:0 ""
+Auseugen.166.b:0 ""
+Auseugen.166.c:0 ""
+
+
+
+
+EugenCeremony.1.t:0 "Place of the Ceremony"
+EugenCeremony.1.d:0 ""
+EugenCeremony.1.a:0 "It'll be sorted out later"
+EugenCeremony.1.b:0 "The ceremony should take place in the Graz Cathedral"
+EugenCeremony.1.c:0 "Schönbrunn Palace in Wien is the only possible option"
+
+
+EugenCeremony.2.t:0 "Question of Awards"
+EugenCeremony.2.d:0 ""
+EugenCeremony.2.a:0 "Brave Soldiers of our nation did more than the generals"
+EugenCeremony.2.b:0 "Let's satisfy the Generals"
+EugenCeremony.2.c:0 "We should find balance between these two options"
+
+
+EugenCeremony.3.t:0 "Budget of the Ceremony"
+EugenCeremony.3.d:0 ""
+EugenCeremony.3.a:0 "Budget size doesn't make difference anyways"
+EugenCeremony.3.b:0 "Our normal budget is enough"
+EugenCeremony.3.c:0 "Spend all the savings"
+
+
+EugenCeremony.4.t:0 "Invitations for the Ceremony"
+EugenCeremony.4.d:0 ""
+EugenCeremony.4.a:0 "We should invite only the Austrian nobility"
+EugenCeremony.4.b:0 "Invite nobles from the whole HRE"
+EugenCeremony.4.c:0 "Leaders of other countries should also be invited"
+
+
+EugenCeremony.5.t:0 "The Award Ceremony"
+EugenCeremony.5.d:0  "Loyalty of generals: §G[?aus_ceremony_gen_var|%] §! \nSoldiers' support: §G[?aus_ceremony_sol_var|%]"
+EugenCeremony.5.a:0 ""
+
+EugenCeremony.6.t:0 "Invitation to a Ceremony"
+EugenCeremony.6.d:0 ""
+EugenCeremony.6.a:0 "Accept"
+EugenCeremony.6.b:0 "Decline"
+
+EugenCeremony.7.t:0 "[FROM.getName] accepted the invitation"
+EugenCeremony.7.d:0 ""
+EugenCeremony.7.a:0 ""
+
+EugenCeremony.8.t:0 "[FROM.getName] declined the invitation"
+EugenCeremony.8.d:0 ""
+EugenCeremony.8.a:0 ""
+
+
+
+
+
+
+
+
+
+
+########## #ideas
+
+
+aus_idea_peasants_recruits:0 "Peasants Recruits"
+aus_idea_better_payments:0 "Better Payments"
+aus_idea_royal_navy:0 "Royal Navy"
+aus_idea_increased_militarisation:0 "Increased Militarisation"
+aus_idea_bigger_taxes:0 "Bigger Taxes"
+aus_idea_fight_with_illiteracy:0 "Fight with Illiteracy"
+aus_idea_defensive_mobilization:0 "Defensive Mobilization"
+aus_idea_alliance_with_austria:0 "Alliance with Austria"
+aus_idea_alliance_with_venice:0 "Alliance with Venice"
+aus_idea_increased_religious_unity:0 "Increased Religious Unity"
+
+aus_idea_industrial_campaign_1:0 "Effects of Industrial Campaign"
+aus_idea_industrial_campaign_2:0 "Effects of Industrial Campaign"
+aus_idea_industrial_campaign_3:0 "Effects of Industrial Campaign"
+aus_idea_industrial_campaign_4:0 "Effects of Industrial Campaign"
+aus_idea_industrial_campaign_5:0 "Effects of Industrial Campaign"
+
+aus_idea_austrian_embargo:0 "Austrian Embargo"
+
+aus_idea_cooperation_with_venice:0 "Cooperation with Venice"
+aus_idea_cooperation_with_austria:0 "Cooperation with Austria"
+
+aus_idea_eugens_rule:0 "Eugen's Rule"
+aus_idea_eugens_rule2:0 "Eugen's Rule"
+aus_idea_eugens_rule3:0 "Eugen's Rule"
+
+aus_idea_preparations_for_invasion:0 "Preparations for Invasion"
+aus_idea_preparations_for_invasion_2:0 "Preparations for Invasion"
+aus_idea_preparations_for_invasion_3:0 "Preparations for Invasion"
+aus_idea_hungarian_landwehr:0 "Royal Hungarian Landwehr"
+aus_idea_improved_working_conditions:0 "Improved Working Conditions"
+
+
+
+aus_idea_reduced_army_qualifications:0 "Reduced Army Qualifications"
+aus_idea_help_for_bavaria:0 "Help for Bavaria"
+aus_idea_help_from_austria:0 "Help from Austria"
+aus_idea_accelerated_trade:0 "Accelerated Trade"
+aus_idea_austro_serbian_trade_ties1:0 "Austro-Serbian Trade Ties"
+aus_idea_austro_serbian_trade_ties2:0 "Austro-Serbian Trade Ties"
+aus_idea_noble_tyranny:0 "Noble Tyranny"
+aus_idea_national_propaganda:0 "National Propaganda"
+aus_idea_eager_for_war:0 "Eager for War"
+
+
+
+
+aus_idea_emperor_eugens_rule:0 "Emperor Eugen's Rule"
+aus_idea_navy_improvements:0 "Navy Improvements"
+aus_idea_german_students:0 "German Students"
+aus_idea_export_to_austria:0 "Export to Austria"
+aus_idea_import_from_german_states:0 "Import from German States"
+aus_idea_imperial_research_sharing:0 "Imperial Research Sharing"
+aus_idea_help_from_the_emperor:0 "Help from the Emperor"
+aus_idea_focused_support:0 "Focused Support"
+aus_idea_advisors_from_wien:0 "Advisors from Wien"
+aus_idea_german_advisors:0 "German Advisors"
+aus_idea_imitation_of_german_discipline:0 "Imitation of the German Discipline"
+aus_idea_imperial_free_trade:0 "Imperial Free Trade"
+
+
+aus_idea_supervised_clergy:0 "Supervised Clergy"
+aus_idea_infuential_clergy:0 "Influential Clergy"
+aus_idea_unaccountable_clergy:0 "Unaccountable Clergy"
+aus_idea_no_special_noble_privileges:0 "No Special Noble Privileges"
+aus_idea_moderate_noble_privileges:0 "Moderate Noble Privileges"
+aus_idea_major_noble_privileges:0 "Major Noble Privileges"
+aus_idea_low_peasantry_rights:0 "Low Peasantry Rights"
+aus_idea_provisional_equality:0 "Provisional Equality"
+aus_idea_light_serfdom:0 "Light Serfdom"
+aus_idea_rivalry_in_mediterranean:0 "Rivalry in Mediterranean"
+aus_idea_beck_rzikowsky_doctrine:0 "Beck-Rzikowsky Doctrine"
+aus_idea_industrialisierungsplan_finished:0 "Industrialisierungsplan Finished"
+
+
+aus_idea_fail_in_imperial_war_1:0 "Fail in the Imperial War"
+aus_idea_fail_in_imperial_war_2:0 "Fail in the Imperial War"
+aus_idea_fail_in_imperial_war_3:0 "Fail in the Imperial War"
+aus_idea_fail_in_imperial_war_4:0 "Fail in the Imperial War"
+aus_idea_fail_in_imperial_war_5:0 "Fail in the Imperial War"
+
+aus_idea_special_secret_forces:0 "Secret Special Forces"
+aus_idea_new_army_reforms:0 "New Army Reforms"
+
+aus_idea_enraged_generals_1:0 "Enraged Generals"
+aus_idea_enraged_generals_2:0 "Enraged Generals"
+
+aus_idea_limited_generals_privileges:0 "Limited Generals' Privileges"
+aus_idea_decentralized_army_leadership:0 "Decetralized Army Leadership"
+
+aus_idea_reduced_emperors_power_1:0 "Reduced Emperor's Power"
+aus_idea_reduced_emperors_power_2:0 "Reduced Emperor's Power"
+aus_idea_better_army_condtions:0 "Better Army Conditions"
+aus_idea_frequent_desertions:0 "Frequent Desertions"
+aus_idea_violent_mutinies_in_army:0 "Violent Mutinies in the Army"
+aus_idea_greater_training_difficulty:0 "Greater Training Difficulty"
+aus_idea_osterreich_uber_alles:0 "Österreich über alles"
+aus_idea_military_fanaticism:0 "Military Fanaticism"
+
+aus_idea_austrian_war_machine:0 "Austrian War Machine"
+
+aus_idea_traitorous_army:0 "Traitorous Army"
+aus_idea_frequent_desertions:0 "Frequent Desertions"
+aus_idea_moderate_soldiers_support:0 "Moderate Soldiers' Support"
+aus_idea_high_soldiers_loyalty:0 "High Soldiers' Support"
+aus_idea_fanatical_army:0 "Fanatical Army"
+
+aus_idea_military_intrigues:0 "Military Intrigues"
+aus_idea_lack_of_generals_support:0 "Lack of Generals' Support"
+aus_idea_limited_generals_approval:0 "Limited Generals' Approval"
+aus_idea_loyal_generals:0 "Loyal Generals"
+aus_idea_highly_obedient_generals:0 "Highly Obedient Generals"
+
+
+
+########## tooltips
+
+
+aus_first_roads_built:0 "Road Connections at least §YLevel 1 §!"
+aus_second_roads_built:0 "Road Connections at least §YLevel 2 §!"
+aus_third_roads_built:0 "Road Connections at least §YLevel 3 §!"
+aus_fourth_roads_built:0 "Road Connections at least §YLevel 4 §!"
+
+aus_at_least_1_level_industrialization:0 "Industrialization at least §YLevel 1 §!"
+aus_at_least_2_level_industrialization:0 "Industrialization at least §YLevel 2 §!"
+aus_at_least_3_level_industrialization:0 "Industrialization at least §YLevel 3 §!"
+aus_at_least_4_level_industrialization:0 "Industrialization at least §YLevel 4 §!"
+
+hre_loyalty_add_5:0 "Loyalty: §G+5%§!"
+hre_loyalty_add_10:0 "Loyalty: §G+10%§!"
+hre_loyalty_add_15:0 "Loyalty: §G+15%§!"
+hre_loyalty_add_-15:0 "Loyalty: §R-15%§!"
+hre_loyalty_add_-25:0 "Loyalty: §R-25%§!"
+hre_loyalty_add_-100:0 "Loyalty: §R-100%§!"
+
+hre_min_80_BRD:0 "Loyalty of [BRD.GetFlag]§Y[BRD.GetName]§! is at least §Y80%§!"
+hre_min_80_BAV:0 "Loyalty of [BAV.GetFlag]§Y[BAV.GetName]§! is at least §Y80%§!"
+hre_min_80_HAN:0 "Loyalty of [HAN.GetFlag]§Y[HAN.GetName]§! is at least §Y80%§!"
+hre_min_80_SAX:0 "Loyalty of [SAX.GetFlag]§Y[SAX.GetName]§! is at least §Y80%§!"
+hre_min_80_MUN:0 "Loyalty of [MUN.GetFlag]§Y[MUN.GetName]§! is at least §Y80%§!"
+hre_min_80_WRZ:0 "Loyalty of [WRZ.GetFlag]§Y[WRZ.GetName]§! is at least §Y80%§!"
+hre_min_80_WUR:0 "Loyalty of [WUR.GetFlag]§Y[WUR.GetName]§! is at least §Y80%§!"
+hre_min_80_MCK:0 "Loyalty of [MCK.GetFlag]§Y[MCK.GetName]§! is at least §Y80%§!"
+hre_min_80_THU:0 "Loyalty of [THU.GetFlag]§Y[THU.GetName]§! is at least §Y80%§!"
+hre_min_80_KSS:0 "Loyalty of [KSS.GetFlag]§Y[KSS.GetName]§! is at least §Y80%§!"
+
+hre_min_100_BRD:0 "Loyalty of [BRD.GetFlag]§Y[BRD.GetName]§! is at least §Y100%§!"
+hre_min_100_BAV:0 "Loyalty of [BAV.GetFlag]§Y[BAV.GetName]§! is at least §Y100%§!"
+hre_min_100_HAN:0 "Loyalty of [HAN.GetFlag]§Y[HAN.GetName]§! is at least §Y100%§!"
+hre_min_100_SAX:0 "Loyalty of [SAX.GetFlag]§Y[SAX.GetName]§! is at least §Y100%§!"
+hre_min_100_MUN:0 "Loyalty of [MUN.GetFlag]§Y[MUN.GetName]§! is at least §Y100%§!"
+hre_min_100_WRZ:0 "Loyalty of [WRZ.GetFlag]§Y[WRZ.GetName]§! is at least §Y100%§!"
+hre_min_100_WUR:0 "Loyalty of [WUR.GetFlag]§Y[WUR.GetName]§! is at least §Y100%§!"
+hre_min_100_MCK:0 "Loyalty of [MCK.GetFlag]§Y[MCK.GetName]§! is at least §Y100%§!"
+hre_min_100_THU:0 "Loyalty of [THU.GetFlag]§Y[THU.GetName]§! is at least §Y100%§!"
+hre_min_100_KSS:0 "Loyalty of [KSS.GetFlag]§Y[KSS.GetName]§! is at least §Y100%§!"
+
+hre_min_100_MRK:0 "Loyalty of [MRK.GetFlag]§Y[MRK.GetName]§! is at least §Y100%§!"
+hre_min_100_NSS:0 "Loyalty of [NSS.GetFlag]§Y[NSS.GetName]§! is at least §Y100%§!"
+hre_min_100_SCH:0 "Loyalty of [SCH.GetFlag]§Y[SCH.GetName]§! is at least §Y100%§!"
+hre_min_100_OLD:0 "Loyalty of [OLD.GetFlag]§Y[OLD.GetName]§! is at least §Y100%§!"
+hre_min_100_KLE:0 "Loyalty of [KLE.GetFlag]§Y[KLE.GetName]§! is at least §Y100%§!"
+hre_min_100_KOL:0 "Loyalty of [KOL.GetFlag]§Y[KOL.GetName]§! is at least §Y100%§!"
+hre_min_100_TRI:0 "Loyalty of [TRI.GetFlag]§Y[TRI.GetName]§! is at least §Y100%§!"aus_idea_austrian_war_machine:0 "Austrian War Machine"
+hre_min_100_JUL:0 "Loyalty of [JUL.GetFlag]§Y[JUL.GetName]§! is at least §Y100%§!"
+hre_min_100_ANB:0 "Loyalty of [ANB.GetFlag]§Y[ANB.GetName]§! is at least §Y100%§!"
+hre_min_100_BAD:0 "Loyalty of [BAD.GetFlag]§Y[BAD.GetName]§! is at least §Y100%§!"
+hre_min_100_NUR:0 "Loyalty of [NUR.GetFlag]§Y[NUR.GetName]§! is at least §Y100%§!"
+hre_min_100_ULM:0 "Loyalty of [ULM.GetFlag]§Y[ULM.GetName]§! is at least §Y100%§!"
+
+aus_eugen_decisions1:0 "Unlocks §YBasic HRE decisions§!"
+aus_eugen_decisions2:0 "Unlocks §YExpanded HRE decisions§!"
+aus_eugen_decisions3:0 "Unlocks §YExpanded HRE decisions§!"
+aus_eugen_decisions4:0 "Unlocks §YIndustrialization Effort decisions§!"
+
+hre_min_60:0 "At least §Y60%§! HRE Loyalty"
+hre_min_70:0 "At least §Y70%§! HRE Loyalty"
+
+hre_fragmentation_decisions_tt:0 "Unlocks §YHRE Fragmentation Decisions§!"
+AUS_fortifications_on_the_east_tt:0 "Adds §Y3 Levels of Land Forts §!in §YSlovakia Region §!on the border with Poland"
+AUS_silesian_forts_tt:0 "Adds §Y2 Levels of Land Forts §!in §YSilesia Region §!on the border with Poland"
+
+
+
+10_divisions_plan1_tt:0 "Has accumulated §YMuskets§!"
+10_divisions_plan2_tt:0 "Has accumulated §YMelee Equipment§!"
+10_divisions_plan3_tt:0 "Has accumulated §YSupport Equipment§!"
+10_divisions_plan4_tt:0 "Has accumulated §YLight Cavalry Equipment§!"
+10_divisions_plan5_tt:0 "Has accumulated §YArtillery§!"
+
+10_divisions_plan_effect_tt:0 "§Y10 Veteran Royal Army Divisions§! are deployed in Wien and Ofen-Pesth"
+
+aus_ten_divisions_plan_unlock_tt:0 "Starts §YTen Divisions Plan Mission§!"
+
+
+
+
+
+aus_emergency_defensive_line_tt:0 "Adds §YLong Line of Land Forts§! from Ostsudetenland to Nordungarn"
+
+aus_anti_polish_barrier_tt:0 "Adds §Y2 Levels of Land Forts §!on border with Poland"
+
+aus_protect_wien_at_all_cost_tt:0 "Adds §YSeveral Levels of Land Forts§! around Wien"
+
+aus_reduces_penalties_caused_by_fail_in_imperial_war_tt:0 "§RReduces Penalties Caused by Defeat in the Imperial War§!"
+
+aus_becomes_puppet_of_aus_tt:0 "§Y[ROOT.getName]§! becomes puppet of §Y[AUS.getName]§!"
+
+aus_great_gathering_war_tt:0 "§Y[AUS.getFlag][AUS.getName]§! declares war on §YEvery German Nation that opposed Austria during Great Gathering"
+
+aus_ggwar_started_tt:0 "War with Empire's Members has Started"
+aus_ggwar_ended_tt:0 "War with Empire's Members has Ended"
+aus_ggwar_austria_defeated_tt:0 "Austria has Lost the Conflict"
+aus_ggwar_austria_victorious_tt:0 "Austria has Won the Conflict"
+
+aus_let_all_roads_lead_to_wien_tt:0 "Adds §Y2 Levels of Infrastructure §!throughout HRE"
+AUS_punish_disloyalty_tt:0 "§GIncreases Loyalty§! §Yof More Disaffected HRE Members§!"
+
+aus_add_5_to_loyalty_in_hre_tt:0 "§GIncreases Loyalty§! §Yof HRE Members by§! §G5%§!"
+aus_add_10_to_loyalty_in_hre_tt:0 "§GIncreases Loyalty§! §Yof HRE Members by§! §G10%§!"
+aus_subtract_15_from_loyalty_in_hre_tt:0 "§RDecreases Loyalty§! §Yof HRE Members by§! §R-15%§!"
+
+aus_ruin_opposition_1_tt:0 "Choosing to make a speech will be §Gmore cautious§! at the cost of §Rlimited efficiency§!"
+aus_ruin_opposition_2_tt:0 "Choosing to opress opposition will be §Gmore effective§! but also §Rriskier§! as public can find out about this action"
+
+aus_prepare_to_crush_liege_barrier_tt:0 "On war declaration with §YSpanish Netherlands§! we will also §Rdeclare war on Liege§!"
+
+aus_imperial_ostwall_tt:0 "Adds §Y2 Levels of Fortifications§! in §YBrandenburg§! on the border with §Y[PLC.getName]§!"
+
+aus_beat_france_with_great_supply_tt:0 "Adds §YLevels of Infrastructure§! on the border with France"
+
+aus_has_prepared_revolts_in_lorraine_tt:0 "Has prepared revolts in Lorraine"
+aus_has_prepared_revolts_in_alsace_tt:0 "Has prepared revolts in Alsace"
+
+aus_prepare_imperial_revolts_tt:0 "Unlocks §YPrepare Revolts§! decisions"
+
+aus_get_a_piece_of_the_pie_tt:0 "Unlocks §YIntegrate Alsace§! decision"
+
+aus_cooldown_tt:0 "After §Y[?global.auswarcooldown.GetDateString]§!"
+
+aus_ggwar_austria_victorious2_tt:0 "Austria has won the war with opposing Empire's members"
+
+
+aus_let_all_roads_lead_to_wien_tt:0 "Adds §Y1 Level of Infrastructure §!throughout HRE"
+
+aus_new_hre_decisions_tt:0 "Unlocks New §YHoly Roman Emperor§! decisions"
+aus_cut_down_slovakian_forests_tt:0 "Unlocks New §YIndustrialization§! decisions"
+
+aus_hre_catholicization_tt:0 "\n[FROM.getFlag]§Y[FROM.getName]§! will be §Cconverted§! to §OCatholicism§!\n\n"
+
+aus_below_max_conscription_effectiveness_tt:0 "Conscription effectiveness is §Ybelow maximum§!"
+aus_imperial_consc_trig_tt:0 "At least §Y120 days§! have passed since the last imperial conscription"
+aus_imperial_consc_trig2_tt:0 "There's no conscription mission active"
+
+aus_imperial_consc_effect_3_perc:0 "Conscription effectiveness will increase by §G1-3%§!"
+aus_imperial_consc_effect_4_perc:0 "Conscription effectiveness will increase by §G1-4%§!"
+aus_imperial_consc_effect_5_perc:0 "Conscription effectiveness will increase by §G1-5%§!"
+aus_imperial_consc_effect_6_perc:0 "Conscription effectiveness will increase by §G1-6%§!"
+
+
+
+aus_sol_sup_neg_8_tt:0 "§YSoldiers' Support§! will §Rdecrease§! by §Y0.8%§!"
+aus_sol_sup_neg_2_tt:0 "§YSoldiers' Support§! will §Rdecrease§! by §Y0.2%§!"
+
+aus_sol_sup_pos_2_tt:0 "§YSoldiers' Support§! will §Gincrease§! by §Y0.2%§!"
+aus_sol_sup_pos_5_to_15_tt:0 "§YSoldiers' Support§! will §Gincrease§! by a random procentage between §Y0.5% and 1.5%§!"
+
+
+aus_gen_loy_neg_10_tt:0 "§YLoyalty of Generals§! will §Rdecrease§! by §Y1%§!"
+
+aus_gen_loy_pos_10_to_30_tt:0 "§YLoyalty of Generals§! will §Gincrease§! by a random procentage between §Y1% and 3%§!"
+aus_gen_loy_pos_20_to_40_tt:0 "§YLoyalty of Generals§! will §Gincrease§! by a random procentage between §Y2% and 4%§!"
+aus_gen_loy_pos_40_to_60_tt:0 "§YLoyalty of Generals§! will §Gincrease§! by a random procentage between §Y4% and 6%§!"
+
+
+aus_sol_slightly_displease:0 "§RThis will slightly displease§! §gSoldiers§!"
+aus_gen_slightly_displease:0 "§RThis will slightly displease§! §OGenerals§!"
+
+aus_sol_moderately_displease:0 "§RThis will moderately displease§! §gSoldiers§!"
+aus_gen_moderately_displease:0 "§RThis will moderately displease§! §OGenerals§!"
+
+aus_sol_highly_displease:0 "§RThis will highly displease§! §gSoldiers§!"
+aus_gen_highly_displease:0 "§RThis will highly displease§! §OGenerals§!"
+
+
+
+aus_sol_slightly_appease:0 "§GThis will slightly appease§! §gSoldiers§!"
+aus_gen_slightly_appease:0 "§GThis will slightly appease§! §OGenerals§!"
+
+aus_sol_moderately_appease:0 "§GThis will moderately appease§! §gSoldiers§!"
+aus_gen_moderately_appease:0 "§GThis will moderately appease§! §OGenerals§!"
+
+aus_sol_highly_appease:0 "§GThis will highly appease§! §gSoldiers§!"
+aus_gen_highly_appease:0 "§GThis will highly appease§! §OGenerals§!"
+
+
+########## opinion modifiers
+
+AUS_threat_to_independence:0 "Threat to Independence"
+AUS_austrian_radical_traditionalism:0 "Austrian Radical Traditionalism"
+AUS_criticized_fratricide:0 "Criticised Fratacite"
+AUS_wants_to_subordinate_hre:0 "Wants to Subordinate HRE"
+AUS_propagated_cathocicism:0 "Propagated Catholicism"
+AUS_opposed_protestantism:0 "Opposed Protestantism"
+AUS_intervienes_in_the_foreign_policy:0 "Intervines in the Foreign Policy"
+AUS_claimed_our_throne:0 "Claimed our Throne"
+AUS_embargo:0 "Embargoed"
+
+AUS_kaiserliche_zusammenarbeit:0 "Kaiserliche Zusammenarbeit"
+
+AUS_catholicization_good:0 "Catholic Evangelization"
+
+AUS_catholicization_bad:0 "Forced Conversion on Protestants"
+
+AUS_distanced_from_rome:0 "Distanced from Rome"
+
+########## decisions
+
+call_venice_to_war:0 "Call Venice to war against [FROM.GetName]"
+call_austria_to_war:0 "Call Austria to war against [FROM.GetName]"
+
+aus_join_austrian_war:0 "(§Y[VNC.GetFlag][VNC.GetName]§!):\nJoins §Y[AUS.GetName]§! in their war against §Y[FROM.GetName]§!"
+aus_join_venetian_war:0 "(§Y[AUS.GetFlag][AUS.GetName]§!):\nJoins §Y[VNC.GetName]§! in their war against §Y[FROM.GetName]§!"
+
+austria_calls_to_war:0 "§Y[AUS.GetName]§! calls us to war against §Y[FROM.GetName]§!"
+venice_calls_to_war:0 "§Y[VNC.GetName]§! calls us to war against §Y[FROM.GetName]§!"
+
+
+prepare_revolts_in_lorraine:0 "Prepare revolts in Lorraine"
+prepare_revolts_in_alsace:0 "Prepare revolts in Alsace"
+fire_revolts_in_lorraine:0 "Fire revolts in lorraine"
+fire_revolts_in_alsace:0 "Fire revolts in Alsace"
+
+aus_integrate_alsace:0 "§CIntegrate§! §gAlsace§!"
+aus_integrate_lorraine:0 "§CIntegrate§! §gLorraine§!"
+aus_integrate_luxembourg:0 "§CIntegrate§! §gLuxembourg§!"
+aus_integrate_posen:0 "§CIntegrate§! §gPosen§!"
+
+aus_cede_posen_to_brd:0 "Cede §gPosen§! to §Y[BRD.getName][BRD.getName]§!"
+aus_cede_holstein_to_sch:0 "Cede §gHolstein§! to §Y[SCH.getName][SCH.getName]§!"
+aus_cede_franche_comte_to_vos:0 "Cede §gFranche-Comté§! to §Y[VOS.getName][VOS.getName]§!"
+aus_cede_nord_pas_to_bel:0 "Cede §gNord-Pas-de-Calais§! to §Y[BEL.getName][BEL.getName]§!"
+aus_cede_nord_pas_to_fla:0 "Cede §gNord-Pas-de-Calais§! to §Y[FLA.getName][FLA.getName]§!"
+
+aus_create_bel1:0 "Create §Y[BEL.getFlag][BEL.getName]§!"
+aus_create_bel2:0 "Create §Y[BEL.getFlag][BEL.getName]§!"
+aus_create_fla:0 "Create §Y[FLA.getFlag][FLA.getName]§!"
+aus_create_lie:0 "Create §Y[LIE.getFlag][LIE.getName]§!"
+aus_create_wal:0 "Create §Y[WAL.getFlag][WAL.getName]§!"
+aus_create_lux:0 "Create §Y[LUX.getFlag][LUX.getName]§!"
+aus_create_lor:0 "Create §Y[LOR.getFlag][LOR.getName]§!"
+aus_create_vos1:0 "Create §Y[VOS.getFlag][VOS.getName]§!"
+aus_create_vos2:0 "Create §Y[VOS.getFlag][VOS.getName]§!"
+aus_create_prussia:0 "Create §Y[PRS.getFlag][PRS.getName]§!"
+aus_create_teu:0 "Create §Y[PRS.getFlag][PRS.getName]§!"
+add_state_to_teu:0 "Cede §g[FROM.getName]§! to §Y[PRS.getFlag][PRS.getName]§!"
+aus_create_dan:0 "Create §Y[DAN.getFlag][DAN.getName]§!"
+aus_create_pos:0 "Create §Y[POS.getFlag][POS.getName]§!"
+aus_create_scl:0 "Create §Y[SCL.getFlag][SCL.getName]§!"
+
+
+
+
+
+
+
+
+# > HRE fragmentation < #
+
+
+austria_hre_fragmentation:0 "Protection of Fragmentation"
+
+demand_return_of_moselland:0 "Demand Return of Moselland"
+demand_return_of_berg:0 "Demand Return of Berg"
+demand_return_of_oberbayern:0 "Demand Return of Oberbayern"
+demand_return_of_niederbayern:0 "Demand Return of Niederbayern"
+demand_return_of_franken:0 "Demand Return of Franken"
+demand_return_of_kassel:0 "Demand Return of Kassel"
+demand_return_of_munster:0 "Demand Return of Münster"
+demand_return_of_ulm:0 "Demand Return of Ulm"
+demand_return_of_holstein:0 "Demand Return of Holstein"
+demand_return_of_hannover:0 "Demand Return of Hannover"
+demand_return_of_thuringen:0 "Demand Return of Thüringen"
+demand_return_of_mecklenburg:0 "Demand Return of Mecklenburg"
+demand_return_of_vorpommern:0 "Demand Return of Vorpommern"
+demand_return_of_hinterpommern:0 "Demand Return of Hinterpommern"
+demand_return_of_brandenburg:0 "Demand Return of Brandenburg"
+demand_return_of_sachen:0 "Demand Return of Sachen"
+demand_return_of_ostmark:0 "Demand Return of Ostmark"
+demand_return_of_hamburg:0 "Demand Return of Hamburg"
+demand_return_of_lubeck:0 "Demand Return of Lübeck"
+demand_return_of_hessen:0 "Demand Return of Hessen"
+demand_return_of_pfalz:0 "Demand Return of Pfalz"
+demand_return_of_trier:0 "Demand Return of Trier"
+demand_return_of_baden:0 "Demand Return of Baden"
+demand_return_of_wurttemberg:0 "Demand Return of Württemberg"
+demand_return_of_nuremberg:0 "Demand Return of Nuremberg"
+demand_return_of_ansbach:0 "Demand Return of Ansbach"
+demand_return_of_bayreuth:0 "Demand Return of Bayreuth"
+demand_return_of_oldenburg:0 "Demand Return of Oldenburg"
+demand_return_of_ostfriesland:0 "Demand Return of Ostfriesland"
+demand_return_of_koln:0 "Demand Return of Köln"
+demand_return_of_frankfurt:0 "Demand Return of Frankfurt"
+demand_return_of_kleve:0 "Demand Return of Kleve"
+demand_return_of_bremen:0 "Demand Return of Bremen"
+demand_return_of_gottingen:0 "Demand Return of Gottingen"
+demand_return_of_dortmund:0 "Demand Return of Dortmund"
+demand_return_of_mark:0 "Demand Return of Mark"
+demand_return_of_nassau:0 "Demand Return of Nassau"
+
+# > 10 Divisions Plan < #
+
+complete_10_divisions_plan:0 "Complete Ten Divisions Plan"
+
+accumulate_muskets:0 "Accumulate Muskets"
+accumulate_melee_equipment:0 "Accumulate Melee Weapons"
+accumulate_support_equipment:0 "Accumulate Support Equipment"
+accumulate_light_cavalry_equipment:0 "Accumulate Light Cavalry Equipment"
+accumulate_artillery:0 "Accumulate Artillery"
+
+austria_army_effort:0 "Army Effort"
+
+
+
+
+austria_hre_actions:0 "Actions in the Holy Roman Empire"
+aus_hre_demand_release:0 "§WDemand Release of§! §Y[FROM.getFlag][FROM.getName]§!"
+
+
+cut_down_forests_in_slovakia:0 "Cut Down Forests in Slovakia"
+steam_engine_in_ironworks:0 "Steam Engine in Ironworks"
+steel_mills_automation:0 "Steel Mills Automation"
+modernized_powder_mills:0 "Modernized Powder Mills"
+
+aus_hre_catholicization:0 "§CConvert§! §Y[FROM.getFlag][FROM.getName]§! to §OCatholicism§!"
+
+aus_hre_execute_imperial_conscription:0 "§RExecute Imperial Conscription§!"
+aus_hre_execute_imperial_conscription_desc:0 "Our current conscription effectiveness is §G[?global.imperial_consc_perc|%]§! out of maximum §G15.00%§!"
+
+aus_hre_send_inspectors_to_the_members:0 "§YSend Inspectors§! §gto the Members§!"
+aus_hre_arrange_meetings_with_german_nobles:0 "§YArrange Meetings§! §gwith Germans Nobles§!"
+aus_hre_threaten_country_leaders:0 "§YThreaten§! §gCountry Leaders§!"
+aus_hre_use_our_authority:0 "§YInvoke§! §gImperial Authority§!"
+
+
+
+
+
+
+austria_state_of_army:0 "State of the Army"
+austria_state_of_army_desc:0 "Loyalty of generals: §G[?aus_var_loyalty_of_generals|%] §! \nSoldiers' support: §G[?aus_var_soldiers_support|%]"
+
+aus_revive_conservative_spirit:0 "Revive Conservative Spirit"
+aus_decentralize_armies:0 "Decentralize Armies"
+aus_give_away_orders:0 "Give Away Orders"
+aus_increase_war_taxes:0 "Increase War Taxes"
+aus_organize_award_ceremony:0 "Organize Award Ceremony"
+
+
+#global flags
+
+return_of_moselland_wg:0 " Has §YLiberation of Moselland §!wargoal"
+return_of_berg_wg:0 " Has §YLiberation of Berg §!wargoal"
+return_of_oberbayern_wg:0 " Has §YLiberation of Oberbayern §!wargoal"
+return_of_niederbayern_wg:0 " Has §YLiberation of Niederbayern §!wargoal"
+return_of_franken_wg:0 " Has §YLiberation of Franken §!wargoal"
+return_of_kassel_wg:0 " Has §YLiberation of Kassel §!wargoal"
+return_of_munster_wg:0 " Has §YLiberation of Münster §!wargoal"
+return_of_ulm_wg:0 " Has §YLiberation of Ulm §!wargoal"
+return_of_holstein_wg:0 " Has §YLiberation of Holstein §!wargoal"
+return_of_hannover_wg:0 " Has §YLiberation of Hannover §!wargoal"
+return_of_thuringen_wg:0 " Has §YLiberation of Thüringen §!wargoal"
+return_of_mecklenburg_wg:0 " Has §YLiberation of Mecklenburg §!wargoal"
+return_of_vorpommern_wg:0 " Has §YLiberation of Vorpommern §!wargoal"
+return_of_hinterpommern_wg:0 " Has §YLiberation of Hinterpommern §!wargoal"
+return_of_brandenburg_wg:0 " Has §YLiberation of Brandenburg §!wargoal"
+return_of_sachen_wg:0 " Has §YLiberation of Sachen §!wargoal"
+return_of_ostmark_wg:0 " Has §YLiberation of Ostmark §!wargoal"
+return_of_hamburg_wg:0 " Has §YLiberation of Hamburg §!wargoal"
+return_of_lubeck_wg:0 " Has §YLiberation of Lübeck §!wargoal"
+return_of_hessen_wg:0 " Has §YLiberation of Hessen §!wargoal"
+return_of_pfalz_wg:0 " Has §YLiberation of Pfalz §!wargoal"
+return_of_trier_wg:0 " Has §YLiberation of Trier §!wargoal"
+return_of_baden_wg:0 " Has §YLiberation of Baden §!wargoal"
+return_of_wurttemberg_wg:0 " Has §YLiberation of Württemberg §!wargoal"
+return_of_nuremberg_wg:0 " Has §YLiberation of Nuremberg §!wargoal"
+return_of_ansbach_wg:0 " Has §YLiberation of Ansbach §!wargoal"
+return_of_bayreuth_wg:0 " Has §YLiberation of Bayreuth §!wargoal"
+return_of_oldenburg_wg:0 " Has §YLiberation of Oldenburg §!wargoal"
+return_of_ostfriesland_wg:0 " Has §YLiberation of Ostfriesland §!wargoal"
+return_of_koln_wg:0 " Has §YLiberation of Köln §!wargoal"
+return_of_frankfurt_wg:0 " Has §YLiberation of Frankfurt §!wargoal"
+return_of_kleve_wg:0 " Has §YLiberation of Kleve §!wargoal"
+return_of_bremen_wg:0 " Has §YLiberation of Bremen §!wargoal"
+return_of_gottingen_wg:0 " Has §YLiberation of Gottingen §!wargoal"
+return_of_dortmund_wg:0 " Has §YLiberation of Dortmund §!wargoal"
+return_of_mark_wg:0 " Has §YLiberation of Mark §!wargoal"
+return_of_nassau_wg:0 " Has §YLiberation of Nassau §!wargoal"
+
+
+
+
+
+
+
+
+
+
+hre_eugen_research_name:0 "HRE research sharing group"
+
+
+
+
+AusNoDateExists:0 ""
+AusDateExists:0 "We need to §Rwait 120 days§! between starting wars through the focus tree and will be able to §Gstart completing§! this focus on §Y[?global.auswarcooldown.GetDateString]§!"
+
+
+
+Auseugen.172.d:0 "[?BRD.hrereport]"
+
+Auseugen.200.d:0 "Eugen had enough, German nobles’ negative opinion had to be put to rest, as a final decision, the German nobles were stripped of their royal titles from a Lord to King, all vanished from their names, forever. Their lands were also confiscated, given to the Habsburgs or some other Habsburgian nobles. Some nobles were kicked out of their home residences and exiled to who knows where, but for few nobles, those who were personally hated by some of the House of Habsburg or even Eugen himself, the final stripping were their lives, men or sometimes women, and were executed by hanging or for the most hated nobility, by firing squad. It was a bloodshed all because some rich nobles opposed Eugen’s decision in the Great Gathering And didn’t like Eugen’s policies in general, people begged for mercy from God or their executioners and screamed their outcry until their fate came. “Mercy! Mercy!” cried out the middle aged bearded man, “I did nothing wrong as a rich man!” The young guard who forcefully dragged the nervous noble to the wall, ignored him. Then, the guard then tied a rope around his arms and brought the ‘powerful’ man to his knees, also tied his two feets together with a rope, the noble tried to stand up to escape yet he couldn’t balance his body and fell down, “H-h-help me!” he breathed heavily as he stammered for a help that never came, “God, please I beg of you please don’t kill me!” he continued to beg for his creator to have mercy on him, as he panicked, for a moment he could feel a familiar man walking outwards him, after realizing that moment, he was kicked in the stomach by that presumably felt person, he looked with his blurred and tired vision of his eyes only to recognize the man, it was the Emperor himself, he was Eugen. “W-why, E-e-eugen”, he stuttered his last few sentences to say left, “I just c-c-criticzed you like a normal man w-would”, he continued his last sentences, “W-why would you do this?”There was a sudden silence between the two, like God giving them one moment together, however the recent slience was interrupted, “Don’t you know, in that gathering, you said I was a pig!” Eugen responded to him with all his anger and rage can be converted to this very sentence. “Yo-you are always and forever be a pig to your subjects” the noble bluffed at the Emperor. Then a Knight suddenly gave a sword to the Emperor, then the last thing that Hitler felt and heard was the swing of a sword on the side of his neck."
+Auseugen.200.a:0 "[?imperial_consc_coun]"

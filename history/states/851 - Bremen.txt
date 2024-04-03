@@ -1,0 +1,27 @@
+
+state={
+	id=851
+	name="STATE_851"
+	manpower = 185401
+	state_category = pastoral
+
+	history={
+		owner = BRE
+		victory_points = {
+			3326 5 
+		}
+
+		buildings = {
+			infrastructure = 3
+			3326 = {
+			    naval_base = 1 
+			}
+		}
+		add_core_of = BRE
+	}
+	
+	
+	provinces={
+		3326
+	}
+}

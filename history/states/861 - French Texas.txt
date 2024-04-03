@@ -1,0 +1,37 @@
+
+state={
+	id=861
+	name="STATE_861" 
+	manpower = 143693
+	resources={
+		steel=1
+		wood=3
+		fabric=1
+		gunpowder=1
+		horses=3
+	}
+	
+	state_category = rural
+
+	history={
+		owner = LOU
+		add_core_of = LOU
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+	    	10337 = {
+				naval_base = 2
+			}
+		}
+		victory_points = {
+			3960 10 
+		}
+		victory_points = {
+			10337 10
+		}		
+	}
+
+	provinces={
+    	10337 1500 7628 12486 10861 805 4577 6968 5001 3960 9829 2082 9920 5085 10504 10778 7981 13233
+	}
+}

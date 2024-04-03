@@ -1,0 +1,126 @@
+division_template = {
+	name = "Royal Swedish Guard Battalion"
+
+	division_names_group = SWE_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+		line_infantry = { x = 0 y = 4 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+		line_infantry = { x = 1 y = 2 }
+		line_infantry = { x = 1 y = 3 }
+		line_infantry = { x = 1 y = 4 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Swedish Cavalry Division"
+
+	division_names_group = SWE_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 0 y = 2 }
+		medium_cavalry = { x = 0 y = 3 }
+		medium_cavalry = { x = 0 y = 4 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+		medium_cavalry = { x = 1 y = 2 }
+		medium_cavalry = { x = 1 y = 3 }
+		medium_cavalry = { x = 1 y = 4 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Swedish Knight Brigade"
+
+	division_names_group = SWE_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Royal Swedish Guard Battalion"
+		location = 6050
+		division_template = "Royal Swedish Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Swedish Guard Battalion"
+		location = 9279
+		division_template = "Royal Swedish Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3rd Royal Swedish Guard Battalion"
+		location = 383
+		division_template = "Royal Swedish Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4th Royal Swedish Guard Battalion"
+		location = 11215
+		division_template = "Royal Swedish Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "5th Royal Swedish Guard Battalion"
+		location = 11380
+		division_template = "Royal Swedish Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "6th Royal Swedish Guard Battalion"
+		location = 156
+		division_template = "Royal Swedish Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "7th Royal Swedish Guard Battalion"
+		location = 156
+		division_template = "Royal Swedish Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "8th Royal Swedish Guard Battalion"
+		location = 11114
+		division_template = "Royal Swedish Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Swedish Cavalry Division"
+		location = 11114
+		division_template = "Royal Swedish Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Swedish Cavalry Division"
+		location = 3122
+		division_template = "Royal Swedish Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3rd Royal Swedish Cavalry Division"
+		location = 11105
+		division_template = "Royal Swedish Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Swedish Knight Brigade"
+		location = 6041
+		division_template = "Royal Swedish Knight Brigade"
+		start_experience_factor = 0.3
+	}
+}

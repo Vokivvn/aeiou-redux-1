@@ -1,0 +1,39 @@
+state= {
+	id=341
+	name="STATE_341"
+	manpower = 204509 
+			   
+	resources={
+		wood=45 # was: 84
+	}
+	
+	state_category = city
+
+	history= {
+		add_claim_by = OTT
+		owner = GRE
+		victory_points = {
+			9833 20
+		}
+		victory_points = {
+			9902 3
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			dockyard = 1
+			arms_factory = 2
+			9833 = {
+				naval_base = 8
+			}
+			9902 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = GRE
+		add_core_of = OTT
+	}
+	provinces= {
+        849 922 3879 3893 6895 9833 11829 11842 9902 	
+	}
+}

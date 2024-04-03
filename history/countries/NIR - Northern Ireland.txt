@@ -1,0 +1,21 @@
+﻿capital = 119
+
+set_research_slots = 3
+
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+	basic_cavalry = 1
+}
+
+set_convoys = 10
+
+set_politics = {
+	ruling_party = conservative
+	last_election = "1885.1.24"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	conservative = 100
+}

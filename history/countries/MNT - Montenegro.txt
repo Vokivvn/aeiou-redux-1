@@ -1,0 +1,15 @@
+﻿capital = 105 # Montenegro
+
+#oob = "MNT_1936"
+
+set_research_slots = 3
+
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+}
+
+set_popularities = {
+	conservative = 100
+}
+

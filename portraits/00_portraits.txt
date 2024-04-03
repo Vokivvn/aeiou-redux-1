@@ -1,0 +1,567 @@
+default = {
+	#navy = {
+		#male = {
+		#}
+		#female = {
+		#}
+	#}
+	
+	#army = {
+		#male = {
+		#}
+		#female = {
+		#}
+	#}
+	
+	male = {
+		"gfx/leaders/leader_unknown.dds"
+	}
+	female = {
+		"gfx/leaders/leader_unknown.dds"
+	}
+}
+
+continent = {
+	name = europe
+	army = {
+		male = {
+			"gfx/leaders/Europe/Portrait_Generic_Europe2.dds"
+			"gfx/leaders/Europe/Portrait_Generic_Europe3.dds"
+		}
+	}
+	
+	navy = {
+		male = {
+			"gfx/leaders/Europe/Portrait_Generic_Europe9.dds"
+			"gfx/leaders/Europe/Portrait_Generic_Europe13.dds"
+		}
+	}
+	
+	political = {
+		absolutist = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe12.dds"
+					"gfx/leaders/Europe/Portrait_Generic_Europe14.dds"
+			}
+		}
+		totalitarian = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe9.dds"
+					"gfx/leaders/Europe/Portrait_Generic_Europe15.dds"
+			}
+		}
+		despotist = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe9.dds"
+					"gfx/leaders/Europe/Portrait_Generic_Europe15.dds"
+			}
+		}
+		weitlingist = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe11.dds"
+			}
+		}
+		communist = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe1.dds"
+			}
+		}
+		socialist = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe5.dds"
+			}
+		}
+		theocratic = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe4.dds"
+			}
+		}
+		conservative = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe7.dds"
+					"gfx/leaders/Europe/Portrait_Generic_Europe16.dds"
+			}
+		}
+		revolutionary = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe6.dds"
+			}
+		}
+		liberal = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe10.dds"
+			}
+		}
+		centrist = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe3.dds"
+			}
+		}
+		apolitical = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe5.dds"
+			}
+		}
+	}
+
+}
+
+continent = {
+	name = north_america
+	army = {
+		male = {
+			"gfx/leaders/NorthAmerica/Portrait_Generic_North_America1.dds"
+			"gfx/leaders/NorthAmerica/Portrait_Generic_North_America2.dds"
+			"gfx/leaders/NorthAmerica/Portrait_Generic_North_America3.dds"
+		}
+	}
+	
+	political = {
+		absolutist = {
+				male = { 
+					"gfx/leaders/NorthAmerica/Portrait_Generic_North_America1.dds"
+			}
+		}
+		despotist = {
+				male = { 
+					"gfx/leaders/NorthAmerica/Portrait_Generic_North_America1.dds"
+			}
+		}
+		totalitarian = {
+				male = { 
+					"gfx/leaders/NorthAmerica/Portrait_Generic_North_America2.dds"
+			}
+		}
+		theocratic = {
+				male = { 
+					"gfx/leaders/NorthAmerica/Portrait_Generic_North_America5.dds"
+			}
+		}
+		absolutist = {
+				male = { 
+					"gfx/leaders/NorthAmerica/Portrait_Generic_North_America5.dds"
+			}
+		}
+		socialist = {
+				male = { 
+					"gfx/leaders/NorthAmerica/Portrait_Generic_North_America5.dds"
+			}
+		}
+		conservative = {
+				male = { 
+					"gfx/leaders/NorthAmerica/Portrait_Generic_North_America3.dds"
+			}
+		}
+		revolutionary = {
+				male = { 
+					"gfx/leaders/NorthAmerica/Portrait_Generic_North_America4.dds"
+			}
+		}
+		centrist = {
+				male = { 
+					"gfx/leaders/NorthAmerica/Portrait_Generic_North_America3.dds"
+			}
+		}
+		apolitical = {
+				male = { 
+					"gfx/leaders/NorthAmerica/Portrait_Generic_North_America2.dds"
+			}
+		}
+		liberal = {
+				male = { 
+					"gfx/leaders/NorthAmerica/Portrait_Generic_North_America4.dds"
+			}
+		}
+	}
+
+}
+
+continent = {
+	name = south_america
+	army = {
+		male = {
+			"gfx/leaders/Europe/Portrait_Generic_Europe2.dds"
+			"gfx/leaders/Europe/Portrait_Generic_Europe3.dds"
+		}
+	}
+	
+	navy = {
+		male = {
+			"gfx/leaders/Europe/Portrait_Generic_Europe9.dds"
+			"gfx/leaders/Europe/Portrait_Generic_Europe13.dds"
+		}
+	}
+	
+	political = {
+		absolutist = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe12.dds"
+					"gfx/leaders/Europe/Portrait_Generic_Europe14.dds"
+			}
+		}
+		totalitarian = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe9.dds"
+					"gfx/leaders/Europe/Portrait_Generic_Europe15.dds"
+			}
+		}
+		despotist = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe9.dds"
+					"gfx/leaders/Europe/Portrait_Generic_Europe15.dds"
+			}
+		}
+		weitlingist = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe11.dds"
+			}
+		}
+		communist = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe1.dds"
+			}
+		}
+		socialist = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe5.dds"
+			}
+		}
+		theocratic = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe4.dds"
+			}
+		}
+		conservative = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe7.dds"
+					"gfx/leaders/Europe/Portrait_Generic_Europe16.dds"
+			}
+		}
+		revolutionary = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe6.dds"
+			}
+		}
+		liberal = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe10.dds"
+			}
+		}
+		centrist = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe3.dds"
+			}
+		}
+		apolitical = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe5.dds"
+			}
+		}
+	}
+
+}
+
+continent = {
+	name = australia
+	army = {
+		male = {
+			"gfx/leaders/Europe/Portrait_Generic_Europe2.dds"
+			"gfx/leaders/Europe/Portrait_Generic_Europe3.dds"
+		}
+	}
+	
+	navy = {
+		male = {
+			"gfx/leaders/Europe/Portrait_Generic_Europe9.dds"
+			"gfx/leaders/Europe/Portrait_Generic_Europe13.dds"
+		}
+	}
+	
+	political = {
+		absolutist = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe12.dds"
+					"gfx/leaders/Europe/Portrait_Generic_Europe14.dds"
+			}
+		}
+		totalitarian = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe9.dds"
+					"gfx/leaders/Europe/Portrait_Generic_Europe15.dds"
+			}
+		}
+		despotist = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe9.dds"
+					"gfx/leaders/Europe/Portrait_Generic_Europe15.dds"
+			}
+		}
+		weitlingist = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe11.dds"
+			}
+		}
+		communist = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe1.dds"
+			}
+		}
+		socialist = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe5.dds"
+			}
+		}
+		theocratic = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe4.dds"
+			}
+		}
+		conservative = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe7.dds"
+					"gfx/leaders/Europe/Portrait_Generic_Europe16.dds"
+			}
+		}
+		revolutionary = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe6.dds"
+			}
+		}
+		liberal = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe10.dds"
+			}
+		}
+		centrist = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe3.dds"
+			}
+		}
+		apolitical = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Generic_Europe5.dds"
+			}
+		}
+	}
+
+}
+
+continent = {
+	name = africa
+	army = {
+		male = {
+			"gfx/leaders/Africa/Portrait_Generic_Africa1.dds"
+			"gfx/leaders/Africa/Portrait_Generic_Africa2.dds"
+		}
+	}
+	
+	political = {
+		absolutist = {
+				male = { 
+					"gfx/leaders/Africa/Portrait_Generic_Africa3.dds"
+			}
+		}
+		liberal = {
+				male = { 
+					"gfx/leaders/Africa/Portrait_Generic_Africa4.dds"
+			}
+		}
+		socialist = {
+				male = { 
+					"gfx/leaders/Africa/Portrait_Generic_Africa3.dds"
+			}
+		}
+		communist = {
+				male = { 
+					"gfx/leaders/Africa/Portrait_Generic_Africa5.dds"
+			}
+		}
+		centrist = {
+				male = { 
+					"gfx/leaders/Africa/Portrait_Generic_Africa5.dds"
+			}
+		}
+		apolitical = {
+				male = { 
+					"gfx/leaders/Africa/Portrait_Generic_Africa3.dds"
+			}
+		}
+		conservative = {
+				male = { 
+					"gfx/leaders/Africa/Portrait_Generic_Africa4.dds"
+			}
+		}
+		revolutionary = {
+				male = { 
+					"gfx/leaders/Africa/Portrait_Generic_Africa3.dds"
+			}
+		}
+		despotist = {
+				male = { 
+					"gfx/leaders/Africa/Portrait_Generic_Africa4.dds"
+			}
+		}
+		totalitarian = {
+				male = { 
+					"gfx/leaders/Africa/Portrait_Generic_Africa3.dds"
+			}
+		}
+		theocratic = {
+				male = { 
+					"gfx/leaders/Africa/Portrait_Generic_Africa4.dds"
+			}
+		}
+	}
+
+
+}
+
+continent = {
+	name = asia
+	army = {
+		male = {
+			"gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
+			"gfx/leaders/Asia/Portrait_Asia_Generic_land_2.dds"
+			"gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
+			"gfx/leaders/Asia/Portrait_Asia_Generic_land_4.dds"
+			"gfx/leaders/Asia/Portrait_Asia_Generic_land_5.dds"
+		}
+	}
+	
+	navy = {
+		male = {
+			"gfx/leaders/Asia/Portrait_Asia_Generic_navy_1.dds"
+			"gfx/leaders/Asia/Portrait_Asia_Generic_navy_2.dds"
+			"gfx/leaders/Asia/Portrait_Asia_Generic_navy_3.dds"
+		}
+	}
+
+	political = {
+		absolutist = {
+				male = { 
+					"gfx/leaders/Asia/Portrait_Asia_Generic_navy_1.dds"
+			}
+		}
+		despotist = {
+				male = { 
+					"gfx/leaders/Asia/Portrait_Asia_Generic_navy_1.dds"
+			}
+		}
+		theocratic = {
+				male = { 
+					"gfx/leaders/Asia/Portrait_Asia_Generic_navy_1.dds"
+			}
+		}
+		apolitical = {
+				male = { 
+					"gfx/leaders/Asia/Portrait_Asia_Generic_navy_1.dds"
+			}
+		}
+		weitlingist = {
+				male = { 
+					"gfx/leaders/Asia/Portrait_Asia_Generic_navy_1.dds"
+			}
+		}
+		socialist = {
+				male = { 
+					"gfx/leaders/Asia/Portrait_Asia_Generic_navy_1.dds"
+			}
+		}
+		conservative = {
+				male = { 
+					"gfx/leaders/Asia/Portrait_Asia_Generic_navy_1.dds"
+			}
+		}
+		revolutionary = {
+				male = { 
+					"gfx/leaders/Asia/Portrait_Asia_Generic_navy_1.dds"
+			}
+		}
+		liberal = {
+				male = { 
+					"gfx/leaders/Asia/Portrait_Asia_Generic_navy_1.dds"
+			}
+		}
+		socialist = {
+				male = { 
+					"gfx/leaders/Asia/Portrait_Asia_Generic_navy_1.dds"
+			}
+		}
+		totalitarian = {
+				male = { 
+					"gfx/leaders/Asia/Portrait_Asia_Generic_navy_1.dds"
+
+			}
+		}
+	}
+
+}
+
+continent = {
+	name = middle_east
+	army = {
+		male = {
+			"gfx/leaders/Arabia/Portrait_Generic_Arabia3.dds"
+			"gfx/leaders/Arabia/Portrait_Generic_Arabia2.dds"
+		}
+	}
+	
+	political = {
+		absolutist = {
+				male = { 
+					"gfx/leaders/Arabia/Portrait_Generic_Arabia2.dds"
+			}
+		}
+		despotist = {
+				male = { 
+					"gfx/leaders/Arabia/Portrait_Generic_Arabia5.dds"
+			}
+		}
+		liberal = {
+				male = { 
+					"gfx/leaders/Arabia/Portrait_Generic_Arabia4.dds"
+			}
+		}
+		communist = {
+				male = { 
+					"gfx/leaders/Arabia/Portrait_Generic_Arabia1.dds"
+			}
+		}
+		centrist = {
+				male = { 
+					"gfx/leaders/Arabia/Portrait_Generic_Arabia2.dds"
+			}
+		}
+		socialist = {
+				male = { 
+					"gfx/leaders/Arabia/Portrait_Generic_Arabia3.dds"
+			}
+		}
+		conservative = {
+				male = { 
+					"gfx/leaders/Arabia/Portrait_Generic_Arabia2.dds"
+			}
+		}
+		totalitarian = {
+				male = { 
+					"gfx/leaders/Arabia/Portrait_Generic_Arabia1.dds"
+			}
+		}
+		apolitical = {
+				male = { 
+					"gfx/leaders/Arabia/Portrait_Generic_Arabia5.dds"
+			}
+		}
+		weitlingist = {
+				male = { 
+					"gfx/leaders/Arabia/Portrait_Generic_Arabia3.dds"
+			}
+		}
+		theocracy = {
+				male = { 
+					"gfx/leaders/Arabia/Portrait_Generic_Arabia1.dds"
+			}
+		}
+	}
+
+}

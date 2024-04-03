@@ -1,0 +1,30 @@
+
+state={
+	id=855
+	name="STATE_855"
+	manpower = 633710
+
+	state_category = town
+	
+	resources = {
+	    wood = 2
+		horses = 2 
+	}
+
+	history={
+		owner = NSS
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		victory_points = {
+			9486 3
+		}
+		add_core_of = NSS
+	}
+
+	provinces={
+		9486 3524 6444
+	}
+}

@@ -1,0 +1,83 @@
+spriteTypes = {
+	
+	#Loyalty
+
+	spriteType = {
+		name = "GFX_loyalty_bar_0"
+		texturefile = "gfx/interface/hog_guis/loyalty_bar_0.dds"
+	}
+	spriteType = {
+		name = "GFX_loyalty_bar_12_5"
+		texturefile = "gfx/interface/hog_guis/loyalty_bar_12_5.dds"
+	}
+	spriteType = {
+		name = "GFX_loyalty_bar_25"
+		texturefile = "gfx/interface/hog_guis/loyalty_bar_25.dds"
+	}
+	spriteType = {
+		name = "GFX_loyalty_bar_37_5"
+		texturefile = "gfx/interface/hog_guis/loyalty_bar_37_5.dds"
+	}
+	spriteType = {
+		name = "GFX_loyalty_bar_50"
+		texturefile = "gfx/interface/hog_guis/loyalty_bar_50.dds"
+	}
+	spriteType = {
+		name = "GFX_loyalty_bar_62_5"
+		texturefile = "gfx/interface/hog_guis/loyalty_bar_62_5.dds"
+	}
+	spriteType = {
+		name = "GFX_loyalty_bar_75"
+		texturefile = "gfx/interface/hog_guis/loyalty_bar_75.dds"
+	}
+	spriteType = {
+		name = "GFX_loyalty_bar_87_5"
+		texturefile = "gfx/interface/hog_guis/loyalty_bar_87_5.dds"
+	}
+	spriteType = {
+		name = "GFX_loyalty_bar_100"
+		texturefile = "gfx/interface/hog_guis/loyalty_bar_100.dds"
+	}
+	
+	#HRE
+	
+	spriteType = {
+		name = "GFX_disband_hre_button"
+		texturefile = "gfx/interface/disband_hre.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_join_hre_button"
+		texturefile = "gfx/interface/join_hre.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_hre_main_button"
+		texturefile = "gfx/interface/hre_main_button.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_hre_main"
+		texturefile = "gfx/interface/hre_main.dds"
+	}
+	
+	#Relics 
+	
+	spriteType = {
+		name = "GFX_relic_tab"
+		texturefile = "gfx/interface/relics/relic_tab_200x100.dds"
+	}
+
+	spriteType = {
+		name = "GFX_relic_background"
+		texturefile = "gfx/interface/relics/relic_background.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_relic_1"
+		texturefile = "gfx/interface/relics/relic_1.dds"
+	}
+}

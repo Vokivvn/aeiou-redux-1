@@ -1,0 +1,35 @@
+state={
+	id=160
+	name="STATE_160"
+	resources={
+		wood = 4
+		horses=5
+		gunpowder =3
+	}
+	
+	state_category = large_city
+
+	history={
+		owner = VNC
+		victory_points = {
+			11584 10 
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
+			dockyard = 3
+			11584 = {
+				naval_base = 6
+			}
+		}
+		add_core_of = VNC
+
+	}
+
+	provinces={
+		603 628 3604 3657 6656 9582 9613 11584
+	}
+	manpower=1642305
+	buildings_max_level_factor=1.000
+}

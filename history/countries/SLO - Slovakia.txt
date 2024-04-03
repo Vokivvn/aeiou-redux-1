@@ -1,0 +1,19 @@
+﻿capital = 70
+
+#oob = "SLO_1939"
+
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+	muskets1 = 1
+}
+
+set_politics = {
+	ruling_party = conservative
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	conservative = 100
+}

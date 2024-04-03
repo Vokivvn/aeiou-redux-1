@@ -1,0 +1,1419 @@
+on_actions = {
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						tag = SPR
+						is_subject_of = SPR
+						is_in_faction_with = SPR
+					}
+					has_global_flag = CUB_revolution
+					FROM = { original_tag = CUB }
+					FROM.FROM = { state = 315 }
+				}
+				SPR = { country_event = { days = 0 id = SPRCuba.8 }}
+			}
+			else_if = {
+				LIMIT = {
+					FRA = { 
+						has_country_flag = FRA_invasion_VIJ
+					}
+					ROOT = {
+						tag = VIJ
+					}
+					FROM = {
+						tag = FRA
+					}
+					FROM.FROM = { state = 848 }
+				}
+				every_country = {
+					country_event = scriptedpeacedeals.1
+				}
+			}
+			else_if = {
+				LIMIT = {
+					FRA = { 
+						has_country_flag = FRA_VIJ_second_war
+					}
+					ROOT = {
+						tag = VIJ
+					}
+					FROM = {
+						tag = FRA
+					}
+					FROM.FROM = { state = 848 }
+				}
+				every_country = {
+					country_event = scriptedpeacedeals.2
+				}
+			}
+			else_if = {
+				LIMIT = {
+					FRA = { 
+						has_country_flag = FRA_MAR_WAR
+					}
+					FROM = {
+						tag = MAR
+					}
+					FROM.FROM = { state = 429 }
+				}
+				every_country = {
+					country_event = scriptedpeacedeals.3
+				}
+			}
+			else_if = {
+				LIMIT = {
+					FRA = { 
+						has_country_flag = FRA_MYS_WAR
+						has_completed_focus = FRA_march_to_mangalore
+					}
+					FROM = {
+						tag = MYS
+					}
+					FROM.FROM = { state = 848 }
+				}
+				every_country = {
+					country_event = scriptedpeacedeals.4
+				}
+			}
+		}
+	}
+	
+	#ROOT-capitulated country, FROM-winner 
+	on_capitulation = {
+		effect = {
+		#Spain
+		if = {
+			LIMIT = {
+				has_global_flag = FRA_SPR_India_war
+				ROOT = {
+					tag = SPR
+				}
+			}
+			every_country = {
+				country_event = scriptedpeacedeals.5
+			}
+		}
+		else_if = {
+			LIMIT = {
+				has_global_flag = FRA_SPR_India_war
+				ROOT = {
+					tag = FRA
+				}
+			}
+			every_country = {
+				country_event = scriptedpeacedeals.6
+			}
+		}
+		
+		#France
+		else_if = {
+			LIMIT = {
+				has_global_flag = mexicojoinstoo
+				ROOT = {
+					tag = CCH
+				}
+			}
+			every_country = {
+				country_event = scriptedpeacedeals.7
+			}
+		}
+		else_if = {
+			LIMIT = {
+				has_global_flag = mexicodoesnotjoin
+				ROOT = {
+					tag = CCH
+				}
+			}
+			every_country = {
+				country_event = scriptedpeacedeals.8
+			}
+		}
+		else_if = {
+			LIMIT = {
+				has_global_flag = FRA_Lak_war
+				ROOT = {
+					tag = LAK
+				}
+			}
+			every_country = {
+				country_event = scriptedpeacedeals.9
+			}
+		}
+		else_if = {
+			LIMIT = {
+				has_global_flag = FRA_Lak_war
+				FROM = {
+					tag = LAK
+				}
+				ROOT = {
+					tag = LOU
+				}
+			}
+			every_country = {
+				country_event = scriptedpeacedeals.10
+			}
+		}
+		else_if = {
+			LIMIT = {
+				FRA = { 
+					has_country_flag = FRA_invasion_VIJ
+				}
+				ROOT = {
+					tag = VIJ
+				}
+				FROM = {
+					tag = FRA
+				}
+			}
+			every_country = {
+				country_event = scriptedpeacedeals.11
+			}
+		}
+		else_if = {
+			LIMIT = {
+				FRA = { 
+					has_country_flag = FRA_VIJ_second_war
+				}
+				ROOT = {
+					tag = VIJ
+				}
+				FROM = {
+					tag = FRA
+				}
+			}
+			every_country = {
+				country_event = scriptedpeacedeals.12
+			}
+		}
+		else_if = {
+			LIMIT = {
+				has_global_flag = fra_noble_revolt
+				ROOT = {
+					is_faction_leader = yes
+					OR = {
+						tag = AQU
+						tag = VOS
+						tag = LOR
+						tag = BRI
+						tag = PRO
+						tag = NRM
+						tag = BUR
+					}
+				}
+				FROM = {
+					tag = FRA
+				}
+			}
+			every_country = {
+				country_event = scriptedpeacedeals.13
+			}
+		}
+		else_if = {
+			LIMIT = {
+				has_global_flag = fra_noble_revolt
+				ROOT = {
+					tag = FRA
+					
+				}
+				FROM = {
+					is_faction_leader = yes
+					OR = {
+						tag = AQU
+						tag = VOS
+						tag = LOR
+						tag = BRI
+						tag = PRO
+						tag = NRM
+						tag = BUR
+					}
+				}
+			}
+			every_country = {
+				country_event = scriptedpeacedeals.14
+			}
+		}
+		else_if = {
+			LIMIT = {
+				FRA = { 
+					has_country_flag = FRA_MYS_WAR
+				}
+				ROOT = {
+					tag = MYS
+				}
+			}
+			every_country = {
+				country_event = scriptedpeacedeals.15
+			}
+		}
+		else_if = {
+			LIMIT = {
+				FRA = { 
+					has_country_flag = FRA_MYS_WAR
+				}
+				ROOT = {
+					tag = IND
+				}
+				FROM = {
+					tag = MYS
+				}
+				NOT = { FRA = { has_completed_focus = FRA_march_to_mangalore }  }
+			}
+			every_country = {
+				country_event = scriptedpeacedeals.16
+			}
+		}
+		else_if = {
+			LIMIT = {
+				FRA = { 
+					has_country_flag = FRA_MAR_WAR
+				}
+				ROOT = {
+					tag = MAR
+				}
+			}
+			every_country = {
+				country_event = scriptedpeacedeals.17
+			}
+		}
+		else_if = {
+			LIMIT = {
+				FRA = { 
+					has_country_flag = FRA_MAR_WAR
+				}
+				ROOT = {
+					tag = IND
+				}
+				FROM = {
+					tag = MAR
+				}
+			}
+			every_country = {
+				country_event = scriptedpeacedeals.18
+			}
+		}
+		else_if = {
+			LIMIT = {
+				FRA = { 
+					has_country_flag = indochinese_war
+				}
+				ROOT = {
+					tag = SIA
+				}
+				FROM = {
+					tag = FRA
+				}
+			}
+			every_country = {
+				country_event = scriptedpeacedeals.19
+			}
+		}
+		
+		#HRE FRAGMENTATION SHIT
+		else_if = {
+			LIMIT = {
+				ROOT = {
+					has_war_with = AUS
+				}
+				AUS = {
+					has_fragmentation_wg = yes
+				}
+			}
+
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_moselland_wg }
+					OR = {
+						AUS = { controls_state = 42 }
+						ROOT = { controls_state = 42 }
+						}
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = JUL }
+					}
+					AUS = {
+						set_autonomy = {
+							target = JUL
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				JUL = { set_state_owner = 42 }
+				JUL = { set_state_controller = 42 }
+				AUS = { clr_global_flag = return_of_moselland_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_berg_wg }
+					OR = {
+						AUS = { controls_state = 51 }
+						ROOT = { controls_state = 51 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = JUL }
+					}
+					AUS = {
+						set_autonomy = {
+							target = JUL
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				JUL = { set_state_owner = 51 }
+				JUL = { set_state_controller = 51 }
+				AUS = { clr_global_flag = return_of_berg_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_oberbayern_wg }
+					OR = {
+						AUS = { controls_state = 52 }
+						ROOT = { controls_state = 52 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = BAV }
+					}
+					AUS = {
+						set_autonomy = {
+							target = BAV
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				BAV = { set_state_owner = 52 }
+				BAV = { set_state_controller = 52 }
+				AUS = { clr_global_flag = return_of_oberbayern_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_niederbayern_wg }
+					OR = {
+						AUS = { controls_state = 53 }
+						ROOT = { controls_state = 53 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = BAV }
+					}
+					AUS = {
+						set_autonomy = {
+							target = BAV
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				BAV = { set_state_owner = 53 }
+				BAV = { set_state_controller = 53 }
+				AUS = { clr_global_flag = return_of_niederbayern_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_franken_wg }
+					OR = {
+						AUS = { controls_state = 54 }
+						ROOT = { controls_state = 54 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = WRZ }
+					}
+					AUS = {
+						set_autonomy = {
+							target = WRZ
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				WRZ = { set_state_owner = 54 }
+				WRZ = { set_state_controller = 54 }
+				AUS = { clr_global_flag = return_of_franken_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_kassel_wg }
+					OR = {
+						AUS = { controls_state = 55 }
+						ROOT = { controls_state = 55 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = KSS }
+					}
+					AUS = {
+						set_autonomy = {
+							target = KSS
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				KSS = { set_state_owner = 55 }
+				KSS = { set_state_controller = 55 }
+				AUS = { clr_global_flag = return_of_kassel_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_munster_wg }
+					OR = {
+						AUS = { controls_state = 56 }
+						ROOT = { controls_state = 56 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = MUN }
+					}
+					AUS = {
+						set_autonomy = {
+							target = MUN
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				MUN = { set_state_owner = 56 }
+				MUN = { set_state_controller = 56 }
+				AUS = { clr_global_flag = return_of_munster_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_ulm_wg }
+					OR = {
+						AUS = { controls_state = 57 }
+						ROOT = { controls_state = 57 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = ULM }
+					}
+					AUS = {
+						set_autonomy = {
+							target = ULM
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				ULM = { set_state_owner = 57 }
+				ULM = { set_state_controller = 57 }
+				AUS = { clr_global_flag = return_of_ulm_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_holstein_wg }
+					OR = {
+						AUS = { controls_state = 58 }
+						ROOT = { controls_state = 58 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = SCH }
+					}
+					AUS = {
+						set_autonomy = {
+							target = SCH
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				SCH = { set_state_owner = 58 }
+				SCH = { set_state_controller = 58 }
+				AUS = { clr_global_flag = return_of_holstein_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_hannover_wg }
+					OR = {
+						AUS = { controls_state = 59 }
+						ROOT = { controls_state = 59 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = HAN }
+					}
+					AUS = {
+						set_autonomy = {
+							target = HAN
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				HAN = { set_state_owner = 59 }
+				HAN = { set_state_controller = 59 }
+				AUS = { clr_global_flag = return_of_hannover_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_thuringen_wg }
+					OR = {
+						AUS = { controls_state = 60 }
+						ROOT = { controls_state = 60 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = THU }
+					}
+					AUS = {
+						set_autonomy = {
+							target = THU
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				THU = { set_state_owner = 60 }
+				THU = { set_state_controller = 60 }
+				AUS = { clr_global_flag = return_of_thuringen_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_mecklenburg_wg }
+					OR = {
+						AUS = { controls_state = 61 }
+						ROOT = { controls_state = 61 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = MCK }
+					}
+					AUS = {
+						set_autonomy = {
+							target = MCK
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				MCK = { set_state_owner = 61 }
+				MCK = { set_state_controller = 61 }
+				AUS = { clr_global_flag = return_of_mecklenburg_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_vorpommern_wg }
+					OR = {
+						AUS = { controls_state = 62 }
+						ROOT = { controls_state = 62 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = BRD }
+					}
+					AUS = {
+						set_autonomy = {
+							target = BRD
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				BRD = { set_state_owner = 62 }
+				BRD = { set_state_controller = 62 }
+				AUS = { clr_global_flag = return_of_vorpommern_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_hinterpommern_wg }
+					OR = {
+						AUS = { controls_state = 63 }
+						ROOT = { controls_state = 63 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = BRD }
+					}
+					AUS = {
+						set_autonomy = {
+							target = BRD
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				BRD = { set_state_owner = 63 }
+				BRD = { set_state_controller = 63 }
+				AUS = { clr_global_flag = return_of_hinterpommern_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_brandenburg_wg }
+					OR = {
+						AUS = { controls_state = 64 }
+						ROOT = { controls_state = 64 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = BRD }
+					}
+					AUS = {
+						set_autonomy = {
+							target = BRD
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				BRD = { set_state_owner = 64 }
+				BRD = { set_state_controller = 64 }
+				AUS = { clr_global_flag = return_of_brandenburg_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_sachen_wg }
+					OR = {
+						AUS = { controls_state = 65 }
+						ROOT = { controls_state = 65 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = SAX }
+					}
+					AUS = {
+						set_autonomy = {
+							target = SAX
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				SAX = { set_state_owner = 65 }
+				SAX = { set_state_controller = 65 }
+				AUS = { clr_global_flag = return_of_sachen_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_ostmark_wg }
+					OR = {
+						AUS = { controls_state = 68 }
+						ROOT = { controls_state = 68 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = BRD }
+					}
+					AUS = {
+						set_autonomy = {
+							target = BRD
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				BRD = { set_state_owner = 68 }
+				BRD = { set_state_controller = 68 }
+				AUS = { clr_global_flag = return_of_ostmark_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_hamburg_wg }
+					OR = {
+						AUS = { controls_state = 789 }
+						ROOT = { controls_state = 789 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = HAM }
+					}
+					AUS = {
+						set_autonomy = {
+							target = HAM
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				HAM = { set_state_owner = 789 }
+				HAM = { set_state_controller = 789 }
+				AUS = { clr_global_flag = return_of_hamburg_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_lubeck_wg }
+					OR = {
+						AUS = { controls_state = 790 }
+						ROOT = { controls_state = 790 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = LBK }
+					}
+					AUS = {
+						set_autonomy = {
+							target = LBK
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				LBK = { set_state_owner = 790 }
+				LBK = { set_state_controller = 790 }
+				AUS = { clr_global_flag = return_of_lubeck_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_hessen_wg }
+					OR = {
+						AUS = { controls_state = 805 }
+						ROOT = { controls_state = 805 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = BRD }
+					}
+					AUS = {
+						set_autonomy = {
+							target = BRD
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				BRD = { set_state_owner = 805 }
+				BRD = { set_state_controller = 805 }
+				AUS = { clr_global_flag = return_of_hessen_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_pfalz_wg }
+					OR = {
+						AUS = { controls_state = 807 }
+						ROOT = { controls_state = 807 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = BAV }
+					}
+					AUS = {
+						set_autonomy = {
+							target = BAV
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				BAV = { set_state_owner = 807 }
+				BAV = { set_state_controller = 807 }
+				AUS = { clr_global_flag = return_of_pfalz_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_trier_wg }
+					OR = {
+						AUS = { controls_state = 808 }
+						ROOT = { controls_state = 808 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = TRI }
+					}
+					AUS = {
+						set_autonomy = {
+							target = TRI
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				TRI = { set_state_owner = 808 }
+				TRI = { set_state_controller = 808 }
+				AUS = { clr_global_flag = return_of_trier_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_baden_wg }
+					OR = {
+						AUS = { controls_state = 814 }
+						ROOT = { controls_state = 814 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = BAD }
+					}
+					AUS = {
+						set_autonomy = {
+							target = BAD
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				BAD = { set_state_owner = 814 }
+				BAD = { set_state_controller = 814 }
+				AUS = { clr_global_flag = return_of_baden_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_wurttemberg_wg }
+					OR = {
+						AUS = { controls_state = 817 }
+						ROOT = { controls_state = 817 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = WUR }
+					}
+					AUS = {
+						set_autonomy = {
+							target = WUR
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				WUR = { set_state_owner = 817 }
+				WUR = { set_state_controller = 817 }
+				AUS = { clr_global_flag = return_of_wurttemberg_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_nuremberg_wg }
+					OR = {
+						AUS = { controls_state = 818 }
+						ROOT = { controls_state = 818 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = WUR }
+					}
+					AUS = {
+						set_autonomy = {
+							target = WUR
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				WUR = { set_state_owner = 818 }
+				WUR = { set_state_controller = 818 }
+				AUS = { clr_global_flag = return_of_nuremberg_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_ansbach_wg }
+					OR = {
+						AUS = { controls_state = 819 }
+						ROOT = { controls_state = 819 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = ANB }
+					}
+					AUS = {
+						set_autonomy = {
+							target = ANB
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				ANB = { set_state_owner = 819 }
+				ANB = { set_state_controller = 819 }
+				AUS = { clr_global_flag = return_of_ansbach_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_bayreuth_wg }
+					OR = {
+						AUS = { controls_state = 820 }
+						ROOT = { controls_state = 820 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = ANB }
+					}
+					AUS = {
+						set_autonomy = {
+							target = ANB
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				ANB = { set_state_owner = 820 }
+				ANB = { set_state_controller = 820 }
+				AUS = { clr_global_flag = return_of_bayreuth_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_oldenburg_wg }
+					OR = {
+						AUS = { controls_state = 833 }
+						ROOT = { controls_state = 833 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = OLD }
+					}
+					AUS = {
+						set_autonomy = {
+							target = OLD
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				OLD = { set_state_owner = 833 }
+				OLD = { set_state_controller = 833 }
+				AUS = { clr_global_flag = return_of_oldenburg_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_ostfriesland_wg }
+					OR = {
+						AUS = { controls_state = 836 }
+						ROOT = { controls_state = 836 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = KLE }
+					}
+					AUS = {
+						set_autonomy = {
+							target = KLE
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				KLE = { set_state_owner = 836 }
+				KLE = { set_state_controller = 836 }
+				AUS = { clr_global_flag = return_of_ostfriesland_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_koln_wg }
+					OR = {
+						AUS = { controls_state = 844 }
+						ROOT = { controls_state = 844 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = KOL }
+					}
+					AUS = {
+						set_autonomy = {
+							target = KOL
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				KOL = { set_state_owner = 844 }
+				KOL = { set_state_controller = 844 }
+				AUS = { clr_global_flag = return_of_koln_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_frankfurt_wg }
+					OR = {
+						AUS = { controls_state = 849 }
+						ROOT = { controls_state = 849 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = FRK }
+					}
+					AUS = {
+						set_autonomy = {
+							target = FRK
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				FRK = { set_state_owner = 849 }
+				FRK = { set_state_controller = 849 }
+				AUS = { clr_global_flag = return_of_frankfurt_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_kleve_wg }
+					OR = {
+						AUS = { controls_state = 850 }
+						ROOT = { controls_state = 850 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = KLE }
+					}
+					AUS = {
+						set_autonomy = {
+							target = KLE
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				KLE = { set_state_owner = 850 }
+				KLE = { set_state_controller = 850 }
+				AUS = { clr_global_flag = return_of_kleve_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_bremen_wg }
+					OR = {
+						AUS = { controls_state = 851 }
+						ROOT = { controls_state = 851 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = BRE }
+					}
+					AUS = {
+						set_autonomy = {
+							target = BRE
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				BRE = { set_state_owner = 851 }
+				BRE = { set_state_controller = 851 }
+				AUS = { clr_global_flag = return_of_bremen_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_gottingen_wg }
+					OR = {
+						AUS = { controls_state = 852 }
+						ROOT = { controls_state = 852 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = HAN }
+					}
+					AUS = {
+						set_autonomy = {
+							target = HAN
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				HAN = { set_state_owner = 852 }
+				HAN = { set_state_controller = 852 }
+				AUS = { clr_global_flag = return_of_gottingen_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_dortmund_wg }
+					OR = {
+						AUS = { controls_state = 853 }
+						ROOT = { controls_state = 853 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = DOR }
+					}
+					AUS = {
+						set_autonomy = {
+							target = DOR
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				DOR = { set_state_owner = 853 }
+				DOR = { set_state_controller = 853 }
+				AUS = { clr_global_flag = return_of_dortmund_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_mark_wg }
+					OR = {
+						AUS = { controls_state = 854 }
+						ROOT = { controls_state = 854 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = MRK }
+					}
+					AUS = {
+						set_autonomy = {
+							target = MRK
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				MRK = { set_state_owner = 854 }
+				MRK = { set_state_controller = 854 }
+				AUS = { clr_global_flag = return_of_mark_wg }
+			}
+
+			IF = {
+				LIMIT = {
+					AUS = { has_global_flag = return_of_nassau_wg }
+					OR = {
+						AUS = { controls_state = 855 }
+						ROOT = { controls_state = 855 }
+					}
+					
+					}
+				IF = {
+					LIMIT = {
+						NOT = { country_exists = NSS }
+					}
+					AUS = {
+						set_autonomy = {
+							target = NSS
+							autonomy_state = autonomy_stabilized_hre_vassal
+						}
+					}
+				}
+				NSS = { set_state_owner = 855 }
+				NSS = { set_state_controller = 855 }
+				AUS = { clr_global_flag = return_of_nassau_wg }
+			}
+			every_country = {
+				LIMIT = {
+					OR = {
+						tag = AUS
+						has_idea = aus_idea_alliance_with_austria
+						is_in_faction_with = AUS
+					}
+					has_war_with = ROOT
+				}
+				white_peace = ROOT 
+			} 
+		}
+		
+		else_if = {
+			LIMIT = {
+				AUS = { has_global_flag = aus_bavarian_ultimatum }
+				AUS = {
+					has_war_with = ROOT
+				}
+				ROOT = {
+					tag = BAV
+				}
+			}
+
+			every_country = {
+				LIMIT = {
+					OR = {
+						tag = AUS
+						has_idea = aus_idea_alliance_with_austria
+						is_in_faction_with = AUS
+					}
+					has_war_with = ROOT
+				}
+				white_peace = ROOT 
+			} 
+
+			BAV = {
+				country_event = Auseugen.83
+			}
+
+			AUS = {
+				set_autonomy = {
+					target = BAV
+					autonomy_state = autonomy_protected_hre_state
+				}
+				country_event = Auseugen.82
+				clr_global_flag = aus_bavarian_ultimatum
+			}
+		}
+		else_if = {
+			LIMIT = {
+				AUS = { has_global_flag = aus_great_gathering_wg }
+				AUS = {
+					has_war_with = ROOT
+				}
+				ROOT = {
+					OR = {
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_conservative
+						has_idea = hre_idea_republic
+					}
+					NOT = {
+						has_country_flag = hre_capitulated
+						is_puppet_of = AUS
+					}
+				}
+			}
+			add_to_variable = { var = global.hre_amount_of_capitulated_countries value = 1 }
+			ROOT = {
+				set_country_flag = hre_capitulated
+			}
+		}
+		else_if = {
+			LIMIT = {
+				set_temp_variable = { global.hre_amount_of_capitulated_countries_temp = global.hre_amount_of_capitulated_countries }
+				add_to_temp_variable = { var = global.hre_amount_of_capitulated_countries_temp value = 3 }
+				AUS = { has_global_flag = aus_great_gathering_wg }
+				AUS = {
+					has_war_with = ROOT
+				}
+				check_variable = {
+					global.hre_amount_of_capitulated_countries_temp > global.hre_members_of_war
+				}
+			}
+
+			every_country = {
+				LIMIT = {
+					OR = {
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_conservative
+						has_idea = hre_idea_republic
+					}
+					has_war_with = AUS
+				}
+				every_country = {
+					LIMIT = {
+						OR = {
+							is_puppet_of = AUS
+							is_in_faction_with = AUS
+						}
+					}
+					white_peace = PREV
+				}
+				every_country = {
+					LIMIT = {
+						has_global_flag = aus_temp_major
+					}
+					set_major = no
+					clr_global_flag = aus_temp_major
+				}
+				AUS = {
+					set_autonomy = {
+						target = PREV
+						autonomy_state = autonomy_protected_hre_state
+					}
+					clr_global_flag = aus_great_gathering_wg
+				}
+				set_global_flag = aus_ggwar_ended
+				set_global_flag = aus_ggwar_won
+			}
+		}
+		else_if = {
+			LIMIT = {
+				ROOT = {
+					tag = AUS
+					has_global_flag = aus_great_gathering_wg
+					has_war_with = BRD
+				}
+			}
+			every_country = {
+				LIMIT = {
+					has_war_with = AUS
+					is_in_faction_with = BRD
+				}
+				white_peace = AUS
+			}
+			AUS = {
+				add_stability = -0.1
+				add_political_power = -150
+				set_global_flag = aus_ggwar_worse_surrender
+			}
+			BRD = {
+				country_event = Auseugen.105
+			}
+			every_country = {
+				LIMIT = {
+					has_global_flag = aus_temp_major
+				}
+				set_major = no
+				clr_global_flag = aus_temp_major
+			}
+			set_global_flag = aus_ggwar_ended
+			set_global_flag = aus_ggwar_lost
+		}
+
+		# Austro-Spanish war for Netherlands	
+		else_if = {	
+			LIMIT = {	
+				has_global_flag = auseugen_austrospanish_war	
+				ROOT = {	
+					tag = SPN	
+				}	
+				has_war_with = AUS	
+			}	
+			SPN = {	
+				country_event = Auseugen.147	
+			}	
+		}
+	}
+}

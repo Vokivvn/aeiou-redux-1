@@ -1,0 +1,30 @@
+
+state={
+	id=819
+	name="STATE_819"
+	manpower = 375410
+	state_category = town 
+	
+	resources = {
+	    gunpowder = 1 
+		wood = 2 
+	}
+
+	history={
+		owner = ANB
+		
+		victory_points = {
+			11529 5
+		}
+      buildings = {
+			infrastructure = 3
+			industrial_complex = 1 
+		}
+
+		add_core_of = ANB
+	}
+
+	provinces={
+		11529 9545
+	}
+}

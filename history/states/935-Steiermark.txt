@@ -1,0 +1,31 @@
+
+state={
+	id=935
+	name="STATE_935"
+	manpower = 239421	
+	
+	state_category = town
+
+	resources={
+		iron = 4
+		wood = 3
+		gunpowder = 3
+	}
+
+	history={
+		owner = AUS
+		victory_points = {
+			9665 3
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		add_core_of = AUS
+	}
+
+	provinces={
+		6691 3684 9650 9679 6690 9661 11630 9648 9646 653 6687
+	}
+}

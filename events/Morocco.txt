@@ -1,0 +1,49 @@
+#########################################
+# Yes, Morocco gets some development too
+#######################################
+
+add_namespace = Religiousvictors
+
+country_event = { #Total Control over Spanish Africa
+	id = Religiousvictors.1
+	title = Religiousvictors.1.t
+	desc = Religiousvictors.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+		tag = MOR
+		has_war_with = SPR
+		has_full_control_of_state = 783
+		has_full_control_of_state = 290
+	}
+	
+	option = {
+		name = Religiousvictors.1.a 
+		ai_chance = {
+			factor = 100
+		}
+		white_peace = SPR
+		set_global_flag = MOR_victory
+		transfer_state = 923
+		SPR = { country_event = { days = 1 id = SPRReligion.14 }}	
+		MOR = { country_event = { days = 365 id = Religiousvictors.2 }}	
+		remove_ideas = mor_idea_home_advantage
+	}
+}
+
+country_event = { #Celebrating the Victors of Ceuta
+	id = Religiousvictors.2
+	title = Religiousvictors.2.t
+	desc = Religiousvictors.2.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Religiousvictors.2.a
+		MOR = { country_event = { days = 365 id = Religiousvictors.2 }}	
+		add_political_power = 100
+	}
+}

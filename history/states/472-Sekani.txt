@@ -1,0 +1,24 @@
+state = {
+	id = 472
+	name = "STATE_472"
+	
+	manpower=7933
+	buildings_max_level_factor=1.000
+	state_category = wasteland
+
+	history = {
+		owner = SKN
+		add_core_of = SKN
+		buildings = {
+			infrastructure = 0
+
+		}
+		victory_points = {
+			3010 3 
+		}
+	}
+
+	provinces = {
+		2407 3010 7766 7830 7858 8653 12166 12534 13192
+	}
+}

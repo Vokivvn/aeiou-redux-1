@@ -1,0 +1,30 @@
+state={
+	id=800
+	name="STATE_800"
+	resources={
+		steel=1
+		fabric=2
+		wood=1
+	}
+
+	state_category = pastoral
+
+
+	history={
+		owner = SEM
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SEM
+		add_core_of = NEN
+		victory_points = {
+			7388 5
+		}
+	}
+
+	provinces={
+		1584 7388 12752
+	}
+	manpower=22935
+	buildings_max_level_factor=1.000
+}

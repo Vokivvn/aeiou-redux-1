@@ -1,0 +1,28 @@
+
+state={
+	id=387
+	name="STATE_387"
+	manpower = 6522‬
+	
+	state_category = pastoral
+	
+	resources={
+		wood=7
+	}
+
+	history={
+		owner = BLK
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = BLK
+		victory_points = {
+			9616 1
+		}
+	}
+
+	provinces={
+		3781 4778 7845 9616 10602 
+	}
+	
+}

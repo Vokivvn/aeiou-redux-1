@@ -1,0 +1,106 @@
+﻿division_template = {
+	name = "English Redcoat Battalion"
+
+	division_names_group = ENG_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+		line_infantry = { x = 0 y = 4 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+		line_infantry = { x = 1 y = 2 }
+		line_infantry = { x = 1 y = 3 }
+		line_infantry = { x = 1 y = 4 }
+		line_infantry = { x = 2 y = 0 }
+		line_infantry = { x = 2 y = 1 }
+		line_infantry = { x = 2 y = 2 }
+		line_infantry = { x = 2 y = 3 }
+		line_infantry = { x = 2 y = 4 }
+		line_infantry = { x = 3 y = 0 }
+		line_infantry = { x = 3 y = 1 }
+		line_infantry = { x = 3 y = 2 }
+		line_infantry = { x = 3 y = 3 }
+		line_infantry = { x = 3 y = 4 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "English Cavalry Division"
+
+	division_names_group = ENG_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 0 y = 2 }
+		medium_cavalry = { x = 0 y = 3 }
+		medium_cavalry = { x = 0 y = 4 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+		medium_cavalry = { x = 1 y = 2 }
+		medium_cavalry = { x = 1 y = 3 }
+		medium_cavalry = { x = 1 y = 4 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "English Knight Battalion"
+
+	division_names_group = ENG_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st English Redcoat Battalion"
+		location = 6103
+		division_template = "English Redcoat Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd English Redcoat Battalion"
+		location = 9297
+		division_template = "English Redcoat Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3rd English Redcoat Battalion"
+		location = 6384
+		division_template = "English Redcoat Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4th English Redcoat Battalion"
+		location = 6384
+		division_template = "English Redcoat Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "5th English Redcoat Battalion"
+		location = 6384
+		division_template = "English Redcoat Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st English Cavalry Division"
+		location = 296
+		division_template = "English Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd English Cavalry Division"
+		location = 407
+		division_template = "English Cavalry Division"
+		start_experience_factor = 0.3
+	}
+}

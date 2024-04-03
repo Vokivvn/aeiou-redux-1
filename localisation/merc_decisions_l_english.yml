@@ -1,0 +1,25 @@
+﻿l_english:
+ ## Mercenaries ##
+ MODERNIZE_ARMY_TOOLTIP:0 "Results in the ability to train troops but removes mercenaries from the army"
+ army_actions:0 "Army"
+ army_actions_desc:0 "Decisions we can do to bolster our forces. This can range from hiring mercenaries to mobilizing our country against a common foe. Either way, these decisions could be vital to our success."
+ mobilize_country:0 "Mobilize the Country"
+ mobilize_country_desc:0 "Our army by itself is not large enough for the war we find ourselves in, but we can recruit the masses to tip the war into our favour..."
+ additional_funding_for_military_service:0 "Additional Funding for Military Services"
+ additional_funding_for_military_service_desc:0 "We can raise the payment of military services to attract more people to fill the ranks"
+ hire_melee_mercs:0 "Hire Melee Mercenaries"
+ hire_melee_mercs_desc:0 ""
+ hire_line_infantry_mercs:0 "Hire Line Infantry Mercenaries"
+ hire_line_infantry_mercs_desc:0 ""
+ hire_light_cavalry_mercs:0"Hire Light Cavalry Mercenaries"
+ hire_light_cavalry_mercs_desc:0 ""
+ hire_medium_cavalry_mercs:0 "Hire Medium Cavalry Mercenaries"
+ hire_medium_cavalry_mercs_desc:0 ""
+ hire_heavy_cavalry_mercs:0 "Hire Heavy Cavalry Mercenaries"
+ hire_heavy_cavalry_mercs_desc:0 ""
+ 
+ 
+ #Tooltips
+ ALLOWED_TO_MOBILIZE:0 "§YMobilization is appropriate§!"
+
+

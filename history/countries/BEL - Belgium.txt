@@ -1,0 +1,29 @@
+﻿capital = 6
+
+#oob = "BEL_1936"
+
+set_research_slots = 3
+set_stability = 0.8
+set_war_support = 0.3 #we see what you are doing there Adolf
+
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+
+	trench_warfare = 1
+	fuel_silos = 1
+	fuel_refining = 1
+}
+set_politics = {
+	ruling_party = conservative
+	last_election = "1932.11.27"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	conservative = 100
+}

@@ -1,0 +1,109 @@
+RUS_area_priority = {
+	enable = {
+		original_tag = RUS
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = europe
+		value = 100 #more focus here
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = scandinavia
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = north_america
+		value = 50
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = south_america
+		value = 10
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = asia
+		value = 60
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = middle_east
+		value = 50
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = africa
+		value = 20
+	}
+	ai_strategy = {
+        type = area_priority
+        id = suez
+        value = -10
+    }
+	
+	ai_strategy = {
+		type = area_priority
+		id = pacific
+		value = 30 #less focus here
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = oceania
+		value = 10
+	}
+}
+
+conflict_against_KAZ = {
+	enable = {
+		tag = RUS
+		country_exists = KAZ
+	}
+	abort = {
+		NOT = { country_exists = KAZ }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "KAZ"
+		value = 200
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = "KAZ"
+		value = 200
+	}
+}
+
+conflict_against_KAZ_2 = {
+	enable = {
+		tag = RUS
+		country_exists = KAZ
+		threat > 25
+	}
+	abort = {
+		NOT = { country_exists = KAZ }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "KAZ"
+		value = 400
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = "KAZ"
+		value = 400
+	}
+}

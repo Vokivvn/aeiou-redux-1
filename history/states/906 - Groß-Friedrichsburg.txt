@@ -1,0 +1,21 @@
+state= {
+	id=906
+	name="STATE_906"
+	manpower = 10200
+	
+	state_category = rural
+
+	history= {
+		owner = BRD
+		add_core_of = BRD
+        victory_points = {
+			13235 1 
+		}
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces={
+	   13234 13235 13236
+	}
+}

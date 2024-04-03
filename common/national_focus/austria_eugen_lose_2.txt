@@ -1,0 +1,702 @@
+focus_tree = {
+	id = austria_eugen_lose_2
+
+	country = {
+		factor = 0
+	}
+
+	
+	continuous_focus_position = { x = 50 y = 2000 }
+
+
+
+
+
+	focus = { 
+		id = AUS_absolute_control
+		icon = GFX_
+		cost = 35
+	
+		x = 2
+		y = 0
+
+		completion_reward = {
+			add_political_power = 20
+			add_stability = 0.02
+			add_popularity = {
+				ideology = absolutist
+				popularity = 0.03
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_nobility_dependant_on_the_king
+		icon = GFX_
+		cost = 35
+	
+		x = -1
+		y = 1
+
+		relative_position_id = AUS_absolute_control
+		
+		prerequisite = {
+			focus = AUS_absolute_control
+		}
+
+		completion_reward = {
+			add_political_power = -20
+			add_stability = 0.03
+		}
+	}
+
+	focus = { 
+		id = AUS_bribe_the_generals
+		icon = GFX_
+		cost = 35
+	
+		x = 0
+		y = 2
+
+		relative_position_id = AUS_nobility_dependant_on_the_king
+		
+		prerequisite = {
+			focus = AUS_nobility_dependant_on_the_king
+		}
+		prerequisite = {
+			focus = AUS_protect_the_king
+		}
+
+		completion_reward = {
+			add_stability = -0.02
+			add_political_power = -10
+			AUS_gen_slightly_appease_se = yes
+		}
+	}
+
+	focus = { 
+		id = AUS_protect_the_king
+		icon = GFX_
+		cost = 35
+	
+		x = 1
+		y = 1
+
+		relative_position_id = AUS_nobility_dependant_on_the_king
+		
+		prerequisite = {
+			focus = AUS_nobility_dependant_on_the_king
+			focus = AUS_and_the_peasantry_dependant_on_the_nobility
+		}
+
+		completion_reward = {
+			add_war_support = 0.02
+			AUS_sol_slightly_appease_se = yes
+		}
+	}
+
+	focus = { 
+		id = AUS_and_the_peasantry_dependant_on_the_nobility
+		icon = GFX_
+		cost = 35
+	
+		x = 1
+		y = 1
+
+		relative_position_id = AUS_absolute_control
+		
+		prerequisite = {
+			focus = AUS_absolute_control
+		}
+
+		completion_reward = {
+			add_political_power = -40
+			add_stability = 0.01
+		}
+	}
+
+	focus = { 
+		id = AUS_injuctions_from_rome
+		icon = GFX_
+		cost = 35
+	
+		x = 0
+		y = 2
+
+		relative_position_id = AUS_and_the_peasantry_dependant_on_the_nobility
+		
+		prerequisite = {
+			focus = AUS_protect_the_king
+		}
+		prerequisite = {
+			focus = AUS_and_the_peasantry_dependant_on_the_nobility
+		}
+
+		completion_reward = {
+			country_event = Auseugen.167 
+		}
+	}
+
+
+
+
+
+
+
+
+	focus = { 
+		id = AUS_desire_for_revenge
+		icon = GFX_
+		cost = 35
+	
+		x = 6
+		y = 0
+
+		completion_reward = {
+			country_event = Auseugen.168
+		}
+	}
+
+	focus = { 
+		id = AUS_trust_in_swiss_banks
+		icon = GFX_
+		cost = 35
+	
+		x = 0
+		y = 1
+
+		relative_position_id = AUS_desire_for_revenge
+		
+		prerequisite = {
+			focus = AUS_desire_for_revenge
+		}
+
+		completion_reward = {
+			SWI = {
+				country_event = {
+					id = Auseugen.169
+					days = 5
+					random = 120
+				}
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_assemble_the_armies
+		icon = GFX_
+		cost = 35
+	
+		x = 0
+		y = 1
+
+		relative_position_id = AUS_trust_in_swiss_banks
+		
+		prerequisite = {
+			focus = AUS_trust_in_swiss_banks
+		}
+
+		completion_reward = {
+			add_manpower = 10000
+		}
+	}
+
+	focus = { 
+		id = AUS_anti_protestant_propaganda
+		icon = GFX_
+		cost = 35
+	
+		x = 0
+		y = 1
+
+		relative_position_id = AUS_assemble_the_armies
+		
+		prerequisite = {
+			focus = AUS_assemble_the_armies
+		}
+
+		completion_reward = {
+			add_war_support = 0.06
+			every_country = {
+				LIMIT = {
+					OR = {
+						has_idea = hre_idea_conservative
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_elector
+					}
+					check_variable = { national_religion_array^0 = 3 }
+				}
+				add_opinion_modifier = {
+				    target = AUS
+				    modifier = AUS_anti_protestant_propaganda
+				}
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_catholic_zealotry
+		icon = GFX_
+		cost = 35
+	
+		x = -1
+		y = 1
+
+		relative_position_id = AUS_anti_protestant_propaganda
+		
+		prerequisite = {
+			focus = AUS_injuctions_from_rome
+		}
+		prerequisite = {
+			focus = AUS_anti_protestant_propaganda
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = aus_idea_catholic_zealotry
+				days = 200
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_incite_one_against_another
+		icon = GFX_
+		cost = 35
+	
+		x = 1  
+		y = 1
+
+		relative_position_id = AUS_anti_protestant_propaganda
+		
+		prerequisite = {
+			focus = AUS_anti_protestant_propaganda
+		}
+
+		completion_reward = {
+			AUS_hre_reports = yes
+		}
+	}
+
+	focus = { 
+		id = AUS_let_the_empire_burn
+		icon = GFX_
+		cost = 35
+	
+		x = 1
+		y = 1
+
+		relative_position_id = AUS_catholic_zealotry
+		
+		prerequisite = {
+			focus = AUS_catholic_zealotry
+		}
+		prerequisite = {
+			focus = AUS_incite_one_against_another
+		}
+		prerequisite = {
+			focus = AUS_intense_mobilization
+		}
+
+		completion_reward = {
+			every_country = {
+				LIMIT = {
+					has_country_flag = hre_reported
+				}
+				country_event = {
+					id = Auseugen.173
+					days = 5
+					random = 240
+				}
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_join_the_chaos
+		icon = GFX_
+		cost = 35
+	
+		x = 0
+		y = 1
+
+		relative_position_id = AUS_let_the_empire_burn
+		
+		prerequisite = {
+			focus = AUS_let_the_empire_burn
+		}
+
+		completion_reward = {
+			every_other_country = {
+				LIMIT = {
+					OR = {
+						has_idea = hre_idea_conservative
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_elector
+					}
+					is_puppet = no
+				}
+				ROOT = {
+					declare_war_on = {
+						target = PREV
+						type = puppet_wargoal_focus
+					}
+				}
+
+			}
+			hidden_effect = {
+				every_other_country = {
+					LIMIT = {
+						NOT = {
+							is_in_faction_with = ROOT
+						}
+					}
+					set_global_flag = hre_war_2_started
+					country_event = Auseugen.174
+				}
+			}
+		}
+	}
+
+
+
+
+
+
+	focus = { 
+		id = AUS_challenge_the_spaniards
+		icon = GFX_
+		cost = 35
+	
+		x = 3
+		y = 1
+
+		relative_position_id = AUS_desire_for_revenge
+		
+		prerequisite = {
+			focus = AUS_desire_for_revenge
+			focus = AUS_interest_in_galicia
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = { 
+		id = AUS_complete_navy_modernization
+		icon = GFX_
+		cost = 35
+	
+		x = 0
+		y = 1
+
+		relative_position_id = AUS_challenge_the_spaniards
+		
+		prerequisite = {
+			focus = AUS_challenge_the_spaniards
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+			    bonus = 0.75
+			    uses = 2
+			    category = naval_equipment
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+	focus = { 
+		id = AUS_interest_in_galicia
+		icon = GFX_
+		cost = 35
+	
+		x = 12
+		y = 0
+		
+		completion_reward = {
+			country_event = Auseugen.176
+			PLC = {
+				country_event = Auseugen.177
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_revised_supply_lines
+		icon = GFX_
+		cost = 35
+	
+		x = 0
+		y = 1
+
+		relative_position_id = AUS_interest_in_galicia
+		
+		prerequisite = {
+			focus = AUS_interest_in_galicia
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				every_owned_state = {
+					LIMIT = {
+						OR = {
+							state = 73
+							state = 71
+							state = 72
+							state = 762
+							state = 67
+							state = 66
+						}
+						is_fully_controlled_by = ROOT
+					}
+					IF = {
+						LIMIT = {
+							infrastructure > 8
+						}
+						add_extra_state_shared_building_slots = 1
+					}
+					IF = {
+						LIMIT = {
+							infrastructure < 9
+							infrastructure > 6
+						}
+						add_building_construction = {
+						    type = infrastructure
+						    level = 1
+						    instant_build = yes
+						}
+					}
+					IF = {
+						LIMIT = {
+							infrastructure < 7
+							infrastructure > 4
+						}
+						add_building_construction = {
+						    type = infrastructure
+						    level = 2
+						    instant_build = yes
+						}
+					}
+					IF = {
+						LIMIT = {
+							infrastructure < 5
+						}
+						add_building_construction = {
+						    type = infrastructure
+						    level = 3
+						    instant_build = yes
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_slovakian_forts
+		icon = GFX_
+		cost = 35
+	
+		x = 0
+		y = 1
+
+		relative_position_id = AUS_revised_supply_lines
+		
+		prerequisite = {
+			focus = AUS_revised_supply_lines
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				every_owned_state = {
+					LIMIT = {
+						is_fully_controlled_by = ROOT
+						OR = {
+							state = 70
+							state = 71
+							state = 664
+							state = 73
+						}
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 3
+					    instant_build = yes
+					    province = {
+					        all_provinces = yes
+					        limit_to_border = yes
+					    }
+					}
+				}
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_stand_against_the_orthodox
+		icon = GFX_
+		cost = 35
+	
+		x = -1
+		y = 1
+
+		relative_position_id = AUS_slovakian_forts
+		
+		prerequisite = {
+			focus = AUS_slovakian_forts
+		}
+		mutually_exclusive = {
+			focus = AUS_seek_partners_in_the_east
+		}
+
+		completion_reward = {
+			AUS_gen_highly_appease_se = yes
+			add_stability = -0.08
+			every_country = {
+				LIMIT = {
+					check_variable = { national_religion_array^0 = 1 }
+				}
+					hidden_effect = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = AUS_condemned_the_orthodox_trade
+					}
+					ROOT = {
+						add_opinion_modifier = {
+							target = PREV
+							modifier = AUS_condemned_the_orthodox_trade
+						}
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = AUS_condemned_the_orthodox
+				}
+				hidden_effect = {
+					ROOT = {
+						add_opinion_modifier = {
+							target = PREV
+							modifier = AUS_condemned_the_orthodox
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_intense_mobilization
+		icon = GFX_
+		cost = 35
+	
+		x = 0
+		y = 1
+
+		relative_position_id = AUS_stand_against_the_orthodox
+		
+		prerequisite = {
+			focus = AUS_anti_protestant_propaganda
+			focus = AUS_stand_against_the_orthodox
+			focus = AUS_seek_partners_in_the_east
+		}
+
+		completion_reward = {
+			AUS_sol_moderately_appease_se = yes
+			add_timed_idea = {
+				idea = aus_idea_active_mobilization
+				days = 115
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_seek_partners_in_the_east
+		icon = GFX_
+		cost = 35
+	
+		x = 1
+		y = 1
+
+		relative_position_id = AUS_slovakian_forts
+		
+		prerequisite = {
+			focus = AUS_slovakian_forts
+		}
+		mutually_exclusive = {
+			focus = AUS_stand_against_the_orthodox
+		}
+
+		completion_reward = {
+			AUS_gen_moderately_displease_se = yes
+			RUS = {
+				country_event = Auseugen.178
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_annouce_official_claims
+		icon = GFX_
+		cost = 35
+
+		x = 0
+		y = 1
+
+		relative_position_id = AUS_seek_partners_in_the_east
+		
+		prerequisite = {
+			focus = AUS_stand_against_the_orthodox
+			focus = AUS_seek_partners_in_the_east
+		}
+
+		completion_reward = {
+			add_state_claim = 88
+			add_state_claim = 89
+			add_state_claim = 91
+			every_other_country = {
+				country_event = Auseugen.180
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_strike_the_commonwealth
+		icon = GFX_
+		cost = 35
+	
+		x = 1
+		y = 1
+
+		relative_position_id = AUS_intense_mobilization
+		
+		prerequisite = {
+			focus = AUS_intense_mobilization
+		}
+
+		prerequisite = {
+			focus = AUS_annouce_official_claims
+		}
+
+		completion_reward = {
+			declare_war_on = {
+				target = PLC
+				type = take_claimed_state 
+			}
+			set_global_flag = aus_eugen_war_with_plc
+		}
+	}
+
+
+
+
+
+}

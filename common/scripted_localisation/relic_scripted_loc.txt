@@ -1,0 +1,55 @@
+defined_text = {
+	name = GetRelicName
+	text = {
+		trigger = { check_variable = { ROOT.relic_storage_array^relic_page = 0 } }
+		localization_key = Relic_0_name
+	}
+	text = {
+		trigger = { check_variable = { ROOT.relic_storage_array^relic_page = 1 } }
+		localization_key = Relic_1_name
+	}
+	text = {
+	    localization_key = "[?ROOT.relic_storage_array^relic_page]"
+	}
+}
+
+defined_text = {
+	name = GetRelicIcon
+	text = {
+		trigger = { check_variable = { ROOT.relic_storage_array^relic_page = 1 } }
+		localization_key = "GFX_relic_1"
+	}
+	text = {
+	    localization_key = "GFX_relic_background"
+	}
+}
+
+defined_text = {
+	name = GetRelicDate
+	text = {
+		trigger = { check_variable = { ROOT.relic_storage_array^relic_page = 0 }}
+		localization_key = Relic_0_date
+	}
+	text = {
+		trigger = { check_variable = { ROOT.relic_storage_array^relic_page = 1 }}
+		localization_key = Relic_1_date
+	}
+	text = {
+	    localization_key = "[?ROOT.relic_storage_array^relic_page]"
+	}
+}
+
+defined_text = {
+	name = GetRelicDesc
+	text = {
+		trigger = { check_variable = { ROOT.relic_storage_array^relic_page = 0 } }
+		localization_key = Relic_0_desc
+	}
+	text = {
+		trigger = { check_variable = { ROOT.relic_storage_array^relic_page = 1 } }
+		localization_key = Relic_1_desc
+	}
+	text = {
+	    localization_key = "[?ROOT.relic_storage_array^relic_page]"
+	}
+}

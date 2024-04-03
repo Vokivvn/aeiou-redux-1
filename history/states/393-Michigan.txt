@@ -1,0 +1,32 @@
+state={
+	id=393
+	name="STATE_393"
+	resources={
+		gunpowder=4
+		iron=4
+		steel=3
+		wood=3
+		horses=3
+	}
+
+	state_category = rural
+	history={
+		owner = FCN
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		add_core_of = FCN
+		victory_points = {
+			6710 20 
+		}
+
+	}
+
+	provinces={
+		709 751 3766 4854 5205 6710 6769 6782 7420 9724 9746 9747 10233 10303 10599 11656 11669 11714 11731 13155 13199 13200 13201 
+	}
+	manpower=589297
+	buildings_max_level_factor=1.000
+}

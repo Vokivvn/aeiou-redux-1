@@ -1,0 +1,33 @@
+state={
+	id=817
+	name="STATE_817"
+	resources={
+		wood = 4
+		gunpowder = 2
+		horses = 2 
+	}
+
+	state_category = city
+	history={
+		owner = WUR
+		victory_points = {
+			9517 10
+		}
+		victory_points = {
+			6934 2 
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		add_core_of = WUR
+
+	}
+
+	provinces={
+		519 694 3679 3690 6555 6934 9517 9655 11486 13126
+	}
+	manpower=1596291
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,751 @@
+operations = {
+	raise_aquitanian_nobles = {
+		icon = border_war
+		visible = {
+			has_country_flag = FRA_mobilize_nobles
+			has_global_flag = FRA_SPR_India_war
+			19 = {
+				is_controlled_by = FRA
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 50
+		days_remove = 1
+		complete_effect = {
+			add_stability = -0.05
+		}
+		remove_effect = {
+			load_oob = FRA_aquitanian_nobles
+		}
+	}
+	raise_breton_nobles = {
+		icon = border_war
+		visible = {
+			has_country_flag = FRA_mobilize_nobles
+			has_global_flag = FRA_SPR_India_war
+			14 = {
+				is_controlled_by = FRA
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 50
+		days_remove = 1
+		complete_effect = {
+			add_stability = -0.05
+		}
+		remove_effect = {
+			load_oob = FRA_breton_nobles
+		}
+	}
+	raise_norman_nobles = {
+		icon = border_war
+		visible = {
+			has_country_flag = FRA_mobilize_nobles
+			has_global_flag = FRA_SPR_India_war
+			15 = {
+				is_controlled_by = FRA
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 50
+		days_remove = 1
+		complete_effect = {
+			add_stability = -0.05
+		}
+		remove_effect = {
+			load_oob = FRA_norman_nobles
+		}
+	}
+	
+	expand_king_guard = {
+		
+		icon = generic_prepare_civil_war
+		
+		available = {
+			has_manpower > 20000
+		}
+
+		visible = {
+			has_country_flag = FRA_king_guard
+			NOT = { has_tech = modernize_army }
+		}
+
+		fire_only_once = no
+
+		days_remove = 15
+		days_re_enable = 135
+		
+		cost = 50
+		
+		remove_effect = {
+			random_state = { 
+				limit = { 
+					is_owned_and_controlled_by = ROOT 
+					is_in_home_area = yes
+				}
+				create_unit = {
+					division = "division_template = \"The King's Guard\" start_experience_factor = 0.5" 
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+					count = 1
+				}
+			}
+			add_manpower = -20000
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				num_divisions < num_of_factories
+			}
+		}
+	}
+	
+	
+}
+
+noble_support = {
+	power_to_the_nobles = {
+
+		icon = oppression
+		
+		available = {
+			NOT = { check_variable = { noble_support > 0.995 } }
+		}
+		
+		visible = {
+			tag = FRA
+		}
+		
+		fire_only_once = no
+
+		days_remove = 60
+		days_re_enable = 180
+
+		cost = 50
+
+		remove_effect = {
+			set_temp_variable = { noble_support_temp = 0.005 }
+			FRA_noble_support = yes
+		}
+
+		ai_will_do = {
+			base = -1
+			modifier = {
+				add = 10
+				check_variable = { noble_support < 0.2 }
+				has_country_flag = bigger_better
+			}
+			modifier = {
+				add = 10
+				check_variable = { noble_support < 0.6 }
+				has_country_flag = trust_noble_system
+			}
+		}
+	}
+	
+	king_realm = {
+
+		icon = oppression
+		
+		available = {
+			has_stability > 0
+			NOT = { check_variable = { noble_support < 0.010 } }
+		}
+		
+		visible = {
+			tag = FRA
+		}
+		
+		fire_only_once = no
+
+		days_re_enable = 180
+
+		complete_effect = {
+			add_political_power = 75
+			add_stability = -0.001
+			set_temp_variable = { noble_support_temp = -0.010 }
+			FRA_noble_support = yes
+		}
+
+		ai_will_do = {
+			base = -1
+			modifier = {
+				add = 10
+				check_variable = { noble_support > 0.4 }
+				has_country_flag = bigger_better
+			}
+			modifier = {
+				add = 10
+				check_variable = { noble_support > 0.9 }
+				has_country_flag = trust_noble_system
+			}
+		}
+	}
+	
+	confiscate_noble_property = {
+
+		icon = oppression
+		
+		available = {
+			has_stability > 0.05
+			NOT = { check_variable = { noble_support < 0.025 } }
+		}
+		
+		visible = {
+			tag = FRA
+		}
+		
+		fire_only_once = no
+
+		days_re_enable = 360
+		
+		cost = 100
+
+		complete_effect = {
+			add_stability = -0.005
+			set_temp_variable = { noble_support_temp = -0.025 }
+			FRA_noble_support = yes
+			random_state = { 
+				limit = { 
+					is_owned_and_controlled_by = ROOT 
+					is_in_home_area = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+
+		ai_will_do = {
+			base = -1
+			modifier = {
+				add = 10
+				check_variable = { noble_support > 0.5 }
+				has_country_flag = bigger_better
+			}
+		}
+	}
+}
+
+establish_caroline = {
+	control_northern_ports = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_equipment = {
+				infantry_equipment > 200
+			}
+			has_manpower > 200
+			NOT = { has_country_flag = IND_order }
+		}
+
+		visible = {
+			tag = FRA
+			IND = {
+				is_subject_of = FRA
+				has_cosmetic_tag = IND_FRA_CAR
+				NOT = {
+					857 = { is_core_of = IND }
+					858 = { is_core_of = IND }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -200
+			}
+			add_manpower = -200
+			set_country_flag = IND_order
+		}
+
+		remove_effect = {
+			857 = { add_core_of = IND }
+			858 = { add_core_of = IND }
+			clr_country_flag = IND_order
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				modifier = {
+					add = 10
+					has_equipment = {
+						infantry_equipment > 500
+					}
+					has_manpower > 500
+				}
+			}
+		}
+	}
+	control_vijayawada = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_equipment = {
+				infantry_equipment > 100
+			}
+			has_manpower > 100
+			NOT = { has_country_flag = IND_order }
+		}
+
+		visible = {
+			tag = FRA
+			IND = {
+				is_subject_of = FRA
+				has_cosmetic_tag = IND_FRA_CAR
+				NOT = {
+					848 = { is_core_of = IND }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 75
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+			set_country_flag = IND_order
+		}
+
+		remove_effect = {
+			848 = { add_core_of = IND }
+			clr_country_flag = IND_order
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				modifier = {
+					add = 10
+					has_equipment = {
+						infantry_equipment > 300
+					}
+					has_manpower > 300
+				}
+			}
+		}
+	}
+	control_madurai = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_equipment = {
+				infantry_equipment > 1000
+			}
+			has_manpower > 1000
+			NOT = { has_country_flag = IND_order }
+		}
+
+		visible = {
+			tag = FRA
+			IND = {
+				is_subject_of = FRA
+				has_cosmetic_tag = IND_FRA_CAR
+				controls_state = 423
+				NOT = {
+					423 = { is_core_of = IND }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 180
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+			add_manpower = -1000
+			set_country_flag = IND_order
+		}
+
+		remove_effect = {
+			423 = { add_core_of = IND }
+			clr_country_flag = IND_order
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				modifier = {
+					add = 10
+					has_equipment = {
+						infantry_equipment > 1500
+					}
+					has_manpower > 1500
+				}
+			}
+		}
+	}
+	
+	control_southern_vijayanagara = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_equipment = {
+				infantry_equipment > 750
+			}
+			has_manpower > 750
+			NOT = { has_country_flag = IND_order }
+		}
+
+		visible = {
+			tag = FRA
+			IND = {
+				is_subject_of = FRA
+				has_cosmetic_tag = IND_FRA_CAR
+				#848 = { is_core_of = IND }
+				NOT = {
+					424 = { is_core_of = IND }
+					886 = { is_core_of = IND }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 120
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -750
+			}
+			add_manpower = -750
+			set_country_flag = IND_order
+		}
+
+		remove_effect = {
+			424 = { add_core_of = IND }
+			886 = { add_core_of = IND }
+			clr_country_flag = IND_order
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				modifier = {
+					add = 10
+					has_equipment = {
+						infantry_equipment > 1000
+					}
+					has_manpower > 1000
+				}
+			}
+		}
+	}
+	
+	control_northern_vijayanagara = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_equipment = {
+				infantry_equipment > 1000
+			}
+			has_manpower > 1000
+			NOT = { has_country_flag = IND_order }
+		}
+
+		visible = {
+			tag = FRA
+			IND = {
+				is_subject_of = FRA
+				has_cosmetic_tag = IND_FRA_CAR
+				#848 = { is_core_of = IND }
+				NOT = {
+					427 = { is_core_of = IND }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 180
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+			add_manpower = -1000
+			set_country_flag = IND_order
+		}
+
+		remove_effect = {
+			427 = { add_core_of = IND set_state_name = "Saint Constantine" }
+			set_province_name = { id = 8087 name = "Nouvelle-Dijon" }
+			IND = { set_capital = 427 }
+			clr_country_flag = IND_order
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				modifier = {
+					add = 10
+					has_equipment = {
+						infantry_equipment > 1500
+					}
+					has_manpower > 1500
+				}
+			}
+		}
+	}
+	
+	control_mysore = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_equipment = {
+				infantry_equipment > 1500
+			}
+			has_manpower > 1500
+			NOT = { has_country_flag = IND_order }
+		}
+
+		visible = {
+			tag = FRA
+			IND = {
+				is_subject_of = FRA
+				has_cosmetic_tag = IND_FRA_CAR
+				#886 = { is_core_of = IND }
+				controls_state = 425
+				controls_state = 885
+				NOT = {
+					425 = { is_core_of = IND }
+					885 = { is_core_of = IND }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 210
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1500
+			}
+			add_manpower = -1500
+			set_country_flag = IND_order
+		}
+
+		remove_effect = {
+			425 = { add_core_of = IND }
+			885 = { add_core_of = IND }
+			clr_country_flag = IND_order
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				modifier = {
+					add = 10
+					has_equipment = {
+						infantry_equipment > 2000
+					}
+					has_manpower > 2000
+				}
+			}
+		}
+	}
+	
+	control_bombay = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_equipment = {
+				infantry_equipment > 2000
+			}
+			has_manpower > 2000
+			NOT = { has_country_flag = IND_order }
+		}
+
+		visible = {
+			tag = FRA
+			IND = {
+				is_subject_of = FRA
+				has_cosmetic_tag = IND_FRA_CAR
+				#425 = { is_core_of = IND }
+				#427 = { is_core_of = IND }
+				controls_state = 429
+				NOT = {
+					429 = { is_core_of = IND }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 270
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -2000
+			}
+			add_manpower = -2000
+			set_country_flag = IND_order
+		}
+
+		remove_effect = {
+			429 = { add_core_of = IND set_state_name = "Nouvelle-Champagne" }
+			set_province_name = { id = 1349 name = "Nouvelle-Lyon" }
+			IND = { set_capital = 429 }
+			clr_country_flag = IND_order
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				modifier = {
+					add = 10
+					has_equipment = {
+						infantry_equipment > 3000
+					}
+					has_manpower > 3000
+				}
+			}
+		}
+	}
+	control_antevedi = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_equipment = {
+				infantry_equipment > 250
+			}
+			has_manpower > 250
+			NOT = { has_country_flag = IND_order }
+		}
+
+		visible = {
+			tag = FRA
+			IND = {
+				is_subject_of = FRA
+				has_cosmetic_tag = IND_FRA_CAR
+				controls_state = 847
+				NOT = {
+					847 = { is_core_of = IND }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 45
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -250
+			}
+			add_manpower = -250
+			set_country_flag = IND_order
+		}
+
+		remove_effect = {
+			847 = { add_core_of = IND }
+			clr_country_flag = IND_order
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				modifier = {
+					add = 10
+					has_equipment = {
+						infantry_equipment > 500
+					}
+					has_manpower > 500
+				}
+			}
+		}
+	}
+	control_valdetamil = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_equipment = {
+				infantry_equipment > 250
+			}
+			has_manpower > 250
+			NOT = { has_country_flag = IND_order }
+		}
+
+		visible = {
+			tag = FRA
+			IND = {
+				is_subject_of = FRA
+				has_cosmetic_tag = IND_FRA_CAR
+				controls_state = 846
+				NOT = {
+					846 = { is_core_of = IND }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 45
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -250
+			}
+			add_manpower = -250
+			set_country_flag = IND_order
+		}
+
+		remove_effect = {
+			846 = { add_core_of = IND }
+			clr_country_flag = IND_order
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				modifier = {
+					add = 10
+					has_equipment = {
+						infantry_equipment > 500
+					}
+					has_manpower > 500
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+
+state={
+	id=467
+	name="STATE_467"
+	manpower = 3027
+	
+	state_category = pastoral
+
+	history={
+		owner = REE
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			4872 5 
+		}
+		add_core_of = REE
+	}
+
+	provinces={
+	 1873 4426 4872 5119
+	}
+}

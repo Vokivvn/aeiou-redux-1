@@ -1,0 +1,23 @@
+
+state={
+	id=892
+	name="STATE_892" 
+	manpower = 3425
+	resources={
+		wood=4
+	}
+	
+	state_category = pastoral
+
+	history={
+		owner = PWN
+		add_core_of = PWN
+		buildings = {
+			infrastructure = 2
+		}
+	}
+
+	provinces={
+	    7840 3613 3855 12516 1683 7852
+	}
+}

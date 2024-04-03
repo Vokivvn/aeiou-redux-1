@@ -1,0 +1,3 @@
+﻿l_english:
+ CLAIM_BUTTON_TOOLTIP:0 "Claim [From.GetName]"
+ CLAIM_BUTTON_TOOLTIP_DELAYED:0 "We need §Y[?power_position] Political Power§! to claim [From.GetName]"

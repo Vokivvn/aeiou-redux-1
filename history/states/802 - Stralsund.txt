@@ -1,0 +1,30 @@
+
+state={
+	id=802
+	name="STATE_802"
+	manpower = 210301
+
+	state_category = rural
+	
+	resources = {
+	    horses = 2 
+	}
+
+	history={
+		owner = SWE
+		buildings = {
+			infrastructure = 3
+			9388 = {
+			    naval_base = 1 
+			}
+		}
+		victory_points = {
+			9388 1
+		}
+		add_core_of = SWE
+	}
+
+	provinces={
+		9388 3340
+	}
+}

@@ -1,0 +1,24 @@
+ideas = {
+    country = {
+        LAK_liberation_army = {
+            picture = LAK_native_lib_army
+
+            allowed = { always = no }
+
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+			political_power_gain = 0.10
+			army_org_factor = 0.05
+			surrender_limit = 0.08
+			targeted_modifier = {
+				tag = LOU
+				defense_bonus_against = 0.10
+				attack_bonus_against = 0.10
+				}
+			}
+        }
+	}
+}

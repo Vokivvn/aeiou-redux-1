@@ -1,0 +1,38 @@
+﻿capital = 7
+
+oob = "HOL_1886"
+
+set_research_slots = 3
+set_stability = 0.75
+set_war_support = 0
+
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+	melee = 1
+	basic_cavalry = 1
+}
+
+set_politics = {
+	ruling_party = conservative
+	elections_allowed = no
+}
+set_popularities = {
+	conservative = 100
+}
+add_to_array = { national_religion_array =  3 }
+add_to_array = { national_religion_array =  2 }
+
+set_convoys = 150
+set_stability = 0.75
+
+create_country_leader = {
+	name = "Jacob T. Creemer"
+	desc = "HOL_LEADER_DESC_CREMER"
+	picture = "Portrait_HOL_Jacob_Theodoor_Creemer.dds"
+	expire = "1965.1.1"
+	ideology = conservative_moderate
+	traits = {
+		
+	}
+}

@@ -1,0 +1,22 @@
+division_template = {
+	name = "Peasant Armed Battalion"
+
+	division_names_group = BRB_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+	}
+	priority = 2
+}
+
+units = {
+	division = {
+		name = "1st Boeren uit Liege"
+		location = 11519
+		division_template = "Peasant Armed Battalion"
+		start_experience_factor = 0.2
+	}
+}

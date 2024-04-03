@@ -1,0 +1,27 @@
+state = {
+	id = 930
+	name = "STATE_930"
+	manpower = 31892
+	resources = {
+	}
+	
+	state_category = pastoral
+
+	history = {
+		owner = SPW
+		add_core_of = SPW
+		buildings = {
+			infrastructure = 3
+			13271 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			13271 2
+		}
+
+	}
+	provinces = {
+		13271
+	}
+}

@@ -1,0 +1,32 @@
+defined_text = {
+	name = FRANobleSupportChange
+	text = {
+		trigger = { 
+			check_variable = { noble_support_temp < 0 }
+			multiply_temp_variable = { noble_support_temp = -1 }
+		}
+		localization_key = NOBLE_SUPPORT_LOST
+	}
+	text = {
+		localization_key = NOBLE_SUPPORT_GAINED
+	}
+}
+
+defined_text = {
+	name = FRANobleSupport
+	text = {
+		trigger = { 
+			check_variable = { noble_support < 0.4 }
+		}
+		localization_key = "[?noble_support|R1%]"
+	}
+	text = {
+		trigger = { 
+			check_variable = { noble_support > 0.6 }
+		}
+		localization_key = "[?noble_support|G1%]"
+	}
+	text = {
+		localization_key = "[?noble_support|Y1%]"
+	}
+}

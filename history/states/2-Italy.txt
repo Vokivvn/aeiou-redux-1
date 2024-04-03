@@ -1,0 +1,36 @@
+state= {
+	id=2
+	name="STATE_2" # Latium
+	manpower = 1082307
+	
+	state_category = city
+	
+	resources = {
+	    wood = 1
+		horses=3
+		gunpowder =3
+	}
+
+	history=
+	{
+		owner = PAP
+		victory_points = { 9904 40 }
+		victory_points = { 11846 5 }
+		buildings = {
+			infrastructure = 4
+			arms_factory = 2
+			industrial_complex = 1
+			11751 = {
+				naval_base = 3
+			}
+			11846 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = PAP
+	}
+
+	provinces= {
+		6862 9794 9904 11751 11846 3885
+ 	}
+}

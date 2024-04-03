@@ -1,0 +1,408 @@
+ideologies = {
+	
+	revolutionary = {
+		types = {
+			revolutionary_moderate = {
+			}
+			revolutionary_radical = {
+			}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_REVOLUTIONARY_1"
+			"FACTION_NAME_REVOLUTIONARY_2"
+			"FACTION_NAME_REVOLUTIONARY_3"
+			"FACTION_NAME_REVOLUTIONARY_4"
+			"FACTION_NAME_REVOLUTIONARY_5"
+			"FACTION_NAME_REVOLUTIONARY_6"
+		}
+		
+		color = { 190 50 50 }
+		
+		rules = {
+			can_declare_war_on_same_ideology = no
+			can_force_government = yes
+			can_send_volunteers = no
+			can_puppet = yes
+			can_lower_tension = no
+			can_guarantee_other_ideologies = no
+			can_join_factions = no
+		}
+		
+		can_host_government_in_exile = yes
+
+		ai_communist = yes
+	}
+
+	weitlingist = {
+		types = {
+			weitlingist_moderate = {
+			}
+			weitlingist_radical = {
+			}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_WEITLINGIST_1"
+			"FACTION_NAME_WEITLINGIST_2"
+			"FACTION_NAME_WEITLINGIST_3"
+			"FACTION_NAME_WEITLINGIST_4"
+			"FACTION_NAME_WEITLINGIST_5"
+			"FACTION_NAME_WEITLINGIST_6"
+		}
+		
+		color = { 125 50 50 }
+		
+		rules = {
+			can_declare_war_on_same_ideology = no
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_lower_tension = no
+			can_guarantee_other_ideologies = no
+			can_join_factions = no
+		}
+		
+		can_host_government_in_exile = yes
+
+		ai_communist = yes
+	}
+
+	communist = {
+		types = {
+			communist_moderate = {
+			}
+			communist_radical = {
+			}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_COMMUNIST_1"
+			"FACTION_NAME_COMMUNIST_2"
+			"FACTION_NAME_COMMUNIST_3"
+			"FACTION_NAME_COMMUNIST_4"
+			"FACTION_NAME_COMMUNIST_5"
+			"FACTION_NAME_COMMUNIST_6"
+		}
+		
+		color = { 150 15 15 }
+		
+		rules = {
+			can_declare_war_on_same_ideology = no
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_lower_tension = no
+			can_guarantee_other_ideologies = no
+			can_join_factions = no
+		}
+		
+		can_host_government_in_exile = yes
+
+		ai_communist = yes
+	}
+
+	socialist = {
+		types = {
+			socialist_moderate = {
+			}
+			socialist_radical = {
+			}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_SOCIALIST_1"
+			"FACTION_NAME_SOCIALIST_2"
+			"FACTION_NAME_SOCIALIST_3"
+			"FACTION_NAME_SOCIALIST_4"
+			"FACTION_NAME_SOCIALIST_5"
+			"FACTION_NAME_SOCIALIST_6"
+		}
+		
+		color = { 150 45 70 }
+		
+		rules = {
+			can_declare_war_on_same_ideology = no
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_lower_tension = no
+			can_guarantee_other_ideologies = no
+			can_join_factions = no
+		}
+		
+		can_host_government_in_exile = yes
+
+		ai_communist = yes
+	}
+
+	liberal = {
+		types = {
+			liberal_moderate = {
+			}
+			liberal_radical = {
+			}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_LIBERAL_1"
+			"FACTION_NAME_LIBERAL_2"
+			"FACTION_NAME_LIBERAL_3"
+			"FACTION_NAME_LIBERAL_4"
+			"FACTION_NAME_LIBERAL_5"
+			"FACTION_NAME_LIBERAL_6"
+		}
+		
+		color = { 180 140 90 }
+		
+		rules = {
+			can_declare_war_on_same_ideology = no
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_lower_tension = yes
+			can_guarantee_other_ideologies = no
+			can_join_factions = no
+		}
+		
+		can_host_government_in_exile = yes
+
+		ai_democratic = yes
+	}
+
+	centrist = {
+		types = {
+			centrist_moderate = {
+			}
+			centrist_radical = {
+			}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_CENTRIST_1"
+			"FACTION_NAME_CENTRIST_2"
+			"FACTION_NAME_CENTRIST_3"
+			"FACTION_NAME_CENTRIST_4"
+			"FACTION_NAME_CENTRIST_5"
+			"FACTION_NAME_CENTRIST_6"
+		}
+		
+		color = { 100 140 90 }
+		
+		rules = {
+			can_declare_war_on_same_ideology = no
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_lower_tension = yes
+			can_guarantee_other_ideologies = no
+			can_join_factions = no
+		}
+		
+		can_host_government_in_exile = yes
+
+		ai_democratic = yes
+	}
+
+	apolitical = {
+		types = {
+			apolitical_sub = {
+			}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_APOLITICAL_1"
+			"FACTION_NAME_APOLITICAL_2"
+			"FACTION_NAME_APOLITICAL_3"
+			"FACTION_NAME_APOLITICAL_4"
+			"FACTION_NAME_APOLITICAL_5"
+			"FACTION_NAME_APOLITICAL_6"
+		}
+		
+		color = { 150 150 150 }
+		
+		rules = {
+			can_declare_war_on_same_ideology = yes
+			can_force_government = no
+			can_send_volunteers = no
+			can_puppet = yes
+			can_lower_tension = no
+			can_guarantee_other_ideologies = no
+			can_join_factions = no
+		}
+		
+		can_host_government_in_exile = yes
+
+		ai_neutral = yes
+	}
+
+	conservative = {
+		types = {
+			conservative_moderate = {
+			}
+			conservative_radical = {
+			}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_CONSERVATIVE_1"
+			"FACTION_NAME_CONSERVATIVE_2"
+			"FACTION_NAME_CONSERVATIVE_3"
+			"FACTION_NAME_CONSERVATIVE_4"
+			"FACTION_NAME_CONSERVATIVE_5"
+			"FACTION_NAME_CONSERVATIVE_6"
+		}
+		
+		color = { 70 100 150 }
+		
+		rules = {
+			can_declare_war_on_same_ideology = no
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_lower_tension = yes
+			can_guarantee_other_ideologies = no
+			can_join_factions = no
+		}
+		
+		can_host_government_in_exile = yes
+
+		ai_neutral = yes
+	}
+
+	despotist = {
+		types = {
+			despotist_moderate = {
+			}
+			despotist_radical = {
+			}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_DESPOTIST_1"
+			"FACTION_NAME_DESPOTIST_2"
+			"FACTION_NAME_DESPOTIST_3"
+			"FACTION_NAME_DESPOTIST_4"
+			"FACTION_NAME_DESPOTIST_5"
+			"FACTION_NAME_DESPOTIST_6"
+		}
+		
+		color = { 125 125 125 }
+		
+		rules = {
+			can_declare_war_on_same_ideology = yes
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_lower_tension = no
+			can_guarantee_other_ideologies = no
+			can_join_factions = no
+		}
+		
+		can_host_government_in_exile = yes
+
+		ai_neutral = yes
+	}
+
+	absolutist = {
+		types = {
+			absolutist_moderate = {
+			}
+			absolutist_radical = {
+			}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_ABSOLUTIST_1"
+			"FACTION_NAME_ABSOLUTIST_2"
+			"FACTION_NAME_ABSOLUTIST_3"
+			"FACTION_NAME_ABSOLUTIST_4"
+			"FACTION_NAME_ABSOLUTIST_5"
+			"FACTION_NAME_ABSOLUTIST_6"
+		}
+		
+		color = { 70 70 70 }
+		
+		rules = {
+			can_declare_war_on_same_ideology = yes
+			can_force_government = yes
+			can_send_volunteers = no
+			can_puppet = yes
+			can_lower_tension = no
+			can_guarantee_other_ideologies = no
+			can_join_factions = no
+		}
+		
+		can_host_government_in_exile = yes
+
+		ai_fascist = yes
+	}
+
+	theocratic = {
+		types = {
+			theocratic_moderate = {
+			}
+			theocratic_radical = {
+			}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_THEOCRATIC_1"
+			"FACTION_NAME_THEOCRATIC_2"
+			"FACTION_NAME_THEOCRATIC_3"
+			"FACTION_NAME_THEOCRATIC_4"
+			"FACTION_NAME_THEOCRATIC_5"
+			"FACTION_NAME_THEOCRATIC_6"
+		}
+		
+		color = { 125 100 70 }
+		
+		rules = {
+			can_declare_war_on_same_ideology = yes
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_lower_tension = yes
+			can_guarantee_other_ideologies = no
+			can_join_factions = no
+		}
+		
+		can_host_government_in_exile = yes
+
+		ai_fascist = yes
+	}
+
+	totalitarian = {
+		types = {
+			totalitarian_moderate = {
+			}
+			totalitarian_radical = {
+			}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_TOTALITARIAN_1"
+			"FACTION_NAME_TOTALITARIAN_2"
+			"FACTION_NAME_TOTALITARIAN_3"
+			"FACTION_NAME_TOTALITARIAN_4"
+			"FACTION_NAME_TOTALITARIAN_5"
+			"FACTION_NAME_TOTALITARIAN_6"
+		}
+		
+		color = { 45 45 45 }
+		
+		rules = {
+			can_declare_war_on_same_ideology = yes
+			can_force_government = yes
+			can_send_volunteers = no
+			can_puppet = yes
+			can_lower_tension = no
+			can_guarantee_other_ideologies = no
+			can_join_factions = no
+		}
+		
+		can_host_government_in_exile = yes
+
+		ai_fascist = yes
+	}
+}

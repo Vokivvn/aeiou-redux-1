@@ -1,0 +1,24 @@
+
+state={
+	id=894
+	name="STATE_894" 
+	manpower = 5472
+	resources={
+		wood=2
+	}
+	
+	state_category = pastoral
+
+	history={
+		owner = SRC
+		add_core_of = SRC
+		buildings = {
+			infrastructure = 2
+		}
+		
+	}
+
+	provinces={
+	1767 10706 7880 4857 4863 7877 4759 7883 12603 1788
+	}
+}

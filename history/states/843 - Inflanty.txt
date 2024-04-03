@@ -1,0 +1,26 @@
+state={
+	id=843
+	name="STATE_843"
+	
+	resources = {
+	    wood = 4
+	}
+
+	history={
+		owner = COU
+		add_core_of = COU
+		victory_points = {
+			310 1 
+		}
+		buildings = {
+		    infrastructure = 2
+		}
+	}
+
+	provinces={
+		310 6459 9275 7482 11222 341 222 319 3298
+	}
+	manpower = 355214
+	buildings_max_level_factor = 1.000
+	state_category = rural
+}

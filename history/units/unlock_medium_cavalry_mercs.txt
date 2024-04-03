@@ -1,0 +1,28 @@
+﻿division_template = {
+	name = "Medium Cavalry Mercenaries"
+	is_locked = yes
+	
+	regiments = {
+		medium_cavalry   = { x = 0 y = 0 }
+		medium_cavalry   = { x = 0 y = 1 }
+		medium_cavalry   = { x = 0 y = 2 }
+		medium_cavalry   = { x = 0 y = 3 }
+		medium_cavalry   = { x = 0 y = 4 }
+		medium_cavalry   = { x = 1 y = 0 }
+		medium_cavalry   = { x = 1 y = 1 }
+		medium_cavalry   = { x = 1 y = 2 }
+		medium_cavalry   = { x = 1 y = 3 }
+		medium_cavalry   = { x = 1 y = 4 }
+		medium_cavalry   = { x = 2 y = 0 }
+		medium_cavalry   = { x = 2 y = 1 }
+		medium_cavalry   = { x = 2 y = 2 }
+		medium_cavalry   = { x = 2 y = 3 }
+		medium_cavalry   = { x = 2 y = 4 }
+		medium_cavalry   = { x = 3 y = 0 }
+		medium_cavalry   = { x = 3 y = 1 }
+		medium_cavalry   = { x = 3 y = 2 }
+		medium_cavalry   = { x = 3 y = 3 }
+		medium_cavalry   = { x = 3 y = 4 }
+	}
+	priority = 1
+}

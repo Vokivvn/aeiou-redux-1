@@ -1,0 +1,45 @@
+
+UNK_UNIFIED = {
+	color = rgb { 163 34 52 }
+	color_ui = rgb { 255 73 121 }
+}
+ITA_UNIFIED = {
+	color = rgb { 34 127 33 }
+	color_ui = rgb { 45 165 44 }
+}
+GER_UNIFIED = {
+	color = rgb { 128 128 128 }
+	color_ui = rgb { 115 115 115 }
+}
+ROM_UNIFIED = {
+	color = rgb { 209 187 89 }
+	color_ui = rgb { 255 255 120 }
+}
+SCA_UNIFIED = {
+	color = rgb { 47 58 124 }
+	color_ui = rgb { 41 132 214 }
+}
+CNT_UNIFIED = {
+	color = rgb { 245 117 66 }
+	color_ui = rgb { 245 117 66 }
+}
+SPN_SPR = {
+	color = rgb { 222 135 44 }
+	color_ui = rgb { 222 135 44 }
+}
+AQU_SPR_FRA_war = {
+	color = rgb { 222 135 44 }
+	color_ui = rgb { 222 135 44 }
+}
+AQU_SPR = {
+	color = rgb { 222 135 44 }
+	color_ui = rgb { 222 135 44 }
+}
+SPN_FRA = {
+	color = rgb { 51 68 144 }
+	color_ui = rgb { 51 68 144 }
+}
+YUC_NEWSPAIN = {
+	color = rgb { 165 80 10 }
+	color_ui = rgb { 165 80 10 }
+}

@@ -1,0 +1,4137 @@
+political_actions = {
+	integrate_ulster = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = UNK_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+		}
+
+		visible = {
+			has_cosmetic_tag = UNK_UNIFIED
+			FROM = {
+				NOT = {
+					119 = { is_core_of = ROOT }
+					794 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			add_stability = -0.05
+			119 = { add_core_of = ROOT }
+			794 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_scottish_lowlands = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = UNK_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+		}
+
+		visible = {
+			has_cosmetic_tag = UNK_UNIFIED
+			FROM = {
+				NOT = {
+					121 = { is_core_of = ROOT }
+					133 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			add_stability = -0.05
+			121 = { add_core_of = ROOT }
+			133 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_scottish_highlands = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = UNK_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+		}
+
+		visible = {
+			has_cosmetic_tag = UNK_UNIFIED
+			FROM = {
+				NOT = {
+					120 = { is_core_of = ROOT }
+					136 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			add_stability = -0.05
+			120 = { add_core_of = ROOT }
+			136 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_ireland = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = UNK_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+		}
+
+		visible = {
+			has_cosmetic_tag = UNK_UNIFIED
+			FROM = {
+				NOT = {
+					113 = { is_core_of = ROOT }
+					134 = { is_core_of = ROOT }
+					135 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			add_stability = -0.05
+			113 = { add_core_of = ROOT }
+			134 = { add_core_of = ROOT }
+			135 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_wales = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = UNK_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+		}
+
+		visible = {
+			has_cosmetic_tag = UNK_UNIFIED
+			FROM = {
+				NOT = {
+					122 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			add_stability = -0.05
+			122 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_northern_england = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = UNK_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+		}
+
+		visible = {
+			has_cosmetic_tag = UNK_UNIFIED
+			FROM = {
+				NOT = {
+					128 = { is_core_of = ROOT }
+					129 = { is_core_of = ROOT }
+					130 = { is_core_of = ROOT }
+					131 = { is_core_of = ROOT }
+					132 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			add_stability = -0.05
+			128 = { add_core_of = ROOT }
+			129 = { add_core_of = ROOT }
+			130 = { add_core_of = ROOT }
+			131 = { add_core_of = ROOT }
+			132 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_southern_england = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = UNK_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+		}
+
+		visible = {
+			has_cosmetic_tag = UNK_UNIFIED
+			FROM = {
+				NOT = {
+					123 = { is_core_of = ROOT }
+					125 = { is_core_of = ROOT }
+					126 = { is_core_of = ROOT }
+					127 = { is_core_of = ROOT }
+					338 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			add_stability = -0.05
+			123 = { add_core_of = ROOT }
+			125 = { add_core_of = ROOT }
+			126 = { add_core_of = ROOT }
+			127 = { add_core_of = ROOT }
+			338 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_naples = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = ITA_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+		}
+
+		visible = {
+			has_cosmetic_tag = ITA_UNIFIED
+			FROM = {
+				NOT = {
+					115 = { is_core_of = ROOT }
+					117 = { is_core_of = ROOT }
+					156 = { is_core_of = ROOT }
+					798 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.10
+		}
+
+		remove_effect = {
+			115 = { add_core_of = ROOT }
+			117 = { add_core_of = ROOT }
+			156 = { add_core_of = ROOT }
+			798 = { add_core_of = ROOT }
+			115 = { remove_core_of = NAP }
+			117 = { remove_core_of = NAP }
+			156 = { remove_core_of = NAP }
+			798 = { remove_core_of = NAP }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_papal_states = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = ITA_UNIFIED
+			has_political_power > 25
+			has_stability > 0.5
+		}
+
+		visible = {
+			has_cosmetic_tag = ITA_UNIFIED
+			FROM = {
+				NOT = {
+					2 = { is_core_of = ROOT }
+					157 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			2 = { add_core_of = ROOT }
+			157 = { add_core_of = ROOT }
+			2 = { remove_core_of = PAP }
+			157 = { remove_core_of = PAP }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_tuscany = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = ITA_UNIFIED
+			has_political_power > 25
+			has_stability > 0.5
+		}
+
+		visible = {
+			has_cosmetic_tag = ITA_UNIFIED
+			FROM = {
+				NOT = {
+					162 = { is_core_of = ROOT }
+					946 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			162 = { add_core_of = ROOT }
+			946 = { add_core_of = ROOT }
+			162 = { remove_core_of = TUS }
+			946 = { remove_core_of = TUS }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_venice = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = ITA_UNIFIED
+			has_political_power > 25
+			has_stability > 0.5
+		}
+
+		visible = {
+			has_cosmetic_tag = ITA_UNIFIED
+			FROM = {
+				NOT = {
+					160 = { is_core_of = ROOT }
+					797 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			160 = { add_core_of = ROOT }
+			797 = { add_core_of = ROOT }
+			160 = { remove_core_of = VNC }
+			797 = { remove_core_of = VNC }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_milan = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = ITA_UNIFIED
+			has_political_power > 15
+			has_stability > 0.5
+		}
+
+		visible = {
+			has_cosmetic_tag = ITA_UNIFIED
+			FROM = {
+				NOT = {
+					159 = { is_core_of = ROOT }
+					161 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 15
+
+		modifier = {
+			political_power_gain = -0.05
+			consumer_goods_factor = 0.02
+		}
+
+		remove_effect = {
+			159 = { add_core_of = ROOT }
+			161 = { add_core_of = ROOT }
+			159 = { remove_core_of = MIL }
+			161 = { remove_core_of = MIL }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_piemonte = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = ITA_UNIFIED
+			has_political_power > 15
+			has_stability > 0.5
+		}
+
+		visible = {
+			has_cosmetic_tag = ITA_UNIFIED
+			FROM = {
+				NOT = {
+					158 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 15
+
+		modifier = {
+			political_power_gain = -0.05
+			consumer_goods_factor = 0.02
+		}
+
+		remove_effect = {
+			158 = { add_core_of = ROOT }
+			158 = { remove_core_of = PIE }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_genoa = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = ITA_UNIFIED
+			has_political_power > 15
+			has_stability > 0.5
+		}
+
+		visible = {
+			has_cosmetic_tag = ITA_UNIFIED
+			FROM = {
+				NOT = {
+					795 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 15
+
+		modifier = {
+			political_power_gain = -0.05
+			consumer_goods_factor = 0.02
+		}
+
+		remove_effect = {
+			795 = { add_core_of = ROOT }
+			795 = { remove_core_of = GEN }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_corsica = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = ITA_UNIFIED
+			has_political_power > 25
+			has_stability > 0.5
+			FROM = {
+				controls_state = 1
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = ITA_UNIFIED
+			FROM = {
+				NOT = {
+					1 = { is_core_of = ROOT }
+				}
+				795 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.10
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			1 = { add_core_of = ROOT }
+			1 = { remove_core_of = GEN }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_sardegna = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = ITA_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 114
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = ITA_UNIFIED
+			FROM = {
+				NOT = {
+					114 = { is_core_of = ROOT }
+				}
+				795 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.10
+		}
+
+		remove_effect = {
+			add_stability = -0.05
+			114 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_savoy = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = ITA_UNIFIED
+			has_political_power > 25
+			has_stability > 0.5
+			FROM = {
+				controls_state = 735
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = ITA_UNIFIED
+			FROM = {
+				NOT = {
+					735 = { is_core_of = ROOT }
+				}
+				158 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.10
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			735 = { add_core_of = ROOT }
+			735 = { remove_core_of = PIE }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_nizza = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = ITA_UNIFIED
+			has_political_power > 25
+			has_stability > 0.5
+			FROM = {
+				controls_state = 796
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = ITA_UNIFIED
+			FROM = {
+				NOT = {
+					796 = { is_core_of = ROOT }
+				}
+				158 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.10
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			796 = { add_core_of = ROOT }
+			796 = { remove_core_of = PIE }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_south_tyrol = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = ITA_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 39
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = ITA_UNIFIED
+			FROM = {
+				NOT = {
+					39 = { is_core_of = ROOT }
+				}
+				160 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.10
+		}
+
+		remove_effect = {
+			add_stability = -0.05
+			39 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_venetian_territories = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = ITA_UNIFIED
+			has_political_power > 100
+			has_stability > 0.5
+			FROM = {
+				controls_state = 103
+				controls_state = 163
+				controls_state = 736
+				controls_state = 803
+				controls_state = 825
+				controls_state = 834
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = ITA_UNIFIED
+			FROM = {
+				NOT = {
+					163 = { is_core_of = ROOT }
+				}
+				160 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 100
+
+		modifier = {
+			political_power_gain = -0.3
+			consumer_goods_factor = 0.20
+		}
+
+		remove_effect = {
+			add_stability = -0.05
+			103 = { add_core_of = ROOT }
+			163 = { add_core_of = ROOT }
+			736 = { add_core_of = ROOT }
+			803 = { add_core_of = ROOT }
+			825 = { add_core_of = ROOT }
+			834 = { add_core_of = ROOT }
+			103 = { remove_core_of = VNC }
+			163 = { remove_core_of = VNC }
+			736 = { remove_core_of = VNC }
+			803 = { remove_core_of = VNC }
+			825 = { remove_core_of = VNC }
+			834 = { remove_core_of = VNC }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_malta = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = ITA_UNIFIED
+			has_political_power > 25
+			has_stability > 0.5
+			FROM = {
+				controls_state = 116
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = ITA_UNIFIED
+			FROM = {
+				NOT = {
+					116 = { is_core_of = ROOT }
+				}
+				115 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.10
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			116 = { add_core_of = ROOT }
+			116 = { remove_core_of = NAP }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_naples_tunisia = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = ITA_UNIFIED
+			has_political_power > 75
+			has_stability > 0.5
+			FROM = {
+				controls_state = 458
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = ITA_UNIFIED
+			FROM = {
+				NOT = {
+					458 = { is_core_of = ROOT }
+				}
+				115 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 75
+
+		modifier = {
+			political_power_gain = -0.3
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			add_stability = -0.05
+			458 = { add_core_of = ROOT }
+			458 = { remove_core_of = NAP }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_brandenburg = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 62
+				controls_state = 63
+				controls_state = 64
+				controls_state = 68
+				controls_state = 805
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					62 = { is_core_of = ROOT }
+					63 = { is_core_of = ROOT }
+					64 = { is_core_of = ROOT }
+					68 = { is_core_of = ROOT }
+					805 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			62 = { add_core_of = ROOT }
+			62 = { remove_core_of = BRD }
+			63 = { add_core_of = ROOT }
+			63 = { remove_core_of = BRD }
+			64 = { add_core_of = ROOT }
+			64 = { remove_core_of = BRD }
+			68 = { add_core_of = ROOT }
+			68 = { remove_core_of = BRD }
+			805 = { add_core_of = ROOT }
+			805 = { remove_core_of = BRD }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_saxony = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 25
+			has_stability > 0.5
+			FROM = {
+				controls_state = 65
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					65 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			65 = { add_core_of = ROOT }
+			65 = { remove_core_of = SAX }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_thuringia = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 25
+			has_stability > 0.5
+			FROM = {
+				controls_state = 60
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					60 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			60 = { add_core_of = ROOT }
+			60 = { remove_core_of = THU }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_mecklenburg = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 25
+			has_stability > 0.5
+			FROM = {
+				controls_state = 61
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					61 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			61 = { add_core_of = ROOT }
+			61 = { remove_core_of = MCK }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_lubeck = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 15
+			has_stability > 0.5
+			FROM = {
+				controls_state = 790
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					790 = { is_core_of = ROOT }
+				}
+				59 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 15
+
+		modifier = {
+			political_power_gain = -0.05
+			consumer_goods_factor = 0.02
+		}
+
+		remove_effect = {
+			790 = { add_core_of = ROOT }
+			790 = { remove_core_of = LBK }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_holstein = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 25
+			has_stability > 0.5
+			FROM = {
+				controls_state = 58
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					58 = { is_core_of = ROOT }
+				}
+				59 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			58 = { add_core_of = ROOT }
+			58 = { remove_core_of = SCH }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_hamburg = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 15
+			has_stability > 0.5
+			FROM = {
+				controls_state = 789
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					789 = { is_core_of = ROOT }
+				}
+				59 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 15
+
+		modifier = {
+			political_power_gain = -0.05
+			consumer_goods_factor = 0.02
+		}
+
+		remove_effect = {
+			789 = { add_core_of = ROOT }
+			789 = { remove_core_of = HAM }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_hannover = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 25
+			has_stability > 0.5
+			FROM = {
+				controls_state = 59
+				controls_state = 852
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					59 = { is_core_of = ROOT }
+					852 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			59 = { add_core_of = ROOT }
+			59 = { remove_core_of = HAN }
+			852 = { add_core_of = ROOT }
+			852 = { remove_core_of = HAN }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_bremen = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 15
+			has_stability > 0.5
+			FROM = {
+				controls_state = 851
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					851 = { is_core_of = ROOT }
+				}
+				833 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 15
+
+		modifier = {
+			political_power_gain = -0.05
+			consumer_goods_factor = 0.02
+		}
+
+		remove_effect = {
+			851 = { add_core_of = ROOT }
+			851 = { remove_core_of = BRE }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_oldenburg = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 15
+			has_stability > 0.5
+			FROM = {
+				controls_state = 833
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					833 = { is_core_of = ROOT }
+				}
+				56 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 15
+
+		modifier = {
+			political_power_gain = -0.05
+			consumer_goods_factor = 0.02
+		}
+
+		remove_effect = {
+			833 = { add_core_of = ROOT }
+			833 = { remove_core_of = OLD }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_munster = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 25
+			has_stability > 0.5
+			FROM = {
+				controls_state = 56
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					56 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			56 = { add_core_of = ROOT }
+			56 = { remove_core_of = MUN }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_kleve = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 25
+			has_stability > 0.5
+			FROM = {
+				controls_state = 836
+				controls_state = 850
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					836 = { is_core_of = ROOT }
+					850 = { is_core_of = ROOT }
+				}
+				56 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			836 = { add_core_of = ROOT }
+			836 = { remove_core_of = KLE }
+			850 = { add_core_of = ROOT }
+			850 = { remove_core_of = KLE }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_dortmund = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 15
+			has_stability > 0.5
+			FROM = {
+				controls_state = 853
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					853 = { is_core_of = ROOT }
+				}
+				56 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 15
+
+		modifier = {
+			political_power_gain = -0.05
+			consumer_goods_factor = 0.02
+		}
+
+		remove_effect = {
+			853 = { add_core_of = ROOT }
+			853 = { remove_core_of = DOR }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_mark = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 25
+			has_stability > 0.5
+			FROM = {
+				controls_state = 854
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					854 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			854 = { add_core_of = ROOT }
+			854 = { remove_core_of = MRK }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_kassel = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 25
+			has_stability > 0.5
+			FROM = {
+				controls_state = 55
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					55 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			55 = { add_core_of = ROOT }
+			55 = { remove_core_of = KSS }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_nassau = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 25
+			has_stability > 0.5
+			FROM = {
+				controls_state = 855
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					855 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			855 = { add_core_of = ROOT }
+			855 = { remove_core_of = NSS }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_julich = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 25
+			has_stability > 0.5
+			FROM = {
+				controls_state = 42
+				controls_state = 51
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					42 = { is_core_of = ROOT }
+					51 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			42 = { add_core_of = ROOT }
+			42 = { remove_core_of = JUL }
+			51 = { add_core_of = ROOT }
+			51 = { remove_core_of = JUL }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_cologne = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 15
+			has_stability > 0.5
+			FROM = {
+				controls_state = 844
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					844 = { is_core_of = ROOT }
+				}
+				51 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 15
+
+		modifier = {
+			political_power_gain = -0.05
+			consumer_goods_factor = 0.02
+		}
+
+		remove_effect = {
+			844 = { add_core_of = ROOT }
+			844 = { remove_core_of = KOL }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_trier = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 25
+			has_stability > 0.5
+			FROM = {
+				controls_state = 808
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					808 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			808 = { add_core_of = ROOT }
+			808 = { remove_core_of = TRI }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_frankfurt = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 15
+			has_stability > 0.5
+			FROM = {
+				controls_state = 849
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					849 = { is_core_of = ROOT }
+				}
+				855 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 15
+
+		modifier = {
+			political_power_gain = -0.05
+			consumer_goods_factor = 0.02
+		}
+
+		remove_effect = {
+			849 = { add_core_of = ROOT }
+			849 = { remove_core_of = FRK }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_wurzburg = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 25
+			has_stability > 0.5
+			FROM = {
+				controls_state = 54
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					54 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			54 = { add_core_of = ROOT }
+			54 = { remove_core_of = WRZ }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_ansbach = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 25
+			has_stability > 0.5
+			FROM = {
+				controls_state = 819
+				controls_state = 820
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					819 = { is_core_of = ROOT }
+					820 = { is_core_of = ROOT }
+				}
+				52 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			819 = { add_core_of = ROOT }
+			819 = { remove_core_of = ANB }
+			820 = { add_core_of = ROOT }
+			820 = { remove_core_of = ANB }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_nuremberg = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 15
+			has_stability > 0.5
+			FROM = {
+				controls_state = 818
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					818 = { is_core_of = ROOT }
+				}
+				819 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 15
+
+		modifier = {
+			political_power_gain = -0.05
+			consumer_goods_factor = 0.02
+		}
+
+		remove_effect = {
+			818 = { add_core_of = ROOT }
+			818 = { remove_core_of = NUR }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_baden = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 25
+			has_stability > 0.5
+			FROM = {
+				controls_state = 814
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					814 = { is_core_of = ROOT }
+				}
+				817 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			814 = { add_core_of = ROOT }
+			814 = { remove_core_of = BAD }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_wurttemberg = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 25
+			has_stability > 0.5
+			FROM = {
+				controls_state = 817
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					817 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			817 = { add_core_of = ROOT }
+			817 = { remove_core_of = WUR }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_ulm = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 15
+			has_stability > 0.5
+			FROM = {
+				controls_state = 57
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					57 = { is_core_of = ROOT }
+				}
+				817 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 15
+
+		modifier = {
+			political_power_gain = -0.05
+			consumer_goods_factor = 0.02
+		}
+
+		remove_effect = {
+			57 = { add_core_of = ROOT }
+			57 = { remove_core_of = ULM }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_bavaria = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 52
+				controls_state = 53
+				controls_state = 807
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					52 = { is_core_of = ROOT }
+					53 = { is_core_of = ROOT }
+					807 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			52 = { add_core_of = ROOT }
+			52 = { remove_core_of = BAV }
+			53 = { add_core_of = ROOT }
+			53 = { remove_core_of = BAV }
+			807 = { add_core_of = ROOT }
+			807 = { remove_core_of = BAV }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_schleswig = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 25
+			has_stability > 0.5
+			FROM = {
+				controls_state = 806
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					806 = { is_core_of = ROOT }
+				}
+				58 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			add_stability = -0.02
+			806 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_breisgau = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 25
+			has_stability > 0.5
+			FROM = {
+				controls_state = 813
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					813 = { is_core_of = ROOT }
+				}
+				814 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			813 = { add_core_of = ROOT }
+			813 = { remove_core_of = AUS }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_luxemburg = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 8
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					8 = { is_core_of = ROOT }
+				}
+				808 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			add_stability = -0.02
+			8 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_alsace = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 28
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					28 = { is_core_of = ROOT }
+				}
+				808 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			add_stability = -0.02
+			28 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_swedish_pommern = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 25
+			has_stability > 0.5
+			FROM = {
+				controls_state = 802
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					802 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			802 = { add_core_of = ROOT }
+			802 = { remove_core_of = SWE }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_danzig = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 75
+			has_stability > 0.5
+			FROM = {
+				controls_state = 5
+				controls_state = 85
+				controls_state = 86
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					5 = { is_core_of = ROOT }
+					85 = { is_core_of = ROOT }
+					86 = { is_core_of = ROOT }
+				}
+				63 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 75
+
+		modifier = {
+			political_power_gain = -0.3
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			add_stability = -0.05
+			5 = { add_core_of = ROOT }
+			85 = { add_core_of = ROOT }
+			86 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_prussia = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 188
+				controls_state = 763
+				controls_state = 788
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					188 = { is_core_of = ROOT }
+					763 = { is_core_of = ROOT }
+					788 = { is_core_of = ROOT }
+				}
+				85 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			188 = { add_core_of = ROOT }
+			188 = { remove_core_of = PRS }
+			763 = { add_core_of = ROOT }
+			763 = { remove_core_of = PRS }
+			788 = { add_core_of = ROOT }
+			788 = { remove_core_of = PRS }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_breslau = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 75
+			has_stability > 0.5
+			FROM = {
+				controls_state = 66
+				controls_state = 67
+				controls_state = 762
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					66 = { is_core_of = ROOT }
+					67 = { is_core_of = ROOT }
+					762 = { is_core_of = ROOT }
+				}
+				68 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 75
+
+		modifier = {
+			political_power_gain = -0.3
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			add_stability = -0.02
+			66 = { add_core_of = ROOT }
+			67 = { add_core_of = ROOT }
+			762 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_sudetenland = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 69
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					69 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			add_stability = -0.02
+			69 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_bohemia = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 100
+			has_stability > 0.5
+			FROM = {
+				controls_state = 9
+				controls_state = 74
+				controls_state = 75
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					9 = { is_core_of = ROOT }
+					74 = { is_core_of = ROOT }
+					75 = { is_core_of = ROOT }
+				}
+				69 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 100
+
+		modifier = {
+			political_power_gain = -0.4
+			consumer_goods_factor = 0.25
+		}
+
+		remove_effect = {
+			add_stability = -0.05
+			9 = { add_core_of = ROOT }
+			74 = { add_core_of = ROOT }
+			75 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_olsagebiet = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 75
+			has_stability > 0.5
+			FROM = {
+				controls_state = 72
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					72 = { is_core_of = ROOT }
+				}
+				74 = { is_core_of = ROOT }
+				762 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 75
+
+		modifier = {
+			political_power_gain = -0.3
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			add_stability = -0.02
+			72 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_tyrol = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 75
+			has_stability > 0.5
+			FROM = {
+				controls_state = 153
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					153 = { is_core_of = ROOT }
+				}
+				52 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 75
+
+		modifier = {
+			political_power_gain = -0.3
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			add_stability = -0.03
+			39 = { add_core_of = ROOT }
+			153 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_austria = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = GER_UNIFIED
+			has_political_power > 100
+			has_stability > 0.5
+			FROM = {
+				controls_state = 4
+				controls_state = 152
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = GER_UNIFIED
+			FROM = {
+				NOT = {
+					4 = { is_core_of = ROOT }
+					152 = { is_core_of = ROOT }
+				}
+				153 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 100
+
+		modifier = {
+			political_power_gain = -0.4
+			consumer_goods_factor = 0.25
+		}
+
+		remove_effect = {
+			add_stability = -0.10
+			4 = { add_core_of = ROOT }
+			152 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_wallachia = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = ROM_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 46
+				controls_state = 81
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = ROM_UNIFIED
+			FROM = {
+				NOT = {
+					46 = { is_core_of = ROOT }
+					81 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			46 = { add_core_of = ROOT }
+			46 = { remove_core_of = ROM }
+			81 = { add_core_of = ROOT }
+			81 = { remove_core_of = ROM }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_moldavia = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = ROM_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 78
+				controls_state = 79
+				controls_state = 80
+				controls_state = 766
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = ROM_UNIFIED
+			FROM = {
+				NOT = {
+					78 = { is_core_of = ROOT }
+					79 = { is_core_of = ROOT }
+					80 = { is_core_of = ROOT }
+					766 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			78 = { add_core_of = ROOT }
+			78 = { remove_core_of = MOL }
+			79 = { add_core_of = ROOT }
+			79 = { remove_core_of = MOL }
+			80 = { add_core_of = ROOT }
+			80 = { remove_core_of = MOL }
+			766 = { add_core_of = ROOT }
+			766 = { remove_core_of = MOL }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_dobrudja = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = ROM_UNIFIED
+			has_political_power > 25
+			has_stability > 0.5
+			FROM = {
+				controls_state = 77
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = ROM_UNIFIED
+			FROM = {
+				NOT = {
+					77 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			77 = { add_core_of = ROOT }
+			add_stability = -0.02
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_transylvania = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = ROM_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 76
+				controls_state = 84
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = ROM_UNIFIED
+			FROM = {
+				NOT = {
+					76 = { is_core_of = ROOT }
+					84 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			76 = { add_core_of = ROOT }
+			76 = { remove_core_of = ROM }
+			84 = { add_core_of = ROOT }
+			84 = { remove_core_of = ROM }
+			add_stability = -0.03
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_banat = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = ROM_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 82
+				controls_state = 83
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = ROM_UNIFIED
+			FROM = {
+				NOT = {
+					82 = { is_core_of = ROOT }
+					83 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			82 = { add_core_of = ROOT }
+			83 = { add_core_of = ROOT }
+			add_stability = -0.05
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_norway = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = SCA_UNIFIED
+			has_political_power > 75
+			has_stability > 0.5
+			FROM = {
+				controls_state = 110
+				controls_state = 142
+				controls_state = 144
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = SCA_UNIFIED
+			FROM = {
+				NOT = {
+					110 = { is_core_of = ROOT }
+					142 = { is_core_of = ROOT }
+					144 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 75
+
+		modifier = {
+			political_power_gain = -0.3
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			110 = { add_core_of = ROOT }
+			110 = { remove_core_of = NOR }
+			142 = { add_core_of = ROOT }
+			142 = { remove_core_of = NOR }
+			144 = { add_core_of = ROOT }
+			144 = { remove_core_of = NOR }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_denmark = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = SCA_UNIFIED
+			has_political_power > 75
+			has_stability > 0.5
+			FROM = {
+				controls_state = 37
+				controls_state = 99
+				controls_state = 806
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = SCA_UNIFIED
+			FROM = {
+				NOT = {
+					37 = { is_core_of = ROOT }
+					99 = { is_core_of = ROOT }
+					806 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 75
+
+		modifier = {
+			political_power_gain = -0.3
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			37= { add_core_of = ROOT }
+			37 = { remove_core_of = DEN }
+			99 = { add_core_of = ROOT }
+			99 = { remove_core_of = DEN }
+			806 = { add_core_of = ROOT }
+			806 = { remove_core_of = DEN }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_south_sweden = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = SCA_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 138
+				controls_state = 139
+				controls_state = 140
+				controls_state = 141
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = SCA_UNIFIED
+			FROM = {
+				NOT = {
+					138 = { is_core_of = ROOT }
+					139 = { is_core_of = ROOT }
+					140 = { is_core_of = ROOT }
+					141 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			138 = { add_core_of = ROOT }
+			138 = { remove_core_of = SWE }
+			139 = { add_core_of = ROOT }
+			139 = { remove_core_of = SWE }
+			140 = { add_core_of = ROOT }
+			140 = { remove_core_of = SWE }
+			141 = { add_core_of = ROOT }
+			141 = { remove_core_of = SWE }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_north_sweden = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = SCA_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 38
+				controls_state = 143
+				controls_state = 140
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = SCA_UNIFIED
+			FROM = {
+				NOT = {
+					38 = { is_core_of = ROOT }
+					143 = { is_core_of = ROOT }
+					666 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			38 = { add_core_of = ROOT }
+			38 = { remove_core_of = SWE }
+			143 = { add_core_of = ROOT }
+			143 = { remove_core_of = SWE }
+			666 = { add_core_of = ROOT }
+			666 = { remove_core_of = SWE }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_north_finland = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = SCA_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 148
+				controls_state = 213
+				controls_state = 722
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = SCA_UNIFIED
+			FROM = {
+				NOT = {
+					148 = { is_core_of = ROOT }
+					213 = { is_core_of = ROOT }
+					722 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			148 = { add_core_of = ROOT }
+			148 = { remove_core_of = SWE }
+			213 = { add_core_of = ROOT }
+			213 = { remove_core_of = SWE }
+			722 = { add_core_of = ROOT }
+			722 = { remove_core_of = SWE }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_west_finland = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = SCA_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 111
+				controls_state = 149
+				controls_state = 150
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = SCA_UNIFIED
+			FROM = {
+				NOT = {
+					111 = { is_core_of = ROOT }
+					149 = { is_core_of = ROOT }
+					150 = { is_core_of = ROOT }
+				}
+				148 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			111 = { add_core_of = ROOT }
+			111 = { remove_core_of = SWE }
+			149 = { add_core_of = ROOT }
+			149 = { remove_core_of = SWE }
+			150 = { add_core_of = ROOT }
+			150 = { remove_core_of = SWE }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_east_finland = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = SCA_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 146
+				controls_state = 147
+				controls_state = 215
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = SCA_UNIFIED
+			FROM = {
+				NOT = {
+					146 = { is_core_of = ROOT }
+					147 = { is_core_of = ROOT }
+					215 = { is_core_of = ROOT }
+				}
+				213 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			146 = { add_core_of = ROOT }
+			146 = { remove_core_of = SWE }
+			147 = { add_core_of = ROOT }
+			147 = { remove_core_of = SWE }
+			215 = { add_core_of = ROOT }
+			215 = { remove_core_of = SWE }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_nyen = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = SCA_UNIFIED
+			has_political_power > 25
+			has_stability > 0.5
+			FROM = {
+				controls_state = 195
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = SCA_UNIFIED
+			FROM = {
+				NOT = {
+					195 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			add_stability = -0.02
+			195 = { add_core_of = ROOT }
+			195 = { remove_core_of = SWE }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_swedish_islands = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = SCA_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 124
+				controls_state = 145
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = SCA_UNIFIED
+			FROM = {
+				NOT = {
+					124 = { is_core_of = ROOT }
+					145 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			124 = { add_core_of = ROOT }
+			124 = { remove_core_of = SWE }
+			145 = { add_core_of = ROOT }
+			145 = { remove_core_of = SWE }
+			add_stability = -0.03
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_swedish_estonia = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = SCA_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 13
+				controls_state = 191
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = SCA_UNIFIED
+			FROM = {
+				NOT = {
+					13 = { is_core_of = ROOT }
+					191 = { is_core_of = ROOT }
+				}
+				111 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			13 = { add_core_of = ROOT }
+			13 = { remove_core_of = SWE }
+			191 = { add_core_of = ROOT }
+			191 = { remove_core_of = SWE }
+			add_stability = -0.05
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_iceland = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = SCA_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 100
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = SCA_UNIFIED
+			FROM = {
+				NOT = {
+					100 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			100 = { add_core_of = ROOT }
+			100 = { remove_core_of = DEN }
+			add_stability = -0.02
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_danish_islands = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = SCA_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 101
+				controls_state = 337
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = SCA_UNIFIED
+			FROM = {
+				NOT = {
+					101 = { is_core_of = ROOT }
+					337 = { is_core_of = ROOT }
+				}
+				100 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			101 = { add_core_of = ROOT }
+			101 = { remove_core_of = DEN }
+			337 = { add_core_of = ROOT }
+			337 = { remove_core_of = DEN }
+			add_stability = -0.05
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_costa_rica = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = CNT_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 316
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = CNT_UNIFIED
+			FROM = {
+				NOT = {
+					316 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			316 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_nicaragua = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = CNT_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 317
+				controls_state = 919
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = CNT_UNIFIED
+			FROM = {
+				NOT = {
+					317 = { is_core_of = ROOT }
+					919 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			317 = { add_core_of = ROOT }
+			919 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_honduras = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = CNT_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 312
+				controls_state = 921
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = CNT_UNIFIED
+			FROM = {
+				NOT = {
+					312 = { is_core_of = ROOT }
+					921 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			312 = { add_core_of = ROOT }
+			921 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_el_salvador = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = CNT_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 314
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = CNT_UNIFIED
+			FROM = {
+				NOT = {
+					314 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			314 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_guatemala = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = CNT_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 313
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = CNT_UNIFIED
+			FROM = {
+				NOT = {
+					313 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			313 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_los_altos = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = CNT_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 917
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = CNT_UNIFIED
+			FROM = {
+				NOT = {
+					917 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			917 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_chiapas = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = CNT_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 475
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = CNT_UNIFIED
+			FROM = {
+				NOT = {
+					475 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			475 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_tapachula = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = CNT_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 918
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = CNT_UNIFIED
+			FROM = {
+				NOT = {
+					918 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			918 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_puerto_barrios = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = CNT_UNIFIED
+			has_political_power > 50
+			has_stability > 0.5
+			FROM = {
+				controls_state = 920
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = CNT_UNIFIED
+			FROM = {
+				NOT = {
+					920 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			920 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_balize = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = CNT_UNIFIED
+			has_political_power > 75
+			has_stability > 0.5
+			FROM = {
+				controls_state = 311
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = CNT_UNIFIED
+			FROM = {
+				NOT = {
+					311 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 75
+
+		modifier = {
+			political_power_gain = -0.3
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			311 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	integrate_panama = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_cosmetic_tag = CNT_UNIFIED
+			has_political_power > 75
+			has_stability > 0.5
+			FROM = {
+				controls_state = 304
+			}
+		}
+
+		visible = {
+			has_cosmetic_tag = CNT_UNIFIED
+			FROM = {
+				NOT = {
+					304 = { is_core_of = ROOT }
+					685 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 75
+
+		modifier = {
+			political_power_gain = -0.3
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			304 = { add_core_of = ROOT }
+			685 = { add_core_of = ROOT }
+			add_stability = -0.05
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	
+	integrate_south_cherokee = {
+
+		icon = generic_form_nation
+
+
+		visible = {
+			tag = NEN
+			FROM = {
+				controls_state = 368
+				NOT = {
+					368 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 80
+
+		cost = 35
+
+		modifier = {
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			add_stability = -0.01
+			368 = { add_core_of = ROOT set_state_name = "Tennessee" }
+			set_province_name = { id = 12501 name = "Nashville" }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+}

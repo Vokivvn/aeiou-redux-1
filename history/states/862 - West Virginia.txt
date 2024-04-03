@@ -1,0 +1,23 @@
+
+state={
+	id=862 #Take me home to the place where i belong - Filippos 
+	name="STATE_862" 
+	manpower = 14224
+	resources={
+		wood=2
+	}
+	
+	state_category = pastoral
+
+	history={
+		owner = SHW
+		add_core_of = SHW
+		buildings = {
+			infrastructure = 2
+		}	
+	}
+
+	provinces={
+	  4627 6971 10441 3975 801 3941 7588 7646 7466
+	}
+}

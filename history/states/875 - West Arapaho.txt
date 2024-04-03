@@ -1,0 +1,23 @@
+state={
+	id=875
+	name="STATE_875"
+	
+    resources={
+		horses=1
+	}
+
+	history={
+		owner = APH
+		add_core_of = APH
+		buildings = {
+			infrastructure = 2
+		}
+	}
+
+	provinces={
+      4668 4865 10662 1740 7764 7818 10573 7821 4742
+	}
+	manpower = 9819
+	buildings_max_level_factor = 1.000
+	state_category = pastoral
+}

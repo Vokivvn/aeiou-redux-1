@@ -1,0 +1,30 @@
+
+state={
+	id=392
+	name="STATE_392"
+	manpower = 534700
+	
+	state_category = town
+
+	resources={
+		steel=1
+		iron=2
+		wood=1
+	}
+
+	history={
+		owner = LOU
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = LOU
+		victory_points = {
+			1770 3 
+		}
+	}
+
+	provinces={
+		1586 1678 1770 1831 4691 7306 7458 7539 9892 9910 10478 10666 11788 11971 12418 12646 
+	}
+}

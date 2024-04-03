@@ -1,0 +1,35 @@
+
+state={
+	id=41
+	name="STATE_41" # Madrid
+	manpower = 1438805
+
+	state_category = city
+
+	resources={
+		iron=1 # was: 2
+		fabric=1
+		horses=5
+		gunpowder=3
+	}
+
+	history={
+		owner = SPR
+		victory_points = {
+			3938 30
+		}
+		victory_points = {
+			858 1
+		}
+		buildings = {
+			infrastructure = 4
+			arms_factory = 2
+			industrial_complex = 2
+		}
+		add_core_of = SPR
+	}
+
+	provinces={
+		858 896 939 977 3794 3845 3858 3938 3986 6841 6914 6993 9767 9785 9933 11820 11870 
+	}
+}

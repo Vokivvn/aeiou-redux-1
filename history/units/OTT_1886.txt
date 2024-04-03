@@ -1,0 +1,114 @@
+division_template = {
+	name = "Royal Ottoman Janissaries Battalion"
+
+	division_names_group = OTT_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+		line_infantry = { x = 0 y = 4 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+		line_infantry = { x = 1 y = 2 }
+		line_infantry = { x = 1 y = 3 }
+		line_infantry = { x = 1 y = 4 }
+	}
+	priority = 1
+}
+division_template = {
+	name = "Royal Ottoman Cavalry Division"
+
+	division_names_group = OTT_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 0 y = 2 }
+		medium_cavalry = { x = 0 y = 3 }
+		medium_cavalry = { x = 0 y = 4 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+		medium_cavalry = { x = 1 y = 2 }
+		medium_cavalry = { x = 1 y = 3 }
+		medium_cavalry = { x = 1 y = 4 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Ottoman Warrior Brigade"
+
+	division_names_group = OTT_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Royal Ottoman Janissaries Battalion"
+		location = 11747
+		division_template = "Royal Ottoman Janissaries Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Ottoman Janissaries Battalion"
+		location = 12473
+		division_template = "Royal Ottoman Janissaries Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3rd Royal Ottoman Janissaries Battalion"
+		location = 7011
+		division_template = "Royal Ottoman Janissaries Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4th Royal Ottoman Janissaries Battalion"
+		location = 8085
+		division_template = "Royal Ottoman Janissaries Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Ottoman Cavalry Division"
+		location = 3870
+		division_template = "Royal Ottoman Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Ottoman Cavalry Division"
+		location = 4111
+		division_template = "Royal Ottoman Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Ottoman Warrior Brigade"
+		location = 11999
+		division_template = "Royal Ottoman Warrior Brigade"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Ottoman Warrior Brigade"
+		location = 12758
+		division_template = "Royal Ottoman Warrior Brigade"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3rd Royal Ottoman Warrior Brigade"
+		location = 2089
+		division_template = "Royal Ottoman Warrior Brigade"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4th Royal Ottoman Warrior Brigade"
+		location = 6935
+		division_template = "Royal Ottoman Warrior Brigade"
+		start_experience_factor = 0.3
+	}
+}

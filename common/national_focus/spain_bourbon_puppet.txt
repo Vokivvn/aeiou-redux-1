@@ -1,0 +1,507 @@
+
+focus_tree = {
+	id = Spain_bourbon_puppet
+	
+	country = {
+		factor = 0
+		
+	}
+	default = no
+	continuous_focus_position = { x = 50 y = 2000 }
+
+
+	###########
+	#  Start  #
+	###########
+	
+	focus = { 
+		id = SPR_dawn_of_bourbons
+		icon = GFX_focus_focus_fra_orleans_restoration
+		cost = 60
+		
+		x = 4
+		y = 0
+		
+		completion_reward = {
+			add_stability = 0.10
+			add_political_power = 50
+			add_ideas = spr_idea_strangers_in_power
+		}
+	}
+	
+	focus = { 
+		id = SPR_redistribute_royal_honours
+		icon = GFX_AUS_focus_Threats_Actions
+		cost = 40
+		
+		prerequisite = { focus = SPR_dawn_of_bourbons }
+		relative_position_id = SPR_dawn_of_bourbons
+	
+		x = -2
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+	
+	focus = { 
+		id = SPR_reorganize_reconstruction_units
+		icon = GFX_goal_generic_construction2
+		cost = 60
+		
+		prerequisite = { focus = SPR_dawn_of_bourbons }
+		relative_position_id = SPR_dawn_of_bourbons
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = spr_idea_ongoing_reconstruction01 }
+				swap_ideas = {
+					remove_idea = spr_idea_ongoing_reconstruction01
+					add_idea = spr_idea_ongoing_reconstruction11
+				}
+			} else = {
+				swap_ideas = {
+					remove_idea = spr_idea_ongoing_reconstruction
+					add_idea = spr_idea_ongoing_reconstruction10
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_form_francophile_league
+		icon = GFX_focus_fra_devalue_the_franc
+		cost = 40
+		
+		prerequisite = { focus = SPR_dawn_of_bourbons }
+		relative_position_id = SPR_dawn_of_bourbons
+	
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = spr_idea_ongoing_reconstruction10 }
+				swap_ideas = {
+					remove_idea = spr_idea_ongoing_reconstruction10
+					add_idea = spr_idea_ongoing_reconstruction11
+				}
+			} else = {
+				swap_ideas = {
+					remove_idea = spr_idea_ongoing_reconstruction
+					add_idea = spr_idea_ongoing_reconstruction01
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_radicalize_social_reforms
+		icon = GFX_AUS_focus_Promises_People
+		cost = 35
+		
+		prerequisite = { focus = SPR_redistribute_royal_honours }
+		prerequisite = { focus = SPR_reorganize_reconstruction_units }
+		prerequisite = { focus = SPR_form_francophile_league }
+		relative_position_id = SPR_reorganize_reconstruction_units
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = spr_idea_ongoing_reconstruction11
+				add_idea = spr_idea_ongoing_reconstruction2
+			}
+		}
+	}
+	
+	#Economy
+	
+	focus = { 
+		id = SPR_strength_through_decree
+		icon = GFX_SPR_Popular_laws
+		cost = 40
+		
+		prerequisite = { focus = SPR_radicalize_social_reforms }
+		relative_position_id = SPR_radicalize_social_reforms
+	
+		x = -2
+		y = 1
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = { 
+		id = SPR_empower_burgeois_chaste
+		icon = GFX_generic_noble_support
+		cost = 40
+		
+		prerequisite = { focus = SPR_strength_through_decree }
+		relative_position_id = SPR_strength_through_decree
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.05
+			swap_ideas = {
+				remove_idea = spr_idea_ongoing_reconstruction2
+				add_idea = spr_idea_ongoing_reconstruction3
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_silence_opposition
+		icon = GFX_goal_generic_political_pressure
+		cost = 40
+		
+		prerequisite = { focus = SPR_strength_through_decree }
+		relative_position_id = SPR_strength_through_decree
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = spr_idea_strangers_in_power
+				add_idea = spr_idea_strangers_in_power1
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_encourage_franco_spanish_migration
+		icon = GFX_goal_generic_national_unity
+		cost = 40
+		
+		prerequisite = { focus = SPR_empower_burgeois_chaste }
+		prerequisite = { focus = SPR_silence_opposition }
+		relative_position_id = SPR_empower_burgeois_chaste
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			FRA = {
+				add_ideas = {
+					spr_idea_franco_spanish_migration
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_finish_off_reconstruction_era
+		icon = GFX_focus_generic_industry_3
+		cost = 40
+		
+		prerequisite = { focus = SPR_encourage_franco_spanish_migration }
+		relative_position_id = SPR_encourage_franco_spanish_migration
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			remove_ideas = spr_idea_ongoing_reconstruction3
+		}
+	}
+	
+	focus = { 
+		id = SPR_reap_benefits_of_industrialization
+		icon = GFX_AUS_bigger_taxes
+		cost = 40
+		
+		prerequisite = { focus = SPR_encourage_franco_spanish_migration }
+		relative_position_id = SPR_encourage_franco_spanish_migration
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_ideas = hol_ongoing_industrialisation 
+			FRA = {
+				add_ideas = hol_ongoing_industrialisation 
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_cooperate_with_north
+		icon = GFX_goal_generic_improve_relations
+		cost = 40
+		
+		prerequisite = { focus = SPR_finish_off_reconstruction_era }
+		relative_position_id = SPR_finish_off_reconstruction_era
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_opinion_modifier = {
+				target = FRA
+				modifier = SPR_cooperate_with_north 
+			}
+			FRA = {
+				add_opinion_modifier = {
+					target = SPR
+					modifier = SPR_cooperate_with_north 
+				}
+				swap_ideas = {
+					remove_idea = spr_idea_franco_spanish_migration
+					add_idea = spr_idea_franco_spanish_migration1
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_portuguese_show_of_force
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 40
+		
+		prerequisite = { focus = SPR_finish_off_reconstruction_era }
+		prerequisite = { focus = SPR_reap_benefits_of_industrialization }
+		relative_position_id = SPR_finish_off_reconstruction_era
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+		}
+	}
+	
+	focus = { 
+		id = SPR_crack_down_on_loyalist_guerrillas
+		icon = GFX_focus_mex_arrest_general_cedillo
+		cost = 40
+		
+		prerequisite = { focus = SPR_reap_benefits_of_industrialization }
+		relative_position_id = SPR_reap_benefits_of_industrialization
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+			army_experience = -10
+		}
+	}
+	
+	focus = { 
+		id = SPR_french_military_advisory_corp
+		icon = GFX_focus_generic_military_mission
+		cost = 40
+		
+		prerequisite = { focus = SPR_cooperate_with_north }
+		prerequisite = { focus = SPR_portuguese_show_of_force }
+		prerequisite = { focus = SPR_crack_down_on_loyalist_guerrillas }
+		relative_position_id = SPR_portuguese_show_of_force
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+		}
+	}
+	
+	focus = { 
+		id = SPR_dual_army_marches_on
+		icon = GFX_focus_generic_little_entente
+		cost = 40
+		
+		prerequisite = { focus = SPR_french_military_advisory_corp }
+		relative_position_id = SPR_french_military_advisory_corp
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			FRA = {
+				swap_ideas = {
+					remove_idea = spr_idea_franco_spanish_migration1
+					add_idea = spr_idea_franco_spanish_migration2
+				}
+			}
+		}
+	}
+	
+	#Politics
+	
+	focus = { 
+		id = SPR_king_alfonso_crushes_absolutism
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		cost = 50
+		
+		prerequisite = { focus = SPR_radicalize_social_reforms }
+		relative_position_id = SPR_radicalize_social_reforms
+	
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			add_political_power = 100
+			country_event = SPRAlfonso.1
+		}
+	}
+	
+	focus = { 
+		id = SPR_liberal_figurehead
+		icon = GFX_AUS_focus_Present_Democracy
+		cost = 10
+		
+		available = {
+			always = no
+		}
+		
+		prerequisite = { focus = SPR_king_alfonso_crushes_absolutism }
+		relative_position_id = SPR_king_alfonso_crushes_absolutism
+		mutually_exclusive = { focus = SPR_appease_conservatives focus = SPR_appoint_afrancesado }
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			remove_hog = yes
+			set_temp_variable = { hog_name = 2005 }
+			set_variable = { hog_name = hog_name }
+			custom_effect_tooltip = NEW_HOG_TOOLTIP
+			set_variable = { hog_party = 4 }
+			set_variable = { hog_loyalty = 0.7500 }
+			set_variable = { hog_exp = 0 }
+			set_variable = { hog_political_skill = 0 }
+			set_variable = { hog_unity_skill = 0.025 }
+			set_variable = { hog_industrial_skill = 0 }
+			set_variable = { hog_military_skill = 0 }
+			set_country_flag = has_hog
+		}
+	}
+	
+	focus = { 
+		id = SPR_appease_conservatives
+		icon = GFX_AUS_focus_Presents_Cajoling
+		cost = 10
+		
+		available = {
+			always = no
+		}
+		
+		prerequisite = { focus = SPR_king_alfonso_crushes_absolutism }
+		relative_position_id = SPR_king_alfonso_crushes_absolutism
+		mutually_exclusive = { focus = SPR_appoint_afrancesado focus = SPR_liberal_figurehead }
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			remove_hog = yes
+			set_temp_variable = { hog_name = 2006 }
+			set_variable = { hog_name = hog_name }
+			custom_effect_tooltip = NEW_HOG_TOOLTIP
+			set_variable = { hog_party = 3 }
+			set_variable = { hog_loyalty = 0.5500 }
+			set_variable = { hog_exp = 0 }
+			set_variable = { hog_political_skill = 0 }
+			set_variable = { hog_unity_skill = 0 }
+			set_variable = { hog_industrial_skill = 0.025 }
+			set_variable = { hog_military_skill = 0 }
+			set_country_flag = has_hog
+		}
+	}
+	
+	focus = { 
+		id = SPR_appoint_afrancesado
+		icon = GFX_focus_generic_monarchy_2
+		cost = 10
+		
+		available = {
+			always = no
+		}
+		
+		prerequisite = { focus = SPR_king_alfonso_crushes_absolutism }
+		relative_position_id = SPR_king_alfonso_crushes_absolutism
+		mutually_exclusive = { focus = SPR_appease_conservatives focus = SPR_liberal_figurehead }
+	
+		x = 3
+		y = 1
+		
+		completion_reward = {
+			remove_hog = yes
+			set_temp_variable = { hog_name = 2007 }
+			set_variable = { hog_name = hog_name }
+			custom_effect_tooltip = NEW_HOG_TOOLTIP
+			set_variable = { hog_party = 2 }
+			set_variable = { hog_loyalty = 0.9000 }	
+			set_variable = { hog_political_skill = 0.025 }
+			set_country_flag = has_hog
+		}
+	}
+	
+	focus = { 
+		id = SPR_completely_eradicate_inquisition
+		icon = GFX_focus_mex_triumph_over_the_cristeros
+		cost = 50
+		
+		prerequisite = { focus = SPR_liberal_figurehead focus = SPR_appease_conservatives focus = SPR_appoint_afrancesado }
+		relative_position_id = SPR_appease_conservatives
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_stability = -0.10
+			add_timed_idea = {
+				idea = spr_idea_eradicated_inquisition
+				days = 730
+			}
+			if = {
+				LIMIT = {
+					NOT = { has_country_flag = Ended_Spanish_Inquisition }
+				}
+				add_to_variable = { spr_var_catholic_influence = -0.05 }
+				set_country_flag = Ended_Spanish_Inquisition
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_valencia_speach
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 50
+		
+		prerequisite = { focus = SPR_completely_eradicate_inquisition }
+		relative_position_id = SPR_completely_eradicate_inquisition
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_war_support = 0.10
+		}
+	}
+	
+	focus = { 
+		id = SPR_invisible_grip
+		icon = GFX_SPR_alienated_peasants
+		cost = 50
+		
+		prerequisite = { focus = SPR_valencia_speach }
+		relative_position_id = SPR_valencia_speach
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+		}
+	}
+	
+}	

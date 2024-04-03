@@ -1,0 +1,316 @@
+operations = {
+
+    #Reestablish influence in fallen Centroamerica
+	rally_SPE = {
+
+		icon = oppression
+
+		allowed = {
+			tag = SPF
+			NOT = { has_global_flag = SPR_colonies_ready }
+		}
+		
+		visible = {
+			tag = SPF
+			NOT = { has_global_flag = SPR_colonies_ready }
+		}
+		
+		cancel_trigger = {
+			has_global_flag = SPR_colonies_ready
+		}
+
+		days_remove = 90
+
+		cost = 75
+		
+		complete_effect = {
+			SPF = {
+				white_peace = SPE
+				set_autonomy = {
+					target = SPE
+					autonomy_state =  autonomy_colony
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 2
+				has_political_power > 75
+			}
+		}
+	}
+	
+	rally_SPW = {
+
+		icon = oppression
+
+		allowed = {
+			tag = SPF
+			NOT = { has_global_flag = SPR_colonies_ready }
+		}
+		
+		visible = {
+			tag = SPF
+			NOT = { has_global_flag = SPR_colonies_ready }
+			CUB = {
+				exists = no
+			}
+		}
+		
+		cancel_trigger = {
+			has_global_flag = SPR_colonies_ready
+		}
+
+		days_remove = 45
+
+		cost = 50
+		
+		complete_effect = {
+			SPF = {
+				white_peace = SPW
+				set_autonomy = {
+					target = SPW
+					autonomy_state =  autonomy_colony
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 2
+				has_political_power > 50
+			}
+		}
+	}
+	rally_YUC = {
+
+		icon = oppression
+
+		allowed = {
+			tag = SPF
+			NOT = { has_global_flag = SPR_colonies_ready }
+		}
+		
+		visible = {
+			tag = SPF
+			NOT = { has_global_flag = SPR_colonies_ready }
+		}
+		
+		cancel_trigger = {
+			has_global_flag = SPR_colonies_ready
+		}
+
+		days_remove = 90
+
+		cost = 75
+		
+		remove_effect = {
+			SPF = {
+				white_peace = YUC
+				set_autonomy = {
+					target = YUC
+					autonomy_state =  autonomy_colony
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 2
+				has_political_power > 75
+			}
+		}
+	}
+	rally_SPN = {
+
+		icon = oppression
+
+		allowed = {
+			tag = SPF
+			NOT = { has_global_flag = SPR_colonies_ready }
+		}
+		
+		visible = {
+			tag = SPF
+			NOT = { has_global_flag = SPR_colonies_ready }
+		}
+		
+		cancel_trigger = {
+			has_global_flag = SPR_colonies_ready
+		}
+
+		days_remove = 180
+
+		cost = 100
+		
+		remove_effect = {
+			SPF = {
+				white_peace = SPN
+				set_autonomy = {
+					target = SPN
+					autonomy_state =  autonomy_colony
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 2
+				has_political_power > 100
+			}
+		}
+	}
+	chaos_in_centroamerica = {
+	   icon = border_war
+	   allowed = {
+        original_tag = SPR
+    }
+	 visible = {
+		has_global_flag = CACollapse
+	}
+	fire_only_once = yes
+	ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				date > 1939.1.1
+				factor = 0
+			}
+		}
+	cost = 50
+	days_remove = 1
+	complete_effect = {
+	    country_event = SPRCentroamerica.1
+		}
+	}
+	negotiate_costa_rica = {
+	   icon = border_war
+	  allowed = {
+        original_tag = SPR
+    }
+	 visible = {
+		has_global_flag = SPRCentroamericancake
+		NOT = { has_global_flag = ongoing_negotiations }
+		country_exists = COS
+	}
+	fire_only_once = yes
+	ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				date > 1939.1.1
+				factor = 0
+			}
+		}
+	cost = 50
+	days_remove = 1
+	complete_effect = {
+	    country_event = SPRCentroamerica.2
+		}
+	}
+	negotiate_nicaragua = {
+	   icon = border_war
+	  allowed = {
+        original_tag = SPR
+    }
+	 visible = {
+		has_global_flag = SPRCentroamericancake
+		NOT = { has_global_flag = ongoing_negotiations }
+		country_exists = NIC
+	}
+	fire_only_once = yes
+	ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				date > 1939.1.1
+				factor = 0
+			}
+		}
+	cost = 50
+	days_remove = 1
+	complete_effect = {
+	    country_event = SPRCentroamerica.11
+		}
+	}
+	negotiate_honduras = {
+	   icon = border_war
+	  allowed = {
+        original_tag = SPR
+    }
+	 visible = {
+		has_global_flag = SPRCentroamericancake
+		NOT = { has_global_flag = ongoing_negotiations }
+		country_exists = HON
+	}
+	fire_only_once = yes
+	ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				date > 1939.1.1
+				factor = 0
+			}
+		}
+	cost = 50
+	days_remove = 1
+	complete_effect = {
+	    country_event = SPRCentroamerica.20
+		}
+	}
+	negotiate_elsalvador = {
+	   icon = border_war
+	  allowed = {
+        original_tag = SPR
+    }
+	 visible = {
+		has_global_flag = SPRCentroamericancake
+		NOT = { has_global_flag = ongoing_negotiations }
+		country_exists = ELS
+	}
+	fire_only_once = yes
+	ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				date > 1939.1.1
+				factor = 0
+			}
+		}
+	cost = 50
+	days_remove = 1
+	complete_effect = {
+	    country_event = SPRCentroamerica.29
+		}
+	}
+	negotiate_losaltos = {
+	   icon = border_war
+	  allowed = {
+        original_tag = SPR
+    }
+	 visible = {
+		has_global_flag = SPRCentroamericancake
+		NOT = { has_global_flag = ongoing_negotiations }
+		country_exists = LOS
+	}
+	fire_only_once = yes
+	ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				date > 1939.1.1
+				factor = 0
+			}
+		}
+	cost = 50
+	days_remove = 1
+	complete_effect = {
+	    country_event = SPRCentroamerica.38
+		}
+	}
+}

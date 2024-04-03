@@ -1,0 +1,680 @@
+defined_text = {
+	name = GetHOGPortraitLeaderName
+	text = {
+		trigger = {
+			check_variable = { hog_name = 1000 }
+		}
+		localization_key = "Carl Menger"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_name = 2000 }
+		}
+		localization_key = "Pedro de Zúñiga"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_name = 2001 }
+		}
+		localization_key = "Enrique's senate"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_name = 2002 }
+		}
+		localization_key = "José Abascal y Carrendano"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_name = 2003 }
+		}
+		localization_key = "Pascual Cucala"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_name = 2004 }
+		}
+		localization_key = "Anselmo Lorenzo"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_name = 2005 }
+		}
+		localization_key = "Manuel Ruiz Zorrilla"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_name = 2006 }
+		}
+		localization_key = "Francisco Armero y Díaz"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_name = 2007 }
+		}
+		localization_key = "Marquis Urbano Feijóo"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_name = 10000 }
+		}
+		localization_key = "Juan Martín Barrundia"
+	}
+	text = { trigger = { check_variable = { hog_name = 1 } } localization_key = "Alex" }
+	#Spanish
+	text = { trigger = { check_variable = { hog_name = 100 } } localization_key = "Fernando" }
+	text = { trigger = { check_variable = { hog_name = 101 } } localization_key = "Francisco" }
+	text = { trigger = { check_variable = { hog_name = 102 } } localization_key = "José" }
+	text = { trigger = { check_variable = { hog_name = 103 } } localization_key = "Francisco José" }
+	text = { trigger = { check_variable = { hog_name = 104 } } localization_key = "Alberto" }
+	text = { trigger = { check_variable = { hog_name = 105 } } localization_key = "Mateo" }
+	text = { trigger = { check_variable = { hog_name = 106 } } localization_key = "Federico" }
+	text = { trigger = { check_variable = { hog_name = 107 } } localization_key = "Martín" }
+	text = { trigger = { check_variable = { hog_name = 108 } } localization_key = "Julio" }
+	text = { trigger = { check_variable = { hog_name = 109 } } localization_key = "Adolfo" }
+	text = { trigger = { check_variable = { hog_name = 110 } } localization_key = "Bernardo" }
+	text = { trigger = { check_variable = { hog_name = 111 } } localization_key = "Cipriano" }
+	text = { trigger = { check_variable = { hog_name = 112 } } localization_key = "Andrés" }
+	text = { trigger = { check_variable = { hog_name = 113 } } localization_key = "Jose María" }
+	text = { trigger = { check_variable = { hog_name = 114 } } localization_key = "Miguel Ricardo" }
+	text = { trigger = { check_variable = { hog_name = 115 } } localization_key = "Francisco Javier" }
+	text = { trigger = { check_variable = { hog_name = 116 } } localization_key = "Juan" }
+	text = { trigger = { check_variable = { hog_name = 117 } } localization_key = "Baldomero" }
+	text = { trigger = { check_variable = { hog_name = 118 } } localization_key = "Eusebio" }
+	text = { trigger = { check_variable = { hog_name = 119 } } localization_key = "Bernardino" }
+	text = { trigger = { check_variable = { hog_name = 120 } } localization_key = "Narciso" }
+	text = { trigger = { check_variable = { hog_name = 121 } } localization_key = "Evaristo" }
+	text = { trigger = { check_variable = { hog_name = 122 } } localization_key = "Antonio" }
+	text = { trigger = { check_variable = { hog_name = 123 } } localization_key = "Gustavo" }
+	text = { trigger = { check_variable = { hog_name = 124 } } localization_key = "Guillermo" }
+	text = { trigger = { check_variable = { hog_name = 125 } } localization_key = "Guillem" }
+	text = { trigger = { check_variable = { hog_name = 126 } } localization_key = "Valentín" }
+	text = { trigger = { check_variable = { hog_name = 127 } } localization_key = "Modesto" }
+	text = { trigger = { check_variable = { hog_name = 128 } } localization_key = "Vicente" }
+	text = { trigger = { check_variable = { hog_name = 129 } } localization_key = "Joaquín" }
+	text = { trigger = { check_variable = { hog_name = 130 } } localization_key = "Álvaro" }
+	text = { trigger = { check_variable = { hog_name = 131 } } localization_key = "Ramón" }
+	text = { trigger = { check_variable = { hog_name = 132 } } localization_key = "José Ramón" }
+	text = { trigger = { check_variable = { hog_name = 133 } } localization_key = "Salustiano" }
+	text = { trigger = { check_variable = { hog_name = 134 } } localization_key = "Luis" }
+	text = { trigger = { check_variable = { hog_name = 135 } } localization_key = "Ramón María" }
+	text = { trigger = { check_variable = { hog_name = 136 } } localization_key = "Florencio" }
+	text = { trigger = { check_variable = { hog_name = 137 } } localization_key = "Serafín" }
+	text = { trigger = { check_variable = { hog_name = 138 } } localization_key = "Ángel" }
+	text = { trigger = { check_variable = { hog_name = 139 } } localization_key = "Lorenzo" }
+	text = { trigger = { check_variable = { hog_name = 140 } } localization_key = "Leopoldo" }
+	text = { trigger = { check_variable = { hog_name = 141 } } localization_key = "Manuel" }
+	text = { trigger = { check_variable = { hog_name = 142 } } localization_key = "Enrique" }
+	text = { trigger = { check_variable = { hog_name = 143 } } localization_key = "Pedro" }
+	text = { trigger = { check_variable = { hog_name = 144 } } localization_key = "Felipe" }
+	text = { trigger = { check_variable = { hog_name = 145 } } localization_key = "Estanislao" }
+	text = { trigger = { check_variable = { hog_name = 146 } } localization_key = "Nicolás" }
+	text = { trigger = { check_variable = { hog_name = 147 } } localization_key = "Emilio" }
+	text = { trigger = { check_variable = { hog_name = 148 } } localization_key = "Arsenio" }
+	#French
+	text = { trigger = { check_variable = { hog_name = 200 } } localization_key = "Joseph" }
+	text = { trigger = { check_variable = { hog_name = 201 } } localization_key = "Charles Maurice" }
+	text = { trigger = { check_variable = { hog_name = 202 } } localization_key = "Charles" }
+	text = { trigger = { check_variable = { hog_name = 203 } } localization_key = "Maurice" }
+	text = { trigger = { check_variable = { hog_name = 204 } } localization_key = "Pierre-Louis" }
+	text = { trigger = { check_variable = { hog_name = 205 } } localization_key = "Pierre" }
+	text = { trigger = { check_variable = { hog_name = 206 } } localization_key = "Louis" }
+	text = { trigger = { check_variable = { hog_name = 207 } } localization_key = "Jérôme" }
+	text = { trigger = { check_variable = { hog_name = 208 } } localization_key = "Maximilien" }
+	text = { trigger = { check_variable = { hog_name = 209 } } localization_key = "Jean Jacques" }
+	text = { trigger = { check_variable = { hog_name = 210 } } localization_key = "Jean" }
+	text = { trigger = { check_variable = { hog_name = 211 } } localization_key = "Jacques" }
+	text = { trigger = { check_variable = { hog_name = 212 } } localization_key = "Emmanuel" }
+	text = { trigger = { check_variable = { hog_name = 213 } } localization_key = "Paul" }
+	text = { trigger = { check_variable = { hog_name = 214 } } localization_key = "Armand" }
+	text = { trigger = { check_variable = { hog_name = 215 } } localization_key = "Armand-Emmanuel" }
+	text = { trigger = { check_variable = { hog_name = 216 } } localization_key = "Jean-Joseph" }
+	text = { trigger = { check_variable = { hog_name = 217 } } localization_key = "Élie" }
+	text = { trigger = { check_variable = { hog_name = 218 } } localization_key = "Jules" }
+	text = { trigger = { check_variable = { hog_name = 219 } } localization_key = "Casimir" }
+	text = { trigger = { check_variable = { hog_name = 220 } } localization_key = "Louis Philippe" }
+	text = { trigger = { check_variable = { hog_name = 221 } } localization_key = "Jean Charles" }
+	text = { trigger = { check_variable = { hog_name = 222 } } localization_key = "Jean-De-Dieu" }
+	text = { trigger = { check_variable = { hog_name = 223 } } localization_key = "Étienne" }
+	text = { trigger = { check_variable = { hog_name = 224 } } localization_key = "Hugues" }
+	text = { trigger = { check_variable = { hog_name = 225 } } localization_key = "Bernard" }
+	text = { trigger = { check_variable = { hog_name = 226 } } localization_key = "Hugues-Bernard" }
+	text = { trigger = { check_variable = { hog_name = 227 } } localization_key = "Édouard" }
+	text = { trigger = { check_variable = { hog_name = 228 } } localization_key = "Victor" }
+	text = { trigger = { check_variable = { hog_name = 229 } } localization_key = "Adolphe" }
+	text = { trigger = { check_variable = { hog_name = 230 } } localization_key = "Mathieu" }
+	text = { trigger = { check_variable = { hog_name = 231 } } localization_key = "Louis-Mathieu" }
+	text = { trigger = { check_variable = { hog_name = 232 } } localization_key = "François" }
+	text = { trigger = { check_variable = { hog_name = 233 } } localization_key = "Eugéne" }
+	text = { trigger = { check_variable = { hog_name = 234 } } localization_key = "Odilon" }
+	text = { trigger = { check_variable = { hog_name = 235 } } localization_key = "Alphonse-Henri" }
+	text = { trigger = { check_variable = { hog_name = 236 } } localization_key = "Léon" }
+	text = { trigger = { check_variable = { hog_name = 237 } } localization_key = "Lucien" }
+	text = { trigger = { check_variable = { hog_name = 238 } } localization_key = "Louis Lucien" }
+	text = { trigger = { check_variable = { hog_name = 239 } } localization_key = "Albert" }
+	text = { trigger = { check_variable = { hog_name = 240 } } localization_key = "Henri" }
+	text = { trigger = { check_variable = { hog_name = 241 } } localization_key = "René" }
+	text = { trigger = { check_variable = { hog_name = 242 } } localization_key = "Bleiz" }
+	text = { trigger = { check_variable = { hog_name = 243 } } localization_key = "Corentin" }
+	text = { trigger = { check_variable = { hog_name = 244 } } localization_key = "Maël" }
+	#German
+	text = { trigger = { check_variable = { hog_name = 300 } } localization_key = "Johann" }
+	text = { trigger = { check_variable = { hog_name = 301 } } localization_key = "Kaspar" }
+	text = { trigger = { check_variable = { hog_name = 302 } } localization_key = "Franz" }
+	text = { trigger = { check_variable = { hog_name = 303 } } localization_key = "Xaver" }
+	text = { trigger = { check_variable = { hog_name = 304 } } localization_key = "Franz Xaver" }
+	text = { trigger = { check_variable = { hog_name = 305 } } localization_key = "Wiguläus" }
+	text = { trigger = { check_variable = { hog_name = 306 } } localization_key = "Franz Joseph" }
+	text = { trigger = { check_variable = { hog_name = 307 } } localization_key = "Matthäus" }
+	text = { trigger = { check_variable = { hog_name = 308 } } localization_key = "Maximilian" }
+	text = { trigger = { check_variable = { hog_name = 309 } } localization_key = "Heinrich" }
+	text = { trigger = { check_variable = { hog_name = 310 } } localization_key = "Aloys" }
+	text = { trigger = { check_variable = { hog_name = 311 } } localization_key = "Heinrich Aloys" }
+	text = { trigger = { check_variable = { hog_name = 312 } } localization_key = "Adolf" }
+	text = { trigger = { check_variable = { hog_name = 313 } } localization_key = "Georg" }
+	text = { trigger = { check_variable = { hog_name = 314 } } localization_key = "Friedrich" }
+	text = { trigger = { check_variable = { hog_name = 315 } } localization_key = "Georg Friedrich" }
+	text = { trigger = { check_variable = { hog_name = 316 } } localization_key = "Franz Georg" }
+	text = { trigger = { check_variable = { hog_name = 317 } } localization_key = "Karl" }
+	text = { trigger = { check_variable = { hog_name = 318 } } localization_key = "Ludwig" }
+	text = { trigger = { check_variable = { hog_name = 319 } } localization_key = "Klemens" }
+	text = { trigger = { check_variable = { hog_name = 320 } } localization_key = "Otto" }
+	text = { trigger = { check_variable = { hog_name = 321 } } localization_key = "Kurt" }
+	text = { trigger = { check_variable = { hog_name = 322 } } localization_key = "Gustav" }
+	text = { trigger = { check_variable = { hog_name = 323 } } localization_key = "Eugen" }
+	text = { trigger = { check_variable = { hog_name = 324 } } localization_key = "Hans" }
+	text = { trigger = { check_variable = { hog_name = 325 } } localization_key = "Alfons" }
+	text = { trigger = { check_variable = { hog_name = 326 } } localization_key = "Albrecht" }
+	text = { trigger = { check_variable = { hog_name = 327 } } localization_key = "Karl-Wilhelm" }
+	text = { trigger = { check_variable = { hog_name = 328 } } localization_key = "Wilhelm" }
+	text = { trigger = { check_variable = { hog_name = 329 } } localization_key = "August" }
+	text = { trigger = { check_variable = { hog_name = 330 } } localization_key = "Karl August" }
+	text = { trigger = { check_variable = { hog_name = 331 } } localization_key = "Otto Karl" }
+	text = { trigger = { check_variable = { hog_name = 332 } } localization_key = "Christian Heinrich" }
+	text = { trigger = { check_variable = { hog_name = 333 } } localization_key = "Friedrich Anton" }
+	text = { trigger = { check_variable = { hog_name = 334 } } localization_key = "Adolf Heinrich" }
+	text = { trigger = { check_variable = { hog_name = 335 } } localization_key = "Gottfried" }
+	text = { trigger = { check_variable = { hog_name = 336 } } localization_key = "Rudolf" }
+	text = { trigger = { check_variable = { hog_name = 337 } } localization_key = "Ernst" }
+	text = { trigger = { check_variable = { hog_name = 338 } } localization_key = "Theodor" }
+	text = { trigger = { check_variable = { hog_name = 339 } } localization_key = "Chlodwig" }
+	text = { trigger = { check_variable = { hog_name = 340 } } localization_key = "Botho" }
+	text = { trigger = { check_variable = { hog_name = 341 } } localization_key = "Bernhard" }
+	#Italian
+	text = { trigger = { check_variable = { hog_name = 400 } } localization_key = "Massimo" }
+	text = { trigger = { check_variable = { hog_name = 401 } } localization_key = "Carlo" }
+	text = { trigger = { check_variable = { hog_name = 402 } } localization_key = "Vincenzo" }
+	text = { trigger = { check_variable = { hog_name = 403 } } localization_key = "Carlo Vincenzo" }
+	text = { trigger = { check_variable = { hog_name = 404 } } localization_key = "Giuseppe" }
+	text = { trigger = { check_variable = { hog_name = 405 } } localization_key = "Osorio" }
+	text = { trigger = { check_variable = { hog_name = 406 } } localization_key = "Carlo Luigi" }
+	text = { trigger = { check_variable = { hog_name = 407 } } localization_key = "Luigi" }
+	text = { trigger = { check_variable = { hog_name = 408 } } localization_key = "Mario" }
+	text = { trigger = { check_variable = { hog_name = 409 } } localization_key = "Ignazio" }
+	text = { trigger = { check_variable = { hog_name = 410 } } localization_key = "Mario Ignazio" }
+	text = { trigger = { check_variable = { hog_name = 411 } } localization_key = "Cesare" }
+	text = { trigger = { check_variable = { hog_name = 412 } } localization_key = "Iulio" }
+	text = { trigger = { check_variable = { hog_name = 413 } } localization_key = "Gabrio" }
+	text = { trigger = { check_variable = { hog_name = 414 } } localization_key = "Cesare Alfieri" }
+	text = { trigger = { check_variable = { hog_name = 415 } } localization_key = "Ettore" }
+	text = { trigger = { check_variable = { hog_name = 416 } } localization_key = "Agostino" }
+	text = { trigger = { check_variable = { hog_name = 417 } } localization_key = "Aurelio" }
+	text = { trigger = { check_variable = { hog_name = 418 } } localization_key = "Claudio Gabriele" }
+	text = { trigger = { check_variable = { hog_name = 419 } } localization_key = "Claudio" }
+	text = { trigger = { check_variable = { hog_name = 420 } } localization_key = "Camillo" }
+	text = { trigger = { check_variable = { hog_name = 421 } } localization_key = "Alfonso" }
+	text = { trigger = { check_variable = { hog_name = 422 } } localization_key = "Alberto" }
+	text = { trigger = { check_variable = { hog_name = 423 } } localization_key = "Dante" }
+	text = { trigger = { check_variable = { hog_name = 424 } } localization_key = "Giovanni" }
+	text = { trigger = { check_variable = { hog_name = 425 } } localization_key = "Boniface" }
+	text = { trigger = { check_variable = { hog_name = 426 } } localization_key = "Adalberto" }
+	text = { trigger = { check_variable = { hog_name = 427 } } localization_key = "Boso" }
+	text = { trigger = { check_variable = { hog_name = 428 } } localization_key = "Humberto" }
+	text = { trigger = { check_variable = { hog_name = 429 } } localization_key = "Enrico" }
+	text = { trigger = { check_variable = { hog_name = 430 } } localization_key = "Cosimo" }
+	text = { trigger = { check_variable = { hog_name = 431 } } localization_key = "Piero" }
+	text = { trigger = { check_variable = { hog_name = 432 } } localization_key = "Pietro" }
+	text = { trigger = { check_variable = { hog_name = 433 } } localization_key = "Lorenzo" }
+	text = { trigger = { check_variable = { hog_name = 434 } } localization_key = "Giulio" }
+	text = { trigger = { check_variable = { hog_name = 435 } } localization_key = "Giuliano" }
+	text = { trigger = { check_variable = { hog_name = 436 } } localization_key = "Girolamo" }
+	text = { trigger = { check_variable = { hog_name = 437 } } localization_key = "Ippolito" }
+	text = { trigger = { check_variable = { hog_name = 438 } } localization_key = "Benito" }
+	text = { trigger = { check_variable = { hog_name = 439 } } localization_key = "Francesco" }
+	text = { trigger = { check_variable = { hog_name = 440 } } localization_key = "Gastone" }
+	text = { trigger = { check_variable = { hog_name = 441 } } localization_key = "Gian Pietro" }
+	text = { trigger = { check_variable = { hog_name = 442 } } localization_key = "Gian Gastone" }
+	text = { trigger = { check_variable = { hog_name = 443 } } localization_key = "Gian Lorenzo" }
+	text = { trigger = { check_variable = { hog_name = 444 } } localization_key = "Pietro Leopoldo" }
+	text = { trigger = { check_variable = { hog_name = 445 } } localization_key = "Leopoldo" }
+	text = { trigger = { check_variable = { hog_name = 446 } } localization_key = "Lodovico" }
+	text = { trigger = { check_variable = { hog_name = 447 } } localization_key = "Lodovico Gabriele" }
+	text = { trigger = { check_variable = { hog_name = 448 } } localization_key = "Goffredo" }
+	text = { trigger = { check_variable = { hog_name = 449 } } localization_key = "Sigismondo" }
+	text = { trigger = { check_variable = { hog_name = 450 } } localization_key = "Ioseph" }
+	text = { trigger = { check_variable = { hog_name = 451 } } localization_key = "Martino" }
+	text = { trigger = { check_variable = { hog_name = 452 } } localization_key = "Ottone" }
+	text = { trigger = { check_variable = { hog_name = 453 } } localization_key = "Guido" }
+	text = { trigger = { check_variable = { hog_name = 454 } } localization_key = "Azzone" }
+	text = { trigger = { check_variable = { hog_name = 455 } } localization_key = "Luchino" }
+	text = { trigger = { check_variable = { hog_name = 456 } } localization_key = "Matteo" }
+	text = { trigger = { check_variable = { hog_name = 457 } } localization_key = "Galeazzo" }
+	text = { trigger = { check_variable = { hog_name = 458 } } localization_key = "Gian Galeazzo" }
+	text = { trigger = { check_variable = { hog_name = 459 } } localization_key = "Filippo" }
+	text = { trigger = { check_variable = { hog_name = 460 } } localization_key = "Luca" }
+	text = { trigger = { check_variable = { hog_name = 461 } } localization_key = "Armando" }
+	text = { trigger = { check_variable = { hog_name = 462 } } localization_key = "Biagio" }
+	text = { trigger = { check_variable = { hog_name = 463 } } localization_key = "Baldassarre" }
+	text = { trigger = { check_variable = { hog_name = 464 } } localization_key = "Amedeo" }
+	text = { trigger = { check_variable = { hog_name = 465 } } localization_key = "Alberico " }
+	text = { trigger = { check_variable = { hog_name = 466 } } localization_key = "Guglielmo" }
+	text = { trigger = { check_variable = { hog_name = 467 } } localization_key = "Vittorio" }
+	text = { trigger = { check_variable = { hog_name = 468 } } localization_key = "Vittorio Emmanuele" }
+	text = { trigger = { check_variable = { hog_name = 469 } } localization_key = "Emmanuele" }
+	#Portuguese
+	text = { trigger = { check_variable = { hog_name = 500 } } localization_key = "Pedro" }
+	text = { trigger = { check_variable = { hog_name = 501 } } localization_key = "Vitório" }
+	text = { trigger = { check_variable = { hog_name = 502 } } localization_key = "Vitório Maria" }
+	text = { trigger = { check_variable = { hog_name = 503 } } localization_key = "João" }
+	text = { trigger = { check_variable = { hog_name = 504 } } localization_key = "João Carlos" }
+	text = { trigger = { check_variable = { hog_name = 505 } } localization_key = "José Jorge" }
+	text = { trigger = { check_variable = { hog_name = 506 } } localization_key = "José" }
+	text = { trigger = { check_variable = { hog_name = 507 } } localization_key = "Jorge" }
+	text = { trigger = { check_variable = { hog_name = 508 } } localization_key = "Antonio José" }
+	text = { trigger = { check_variable = { hog_name = 509 } } localization_key = "António" }
+	text = { trigger = { check_variable = { hog_name = 510 } } localization_key = "Jose Bernardino" }
+	text = { trigger = { check_variable = { hog_name = 511 } } localization_key = "Bernardino" }
+	text = { trigger = { check_variable = { hog_name = 512 } } localization_key = "Bernardo" }
+	text = { trigger = { check_variable = { hog_name = 513 } } localization_key = "Rodrigo" }
+	text = { trigger = { check_variable = { hog_name = 514 } } localization_key = "Joaquim" }
+	text = { trigger = { check_variable = { hog_name = 515 } } localization_key = "Joaquim Antonio" }
+	text = { trigger = { check_variable = { hog_name = 516 } } localization_key = "Nuno" }
+	text = { trigger = { check_variable = { hog_name = 517 } } localization_key = "Nuno José" }
+	text = { trigger = { check_variable = { hog_name = 518 } } localization_key = "Anselmo" }
+	text = { trigger = { check_variable = { hog_name = 519 } } localization_key = "Anselmo José" }
+	text = { trigger = { check_variable = { hog_name = 520 } } localization_key = "Luciano" }
+	text = { trigger = { check_variable = { hog_name = 521 } } localization_key = "José Luciano" }
+	text = { trigger = { check_variable = { hog_name = 522 } } localization_key = "Crisóstomo" }
+	text = { trigger = { check_variable = { hog_name = 523 } } localization_key = "João Crisóstomo" }
+	text = { trigger = { check_variable = { hog_name = 524 } } localization_key = "Ernesto" }
+	text = { trigger = { check_variable = { hog_name = 525 } } localization_key = "Rudolfo" }
+	text = { trigger = { check_variable = { hog_name = 526 } } localization_key = "Ernesto Rudolfo" }
+	text = { trigger = { check_variable = { hog_name = 527 } } localization_key = "Artur" }
+	text = { trigger = { check_variable = { hog_name = 528 } } localization_key = "Alberto" }
+	text = { trigger = { check_variable = { hog_name = 529 } } localization_key = "Artur Alberto" }
+	text = { trigger = { check_variable = { hog_name = 530 } } localization_key = "Venceslau" }
+	text = { trigger = { check_variable = { hog_name = 531 } } localization_key = "Manuel" }
+	text = { trigger = { check_variable = { hog_name = 532 } } localization_key = "Carlos" }
+	text = { trigger = { check_variable = { hog_name = 533 } } localization_key = "Teófilo" }
+	text = { trigger = { check_variable = { hog_name = 534 } } localization_key = "Joaquim Teófilo" }
+	text = { trigger = { check_variable = { hog_name = 535 } } localization_key = "Augusto" }
+	text = { trigger = { check_variable = { hog_name = 536 } } localization_key = "Duarte Leite" }
+	text = { trigger = { check_variable = { hog_name = 537 } } localization_key = "Afonso Augusto" }
+	text = { trigger = { check_variable = { hog_name = 538 } } localization_key = "Afonso" }
+	text = { trigger = { check_variable = { hog_name = 539 } } localization_key = "Alfredo" }
+	text = { trigger = { check_variable = { hog_name = 540 } } localization_key = "Domingos" }
+	#English
+	text = { trigger = { check_variable = { hog_name = 600 } } localization_key = "Robert" }
+	text = { trigger = { check_variable = { hog_name = 601 } } localization_key = "Spencer" }
+	text = { trigger = { check_variable = { hog_name = 602 } } localization_key = "Henry" }
+	text = { trigger = { check_variable = { hog_name = 603 } } localization_key = "Thomas" }
+	text = { trigger = { check_variable = { hog_name = 604 } } localization_key = "William" }
+	text = { trigger = { check_variable = { hog_name = 605 } } localization_key = "John" }
+	text = { trigger = { check_variable = { hog_name = 606 } } localization_key = "George" }
+	text = { trigger = { check_variable = { hog_name = 607 } } localization_key = "Charles" }
+	text = { trigger = { check_variable = { hog_name = 608 } } localization_key = "Augustus" }
+	text = { trigger = { check_variable = { hog_name = 609 } } localization_key = "Frederick" }
+	text = { trigger = { check_variable = { hog_name = 610 } } localization_key = "Arthur" }
+	text = { trigger = { check_variable = { hog_name = 611 } } localization_key = "Edward" }
+	text = { trigger = { check_variable = { hog_name = 612 } } localization_key = "Henry John" }
+	text = { trigger = { check_variable = { hog_name = 613 } } localization_key = "Benjamin" }
+	text = { trigger = { check_variable = { hog_name = 614 } } localization_key = "Herbert" }
+	text = { trigger = { check_variable = { hog_name = 615 } } localization_key = "Herbert Henry" }
+	text = { trigger = { check_variable = { hog_name = 616 } } localization_key = "John Charles" }
+	text = { trigger = { check_variable = { hog_name = 617 } } localization_key = "Charles Augustus" }
+	text = { trigger = { check_variable = { hog_name = 618 } } localization_key = "Edward Thomas" }
+	text = { trigger = { check_variable = { hog_name = 619 } } localization_key = "David" }
+	text = { trigger = { check_variable = { hog_name = 620 } } localization_key = "Stanley" }
+	text = { trigger = { check_variable = { hog_name = 621 } } localization_key = "Bonar" }
+	text = { trigger = { check_variable = { hog_name = 622 } } localization_key = "Ramsay" }
+	text = { trigger = { check_variable = { hog_name = 623 } } localization_key = "Neville" }
+	text = { trigger = { check_variable = { hog_name = 624 } } localization_key = "Winston" }
+	text = { trigger = { check_variable = { hog_name = 625 } } localization_key = "Joseph" }
+	text = { trigger = { check_variable = { hog_name = 626 } } localization_key = "Samuel" }
+	text = { trigger = { check_variable = { hog_name = 627 } } localization_key = "Alfred" }
+	text = { trigger = { check_variable = { hog_name = 628 } } localization_key = "Walter" }
+	text = { trigger = { check_variable = { hog_name = 629 } } localization_key = "Francis" }
+	text = { trigger = { check_variable = { hog_name = 630 } } localization_key = "Isaac" }
+	text = { trigger = { check_variable = { hog_name = 631 } } localization_key = "Peter" }
+	text = { trigger = { check_variable = { hog_name = 632 } } localization_key = "Harry" }
+	text = { trigger = { check_variable = { hog_name = 633 } } localization_key = "Stephen" }
+	text = { trigger = { check_variable = { hog_name = 634 } } localization_key = "Edmund" }
+	text = { trigger = { check_variable = { hog_name = 635 } } localization_key = "Frank" }
+	text = { trigger = { check_variable = { hog_name = 636 } } localization_key = "Mark" }
+	text = { trigger = { check_variable = { hog_name = 637 } } localization_key = "Hugh" }
+	text = { trigger = { check_variable = { hog_name = 638 } } localization_key = "Joshua" }
+	text = { trigger = { check_variable = { hog_name = 639 } } localization_key = "Ralph" }
+	text = { trigger = { check_variable = { hog_name = 640 } } localization_key = "Leonard" }
+	text = { trigger = { check_variable = { hog_name = 641 } } localization_key = "Septimus" }
+	text = { trigger = { check_variable = { hog_name = 642 } } localization_key = "Reginald" }
+	text = { trigger = { check_variable = { hog_name = 643 } } localization_key = "Humphrey" }
+	text = { trigger = { check_variable = { hog_name = 644 } } localization_key = "Wright" }
+	text = { trigger = { check_variable = { hog_name = 645 } } localization_key = "Percival" }
+	text = { trigger = { check_variable = { hog_name = 646 } } localization_key = "Harold" }
+	text = { trigger = { check_variable = { hog_name = 647 } } localization_key = "Howard" }
+	text = { trigger = { check_variable = { hog_name = 648 } } localization_key = "Vincent" }
+	text = { trigger = { check_variable = { hog_name = 649 } } localization_key = "Rhys" }
+	text = { trigger = { check_variable = { hog_name = 650 } } localization_key = "Richard" }
+	text = { trigger = { check_variable = { hog_name = 651 } } localization_key = "Michael" }
+	text = { trigger = { check_variable = { hog_name = 0 } } localization_key = "No Head of Government" }
+}
+defined_text = {
+	name = GetHOGPortraitLeaderSurname
+	text = { trigger = { check_variable = { hog_surname = 0 } } localization_key = "" }
+	text = { trigger = { check_variable = { hog_surname = 1 } } localization_key = " Jones" }
+	#Spanish
+	text = { trigger = { check_variable = { hog_surname = 100 } } localization_key = " Martínez" }
+	text = { trigger = { check_variable = { hog_surname = 101 } } localization_key = " Martínez de la Rosa" }
+	text = { trigger = { check_variable = { hog_surname = 102 } } localization_key = " Llano" }
+	text = { trigger = { check_variable = { hog_surname = 103 } } localization_key = " Mendizábal" }
+	text = { trigger = { check_variable = { hog_surname = 104 } } localization_key = " Espartero" }
+	text = { trigger = { check_variable = { hog_surname = 105 } } localization_key = " de Álava" }
+	text = { trigger = { check_variable = { hog_surname = 106 } } localization_key = " Istúriz" }
+	text = { trigger = { check_variable = { hog_surname = 107 } } localization_key = " Sagasta" }
+	text = { trigger = { check_variable = { hog_surname = 108 } } localization_key = " Calatrava" }
+	text = { trigger = { check_variable = { hog_surname = 109 } } localization_key = " Bardají" }
+	text = { trigger = { check_variable = { hog_surname = 110 } } localization_key = " De entrerríos" }
+	text = { trigger = { check_variable = { hog_surname = 111 } } localization_key = " Calvo" }
+	text = { trigger = { check_variable = { hog_surname = 112 } } localization_key = " Fernandez" }
+	text = { trigger = { check_variable = { hog_surname = 113 } } localization_key = " Sanchez" }
+	text = { trigger = { check_variable = { hog_surname = 114 } } localization_key = " Sancho" }
+	text = { trigger = { check_variable = { hog_surname = 115 } } localization_key = " Espinosa" }
+	text = { trigger = { check_variable = { hog_surname = 116 } } localization_key = " Heredia" }
+	text = { trigger = { check_variable = { hog_surname = 117 } } localization_key = " Pérez" }
+	text = { trigger = { check_variable = { hog_surname = 118 } } localization_key = " González" }
+	text = { trigger = { check_variable = { hog_surname = 119 } } localization_key = " Cortázar" }
+	text = { trigger = { check_variable = { hog_surname = 120 } } localization_key = " Ferrer" }
+	text = { trigger = { check_variable = { hog_surname = 121 } } localization_key = " Campillo" }
+	text = { trigger = { check_variable = { hog_surname = 122 } } localization_key = " Gómez" }
+	text = { trigger = { check_variable = { hog_surname = 123 } } localization_key = " Becerra" }
+	text = { trigger = { check_variable = { hog_surname = 124 } } localization_key = " Lopez" }
+	text = { trigger = { check_variable = { hog_surname = 125 } } localization_key = " Olózaga" }
+	text = { trigger = { check_variable = { hog_surname = 126 } } localization_key = " Bravo" }
+	text = { trigger = { check_variable = { hog_surname = 127 } } localization_key = " Murillo" }
+	text = { trigger = { check_variable = { hog_surname = 128 } } localization_key = " Narváez" }
+	text = { trigger = { check_variable = { hog_surname = 129 } } localization_key = " Cánovas" }
+	text = { trigger = { check_variable = { hog_surname = 130 } } localization_key = " Martínez de Irujo" }
+	text = { trigger = { check_variable = { hog_surname = 131 } } localization_key = " de Habsburgo" }
+	text = { trigger = { check_variable = { hog_surname = 132 } } localization_key = " Pacheco" }
+	text = { trigger = { check_variable = { hog_surname = 133 } } localization_key = " de Sotomayor" }
+	text = { trigger = { check_variable = { hog_surname = 134 } } localization_key = " Hormaechea" }
+	text = { trigger = { check_variable = { hog_surname = 135 } } localization_key = " de Cordoba" }
+	text = { trigger = { check_variable = { hog_surname = 136 } } localization_key = " de Saavedra" }
+	text = { trigger = { check_variable = { hog_surname = 137 } } localization_key = " Peñaranda" }
+	text = { trigger = { check_variable = { hog_surname = 138 } } localization_key = " Armero" }
+	text = { trigger = { check_variable = { hog_surname = 139 } } localization_key = " Del Castillo" }
+	text = { trigger = { check_variable = { hog_surname = 140 } } localization_key = " De Pinedo" }
+	text = { trigger = { check_variable = { hog_surname = 141 } } localization_key = " Arrazola" }
+	text = { trigger = { check_variable = { hog_surname = 142 } } localization_key = " Mon" }
+	text = { trigger = { check_variable = { hog_surname = 143 } } localization_key = " Menéndez" }
+	text = { trigger = { check_variable = { hog_surname = 144 } } localization_key = " De la Concha" }
+	text = { trigger = { check_variable = { hog_surname = 145 } } localization_key = " Aguirre" }
+	text = { trigger = { check_variable = { hog_surname = 146 } } localization_key = " Sebastián" }
+	text = { trigger = { check_variable = { hog_surname = 147 } } localization_key = " Zorrilla" }
+	text = { trigger = { check_variable = { hog_surname = 148 } } localization_key = " Malcampo" }
+	text = { trigger = { check_variable = { hog_surname = 149 } } localization_key = " Sagasta" }
+	text = { trigger = { check_variable = { hog_surname = 150 } } localization_key = " Sagastibelcha" }
+	text = { trigger = { check_variable = { hog_surname = 151 } } localization_key = " Figueras" }
+	text = { trigger = { check_variable = { hog_surname = 152 } } localization_key = " Pi y Margall" }
+	text = { trigger = { check_variable = { hog_surname = 153 } } localization_key = " Serrano" }
+	text = { trigger = { check_variable = { hog_surname = 154 } } localization_key = " Castellar" }
+	text = { trigger = { check_variable = { hog_surname = 155 } } localization_key = " Zavala" }
+	#French 
+	text = { trigger = { check_variable = { hog_surname = 200 } } localization_key = " Philippe" }
+	text = { trigger = { check_variable = { hog_surname = 201 } } localization_key = " Dupuy" }
+	text = { trigger = { check_variable = { hog_surname = 202 } } localization_key = " Ollivier" }
+	text = { trigger = { check_variable = { hog_surname = 203 } } localization_key = " Montauban" }
+	text = { trigger = { check_variable = { hog_surname = 204 } } localization_key = " Faucher" }
+	text = { trigger = { check_variable = { hog_surname = 205 } } localization_key = " de Birague" }
+	text = { trigger = { check_variable = { hog_surname = 206 } } localization_key = " Hurault" }
+	text = { trigger = { check_variable = { hog_surname = 207 } } localization_key = " de Cheverny" }
+	text = { trigger = { check_variable = { hog_surname = 208 } } localization_key = " Dupont" }
+	text = { trigger = { check_variable = { hog_surname = 209 } } localization_key = " Duruy" }
+	text = { trigger = { check_variable = { hog_surname = 210 } } localization_key = " Talleyrand" }
+	text = { trigger = { check_variable = { hog_surname = 211 } } localization_key = " Périgord" }
+	text = { trigger = { check_variable = { hog_surname = 212 } } localization_key = " Albert" }
+	text = { trigger = { check_variable = { hog_surname = 213 } } localization_key = " Albon" }
+	text = { trigger = { check_variable = { hog_surname = 214 } } localization_key = " Abbadie de Barrau" }
+	text = { trigger = { check_variable = { hog_surname = 215 } } localization_key = " Achon" }
+	text = { trigger = { check_variable = { hog_surname = 216 } } localization_key = " Colbert" }
+	text = { trigger = { check_variable = { hog_surname = 217 } } localization_key = " de Bourbon" }
+	text = { trigger = { check_variable = { hog_surname = 218 } } localization_key = " Le Tellier" }
+	text = { trigger = { check_variable = { hog_surname = 219 } } localization_key = " Dubois" }
+	text = { trigger = { check_variable = { hog_surname = 220 } } localization_key = " de Maupeou" }
+	text = { trigger = { check_variable = { hog_surname = 221 } } localization_key = " Adhémar" }
+	text = { trigger = { check_variable = { hog_surname = 222 } } localization_key = " Andurain" }
+	text = { trigger = { check_variable = { hog_surname = 223 } } localization_key = " Augerot" }
+	text = { trigger = { check_variable = { hog_surname = 224 } } localization_key = " Irumberry" }
+	text = { trigger = { check_variable = { hog_surname = 225 } } localization_key = " Gouvion" }
+	text = { trigger = { check_variable = { hog_surname = 226 } } localization_key = " Thiers" }
+	text = { trigger = { check_variable = { hog_surname = 227 } } localization_key = " Soult" }
+	text = { trigger = { check_variable = { hog_surname = 228 } } localization_key = " Nabulione" }
+	text = { trigger = { check_variable = { hog_surname = 229 } } localization_key = " Arago" }
+	text = { trigger = { check_variable = { hog_surname = 230 } } localization_key = " Gambetta" }
+	text = { trigger = { check_variable = { hog_surname = 231 } } localization_key = " de Freycinet" }
+	text = { trigger = { check_variable = { hog_surname = 232 } } localization_key = " Ferrand" }
+	text = { trigger = { check_variable = { hog_surname = 233 } } localization_key = " Feuardent" }
+	text = { trigger = { check_variable = { hog_surname = 234 } } localization_key = " Fleurian" }
+	text = { trigger = { check_variable = { hog_surname = 235 } } localization_key = " Foy" }
+	text = { trigger = { check_variable = { hog_surname = 236 } } localization_key = " Giraud" }
+	text = { trigger = { check_variable = { hog_surname = 237 } } localization_key = " Poirot" }
+	text = { trigger = { check_variable = { hog_surname = 238 } } localization_key = " Dietrich" }
+	text = { trigger = { check_variable = { hog_surname = 239 } } localization_key = " Duclerc" }
+	text = { trigger = { check_variable = { hog_surname = 240 } } localization_key = " Fallières" }
+	text = { trigger = { check_variable = { hog_surname = 241 } } localization_key = " de Charnacé" }
+	text = { trigger = { check_variable = { hog_surname = 242 } } localization_key = " Gouyon-Matignon" }
+	text = { trigger = { check_variable = { hog_surname = 243 } } localization_key = " Brisson" }
+	text = { trigger = { check_variable = { hog_surname = 244 } } localization_key = " Ribot" }
+	text = { trigger = { check_variable = { hog_surname = 245 } } localization_key = " Bourgeois" }
+	text = { trigger = { check_variable = { hog_surname = 246 } } localization_key = " Scarpone" }
+	text = { trigger = { check_variable = { hog_surname = 247 } } localization_key = " Wackau" }
+	text = { trigger = { check_variable = { hog_surname = 248 } } localization_key = " Göys" }
+	text = { trigger = { check_variable = { hog_surname = 249 } } localization_key = " Abgrall" }
+	text = { trigger = { check_variable = { hog_surname = 250 } } localization_key = " Cloarec" }
+	text = { trigger = { check_variable = { hog_surname = 251 } } localization_key = " Pouliquen" }
+	text = { trigger = { check_variable = { hog_surname = 252 } } localization_key = " Catalan" }
+	text = { trigger = { check_variable = { hog_surname = 253 } } localization_key = " Joffre" }
+	text = { trigger = { check_variable = { hog_surname = 254 } } localization_key = " Clemenceau" }
+	text = { trigger = { check_variable = { hog_surname = 255 } } localization_key = " Painlevé" }
+	text = { trigger = { check_variable = { hog_surname = 256 } } localization_key = " Nivelle" }
+	text = { trigger = { check_variable = { hog_surname = 257 } } localization_key = " Lacaza" }
+	text = { trigger = { check_variable = { hog_surname = 258 } } localization_key = " Hauteclocque" }
+	text = { trigger = { check_variable = { hog_surname = 259 } } localization_key = " Laffargue" }
+	text = { trigger = { check_variable = { hog_surname = 260 } } localization_key = " Dubail" }
+	text = { trigger = { check_variable = { hog_surname = 261 } } localization_key = " Bacque" }
+	text = { trigger = { check_variable = { hog_surname = 262 } } localization_key = " Rosteguy" }
+	text = { trigger = { check_variable = { hog_surname = 263 } } localization_key = " Detchepare" }
+	text = { trigger = { check_variable = { hog_surname = 264 } } localization_key = " Çubiri" }
+	text = { trigger = { check_variable = { hog_surname = 265 } } localization_key = " Ynchausti" }
+	#German 
+	text = { trigger = { check_variable = { hog_surname = 300 } } localization_key = " von Bülow" }
+	text = { trigger = { check_variable = { hog_surname = 301 } } localization_key = " Hoegner" }
+	text = { trigger = { check_variable = { hog_surname = 302 } } localization_key = " von Kreittmayr" }
+	text = { trigger = { check_variable = { hog_surname = 303 } } localization_key = " Ehard" }
+	text = { trigger = { check_variable = { hog_surname = 304 } } localization_key = " Seidel" }
+	text = { trigger = { check_variable = { hog_surname = 305 } } localization_key = " Schaffer" }
+	text = { trigger = { check_variable = { hog_surname = 306 } } localization_key = " Schillingfurst" }
+	text = { trigger = { check_variable = { hog_surname = 307 } } localization_key = " Bethmann-Hollweg" }
+	text = { trigger = { check_variable = { hog_surname = 308 } } localization_key = " von Pfuel" }
+	text = { trigger = { check_variable = { hog_surname = 309 } } localization_key = " von Augstenluck" }
+	text = { trigger = { check_variable = { hog_surname = 310 } } localization_key = " Ludolf" }
+	text = { trigger = { check_variable = { hog_surname = 311 } } localization_key = " Finck" }
+	text = { trigger = { check_variable = { hog_surname = 312 } } localization_key = " von der Goltz" }
+	text = { trigger = { check_variable = { hog_surname = 313 } } localization_key = " von Monter" }
+	text = { trigger = { check_variable = { hog_surname = 314 } } localization_key = " von Bissing" }
+	text = { trigger = { check_variable = { hog_surname = 315 } } localization_key = " von Below" }
+	text = { trigger = { check_variable = { hog_surname = 316 } } localization_key = " Groener" }
+	text = { trigger = { check_variable = { hog_surname = 317 } } localization_key = " von Quast" }
+	text = { trigger = { check_variable = { hog_surname = 318 } } localization_key = " Kosch" }
+	text = { trigger = { check_variable = { hog_surname = 319 } } localization_key = " Falkenhausen" }
+	text = { trigger = { check_variable = { hog_surname = 320 } } localization_key = " Stögen-Steiner" }
+	text = { trigger = { check_variable = { hog_surname = 321 } } localization_key = " Lautenburg" }
+	text = { trigger = { check_variable = { hog_surname = 322 } } localization_key = " Müller" }
+	text = { trigger = { check_variable = { hog_surname = 323 } } localization_key = " Schmidt" }
+	text = { trigger = { check_variable = { hog_surname = 324 } } localization_key = " Schneider" }
+	text = { trigger = { check_variable = { hog_surname = 325 } } localization_key = " Wagner" }
+	#Italian
+	text = { trigger = { check_variable = { hog_surname = 400 } } localization_key = " Massimiliani" }
+	text = { trigger = { check_variable = { hog_surname = 401 } } localization_key = " di Tenda" }
+	text = { trigger = { check_variable = { hog_surname = 402 } } localization_key = " Ruffo" }
+	text = { trigger = { check_variable = { hog_surname = 403 } } localization_key = " Caldora" }
+	text = { trigger = { check_variable = { hog_surname = 404 } } localization_key = " d'Acquapendente" }
+	text = { trigger = { check_variable = { hog_surname = 405 } } localization_key = " Landriano" }
+	text = { trigger = { check_variable = { hog_surname = 406 } } localization_key = " Marliani" }
+	text = { trigger = { check_variable = { hog_surname = 407 } } localization_key = " Sforza" }
+	text = { trigger = { check_variable = { hog_surname = 408 } } localization_key = " Cavour" }
+	text = { trigger = { check_variable = { hog_surname = 409 } } localization_key = " Gallerani" }
+	text = { trigger = { check_variable = { hog_surname = 410 } } localization_key = " Crivelli" }
+	text = { trigger = { check_variable = { hog_surname = 411 } } localization_key = " Romano" }
+	text = { trigger = { check_variable = { hog_surname = 412 } } localization_key = " Bianchi" }
+	text = { trigger = { check_variable = { hog_surname = 413 } } localization_key = " Lombardi" }
+	text = { trigger = { check_variable = { hog_surname = 414 } } localization_key = " Moretti" }
+	text = { trigger = { check_variable = { hog_surname = 415 } } localization_key = " Giordano" }
+	text = { trigger = { check_variable = { hog_surname = 416 } } localization_key = " Tarantino" }
+	text = { trigger = { check_variable = { hog_surname = 417 } } localization_key = " Revello" }
+	text = { trigger = { check_variable = { hog_surname = 418 } } localization_key = " Pisano" }
+	text = { trigger = { check_variable = { hog_surname = 419 } } localization_key = " Alessi" }
+	text = { trigger = { check_variable = { hog_surname = 420 } } localization_key = " Accettola" }
+	text = { trigger = { check_variable = { hog_surname = 421 } } localization_key = " Alfonso" }
+	text = { trigger = { check_variable = { hog_surname = 422 } } localization_key = " Balotelli" }
+	text = { trigger = { check_variable = { hog_surname = 423 } } localization_key = " Bellini" }
+	text = { trigger = { check_variable = { hog_surname = 424 } } localization_key = " Barzaghi" }
+	text = { trigger = { check_variable = { hog_surname = 425 } } localization_key = " Capuano" }
+	text = { trigger = { check_variable = { hog_surname = 426 } } localization_key = " Caruso" }
+	text = { trigger = { check_variable = { hog_surname = 427 } } localization_key = " Capone" }
+	text = { trigger = { check_variable = { hog_surname = 428 } } localization_key = " Castiglione" }
+	text = { trigger = { check_variable = { hog_surname = 429 } } localization_key = " Clemenza" }
+	text = { trigger = { check_variable = { hog_surname = 430 } } localization_key = " Davide" }
+	text = { trigger = { check_variable = { hog_surname = 431 } } localization_key = " Di Angelo" }
+	text = { trigger = { check_variable = { hog_surname = 432 } } localization_key = " D'Agostinim Durante" }
+	text = { trigger = { check_variable = { hog_surname = 433 } } localization_key = " Endrizzi" }
+	text = { trigger = { check_variable = { hog_surname = 434 } } localization_key = " Eneide" }
+	text = { trigger = { check_variable = { hog_surname = 435 } } localization_key = " Esposito" }
+	text = { trigger = { check_variable = { hog_surname = 436 } } localization_key = " Farraci" }
+	text = { trigger = { check_variable = { hog_surname = 437 } } localization_key = " Ferraro" }
+	text = { trigger = { check_variable = { hog_surname = 438 } } localization_key = " Gorgazzi" }
+	text = { trigger = { check_variable = { hog_surname = 439 } } localization_key = " Ientile" }
+	text = { trigger = { check_variable = { hog_surname = 440 } } localization_key = " Jilani" }
+	text = { trigger = { check_variable = { hog_surname = 441 } } localization_key = " Lacertosa" }
+	text = { trigger = { check_variable = { hog_surname = 442 } } localization_key = " Mancini" }
+	text = { trigger = { check_variable = { hog_surname = 443 } } localization_key = " Loggia" }
+	text = { trigger = { check_variable = { hog_surname = 444 } } localization_key = " Lorenzo" }
+	text = { trigger = { check_variable = { hog_surname = 445 } } localization_key = " Monaldo" }
+	text = { trigger = { check_variable = { hog_surname = 446 } } localization_key = " Mazzeo" }
+	text = { trigger = { check_variable = { hog_surname = 447 } } localization_key = " Necci" }
+	text = { trigger = { check_variable = { hog_surname = 448 } } localization_key = " Neri" }
+	text = { trigger = { check_variable = { hog_surname = 449 } } localization_key = " Ossani" }
+	text = { trigger = { check_variable = { hog_surname = 450 } } localization_key = " Oscuro" }
+	text = { trigger = { check_variable = { hog_surname = 451 } } localization_key = " Oddo" }
+	text = { trigger = { check_variable = { hog_surname = 452 } } localization_key = " Messe" }
+	text = { trigger = { check_variable = { hog_surname = 453 } } localization_key = " Cadorna" }
+	text = { trigger = { check_variable = { hog_surname = 454 } } localization_key = " Supremo" }
+	text = { trigger = { check_variable = { hog_surname = 455 } } localization_key = " Acquaviva" }
+	text = { trigger = { check_variable = { hog_surname = 456 } } localization_key = " Bergonzoli" }
+	text = { trigger = { check_variable = { hog_surname = 457 } } localization_key = " Ferrante" }
+	text = { trigger = { check_variable = { hog_surname = 458 } } localization_key = " Perruchetti" }
+	text = { trigger = { check_variable = { hog_surname = 459 } } localization_key = " Frusci" }
+	text = { trigger = { check_variable = { hog_surname = 460 } } localization_key = " Capello" }
+	text = { trigger = { check_variable = { hog_surname = 461 } } localization_key = " Gotti" }
+	text = { trigger = { check_variable = { hog_surname = 462 } } localization_key = " Tellini" }
+	text = { trigger = { check_variable = { hog_surname = 463 } } localization_key = " Corcione" }
+	text = { trigger = { check_variable = { hog_surname = 464 } } localization_key = " Navarini" }
+	text = { trigger = { check_variable = { hog_surname = 465 } } localization_key = " Volta" }
+	text = { trigger = { check_variable = { hog_surname = 466 } } localization_key = " Moschini" }
+	#Portuguese
+	text = { trigger = { check_variable = { hog_surname = 500 } } localization_key = " Xavier" }
+	text = { trigger = { check_variable = { hog_surname = 501 } } localization_key = " De castro" }
+	text = { trigger = { check_variable = { hog_surname = 502 } } localization_key = " Granjo" }
+	text = { trigger = { check_variable = { hog_surname = 503 } } localization_key = " da Silva" }
+	text = { trigger = { check_variable = { hog_surname = 504 } } localization_key = " Preto" }
+	text = { trigger = { check_variable = { hog_surname = 505 } } localization_key = " Ramos" }
+	text = { trigger = { check_variable = { hog_surname = 506 } } localization_key = " Baptista" }
+	text = { trigger = { check_variable = { hog_surname = 507 } } localization_key = " Silva" }
+	text = { trigger = { check_variable = { hog_surname = 508 } } localization_key = " Santos" }
+	text = { trigger = { check_variable = { hog_surname = 509 } } localization_key = " Pereira" }
+	text = { trigger = { check_variable = { hog_surname = 510 } } localization_key = " Ferreira" }
+	text = { trigger = { check_variable = { hog_surname = 511 } } localization_key = " Oliveira" }
+	text = { trigger = { check_variable = { hog_surname = 512 } } localization_key = " Costa" }
+	text = { trigger = { check_variable = { hog_surname = 513 } } localization_key = " Rodrigues" }
+	text = { trigger = { check_variable = { hog_surname = 514 } } localization_key = " Martins" }
+	text = { trigger = { check_variable = { hog_surname = 515 } } localization_key = " Jesus" }
+	text = { trigger = { check_variable = { hog_surname = 516 } } localization_key = " Sousa" }
+	text = { trigger = { check_variable = { hog_surname = 517 } } localization_key = " Fernandes" }
+	text = { trigger = { check_variable = { hog_surname = 518 } } localization_key = " Gonçalves" }
+	text = { trigger = { check_variable = { hog_surname = 519 } } localization_key = " Gomes" }
+	text = { trigger = { check_variable = { hog_surname = 520 } } localization_key = " Lopes" }
+	text = { trigger = { check_variable = { hog_surname = 521 } } localization_key = " Alves" }
+	text = { trigger = { check_variable = { hog_surname = 522 } } localization_key = " Almeida" }
+	text = { trigger = { check_variable = { hog_surname = 523 } } localization_key = " Pinto" }
+	text = { trigger = { check_variable = { hog_surname = 524 } } localization_key = " Carvalho" }
+	text = { trigger = { check_variable = { hog_surname = 525 } } localization_key = " de Sá Cardoso" }
+	text = { trigger = { check_variable = { hog_surname = 526 } } localization_key = " de Sousam Barbosa" }
+	text = { trigger = { check_variable = { hog_surname = 527 } } localization_key = " Júnior" }
+	text = { trigger = { check_variable = { hog_surname = 528 } } localization_key = " Antunes" }
+	text = { trigger = { check_variable = { hog_surname = 529 } } localization_key = " Pais" }
+	text = { trigger = { check_variable = { hog_surname = 530 } } localization_key = " Norton de Matos" }
+	text = { trigger = { check_variable = { hog_surname = 531 } } localization_key = " Ribeiro" }
+	text = { trigger = { check_variable = { hog_surname = 532 } } localization_key = " Chagas" }
+	text = { trigger = { check_variable = { hog_surname = 533 } } localization_key = " Fonseca" }
+	text = { trigger = { check_variable = { hog_surname = 534 } } localization_key = " Machado" }
+	text = { trigger = { check_variable = { hog_surname = 535 } } localization_key = " Pimentel" }
+	text = { trigger = { check_variable = { hog_surname = 536 } } localization_key = " Cruz" }
+	text = { trigger = { check_variable = { hog_surname = 537 } } localization_key = " Cunha" }
+	text = { trigger = { check_variable = { hog_surname = 538 } } localization_key = " Ferreira do Amaral" }
+	#English
+	text = { trigger = { check_variable = { hog_surname = 600 } } localization_key = " Walpole" }
+	text = { trigger = { check_variable = { hog_surname = 601 } } localization_key = " Compton" }
+	text = { trigger = { check_variable = { hog_surname = 602 } } localization_key = " Wilmington" }
+	text = { trigger = { check_variable = { hog_surname = 603 } } localization_key = " Pelham" }
+	text = { trigger = { check_variable = { hog_surname = 604 } } localization_key = " Holles" }
+	text = { trigger = { check_variable = { hog_surname = 605 } } localization_key = " Newcastle" }
+	text = { trigger = { check_variable = { hog_surname = 606 } } localization_key = " Cavendish" }
+	text = { trigger = { check_variable = { hog_surname = 607 } } localization_key = " Suart" }
+	text = { trigger = { check_variable = { hog_surname = 608 } } localization_key = " Greenville" }
+	text = { trigger = { check_variable = { hog_surname = 609 } } localization_key = " Watson" }
+	text = { trigger = { check_variable = { hog_surname = 610 } } localization_key = " Watson-Wenthworth" }
+	text = { trigger = { check_variable = { hog_surname = 611 } } localization_key = " Wellesley" }
+	text = { trigger = { check_variable = { hog_surname = 612 } } localization_key = " Pitt" }
+	text = { trigger = { check_variable = { hog_surname = 613 } } localization_key = " FitzRoy" }
+	text = { trigger = { check_variable = { hog_surname = 614 } } localization_key = " North" }
+	text = { trigger = { check_variable = { hog_surname = 615 } } localization_key = " Shelburne" }
+	text = { trigger = { check_variable = { hog_surname = 616 } } localization_key = " Rockingham" }
+	text = { trigger = { check_variable = { hog_surname = 617 } } localization_key = " Petty" }
+	text = { trigger = { check_variable = { hog_surname = 618 } } localization_key = " Astley" }
+	text = { trigger = { check_variable = { hog_surname = 619 } } localization_key = " Byron" }
+	text = { trigger = { check_variable = { hog_surname = 620 } } localization_key = " Capell" }
+	text = { trigger = { check_variable = { hog_surname = 621 } } localization_key = " Clifford" }
+	text = { trigger = { check_variable = { hog_surname = 622 } } localization_key = " Courtenay" }
+	text = { trigger = { check_variable = { hog_surname = 623 } } localization_key = " Coventry" }
+	text = { trigger = { check_variable = { hog_surname = 624 } } localization_key = " Dormer" }
+	text = { trigger = { check_variable = { hog_surname = 625 } } localization_key = " Frankland" }
+	text = { trigger = { check_variable = { hog_surname = 626 } } localization_key = " Hastings" }
+	text = { trigger = { check_variable = { hog_surname = 627 } } localization_key = " Herbert" }
+	text = { trigger = { check_variable = { hog_surname = 628 } } localization_key = " Howard" }
+	text = { trigger = { check_variable = { hog_surname = 629 } } localization_key = " Kenworthy" }
+	text = { trigger = { check_variable = { hog_surname = 630 } } localization_key = " Robinson" }
+	text = { trigger = { check_variable = { hog_surname = 631 } } localization_key = " Canning" }
+	text = { trigger = { check_variable = { hog_surname = 632 } } localization_key = " Lumley" }
+	text = { trigger = { check_variable = { hog_surname = 633 } } localization_key = " Maxwell" }
+	text = { trigger = { check_variable = { hog_surname = 634 } } localization_key = " Robertson" }
+	text = { trigger = { check_variable = { hog_surname = 635 } } localization_key = " Wynne" }
+	text = { trigger = { check_variable = { hog_surname = 636 } } localization_key = " Wynne-Jones" }
+	text = { trigger = { check_variable = { hog_surname = 637 } } localization_key = " White" }
+	text = { trigger = { check_variable = { hog_surname = 638 } } localization_key = " Brayley" }
+	text = { trigger = { check_variable = { hog_surname = 639 } } localization_key = " Lloyd" }
+	text = { trigger = { check_variable = { hog_surname = 640 } } localization_key = " Griffiths" }
+	text = { trigger = { check_variable = { hog_surname = 641 } } localization_key = " Callaghan" }
+	text = { trigger = { check_variable = { hog_surname = 642 } } localization_key = " Carlile" }
+	text = { trigger = { check_variable = { hog_surname = 643 } } localization_key = " Beddoe" }
+	text = { trigger = { check_variable = { hog_surname = 644 } } localization_key = " Llewelyn" }
+}

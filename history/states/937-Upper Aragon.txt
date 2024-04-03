@@ -1,0 +1,30 @@
+
+state={
+	id=937
+	name="STATE_937"
+	manpower = 285912	
+	
+	state_category = rural
+	
+	resources={
+		gunpowder =1
+		iron=2 
+	}
+
+	history={
+		owner = SPR
+		victory_points = {
+			9840 1
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		add_core_of = SPR
+	}
+
+	provinces={
+		11838 915 899 9842 9840 11821 11819 11793 9813 6901 790
+	}
+}

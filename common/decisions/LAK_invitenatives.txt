@@ -1,0 +1,37 @@
+
+native_diplomacy_category = {
+	send_diplomats = {
+
+		icon = generic_form_nation
+
+		allowed = {
+				original_tag = LAK
+		}
+
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 5
+		days_remove = 5
+
+		remove_effect  = { 
+		PWN = { country_event = LAKInvites.1
+			}
+		CCH = { country_event = LAKInvites.3
+			}
+		OSG = { country_event = LAKInvites.5
+			}
+		CHR = { country_event = LAKInvites.7
+			}
+		SHW = { country_event = LAKInvites.9
+			}
+		CHY = { country_event = LAKInvites.11
+			}
+		CRW = { country_event = LAKInvites.13
+			}
+		REE = { country_event = LAKInvites.15
+			}
+		}
+	}
+}

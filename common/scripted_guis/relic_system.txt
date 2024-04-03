@@ -1,0 +1,185 @@
+scripted_gui = {
+
+	relic_button = {
+       window_name = "relicbutton"
+	   
+       context_type = player_context
+  
+        visible = { 
+		}
+		
+ 		properties = {
+		}
+		
+        effects = {
+		    relic_button_click = {
+                set_temp_variable = { show = 1 }
+                subtract_from_temp_variable = { show = show_aeiou_relic }
+                set_variable = { show_aeiou_relic = show }
+				set_variable = { relic_page = 0 }
+				set_variable = { relic_subpage = 0 }
+            }				
+        }
+		
+		dynamic_lists = {
+		}
+		
+        triggers = {
+        }
+		
+		ai_enabled = {
+		    always = no
+		}	
+	}
+	
+	relic_system = {
+		window_name = "relicsystem"
+		
+		context_type = player_context
+		
+		visible = { 
+            check_variable = { show_aeiou_relic > 0 }		
+		}
+		
+		properties = {
+			relic_icon = {
+				image = "[GetRelicIcon]"
+			}
+		}
+		
+		effects = {
+			relic_closebutton_click = {
+                set_temp_variable = { show = 1 }
+                subtract_from_temp_variable = { show = show_aeiou_relic }
+                set_variable = { show_aeiou_relic = show }
+				set_variable = { relic_page = 0 }
+				set_variable = { relic_subpage = 0 }
+            }
+			relic_right_click = {
+				set_temp_variable = { relic_page_temp = 1 }
+                add_to_temp_variable = { relic_page_temp = relic_page }
+                set_variable = { relic_page = relic_page_temp }
+				set_variable = { relic_subpage = 0 }
+			}
+			relic_left_click = {
+				set_temp_variable = { relic_page_temp = 1 }
+                subtract_from_variable = { relic_page = relic_page_temp }
+				set_variable = { relic_subpage = 0 }
+			}
+			relic_desc_button_click = {
+				IF = {
+					LIMIT = { check_variable = { relic_subpage = 1 } }
+					set_variable = { relic_subpage = 0 }
+				}
+				else = {
+					set_variable = { relic_subpage = 1 }
+				}
+			}
+			relic_content_button_click = {
+				IF = {
+					LIMIT = { check_variable = { relic_subpage = 2 } }
+					set_variable = { relic_subpage = 0 }
+				}
+				else = {
+					set_variable = { relic_subpage = 2 }
+				}
+			}
+		}
+		
+		dynamic_lists = {
+			show_relics = {
+				array = AUS.relic_storage_array
+				entry_container = show_relics 
+			}
+		}
+		
+		triggers = {
+			relic_left_click_enabled = {
+				NOT = { check_variable = { relic_page = 0 } }
+			}
+			relic_right_click_enabled = {
+				set_temp_variable = { relic_page_test_temp = relic_page }
+                add_to_temp_variable = { relic_page_test_temp = 1 }
+				NOT = {
+					check_variable = { 
+						var = relic_page_test_temp
+						value = relic_storage_array^num
+						compare = greater_than_or_equals 
+					}
+				}
+			}
+			relic_content_button_visible = {
+				OR = {
+					check_variable = { ROOT.relic_storage_array^relic_page = 3 }
+				}
+			}
+			relic_sound_button_visible = {
+				OR = {
+					check_variable = { ROOT.relic_storage_array^relic_page = 2 }
+				}
+			}
+		}
+		
+		ai_enabled = {
+		    always = no
+		}	
+	}
+	
+	relic_desc = {
+       window_name = "relic_desc_interface"
+	   
+       context_type = player_context
+  
+        visible = { 
+			check_variable = { relic_subpage = 1 }
+		}
+		
+ 		properties = {
+		}
+		
+        effects = {
+			relic_desc_closebutton_click = {
+				set_variable = { relic_subpage = 0 }
+			}
+        }
+		
+		dynamic_lists = {
+		}
+		
+        triggers = {
+        }
+		
+		ai_enabled = {
+		    always = no
+		}	
+	}
+	
+	relic_content = {
+       window_name = "relic_content_interface"
+	   
+       context_type = player_context
+  
+        visible = { 
+			check_variable = { relic_subpage = 2 }
+		}
+		
+ 		properties = {
+		}
+		
+        effects = {
+			relic_content_closebutton_click = {
+				set_variable = { relic_subpage = 0 }
+			}
+        }
+		
+		dynamic_lists = {
+		}
+		
+        triggers = {
+        }
+		
+		ai_enabled = {
+		    always = no
+		}	
+	}
+}

@@ -1,0 +1,60 @@
+division_template = {
+	name = "Royal Libyan Guard Battalion"
+
+	division_names_group = LIB_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Libyan Cavalry Division"
+
+	division_names_group = LIB_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Libyan Warrior Brigade"
+
+	division_names_group = LIB_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Royal Libyan Guard Battalion"
+		location = 1149
+		division_template = "Royal Libyan Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Libyan Cavalry Division"
+		location = 7005
+		division_template = "Royal Libyan Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Libyan Warrior Brigade"
+		location = 1198
+		division_template = "Royal Libyan Warrior Brigade"
+		start_experience_factor = 0.3
+	}
+}

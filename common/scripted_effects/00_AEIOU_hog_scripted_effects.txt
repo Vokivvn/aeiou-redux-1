@@ -1,0 +1,267 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+set_new_ideologies_new_country = {	
+	THIS = {
+		log = "[GetDateText]: [This.GetName]: Changing array"
+		clear_array = ideology_array
+		set_variable = { chauvinism_var = 1 }
+		set_variable = { despotism_var = 2 }
+		set_variable = { conservatism_var = 3 }
+		set_variable = { liberalism_var = 4 }
+		set_variable = { progressivism_var = 5 }
+		set_variable = { socialism_var = 6 }
+		set_variable = { communism_var = 7 }
+		set_variable = { anarchism_var = 8 }
+		
+		add_to_array = { ideology_array = chauvinism_var }
+		add_to_array = { ideology_array = despotism_var }
+		add_to_array = { ideology_array = conservatism_var }
+		add_to_array = { ideology_array = liberalism_var }
+		add_to_array = { ideology_array = progressivism_var }
+		
+		for_each_loop = {
+			array = ideology_popularities_array
+			index = i
+			
+			set_temp_variable = { j = i }
+			set_temp_variable = { i_hate_pdx_code = ideology_array^j }
+			subtract_from_temp_variable = { j = 1 }
+			while_loop_effect = {
+				limit = {
+					check_variable = {
+						var = j
+						value = 0
+						compare = greater_than_or_equals
+					}
+					check_variable = {
+						var = v
+						value = ideology_popularities_array^j
+						compare = greater_than
+					}
+				}
+				set_temp_variable = { j_plus_1 = j }
+				add_to_temp_variable = { j_plus_1 = 1 }
+				set_variable = { ideology_popularities_array^j_plus_1 = ideology_popularities_array^j }
+				set_variable = { ideology_array^j_plus_1 = ideology_array^j }
+				subtract_from_temp_variable = { j = 1 }
+			}
+			set_temp_variable = { j_plus_1 = j }
+			add_to_temp_variable = { j_plus_1 = 1 }
+			set_variable = { ideology_popularities_array^j_plus_1 = v }
+			set_variable = { ideology_array^j_plus_1 = i_hate_pdx_code }
+		}
+		meta_effect = {
+			text = {
+				add_country_leader_trait = [IDEOLOGY]_country_leader
+			}
+			IDEOLOGY = "[GetNewIdeologyNameMeta1]"
+		}	
+	}
+}
+
+set_new_ideologies = {	
+	every_country = {
+		clear_array = ideology_array
+		set_variable = { chauvinism_var = 1 }
+		set_variable = { despotism_var = 2 }
+		set_variable = { conservatism_var = 3 }
+		set_variable = { liberalism_var = 4 }
+		set_variable = { progressivism_var = 5 }
+		set_variable = { socialism_var = 6 }
+		set_variable = { communism_var = 7 }
+		set_variable = { anarchism_var = 8 }
+		
+		add_to_array = { ideology_array = chauvinism_var }
+		add_to_array = { ideology_array = despotism_var }
+		add_to_array = { ideology_array = conservatism_var }
+		add_to_array = { ideology_array = liberalism_var }
+		add_to_array = { ideology_array = progressivism_var }
+		
+		for_each_loop = {
+			array = ideology_popularities_array
+			index = i
+			
+			set_temp_variable = { j = i }
+			set_temp_variable = { i_hate_pdx_code = ideology_array^j }
+			subtract_from_temp_variable = { j = 1 }
+			while_loop_effect = {
+				limit = {
+					check_variable = {
+						var = j
+						value = 0
+						compare = greater_than_or_equals
+					}
+					check_variable = {
+						var = v
+						value = ideology_popularities_array^j
+						compare = greater_than
+					}
+				}
+				set_temp_variable = { j_plus_1 = j }
+				add_to_temp_variable = { j_plus_1 = 1 }
+				set_variable = { ideology_popularities_array^j_plus_1 = ideology_popularities_array^j }
+				set_variable = { ideology_array^j_plus_1 = ideology_array^j }
+				subtract_from_temp_variable = { j = 1 }
+			}
+			set_temp_variable = { j_plus_1 = j }
+			add_to_temp_variable = { j_plus_1 = 1 }
+			set_variable = { ideology_popularities_array^j_plus_1 = v }
+			set_variable = { ideology_array^j_plus_1 = i_hate_pdx_code }
+		}
+		meta_effect = {
+			text = {
+				add_country_leader_trait = [IDEOLOGY]_country_leader
+			}
+			IDEOLOGY = "[GetNewIdeologyNameMeta1]"
+		}	
+	}
+}
+
+clear_ruling_coalition_parties = {
+	clear_variable = chauvinism_coalition_party
+	clear_variable = despotism_coalition_party
+	clear_variable = conservatism_coalition_party
+	clear_variable = liberalism_coalition_party
+	clear_variable = progressivism_coalition_party
+	clear_variable = socialism_coalition_party
+	clear_variable = communism_coalition_party
+	clear_variable = anarchism_coalition_party
+	
+	clear_variable = chauvinism_ruling_party
+	clear_variable = despotism_ruling_party
+	clear_variable = conservatism_ruling_party
+	clear_variable = liberalism_ruling_party
+	clear_variable = progressivism_ruling_party
+	clear_variable = socialism_ruling_party
+	clear_variable = communism_ruling_party
+	clear_variable = anarchism_ruling_party
+	
+}
+
+
+set_new_ideologies_puppet = {	
+ROOT = {
+clear_array = ideology_array
+    set_variable = { chauvinism_var = 1 }
+    set_variable = { despotism_var = 2 }
+    set_variable = { conservatism_var = 3 }
+    set_variable = { liberalism_var = 4 }
+    set_variable = { progressivism_var = 5 }
+    set_variable = { socialism_var = 6 }
+    set_variable = { communism_var = 7 }
+    set_variable = { anarchism_var = 8 }
+	
+    add_to_array = { ideology_array = chauvinism_var }
+    add_to_array = { ideology_array = despotism_var }
+    add_to_array = { ideology_array = conservatism_var }
+    add_to_array = { ideology_array = liberalism_var }
+    add_to_array = { ideology_array = progressivism_var }
+    add_to_array = { ideology_array = socialism_var }
+    add_to_array = { ideology_array = communism_var }
+    add_to_array = { ideology_array = anarchism_var }
+	
+	for_each_loop = {
+		array = ideology_array
+		index = i
+		value = v 
+		
+        while_loop_effect = {
+		    limit = {
+                meta_trigger = {
+                    text = {
+	                    check_variable = { v = [IDEOLOGY] }
+        	        }
+	                IDEOLOGY = "[From.GetNewIdeologyNameMeta2]"
+                }
+			}
+			clear_array = ideology_popularities_array
+            add_to_array = { ideology_popularities_array = 0 } # Nationalism
+            add_to_array = { ideology_popularities_array = 0 } # Monarchism
+            add_to_array = { ideology_popularities_array = 0 } # Conservatism
+            add_to_array = { ideology_popularities_array = 0} # Liberalism
+            add_to_array = { ideology_popularities_array = 0 } # Progressivism
+            add_to_array = { ideology_popularities_array = 0 } # Socialism
+            add_to_array = { ideology_popularities_array = 0 } # liberalism
+            add_to_array = { ideology_popularities_array = 0 } # Anarchism				
+		    set_variable = { ideology_popularities_array^i = 1 }
+		}
+	}
+	for_each_loop = {
+		array = ideology_popularities_array
+		index = i
+		
+		set_temp_variable = { j = i }
+		set_temp_variable = { i_hate_pdx_code = ideology_array^j }
+		subtract_from_temp_variable = { j = 1 }
+		while_loop_effect = {
+			limit = {
+				check_variable = {
+					var = j
+					value = 0
+					compare = greater_than_or_equals
+				}
+				check_variable = {
+					var = v
+					value = ideology_popularities_array^j
+					compare = greater_than
+				}
+			}
+			set_temp_variable = { j_plus_1 = j }
+			add_to_temp_variable = { j_plus_1 = 1 }
+			set_variable = { ideology_popularities_array^j_plus_1 = ideology_popularities_array^j }
+			set_variable = { ideology_array^j_plus_1 = ideology_array^j }
+			subtract_from_temp_variable = { j = 1 }
+		}
+		set_temp_variable = { j_plus_1 = j }
+		add_to_temp_variable = { j_plus_1 = 1 }
+		set_variable = { ideology_popularities_array^j_plus_1 = v }
+		set_variable = { ideology_array^j_plus_1 = i_hate_pdx_code }
+	}
+    clear_ruling_coalition_parties = yes 
+    meta_effect = {
+        text = {
+	        set_variable = { [IDEOLOGY]_ruling_party = 1 }
+	    }
+	    IDEOLOGY = "[From.GetNewIdeologyNameMeta1]"
+    }
+	meta_effect = {
+	    text = {
+            create_country_leader = {
+        	    name = "[NAME]"
+        	    desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+             	#picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+            	expire = "1965.1.1"
+            	ideology = [IDEOLOGY]
+            	traits = {
+		
+	            }
+            }
+		}
+		IDEOLOGY = "[GetGovTypeNameMeta]"
+		NAME = "[GetPartyLeader2]"
+	}
+    meta_effect = {
+        text = {
+	        add_country_leader_trait = [IDEOLOGY]_country_leader
+	    }
+	    IDEOLOGY = "[From.GetNewIdeologyNameMeta1]"
+    }
+	
+}
+}

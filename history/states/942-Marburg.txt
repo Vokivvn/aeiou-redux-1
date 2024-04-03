@@ -1,0 +1,27 @@
+state={
+	id=942
+	name="STATE_942"
+	manpower = 53134	
+	
+	state_category = town
+
+	resources={
+		horses = 2
+		wood = 3
+	}
+
+	history={
+		owner = AUS
+		victory_points = {
+			3654 5
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = AUS
+	}
+
+	provinces={
+		9596 3654 596
+	}
+}

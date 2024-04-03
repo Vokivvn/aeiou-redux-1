@@ -1,0 +1,60 @@
+division_template = {
+	name = "Royal Thuringian Guard Battalion"
+
+	division_names_group = THU_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Thuringian Cavalry Division"
+
+	division_names_group = THU_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Thuringian Knight Brigade"
+
+	division_names_group = THU_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Royal Thuringian Guard Battalion"
+		location = 482
+		division_template = "Royal Thuringian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Thuringian Cavalry Division"
+		location = 6524
+		division_template = "Royal Thuringian Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Thuringian Knight Brigade"
+		location = 6501
+		division_template = "Royal Thuringian Knight Brigade"
+		start_experience_factor = 0.3
+	}
+}

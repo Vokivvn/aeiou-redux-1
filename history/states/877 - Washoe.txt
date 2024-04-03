@@ -1,0 +1,24 @@
+state={
+	id=877
+	name="STATE_877"
+	
+	resources={
+		horses=2
+	}
+    
+	history={
+		owner = WSH
+		add_core_of = WSH
+		buildings = {
+			infrastructure = 2
+			}
+	}
+
+
+	provinces={
+      1663 7756 1862 10625 12607 9695 1789 10556 
+	}
+	manpower = 8612
+	buildings_max_level_factor = 1.000
+	state_category = pastoral
+}

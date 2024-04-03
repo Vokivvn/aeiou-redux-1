@@ -1,0 +1,230 @@
+###########################
+# HOG Events
+###########################
+
+add_namespace = hogEvent
+country_event = {
+	id = hogEvent.1
+	title = hogEvent.1.t
+	desc = hogEvent.1.d
+	
+	fixed_random_seed = no
+	fire_only_once = no
+	hidden = yes
+		
+	trigger = {
+		has_country_flag = has_hog
+		check_variable = { hog_desc > 0 }
+	}
+	
+	picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = hogEvent.1.a
+		hidden_effect = {
+			random_list = {
+				400 = {ROOT{}}
+				1 = { ROOT = { country_event = { days = 0 id = hogEvent.2}}}
+				1 = { ROOT = { country_event = { days = 0 id = hogEvent.3}}}
+				2 = {
+					ROOT = { 
+						country_event =  {
+							days = 0 id = hogEvent.4
+						}
+					}
+					modifier = {
+						factor = 0
+						has_stability < 50
+					}
+				}
+				5 = {
+					ROOT = { 
+						country_event =  {
+							days = 0 id = hogEvent.5
+						}
+					}
+					modifier = {
+						factor = 0
+						NOT = {
+							has_war = yes
+						}
+					}
+				}
+			}
+			
+		}
+	}
+}
+country_event = {
+	id = hogEvent.2
+	title = hogEvent.2.t
+	desc = hogEvent.2.d
+	
+	fire_only_once = no
+		
+	is_triggered_only = yes
+	
+	picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = hogEvent.2.a
+		hidden_effect = {
+			ROOT = {
+				remove_hog = yes
+			}
+		}
+	}
+}
+country_event = {
+	id = hogEvent.3
+	title = hogEvent.3.t
+	desc = hogEvent.3.d
+	
+	fire_only_once = no
+		
+	is_triggered_only = yes
+	
+	picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = hogEvent.3.a
+		hidden_effect = {
+			ROOT = {
+				remove_hog = yes
+			}
+			add_stability = -0.02
+		}
+	}
+}
+country_event = {
+	id = hogEvent.4
+	title = hogEvent.4.t
+	desc = hogEvent.4.d
+	
+	fire_only_once = no
+		
+	is_triggered_only = yes
+	
+	picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = hogEvent.4.a
+		hidden_effect = {
+			ROOT = {
+				remove_hog = yes
+			}
+			add_stability = -0.05
+		}
+	}
+}
+country_event = {
+	id = hogEvent.5
+	title = hogEvent.5.t
+	desc = hogEvent.5.d
+	
+	fire_only_once = no
+		
+	is_triggered_only = yes
+	
+	picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = hogEvent.5.a
+		hidden_effect = {
+			ROOT = {
+				remove_hog = yes
+			}
+			add_stability = -0.02
+			add_war_support = 0.03
+		}
+	}
+}
+country_event = {
+	id = hogEvent.6
+	title = hogEvent.6.t
+	desc = hogEvent.6.d
+	
+	fire_only_once = no
+		
+	trigger = {
+		check_variable = { hog_desc = 2 }
+		check_variable = { hog_loyalty < 0.25 }
+		NOT = { has_idea = hog_generic_divided_government }
+	}
+	
+	picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = hogEvent.6.a
+		add_timed_idea = {
+			idea = hog_generic_divided_government
+			days = 730
+		}
+	}
+}
+country_event = {
+	id = hogEvent.7
+	title = hogEvent.7.t
+	desc = hogEvent.7.d
+	
+	fire_only_once = no
+		
+	trigger = {
+		check_variable = { hog_desc = 2 }
+		check_variable = { hog_loyalty < 0.10 }
+		NOT = { has_idea = hog_generic_questioned_experience }
+	}
+	
+	picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = hogEvent.6.a
+		add_timed_idea = {
+			idea = hog_generic_questioned_experience
+			days = 365
+		}
+	}
+}
+country_event = {
+	id = hogEvent.8
+	title = hogEvent.8.t
+	desc = hogEvent.8.d
+	
+	fire_only_once = no
+		
+	trigger = {
+		check_variable = { hog_desc = 2 }
+		check_variable = { hog_loyalty > 0.85 }
+		NOT = { has_idea = hog_generic_all_for_the_ruler }
+	}
+	
+	picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = hogEvent.8.a
+		add_timed_idea = {
+			idea = hog_generic_all_for_the_ruler
+			days = 730
+		}
+	}
+}
+country_event = {
+	id = hogEvent.9
+	title = hogEvent.9.t
+	desc = hogEvent.9.d
+	
+	fire_only_once = no
+		
+	is_triggered_only = yes
+	
+	picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = hogEvent.9.a
+		add_stability = -0.05
+		add_popularity = {
+			ideology = weitlingist  
+			popularity = 0.005
+		}
+	}
+}

@@ -1,0 +1,27 @@
+
+state={
+	id=825
+	name="STATE_825" 
+	manpower = 49201
+	
+	state_category = rural
+
+	history={
+		owner = VNC
+		victory_points = {
+			9821 2 
+		}
+		buildings = {
+			infrastructure = 3
+			9821 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = VNC
+
+	}
+
+	provinces={
+		9821
+	}
+}

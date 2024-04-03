@@ -1,0 +1,24 @@
+﻿l_english:
+ #Interface
+ Relic_desc:0 "[GetRelicDesc]"
+
+ #Tooltips
+ RELIC_BUTTON_TOOLTIP:0 "§YRelics§!\nSee a collection of collected relics"
+ RELIC_DESC_TOOLTIP:0 "§YRelic Description§!"
+ RELIC_CONTENT_TOOLTIP:0 "§YRelic Content§!"
+ RELIC_SOUND_TOOLTIP:0 "§YRelic Sound§!"
+ RELIC_ICON_TOOLTIP:0 "[GetRelicName]"
+ RELIC_LEFT_TOOLTIP:0 "§YPrevious Relic§!"
+ RELIC_RIGHT_TOOLTIP:0 "§YNext Relic§!"
+ RELIC_EXIT_TOOLTIP:0 "§RClose Relics§!"
+ 
+ #Relics
+ Relic_0_name:0 "§RWe have no relics§!"
+ Relic_0_date:0 "NA"
+ Relic_0_desc:0 "NA"
+ 
+ Relic_1_name:0 "Heredia's Cutlass"
+ Relic_1_date:0 "Used: 1853-1864"
+ Relic_1_desc:0 "Salustiano Heredia, a general that rose to power during the last part of the Spanish-Portuguese war after the assassination of King Carlos III, quickly became prominant after his successful liberation of Pamplona. With his cutlass at his side, he was a mighty general to be feared on the battlefield. After the war had ended, he had continued to exercise his division near the Pyrenees Mountains fearing another invasion from the French. However, he would not need to fear another French invasion for he died in 1864 due to unknown causes and left his cutlass behind for Spain to forever behold."
+ 
+ Relic_scrollbar:0 "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"

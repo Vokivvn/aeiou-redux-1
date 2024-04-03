@@ -1,0 +1,24 @@
+
+state={
+	id=507
+	name="STATE_507" # Magallanes
+	manpower = 29252
+	
+	state_category = pastoral
+
+	resources = {
+		horses=2
+	}
+
+	history={
+		owner = SPG
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = SPG
+	}
+
+	provinces={
+		2161 5159 5201 5209 5215 8198 8218 8913 10961 
+	}
+}

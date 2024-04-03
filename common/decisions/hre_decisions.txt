@@ -1,0 +1,865 @@
+political_actions = {
+
+	
+	imperial_conversion = {
+
+		allowed = { 
+		}
+
+		available = {
+			OR = {
+				NOT = {
+					has_idea = hre_idea_prince
+					has_idea = hre_idea_elector
+					has_idea = hre_idea_conservative
+					has_idea = hre_idea_republic
+				}
+				NOT = { check_variable = { national_religion_array^0 = 3 } }
+			}
+		}
+
+		activation = {
+			always = no
+		}
+
+		modifier = {
+		}
+
+		is_good = no
+
+		days_mission_timeout = 540
+
+		timeout_effect = {
+			custom_effect_tooltip = imperial_conversion_tt
+			add_political_power = -40
+			add_stability = -0.1
+		}
+	}
+	
+	# Decisions for the ai to use the HRE system because the click seems to be a simple bool...
+	
+	hre_1 = {
+
+		icon = generic_form_nation
+
+		available = {
+			hre_not_caled_to_war_trigger = yes
+			OR = {
+				hre_defensive_war_trigger = yes
+				hre_offensive_war_trigger = yes
+			}
+		}
+
+		visible = {
+			
+			is_ai = yes
+			has_idea = hre_idea_emperor
+		}
+
+		fire_only_once = no
+
+		days_remove = 1
+		days_re_enable = 7
+
+		remove_effect = {
+			set_global_flag = HRE_called_to_war
+			imperial_authority_call_to_arms_loss = yes
+			every_country  = {
+				LIMIT = {
+					has_war = no
+					OR = {
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_free_city
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_conservative
+					}
+				}
+				country_event = HREEvent.3
+			}
+		}
+
+		ai_will_do = {
+			base  = -100
+			modifier = {
+				add = 500
+				OR = {
+					hre_defensive_war_trigger = yes
+					hre_offensive_war_trigger = yes
+				}
+			}
+		}
+	}
+	
+	hre_2 = {
+
+		icon = generic_form_nation
+
+		available = {
+			set_temp_variable = { imperial_authority_check_temp = 10 }
+			imperial_authority_check_trigger = yes
+			hre_not_toured = yes
+		}
+
+		visible = {
+			
+			is_ai = yes
+			has_idea = hre_idea_emperor
+		}
+
+		fire_only_once = no
+
+		days_remove = 1
+		days_re_enable = 7
+
+		remove_effect = {
+			hidden_effect = {
+				set_global_flag = has_toured_recently
+				country_event = { days = 365 id = HREEvent.4 }
+			}
+			set_temp_variable = { base_imperial_gain_temp = -10 }
+			imperial_authority = yes
+			set_temp_variable = { base_imperial_stability_gain_temp = 0.015 }
+			imperial_stability = yes
+			every_country  = {
+				LIMIT = {
+					has_war = no
+					OR = {
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_free_city
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_conservative
+					}
+				}
+				country_event = HREEvent.5
+			}
+		}
+
+		ai_will_do = {
+			base  = -100
+			modifier = {
+				add = 50
+				check_variable { global.imperial_authority > 50 }
+			}
+			modifier = {
+				add = 50
+				check_variable { global.imperial_authority > 150 }
+			}
+			modifier = {
+				add = 75
+				check_variable { global.hre_prince_amount < 15 }
+			}
+			modifier = {
+				add = 75
+				check_variable { global.hre_prince_amount > 30 }
+			}
+			modifier = {
+				add = 75
+				set_temp_variable = { ROOT.vote_test = 0}
+				every_country = {
+					LIMIT = {
+						has_idea = hre_idea_emperor
+					}
+					if = {
+						LIMIT = {
+							NOT = { check_variable = { THIS.hre_emperor_vote = ROOT } }
+						}
+						add_to_temp_variable = { ROOT.vote_test = 1 }
+					}
+				}
+				check_variable = { ROOT.vote_test > 2}
+			}
+			modifier = {
+				add = 125
+				check_variable { global.imperial_stability < 0.4 }
+			}
+		}
+	}
+	
+	hre_3 = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_political_power > 50
+		}
+
+		visible = {
+			
+			is_ai = yes
+			OR = {
+				has_idea = hre_idea_emperor
+				has_idea = hre_idea_elector
+				has_idea = hre_idea_prince
+				has_idea = hre_idea_free_city
+				has_idea = hre_idea_republic
+				has_idea = hre_idea_conservative
+			}
+		}
+
+		fire_only_once = no
+
+		days_remove = 1
+		days_re_enable = 7
+		
+		cost = 50
+
+		remove_effect = {
+			add_political_power = -50
+			set_temp_variable = { base_imperial_gain_temp = 1 }
+			imperial_authority = yes
+		}
+
+		ai_will_do = {
+			base  = -100
+			modifier = {
+				add = 300
+				has_political_power > 250
+				OR = {
+					has_idea = hre_idea_emperor
+					AND = {
+						OR = {
+							has_idea = hre_idea_elector
+							has_idea = hre_idea_prince
+							has_idea = hre_idea_free_city
+							has_idea = hre_idea_republic
+							has_idea = hre_idea_conservative
+						}
+					}
+					var:global.hre_emperor = {
+						ROOT = {
+							has_opinion = {
+								target = PREV
+								value > 90
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	hre_4 = {
+
+		icon = generic_form_nation
+
+		available = {
+			set_temp_variable = { imperial_authority_check_temp = 100 }
+			imperial_authority_check_trigger = yes
+			set_temp_variable = { imperial_centralization_check_temp = 0.50 }
+			imperial_centralization_check_trigger = yes
+		}
+
+		visible = {
+			
+			is_ai = yes
+			has_idea = hre_idea_emperor
+		}
+
+		fire_only_once = no
+
+		days_remove = 1
+		days_re_enable = 7
+
+		remove_effect = {
+			set_temp_variable = { base_imperial_gain_temp = -100 }
+			imperial_authority = yes
+			hre_remove_post_industry_misc = yes
+			if = {
+				LIMIT = { has_idea = hre_idea_pope_excommunicated }
+				remove_ideas = hre_idea_pope_excommunicated
+			}
+			every_country  = {
+				LIMIT = {
+					OR = {
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_free_city
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_conservative
+					}
+				}
+				country_event = HREEvent.6
+			}
+			eoanb_add_50_prestige_score = yes
+			hidden_effect = {
+				set_global_flag = end_of_hre
+				every_country = {
+					LIMIT = {
+						check_variable = { show_aeiou_hre > 0 }	
+					}
+					set_variable = { show_aeiou_hre = 0 }
+				}
+				every_country = {
+					LIMIT = {
+						has_idea = hre_idea_elector
+					}
+					remove_ideas = hre_idea_elector
+				}
+				find_electors = yes
+				every_country = {
+					LIMIT = {
+						has_idea = hre_idea_prince
+					}
+					remove_ideas = hre_idea_prince
+				}
+				find_princes = yes
+				every_country = {
+					LIMIT = {
+						OR = {
+							has_idea = hre_idea_free_city
+							has_idea = hre_idea_republic
+							has_idea = hre_idea_conservative
+						}
+					}
+					remove_ideas = hre_idea_free_city
+					remove_ideas = hre_idea_republic
+					remove_ideas = hre_idea_conservative
+				}
+				find_free_cities = yes
+				every_country = {
+					country_event = { days = 15 id = story_news_events.23 }
+				}
+				if = {
+					LIMIT = {
+						has_cosmetic_tag = GER_UNIFIED
+					}
+					clr_global_flag = form_germany_flag
+				}
+			}
+			set_cosmetic_tag = HRE_UNIFIED
+		}
+
+		ai_will_do = {
+			base  = -100
+			modifier = {
+				add = 50
+				check_variable = { global.imperial_centralization > 50 }
+			}
+			modifier = {
+				add = 50
+				check_variable = { global.imperial_centralization > 70 }
+			}
+			modifier = {
+				add = 50
+				check_variable = { global.imperial_centralization > 90 }
+			}
+			modifier = {
+				add = 50
+				check_variable = { global.hre_prince_amount < 15 }
+			}
+			modifier = {
+				add = 25
+				check_variable = { global.hre_prince_amount < 25 }
+			}
+		}
+	}
+	
+	hre_5 = {
+
+		icon = generic_form_nation
+
+		available = {
+			has_political_power > 25
+			NOT = { 
+				has_opinion_modifier = HRE_distance
+			}
+		}
+
+		visible = {
+			
+			is_ai = yes
+			OR = {
+				has_idea = hre_idea_elector
+				has_idea = hre_idea_prince
+				has_idea = hre_idea_free_city
+				has_idea = hre_idea_republic
+				has_idea = hre_idea_conservative
+			}
+		}
+
+		fire_only_once = no
+
+		days_remove = 1
+		days_re_enable = 1460
+		
+		cost = 25
+
+		remove_effect = {
+			var:global.hre_emperor = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = HRE_distance
+				}
+				ROOT = {
+					add_opinion_modifier = {
+						target = PREV
+						modifier = HRE_distance
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			base  = -100
+			modifier = {
+				add = 300
+				OR = {
+					has_idea = hre_idea_elector
+					has_idea = hre_idea_prince
+					has_idea = hre_idea_free_city
+					has_idea = hre_idea_republic
+					has_idea = hre_idea_conservative
+				}
+				var:global.hre_emperor = {
+					ROOT = {
+						has_opinion = {
+							target = PREV
+							value < -20
+						}
+					}
+				}
+				check_variable = { 
+					var = global.imperial_centralization 
+					value = 0.10
+					compare = greater_than_or_equals 
+				}
+				has_political_power > 50
+			}
+		}
+	}
+	
+	hre_6 = {
+
+		icon = generic_form_nation
+
+		available = {
+			set_temp_variable = { imperial_authority_check_temp = 50 }
+			imperial_authority_check_trigger = yes
+		}
+
+		visible = {
+			is_ai = yes
+			has_idea = hre_idea_emperor
+			NOT = { has_global_flag = HRE_EFFICIENCY_I }
+		}
+
+		fire_only_once = yes
+
+		days_remove = 1
+		days_re_enable = 7
+
+		remove_effect = {
+			civil_war_check = yes
+			set_temp_variable = { base_imperial_gain_temp = -50 }
+			imperial_authority = yes
+			imperial_stability_centralization = yes
+			set_temp_variable = { base_imperial_centralization_gain_temp = 0.10 }
+			imperial_centralization = yes
+			set_temp_variable = { base_imperial_efficiency_gain_temp = 0.25 }
+			imperial_efficiency = yes
+			hidden_effect = {
+				set_global_flag = HRE_EFFICIENCY_I
+				find_hre_decisions = yes
+			}
+		}
+
+		ai_will_do = {
+			base  = 100
+		}
+	}
+	
+	hre_7 = {
+
+		icon = generic_form_nation
+
+		available = {
+			set_temp_variable = { imperial_authority_check_temp = 75 }
+			imperial_authority_check_trigger = yes
+		}
+
+		visible = {
+			is_ai = yes
+			has_idea = hre_idea_emperor
+			NOT = { has_global_flag = HRE_EFFICIENCY_II }
+			has_global_flag = HRE_EFFICIENCY_I
+			check_variable = { 
+				var = global.imperial_centralization 
+				value = 0.20
+				compare = greater_than_or_equals 
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 1
+		days_re_enable = 7
+
+		remove_effect = {
+			civil_war_check = yes
+			set_temp_variable = { base_imperial_gain_temp = -75 }
+			imperial_authority = yes
+			imperial_stability_centralization = yes
+			set_temp_variable = { base_imperial_centralization_gain_temp = 0.10 }
+			imperial_centralization = yes
+			set_temp_variable = { base_imperial_efficiency_gain_temp = 0.25 }
+			imperial_efficiency = yes
+			hidden_effect = {
+				set_global_flag = HRE_EFFICIENCY_II
+				find_hre_decisions = yes
+			}
+		}
+
+		ai_will_do = {
+			base  = 100
+		}
+	}
+	
+	hre_8 = {
+
+		icon = generic_form_nation
+
+		available = {
+			set_temp_variable = { imperial_authority_check_temp = 50 }
+			imperial_authority_check_trigger = yes
+		}
+
+		visible = {
+			is_ai = yes
+			has_idea = hre_idea_emperor
+			NOT = { has_global_flag = HRE_MILITARY_ACCESS_I }
+			check_variable = { 
+				var = global.imperial_centralization 
+				value = 0.10
+				compare = greater_than_or_equals 
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 1
+		days_re_enable = 7
+
+		remove_effect = {
+			civil_war_check = yes
+			set_temp_variable = { base_imperial_gain_temp = -50 }
+			imperial_authority = yes
+			imperial_stability_centralization = yes
+			set_temp_variable = { base_imperial_centralization_gain_temp = 0.10 }
+			imperial_centralization = yes
+			hre_military_access = yes
+			hidden_effect = {
+				set_global_flag = HRE_MILITARY_ACCESS_I
+				find_hre_decisions = yes
+			}
+		}
+
+		ai_will_do = {
+			base  = 100
+		}
+	}
+	
+	hre_9 = {
+
+		icon = generic_form_nation
+
+		available = {
+			set_temp_variable = { imperial_authority_check_temp = 75 }
+			imperial_authority_check_trigger = yes
+		}
+
+		visible = {
+			is_ai = yes
+			has_idea = hre_idea_emperor
+			has_global_flag = HRE_MILITARY_ACCESS_I
+			NOT = { has_global_flag = HRE_MILITARY_ACCESS_II }
+			check_variable = { 
+				var = global.imperial_centralization 
+				value = 0.30
+				compare = greater_than_or_equals 
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 1
+		days_re_enable = 7
+
+		remove_effect = {
+			civil_war_check = yes
+			set_temp_variable = { base_imperial_gain_temp = -75 }
+			imperial_authority = yes
+			imperial_stability_centralization = yes
+			set_temp_variable = { base_imperial_centralization_gain_temp = 0.10 }
+			imperial_centralization = yes
+			hre_imperial_army = yes
+			hidden_effect = {
+				set_global_flag = HRE_MILITARY_ACCESS_II
+				find_hre_decisions = yes
+			}
+		}
+
+		ai_will_do = {
+			base  = 100
+		}
+	}
+	
+	hre_10 = {
+
+		icon = generic_form_nation
+
+		available = {
+			set_temp_variable = { imperial_authority_check_temp = 100 }
+			imperial_authority_check_trigger = yes
+		}
+
+		visible = {
+			is_ai = yes
+			has_idea = hre_idea_emperor
+			NOT = { has_global_flag = OATH_FOR_SUPPORT }
+			check_variable = { 
+				var = global.imperial_centralization 
+				value = 0.40
+				compare = greater_than_or_equals 
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 1
+		days_re_enable = 7
+
+		remove_effect = {
+			civil_war_check = yes
+			set_temp_variable = { base_imperial_gain_temp = -100 }
+			imperial_authority = yes
+			imperial_stability_centralization = yes
+			set_temp_variable = { base_imperial_centralization_gain_temp = 0.10 }
+			imperial_centralization = yes
+			hre_militaristic_oath = yes
+			hidden_effect = {
+				find_hre_decisions = yes
+			}
+		}
+
+		ai_will_do = {
+			base  = 100
+		}
+	}
+	
+	hre_11 = {
+
+		icon = generic_form_nation
+
+		available = {
+			set_temp_variable = { imperial_authority_check_temp = 50 }
+			imperial_authority_check_trigger = yes
+		}
+
+		visible = {
+			is_ai = yes
+			has_idea = hre_idea_emperor
+			NOT = { has_global_flag = HRE_CALL_TO_WAR_I }
+		}
+
+		fire_only_once = yes
+
+		days_remove = 1
+		days_re_enable = 7
+
+		remove_effect = {
+			civil_war_check = yes
+			set_temp_variable = { base_imperial_gain_temp = -50 }
+			imperial_authority = yes
+			imperial_stability_centralization = yes
+			set_temp_variable = { base_imperial_centralization_gain_temp = 0.10 }
+			imperial_centralization = yes
+			hre_defense_of_the_empire = yes
+			hidden_effect = {
+				find_hre_decisions = yes
+			}
+		}
+
+		ai_will_do = {
+			base  = 100
+		}
+	}
+	
+	hre_12 = {
+
+		icon = generic_form_nation
+
+		available = {
+			set_temp_variable = { imperial_authority_check_temp = 75 }
+			imperial_authority_check_trigger = yes
+		}
+
+		visible = {
+			is_ai = yes
+			has_idea = hre_idea_emperor
+			NOT = { has_global_flag = HRE_CALL_TO_WAR_II }
+			has_global_flag = HRE_CALL_TO_WAR_I
+			check_variable = { 
+				var = global.imperial_centralization 
+				value = 0.20
+				compare = greater_than_or_equals 
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 1
+		days_re_enable = 7
+
+		remove_effect = {
+			civil_war_check = yes
+			set_temp_variable = { base_imperial_gain_temp = -75 }
+			imperial_authority = yes
+			imperial_stability_centralization = yes
+			set_temp_variable = { base_imperial_centralization_gain_temp = 0.10 }
+			imperial_centralization = yes
+			hre_call_of_the_empire = yes
+			hidden_effect = {
+				find_hre_decisions = yes
+			}
+		}
+
+		ai_will_do = {
+			base  = 100
+		}
+	}
+	
+	hre_13 = {
+
+		icon = generic_form_nation
+
+		available = {
+			set_temp_variable = { imperial_authority_check_temp = 50 }
+			imperial_authority_check_trigger = yes
+		}
+
+		visible = {
+			is_ai = yes
+			has_idea = hre_idea_emperor
+			NOT = { has_global_flag = HRE_EMPEROR_INDUSTRY_I }
+			check_variable = { 
+				var = global.imperial_centralization 
+				value = 0.10
+				compare = greater_than_or_equals
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 1
+		days_re_enable = 7
+
+		remove_effect = {
+			civil_war_check = yes
+			set_temp_variable = { base_imperial_gain_temp = -50 }
+			imperial_authority = yes
+			imperial_stability_centralization = yes
+			set_temp_variable = { base_imperial_centralization_gain_temp = 0.10 }
+			imperial_centralization = yes
+			hre_emperor_industry = yes
+			hidden_effect = {
+				set_global_flag = HRE_EMPEROR_INDUSTRY_I
+				find_hre_decisions = yes
+			}
+		}
+
+		ai_will_do = {
+			base  = 100
+		}
+	}
+	
+	hre_14 = {
+
+		icon = generic_form_nation
+
+		available = {
+			set_temp_variable = { imperial_authority_check_temp = 50 }
+			imperial_authority_check_trigger = yes
+		}
+
+		visible = {
+			is_ai = yes
+			has_idea = hre_idea_emperor
+			has_global_flag = HRE_EMPEROR_INDUSTRY_I
+			NOT = { has_global_flag = HRE_EMPEROR_INDUSTRY_II }
+			check_variable = { 
+				var = global.imperial_centralization 
+				value = 0.30
+				compare = greater_than_or_equals
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 1
+		days_re_enable = 7
+
+		remove_effect = {
+			civil_war_check = yes
+			set_temp_variable = { base_imperial_gain_temp = -75 }
+			imperial_authority = yes
+			imperial_stability_centralization = yes
+			set_temp_variable = { base_imperial_centralization_gain_temp = 0.10 }
+			imperial_centralization = yes
+			hre_emperor_industry_ii = yes
+			hidden_effect = {
+				set_global_flag = HRE_EMPEROR_INDUSTRY_II
+				find_hre_decisions = yes
+			}
+		}
+
+		ai_will_do = {
+			base  = 100
+		}
+	}
+	
+	hre_15 = {
+
+		icon = generic_form_nation
+
+		available = {
+			set_temp_variable = { imperial_authority_check_temp = 100 }
+			imperial_authority_check_trigger = yes
+		}
+
+		visible = {
+			is_ai = yes
+			has_idea = hre_idea_emperor
+			NOT = { has_global_flag = EXCOMMUNICATION_OF_POPE }
+			check_variable = { 
+				var = global.imperial_centralization 
+				value = 0.40
+				compare = greater_than_or_equals 
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 1
+		days_re_enable = 7
+
+		remove_effect = {
+			civil_war_check = yes
+			set_temp_variable = { base_imperial_gain_temp = -100 }
+			imperial_authority = yes
+			imperial_stability_centralization = yes
+			set_temp_variable = { base_imperial_centralization_gain_temp = 0.10 }
+			imperial_centralization = yes
+			add_ideas = hre_idea_pope_excommunicated
+			hidden_effect = {
+				set_global_flag = EXCOMMUNICATION_OF_POPE
+				find_hre_decisions = yes
+			}
+		}
+
+		ai_will_do = {
+			base  = 100
+		}
+	}
+}

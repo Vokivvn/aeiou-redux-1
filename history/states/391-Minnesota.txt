@@ -1,0 +1,28 @@
+
+state={
+	id=391
+	name="STATE_391"
+	manpower = 16858
+	state_category = rural
+
+	resources={
+		iron=4
+		wood=5
+	}
+
+	history={
+		owner = OJB
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = OJB
+		victory_points = {
+			1866 5 
+		}
+
+	}
+
+	provinces={
+		1719 1734 1866 4664 4807 6752 6767 6827 7536 7896 9880 10618 10719 11667 12550 12588 12597 12693 
+	}
+}

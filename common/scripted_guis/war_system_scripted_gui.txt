@@ -1,0 +1,89 @@
+#scripted_gui = {
+#
+#	claimbutton = {
+#       window_name = "claimbutton"
+#       parent_window_token = selected_state_view 
+#	   
+#       context_type = selected_state_context
+#  
+#        visible = { 
+#			OWNER = {
+#				check_variable = { scripted_war = 0  }
+#				has_war_with = ROOT
+#				OVERLORD = {
+#					check_variable = { scripted_war = 0  }
+#				}
+#			}
+#			NOT = {
+#				OWNER = {
+#					has_civil_war = yes
+#					OVERLORD = {
+#						has_civil_war = yes
+#					}
+#				}
+#				is_claimed_by = ROOT
+#				is_owned_by = ROOT
+#				any_country = {
+#					OR = {
+#						is_subject_of = ROOT
+#						is_in_faction_with = ROOT
+#						ROOT = { is_subject_of = PREV }
+#					}
+#					FROM = {
+#						OR = {
+#							is_claimed_by = PREV
+#							is_owned_by = PREV
+#						}
+#					}
+#				}
+#			}
+#		}
+#		
+# 		properties = {
+#		}
+#		
+#        effects = {
+#		    claim_click = {
+#				#equation: politcal power = -25 x ((p + 21)/25) 
+#				set_temp_variable = { ROOT.power_position = ROOT.score_array_position_var  }
+#				clamp_temp_variable = { 
+#					var = ROOT.power_position
+#					min = 4
+#					max = 100
+#				}
+#				add_to_temp_variable = { ROOT.power_position = 21 }
+#				multiply_temp_variable = { ROOT.power_position = -2 }
+#				set_temp_variable = { local_industry = 1  }
+#				set_temp_variable = { local_arms_factory = arms_factory_level  }
+#				divide_temp_variable = { local_arms_factory = 5 }
+#				add_to_temp_variable = { local_industry = local_arms_factory }
+#				set_temp_variable = { local_civilian_factory = industrial_complex_level  }
+#				divide_temp_variable = { local_civilian_factory = 10 }
+#				add_to_temp_variable = { local_industry = local_civilian_factory }
+#				set_temp_variable = { local_infrastructure = infrastructure_level  }
+#				divide_temp_variable = { local_infrastructure = 20 }
+#				add_to_temp_variable = { local_industry = local_infrastructure }
+#				multiply_temp_variable = { ROOT.power_position = local_industry }
+#				ROOT = {
+#					add_political_power = power_position
+#				}
+#				add_claim_by = ROOT
+#            }	
+#			
+#        }
+#		
+#		dynamic_lists = {
+#		}
+#		
+#		triggers = {
+#			claim_click_enabled = {
+#				claim_trigger = yes
+#			}
+#        }
+#		
+#		ai_enabled = {
+#		    always = no 
+#		}	
+#	}
+#	
+#}

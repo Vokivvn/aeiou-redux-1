@@ -1,0 +1,20 @@
+state={
+	id=815
+	name="STATE_815"
+	manpower = 49027
+	resources={ 
+	}
+	state_category = town
+	
+	history={
+		owner = GRE
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = GRE 
+	}
+
+	provinces={
+	  6900 3448 914 
+	}
+}

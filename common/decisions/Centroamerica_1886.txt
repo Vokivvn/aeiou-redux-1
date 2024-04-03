@@ -1,0 +1,3258 @@
+operations = {	
+	#Central American Conflict
+	invade_managua = {
+		icon = border_war
+		allowed = {
+			OR = {
+				original_tag = COS
+				original_tag = NIC
+				original_tag = HON
+			}
+		}
+
+		available = {
+			NOT = {
+				has_global_flag = CABorderConflict
+			}
+		}
+
+		visible = {
+			has_global_flag = CACollapse
+			316 = {
+				is_controlled_by = FROM
+			}
+			919 = {
+				NOT = {
+					is_controlled_by = FROM
+				}
+			}
+		}
+
+		highlight_states = {
+				state = 919
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				date > 1939.1.1
+				factor = 0
+			}
+		}
+		cost = 50
+		days_remove = 30
+		war_with_on_remove = NIC
+		complete_effect = {
+			316 = {
+				save_event_target_as = COS_NIC_attacker_state
+				set_state_flag = border_incident_active
+			}
+			919 = {
+				save_event_target_as = COS_NIC_defender_state
+				set_state_flag = border_incident_active
+				owner = {
+					activate_targeted_decision = { target = ROOT decision = COS_border_conflict_warning_NIC }
+				}
+			}
+			set_global_flag = CABorderConflict
+		}
+		remove_effect = {
+			activate_targeted_decision = { target = NIC decision = COS_border_incident_forgotten }
+			activate_targeted_decision = { target = NIC decision = COS_escalate_incident_to_border_conflict_NIC }
+		}
+	}
+
+	#Mission for defender warning that a conflict with FROM is coming
+	COS_border_conflict_warning_NIC = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		war_with_target_on_timeout = yes
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+		
+		timeout_effect = {
+			custom_effect_tooltip = escalation_possible_tooltip_for_defender
+			custom_effect_tooltip = effects_if_border_conflict_is_lost
+			effect_tooltip = {
+			}
+			hidden_effect = {
+				remove_targeted_decision = { target = COS decision = COS_border_conflict_warning_NIC }
+				activate_targeted_decision = { target = COS decision = COS_border_conflict_escalation_warning_NIC }
+			}
+		}
+	}
+
+	#Mission for defender warning FROM can escalate to war at any point is coming
+	COS_border_conflict_escalation_warning_NIC = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			#var:ROOT.defender_state_vs_@FROM = {
+			#	has_ROOT_at_least_1_div_in_current_state_scope = yes
+			#}
+			hidden_trigger = { always = no }
+		}
+
+		highlight_states = {
+		}
+
+		war_with_target_on_timeout = yes
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+
+		timeout_effect = {
+			custom_effect_tooltip = from_cannot_escalate
+			custom_effect_tooltip = effects_if_border_conflict_is_lost
+			effect_tooltip = {
+			}
+		}		
+	}
+	#Mission for attacker to escalate or incident is forgotten
+	COS_border_incident_forgotten = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			#var:ROOT.defender_state_vs_@FROM = {
+			#	has_ROOT_at_least_1_div_in_current_state_scope = yes
+			#}
+			hidden_trigger = { always = no }
+		}
+
+		highlight_states = {
+			OR = {
+				state = 316
+				state = 919
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+		
+		timeout_effect = {
+			remove_targeted_decision = { target = NIC decision = COS_escalate_incident_to_border_conflict_NIC }
+			add_political_power = -100
+			add_war_support = -0.1 #Shameful Display
+			hidden_effect = {
+				NIC = { remove_targeted_decision = { target = COS decision = COS_border_conflict_escalation_warning_NIC } }
+				NIC = {
+					316 = {
+						clr_state_flag = border_incident_active
+					}
+					919 = {
+						clr_state_flag = border_incident_active
+					}
+				}
+				clr_global_flag = CABorderConflict
+			}
+		}
+	}
+
+	#Decision to escalate incident on border with NIC to border conflict
+	COS_escalate_incident_to_border_conflict_NIC = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			316 = {
+				OR = {
+					is_fully_controlled_by = ROOT
+					CONTROLLER = {
+						is_subject_of = ROOT
+					}
+					CONTROLLER = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			divisions_in_border_state = {
+				state = 316
+				border_state = 919
+				size > 0
+			}
+		}
+
+		highlight_states = {
+			OR = {
+				state = 316
+				state = 919			
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = { 
+				has_war = no
+				factor = 10
+			}
+		}
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+			remove_targeted_decision = { target = NIC decision = COS_border_incident_forgotten }
+			start_border_war = {
+				change_state_after_war = yes
+				attacker = {
+					state = 316
+					num_provinces = 4
+				}
+				
+				defender = {
+					state = 919
+					num_provinces = 4
+				}
+			}
+			NIC = {
+				activate_targeted_decision = { target = COS decision = COS_border_conflict_escalate_conflict }
+				activate_targeted_decision = { target = COS decision = COS_border_conflict_time_until_cancelled }
+			}
+			activate_targeted_decision = { target = NIC decision = COS_border_conflict_escalate_conflict }
+			activate_targeted_decision = { target = NIC decision = COS_border_conflict_time_until_cancelled }
+			clr_global_flag = CABorderConflict
+			ROOT = {
+				add_named_threat = { threat = 1 name = CA_border_invasion }
+			}
+		}
+	}
+	#Mission for attacker to win border war against FROM in X days
+	COS_border_conflict_time_until_cancelled = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			316 = { has_border_war = no }
+			919 = { has_border_war = no }
+		}
+		
+		highlight_states = {
+			OR = {
+				state = 919
+				state = 316
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 90
+		is_good = no
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+
+		}
+
+		timeout_effect = {
+			cancel_border_war = {
+				defender = 919
+				attacker = 316
+			}
+			hidden_effect = {
+				remove_targeted_decision = { target = NIC decision = COS_border_conflict_escalate_conflict }
+				remove_targeted_decision = { target = COS decision = COS_border_conflict_escalate_conflict }
+			}
+		}
+	}
+
+	#Decision to back down from conflict
+	COS_border_conflict_back_out_of_conflict = {
+
+		allowed = { always = no } #Activated from effect
+
+		visible = {
+			has_border_war_with = FROM
+		}
+
+		highlight_states = {
+			OR = {
+				state = 316
+				state = 919
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+			if = {
+				limit = { is_border_conflict_defender_vs_FROM = yes }
+				finalize_border_war = {
+					attacker_win = yes
+					attacker = 316
+					defender = 919
+				}
+			}
+			else = {
+				finalize_border_war = {
+					attacker = 316
+					defender = 919
+					defender_win = yes
+				}
+			}
+		}
+	}
+	NIC_invade_COS = {
+		icon = border_war
+		icon = border_war
+		allowed = {
+			OR = {
+				original_tag = COS
+				original_tag = NIC
+				original_tag = HON
+			}
+		}
+
+		available = {
+			919 = {
+				any_neighbor_state = {
+					NOT = {
+						is_controlled_by = FROM
+					}
+				}
+			}
+			NOT = {
+				has_global_flag = CABorderConflict
+			}
+		}
+
+		visible = {
+			919 = {
+				is_controlled_by = FROM
+			}
+			316 = {
+				NOT = {
+					is_controlled_by = FROM
+				}
+			}
+			has_global_flag = CACollapse
+		}
+
+		highlight_states = {
+				state = 316
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				date > 1939.1.1
+				factor = 0
+			}
+		}
+		cost = 50
+		days_remove = 30
+		war_with_on_remove = COS
+		complete_effect = {
+			919 = {
+				save_event_target_as = NIC_COS_attacker_state
+				set_state_flag = border_incident_active
+			}
+			316 = {
+				save_event_target_as = NIC_COS_defender_state
+				set_state_flag = border_incident_active
+				owner = {
+					activate_targeted_decision = { target = ROOT decision = NIC_border_conflict_warning_COS }
+				}
+			}
+			set_global_flag = CABorderConflict
+		}
+		remove_effect = {
+			activate_targeted_decision = { target = COS decision = NIC_border_incident_forgotten }
+			activate_targeted_decision = { target = COS decision = NIC_escalate_incident_to_border_conflict_COS }
+		}
+	}
+
+	#Mission for defender warning that a conflict with FROM is coming
+	NIC_border_conflict_warning_COS = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		war_with_target_on_timeout = yes
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+		
+		timeout_effect = {
+			custom_effect_tooltip = escalation_possible_tooltip_for_defender
+			custom_effect_tooltip = effects_if_border_conflict_is_lost
+			effect_tooltip = {
+			}
+			hidden_effect = {
+				remove_targeted_decision = { target = NIC decision = NIC_border_conflict_warning_COS }
+				activate_targeted_decision = { target = NIC decision = NIC_border_conflict_escalation_warning_COS }
+			}
+		}
+	}
+
+	#Mission for defender warning FROM can escalate to war at any point is coming
+	NIC_border_conflict_escalation_warning_COS = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			#var:ROOT.defender_state_vs_@FROM = {
+			#	has_ROOT_at_least_1_div_in_current_state_scope = yes
+			#}
+			hidden_trigger = { always = no }
+		}
+
+		highlight_states = {
+		}
+
+		war_with_target_on_timeout = yes
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+
+		timeout_effect = {
+			custom_effect_tooltip = from_cannot_escalate
+			custom_effect_tooltip = effects_if_border_conflict_is_lost
+			effect_tooltip = {
+			}
+		}		
+	}
+	#Mission for attacker to escalate or incident is forgotten
+	NIC_border_incident_forgotten = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			#var:ROOT.defender_state_vs_@FROM = {
+			#	has_ROOT_at_least_1_div_in_current_state_scope = yes
+			#}
+			hidden_trigger = { always = no }
+		}
+
+		highlight_states = {
+			OR = {
+				state = 919
+				state = 316
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+		
+		timeout_effect = {
+			remove_targeted_decision = { target = COS decision = NIC_escalate_incident_to_border_conflict_COS }
+			add_political_power = -100
+			add_war_support = -0.1 #Shameful Display
+			hidden_effect = {
+				COS = { remove_targeted_decision = { target = NIC decision = NIC_border_conflict_escalation_warning_COS } }
+				COS = {
+					919 = {
+						clr_state_flag = border_incident_active
+					}
+					316 = {
+						clr_state_flag = border_incident_active
+					}
+				}
+				clr_global_flag = CABorderConflict
+			}
+		}
+	}
+
+	#Decision to escalate incident on border with COS to border conflict
+	NIC_escalate_incident_to_border_conflict_COS = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			919 = {
+				OR = {
+					is_fully_controlled_by = ROOT
+					CONTROLLER = {
+						is_subject_of = ROOT
+					}
+					CONTROLLER = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			divisions_in_border_state = {
+				state = 919
+				border_state = 316
+				size > 0
+			}
+		}
+
+		highlight_states = {
+			OR = {
+				state = 919
+				state = 316			
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = { 
+				has_war = no
+				factor = 10
+			}
+		}
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+			remove_targeted_decision = { target = COS decision = NIC_border_incident_forgotten }
+			start_border_war = {
+				change_state_after_war = yes
+				attacker = {
+					state = 919
+					num_provinces = 4
+				}
+				
+				defender = {
+					state = 316
+					num_provinces = 4
+				}
+			}
+			COS = {
+				activate_targeted_decision = { target = NIC decision = NIC_border_conflict_escalate_conflict }
+				activate_targeted_decision = { target = NIC decision = NIC_border_conflict_time_until_cancelled }
+			}
+			activate_targeted_decision = { target = COS decision = NIC_border_conflict_escalate_conflict }
+			activate_targeted_decision = { target = COS decision = NIC_border_conflict_time_until_cancelled }
+			clr_global_flag = CABorderConflict
+			ROOT = {
+				add_named_threat = { threat = 1 name = CA_border_invasion }
+			}
+		}
+	}
+	#Mission for attacker to win border war against FROM in X days
+	NIC_border_conflict_time_until_cancelled = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			919 = { has_border_war = no }
+			316 = { has_border_war = no }
+		}
+		
+		highlight_states = {
+			OR = {
+				state = 316
+				state = 919
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 90
+		is_good = no
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+
+		}
+
+		timeout_effect = {
+			cancel_border_war = {
+				defender = 316
+				attacker = 919
+			}
+			hidden_effect = {
+				remove_targeted_decision = { target = COS decision = NIC_border_conflict_escalate_conflict }
+				remove_targeted_decision = { target = NIC decision = NIC_border_conflict_escalate_conflict }
+			}
+		}
+	}
+
+	#Decision to back down from conflict
+	NIC_border_conflict_back_out_of_conflict = {
+
+		allowed = { always = no } #Activated from effect
+
+		visible = {
+			has_border_war_with = FROM
+		}
+
+		highlight_states = {
+			OR = {
+				state = 919
+				state = 316
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+			if = {
+				limit = { is_border_conflict_defender_vs_FROM = yes }
+				finalize_border_war = {
+					attacker_win = yes
+					attacker = 919
+					defender = 316
+				}
+			}
+			else = {
+				finalize_border_war = {
+					attacker = 919
+					defender = 316
+					defender_win = yes
+				}
+			}
+		}
+	}
+	
+	HON_invade_NIC = {
+		icon = border_war
+		allowed = {
+			OR = {
+				original_tag = COS
+				original_tag = NIC
+				original_tag = HON
+			}
+		}
+
+		available = {
+			NOT = {
+				has_global_flag = CABorderConflict
+			}
+		}
+
+		visible = {
+			921 = {
+				is_controlled_by = FROM
+			}
+			317 = {
+				NOT = {
+					is_controlled_by = FROM
+				}
+			}
+			has_global_flag = CACollapse
+		}
+
+
+		highlight_states = {
+				state = 317
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				date > 1939.1.1
+				factor = 0
+			}
+		}
+		cost = 50
+		days_remove = 30
+		war_with_on_remove = NIC
+		complete_effect = {
+			921 = {
+				save_event_target_as = HON_NIC_attacker_state
+				set_state_flag = border_incident_active
+			}
+			317 = {
+				save_event_target_as = HON_NIC_defender_state
+				set_state_flag = border_incident_active
+				owner = {
+					activate_targeted_decision = { target = ROOT decision = HON_border_conflict_warning_NIC }
+				}
+			}
+			set_global_flag = CABorderConflict
+		}
+		remove_effect = {
+			activate_targeted_decision = { target = NIC decision = HON_border_incident_forgotten }
+			activate_targeted_decision = { target = NIC decision = HON_escalate_incident_to_border_conflict_NIC }
+		}
+	}
+
+	#Mission for defender warning that a conflict with FROM is coming
+	HON_border_conflict_warning_NIC = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		war_with_target_on_timeout = yes
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+		
+		timeout_effect = {
+			custom_effect_tooltip = escalation_possible_tooltip_for_defender
+			custom_effect_tooltip = effects_if_border_conflict_is_lost
+			effect_tooltip = {
+			}
+			hidden_effect = {
+				remove_targeted_decision = { target = HON decision = HON_border_conflict_warning_NIC }
+				activate_targeted_decision = { target = HON decision = HON_border_conflict_escalation_warning_NIC }
+			}
+		}
+	}
+
+	#Mission for defender warning FROM can escalate to war at any point is coming
+	HON_border_conflict_escalation_warning_NIC = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			#var:ROOT.defender_state_vs_@FROM = {
+			#	has_ROOT_at_least_1_div_in_current_state_scope = yes
+			#}
+			hidden_trigger = { always = no }
+		}
+
+		highlight_states = {
+		}
+
+		war_with_target_on_timeout = yes
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+
+		timeout_effect = {
+			custom_effect_tooltip = from_cannot_escalate
+			custom_effect_tooltip = effects_if_border_conflict_is_lost
+			effect_tooltip = {
+			}
+		}		
+	}
+	#Mission for attacker to escalate or incident is forgotten
+	HON_border_incident_forgotten = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			#var:ROOT.defender_state_vs_@FROM = {
+			#	has_ROOT_at_least_1_div_in_current_state_scope = yes
+			#}
+			hidden_trigger = { always = no }
+		}
+
+		highlight_states = {
+			OR = {
+				state = 921
+				state = 317
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+		
+		timeout_effect = {
+			remove_targeted_decision = { target = NIC decision = HON_escalate_incident_to_border_conflict_NIC }
+			add_political_power = -100
+			add_war_support = -0.1 #Shameful Display
+			hidden_effect = {
+				NIC = { remove_targeted_decision = { target = HON decision = HON_border_conflict_escalation_warning_NIC } }
+				NIC = {
+					921 = {
+						clr_state_flag = border_incident_active
+					}
+					317 = {
+						clr_state_flag = border_incident_active
+					}
+				}
+				clr_global_flag = CABorderConflict
+			}
+		}
+	}
+
+	#Decision to escalate incident on border with NIC to border conflict
+	HON_escalate_incident_to_border_conflict_NIC = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			921 = {
+				OR = {
+					is_fully_controlled_by = ROOT
+					CONTROLLER = {
+						is_subject_of = ROOT
+					}
+					CONTROLLER = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			divisions_in_border_state = {
+				state = 921
+				border_state = 317
+				size > 0
+			}
+		}
+
+		highlight_states = {
+			OR = {
+				state = 921
+				state = 317			
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = { 
+				has_war = no
+				factor = 10
+			}
+		}
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+			remove_targeted_decision = { target = NIC decision = HON_border_incident_forgotten }
+			start_border_war = {
+				change_state_after_war = yes
+				attacker = {
+					state = 921
+					num_provinces = 4
+				}
+				
+				defender = {
+					state = 317
+					num_provinces = 4
+				}
+			}
+			NIC = {
+				activate_targeted_decision = { target = HON decision = HON_border_conflict_escalate_conflict }
+				activate_targeted_decision = { target = HON decision = HON_border_conflict_time_until_cancelled }
+			}
+			activate_targeted_decision = { target = NIC decision = HON_border_conflict_escalate_conflict }
+			activate_targeted_decision = { target = NIC decision = HON_border_conflict_time_until_cancelled }
+			clr_global_flag = CABorderConflict
+			ROOT = {
+				add_named_threat = { threat = 1 name = CA_border_invasion }
+			}
+		}
+	}
+	#Mission for attacker to win border war against FROM in X days
+	HON_border_conflict_time_until_cancelled = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			921 = { has_border_war = no }
+			317 = { has_border_war = no }
+		}
+		
+		highlight_states = {
+			OR = {
+				state = 317
+				state = 921
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 90
+		is_good = no
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+
+		}
+
+		timeout_effect = {
+			cancel_border_war = {
+				defender = 317
+				attacker = 921
+			}
+			hidden_effect = {
+				remove_targeted_decision = { target = NIC decision = HON_border_conflict_escalate_conflict }
+				remove_targeted_decision = { target = HON decision = HON_border_conflict_escalate_conflict }
+			}
+		}
+	}
+
+	#Decision to back down from conflict
+	HON_border_conflict_back_out_of_conflict = {
+
+		allowed = { always = no } #Activated from effect
+
+		visible = {
+			has_border_war_with = FROM
+		}
+
+		highlight_states = {
+			OR = {
+				state = 921
+				state = 317
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+			if = {
+				limit = { is_border_conflict_defender_vs_FROM = yes }
+				finalize_border_war = {
+					attacker_win = yes
+					attacker = 921
+					defender = 317
+				}
+			}
+			else = {
+				finalize_border_war = {
+					attacker = 921
+					defender = 317
+					defender_win = yes
+				}
+			}
+		}
+	}
+	NIC_invade_HON = {
+		icon = border_war
+		allowed = {
+			OR = {
+				original_tag = COS
+				original_tag = NIC
+				original_tag = HON
+			}
+		}
+
+		available = {
+			317 = {
+				any_neighbor_state = {
+					NOT = {
+						is_controlled_by = FROM
+					}
+				}
+			}
+			NOT = {
+				has_global_flag = CABorderConflict
+			}
+		}
+
+		visible = {
+			317 = {
+				is_controlled_by = FROM
+			}
+			921 = {
+				NOT = {
+					is_controlled_by = FROM
+				}
+			}
+			has_global_flag = CACollapse
+		}
+
+
+		highlight_states = {
+				state = 921
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				date > 1939.1.1
+				factor = 0
+			}
+		}
+		cost = 50
+		days_remove = 30
+		war_with_on_remove = HON
+		complete_effect = {
+			317 = {
+				save_event_target_as = NIC_HON_attacker_state
+				set_state_flag = border_incident_active
+			}
+			921 = {
+				save_event_target_as = NIC_HON_defender_state
+				set_state_flag = border_incident_active
+				owner = {
+					activate_targeted_decision = { target = ROOT decision = NIC_border_conflict_warning_HON }
+				}
+			}
+			set_global_flag = CABorderConflict
+		}
+		remove_effect = {
+			activate_targeted_decision = { target = HON decision = NIC_border_incident_forgotten_1 }
+			activate_targeted_decision = { target = HON decision = NIC_escalate_incident_to_border_conflict_HON }
+		}
+	}
+
+	#Mission for defender warning that a conflict with FROM is coming
+	NIC_border_conflict_warning_HON = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		war_with_target_on_timeout = yes
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+		
+		timeout_effect = {
+			custom_effect_tooltip = escalation_possible_tooltip_for_defender
+			custom_effect_tooltip = effects_if_border_conflict_is_lost
+			effect_tooltip = {
+			}
+			hidden_effect = {
+				remove_targeted_decision = { target = NIC decision = NIC_border_conflict_warning_HON }
+				activate_targeted_decision = { target = NIC decision = NIC_border_conflict_escalation_warning_HON }
+			}
+		}
+	}
+
+	#Mission for defender warning FROM can escalate to war at any point is coming
+	NIC_border_conflict_escalation_warning_HON = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			#var:ROOT.defender_state_vs_@FROM = {
+			#	has_ROOT_at_least_1_div_in_current_state_scope = yes
+			#}
+			hidden_trigger = { always = no }
+		}
+
+		highlight_states = {
+		}
+
+		war_with_target_on_timeout = yes
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+
+		timeout_effect = {
+			custom_effect_tooltip = from_cannot_escalate
+			custom_effect_tooltip = effects_if_border_conflict_is_lost
+			effect_tooltip = {
+			}
+		}		
+	}
+	#Mission for attacker to escalate or incident is forgotten
+	NIC_border_incident_forgotten_1 = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			#var:ROOT.defender_state_vs_@FROM = {
+			#	has_ROOT_at_least_1_div_in_current_state_scope = yes
+			#}
+			hidden_trigger = { always = no }
+		}
+
+		highlight_states = {
+			OR = {
+				state = 317
+				state = 921
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+		
+		timeout_effect = {
+			remove_targeted_decision = { target = HON decision = NIC_escalate_incident_to_border_conflict_HON }
+			add_political_power = -100
+			add_war_support = -0.1 #Shameful Display
+			hidden_effect = {
+				HON = { remove_targeted_decision = { target = NIC decision = NIC_border_conflict_escalation_warning_HON } }
+				HON = {
+					317 = {
+						clr_state_flag = border_incident_active
+					}
+					921 = {
+						clr_state_flag = border_incident_active
+					}
+				}
+				clr_global_flag = CABorderConflict
+			}
+		}
+	}
+
+	#Decision to escalate incident on border with HON to border conflict
+	NIC_escalate_incident_to_border_conflict_HON = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			317 = {
+				OR = {
+					is_fully_controlled_by = ROOT
+					CONTROLLER = {
+						is_subject_of = ROOT
+					}
+					CONTROLLER = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			divisions_in_border_state = {
+				state = 317
+				border_state = 921
+				size > 0
+			}
+		}
+
+		highlight_states = {
+			OR = {
+				state = 317
+				state = 921			
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = { 
+				has_war = no
+				factor = 10
+			}
+		}
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+			remove_targeted_decision = { target = HON decision = NIC_border_incident_forgotten_1 }
+			start_border_war = {
+				change_state_after_war = yes
+				attacker = {
+					state = 317
+					num_provinces = 4
+				}
+				
+				defender = {
+					state = 921
+					num_provinces = 4
+				}
+			}
+			HON = {
+				activate_targeted_decision = { target = NIC decision = NIC_border_conflict_escalate_conflict }
+				activate_targeted_decision = { target = NIC decision = NIC_border_conflict_time_until_cancelled_1 }
+			}
+			activate_targeted_decision = { target = HON decision = NIC_border_conflict_escalate_conflict }
+			activate_targeted_decision = { target = HON decision = NIC_border_conflict_time_until_cancelled_1 }
+			clr_global_flag = CABorderConflict
+			ROOT = {
+				add_named_threat = { threat = 1 name = CA_border_invasion }
+			}
+		}
+	}
+	#Mission for attacker to win border war against FROM in X days
+	NIC_border_conflict_time_until_cancelled_1 = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			317 = { has_border_war = no }
+			921 = { has_border_war = no }
+		}
+		
+		highlight_states = {
+			OR = {
+				state = 921
+				state = 317
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 90
+		is_good = no
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+
+		}
+
+		timeout_effect = {
+			cancel_border_war = {
+				defender = 921
+				attacker = 317
+			}
+			hidden_effect = {
+				remove_targeted_decision = { target = HON decision = NIC_border_conflict_escalate_conflict }
+				remove_targeted_decision = { target = NIC decision = NIC_border_conflict_escalate_conflict }
+			}
+		}
+	}
+
+	#Decision to back down from conflict
+	NIC_border_conflict_back_out_of_conflict_1 = {
+
+		allowed = { always = no } #Activated from effect
+
+		visible = {
+			has_border_war_with = FROM
+		}
+
+		highlight_states = {
+			OR = {
+				state = 317
+				state = 921
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+			if = {
+				limit = { is_border_conflict_defender_vs_FROM = yes }
+				finalize_border_war = {
+					attacker_win = yes
+					attacker = 317
+					defender = 921
+				}
+			}
+			else = {
+				finalize_border_war = {
+					attacker = 317
+					defender = 921
+					defender_win = yes
+				}
+			}
+		}
+	}
+	YUC_invade_puerto = {
+		icon = border_war
+		allowed = {
+			original_tag = YUC
+		}
+
+		available = {
+			311 = {
+				any_neighbor_state = {
+					NOT = {
+						is_controlled_by = FROM
+					}
+				}
+			}
+			NOT = {
+				has_global_flag = CABorderConflict
+			}
+		}
+
+		visible = {
+			311 = {
+				OR = {
+					is_controlled_by = FROM
+					CONTROLLER = {
+						is_subject_of = ROOT
+					}
+					CONTROLLER = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			920 = {
+				NOT = {
+					is_controlled_by = FROM
+				}
+			}
+			has_global_flag = YUC_GUA_Refuse
+		}
+
+
+		highlight_states = {
+				state = 920
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				date > 1939.1.1
+				factor = 0
+			}
+		}
+		cost = 50
+		days_remove = 30
+		war_with_on_remove = GUA
+		complete_effect = {
+			311 = {
+				save_event_target_as = YUC_GUA_attacker_state
+				set_state_flag = border_incident_active
+			}
+			920 = {
+				save_event_target_as = YUC_GUA_defender_state
+				set_state_flag = border_incident_active
+				owner = {
+					activate_targeted_decision = { target = ROOT decision = YUC_border_conflict_warning_GUA }
+				}
+			}
+			set_global_flag = CABorderConflict
+		}
+		remove_effect = {
+			activate_targeted_decision = { target = GUA decision = YUC_border_incident_forgotten }
+			activate_targeted_decision = { target = GUA decision = YUC_escalate_incident_to_border_conflict_GUA }
+		}
+	}
+
+	#Mission for defender warning that a conflict with FROM is coming
+	YUC_border_conflict_warning_GUA = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		war_with_target_on_timeout = yes
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+		
+		timeout_effect = {
+			custom_effect_tooltip = escalation_possible_tooltip_for_defender
+			custom_effect_tooltip = effects_if_border_conflict_is_lost
+			effect_tooltip = {
+			}
+			hidden_effect = {
+				remove_targeted_decision = { target = YUC decision = YUC_border_conflict_warning_GUA }
+				activate_targeted_decision = { target = YUC decision = YUC_border_conflict_escalation_warning_GUA }
+			}
+		}
+	}
+
+	#Mission for defender warning FROM can escalate to war at any point is coming
+	YUC_border_conflict_escalation_warning_GUA = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			#var:ROOT.defender_state_vs_@FROM = {
+			#	has_ROOT_at_least_1_div_in_current_state_scope = yes
+			#}
+			hidden_trigger = { always = no }
+		}
+
+		highlight_states = {
+		}
+
+		war_with_target_on_timeout = yes
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+
+		timeout_effect = {
+			custom_effect_tooltip = from_cannot_escalate
+			custom_effect_tooltip = effects_if_border_conflict_is_lost
+			effect_tooltip = {
+			}
+		}		
+	}
+	#Mission for attacker to escalate or incident is forgotten
+	YUC_border_incident_forgotten = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			#var:ROOT.defender_state_vs_@FROM = {
+			#	has_ROOT_at_least_1_div_in_current_state_scope = yes
+			#}
+			hidden_trigger = { always = no }
+		}
+
+		highlight_states = {
+			OR = {
+				state = 311
+				state = 920
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+		
+		timeout_effect = {
+			remove_targeted_decision = { target = GUA decision = YUC_escalate_incident_to_border_conflict_GUA }
+			add_political_power = -100
+			add_war_support = -0.1 #Shameful Display
+			hidden_effect = {
+				GUA = { remove_targeted_decision = { target = YUC decision = YUC_border_conflict_escalation_warning_GUA } }
+				GUA = {
+					311 = {
+						clr_state_flag = border_incident_active
+					}
+					920 = {
+						clr_state_flag = border_incident_active
+					}
+				}
+				clr_global_flag = CABorderConflict
+			}
+		}
+	}
+
+	#Decision to escalate incident on border with GUA to border conflict
+	YUC_escalate_incident_to_border_conflict_GUA = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			311 = {
+				OR = {
+					is_fully_controlled_by = ROOT
+					CONTROLLER = {
+						is_subject_of = ROOT
+					}
+					CONTROLLER = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			divisions_in_border_state = {
+				state = 311
+				border_state = 920
+				size > 0
+			}
+		}
+
+		highlight_states = {
+			OR = {
+				state = 311
+				state = 920			
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = { 
+				has_war = no
+				factor = 10
+			}
+		}
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+			remove_targeted_decision = { target = GUA decision = YUC_border_incident_forgotten }
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 311
+					num_provinces = 4
+					on_win = ca.17
+				}
+				
+				defender = {
+					state = 920
+					num_provinces = 1
+				}
+			}
+			GUA = {
+				activate_targeted_decision = { target = YUC decision = YUC_border_conflict_escalate_conflict }
+				activate_targeted_decision = { target = YUC decision = YUC_border_conflict_time_until_cancelled }
+			}
+			activate_targeted_decision = { target = GUA decision = YUC_border_conflict_escalate_conflict }
+			activate_targeted_decision = { target = GUA decision = YUC_border_conflict_time_until_cancelled  }
+			clr_global_flag = CABorderConflict
+			ROOT = {
+				add_named_threat = { threat = 1 name = CA_border_invasion }
+			}
+		}
+	}
+	#Mission for attacker to win border war against FROM in X days
+	YUC_border_conflict_time_until_cancelled_1 = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			311 = { has_border_war = no }
+			920 = { has_border_war = no }
+		}
+		
+		highlight_states = {
+			OR = {
+				state = 920
+				state = 311
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 90
+		is_good = no
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+
+		}
+
+		timeout_effect = {
+			cancel_border_war = {
+				defender = 920
+				attacker = 311
+			}
+			hidden_effect = {
+				remove_targeted_decision = { target = GUA decision = YUC_border_conflict_escalate_conflict }
+				remove_targeted_decision = { target = YUC decision = YUC_border_conflict_escalate_conflict }
+			}
+		}
+	}
+
+	#Decision to back down from conflict
+	YUC_border_conflict_back_out_of_conflict = {
+
+		allowed = { always = no } #Activated from effect
+
+		visible = {
+			has_border_war_with = FROM
+		}
+
+		highlight_states = {
+			OR = {
+				state = 311
+				state = 920
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+			if = {
+				limit = { is_border_conflict_defender_vs_FROM = yes }
+				finalize_border_war = {
+					attacker_win = yes
+					attacker = 311
+					defender = 920
+				}
+			}
+			else = {
+				finalize_border_war = {
+					attacker = 311
+					defender = 920
+					defender_win = yes
+				}
+			}
+		}
+	}
+	MEX_invade_LOS = {
+		icon = border_war
+		icon = border_war
+		allowed = {
+			original_tag = MEX
+		}
+
+		available = {
+			476 = {
+				any_neighbor_state = {
+					NOT = {
+						is_controlled_by = FROM
+					}
+				}
+			}
+			NOT = {
+				has_global_flag = CABorderConflict
+			}
+		}
+
+		visible = {
+			476 = {
+				is_controlled_by = FROM
+			}
+			475 = {
+				NOT = {
+					is_controlled_by = FROM
+				}
+			}
+			has_global_flag = LOS_Refuse
+		}
+
+		highlight_states = {
+				state = 475
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				date > 1939.1.1
+				factor = 0
+			}
+		}
+		cost = 50
+		days_remove = 30
+		war_with_on_remove = LOS
+		complete_effect = {
+			476 = {
+				save_event_target_as = MEX_LOS_attacker_state
+				set_state_flag = border_incident_active
+			}
+			475 = {
+				save_event_target_as = MEX_LOS_defender_state
+				set_state_flag = border_incident_active
+				owner = {
+					activate_targeted_decision = { target = ROOT decision = MEX_border_conflict_warning_LOS }
+				}
+			}
+			set_global_flag = CABorderConflict
+		}
+		remove_effect = {
+			activate_targeted_decision = { target = LOS decision = MEX_border_incident_forgotten }
+			activate_targeted_decision = { target = LOS decision = MEX_escalate_incident_to_border_conflict_LOS }
+		}
+	}
+
+	#Mission for defender warning that a conflict with FROM is coming
+	MEX_border_conflict_warning_LOS = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		war_with_target_on_timeout = yes
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+		
+		timeout_effect = {
+			custom_effect_tooltip = escalation_possible_tooltip_for_defender
+			custom_effect_tooltip = effects_if_border_conflict_is_lost
+			effect_tooltip = {
+			}
+			hidden_effect = {
+				remove_targeted_decision = { target = MEX decision = MEX_border_conflict_warning_LOS }
+				activate_targeted_decision = { target = MEX decision = MEX_border_conflict_escalation_warning_LOS }
+			}
+		}
+	}
+
+	#Mission for defender warning FROM can escalate to war at any point is coming
+	MEX_border_conflict_escalation_warning_LOS = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			#var:ROOT.defender_state_vs_@FROM = {
+			#	has_ROOT_at_least_1_div_in_current_state_scope = yes
+			#}
+			hidden_trigger = { always = no }
+		}
+
+		highlight_states = {
+		}
+
+		war_with_target_on_timeout = yes
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+
+		timeout_effect = {
+			custom_effect_tooltip = from_cannot_escalate
+			custom_effect_tooltip = effects_if_border_conflict_is_lost
+			effect_tooltip = {
+			}
+		}		
+	}
+	#Mission for attacker to escalate or incident is forgotten
+	MEX_border_incident_forgotten = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			#var:ROOT.defender_state_vs_@FROM = {
+			#	has_ROOT_at_least_1_div_in_current_state_scope = yes
+			#}
+			hidden_trigger = { always = no }
+		}
+
+		highlight_states = {
+			OR = {
+				state = 476
+				state = 475
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+		
+		timeout_effect = {
+			remove_targeted_decision = { target = LOS decision = MEX_escalate_incident_to_border_conflict_LOS }
+			add_political_power = -100
+			add_war_support = -0.1 #Shameful Display
+			hidden_effect = {
+				LOS = { remove_targeted_decision = { target = MEX decision = MEX_border_conflict_escalation_warning_LOS } }
+				LOS = {
+					476 = {
+						clr_state_flag = border_incident_active
+					}
+					475 = {
+						clr_state_flag = border_incident_active
+					}
+				}
+				clr_global_flag = CABorderConflict
+			}
+		}
+	}
+
+	#Decision to escalate incident on border with LOS to border conflict
+	MEX_escalate_incident_to_border_conflict_LOS = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			476 = {
+				OR = {
+					is_fully_controlled_by = ROOT
+					CONTROLLER = {
+						is_subject_of = ROOT
+					}
+					CONTROLLER = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			divisions_in_border_state = {
+				state = 476
+				border_state = 475
+				size > 0
+			}
+		}
+
+		highlight_states = {
+			OR = {
+				state = 476
+				state = 475			
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = { 
+				has_war = no
+				factor = 10
+			}
+		}
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+			remove_targeted_decision = { target = LOS decision = MEX_border_incident_forgotten }
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 476
+					num_provinces = 4
+					on_win = ca.15
+				}
+				
+				defender = {
+					state = 475
+					num_provinces = 4
+				}
+			}
+			LOS = {
+				activate_targeted_decision = { target = MEX decision = MEX_border_conflict_escalate_conflict }
+				activate_targeted_decision = { target = MEX decision = MEX_border_conflict_time_until_cancelled }
+			}
+			activate_targeted_decision = { target = LOS decision = MEX_border_conflict_escalate_conflict }
+			activate_targeted_decision = { target = LOS decision = MEX_border_conflict_time_until_cancelled }
+			clr_global_flag = CABorderConflict
+			ROOT = {
+				add_named_threat = { threat = 1 name = CA_border_invasion }
+			}
+		}
+	}
+	#Mission for attacker to win border war against FROM in X days
+	MEX_border_conflict_time_until_cancelled = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			476 = { has_border_war = no }
+			475 = { has_border_war = no }
+		}
+		
+		highlight_states = {
+			OR = {
+				state = 475
+				state = 476
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 90
+		is_good = no
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+
+		}
+
+		timeout_effect = {
+			cancel_border_war = {
+				defender = 475
+				attacker = 476
+			}
+			hidden_effect = {
+				remove_targeted_decision = { target = LOS decision = MEX_border_conflict_escalate_conflict }
+				remove_targeted_decision = { target = MEX decision = MEX_border_conflict_escalate_conflict }
+			}
+		}
+	}
+
+	#Decision to back down from conflict
+	MEX_border_conflict_back_out_of_conflict = {
+
+		allowed = { always = no } #Activated from effect
+
+		visible = {
+			has_border_war_with = FROM
+		}
+
+		highlight_states = {
+			OR = {
+				state = 476
+				state = 475
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+			if = {
+				limit = { is_border_conflict_defender_vs_FROM = yes }
+				finalize_border_war = {
+					attacker_win = yes
+					attacker = 476
+					defender = 475
+				}
+			}
+			else = {
+				finalize_border_war = {
+					attacker = 476
+					defender = 475
+					defender_win = yes
+				}
+			}
+		}
+	}
+	MEX_invade_GUA = {
+		icon = border_war
+		icon = border_war
+		allowed = {
+			original_tag = MEX
+		}
+
+		available = {
+			476 = {
+				any_neighbor_state = {
+					NOT = {
+						is_controlled_by = FROM
+					}
+				}
+			}
+			NOT = {
+				has_global_flag = CABorderConflict
+			}
+		}
+
+		visible = {
+			476 = {
+				is_controlled_by = FROM
+			}
+			918 = {
+				NOT = {
+					is_controlled_by = FROM
+				}
+			}
+			has_global_flag = GUA_Refuse
+		}
+
+		highlight_states = {
+				state = 918
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				date > 1939.1.1
+				factor = 0
+			}
+		}
+		cost = 50
+		days_remove = 30
+		war_with_on_remove = GUA
+		complete_effect = {
+			476 = {
+				save_event_target_as = MEX_GUA_attacker_state
+				set_state_flag = border_incident_active
+			}
+			918 = {
+				save_event_target_as = MEX_GUA_defender_state
+				set_state_flag = border_incident_active
+				owner = {
+					activate_targeted_decision = { target = ROOT decision = MEX_border_conflict_warning_GUA }
+				}
+			}
+			set_global_flag = CABorderConflict
+		}
+		remove_effect = {
+			activate_targeted_decision = { target = GUA decision = MEX_border_incident_forgotten_1 }
+			activate_targeted_decision = { target = GUA decision = MEX_escalate_incident_to_border_conflict_GUA }
+		}
+	}
+
+	#Mission for defender warning that a conflict with FROM is coming
+	MEX_border_conflict_warning_GUA = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		war_with_target_on_timeout = yes
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+		
+		timeout_effect = {
+			custom_effect_tooltip = escalation_possible_tooltip_for_defender
+			custom_effect_tooltip = effects_if_border_conflict_is_lost
+			effect_tooltip = {
+			}
+			hidden_effect = {
+				remove_targeted_decision = { target = MEX decision = MEX_border_conflict_warning_GUA }
+				activate_targeted_decision = { target = MEX decision = MEX_border_conflict_escalation_warning_GUA }
+			}
+		}
+	}
+
+	#Mission for defender warning FROM can escalate to war at any point is coming
+	MEX_border_conflict_escalation_warning_GUA = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			#var:ROOT.defender_state_vs_@FROM = {
+			#	has_ROOT_at_least_1_div_in_current_state_scope = yes
+			#}
+			hidden_trigger = { always = no }
+		}
+
+		highlight_states = {
+		}
+
+		war_with_target_on_timeout = yes
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+
+		timeout_effect = {
+			custom_effect_tooltip = from_cannot_escalate
+			custom_effect_tooltip = effects_if_border_conflict_is_lost
+			effect_tooltip = {
+			}
+		}		
+	}
+	#Mission for attacker to escalate or incident is forgotten
+	MEX_border_incident_forgotten_1 = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			#var:ROOT.defender_state_vs_@FROM = {
+			#	has_ROOT_at_least_1_div_in_current_state_scope = yes
+			#}
+			hidden_trigger = { always = no }
+		}
+
+		highlight_states = {
+			OR = {
+				state = 476
+				state = 918
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+		
+		timeout_effect = {
+			remove_targeted_decision = { target = GUA decision = MEX_escalate_incident_to_border_conflict_GUA }
+			add_political_power = -100
+			add_war_support = -0.1 #Shameful Display
+			hidden_effect = {
+				GUA = { remove_targeted_decision = { target = MEX decision = MEX_border_conflict_escalation_warning_GUA } }
+				GUA = {
+					476 = {
+						clr_state_flag = border_incident_active
+					}
+					918 = {
+						clr_state_flag = border_incident_active
+					}
+				}
+				clr_global_flag = CABorderConflict
+			}
+		}
+	}
+
+	#Decision to escalate incident on border with GUA to border conflict
+	MEX_escalate_incident_to_border_conflict_GUA = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			476 = {
+				OR = {
+					is_fully_controlled_by = ROOT
+					CONTROLLER = {
+						is_subject_of = ROOT
+					}
+					CONTROLLER = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			divisions_in_border_state = {
+				state = 476
+				border_state = 918
+				size > 0
+			}
+		}
+
+		highlight_states = {
+			OR = {
+				state = 476
+				state = 918			
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = { 
+				has_war = no
+				factor = 10
+			}
+		}
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+			remove_targeted_decision = { target = GUA decision = MEX_border_incident_forgotten_1 }
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 476
+					num_provinces = 4
+					on_win = ca.16
+				}
+				
+				defender = {
+					state = 918
+					num_provinces = 4
+				}
+			}
+			GUA = {
+				activate_targeted_decision = { target = MEX decision = MEX_border_conflict_escalate_conflict_1 }
+				activate_targeted_decision = { target = MEX decision = MEX_border_conflict_time_until_cancelled_1 }
+			}
+			activate_targeted_decision = { target = GUA decision = MEX_border_conflict_escalate_conflict_1 }
+			activate_targeted_decision = { target = GUA decision = MEX_border_conflict_time_until_cancelled_1 }
+			clr_global_flag = CABorderConflict
+			ROOT = {
+				add_named_threat = { threat = 1 name = CA_border_invasion }
+			}
+		}
+	}
+	#Mission for attacker to win border war against FROM in X days
+	MEX_border_conflict_time_until_cancelled_1 = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			476 = { has_border_war = no }
+			918 = { has_border_war = no }
+		}
+		
+		highlight_states = {
+			OR = {
+				state = 918
+				state = 476
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 90
+		is_good = no
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+
+		}
+
+		timeout_effect = {
+			cancel_border_war = {
+				defender = 918
+				attacker = 476
+			}
+			hidden_effect = {
+				remove_targeted_decision = { target = GUA decision = MEX_border_conflict_escalate_conflict_1 }
+				remove_targeted_decision = { target = MEX decision = MEX_border_conflict_escalate_conflict_1 }
+			}
+		}
+	}
+
+	#Decision to back down from conflict
+	MEX_border_conflict_back_out_of_conflict_1 = {
+
+		allowed = { always = no } #Activated from effect
+
+		visible = {
+			has_border_war_with = FROM
+		}
+
+		highlight_states = {
+			OR = {
+				state = 476
+				state = 918
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+			if = {
+				limit = { is_border_conflict_defender_vs_FROM = yes }
+				finalize_border_war = {
+					attacker_win = yes
+					attacker = 476
+					defender = 918
+				}
+			}
+			else = {
+				finalize_border_war = {
+					attacker = 476
+					defender = 918
+					defender_win = yes
+				}
+			}
+		}
+	}
+	GUA_invade_LOS = {
+		icon = border_war
+		icon = border_war
+		allowed = {
+			original_tag = GUA
+		}
+
+		available = {
+			313 = {
+				any_neighbor_state = {
+					NOT = {
+						is_controlled_by = FROM
+					}
+				}
+			}
+			NOT = {
+				has_global_flag = CABorderConflict
+			}
+		}
+
+		visible = {
+			313 = {
+				is_controlled_by = FROM
+			}
+			917 = {
+				NOT = {
+					is_controlled_by = FROM
+				}
+			}
+			has_global_flag = CACollapse
+		}
+
+		highlight_states = {
+				state = 917
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				date > 1939.1.1
+				factor = 0
+			}
+		}
+		cost = 50
+		days_remove = 30
+		war_with_on_remove = LOS
+		complete_effect = {
+			313 = {
+				save_event_target_as = GUA_LOS_attacker_state
+				set_state_flag = border_incident_active
+			}
+			917 = {
+				save_event_target_as = GUA_LOS_defender_state
+				set_state_flag = border_incident_active
+				owner = {
+					activate_targeted_decision = { target = ROOT decision = GUA_border_conflict_warning_LOS }
+				}
+			}
+			set_global_flag = CABorderConflict
+		}
+		remove_effect = {
+			activate_targeted_decision = { target = LOS decision = GUA_border_incident_forgotten }
+			activate_targeted_decision = { target = LOS decision = GUA_escalate_incident_to_border_conflict_LOS }
+		}
+	}
+
+	#Mission for defender warning that a conflict with FROM is coming
+	GUA_border_conflict_warning_LOS = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		war_with_target_on_timeout = yes
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+		
+		timeout_effect = {
+			custom_effect_tooltip = escalation_possible_tooltip_for_defender
+			custom_effect_tooltip = effects_if_border_conflict_is_lost
+			effect_tooltip = {
+			}
+			hidden_effect = {
+				remove_targeted_decision = { target = GUA decision = GUA_border_conflict_warning_LOS }
+				activate_targeted_decision = { target = GUA decision = GUA_border_conflict_escalation_warning_LOS }
+			}
+		}
+	}
+
+	#Mission for defender warning FROM can escalate to war at any point is coming
+	GUA_border_conflict_escalation_warning_LOS = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			#var:ROOT.defender_state_vs_@FROM = {
+			#	has_ROOT_at_least_1_div_in_current_state_scope = yes
+			#}
+			hidden_trigger = { always = no }
+		}
+
+		highlight_states = {
+		}
+
+		war_with_target_on_timeout = yes
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+
+		timeout_effect = {
+			custom_effect_tooltip = from_cannot_escalate
+			custom_effect_tooltip = effects_if_border_conflict_is_lost
+			effect_tooltip = {
+			}
+		}		
+	}
+	#Mission for attacker to escalate or incident is forgotten
+	GUA_border_incident_forgotten = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			#var:ROOT.defender_state_vs_@FROM = {
+			#	has_ROOT_at_least_1_div_in_current_state_scope = yes
+			#}
+			hidden_trigger = { always = no }
+		}
+
+		highlight_states = {
+			OR = {
+				state = 313
+				state = 917
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+		
+		timeout_effect = {
+			remove_targeted_decision = { target = LOS decision = GUA_escalate_incident_to_border_conflict_LOS }
+			add_political_power = -100
+			add_war_support = -0.1 #Shameful Display
+			hidden_effect = {
+				LOS = { remove_targeted_decision = { target = GUA decision = GUA_border_conflict_escalation_warning_LOS } }
+				LOS = {
+					313 = {
+						clr_state_flag = border_incident_active
+					}
+					917 = {
+						clr_state_flag = border_incident_active
+					}
+				}
+				clr_global_flag = CABorderConflict
+			}
+		}
+	}
+
+	#Decision to escalate incident on border with LOS to border conflict
+	GUA_escalate_incident_to_border_conflict_LOS = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			313 = {
+				OR = {
+					is_fully_controlled_by = ROOT
+					CONTROLLER = {
+						is_subject_of = ROOT
+					}
+					CONTROLLER = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			divisions_in_border_state = {
+				state = 313
+				border_state = 917
+				size > 0
+			}
+		}
+
+		highlight_states = {
+			OR = {
+				state = 313
+				state = 917			
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = { 
+				has_war = no
+				factor = 10
+			}
+		}
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+			remove_targeted_decision = { target = LOS decision = GUA_border_incident_forgotten }
+			start_border_war = {
+				change_state_after_war = yes
+				attacker = {
+					state = 313
+					num_provinces = 4
+				}
+				
+				defender = {
+					state = 917
+					num_provinces = 4
+				}
+			}
+			LOS = {
+				activate_targeted_decision = { target = GUA decision = GUA_border_conflict_escalate_conflict }
+				activate_targeted_decision = { target = GUA decision = GUA_border_conflict_time_until_cancelled }
+			}
+			activate_targeted_decision = { target = LOS decision = GUA_border_conflict_escalate_conflict }
+			activate_targeted_decision = { target = LOS decision = GUA_border_conflict_time_until_cancelled }
+			clr_global_flag = CABorderConflict
+			ROOT = {
+				add_named_threat = { threat = 1 name = CA_border_invasion }
+			}
+		}
+	}
+	#Mission for attacker to win border war against FROM in X days
+	GUA_border_conflict_time_until_cancelled = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			313 = { has_border_war = no }
+			917 = { has_border_war = no }
+		}
+		
+		highlight_states = {
+			OR = {
+				state = 917
+				state = 313
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 90
+		is_good = no
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+
+		}
+
+		timeout_effect = {
+			cancel_border_war = {
+				defender = 917
+				attacker = 313
+			}
+			hidden_effect = {
+				remove_targeted_decision = { target = LOS decision = GUA_border_conflict_escalate_conflict }
+				remove_targeted_decision = { target = GUA decision = GUA_border_conflict_escalate_conflict }
+			}
+		}
+	}
+
+	#Decision to back down from conflict
+	GUA_border_conflict_back_out_of_conflict = {
+
+		allowed = { always = no } #Activated from effect
+
+		visible = {
+			has_border_war_with = FROM
+		}
+
+		highlight_states = {
+			OR = {
+				state = 313
+				state = 917
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+			if = {
+				limit = { is_border_conflict_defender_vs_FROM = yes }
+				finalize_border_war = {
+					attacker_win = yes
+					attacker = 313
+					defender = 917
+				}
+			}
+			else = {
+				finalize_border_war = {
+					attacker = 313
+					defender = 917
+					defender_win = yes
+				}
+			}
+		}
+	}
+}
+operations = {
+	demand_chiapas = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = MEX
+		}
+
+		available = {
+			has_political_power > 25
+		}
+
+		visible = {
+			has_global_flag = CACollapse
+			475 = {
+				NOT = {
+					is_controlled_by = FROM
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+
+		remove_effect = {
+			LOS = { country_event = { days = 5 id = ca.9 }}
+		}
+
+		ai_will_do = {
+			base = 5
+		}
+	}
+	demand_tapachula = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = MEX
+		}
+
+		available = {
+			has_political_power > 25
+		}
+
+		visible = {
+			has_global_flag = CACollapse
+			918 = {
+				NOT = {
+					is_controlled_by = FROM
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+
+		remove_effect = {
+			GUA = { country_event = { days = 5 id = ca.11 }}
+		}
+
+		ai_will_do = {
+			base = 5
+		}
+	}
+	demand_puerto_barrios = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = YUC
+		}
+
+		available = {
+			has_political_power > 25
+		}
+
+		visible = {
+			has_global_flag = CACollapse
+			920 = {
+				NOT = {
+					is_controlled_by = FROM
+				}
+			}
+			SPR = { has_completed_focus = SPR_safe_borders }
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+
+		remove_effect = {
+			GUA = { country_event = { days = 5 id = ca.13 }}
+		}
+
+		ai_will_do = {
+			base = 5
+		}
+	}
+	crack_nicaragua = {
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = GUA
+		}
+
+		available = {
+			has_political_power > 50
+		}
+
+		visible = {
+			has_global_flag = CANotCollapse
+			317 = {
+				is_controlled_by = FROM
+			}
+		}
+
+		cancel_if_not_visible = yes
+	
+		fire_only_once = yes
+		
+		days_remove = 90
+
+		cost = 50
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+
+		remove_effect = {
+			add_war_support = 0.1
+			add_stability = 0.1
+			set_country_flag = HON_NIC_1
+		}
+
+		ai_will_do = {
+			base = 75
+		}
+	}
+	instate_nicaragua_governor = {
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = GUA
+		}
+
+		available = {
+			has_political_power > 75
+		}
+
+		visible = {
+			has_global_flag = CANotCollapse
+			317 = {
+				is_controlled_by = FROM
+			}
+			has_country_flag = HON_NIC_1
+		}
+
+		cancel_if_not_visible = yes
+
+		fire_only_once = yes
+		
+		days_remove = 120
+
+		cost = 75
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+
+		remove_effect = {
+			add_war_support = 0.15
+			add_stability = 0.05
+			set_country_flag = HON_NIC_2
+		}
+
+		ai_will_do = {
+			base = 75
+		}
+	}
+	demand_reduced_economic_ties = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = GUA
+		}
+
+		available = {
+			has_political_power > 50
+		}
+
+		visible = {
+			has_global_flag = CANotCollapse
+			has_global_flag = CUB_revolution
+			has_country_flag = HON_NIC_2
+			country_exists = CUB
+			CUB = {
+				has_war_with = SPR
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		remove_effect = {
+			SPR = { country_event = { days = 5 id = ca.18 }}
+		}
+
+		ai_will_do = {
+			base = 5
+		}
+	}
+	demand_la_baliza = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = GUA
+		}
+
+		available = {
+			has_political_power > 100
+		}
+
+		visible = {
+			has_global_flag = CANotCollapse
+			has_global_flag = CUB_revolution
+			has_country_flag = HON_NIC_2
+			country_exists = CUB
+			CUB = {
+				has_war_with = SPR
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 100
+
+		remove_effect = {
+			SPR = { country_event = { days = 5 id = ca.20 }}
+		}
+
+		ai_will_do = {
+			base = 5
+		}
+	}
+	strike_the_weakened_beast = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = GUA
+		}
+
+		available = {
+			has_political_power > 75
+		}
+
+		visible = {
+			has_global_flag = CANotCollapse
+			has_global_flag = CUB_revolution
+			country_exists = CUB
+			has_country_flag = HON_NIC_2
+			CUB = {
+				has_war_with = SPR
+			}
+			check_variable = {
+				var = gua_var_spanish_resentment
+				value = 1.00
+				compare = greater_than_or_equals
+			}
+			
+		}
+
+		fire_only_once = yes
+
+		cost = 75
+
+		remove_effect = {
+			GUA = {
+				declare_war_on = {
+					target = YUC
+					type = take_core_state
+				}
+				create_faction = GUA_CARIBBEAN_PACT_FACTION
+				set_variable = { scripted_war = 1  }
+			}
+			CUB = {
+				add_to_faction = GUA_CARIBBEAN_PACT_FACTION
+			}
+			clr_global_flag = CUB_revolution
+			set_global_flag = CUB_GUA_revolution
+		}
+
+		ai_will_do = {
+			base = 5
+		}
+	}
+	raid_spanish_fort = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = CUB
+		}
+
+		available = {
+			has_political_power > 25
+		}
+
+		visible = {
+			OR = {
+				has_global_flag = CUB_GUA_revolution
+				has_global_flag = CUB_revolution
+			}
+			CUB = {
+				has_war_with = SPR
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1500
+				producer = SPW
+			}
+			add_equipment_to_stockpile = {
+				type = melee_equipment
+				amount = 2000
+				producer = SPW
+			}
+		}
+
+		ai_will_do = {
+			base = 75
+		}
+	}
+	move_the_capital_to_havana = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = CUB
+		}
+
+		available = {
+			has_political_power > 100
+		}
+
+		visible = {
+			has_global_flag = CUB_lives
+		}
+
+		fire_only_once = yes
+
+		cost = 100
+
+		remove_effect = {
+			set_capital = 923
+			CUB = {
+				set_country_flag = CUBReforms
+			}
+		}
+
+		ai_will_do = {
+			base = 15
+		}
+	}
+	moderate_revolutionaries = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = CUB
+		}
+
+		available = {
+			has_political_power > 100
+		}
+
+		visible = {
+			has_country_flag = CUBReforms
+		}
+
+		fire_only_once = yes
+
+		cost = 100
+
+		remove_effect = {
+			add_stability = 0.1
+			add_war_support = -0.05
+			CUB = {
+				clr_country_flag = CUBReforms
+				set_country_flag = CUBReforms1
+			}
+		}
+
+		ai_will_do = {
+			base = 15
+		}
+	}
+}

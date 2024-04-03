@@ -1,0 +1,29 @@
+﻿capital = 316
+
+# Starting tech
+set_technology = {
+	muskets0 = 1
+}
+set_convoys = 10
+
+set_politics = {
+	ruling_party = conservative
+	elections_allowed = no 
+}
+
+set_popularities = {
+	conservative = 100
+}
+
+add_to_array = { national_religion_array =  2 }
+
+create_country_leader = {
+	name = "Bernardo S. Alfaro"
+	desc = "COS_LEADER_DESC_ALFARO"
+	picture = "Portrait_COS_Bernardo_S_Alfaro.dds"
+	expire = "1965.1.1"
+	ideology = conservative_moderate
+	traits = {
+		#
+	}
+}

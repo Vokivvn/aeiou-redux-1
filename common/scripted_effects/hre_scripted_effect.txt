@@ -1,0 +1,1011 @@
+find_emperor = {
+	clear_variable = global.hre_emperor
+	random_country = {
+		LIMIT = {
+			has_idea = hre_idea_emperor
+		}
+		set_variable = { global.hre_emperor = THIS.id }
+	}
+}
+
+find_electors = {
+	clear_array = global.elector_tag_array
+	set_variable = { global.hre_elector_amount = 0 }
+	every_country = {
+		LIMIT = {
+			has_idea = hre_idea_elector
+		}
+		add_to_variable = { global.hre_elector_amount = 1 }
+		add_to_array = { global.elector_tag_array = THIS.id }
+	}
+}
+
+find_princes = {
+	clear_array = global.prince_tag_array
+	set_variable = { global.hre_prince_amount = 0 }
+	every_country = {
+		LIMIT = {
+			has_idea = hre_idea_prince
+		}
+		add_to_variable = { global.hre_prince_amount = 1 }
+		add_to_array = { global.prince_tag_array = THIS.id }
+	}
+}
+
+find_free_cities = {
+	clear_array = global.free_city_tag_array
+	set_variable = { global.hre_free_city_amount = 0 }
+	every_country = {
+		LIMIT = {
+			OR = {
+				has_idea = hre_idea_free_city
+				has_idea = hre_idea_republic
+				has_idea = hre_idea_conservative
+			}
+		}
+		add_to_variable = { global.hre_free_city_amount = 1 }
+		add_to_array = { global.free_city_tag_array = THIS.id }
+	}
+}
+
+find_hre_decisions = {
+	clear_array = ROOT.hre_decisions_array
+	if = {
+		LIMIT = {
+			OR = {
+				has_idea = hre_idea_emperor
+				has_idea = hre_idea_elector
+				has_idea = hre_idea_prince
+				has_idea = hre_idea_free_city
+				has_idea = hre_idea_republic
+				has_idea = hre_idea_conservative
+			}
+		}
+		add_to_array = { ROOT.hre_decisions_array = 3 }
+	}
+	if = {
+		LIMIT = {
+			has_idea = hre_idea_emperor
+		}
+		add_to_array = { ROOT.hre_decisions_array = 1 }
+		add_to_array = { ROOT.hre_decisions_array = 2 }
+	}
+	if = {
+		LIMIT = {
+			OR = {
+				has_idea = hre_idea_elector
+				has_idea = hre_idea_prince
+				has_idea = hre_idea_free_city
+				has_idea = hre_idea_republic
+				has_idea = hre_idea_conservative
+			}
+		}
+		add_to_array = { ROOT.hre_decisions_array = 5 }
+	}
+	
+	if = {
+		LIMIT = {
+			has_idea = hre_idea_emperor
+			NOT = { has_global_flag = HRE_EFFICIENCY_I }
+		}
+		add_to_array = { ROOT.hre_decisions_array = 6 }
+	}
+	if = {
+		LIMIT = {
+			has_idea = hre_idea_emperor
+			NOT = { has_global_flag = HRE_EFFICIENCY_II }
+			has_global_flag = HRE_EFFICIENCY_I
+			check_variable = { 
+				var = global.imperial_centralization 
+				value = 0.20
+				compare = greater_than_or_equals 
+			}
+		}
+		add_to_array = { ROOT.hre_decisions_array = 7 }
+	}
+	if = {
+		LIMIT = {
+			has_idea = hre_idea_emperor
+			NOT = { has_global_flag = HRE_CALL_TO_WAR_I }
+		}
+		add_to_array = { ROOT.hre_decisions_array = 11}
+	}
+	if = {
+		LIMIT = {
+			has_idea = hre_idea_emperor
+			NOT = { has_global_flag = HRE_MILITARY_ACCESS_I }
+			check_variable = { 
+				var = global.imperial_centralization 
+				value = 0.10
+				compare = greater_than_or_equals 
+			}
+		}
+		add_to_array = { ROOT.hre_decisions_array = 8 }
+	}
+	if = {
+		LIMIT = {
+			has_idea = hre_idea_emperor
+			NOT = { has_global_flag = HRE_CALL_TO_WAR_II }
+			has_global_flag = HRE_CALL_TO_WAR_I
+			check_variable = { 
+				var = global.imperial_centralization 
+				value = 0.20
+				compare = greater_than_or_equals 
+			}
+		}
+		add_to_array = { ROOT.hre_decisions_array = 12 }
+	}
+	if = {
+		LIMIT = {
+			has_idea = hre_idea_emperor
+			has_global_flag = HRE_MILITARY_ACCESS_I
+			NOT = { has_global_flag = HRE_MILITARY_ACCESS_II }
+			check_variable = { 
+				var = global.imperial_centralization 
+				value = 0.30
+				compare = greater_than_or_equals 
+			}
+		}
+		add_to_array = { ROOT.hre_decisions_array = 9 }
+	}
+	if = {
+		LIMIT = {
+			has_idea = hre_idea_emperor
+			NOT = { has_global_flag = OATH_FOR_SUPPORT }
+			check_variable = { 
+				var = global.imperial_centralization 
+				value = 0.40
+				compare = greater_than_or_equals 
+			}
+		}
+		add_to_array = { ROOT.hre_decisions_array = 10 }
+	}
+	if = {
+		LIMIT = {
+			has_idea = hre_idea_emperor
+			NOT = { has_global_flag = HRE_EMPEROR_INDUSTRY_I }
+			check_variable = { 
+				var = global.imperial_centralization 
+				value = 0.10
+				compare = greater_than_or_equals
+			}
+		}
+		add_to_array = { ROOT.hre_decisions_array = 13 }
+	}
+	if = {
+		LIMIT = {
+			has_idea = hre_idea_emperor
+			has_global_flag = HRE_EMPEROR_INDUSTRY_I
+			NOT = { has_global_flag = HRE_EMPEROR_INDUSTRY_II }
+			check_variable = { 
+				var = global.imperial_centralization 
+				value = 0.30
+				compare = greater_than_or_equals
+			}
+		}
+		add_to_array = { ROOT.hre_decisions_array = 14 }
+	}
+	if = {
+		LIMIT = {
+			has_idea = hre_idea_emperor
+			NOT = { has_global_flag = EXCOMMUNICATION_OF_POPE }
+			check_variable = { 
+				var = global.imperial_centralization 
+				value = 0.40
+				compare = greater_than_or_equals 
+			}
+		}
+		add_to_array = { ROOT.hre_decisions_array = 15 }
+	}
+	if = {
+		LIMIT = {
+			has_idea = hre_idea_emperor
+		}
+		add_to_array = { ROOT.hre_decisions_array = 4 }
+	}
+}
+
+find_imperial_authority_gain = {
+	set_variable = { global.imperial_authority_gain = 0 }
+	random_country = {
+		LIMIT = {
+			has_idea = hre_idea_emperor
+		}
+		add_to_variable = { global.imperial_authority_gain = 0.10 }
+	}
+	set_temp_variable = { imperial_authority_gain_temp = global.hre_elector_amount }
+	multiply_temp_variable = { imperial_authority_gain_temp = 0.05 }
+	add_to_variable = { global.imperial_authority_gain = imperial_authority_gain_temp }
+	set_temp_variable = { imperial_authority_gain_temp = global.hre_prince_amount }
+	multiply_temp_variable = { imperial_authority_gain_temp = 0.02 }
+	add_to_variable = { global.imperial_authority_gain = imperial_authority_gain_temp }
+	set_temp_variable = { imperial_authority_gain_temp = global.hre_free_city_amount }
+	multiply_temp_variable = { imperial_authority_gain_temp = 0.01 }
+	add_to_variable = { global.imperial_authority_gain = imperial_authority_gain_temp }
+}
+
+monthly_imperial_authority = {
+	set_temp_variable = { base_imperial_gain_temp = global.imperial_authority_gain }
+	multiply_temp_variable = { base_imperial_gain_temp = global.imperial_authority_gain_efficiency }
+	imperial_authority = yes
+	find_imperial_authority_gain = yes
+}
+
+imperial_authority = {
+	add_to_variable = { global.imperial_authority = base_imperial_gain_temp }
+	custom_effect_tooltip = IMPERIAL_AUTHORITY_CHANGE
+	clamp_variable = {
+		var = global.imperial_authority
+		min = -500
+		max = 500
+	}
+}
+
+imperial_stability = {
+	add_to_variable = { global.imperial_stability = base_imperial_stability_gain_temp }
+	custom_effect_tooltip = IMPERIAL_STABILITY_CHANGE
+	clamp_variable = {
+		var = global.imperial_stability
+		min = 0
+		max = 1
+	}
+}
+
+hre_next_emperor = {
+	set_temp_variable = { global.last_emperor = global.hre_emperor }
+	clear_array = global.vote_array
+	#Getting Votes
+	for_each_loop = {
+		array = global.elector_tag_array
+		index = i
+		value = v 
+		
+		add_to_array = { global.vote_array = v:hre_emperor_vote }
+
+	}
+	
+	for_each_loop = {
+		array = global.vote_array
+		index = i
+		value = v 
+		
+		
+		var:v = {
+			add_to_variable = { votes_temp = 1 }
+			add_to_temp_array = { global.highest_votes = votes_temp }
+		}
+		
+	}
+	#Sorting votes
+	find_highest_in_array = {
+		array = global.highest_votes
+		value = most_votes_value
+		index = most_votes_index
+		
+		
+	}
+	
+	for_each_loop = {
+		array = global.vote_array
+		index = i
+		value = v 
+		
+        if = {
+			LIMIT = {
+				check_variable = {v:votes_temp = most_votes_value }
+			}
+			add_to_temp_array = { global.emperor_winners = v }
+		}
+	}
+	if = {
+		LIMIT = {
+			any_of = {
+				array = global.emperor_winners
+				value = v
+				
+				check_variable = { global.last_emperor = v }
+			}
+		}
+	}
+	else = {
+		random_country = {
+			LIMIT = {
+				has_idea = hre_idea_emperor
+			}
+			set_temp_variable = { offmap_factories = 0 }
+			save_event_target_as = former_emperor
+			if = {
+				LIMIT = { OR = { has_global_flag = HRE_MILITARY_ACCESS_I has_global_flag = HRE_EMPEROR_INDUSTRY_I } }
+				every_country = {
+					limit = {
+						OR = {
+							has_idea = hre_idea_elector
+							has_idea = hre_idea_prince
+							has_idea = hre_idea_free_city
+							has_idea = hre_idea_republic
+							has_idea = hre_idea_conservative
+						}
+					}
+					if = {
+						LIMIT = { has_global_flag = HRE_MILITARY_ACCESS_I }
+						event_target:former_emperor = {
+							diplomatic_relation = {
+								country = PREV
+								relation = military_access
+								active = no
+							}
+						}
+					}
+					if = {
+						LIMIT = { has_global_flag = HRE_EMPEROR_INDUSTRY_I }
+						subtract_from_temp_variable = { offmap_factories = 1 }
+					}
+					
+				}
+			}
+			every_country = {
+				LIMIT = {
+					has_country_flag = ai_emperor_relation_boost
+				}
+				event_target:former_emperor = {
+					add_ai_strategy = {
+						id = PREV
+						type = befriend
+						value = -2000
+					}
+				}
+				clr_country_flag = ai_emperor_relation_boost
+			}
+			if = {
+				LIMIT = { has_idea = hre_idea_pope_excommunicated }
+				remove_ideas = hre_idea_pope_excommunicated
+			}
+			remove_ideas = hre_idea_emperor
+			if = {
+				LIMIT = {
+					exists = yes
+				}
+				add_ideas = hre_idea_prince
+			}
+			if = {
+				LIMIT = { has_global_flag = HRE_EMPEROR_INDUSTRY_I }
+				add_offsite_building = { type = industrial_complex level = offmap_factories }
+				random_state = { 
+					limit = { 
+						is_owned_and_controlled_by = event_target:former_emperor
+						is_in_home_area = yes
+						industrial_complex > 0
+						
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 1
+					}
+					set_state_flag = HRE_INDUSTRY
+				}
+			}
+			if = {
+				LIMIT = { has_global_flag = HRE_EMPEROR_INDUSTRY_II }
+				add_offsite_building = { type = arms_factory level = offmap_factories }
+				random_state = { 
+					limit = { 
+						is_owned_and_controlled_by = event_target:former_emperor 
+						is_in_home_area = yes
+						arms_factory > 0
+						
+					}
+					remove_building = {
+						type = arms_factory
+						level = 1
+					}
+					set_state_flag = HRE_INDUSTRY_II
+				}
+			}
+		}
+		random_scope_in_array = {
+			array = global.emperor_winners
+			
+			add_ideas = hre_idea_emperor
+			remove_ideas = hre_idea_elector
+			remove_ideas = hre_idea_prince
+			remove_ideas = hre_idea_free_city
+			remove_ideas = hre_idea_republic
+			remove_ideas = hre_idea_conservative
+			find_emperor = yes
+			find_electors = yes
+			find_princes = yes
+			find_free_cities = yes
+			save_event_target_as = new_emperor
+			if = {
+				LIMIT = { has_global_flag = HRE_MILITARY_ACCESS_I }
+				every_country = {
+					limit = {
+						OR = {
+							has_idea = hre_idea_elector
+							has_idea = hre_idea_prince
+							has_idea = hre_idea_free_city
+							has_idea = hre_idea_republic
+							has_idea = hre_idea_conservative
+						}
+					}
+					event_target:new_emperor = {
+						diplomatic_relation = {
+							country = PREV
+							relation = military_access
+							active = yes
+						}
+					}
+				}
+			}
+			if = {
+				LIMIT = { has_global_flag = HRE_EMPEROR_INDUSTRY_I }
+				multiply_temp_variable = { offmap_factories = -1 }
+				add_offsite_building = { type = industrial_complex level = offmap_factories }
+				random_state = { 
+					limit = { 
+						is_owned_and_controlled_by = event_target:new_emperor
+						is_in_home_area = yes
+						has_state_flag = HRE_INDUSTRY
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					clr_state_flag = HRE_INDUSTRY
+				}
+			}
+			if = {
+				LIMIT = { has_global_flag = HRE_EMPEROR_INDUSTRY_II }
+				add_offsite_building = { type = arms_factory level = offmap_factories }
+				random_state = { 
+					limit = { 
+						is_owned_and_controlled_by = event_target:new_emperor 
+						is_in_home_area = yes
+						set_state_flag = HRE_INDUSTRY_II
+						
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					clr_state_flag = HRE_INDUSTRY_II
+				}
+			}
+			if = {
+				LIMIT = { has_global_flag = EXCOMMUNICATION_OF_POPE }
+				add_ideas = hre_idea_pope_excommunicated
+			}
+		}
+	}
+	
+	clr_global_flag = no_hre_emperor
+}
+
+hre_next_emperor_election_chain = {
+	every_country = {
+		limit = {
+			OR = {
+				has_idea = hre_idea_emperor
+				has_idea = hre_idea_elector
+				has_idea = hre_idea_prince
+				has_idea = hre_idea_free_city
+				has_idea = hre_idea_republic
+				has_idea = hre_idea_conservative
+			}
+		}
+		country_event = { days = 0 id = story_news_events.20 }
+	}
+	ROOT = {
+		country_event = { days = 14 id = story_news_events.21 }
+	}
+}
+
+imperial_authority_call_to_arms_loss = {
+	if = {
+		LIMIT = {
+			has_defensive_war = yes
+		}
+		if = {
+			LIMIT = { has_global_flag = HRE_CALL_TO_WAR_I }
+			set_temp_variable = { base_imperial_gain_temp = -1 }
+		}
+		else = {
+			set_temp_variable = { base_imperial_gain_temp = -5 }
+		}
+	}
+	else = {
+		if = {
+			LIMIT = { has_global_flag = HRE_CALL_TO_WAR_II }
+			set_temp_variable = { base_imperial_gain_temp = -5 }
+		}
+		else = {
+			set_temp_variable = { base_imperial_gain_temp = -15 }
+		}
+	}
+	imperial_authority = yes
+}
+
+imperial_centralization = {
+	add_to_variable = { global.imperial_centralization = base_imperial_centralization_gain_temp }
+	custom_effect_tooltip = IMPERIAL_CENTRALIZATION_CHANGE
+	clamp_variable = {
+		var = global.imperial_centralization
+		min = 0
+		max = 1
+	}
+}
+
+imperial_stability_centralization = {
+	set_temp_variable = { hre_nation_count = 1 }
+	add_to_temp_variable = { hre_nation_count = global.hre_elector_amount }
+	add_to_temp_variable = { hre_nation_count = global.hre_prince_amount }
+	add_to_temp_variable = { hre_nation_count = global.hre_free_city_amount }
+	if = {
+		LIMIT = {
+			check_variable = { hre_nation_count > 49}
+		}
+		set_temp_variable = { base_imperial_stability_gain_temp = -0.25 }
+	}
+	else_if = {
+		LIMIT = {
+			check_variable = { hre_nation_count > 39}
+		}
+		set_temp_variable = { base_imperial_stability_gain_temp = -0.20 }
+	}
+	else_if = {
+		LIMIT = {
+			check_variable = { hre_nation_count > 29}
+		}
+		set_temp_variable = { base_imperial_stability_gain_temp = -0.15 }
+	}
+	else_if = {
+		LIMIT = {
+			check_variable = { hre_nation_count > 24}
+		}
+		set_temp_variable = { base_imperial_stability_gain_temp = -0.12 }
+	}
+	else_if = {
+		LIMIT = {
+			check_variable = { hre_nation_count > 19}
+		}
+		set_temp_variable = { base_imperial_stability_gain_temp = -0.10 }
+	}
+	else_if = {
+		LIMIT = {
+			check_variable = { hre_nation_count > 14}
+		}
+		set_temp_variable = { base_imperial_stability_gain_temp = -0.08 }
+	}
+	else_if = {
+		LIMIT = {
+			check_variable = { hre_nation_count > 9}
+		}
+		set_temp_variable = { base_imperial_stability_gain_temp = -0.06 }
+	}
+	else_if = {
+		LIMIT = {
+			check_variable = { hre_nation_count > 5}
+		}
+		set_temp_variable = { base_imperial_stability_gain_temp = -0.05 }
+	}
+	else = { set_temp_variable = { base_imperial_stability_gain_temp = -0.02 } }
+	imperial_stability = yes
+}
+
+imperial_efficiency = {
+	add_to_variable = { global.imperial_authority_gain_efficiency = base_imperial_efficiency_gain_temp }
+	custom_effect_tooltip = IMPERIAL_AUTHORITY_EFFICIENCY_CHANGE
+}
+
+civil_war_check = {
+	hidden_effect = {
+		every_country = {
+			limit = {
+				OR = {
+					has_idea = hre_idea_elector
+					has_idea = hre_idea_prince
+					has_idea = hre_idea_free_city
+					has_idea = hre_idea_republic
+					has_idea = hre_idea_conservative
+				}
+			}
+			set_temp_variable = { PREV.hre_decisions_array^i = ROOT.hre_decisions_array^i }
+			country_event = HREEvent.7
+		}
+	}
+	custom_effect_tooltip = CIVIL_WAR_CHECK
+}
+
+hre_military_access = {
+	hidden_effect = {
+		every_country = {
+			limit = {
+				OR = {
+					has_idea = hre_idea_elector
+					has_idea = hre_idea_prince
+					has_idea = hre_idea_free_city
+					has_idea = hre_idea_republic
+					has_idea = hre_idea_conservative
+				}
+			}
+			ROOT = {
+				diplomatic_relation = {
+					country = PREV
+					relation = military_access
+					active = yes
+				}
+			}
+		}
+	}
+	custom_effect_tooltip = HRE_MILITARY_ACCESS
+}
+
+hre_remove_military_access = {
+	var:global.hre_emperor = {
+		if = {
+			LIMIT = {
+				has_global_flag = HRE_MILITARY_ACCESS_I
+				NOT = { has_global_flag = HRE_MILITARY_ACCESS_II }
+			}
+			diplomatic_relation = {
+				country = ROOT
+				relation = military_access
+				active = no
+			}
+		}
+		else_if = {
+			LIMIT = {
+				has_global_flag = HRE_MILITARY_ACCESS_II
+			}
+			every_country = {
+				limit = {
+					OR = {
+						has_idea = hre_idea_emperor
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_free_city
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_conservative
+					}
+				}
+				diplomatic_relation = {
+					country = ROOT
+					relation = military_access
+					active = no
+				}
+				ROOT = {
+					diplomatic_relation = {
+						country = PREV
+						relation = military_access
+						active = no
+					}
+				}
+			}
+		}
+	}
+}
+
+hre_add_military_access = {
+	var:global.hre_emperor = {
+		if = {
+			LIMIT = {
+				has_global_flag = HRE_MILITARY_ACCESS_I
+				NOT = { has_global_flag = HRE_MILITARY_ACCESS_II }
+			}
+			diplomatic_relation = {
+				country = ROOT
+				relation = military_access
+				active = yes
+			}
+		}
+		else_if = {
+			LIMIT = {
+				has_global_flag = HRE_MILITARY_ACCESS_II
+			}
+			every_country = {
+				limit = {
+					OR = {
+						has_idea = hre_idea_emperor
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_free_city
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_conservative
+					}
+				}
+				diplomatic_relation = {
+					country = ROOT
+					relation = military_access
+					active = yes
+				}
+				ROOT = {
+					diplomatic_relation = {
+						country = PREV
+						relation = military_access
+						active = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+hre_imperial_army = {
+	hidden_effect = {
+		every_country = {
+			limit = {
+				OR = {
+					has_idea = hre_idea_emperor
+					has_idea = hre_idea_elector
+					has_idea = hre_idea_prince
+					has_idea = hre_idea_free_city
+					has_idea = hre_idea_republic
+					has_idea = hre_idea_conservative
+				}
+			}
+			every_country = {
+				limit = {
+					NOT = { tag = PREV }
+					OR = {
+						has_idea = hre_idea_emperor
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_free_city
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_conservative
+					}
+				}
+				diplomatic_relation = {
+					country = PREV
+					relation = military_access
+					active = yes
+				}
+				PREV = {
+					diplomatic_relation = {
+						country = THIS
+						relation = military_access
+						active = yes
+					}
+				}
+			}
+		}
+	}
+	custom_effect_tooltip = HRE_MILITARY_ACCESS_II
+}
+
+hre_militaristic_oath = {
+	hidden_effect = {
+		set_global_flag = OATH_FOR_SUPPORT
+	}
+	custom_effect_tooltip = HRE_MILITARISTUC_OATH
+}
+
+hre_defense_of_the_empire = {
+	hidden_effect = {
+		set_global_flag = HRE_CALL_TO_WAR_I
+	}
+	custom_effect_tooltip = HRE_EMPIRE_DEFENSE
+}
+
+hre_call_of_the_empire = {
+	hidden_effect = {
+		set_global_flag = HRE_CALL_TO_WAR_II
+	}
+	custom_effect_tooltip = HRE_CALL_OF_EMPIRE
+}
+
+hre_emperor_industry = {
+	hidden_effect = {
+		set_temp_variable = { hre_nation_count = 0 }
+		add_to_temp_variable = { hre_nation_count = global.hre_elector_amount }
+		add_to_temp_variable = { hre_nation_count = global.hre_prince_amount }
+		add_to_temp_variable = { hre_nation_count = global.hre_free_city_amount }
+		add_offsite_building = { type = industrial_complex level = hre_nation_count }
+		every_country = {
+			limit = {
+				OR = {
+					has_idea = hre_idea_elector
+					has_idea = hre_idea_prince
+					has_idea = hre_idea_free_city
+					has_idea = hre_idea_republic
+					has_idea = hre_idea_conservative
+				}
+			}
+				
+			random_state = { 
+				limit = { 
+					is_owned_and_controlled_by = PREV 
+					is_in_home_area = yes
+					industrial_complex > 0
+					
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+				set_state_flag = HRE_INDUSTRY
+			}
+		}
+	}
+	custom_effect_tooltip = HRE_EMPEROR_INDUSTRY
+}
+
+hre_emperor_industry_ii = {
+	hidden_effect = {
+		set_temp_variable = { hre_nation_count = 0 }
+		add_to_temp_variable = { hre_nation_count = global.hre_elector_amount }
+		add_to_temp_variable = { hre_nation_count = global.hre_prince_amount }
+		add_to_temp_variable = { hre_nation_count = global.hre_free_city_amount }
+		add_offsite_building = { type = arms_factory level = hre_nation_count }
+		every_country = {
+			limit = {
+				OR = {
+					has_idea = hre_idea_elector
+					has_idea = hre_idea_prince
+					has_idea = hre_idea_free_city
+					has_idea = hre_idea_republic
+					has_idea = hre_idea_conservative
+				}
+			}
+			random_state = { 
+				limit = { 
+					is_owned_and_controlled_by = PREV 
+					is_in_home_area = yes
+					arms_factory > 0
+					
+				}
+				remove_building = {
+					type = arms_factory
+					level = 1
+				}
+				set_state_flag = HRE_INDUSTRY_II
+			}
+		}
+	}
+	custom_effect_tooltip = HRE_EMPEROR_INDUSTRY_II
+}
+
+hre_add_post_industry = {
+	hidden_effect = {
+		if = {
+			LIMIT = { has_global_flag = HRE_EMPEROR_INDUSTRY_I }
+			random_country = {
+				LIMIT = { has_idea = hre_idea_emperor }
+				add_offsite_building = { type = industrial_complex level = 1 }
+			}
+			random_state = { 
+				limit = { 
+					is_owned_and_controlled_by = ROOT
+					is_in_home_area = yes
+					industrial_complex > 0
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+				set_state_flag = HRE_INDUSTRY
+			}
+		}
+		if = {
+			LIMIT = { has_global_flag = HRE_EMPEROR_INDUSTRY_II }
+			random_country = {
+				LIMIT = { has_idea = hre_idea_emperor }
+				add_offsite_building = { type = arms_factory level = 1 }
+			}
+			random_state = { 
+				limit = { 
+					is_owned_and_controlled_by = ROOT
+					is_in_home_area = yes
+					arms_factory > 0
+				}
+				remove_building = {
+					type = arms_factory
+					level = 1
+				}
+				set_state_flag = HRE_INDUSTRY_II
+			}
+		}
+	}
+}
+
+hre_remove_post_industry = {
+	hidden_effect = {
+		if = {
+			LIMIT = { has_global_flag = HRE_EMPEROR_INDUSTRY_I }
+			random_country = {
+				LIMIT = { has_idea = hre_idea_emperor }
+				add_offsite_building = { type = industrial_complex level = -1 }
+			}
+			every_state = { 
+				limit = { 
+					is_owned_and_controlled_by = ROOT
+					is_in_home_area = yes
+					has_state_flag = HRE_INDUSTRY
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				clr_state_flag = HRE_INDUSTRY
+			}
+		}
+	
+		if = {
+			LIMIT = { has_global_flag = HRE_EMPEROR_INDUSTRY_II }
+			random_country = {
+				LIMIT = { has_idea = hre_idea_emperor }
+				add_offsite_building = { type = arms_factory level = -1 }
+			}
+			every_state = { 
+				limit = { 
+					is_owned_and_controlled_by = ROOT
+					is_in_home_area = yes
+					has_state_flag = HRE_INDUSTRY_II
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				clr_state_flag = HRE_INDUSTRY_II
+			}
+		}
+	}
+}
+
+hre_remove_post_industry_misc = {
+	hidden_effect = {
+		if = {
+			LIMIT = { has_global_flag = HRE_EMPEROR_INDUSTRY_I }
+			set_temp_variable = { offmap_factories = 0 }
+			every_country = {
+				limit = {
+					OR = {
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_free_city
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_conservative
+					}
+				}
+				add_to_temp_variable = { offmap_factories = -1 }
+			}
+			random_country = {
+				LIMIT = { has_idea = hre_idea_emperor }
+				add_offsite_building = { type = industrial_complex level = offmap_factories }
+			}
+			every_state = { 
+				limit = { 
+					has_state_flag = HRE_INDUSTRY
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				clr_state_flag = HRE_INDUSTRY
+			}
+		}
+		if = {
+			LIMIT = { has_global_flag = HRE_EMPEROR_INDUSTRY_II }
+			random_country = {
+				LIMIT = { has_idea = hre_idea_emperor }
+				add_offsite_building = { type = arms_factory level = offmap_factories }
+			}
+			every_state = { 
+				limit = { 
+					has_state_flag = HRE_INDUSTRY_II
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				clr_state_flag = HRE_INDUSTRY_II
+			}
+		}
+	}
+}

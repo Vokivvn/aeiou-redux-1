@@ -1,0 +1,29 @@
+
+state={
+	id=310
+	name="STATE_310"
+	manpower = 19875
+
+	resources = {
+		wood=2
+	}
+
+	state_category = pastoral
+
+	history={
+		owner = TGU
+		buildings = {
+			infrastructure = 2
+			12885 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			12885 1 
+		}
+	}
+
+	provinces={
+		4934 12885 
+	}
+}

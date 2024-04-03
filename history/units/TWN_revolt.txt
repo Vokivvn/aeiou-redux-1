@@ -1,0 +1,67 @@
+﻿division_template = {
+	name = "Native Rebel Army"
+
+	division_names_group = TAIW_INFB_02
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "General Deatchment"
+
+	division_names_group = TAIW_CAV_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+	}
+}
+
+
+units = {
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12068
+		division_template = "General Deatchment"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "Zelandia Battalion"
+		location = 12068
+		division_template = "Native Rebel Army"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "Eastern Holdout Unit"
+		location = 1175
+		division_template = "Native Rebel Army"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "Western Holdout Unit"
+		location = 1091
+		division_template = "Native Rebel Army"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "Advanced Expeditionaries"
+		location = 9955
+		division_template = "Native Rebel Army"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.2
+	}
+}

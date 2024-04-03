@@ -1,0 +1,12 @@
+on_actions = {
+
+	### Note from Debbel - Clearly note what stuff belongs to with each on action section as I will be putting wider world stuff in here too
+	
+	on_startup = {	###enables the demo opening screen
+		effect = {
+			every_country = {
+				set_country_flag = TNO_demo_opening_screen_show
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+﻿division_template = {
+	name = "Heavy Cavalry Mercenaries"
+	is_locked = yes
+	
+	regiments = {
+		heavy_cavalry   = { x = 0 y = 0 }
+		heavy_cavalry   = { x = 0 y = 1 }
+		heavy_cavalry   = { x = 0 y = 2 }
+		heavy_cavalry   = { x = 0 y = 3 }
+		heavy_cavalry   = { x = 0 y = 4 }
+		heavy_cavalry   = { x = 1 y = 0 }
+		heavy_cavalry   = { x = 1 y = 1 }
+		heavy_cavalry   = { x = 1 y = 2 }
+		heavy_cavalry   = { x = 1 y = 3 }
+		heavy_cavalry   = { x = 1 y = 4 }
+		heavy_cavalry   = { x = 2 y = 0 }
+		heavy_cavalry   = { x = 2 y = 1 }
+		heavy_cavalry   = { x = 2 y = 2 }
+		heavy_cavalry   = { x = 2 y = 3 }
+		heavy_cavalry   = { x = 2 y = 4 }
+		heavy_cavalry   = { x = 3 y = 0 }
+		heavy_cavalry   = { x = 3 y = 1 }
+		heavy_cavalry   = { x = 3 y = 2 }
+		heavy_cavalry   = { x = 3 y = 3 }
+		heavy_cavalry   = { x = 3 y = 4 }
+	}
+	priority = 1
+}

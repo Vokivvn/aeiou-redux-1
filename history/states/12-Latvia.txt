@@ -1,0 +1,29 @@
+
+state={
+	id=12
+	name="STATE_12"
+	manpower = 494211
+	resources={
+		gunpowder = 2
+		horses = 2 
+	}
+	
+	state_category = town
+	
+	history={
+		owner = COU
+		victory_points = {
+			10493 5 
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		add_core_of = COU
+	}
+
+	provinces={
+	  3388 9240 9317 9501 10323 10493 11302 
+	}
+}

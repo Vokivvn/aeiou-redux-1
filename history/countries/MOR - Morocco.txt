@@ -1,0 +1,28 @@
+﻿capital = 461
+
+oob = "MOR_1886"
+
+# Starting tech
+set_technology = {
+	muskets0 = 1
+	melee = 1
+	basic_cavalry = 1
+}
+
+set_convoys = 20
+
+set_politics = {
+	ruling_party = absolutist
+	elections_allowed = no
+}
+set_popularities = {
+	absolutist = 100
+}
+add_to_array = { national_religion_array =  8 }
+
+create_country_leader = {
+	name = "Hassan I"
+	desc = ""
+	picture = "Portrait_MOR_Hassan.dds"
+	ideology = absolutist_moderate
+}

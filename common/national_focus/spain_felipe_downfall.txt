@@ -1,0 +1,1195 @@
+
+focus_tree = {
+	id = Spain_felipe_downfall
+	
+	country = {
+		factor = 0
+		
+	}
+	default = no
+	continuous_focus_position = { x = 50 y = 2000 }
+
+
+	###########
+	#  Start  #
+	###########
+	
+	focus = { 
+		id = SPR_begin_operations
+		icon = GFX_goal_generic_major_war
+		cost = 50
+	
+		x = 8
+		y = 0
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = { 
+		id = SPR_fortify_antevedi
+		icon = GFX_goal_generic_construct_military
+		cost = 40
+		
+		prerequisite = { focus = SPR_begin_operations }
+		relative_position_id = SPR_begin_operations
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			847 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_strike_at_france
+		icon = GFX_SPR_focus_on_the_enemy
+		cost = 40
+		
+		prerequisite = { focus = SPR_fortify_antevedi }
+		relative_position_id = SPR_fortify_antevedi
+	
+		x = 0
+		y = 1
+
+		will_lead_to_war_with = FRA
+		
+		completion_reward = {
+			add_named_threat = {
+				threat = 5
+				name = SPR_strike_at_france_threat
+			}
+			set_country_flag = SPR_indian_border_war
+			hidden_effect = {
+				every_country = {
+					country_event = story_news_events.15
+				}
+				FRA = {
+					if = {
+						LIMIT = {
+							NOT = { has_country_flag = franco_spanish_war_tree }
+						}
+						load_focus_tree = france_franco_spanish_war_focus
+						sets_country_flag = franco_spanish_war_tree
+					}
+					complete_national_focus  = FRA_vijayawada_in_flames
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_disaster
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		cost = 40
+		
+		available = {
+			has_country_flag = FRA_reparations
+		}
+		prerequisite = { focus = SPR_strike_at_france }
+		relative_position_id = SPR_strike_at_france
+		mutually_exclusive = { focus = SPR_pyrenaic_wrath }
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_political_power = -100
+			add_ideas = spr_disastrous_campaign
+			country_event = SPRIndia.3
+		}
+	}
+	
+	focus = { 
+		id = SPR_pyrenaic_wrath
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 40
+		
+		available = {
+			has_global_flag = FRA_SPR_India_war
+		}
+		prerequisite = { focus = SPR_strike_at_france }
+		relative_position_id = SPR_strike_at_france
+		mutually_exclusive = { focus = SPR_disaster }
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_political_power = -200
+			add_ideas = spr_disastrous_campaign
+			country_event = SPRIndia.13
+		}
+	}
+	
+	focus = { 
+		id = SPR_insurrection_in_the_palace
+		icon = GFX_goal_generic_attack_allies
+		cost = 40
+		
+		prerequisite = { 
+			focus = SPR_disaster 
+			focus = SPR_pyrenaic_wrath 
+		}
+		relative_position_id = SPR_strike_at_france
+	
+		x = 0
+		y = 2
+		
+		completion_reward = {
+			country_event = SPRFrancisco.5
+		}
+	}
+	
+	focus = { 
+		id = SPR_a_new_hope
+		icon = GFX_SPR_National_Salvation_Movement
+		cost = 40
+		
+		prerequisite = { focus = SPR_insurrection_in_the_palace }
+		relative_position_id = SPR_insurrection_in_the_palace
+	
+		x = 0
+		y = 2
+		
+		completion_reward = {
+			country_event = SPRIndia.4
+		}
+	}
+	
+	focus = { 
+		id = SPR_the_desired_monarch
+		icon = GFX_SPR_boost_noble_scholarships
+		cost = 40
+		
+		prerequisite = { focus = SPR_a_new_hope }
+		relative_position_id = SPR_a_new_hope
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			remove_ideas = spr_disastrous_campaign
+		}
+	}
+	
+	# Moderate
+	
+	focus = { 
+		id = SPR_moderate_measures_moderate_times
+		icon = GFX_goal_generic_improve_relations
+		cost = 40
+		
+		available = {
+			has_war = no
+		}
+		prerequisite = { focus = SPR_insurrection_in_the_palace }
+		relative_position_id = SPR_insurrection_in_the_palace
+		mutually_exclusive = { focus = SPR_the_homefront }
+	
+		x = -5
+		y = 1
+		
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	
+	focus = { 
+		id = SPR_rise_of_liberalism
+		icon = GFX_SPR_Peasant_Rebellion
+		cost = 40
+		
+		prerequisite = { focus = SPR_moderate_measures_moderate_times }
+		relative_position_id = SPR_moderate_measures_moderate_times
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = liberal
+				popularity = 0.10
+			}
+			add_popularity = {
+				ideology = socialist
+				popularity = 0.02
+			}
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+	}
+	
+	focus = { 
+		id = SPR_the_catholic_division
+		icon = GFX_SPR_lex_christi
+		cost = 40
+		
+		prerequisite = { focus = SPR_moderate_measures_moderate_times }
+		relative_position_id = SPR_moderate_measures_moderate_times
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			remove_ideas = spr_idea_anti_clerical_terrorism 
+			add_popularity = {
+				ideology = theocratic
+				popularity = 0.1
+			}
+			country_event = SPRFrancisco.2
+		}
+	}
+	
+	focus = { 
+		id = SPR_monarchic_continuism
+		icon = GFX_SPR_Popular_laws
+		cost = 40
+		
+		prerequisite = { focus = SPR_rise_of_liberalism }
+		prerequisite = { focus = SPR_the_catholic_division }
+		prerequisite = { focus = SPR_the_desired_monarch }
+		relative_position_id = SPR_moderate_measures_moderate_times
+	
+		x = 0
+		y = 3
+		
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.05
+			country_event = SPRFrancisco.4
+		}
+	}
+	
+	focus = { 
+		id = SPR_a_moden_nation
+		icon = GFX_SPR_wealthy_universities
+		cost = 40
+		
+		prerequisite = { focus = SPR_monarchic_continuism }
+		relative_position_id = SPR_monarchic_continuism
+	
+		x = -2
+		y = 1
+		
+		completion_reward = {
+			add_ideas = spr_idea_modern_nation
+		}
+	}
+	
+	focus = { 
+		id = SPR_applied_refineries
+		icon = GFX_goal_continuous_non_factory_construct
+		cost = 40
+		
+		prerequisite = { focus = SPR_a_moden_nation }
+		relative_position_id = SPR_a_moden_nation
+	
+		x = -2
+		y = 1
+		
+		completion_reward = {
+			172 = {
+				add_resource = {
+					type = iron
+					amount = 4
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_law_1519n
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 40
+		
+		prerequisite = { focus = SPR_a_moden_nation }
+		relative_position_id = SPR_a_moden_nation
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			319 = {
+				add_resource = {
+					type = wood
+					amount = 2
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			924 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			315 = {
+				add_resource = {
+					type = wood
+					amount = 3
+				}
+			}
+			689 = {
+				add_resource = {
+					type = wood
+					amount = 1
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_bourger_investments
+		icon = GFX_goal_generic_consumer_goods
+		cost = 40
+		
+		prerequisite = { focus = SPR_applied_refineries }
+		prerequisite = { focus = SPR_law_1519n }
+		relative_position_id = SPR_a_moden_nation
+	
+		x = -1
+		y = 2
+		
+		completion_reward = {
+			add_timed_idea = {
+				idea = spr_idea_bourger_investments
+				days = 365
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_we_shall_strike_again
+		icon = GFX_goal_continuous_suppression
+		cost = 40
+		
+		prerequisite = { focus = SPR_monarchic_continuism }
+		relative_position_id = SPR_monarchic_continuism
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+	
+	focus = { 
+		id = SPR_second_time_the_charm
+		icon = GFX_focus_chi_army_reform
+		cost = 40
+		
+		prerequisite = { focus = SPR_we_shall_strike_again }
+		relative_position_id = SPR_we_shall_strike_again
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_war_support = 0.05
+			army_experience = 10
+		}
+	}
+	
+	focus = { 
+		id = SPR_political_schism
+		icon = GFX_SPR_treacherous_waters
+		cost = 40
+		
+		prerequisite = { focus = SPR_monarchic_continuism }
+		relative_position_id = SPR_monarchic_continuism
+	
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			add_stability = -0.10
+			add_timed_idea = {
+					idea = spr_idea_political_schism
+					days = 365
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_de_rebus_liberalis
+		icon = GFX_SPR_toledo_manifesto
+		cost = 40
+		
+		prerequisite = { focus = SPR_political_schism }
+		relative_position_id = SPR_political_schism
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			#event
+		}
+	}
+	
+	focus = { 
+		id = SPR_the_french_secret_weapon
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		cost = 40
+		
+		prerequisite = { focus = SPR_second_time_the_charm }
+		prerequisite = { focus = SPR_de_rebus_liberalis }
+		relative_position_id = SPR_de_rebus_liberalis
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_political_power = -100
+			#event
+		}
+	}
+	
+	focus = { 
+		id = SPR_on_the_tightrope
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 40
+		
+		prerequisite = { focus = SPR_bourger_investments }
+		prerequisite = { focus = SPR_the_french_secret_weapon }
+		relative_position_id = SPR_monarchic_continuism
+	
+		x = -1
+		y = 4
+		
+		completion_reward = {
+			load_focus_tree = Spain_tightrope
+		}
+	}
+	
+	# Hold The Homefront
+	
+	focus = { 
+		id = SPR_the_homefront
+		icon = GFX_focus_generic_industry_3
+		cost = 40
+		
+		available = {
+			has_war = yes
+		}
+		prerequisite = { focus = SPR_insurrection_in_the_palace }
+		relative_position_id = SPR_insurrection_in_the_palace
+		mutually_exclusive = { focus = SPR_moderate_measures_moderate_times }
+	
+		x = 5
+		y = 1
+		
+		completion_reward = {
+			country_event = SPRSecondfelipe.11
+		}
+	}
+	
+	focus = { 
+		id = SPR_protect_the_north_ports
+		icon = GFX_focus_generic_coastal_fort
+		cost = 40
+		
+		bypass = {
+			SPN = {
+				NOT = { controls_state = 6 }
+			}
+		}
+		
+		prerequisite = { focus = SPR_the_homefront }
+		relative_position_id = SPR_the_homefront
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			6 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 6560
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 6598
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_amberes_brussels_line
+		icon = GFX_goal_continuous_non_factory_construct
+		cost = 40
+		
+		bypass = {
+			SPN = {
+				NOT = { controls_state = 6 }
+			}
+		}
+		
+		prerequisite = { focus = SPR_the_homefront }
+		relative_position_id = SPR_the_homefront
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			6 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 6598
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 516
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_the_wounded_bull
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 40
+		
+		prerequisite = { focus = SPR_protect_the_north_ports }
+		prerequisite = { focus = SPR_amberes_brussels_line }
+		prerequisite = { focus = SPR_the_desired_monarch }
+		relative_position_id = SPR_the_homefront
+	
+		x = 0
+		y = 3
+		
+		completion_reward = {
+			add_ideas = spr_idea_wounded_bull
+		}
+	}
+	
+	## Winning tree
+	
+	focus = { 
+		id = SPR_shall_rise_again
+		icon = GFX_focus_generic_little_entente
+		cost = 40
+		
+		available = {
+			surrender_progress < 0.25
+		}
+		prerequisite = { focus = SPR_the_wounded_bull }
+		relative_position_id = SPR_the_wounded_bull
+		mutually_exclusive = { focus = SPR_fights_until_the_end }
+	
+		x = -2
+		y = 1
+		
+		completion_reward = {
+			add_war_support = 0.10
+		}
+	}
+	
+	## Counteroffensive
+	
+	focus = { 
+		id = SPR_counteroffensive_measures
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 40
+		
+		available = {
+			OR = {
+				FRA = {
+					NOT = { has_full_control_of_state = 165 }
+				}
+				has_full_control_of_state = 166
+				has_full_control_of_state = 176
+			}
+		}
+		
+		prerequisite = { focus = SPR_shall_rise_again }
+		relative_position_id = SPR_shall_rise_again
+	
+		x = -3
+		y = 1
+		
+		completion_reward = {
+			if = {
+				LIMIT = {
+					FRA = {
+						NOT = { has_full_control_of_state = 165 }
+					}
+				}
+				165 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 6966
+					}
+				}
+			}
+			if = {
+				LIMIT = {
+					has_full_control_of_state = 166
+				}
+				166 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 6878
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 3954
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = 3816
+					}
+				}
+			}
+			if = {
+				LIMIT = {
+					has_full_control_of_state = 176
+				}
+				176 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 3902
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 6903
+					}
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_urban_defense_comission
+		icon = GFX_goal_generic_military_sphere
+		cost = 40
+		
+		available = {
+			controls_state = 165
+		}
+		
+		prerequisite = { focus = SPR_counteroffensive_measures }
+		relative_position_id = SPR_counteroffensive_measures
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			165 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 9764
+				}
+				add_manpower = 2500
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_secure_the_mountain_passes
+		icon = GFX_focus_eng_special_air_service
+		cost = 40
+		
+		available = {
+			controls_state = 937
+			controls_state = 172
+		}
+		
+		prerequisite = { focus = SPR_urban_defense_comission }
+		relative_position_id = SPR_urban_defense_comission
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			937 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 9842
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 11821
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 9840
+				}
+			}
+			172 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 3931
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 3933
+				}
+			}
+		}
+	}
+	
+	## Pushing
+	
+	focus = { 
+		id = SPR_western_pushout
+		icon = GFX_goal_generic_political_pressure
+		cost = 40
+		
+		available = {
+			controls_state = 172
+		}
+		
+		prerequisite = { focus = SPR_shall_rise_again }
+		relative_position_id = SPR_shall_rise_again
+		mutually_exclusive = { focus = SPR_eastern_pushout }
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			172 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_eastern_pushout
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 40
+		
+		available = {
+			controls_state = 165
+		}
+		
+		prerequisite = { focus = SPR_shall_rise_again }
+		relative_position_id = SPR_shall_rise_again
+		mutually_exclusive = { focus = SPR_western_pushout }
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			165 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_proclaim_the_unification_of_navarra
+		icon = GFX_SPR_vascongadas_nobles
+		cost = 40
+		
+		available = {
+			FRA = { NOT = { controls_state = 922 } }
+		}
+		prerequisite = { 
+			focus = SPR_western_pushout
+			focus = SPR_eastern_pushout
+		}
+		relative_position_id = SPR_shall_rise_again
+	
+		x = 0
+		y = 2
+		
+		completion_reward = {
+			#country event
+			hidden_effect = { #Hidden until there is an event
+				922 = { add_core_of = SPR }
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_set_up_occupation_toulouse
+		icon = GFX_goal_generic_secret_weapon
+		cost = 40
+		
+		available = {
+			FRA = { NOT = { controls_state = 922 } }
+			FRA = { NOT = { controls_state = 31 } }
+		}
+		prerequisite = { focus = SPR_proclaim_the_unification_of_navarra }
+		relative_position_id = SPR_proclaim_the_unification_of_navarra
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			country_event = SPRIndia.5
+		}
+	}
+	
+	focus = { 
+		id = SPR_deal_with_the_local_nobility
+		icon = GFX_AUS_focus_Threats_Actions
+		cost = 20
+		
+		prerequisite = { focus = SPR_proclaim_the_unification_of_navarra }
+		relative_position_id = SPR_proclaim_the_unification_of_navarra
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			country_event = SPRFrancisco.3
+		}
+	}
+	
+	focus = { 
+		id = SPR_honourable_peace
+		icon = GFX_goal_support_democracy
+		cost = 40
+		
+		available = {
+			FRA = { surrender_progress > 0.05 }
+		}
+		
+		prerequisite = { focus = SPR_set_up_occupation_toulouse }
+		prerequisite = { focus = SPR_deal_with_the_local_nobility }
+		relative_position_id = SPR_proclaim_the_unification_of_navarra
+	
+		x = 0
+		y = 2
+		
+		completion_reward = {
+			country_event = SPRIndia.6
+			load_focus_tree = Spain_empire
+		}
+	}
+	
+	## Losing tree
+	
+	focus = { 
+		id = SPR_fights_until_the_end
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 40
+		
+		available = {
+			surrender_progress > 0.25
+		}
+		prerequisite = { focus = SPR_the_wounded_bull }
+		relative_position_id = SPR_the_wounded_bull
+		mutually_exclusive = { focus = SPR_shall_rise_again }
+	
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			add_war_support = 0.10
+		}
+	}
+	
+	focus = { 
+		id = SPR_push_towards_the_ebro
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 40
+		
+		prerequisite = { focus = SPR_fights_until_the_end }
+		relative_position_id = SPR_fights_until_the_end
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_ideas = spr_idea_reignited_moral
+		}
+	}
+	
+	focus = { 
+		id = SPR_keep_the_asturian_iron_flowing
+		icon = GFX_goal_generic_air_production
+		cost = 40
+		
+		bypass = {
+			NOT = { controls_state = 938 }
+			NOT = { controls_state = 174 }
+		}
+		
+		prerequisite = { focus = SPR_fights_until_the_end }
+		relative_position_id = SPR_fights_until_the_end
+	
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			if = {
+				LIMIT = {
+					controls_state = 938
+				}
+				938 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 6749
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 9699
+					}
+				}
+			}
+			if = {
+				LIMIT = {
+					controls_state = 174
+				}
+				174 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 726
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 3727
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 3725
+					}
+					add_resource = {
+						type = iron
+						amount = 2
+					}
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_madrid_remains
+		icon = GFX_goal_generic_position_armies
+		cost = 40
+		
+		bypass = {
+			NOT = { controls_state = 41 }
+		}
+		
+		prerequisite = { focus = SPR_push_towards_the_ebro }
+		prerequisite = { focus = SPR_keep_the_asturian_iron_flowing }
+		relative_position_id = SPR_fights_until_the_end
+	
+		x = 1
+		y = 2
+		
+		completion_reward = {
+			41 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 3938
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 858
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_move_industry_to_andalucia
+		icon = GFX_goal_generic_construction2
+		cost = 40
+		
+		bypass = {
+			NOT = { controls_state = 169 }
+			NOT = { controls_state = 173 }
+		}
+		
+		prerequisite = { focus = SPR_madrid_remains }
+		relative_position_id = SPR_madrid_remains
+	
+		x = -2
+		y = 1
+		
+		completion_reward = {
+			if = {
+				LIMIT = {
+					controls_state = 169
+				}
+				169 = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				LIMIT = {
+					controls_state = 173
+				}
+				173 = {
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_murcian_harquebusiers
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		cost = 40
+		
+		prerequisite = { focus = SPR_madrid_remains }
+		relative_position_id = SPR_madrid_remains
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			load_oob = "SPR_Harquebusiers"
+		}
+	}
+	
+	focus = { 
+		id = SPR_defensive_strategies
+		icon = GFX_goal_generic_army_artillery
+		cost = 40
+		
+		prerequisite = { focus = SPR_madrid_remains }
+		relative_position_id = SPR_madrid_remains
+	
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_merciful_frenchmen
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 40
+		available = {
+			always = no
+		}
+		
+		prerequisite = { focus = SPR_move_industry_to_andalucia }
+		prerequisite = { focus = SPR_murcian_harquebusiers }
+		prerequisite = { focus = SPR_defensive_strategies }
+		relative_position_id = SPR_madrid_remains
+		mutually_exclusive = { focus = SPR_the_new_order }
+	
+		x = -1
+		y = 2
+		
+		completion_reward = {
+			load_focus_tree = Spain_french_puppet
+		}
+	}
+	
+	focus = { 
+		id = SPR_the_new_order
+		icon = GFX_focus_generic_military_mission
+		cost = 40
+		available = {
+			always = no
+		}
+		
+		prerequisite = { focus = SPR_move_industry_to_andalucia }
+		prerequisite = { focus = SPR_murcian_harquebusiers }
+		prerequisite = { focus = SPR_defensive_strategies }
+		relative_position_id = SPR_madrid_remains
+		mutually_exclusive = { focus = SPR_merciful_frenchmen }
+	
+		x = 1
+		y = 2
+		
+		completion_reward = {
+			load_focus_tree = Spain_bourbon_puppet
+		}
+	}
+}

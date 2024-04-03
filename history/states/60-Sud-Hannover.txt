@@ -1,0 +1,28 @@
+
+state={
+	id=60
+	name="STATE_60"
+	manpower = 792010
+	resources={
+		wood = 3 
+		gunpowder = 3 
+		horses = 1 
+	}
+	
+	state_category = large_town
+
+	history={
+		owner = THU
+		victory_points = { 3561 5 }
+		victory_points = { 425 3 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = THU
+	}
+
+	provinces={
+		482 538 3500 6501 6524 9497 
+	}
+}

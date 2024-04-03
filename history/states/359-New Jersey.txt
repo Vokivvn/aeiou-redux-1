@@ -1,0 +1,32 @@
+
+state={
+	id=359
+	name="STATE_359"
+	manpower = 573885‬
+	
+	state_category = town
+
+	resources={
+		steel=3
+		iron=4 
+		wood=1
+		gunpowder=3
+	}
+
+	history={
+		owner = SDE
+		victory_points = {
+			6882 5 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = SDE
+	}
+
+	provinces={
+		3693 3863 6882 9801 9864 11740 11782 11900 859 3878 3894 9820 11799 891 3897 894 706 11660
+	}
+	
+}

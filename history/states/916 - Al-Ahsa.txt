@@ -1,0 +1,21 @@
+state= {
+	id=916
+	name="STATE_916"
+	manpower = 18201
+	
+	state_category = rural
+
+	history= {
+		owner = OTT
+		add_core_of = OTT
+		victory_points = {
+			10791 1
+		}
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces={
+	    10791 12702
+	}
+}

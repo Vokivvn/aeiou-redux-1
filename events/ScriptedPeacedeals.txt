@@ -1,0 +1,725 @@
+###########################
+# Army Improvement Events
+###########################
+
+add_namespace = scriptedpeacedeals
+
+country_event = {
+	id = scriptedpeacedeals.1
+	title = scriptedpeacedeals.1.t
+	desc = scriptedpeacedeals.1.d
+	
+	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	picture = GFX_country_event_borneo_01.dds
+	
+	immediate = {
+		hidden_effect = {
+			IF = { 
+				LIMIT = { tag = FRA }
+				white_peace = VIJ 
+				clr_country_flag = FRA_invasion_VIJ
+			}
+		}
+	}
+	
+	option = {
+		name = scriptedpeacedeals.1.a
+		IF = { 
+			LIMIT = { tag = FRA }
+			set_temp_variable = { prestige_score_temp = -3 }
+			add_prestige_score = yes
+		}
+	}
+}
+
+country_event = {
+	id = scriptedpeacedeals.2
+	title = scriptedpeacedeals.2.t
+	desc = scriptedpeacedeals.2.d
+	
+	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	picture = GFX_country_event_borneo_01.dds
+	
+	immediate = {
+		hidden_effect = {
+			IF = { 
+				LIMIT = { tag = FRA }
+				white_peace = VIJ 
+				clr_country_flag = FRA_VIJ_second_war
+			}
+		}
+	}
+	
+	option = {
+		name = scriptedpeacedeals.2.a
+		IF = { 
+			LIMIT = { tag = FRA }
+			set_temp_variable = { prestige_score_temp = -5 }
+			add_prestige_score = yes
+		}
+	}
+}
+
+country_event = {
+	id = scriptedpeacedeals.3
+	title = scriptedpeacedeals.3.t
+	desc = scriptedpeacedeals.3.d
+	
+	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	picture = GFX_country_event_borneo_01.dds
+	
+	immediate = {
+		#hidden_effect = {
+			IF = { 
+				LIMIT = { tag = FRA }
+				MAR = {
+					white_peace = FRA
+					white_peace = IND
+				}
+				IND = {
+					transfer_state = 429
+				}
+				clr_country_flag = FRA_MAR_WAR
+			}
+		#}
+	}
+	
+	option = {
+		name = scriptedpeacedeals.3.a
+		IF = { 
+			LIMIT = { tag = FRA }
+			set_temp_variable = { prestige_score_temp = 5 }
+			add_prestige_score = yes
+		}
+	}
+}
+
+country_event = {
+	id = scriptedpeacedeals.4
+	title = scriptedpeacedeals.4.t
+	desc = scriptedpeacedeals.4.d
+	
+	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	picture = GFX_country_event_borneo_01.dds
+	
+	immediate = {
+		hidden_effect = {
+			IF = { 
+				LIMIT = { tag = FRA }
+				MYS = {
+					white_peace = FRA
+					transfer_state = 886
+				}
+				clr_country_flag = FRA_MYS_WAR
+			}
+		}
+	}
+	
+	option = {
+		name = scriptedpeacedeals.4.a
+		IF = { 
+			LIMIT = { tag = FRA }
+			set_temp_variable = { prestige_score_temp = -3 }
+			add_prestige_score = yes
+		}
+	}
+}
+
+country_event = {
+	id = scriptedpeacedeals.5
+	title = scriptedpeacedeals.5.t
+	desc = scriptedpeacedeals.5.d
+	
+	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	picture = GFX_country_event_borneo_01.dds
+	
+	immediate = {
+		hidden_effect = {
+			IF = { 
+				LIMIT = { tag = FRA }
+				white_peace = SPR
+				country_event = SPRIndia.7
+			}
+		}
+	}
+	
+	option = {
+		name = scriptedpeacedeals.5.a
+		IF = { 
+			LIMIT = { tag = FRA }
+			set_temp_variable = { prestige_score_temp = 5 }
+			add_prestige_score = yes
+		}
+		ELSE_IF = { 
+			LIMIT = { tag = SPR }
+			set_temp_variable = { prestige_score_temp = -5 }
+			add_prestige_score = yes
+		}
+	}
+}
+
+country_event = {
+	id = scriptedpeacedeals.6
+	title = scriptedpeacedeals.6.t
+	desc = scriptedpeacedeals.6.d
+	
+	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	picture = GFX_country_event_borneo_01.dds
+	
+	immediate = {
+		hidden_effect = {
+			IF = { 
+				LIMIT = { tag = SPR }
+				white_peace = FRA
+				country_event = SPRIndia.10
+			}
+		}
+	}
+	
+	option = {
+		name = scriptedpeacedeals.6.a
+		IF = { 
+			LIMIT = { tag = FRA }
+			set_temp_variable = { prestige_score_temp = -10 }
+			add_prestige_score = yes
+		}
+		ELSE_IF = { 
+			LIMIT = { tag = SPR }
+			set_temp_variable = { prestige_score_temp = 10 }
+			add_prestige_score = yes
+		}
+	}
+}
+
+country_event = {
+	id = scriptedpeacedeals.7
+	title = scriptedpeacedeals.7.t
+	desc = scriptedpeacedeals.7.d
+	
+	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	picture = GFX_country_event_borneo_01.dds
+	
+	immediate = {
+		hidden_effect = {
+			IF = { 
+				LIMIT = { tag = CCH }
+				white_peace = FRA
+				white_peace = MEX
+			}
+			ELSE_IF = { 
+				LIMIT = { tag = FRA }
+				country_event = FRALouisiana.5
+				clr_global_flag = mexicojoinstoo
+			}
+		}
+	}
+	
+	option = {
+		name = scriptedpeacedeals.7.a
+		IF = { 
+			LIMIT = { tag = FRA }
+			set_temp_variable = { prestige_score_temp = 1 }
+			add_prestige_score = yes
+		}
+		ELSE_IF = { 
+			LIMIT = { tag = MEX }
+			set_temp_variable = { prestige_score_temp = 2 }
+			add_prestige_score = yes
+		}
+	}
+}
+
+country_event = {
+	id = scriptedpeacedeals.8
+	title = scriptedpeacedeals.8.t
+	desc = scriptedpeacedeals.8.d
+	
+	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	picture = GFX_country_event_borneo_01.dds
+	
+	immediate = {
+		hidden_effect = {
+			IF = { 
+				LIMIT = { tag = LOU }
+				annex_country = { target = CCH }
+				clr_global_flag = mexicodoesnotjoin
+			}
+		}
+	}
+	
+	option = {
+		name = scriptedpeacedeals.8.a
+		IF = { 
+			LIMIT = { tag = FRA }
+			set_temp_variable = { prestige_score_temp = 2 }
+			add_prestige_score = yes
+		}
+	}
+}
+
+country_event = {
+	id = scriptedpeacedeals.9
+	title = scriptedpeacedeals.9.t
+	desc = scriptedpeacedeals.9.d
+	
+	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	picture = GFX_country_event_borneo_01.dds
+	
+	immediate = {
+		hidden_effect = {
+			IF = { 
+				LIMIT = { tag = FRA }
+				white_peace = LAK
+				clr_global_flag = FRA_Lak_war
+				if = {
+					LIMIT = { 
+						NEN = {
+							has_war_with = CHR
+						}
+					}
+					NEN = {
+						country_event = LAKNewengland.2
+					}
+				}
+			}
+			ELSE_IF = { 
+				LIMIT = { tag = LAK }
+				dismantle_faction = yes
+			}
+			ELSE_IF = { 
+				LIMIT = { tag = LOU }
+				annex_country = { target = LAK }
+			}
+		}
+	}
+	
+	option = {
+		name = scriptedpeacedeals.9.a
+	}
+}
+
+country_event = {
+	id = scriptedpeacedeals.10
+	title = scriptedpeacedeals.10.t
+	desc = scriptedpeacedeals.10.d
+	
+	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	picture = GFX_country_event_borneo_01.dds
+	
+	immediate = {
+		hidden_effect = {
+			IF = { 
+				LIMIT = { tag = FRA }
+				white_peace = LAK
+				clr_global_flag = FRA_Lak_war
+				if = {
+					LIMIT = { 
+						NEN = {
+							has_war_with = CHR
+						}
+					}
+					NEN = {
+						white_peace = LAK
+					}
+				}
+			}
+			ELSE_IF = { 
+				LIMIT = { tag = LAK }
+				dismantle_faction = yes
+			}
+		}
+	}
+	
+	option = {
+		name = scriptedpeacedeals.10.a
+		IF = { 
+			LIMIT = { tag = LAK }
+			set_temp_variable = { prestige_score_temp = 3 }
+			add_prestige_score = yes
+		}
+		IF = { 
+			LIMIT = { tag = FRA }
+			set_temp_variable = { prestige_score_temp = -10 }
+			add_prestige_score = yes
+		}
+	}
+}
+
+country_event = {
+	id = scriptedpeacedeals.11
+	title = scriptedpeacedeals.11.t
+	desc = scriptedpeacedeals.11.d
+	
+	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	picture = GFX_country_event_borneo_01.dds
+	
+	immediate = {
+		hidden_effect = {
+			IF = { 
+				LIMIT = { tag = FRA }
+				annex_country = { target = VIJ }
+				clr_country_flag = FRA_invasion_VIJ
+			}
+		}
+	}
+	
+	option = {
+		name = scriptedpeacedeals.11.a
+		IF = { 
+			LIMIT = { tag = FRA }
+			set_temp_variable = { prestige_score_temp = 1 }
+			add_prestige_score = yes
+		}
+	}
+}
+
+country_event = {
+	id = scriptedpeacedeals.12
+	title = scriptedpeacedeals.12.t
+	desc = scriptedpeacedeals.12.d
+	
+	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	picture = GFX_country_event_borneo_01.dds
+	
+	immediate = {
+		hidden_effect = {
+			IF = { 
+				LIMIT = { tag = FRA }
+				annex_country = { target = VIJ }
+				clr_country_flag = FRA_VIJ_second_war
+			}
+		}
+	}
+	
+	option = {
+		name = scriptedpeacedeals.12.a
+		IF = { 
+			LIMIT = { tag = FRA }
+			set_temp_variable = { prestige_score_temp = 2 }
+			add_prestige_score = yes
+		}
+	}
+}
+
+country_event = {
+	id = scriptedpeacedeals.13
+	title = scriptedpeacedeals.13.t
+	desc = scriptedpeacedeals.13.d
+	
+	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	picture = GFX_country_event_borneo_01.dds
+	
+	immediate = {
+		hidden_effect = {
+			IF = { 
+				LIMIT = {
+					is_faction_leader = yes
+					OR = {
+						tag = AQU
+						tag = VOS
+						tag = LOR
+						tag = BRI
+						tag = PRO
+						tag = NRM
+						tag = BUR
+					}
+				}
+				white_peace = FRA
+				every_country = {
+					LIMIT = { OR = { tag = PREV is_in_faction_with = PREV} }
+					every_owned_state = {
+						LIMIT = { is_core_of = FRA }
+						FRA = {
+							transfer_state = PREV
+						}
+					}
+				}
+			}
+			ELSE_IF = { 
+				LIMIT = { tag = FRA }
+				remove_ideas = fra_offensive_measures1
+				remove_ideas = fra_offensive_measures
+				clr_global_flag = fra_noble_revolt
+			}
+		}
+	}
+	
+	option = {
+		name = scriptedpeacedeals.13.a
+		IF = { 
+			LIMIT = { tag = FRA }
+			set_temp_variable = { prestige_score_temp = 4 }
+			add_prestige_score = yes
+		}
+	}
+}
+
+country_event = {
+	id = scriptedpeacedeals.14
+	title = scriptedpeacedeals.14.t
+	desc = scriptedpeacedeals.14.d
+	
+	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	picture = GFX_country_event_borneo_01.dds
+	
+	immediate = {
+		hidden_effect = {
+			IF = { 
+				LIMIT = {
+					is_faction_leader = yes
+					OR = {
+						tag = AQU
+						tag = VOS
+						tag = LOR
+						tag = BRI
+						tag = PRO
+						tag = NRM
+						tag = BUR
+					}
+				}
+				white_peace = FRA
+				dismantle_faction = yes
+			}
+			ELSE_IF = { 
+				LIMIT = { tag = FRA }
+				remove_ideas = fra_offensive_measures1
+				remove_ideas = fra_offensive_measures
+				clr_global_flag = fra_noble_revolt
+			}
+		}
+	}
+	
+	option = {
+		name = scriptedpeacedeals.14.a
+		IF = { 
+			LIMIT = { tag = FRA }
+			set_temp_variable = { prestige_score_temp = -5 }
+			add_prestige_score = yes
+		}
+	}
+}
+
+country_event = {
+	id = scriptedpeacedeals.15
+	title = scriptedpeacedeals.15.t
+	desc = scriptedpeacedeals.15.d
+	
+	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	picture = GFX_country_event_borneo_01.dds
+	
+	immediate = {
+		hidden_effect = {
+			IF = { 
+				LIMIT = { tag = FRA }
+				white_peace = MYS
+				IF = {
+					LIMIT = { has_completed_focus = FRA_march_to_mangalore }
+					annex_country = { target = MYS }
+				}
+				else = {
+					IND = {
+						annex_country = { target = MYS }
+					}
+				}
+				clr_country_flag = FRA_MYS_WAR
+				set_country_flag = FRA_MYS_WAR_WON
+			}
+		}
+	}
+	
+	option = {
+		name = scriptedpeacedeals.15.a
+		IF = { 
+			LIMIT = { tag = FRA }
+			set_temp_variable = { prestige_score_temp = 2 }
+			add_prestige_score = yes
+		}
+	}
+}
+
+country_event = {
+	id = scriptedpeacedeals.16
+	title = scriptedpeacedeals.16.t
+	desc = scriptedpeacedeals.16.d
+	
+	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	picture = GFX_country_event_borneo_01.dds
+	
+	immediate = {
+		hidden_effect = {
+			IF = { 
+				LIMIT = { tag = MYS }
+				white_peace = FRA
+				white_peace = IND
+			}
+			ELSE_IF = { 
+				LIMIT = { tag = FRA }
+				clr_country_flag = FRA_MYS_WAR
+				add_stability = -0.05
+			}
+		}
+	}
+	
+	option = {
+		name = scriptedpeacedeals.16.a
+		IF = { 
+			LIMIT = { tag = FRA }
+			set_temp_variable = { prestige_score_temp = -3 }
+			add_prestige_score = yes
+		}
+	}
+}
+
+country_event = {
+	id = scriptedpeacedeals.17
+	title = scriptedpeacedeals.17.t
+	desc = scriptedpeacedeals.17.d
+	
+	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	picture = GFX_country_event_borneo_01.dds
+	
+	immediate = {
+		hidden_effect = {
+			IF = { 
+				LIMIT = { tag = MAR }
+				white_peace = FRA
+				white_peace = IND
+			}
+			ELSE_IF = { 
+				LIMIT = { tag = IND }
+				transfer_state = 429
+			}
+			ELSE_IF = { 
+				LIMIT = { tag = FRA }
+				clr_country_flag = FRA_MAR_WAR
+			}
+		}
+	}
+	
+	option = {
+		name = scriptedpeacedeals.17.a
+		IF = { 
+			LIMIT = { tag = FRA }
+			set_temp_variable = { prestige_score_temp = 6 }
+			add_prestige_score = yes
+		}
+	}
+}
+
+country_event = {
+	id = scriptedpeacedeals.18
+	title = scriptedpeacedeals.18.t
+	desc = scriptedpeacedeals.18.d
+	
+	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	picture = GFX_country_event_borneo_01.dds
+	
+	immediate = {
+		hidden_effect = {
+			IF = { 
+				LIMIT = { tag = MAR }
+				white_peace = FRA
+				white_peace = IND
+			}
+			ELSE_IF = { 
+				LIMIT = { tag = FRA }
+				clr_country_flag = FRA_MAR_WAR
+				add_stability = -0.10
+			}
+		}
+	}
+	
+	option = {
+		name = scriptedpeacedeals.18.a
+		IF = { 
+			LIMIT = { tag = FRA }
+			set_temp_variable = { prestige_score_temp = -3 }
+			add_prestige_score = yes
+		}
+	}
+}
+
+country_event = {
+	id = scriptedpeacedeals.19
+	title = scriptedpeacedeals.19.t
+	desc = scriptedpeacedeals.19.d
+	
+	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	picture = GFX_country_event_borneo_01.dds
+	
+	immediate = {
+		hidden_effect = {
+			IF = { 
+				LIMIT = { tag = FRA }
+				white_peace = SIA
+				country_event = FRADecentralizedInterventionist.1
+			}
+		}
+	}
+	
+	option = {
+		name = scriptedpeacedeals.19.a
+		IF = { 
+			LIMIT = { tag = FRA }
+			set_temp_variable = { prestige_score_temp = 3 }
+			add_prestige_score = yes
+		}
+	}
+}

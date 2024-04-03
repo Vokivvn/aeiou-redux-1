@@ -1,0 +1,25 @@
+
+state={
+	id=437
+	name="STATE_437" # Indore
+	manpower = 8402500
+
+	state_category = rural
+
+	history={
+		owner = MAR
+		add_core_of = MAR
+		victory_points = {
+			12080 1 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+
+	}
+
+	provinces={
+		1199 2092 2105 4106 8076 10816 11995 12080 12743 12829
+	}
+}

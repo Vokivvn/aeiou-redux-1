@@ -1,0 +1,156 @@
+﻿capital = 41
+
+oob = "SPR_1886"
+
+set_research_slots = 3
+
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+	melee = 1
+	basic_cavalry = 1
+	melee_improvements = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	grenade = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	militia = 1
+}
+
+add_ideas = {
+    spr_idea_backwards_economy
+	spr_idea_strong_regional_fueros
+	spr_idea_religious_fanaticism
+}
+
+if = {
+	limit = { has_dlc = "Together for Victory" }
+	set_autonomy = {
+		target = YUC
+		autonomy_state =  autonomy_colony
+	}
+	set_autonomy = {
+		target = SPN
+		autonomy_state =  autonomy_colony
+	}
+	set_autonomy = {
+		target = SPW
+		autonomy_state =  autonomy_colony
+	}
+	set_autonomy = {
+		target = SPE
+		autonomy_state =  autonomy_colony
+	}
+	else = {
+		puppet = YUC
+		puppet = SPN
+		puppet = SPW
+		puppet = SPE
+	}
+}
+
+set_politics = {
+	ruling_party = absolutist
+	elections_allowed = no
+}
+set_popularities = {
+	absolutist = 70
+	theocratic = 20
+	conservative = 8
+	liberal = 1
+	revolutionary = 1
+	
+}
+
+set_convoys = 500 
+set_stability = 0.5
+
+create_country_leader = {
+	name = "Felipe VI"
+	desc = "SPR_LEADER_DESC_FELIPE_VI"
+	picture = "Portrait_SPR_Felipe_VI.dds"
+	expire = "1965.1.1"
+	ideology = absolutist_radical
+	traits = {
+		personal_trait_zealot
+	}
+}
+
+create_country_leader = {
+	name = "Paul Lafargue"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = revolutionary_radical
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Paul Lafargue"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = weitlingist_moderate
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Luis Martín García"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = theocratic_radical
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "José J. Alvarez de Toledo"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = conservative_radical
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Antonio Pirala y Criado"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = liberal_moderate
+	traits = {
+		personal_trait_zealot
+	}
+}
+
+create_field_marshal = {
+	name = "Pedro de Monge"
+	picture = "Portrait_SPR_Pedro_de_Monge.dds"
+	traits = { defensive_doctrine }
+	id = 18511
+	skill = 3
+    attack_skill = 2
+    defense_skill = 3
+    planning_skill = 2
+    logistics_skill = 1
+}
+set_variable = { hog_title = 2 }
+set_variable = { hog_name = 2000 }
+set_variable = { hog_loyalty = 0.9125 }
+set_variable = { hog_exp = 37 }
+set_variable = { hog_political_skill = 0.025 }
+set_variable = { hog_unity_skill = 0.025 }
+set_variable = { hog_industrial_skill = 0 }
+set_variable = { hog_military_skill = 0.025 }
+set_country_flag = has_hog
+
+add_to_array = { national_religion_array =  2 }
+set_variable = { hog_party = 2 }
+
+add_to_array = { relic_storage_array = 1 }

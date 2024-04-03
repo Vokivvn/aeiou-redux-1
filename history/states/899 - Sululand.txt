@@ -1,0 +1,23 @@
+state={
+	id=899
+	name="STATE_899" 
+	manpower = 317175
+	resources={
+		wood=1
+	}
+	
+	state_category = pastoral
+
+	history={
+		owner = SPE
+		add_core_of = SPE
+		buildings = {
+			infrastructure = 2
+		}
+		
+	}
+
+	provinces={
+	    4282 10143 10199 10240 1306 12228 4338 12186 7358 12243
+	}
+}

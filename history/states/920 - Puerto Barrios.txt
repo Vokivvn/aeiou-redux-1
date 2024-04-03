@@ -1,0 +1,30 @@
+
+state={
+	id=920
+	name="STATE_920"
+	manpower = 15000
+	resources={
+	}
+	
+	state_category = town
+
+	history={
+		owner = GUA
+		buildings = {
+			infrastructure = 3
+			13240 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = GUA
+		victory_points = {
+			13240 1
+		}
+
+	}
+
+	provinces={
+	 13240
+	}
+	
+}

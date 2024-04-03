@@ -1,0 +1,50 @@
+division_template = {
+	name = "Royal Saudi Guard Battalion"
+
+	division_names_group = SAU_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+		line_infantry = { x = 0 y = 4 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Saudi Cavalry Division"
+
+	division_names_group = SAU_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Saudi Warrior Brigade"
+
+	division_names_group = SAU_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Royal Saudi Cavalry Division"
+		location = 8004
+		division_template = "Royal Saudi Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Saudi Warrior Brigade"
+		location = 12727
+		division_template = "Royal Saudi Warrior Brigade"
+		start_experience_factor = 0.3
+	}
+}

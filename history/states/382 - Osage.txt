@@ -1,0 +1,27 @@
+
+state={
+	id=382
+	name="STATE_382"
+	manpower = 7829
+	resources={
+		wood=1
+	}
+	
+	state_category = rural
+
+	history={
+		owner = OSG
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = OSG
+		victory_points = {
+			1827 5 
+		}
+
+	}
+
+	provinces={
+	 1809 1827 3869 7780 10588 11772 12642 4760 4723 10640 12561
+	}
+}

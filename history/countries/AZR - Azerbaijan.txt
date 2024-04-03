@@ -1,0 +1,22 @@
+﻿capital = 229 #Baku
+
+#oob = "AZR_1936"
+
+set_research_slots = 3
+
+# Starting tech
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+}
+
+set_politics = {
+	ruling_party = conservative
+	elections_allowed = no
+}
+
+set_popularities = {
+	conservative = 100
+}
+
+

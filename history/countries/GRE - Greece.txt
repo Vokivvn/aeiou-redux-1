@@ -1,0 +1,41 @@
+﻿capital = 341
+
+oob = "GRE_1886"
+
+set_research_slots = 3
+
+add_ideas = {
+	limited_conscription
+}
+
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+	melee = 1
+	basic_cavalry = 1
+}
+
+set_convoys = 10
+
+set_politics = {
+	ruling_party = absolutist
+	elections_allowed = no 
+}
+set_popularities = {
+	absolutist = 100
+}
+
+add_to_array = { national_religion_array =  1 }
+
+set_stability = 0.75
+
+create_country_leader = {
+	name = "Otto I"
+	desc = "GRE_LEADER_DESC_OTTO_I"
+	picture = "Portrait_GRE_Otto_I.dds"
+	expire = "1965.1.1"
+	ideology = absolutist_moderate
+	traits = {
+		personal_trait_hedonist
+	}
+}

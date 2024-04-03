@@ -1,0 +1,155 @@
+SpriteTypes = {                   
+	SpriteType = {
+		name = "Portrait_AUS_Carl_Menger"
+		texturefile = "gfx/leaders/AUS/Portrait_AUS_Carl_Menger.dds"
+	}
+	SpriteType = {
+		name = "Portrait_SPR_Pedro_de_Zuniga"
+		texturefile = "gfx/leaders/SPR/Portrait_SPR_Pedro_de_Zuniga.dds"
+	}
+	SpriteType = {
+		name = "Portrait_SPR_Pascual_Cucala"
+		texturefile = "gfx/leaders/SPR/Portrait_SPR_Pascual_Cucala.dds"
+	}
+	SpriteType = {
+		name = "Portrait_SPR_Anselmo_Lorenzo"
+		texturefile = "gfx/leaders/SPR/Portrait_SPR_Anselmo_Lorenzo.dds"
+	}
+	SpriteType = {
+		name = "Portrait_SPR_Manuel_Ruiz_Zorrilla"
+		texturefile = "gfx/leaders/SPR/Portrait_SPR_Manuel_Ruiz_Zorrilla.dds"
+	}
+	SpriteType = {
+		name = "Portrait_SPR_Marquis_Urbano_Feijoo"
+		texturefile = "gfx/leaders/SPR/Portrait_SPR_Marquis_Urbano_Feijoo.dds"
+	}
+	SpriteType = {
+		name = "Portrait_GUA_Juan_Barrundia"
+		texturefile = "gfx/leaders/GUA/Portrait_GUA_Juan_Barrundia.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_Europe1"
+		texturefile = "gfx/leaders/Europe/Portrait_Generic_Europe1.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_Europe2"
+		texturefile = "gfx/leaders/Europe/Portrait_Generic_Europe2.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_Europe3"
+		texturefile = "gfx/leaders/Europe/Portrait_Generic_Europe3.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_Europe4"
+		texturefile = "gfx/leaders/Europe/Portrait_Generic_Europe4.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_Europe5"
+		texturefile = "gfx/leaders/Europe/Portrait_Generic_Europe5.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_Europe6"
+		texturefile = "gfx/leaders/Europe/Portrait_Generic_Europe6.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_Europe7"
+		texturefile = "gfx/leaders/Europe/Portrait_Generic_Europe7.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_Europe8"
+		texturefile = "gfx/leaders/Europe/Portrait_Generic_Europe8.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_Europe9"
+		texturefile = "gfx/leaders/Europe/Portrait_Generic_Europe9.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_Europe10"
+		texturefile = "gfx/leaders/Europe/Portrait_Generic_Europe10.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_Europe11"
+		texturefile = "gfx/leaders/Europe/Portrait_Generic_Europe11.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_Europe12"
+		texturefile = "gfx/leaders/Europe/Portrait_Generic_Europe12.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_Europe13"
+		texturefile = "gfx/leaders/Europe/Portrait_Generic_Europe13.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_Europe14"
+		texturefile = "gfx/leaders/Europe/Portrait_Generic_Europe14.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_Arabia1"
+		texturefile = "gfx/leaders/Arabia/Portrait_Generic_Arabia1.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_Arabia2"
+		texturefile = "gfx/leaders/Arabia/Portrait_Generic_Arabia2.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_Arabia3"
+		texturefile = "gfx/leaders/Arabia/Portrait_Generic_Arabia3.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_Arabia4"
+		texturefile = "gfx/leaders/Arabia/Portrait_Generic_Arabia4.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_Arabia5"
+		texturefile = "gfx/leaders/Arabia/Portrait_Generic_Arabia5.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_Africa1"
+		texturefile = "gfx/leaders/Africa/Portrait_Generic_Africa1.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_Africa2"
+		texturefile = "gfx/leaders/Africa/Portrait_Generic_Africa2.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_Africa3"
+		texturefile = "gfx/leaders/Africa/Portrait_Generic_Africa3.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_Africa4"
+		texturefile = "gfx/leaders/Africa/Portrait_Generic_Africa4.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_Africa5"
+		texturefile = "gfx/leaders/Africa/Portrait_Generic_Africa5.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_Africa6"
+		texturefile = "gfx/leaders/Africa/Portrait_Generic_Africa6.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_North_America1"
+		texturefile = "gfx/leaders/NorthAmerica/Portrait_Generic_North_America1.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_North_America2"
+		texturefile = "gfx/leaders/NorthAmerica/Portrait_Generic_North_America2.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_North_America3"
+		texturefile = "gfx/leaders/NorthAmerica/Portrait_Generic_North_America3.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_North_America4"
+		texturefile = "gfx/leaders/NorthAmerica/Portrait_Generic_North_America4.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_generic_North_America5"
+		texturefile = "gfx/leaders/NorthAmerica/Portrait_Generic_North_America5.dds"
+	}
+	SpriteType = {
+		name = "Portrait_HOG_none"
+		texturefile = "gfx/leaders/leader_unknown.dds"
+	}
+}
+

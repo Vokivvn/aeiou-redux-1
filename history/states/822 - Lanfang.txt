@@ -1,0 +1,31 @@
+
+state={
+	id=822
+	name="STATE_822" 
+	manpower = 181790
+	
+	state_category = rural
+
+	resources={
+		wood=2
+	}
+
+	history={
+		owner = LAN
+		buildings = {
+			infrastructure = 2
+			1316 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = LAN
+		victory_points = {
+			1316 1
+		}
+
+	}
+
+	provinces={
+		1316 4335 10282 
+	}
+}

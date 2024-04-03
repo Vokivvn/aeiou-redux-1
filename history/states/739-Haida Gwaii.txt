@@ -1,0 +1,29 @@
+state={
+	id=739
+	name="STATE_739"
+
+	history={
+		owner = GWA
+		buildings = {
+			infrastructure = 1
+
+			1869 = {
+				naval_base = 1
+
+			}
+			10548 = {
+				naval_base = 1
+			}
+
+
+		}
+		add_core_of = GWA
+	}
+
+	provinces={
+		1869 10548 1799
+	}
+	manpower=3005
+	buildings_max_level_factor=1	
+	state_category=small_island
+}

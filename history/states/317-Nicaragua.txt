@@ -1,0 +1,26 @@
+state={
+	id=317
+	name="STATE_317"
+	resources={
+		wood=2
+	}
+
+	state_category = rural
+
+	history={
+		owner = GUA
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+
+		}
+		add_core_of = GUA
+
+	}
+
+	provinces={
+		1988 2075 10728 13246 13245
+	}
+	manpower=209920
+	buildings_max_level_factor=1.000
+}

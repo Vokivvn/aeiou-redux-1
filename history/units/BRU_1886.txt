@@ -1,0 +1,53 @@
+division_template = {
+	name = "Tribal Bruneian Guard Battalion"
+
+	division_names_group = BRU_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Tribal Bruneian Warrior Brigade"
+
+	division_names_group = BRU_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Tribal Bruneian Guard Battalion"
+		location = 7371
+		division_template = "Tribal Bruneian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Tribal Bruneian Warrior Brigade"
+		location = 1208
+		division_template = "Tribal Bruneian Warrior Brigade"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Tribal Bruneian Warrior Brigade"
+		location = 7443
+		division_template = "Tribal Bruneian Warrior Brigade"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3rd Tribal Bruneian Warrior Brigade"
+		location = 5176
+		division_template = "Tribal Bruneian Warrior Brigade"
+		start_experience_factor = 0.3
+	}
+}

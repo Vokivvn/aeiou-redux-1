@@ -1,0 +1,540 @@
+
+focus_tree = {
+	id = Spain_french_puppet
+	
+	country = {
+		factor = 0
+		
+	}
+	default = no
+	continuous_focus_position = { x = 50 y = 2000 }
+
+
+	###########
+	#  Start  #
+	###########
+	
+	focus = { 
+		id = SPR_under_french_heel
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		cost = 50
+		
+		x = 7
+		y = 0
+		
+		completion_reward = {
+			add_stability = -0.05
+		}
+	}
+	
+	#Politics
+	
+	focus = { 
+		id = SPR_drastic_reforms
+		icon = GFX_SPR_regency_legitimized_government
+		cost = 40
+		
+		prerequisite = { focus = SPR_under_french_heel }
+		relative_position_id = SPR_under_french_heel
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			country_event = SPREnrique.4
+		}
+	}
+	
+	focus = { 
+		id = SPR_everyone_gets_a_chance
+		icon = GFX_AUS_focus_Promises_People
+		cost = 10
+		
+		available = {
+			always = no
+		}
+		
+		prerequisite = { focus = SPR_drastic_reforms }
+		relative_position_id = SPR_drastic_reforms
+		mutually_exclusive = { focus = SPR_cortes_assemble }
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_stability = -0.05
+		}
+	}
+	
+	focus = { 
+		id = SPR_cortes_assemble
+		icon = GFX_generic_noble_support
+		cost = 10
+		
+		available = {
+			always = no
+		}
+		
+		prerequisite = { focus = SPR_drastic_reforms }
+		relative_position_id = SPR_drastic_reforms
+		mutually_exclusive = { focus = SPR_everyone_gets_a_chance }
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+		}
+	}
+	
+	focus = { 
+		id = SPR_election_simulacrum
+		icon = GFX_focus_generic_self_management
+		cost = 40
+		
+		prerequisite = { focus = SPR_everyone_gets_a_chance focus = SPR_cortes_assemble }
+		relative_position_id = SPR_everyone_gets_a_chance
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			country_event = SPREnrique.5
+		}
+	}
+	
+	focus = { 
+		id = SPR_underground_liberal
+		icon = GFX_AUS_focus_Present_Democracy
+		cost = 10
+		
+		available = {
+			always = no
+		}
+		
+		prerequisite = { focus = SPR_election_simulacrum }
+		relative_position_id = SPR_election_simulacrum
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = liberal
+				popularity = 0.15
+			}
+			remove_hog = yes
+			set_temp_variable = { hog_name = 2002 }
+			set_variable = { hog_name = hog_name }
+			custom_effect_tooltip = NEW_HOG_TOOLTIP
+			set_variable = { hog_party = 4 }
+			set_variable = { hog_loyalty = 0.6500 }
+			set_variable = { hog_exp = 0 }
+			set_variable = { hog_political_skill = 0 }
+			set_variable = { hog_unity_skill = 0.025 }
+			set_variable = { hog_industrial_skill = 0 }
+			set_variable = { hog_military_skill = 0 }
+			set_country_flag = has_hog
+		}
+	}
+	
+	focus = { 
+		id = SPR_heirs_of_absolutism
+		icon = GFX_focus_generic_feudalisms_stand
+		cost = 10
+		
+		available = {
+			always = no
+		}
+		
+		prerequisite = { focus = SPR_election_simulacrum }
+		relative_position_id = SPR_election_simulacrum
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = conservative
+				popularity = 0.25
+			}
+			set_temp_variable = { hog_name = 2003 }
+			set_variable = { hog_name = hog_name }
+			custom_effect_tooltip = NEW_HOG_TOOLTIP
+			set_variable = { hog_party = 3 }
+			set_variable = { hog_loyalty = 0.7500 }
+			set_variable = { hog_exp = 0 }
+			set_variable = { hog_political_skill = 0 }
+			set_variable = { hog_unity_skill = 0 }
+			set_variable = { hog_industrial_skill = 0 }
+			set_variable = { hog_military_skill = 0.025 }
+			set_country_flag = has_hog
+		}
+	}
+	
+	focus = { 
+		id = SPR_god_and_serfdom_under_one_banner
+		icon = GFX_SPR_Religious_Emancipation
+		cost = 10
+		
+		available = {
+			always = no
+		}
+		
+		prerequisite = { focus = SPR_election_simulacrum }
+		relative_position_id = SPR_election_simulacrum
+	
+		x = 3
+		y = 1
+		
+		completion_reward = {
+			add_stability = -0.10
+			add_popularity = {
+				ideology = weitlingist
+				popularity = 0.10
+			}
+			add_popularity = {
+				ideology = revolutionary
+				popularity = 0.05
+			}
+			set_temp_variable = { hog_name = 2004 }
+			set_variable = { hog_name = hog_name }
+			custom_effect_tooltip = NEW_HOG_TOOLTIP
+			set_variable = { hog_party = 8 }
+			set_variable = { hog_loyalty = 0.5000 }
+			set_variable = { hog_exp = 0 }
+			set_variable = { hog_political_skill = 0.025 }
+			set_variable = { hog_unity_skill = 0 }
+			set_variable = { hog_industrial_skill = 0 }
+			set_variable = { hog_military_skill = 0 }
+			set_country_flag = has_hog
+		}
+	}
+	
+	#CRRA
+	
+	focus = { 
+		id = SPR_form_crra
+		icon = GFX_focus_spa_save_the_alcazar
+		cost = 40
+		
+		available = {
+			has_completed_focus = SPR_under_french_heel
+		}
+	
+		x = 2
+		y = 0
+		
+		completion_reward = {
+			add_political_power = 100
+			swap_ideas = {
+				add_idea = spr_idea_CRRA
+				remove_idea = spr_idea_ongoing_reconstruction
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_plea_french_economic_aid
+		icon = GFX_focus_generic_concessions
+		cost = 40
+		
+		prerequisite = { focus = SPR_form_crra }
+		relative_position_id = SPR_form_crra
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = spr_idea_CRRA1
+				remove_idea = spr_idea_CRRA
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_nobility_on_demand
+		icon = GFX_AUS_focus_Threats_Actions
+		cost = 40
+		
+		prerequisite = { focus = SPR_plea_french_economic_aid }
+		relative_position_id = SPR_plea_french_economic_aid
+	
+		x = -2
+		y = 1
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = spr_idea_CRRA2001 }
+				swap_ideas = {
+					remove_idea = spr_idea_CRRA2001
+					add_idea = spr_idea_CRRA2101
+				}
+			} else = {
+				if = {
+					limit = { has_idea = spr_idea_CRRA2 }
+					swap_ideas = {
+						remove_idea = spr_idea_CRRA2
+						add_idea = spr_idea_CRRA21
+					}
+				} else = {
+					swap_ideas = {
+						remove_idea = spr_idea_CRRA1
+						add_idea = spr_idea_CRRA11
+					}
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_relax_serf_taxation
+		icon = GFX_focus_mex_privatisation
+		cost = 40
+		
+		prerequisite = { focus = SPR_plea_french_economic_aid }
+		relative_position_id = SPR_plea_french_economic_aid
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = spr_idea_CRRA11 }
+				swap_ideas = {
+					remove_idea = spr_idea_CRRA11
+					add_idea = spr_idea_CRRA21
+				}
+			} else = {
+				swap_ideas = {
+					remove_idea = spr_idea_CRRA1
+					add_idea = spr_idea_CRRA2
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_allow_slow_decline_of_institutions
+		icon = GFX_SPR_wealthy_universities
+		cost = 40
+		
+		prerequisite = { focus = SPR_nobility_on_demand }
+		prerequisite = { focus = SPR_relax_serf_taxation }
+		relative_position_id = SPR_nobility_on_demand
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_political_power = -100
+			if = {
+				limit = { has_idea = spr_idea_CRRA2101 }
+				swap_ideas = {
+					remove_idea = spr_idea_CRRA2101
+					add_idea = spr_idea_CRRA2111
+				}
+			} else = {
+				swap_ideas = {
+					remove_idea = spr_idea_CRRA21
+					add_idea = spr_idea_CRRA211
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_blind_eye_to_burgeois
+		icon = GFX_SPR_alienated_peasants
+		cost = 40
+		
+		prerequisite = { focus = SPR_everyone_gets_a_chance focus = SPR_cortes_assemble }
+		prerequisite = { focus = SPR_relax_serf_taxation }
+		relative_position_id = SPR_relax_serf_taxation
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = spr_idea_CRRA211 }
+				swap_ideas = {
+					remove_idea = spr_idea_CRRA211
+					add_idea = spr_idea_CRRA2111
+				}
+			} else = {
+				if = {
+					limit = { has_idea = spr_idea_CRRA21 }
+					swap_ideas = {
+						remove_idea = spr_idea_CRRA21
+						add_idea = spr_idea_CRRA2101
+					}
+				} else = {
+					swap_ideas = {
+						remove_idea = spr_idea_CRRA2
+						add_idea = spr_idea_CRRA2001
+					}
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_crush_corporations_for_economic_reasons
+		icon = GFX_goal_generic_political_pressure
+		cost = 40
+		
+		prerequisite = { focus = SPR_allow_slow_decline_of_institutions }
+		prerequisite = { focus = SPR_blind_eye_to_burgeois }
+		relative_position_id = SPR_allow_slow_decline_of_institutions
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_political_power = 50
+			swap_ideas = {
+				remove_idea = spr_idea_CRRA2111
+				add_idea = spr_idea_CRRA3
+			}
+		}
+	}
+	
+	#France
+	
+	focus = { 
+		id = SPR_franco_spanish_pact
+		icon = GFX_focus_chi_reach_out_to_france
+		cost = 30
+		
+		prerequisite = { focus = SPR_crush_corporations_for_economic_reasons }
+		relative_position_id = SPR_crush_corporations_for_economic_reasons
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			diplomatic_relation = { country = FRA relation = non_aggression_pact }
+			FRA = {
+				diplomatic_relation = { country = SPR relation = non_aggression_pact }
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_combined_armament_dealings
+		icon = GFX_goal_generic_small_arms
+		cost = 30
+		
+		prerequisite = { focus = SPR_crush_corporations_for_economic_reasons }
+		relative_position_id = SPR_crush_corporations_for_economic_reasons
+	
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			add_ideas = spr_idea_armament_dealings
+			FRA = {
+				add_ideas = spr_idea_armament_dealings
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_arsenal_of_depositism
+		icon = GFX_SPR_The_regency_shall_live_on
+		cost = 50
+		
+		prerequisite = { focus = SPR_franco_spanish_pact }
+		prerequisite = { focus = SPR_combined_armament_dealings }
+		relative_position_id = SPR_franco_spanish_pact
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			FRA = {
+				set_autonomy = {
+					target = SPR
+					autonomy_state = autonomy_free
+				}
+				create_faction = FRA_ENTENTE_ALLIANCE_FACTION
+				add_to_faction = SPR
+			}
+		}
+	}
+	
+	#Spain
+	
+	focus = { 
+		id = SPR_anti_radical_clericalist_propaganda
+		icon = GFX_SPR_anticlerical_terrorism
+		cost = 30
+		
+		prerequisite = { focus = SPR_crush_corporations_for_economic_reasons }
+		relative_position_id = SPR_crush_corporations_for_economic_reasons
+	
+		x = 4
+		y = 1
+		
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.10
+		}
+	}
+	
+	focus = { 
+		id = SPR_educate_our_future
+		icon = GFX_SPR_boost_noble_scholarships
+		cost = 30
+		
+		prerequisite = { focus = SPR_crush_corporations_for_economic_reasons }
+		relative_position_id = SPR_crush_corporations_for_economic_reasons
+	
+		x = 6
+		y = 1
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = spr_idea_CRRA3
+				add_idea = spr_idea_CRRA4
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_table_turns
+		icon = GFX_focus_spa_supremacy_of_the_communion
+		cost = 40
+		
+		prerequisite = { focus = SPR_anti_radical_clericalist_propaganda }
+		prerequisite = { focus = SPR_educate_our_future }
+		relative_position_id = SPR_anti_radical_clericalist_propaganda
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+		}
+	}
+	
+	#Last
+	
+	focus = { 
+		id = SPR_beret_of_enlightenment
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		cost = 50
+		
+		prerequisite = { focus = SPR_arsenal_of_depositism }
+		prerequisite = { focus = SPR_table_turns }
+		relative_position_id = SPR_arsenal_of_depositism
+	
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			remove_ideas = spr_idea_CRRA4
+		}
+	}
+}	

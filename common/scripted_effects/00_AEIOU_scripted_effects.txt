@@ -1,0 +1,1290 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+FRA_noble_support = {
+	add_to_variable = { noble_support = noble_support_temp }
+	custom_effect_tooltip = NOBLE_SUPPORT_CHANGE
+	clamp_variable = {
+		var = noble_support
+		min = 0
+		max = 1
+	}
+	hidden_effect = {
+		if = {
+			LIMIT = { check_variable = { noble_support < 0.2 } NOT = { has_idea = fra_noble_support_very_low } }
+			FRA_clr_noble_ideas = yes
+			add_ideas = fra_noble_support_very_low
+		}
+		else_if = {
+			LIMIT = { check_variable = { noble_support < 0.4 } NOT = { has_idea = fra_noble_support_low } }
+			FRA_clr_noble_ideas = yes
+			add_ideas = fra_noble_support_low
+		}
+		else_if = {
+			LIMIT = { check_variable = { noble_support > 0.8 } NOT = { has_idea = fra_noble_support_very_high } }
+			FRA_clr_noble_ideas = yes
+			add_ideas = fra_noble_support_very_high
+		}
+		else_if = {
+			LIMIT = { check_variable = { noble_support > 0.6 } NOT = { has_idea = fra_noble_support_high } }
+			FRA_clr_noble_ideas = yes
+			add_ideas = fra_noble_support_high
+		}
+		else_if = {
+			LIMIT = { NOT = { has_idea = fra_noble_support_average } }
+			FRA_clr_noble_ideas = yes
+			add_ideas = fra_noble_support_average
+		}
+	}
+}
+
+FRA_indochina_war = {
+	custom_effect_tooltip = FRA_INDOCHINA_WAR
+	hidden_effect = {
+		set_country_flag = indochinese_war
+		declare_war_on = {
+			target = SIA
+			type = take_state_focus  
+			generator = { 890 }
+		}
+		add_manpower = 10000
+		load_oob = "FRA_indochina_rebels"
+		890 = {
+			add_building_construction = {
+				type = naval_base
+				level = 1
+				instant_build = yes
+				province = 4341
+			}
+			create_unit = {
+				division = "division_template = \"French Indochinese Militia\" start_experience_factor = 0.1" 
+				owner = FRA
+				allow_spawning_on_enemy_provs = yes
+				count = 6
+			}
+		}
+	}
+}
+
+FRA_cochinchina = {
+	custom_effect_tooltip = FRA_COCHINCHINA
+	hidden_effect = {
+		delete_unit_template_and_units = { division_template = "French Indochinese Militia" }
+		COC = {
+			add_state_core = 890
+			transfer_state = 890
+			FRA = {
+				set_autonomy = {
+					target = COC
+					autonomy_state =  autonomy_colony
+				}
+			}
+			add_popularity = {
+				ideology = despotist
+				popularity = 1.00
+			}
+			set_politics = {
+				ruling_party = despotist
+				elections_allowed = no
+			}
+			load_oob = "FRA_COC"
+			add_manpower = 10000
+			890 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				create_unit = {
+					division = "division_template = \"French Indochinese Militia\" start_experience_factor = 0.1" 
+					owner = COC
+					allow_spawning_on_enemy_provs = yes
+					count = 4
+				}
+			}
+		}
+		
+	}
+}
+
+FRA_IND_caroline = {
+	custom_effect_tooltip = FRA_IND_CAROLINE
+	eoanb_add_15_prestige_score  = yes
+	hidden_effect = {
+		IND = {
+			set_cosmetic_tag = IND_FRA_CAR
+			add_state_core = 320
+			transfer_state = 320
+			transfer_state = 857
+			transfer_state = 858
+			transfer_state = 848
+			transfer_state = 424
+			transfer_state = 427
+			transfer_state = 886
+			set_capital = 320
+			add_ideas = fra_indian_resistance
+			load_oob = "FRA_IND_CAR"
+		}
+		857 = { add_core_of = BNG }
+		858 = { add_core_of = MUG }
+		848 = { add_core_of = VIJ }
+		320 = {
+			create_unit = {
+				division = "division_template = \"Carolinian Militia\" start_experience_factor = 0.1" 
+				owner = IND
+				allow_spawning_on_enemy_provs = yes
+				count = 6
+			}
+		}
+		set_autonomy = {
+			target = IND
+			autonomy_state =  autonomy_colony
+		}
+	}
+}
+
+FRA_IND = {
+	custom_effect_tooltip = FRA_IND
+	eoanb_add_5_prestige_score  = yes
+	hidden_effect = {
+		IND = {
+			set_cosmetic_tag = IND_FRA_RAJ
+			add_state_core = 320
+			transfer_state = 320
+			add_state_core = 857
+			transfer_state = 857
+			add_state_core = 858
+			transfer_state = 858
+			add_state_core = 848
+			transfer_state = 848
+			set_capital = 427
+			add_ideas = fra_linguistic_division
+			IF = {
+				LIMIT = {
+					VIJ = {
+						exists = no
+					}
+					FRA = {
+						controls_state = 427
+					}
+				}
+				add_state_core = 424
+				transfer_state = 424
+				add_state_core = 427
+				transfer_state = 427
+				add_state_core = 886
+				transfer_state = 886
+			}
+			load_oob = "FRA_IND"
+			add_stability = -0.20
+		}
+		320 = {
+			create_unit = {
+				division = "division_template = \"French Raj Militia\" start_experience_factor = 0.1" 
+				owner = IND
+				allow_spawning_on_enemy_provs = yes
+				count = 3
+			}
+		}
+		set_autonomy = {
+			target = IND
+			autonomy_state =  autonomy_colony
+		}
+	}
+}
+
+FRA_two_indias = {
+	custom_effect_tooltip = FRA_two_indias
+	hidden_effect = {
+		IND = {
+			add_state_core = 423
+			transfer_state = 423
+			add_state_core = 845
+			transfer_state = 845
+			add_state_core = 321
+			transfer_state = 321
+			remove_state_core = 857
+			remove_state_core = 858
+			add_state_claim = 846
+			add_state_claim = 847
+			add_state_claim = 429
+		}
+		POI = {
+			remove_state_core = 423
+			remove_state_core = 845
+			remove_state_core = 321
+			add_state_core = 857
+			transfer_state = 857
+			add_state_core = 858
+			transfer_state = 858
+		}
+		MYS = {
+			every_owned_state = {
+				IND = {
+					add_state_claim = PREV
+				}
+			}
+		}
+		MAR = {
+			every_owned_state = {
+				LIMIT = { 
+					NOT = { 
+						state = 429
+					}
+				}
+				POI = {
+					add_state_claim = PREV
+				}
+			}
+		}
+		MUG = {
+			every_owned_state = {
+				POI = {
+					add_state_claim = PREV
+				}
+			}
+		}
+		BNG = {
+			every_owned_state = {
+				POI = {
+					add_state_claim = PREV
+				}
+			}
+		}
+	}
+}
+
+
+FRA_clr_noble_ideas = {
+	remove_ideas = fra_noble_support_very_high
+	remove_ideas = fra_noble_support_high
+	remove_ideas = fra_noble_support_average
+	remove_ideas = fra_noble_support_low
+	remove_ideas = fra_noble_support_very_low
+}
+
+FRA_revolt_check = {
+	custom_effect_tooltip = NOBLE_REVOLT_CHECK
+	custom_effect_tooltip = SPR_MYSTERY_FOCUS_TOOLTIP
+	if = {
+		LIMIT = { { noble_support < 0.6 } }
+		hidden_effect = {
+			load_focus_tree = france_noble_revolt_focus
+			set_global_flag = fra_noble_revolt
+			FRA = {
+				activate_mission = switch_to_BRI
+			}
+			BRI = {
+				add_state_core = 14
+				transfer_state = 14
+				add_state_core = 30
+				transfer_state = 30
+				inherit_technology = FRA
+				load_oob = "BRI_1886"
+				create_faction = BRI_FACTION_NOBLES
+				declare_war_on = {
+					target = FRA
+					type = topple_government
+				}
+				load_focus_tree = france_noble_focus
+				add_ideas = fra_fight_for_estamental_rights
+			}
+			if = {
+				LIMIT = { 
+					OR = { 
+						FRA = { has_completed_focus = FRA_without_him } 
+						check_variable = { noble_support < 0.5 }
+					}
+				}
+				FRA = {
+					activate_mission = switch_to_AQU
+				}
+				AQU = {
+					add_state_core = 19
+					transfer_state = 19
+					add_state_core = 31
+					transfer_state = 31
+					add_state_core = 922
+					transfer_state = 922
+					inherit_technology = FRA
+					load_oob = "AQU_1886"
+					BRI = { 
+						add_to_faction = AQU
+					}
+					add_to_war = {
+						targeted_alliance = BRI
+						enemy = FRA
+						hostility_reason = asked_to_join
+					}
+					load_focus_tree = france_noble_focus
+					add_ideas = fra_fight_for_estamental_rights
+				}
+			}
+			if = {
+				LIMIT = { 
+					check_variable = { noble_support < 0.5 }
+				}
+				FRA = {
+					activate_mission = switch_to_BUR
+				}
+				BUR = {
+					add_state_core = 17
+					transfer_state = 17
+					add_state_core = 27
+					transfer_state = 27
+					inherit_technology = FRA
+					load_oob = "BUR_1886"
+					BRI = { 
+						add_to_faction = BUR
+					}
+					add_to_war = {
+						targeted_alliance = BRI
+						enemy = FRA
+						hostility_reason = asked_to_join
+					}
+					load_focus_tree = france_noble_focus
+					add_ideas = fra_fight_for_estamental_rights
+				}
+			}
+			if = {
+				LIMIT = { 
+					check_variable = { noble_support < 0.4 }
+				}
+				FRA = {
+					activate_mission = switch_to_PRO
+				}
+				PRO = {
+					add_state_core = 21
+					transfer_state = 21
+					add_state_core = 32
+					transfer_state = 32
+					inherit_technology = FRA
+					load_oob = "PRO_1886"
+					BRI = { 
+						add_to_faction = PRO
+					}
+					add_to_war = {
+						targeted_alliance = BRI
+						enemy = FRA
+						hostility_reason = asked_to_join
+					}
+					load_focus_tree = france_noble_focus
+					add_ideas = fra_fight_for_estamental_rights
+				}
+			}
+			if = {
+				LIMIT = { 
+					check_variable = { noble_support < 0.3 }
+				}
+				FRA = {
+					activate_mission = switch_to_NRM
+				}
+				NRM = {
+					add_state_core = 15
+					transfer_state = 15
+					inherit_technology = FRA
+					load_oob = "NRM_1886"
+					BRI = { 
+						add_to_faction = NRM
+					}
+					add_to_war = {
+						targeted_alliance = BRI
+						enemy = FRA
+						hostility_reason = asked_to_join
+					}
+					load_focus_tree = france_noble_focus
+					add_ideas = fra_fight_for_estamental_rights
+				}
+			}
+			if = {
+				LIMIT = { 
+					check_variable = { noble_support < 0.2 }
+				}
+				FRA = {
+					activate_mission = switch_to_LOR
+				}
+				LOR = {
+					add_state_core = 943
+					transfer_state = 943
+					add_state_core = 944
+					transfer_state = 944
+					inherit_technology = FRA
+					load_oob = "LOR_1886"
+					BRI = { 
+						add_to_faction = LOR
+					}
+					add_to_war = {
+						targeted_alliance = BRI
+						enemy = FRA
+						hostility_reason = asked_to_join
+					}
+					load_focus_tree = france_noble_focus
+					add_ideas = fra_fight_for_estamental_rights
+				}
+			}
+			if = {
+				LIMIT = { 
+					check_variable = { noble_support < 0.1 }
+				}
+				FRA = {
+					activate_mission = switch_to_VOS
+				}
+				VOS = {
+					add_state_core = 28
+					transfer_state = 28
+					add_state_core = 945
+					transfer_state = 945
+					inherit_technology = FRA
+					load_oob = "VOS_1886"
+					BRI = { 
+						add_to_faction = VOS
+					}
+					add_to_war = {
+						targeted_alliance = BRI
+						enemy = FRA
+						hostility_reason = asked_to_join
+					}
+					load_focus_tree = france_noble_focus
+					add_ideas = fra_fight_for_estamental_rights
+				}
+			}
+		}
+	}
+	else = { 
+	
+	}
+}
+
+remove_hog = {	
+	clr_country_flag = has_hog
+	set_variable = { hog_party = 0 }
+	set_variable = { hog_portrait = 0}
+	set_variable = { hog_desc = 0}
+	set_variable = { hog_name = 0}
+	set_variable = { hog_surname = 0 }
+	set_variable = { hog_loyalty = 0}	
+	set_variable = { hog_exp = 0}	
+	set_variable = { hog_political_skill = 0}
+	set_variable = { hog_unity_skill = 0}
+	set_variable = { hog_industrial_skill = 0}
+	set_variable = { hog_military_skill = 0}
+}
+
+assign_random_hog_trait = {
+	random_list = {
+		10 = {
+			modifier = {
+				factor = 3
+				check_variable = { hog_desc = 1 }    
+			}
+			modifier = {
+				factor = 2
+				check_variable = { hog_desc = 5 }    
+			}
+			add_to_variable = { hog_political_skill = 0.025 }
+		}
+		10 = {
+			modifier = {
+				factor = 3
+				check_variable = { hog_desc = 2 }          
+			}
+			modifier = {
+				factor = 2
+				check_variable = { hog_desc = 5 }    
+			}
+			add_to_variable = { hog_unity_skill = 0.025 }
+		}
+		10 = {
+			modifier = {
+				factor = 3
+				check_variable = { hog_desc = 3 }          
+			}
+			modifier = {
+				factor = 2
+				check_variable = { hog_desc = 6 }    
+			}
+			add_to_variable = { hog_industrial_skill = 0.025 }
+		}
+		10 = {
+			modifier = {
+				factor = 3
+				check_variable = { hog_desc = 4 }          
+			}
+			modifier = {
+				factor = 2
+				check_variable = { hog_desc = 6 }    
+			}
+			add_to_variable = { hog_military_skill = 0.025 }
+		}
+	}
+}
+
+add_hog_politics = {
+	set_temp_variable = { political_influence = hog_political_influence }
+	if = {
+		LIMIT = {
+			OR = {
+				check_variable = { hog_party = 1 }
+			}
+		}
+		add_popularity = {
+			ideology = totalitarian 
+			popularity = political_influence
+		}	
+	}
+	if = {
+		LIMIT = {
+			OR = {
+				check_variable = { hog_party = 2 }
+			}
+		}
+		if = {
+			LIMIT = {
+				OR = {
+					has_government = theocratic  
+				}
+			}
+			add_popularity = {
+				ideology = theocratic 
+				popularity = political_influence
+			}	
+		}
+		else_if = {
+			LIMIT = {
+				OR = {
+					has_government = absolutist  
+				}
+			}
+			add_popularity = {
+				ideology = absolutist 
+				popularity = political_influence
+			}	
+		}
+		else_if = {
+			LIMIT = {
+				OR = {
+					has_government = despotist  
+				}
+			}
+			random_list = {
+				75 = {
+					add_popularity = {
+						ideology = despotist 
+						popularity = political_influence
+					}
+				}
+				25 = {
+					add_popularity = {
+						ideology = absolutist 
+						popularity = political_influence
+					}
+				}
+			}
+		}
+		else_if = {
+			LIMIT = {
+				OR = {
+					has_government = conservative  
+					has_government = apolitical  
+					has_government = revolutionary  
+				}
+			}
+			random_list = {
+				50 = {
+					add_popularity = {
+						ideology = despotist 
+						popularity = political_influence
+					}
+				}
+				25 = {
+					add_popularity = {
+						ideology = absolutist 
+						popularity = political_influence
+					}
+				}
+				25 = {
+					add_popularity = {
+						ideology = theocratic 
+						popularity = political_influence
+					}
+				}
+			}
+		}
+	}
+	if = {
+		LIMIT = {
+			OR = {
+				check_variable = { hog_party = 3 }
+			}
+		}
+		if = {
+			LIMIT = {
+				OR = {
+					has_government = totalitarian  
+					has_government = absolutist  
+					has_government = theocratic 
+				}
+			}
+			add_popularity = {
+				ideology = despotist 
+				popularity = political_influence
+			}	
+		}
+		else_if = {
+			LIMIT = {
+				OR = {
+					has_government = apolitical  
+				}
+			}
+			add_popularity = {
+				ideology = apolitical 
+				popularity = political_influence
+			}	
+		}
+		else_if = {
+			LIMIT = {
+				OR = {
+					has_government = liberal  
+				}
+			}
+			add_popularity = {
+				ideology = centrist 
+				popularity = political_influence
+			}	
+		}
+		else = {
+			add_popularity = {
+				ideology = conservative 
+				popularity = political_influence
+			}
+		}
+	}
+	if = {
+		LIMIT = {
+			OR = {
+				check_variable = { hog_party = 4 }
+			}
+		}
+		if = {
+			LIMIT = {
+				OR = {
+					has_government = despotist  
+					has_government = conservative  
+				}
+			}
+			add_popularity = {
+				ideology = centrist 
+				popularity = political_influence
+			}	
+		}
+		else = {
+			add_popularity = {
+				ideology = liberal 
+				popularity = political_influence
+			}
+		}
+	}
+	if = {
+		LIMIT = {
+			OR = {
+				check_variable = { hog_party = 5 }
+			}
+		}
+		random_list = {
+			75 = {
+				add_popularity = {
+					ideology = liberal  
+					popularity = political_influence
+				}
+			}
+			25 = {
+				add_popularity = {
+					ideology = socialist  
+					popularity = political_influence
+				}
+			}
+		}
+	}
+	if = {
+		LIMIT = {
+			OR = {
+				check_variable = { hog_party = 6 }
+			}
+		}
+		add_popularity = {
+			ideology = socialist  
+			popularity = political_influence
+		}
+	}
+	if = {
+		LIMIT = {
+			OR = {
+				check_variable = { hog_party = 7 }
+			}
+		}
+		if = {
+			LIMIT = {
+				OR = {
+					has_government = weitlingist   
+				}
+			}
+			add_popularity = {
+				ideology = weitlingist  
+				popularity = political_influence
+			}	
+		}
+		else = {
+			add_popularity = {
+				ideology = communist  
+				popularity = political_influence
+			}
+		}
+	}
+	if = {
+		LIMIT = {
+			OR = {
+				check_variable = { hog_party = 8 }
+			}
+		}
+		if = {
+			LIMIT = {
+				OR = {
+					has_government = revolutionary    
+				}
+			}
+			add_popularity = {
+				ideology = revolutionary   
+				popularity = political_influence
+			}	
+		}
+		else = {
+			add_popularity = {
+				ideology = apolitical  
+				popularity = political_influence
+			}
+		}
+	}
+}
+
+level_up_hog = {
+	set_temp_variable = { skill_level = hog_exp  }
+	if = {
+		LIMIT = {
+			check_variable = { hog_exp < 11 }
+		}
+		set_temp_variable = { before_level = 1  }
+	}
+	if = {
+		LIMIT = {
+			check_variable = { var = hog_exp value = 11 compare = greater_than_or_equals}
+			check_variable = { hog_exp < 37 }
+		}
+		set_temp_variable = { before_level = 2  }
+	}
+	if = {
+		LIMIT = {
+			check_variable = { var = hog_exp value = 37 compare = greater_than_or_equals}
+			check_variable = { hog_exp < 67 }
+		}
+		set_temp_variable = { before_level = 3  }
+	}
+	if = {
+		LIMIT = {
+			check_variable = { var = hog_exp value = 67 compare = greater_than_or_equals}
+			check_variable = { hog_exp < 101 }
+		}
+		set_temp_variable = { before_level = 4  }
+	}
+	if = {
+		LIMIT = {
+			check_variable = { var = hog_exp value = 101 compare = greater_than_or_equals}
+		}
+		set_temp_variable = { before_level = 5  }
+	}
+	add_to_variable = { hog_exp = add_xp }
+	if = {
+		LIMIT = {
+			check_variable = { hog_exp < 11 }
+		}
+		set_temp_variable = { after_level = 1  }
+	}
+	if = {
+		LIMIT = {
+			check_variable = { var = hog_exp value = 11 compare = greater_than_or_equals}
+			check_variable = { hog_exp < 37 }
+		}
+		set_temp_variable = { after_level = 2  }
+	}
+	if = {
+		LIMIT = {
+			check_variable = { var = hog_exp value = 37 compare = greater_than_or_equals}
+			check_variable = { hog_exp < 67 }
+		}
+		set_temp_variable = { after_level = 3  }
+	}
+	if = {
+		LIMIT = {
+			check_variable = { var = hog_exp value = 67 compare = greater_than_or_equals}
+			check_variable = { hog_exp < 101 }
+		}
+		set_temp_variable = { after_level = 4  }
+	}
+	if = {
+		LIMIT = {
+			check_variable = { var = hog_exp value = 101 compare = greater_than_or_equals}
+		}
+		set_temp_variable = { after_level = 5  }
+	}
+	multiply_temp_variable = { before_level = -1 }
+	add_to_temp_variable = { after_level = before_level }
+	for_loop_effect = {
+		end = after_level
+		assign_random_hog_trait = yes
+	}
+		
+}
+
+
+
+
+
+add_10_to_loyalty_in_hre = {
+	add_to_variable = { BRD.loyalty = 0.1 }
+	add_to_variable = { BAV.loyalty = 0.1 }
+	add_to_variable = { HAN.loyalty = 0.1 }
+	add_to_variable = { MUN.loyalty = 0.1 }
+	add_to_variable = { SAX.loyalty = 0.1 }
+	add_to_variable = { WRZ.loyalty = 0.1 }
+	add_to_variable = { WUR.loyalty = 0.1 }
+	add_to_variable = { MCK.loyalty = 0.1 }
+	add_to_variable = { THU.loyalty = 0.1 }
+	add_to_variable = { KSS.loyalty = 0.1 }
+	add_to_variable = { MRK.loyalty = 0.1 }
+	add_to_variable = { NSS.loyalty = 0.1 }
+	add_to_variable = { SCH.loyalty = 0.1 }
+	add_to_variable = { OLD.loyalty = 0.1 }
+	add_to_variable = { KLE.loyalty = 0.1 }
+	add_to_variable = { KOL.loyalty = 0.1 }
+	add_to_variable = { TRI.loyalty = 0.1 }
+	add_to_variable = { JUL.loyalty = 0.1 }
+	add_to_variable = { ANB.loyalty = 0.1 }
+	add_to_variable = { BAD.loyalty = 0.1 }
+	add_to_variable = { NUR.loyalty = 0.1 }
+	add_to_variable = { ULM.loyalty = 0.1 }
+
+	clamp_variable = {
+	    var = BRD.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = BAV.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = HAN.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = MUN.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = SAX.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = WRZ.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = WUR.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = MCK.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = THU.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = KSS.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = MRK.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = NSS.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = SCH.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = OLD.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = KLE.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = KOL.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = TRI.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = JUL.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = ANB.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = BAD.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = NUR.loyalty
+	    min = 0
+	    max = 1
+	}
+	clamp_variable = {
+	    var = ULM.loyalty
+	    min = 0
+	    max = 1
+	}
+}
+
+subtract_15_from_loyalty_in_hre = {
+	add_to_variable = { BRD.loyalty = --0.15 }
+	add_to_variable = { BAV.loyalty = --0.15 }
+	add_to_variable = { HAN.loyalty = --0.15 }
+	add_to_variable = { MUN.loyalty = --0.15 }
+	add_to_variable = { SAX.loyalty = --0.15 }
+	add_to_variable = { WRZ.loyalty = --0.15 }
+	add_to_variable = { WUR.loyalty = --0.15 }
+	add_to_variable = { MCK.loyalty = --0.15 }
+	add_to_variable = { THU.loyalty = --0.15 }
+	add_to_variable = { KSS.loyalty = --0.15 }
+	add_to_variable = { MRK.loyalty = --0.15 }
+	add_to_variable = { NSS.loyalty = --0.15 }
+	add_to_variable = { SCH.loyalty = --0.15 }
+	add_to_variable = { OLD.loyalty = --0.15 }
+	add_to_variable = { KLE.loyalty = --0.15 }
+	add_to_variable = { KOL.loyalty = --0.15 }
+	add_to_variable = { TRI.loyalty = --0.15 }
+	add_to_variable = { JUL.loyalty = --0.15 }
+	add_to_variable = { ANB.loyalty = --0.15 }
+	add_to_variable = { BAD.loyalty = --0.15 }
+	add_to_variable = { NUR.loyalty = --0.15 }
+	add_to_variable = { ULM.loyalty = --0.15 }
+
+	clamp_variable = {
+	    var = BRD.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = BAV.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = HAN.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = MUN.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = SAX.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = WRZ.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = WUR.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = MCK.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = THU.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = KSS.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = MRK.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = NSS.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = SCH.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = OLD.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = KLE.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = KOL.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = TRI.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = JUL.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = ANB.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = BAD.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = NUR.loyalty
+	    min = 0
+	    max = 1
+	}
+	clamp_variable = {
+	    var = ULM.loyalty
+	    min = 0
+	    max = 1
+	}
+}
+
+add_5_to_loyalty_in_hre = {
+	add_to_variable = { BRD.loyalty = 0.05 }
+	add_to_variable = { BAV.loyalty = 0.05 }
+	add_to_variable = { HAN.loyalty = 0.05 }
+	add_to_variable = { MUN.loyalty = 0.05 }
+	add_to_variable = { SAX.loyalty = 0.05 }
+	add_to_variable = { WRZ.loyalty = 0.05 }
+	add_to_variable = { WUR.loyalty = 0.05 }
+	add_to_variable = { MCK.loyalty = 0.05 }
+	add_to_variable = { THU.loyalty = 0.05 }
+	add_to_variable = { KSS.loyalty = 0.05 }
+	add_to_variable = { MRK.loyalty = 0.05 }
+	add_to_variable = { NSS.loyalty = 0.05 }
+	add_to_variable = { SCH.loyalty = 0.05 }
+	add_to_variable = { OLD.loyalty = 0.05 }
+	add_to_variable = { KLE.loyalty = 0.05 }
+	add_to_variable = { KOL.loyalty = 0.05 }
+	add_to_variable = { TRI.loyalty = 0.05 }
+	add_to_variable = { JUL.loyalty = 0.05 }
+	add_to_variable = { ANB.loyalty = 0.05 }
+	add_to_variable = { BAD.loyalty = 0.05 }
+	add_to_variable = { NUR.loyalty = 0.05 }
+	add_to_variable = { ULM.loyalty = 0.05 }
+
+	clamp_variable = {
+	    var = BRD.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = BAV.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = HAN.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = MUN.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = SAX.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = WRZ.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = WUR.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = MCK.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = THU.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = KSS.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = MRK.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = NSS.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = SCH.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = OLD.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = KLE.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = KOL.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = TRI.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = JUL.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = ANB.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = BAD.loyalty
+	    min = 0
+	    max = 1
+	}	
+	clamp_variable = {
+	    var = NUR.loyalty
+	    min = 0
+	    max = 1
+	}
+	clamp_variable = {
+	    var = ULM.loyalty
+	    min = 0
+	    max = 1
+	}
+}
+
+
+aus_clamp_soldiers_support = {
+	clamp_variable = {
+	    var = aus_var_soldiers_support
+	    min = 0
+	    max = 1
+	}
+}
+
+aus_clamp_loyalty_of_generals  = {
+	clamp_variable = {
+		var = aus_var_loyalty_of_generals
+		min = 0
+		max = 1
+	}
+}
+

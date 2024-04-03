@@ -1,0 +1,39 @@
+
+state={
+	id=474
+	name="STATE_474"
+	manpower = 135378
+	
+	state_category = rural
+
+	resources={
+		wood=3
+		fabric=1
+	}
+
+	history={
+		owner = YUC
+		buildings = {
+			infrastructure = 3
+			4904 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = YUC
+		add_core_of = MEX
+		#victory_points = {
+		#	12715 3
+		#}
+		victory_points = {
+			4904 1
+		}
+		#victory_points = {
+		#	4965 5
+		#}
+	}
+
+	provinces={
+		4904 4965 12715 13249 13250
+	}
+	
+}

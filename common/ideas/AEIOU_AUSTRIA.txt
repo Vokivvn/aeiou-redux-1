@@ -1,0 +1,3683 @@
+ideas = {
+
+
+    political_advisor = {
+        AUS_Alois_Lexa_von_Aehrenthal = {
+            allowed = {
+                original_tag = AUS
+            }
+
+            traits = { 
+                ingenious_schemer
+            }
+        }
+        AUS_Gyula_Andrassy = {
+            allowed = {
+                original_tag = AUS
+            }
+
+            traits = { 
+                slavophobic_royalist
+            }
+        }
+        AUS_Albert_Apponyi = {
+            allowed = {
+                original_tag = AUS
+            }
+
+            traits = { 
+                magyarization_supporter
+            }
+        }
+        AUS_Leopold_Berchtold = {
+            allowed = {
+                original_tag = AUS
+            }
+
+            traits = { 
+                scrupulous_administrator
+            }
+        }
+        AUS_Bela_Grunwald = {
+            allowed = {
+                original_tag = AUS
+            }
+
+            traits = { 
+                hungarian_nationalist
+            }
+        }
+        AUS_Konrad_zu_Hohenlohe_Schillingsfurst = {
+            allowed = {
+                original_tag = AUS
+            }
+
+            traits = { 
+                high_born_noble
+            }
+        }
+        AUS_Karl_Sigmund_von_Hohenwart = {
+            allowed = {
+                original_tag = AUS
+            }
+
+            traits = { 
+                federal_reformer
+            }
+        }
+        AUS_Sandor_Hollan_Sr = {
+            allowed = {
+                original_tag = AUS
+            }
+
+            traits = { 
+                devoted_traditionalist
+            }
+        }
+        AUS_Gustav_Kalnoky = {
+            allowed = {
+                original_tag = AUS
+            }
+
+            traits = { 
+                renovative_economist
+            }
+        }
+        AUS_Anton_Pace_von_Friedensberg = {
+            allowed = {
+                original_tag = AUS
+            }
+
+            traits = { 
+                popular_mediator
+            }
+        }
+        AUS_Albert_Schaffle = {
+            allowed = {
+                original_tag = AUS
+            }
+
+            traits = { 
+                renowned_anthropologist
+            }
+        }
+        AUS_Alexander_Spitzmuller = {
+            allowed = {
+                original_tag = AUS
+            }
+
+            traits = { 
+                resourceful_plutocrat
+            }
+        }
+        AUS_Emil_Steinbach = {
+            allowed = {
+                original_tag = AUS
+            }
+
+            traits = { 
+                enthusiastic_reformer
+            }
+        }
+        AUS_Ivan_Sustersic = {
+            allowed = {
+                original_tag = AUS
+            }
+
+            traits = { 
+                renovative_economist
+            }
+        }
+        AUS_Carol_Telbisz = {
+            allowed = {
+                original_tag = AUS
+            }
+
+            traits = { 
+                development_genius
+            }
+        }
+        AUS_Joseph_Unger = {
+            allowed = {
+                original_tag = AUS
+            }
+
+            traits = { 
+                recognized_writer
+            }
+        }
+        AUS_Eduard_Taaffe = {
+            allowed = {
+                original_tag = AUS
+            }
+
+            traits = { 
+                renowned_architect
+            }
+        }
+    }
+
+
+
+
+    theorist = {
+        AUS_Paul_Puhallo_von_Brlog = {
+            allowed = {
+                original_tag = AUS
+            }
+
+            cost = 200
+
+            traits = {
+                smoke_seller
+                military_theorist
+            }
+        }
+        AUS_Svetozar_Boroevic = {
+            allowed = {
+                original_tag = AUS
+            }
+
+            cost = 200
+
+            traits = {
+                charismatic_recruiter
+                military_theorist
+            }
+        }
+        AUS_Franz_Conrad_von_Hotzendorf_th = {
+            allowed = {
+                original_tag = AUS
+            }
+
+            cost = 200
+
+            traits = {
+                quick_thinker
+                military_theorist
+            }
+        }
+        AUS_Anton_von_Schonfeld = {
+            allowed = {
+                original_tag = AUS
+            }
+
+            cost = 200
+
+            traits = {
+                harsh_disciplinarian
+                military_theorist
+            }
+        }
+        AUS_Anton_Haus = {
+            allowed = {
+                original_tag = AUS
+            }
+
+            cost = 200
+
+            traits = {
+                frontal_attack_expert
+                naval_theorist
+            }
+        }        
+    }
+
+    army_chief = {
+        AUS_Arthur_Arz_von_Straussenburg = {
+            allowed = {
+                original_tag = AUS
+            }
+            
+            cost = 180
+
+            traits = {
+                army_entrenchment_3
+            }
+        }
+        AUS_Archduke_Friedrich = {
+            allowed = {
+                original_tag = AUS
+            }
+            
+            cost = 180
+
+            traits = {
+                army_chief_offensive_1
+            }
+        }
+        AUS_Carlo_Caneva = {
+            allowed = {
+                original_tag = AUS
+            }
+            
+            cost = 180
+
+            traits = {
+                army_infantry_2
+            }
+        }
+        AUS_Alexander_von_Krobatin = {
+            allowed = {
+                original_tag = AUS
+            }
+            
+            cost = 180
+
+            traits = {
+                army_regrouping_2
+            }
+        }
+    }
+
+    navy_chief = {
+        AUS_Rudolf_Montecuccoli = {
+            allowed = {
+                original_tag = AUS
+            }
+            
+            cost = 180
+
+            traits = {
+                navy_capital_ship_1
+            }
+        }
+
+        AUS_Maximilian_Njegovan = {
+            allowed = {
+                original_tag = AUS
+            }
+            
+            cost = 180
+
+            traits = {
+                navy_chief_old_guard
+            }
+        }
+
+        AUS_Hermann_von_Spaun = {
+            allowed = {
+                original_tag = AUS
+            }
+            
+            cost = 180
+
+            traits = {
+                navy_fleet_logistics_3
+            }
+
+            available = {
+                custom_trigger_tooltip = {
+                    tooltip = aus_hermann_von_spaun_promoted_tt
+                    has_global_flag = aus_hermann_von_spaun_promoted
+                }
+            }
+        }
+    }
+
+    high_command = {
+        AUS_Antonio_Baldissera = {
+            allowed = {
+                original_tag = AUS
+            }
+            
+            cost = 180
+
+            traits = {
+                never_yielding_defender
+            }
+        }
+        AUS_Eduard_von_Bohm_Ermolli = {
+            allowed = {
+                original_tag = AUS
+            }
+            
+            cost = 180
+
+            traits = {
+                army_cavalry_3
+            }
+        }
+        AUS_Franz_Conrad_von_Hotzendorf_hc = {
+            allowed = {
+                original_tag = AUS
+            }
+            
+            cost = 180
+
+            traits = {
+                offensive_lynx
+            }
+        }
+        AUS_Archduke_Eugen = {
+            allowed = {
+                original_tag = AUS
+            }
+            
+            cost = 180
+
+            traits = {
+                harsh_disciplinarian
+                unusual_strategist
+            }
+        }
+        AUS_Hermann_Kovess_von_Kovesshaza = {
+            allowed = {
+                original_tag = AUS
+            }
+            
+            cost = 180
+
+            traits = {
+                defense_master
+            }
+        }
+        AUS_Franz_Kuhn_von_Kuhnenfeld = {
+            allowed = {
+                original_tag = AUS
+            }
+            
+            cost = 180
+
+            traits = {
+                direct_assault_master
+            }
+        }
+        AUS_Blasius_von_Schemua = {
+            allowed = {
+                original_tag = AUS
+            }
+            
+            cost = 180
+
+            traits = {
+                army_chief_drill_3
+            }
+        }
+        AUS_Archduke_Charles_Stephen = {
+            allowed = {
+                original_tag = AUS
+            }
+            
+            cost = 180
+
+            traits = {
+                mass_production_enthusiast
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    country = {
+
+        aus_idea_winds_of_change = {
+            picture = AUS_winds_of_change
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.05 
+                research_speed_factor = 0.04
+            }
+        }
+        
+        aus_idea_disorganized_army = {
+            picture = AUS_disorganised_army
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                army_org_factor = -0.08 
+                army_attack_factor = -0.05 
+            }
+        }
+        
+        aus_idea_high_feudalism = {
+            picture = AUS_high_feudalism
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.02 
+                conscription_factor = -0.15
+                consumer_goods_factor = 0.05
+            }
+        }
+        
+        aus_idea_habsburg_dynasty = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = 0.1
+                trade_opinion_factor = 0.12 
+            }
+        }
+        
+        aus_idea_emancipation = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = -0.1
+                consumer_goods_factor = 0.05
+            }
+        }
+
+        aus_idea_equality = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = -0.1
+                research_speed_factor = 0.03
+            }
+        }
+
+        aus_idea_inspiration_athens = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = 0.04
+                trade_opinion_factor = 0.12 
+            }
+        }
+        
+        aus_idea_inspiration_rome = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = 0.04
+                trade_opinion_factor = 0.12 
+            }
+        }
+        
+        aus_idea_rudolfian_democracy = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = 0.06
+                trade_opinion_factor = 0.12 
+            }
+        }
+        
+        aus_idea_promise_end_serfdom = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = 0.04
+            }
+        }
+        
+        aus_idea_state_clergy = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = -0.04 
+            }
+        }
+        
+        aus_idea_moderate_secularization = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = -0.05
+            }
+        }
+        
+        aus_idea_aggressive_secularization = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = -0.1
+            }
+        }
+        
+        
+        aus_idea_agreement_with_church = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = -0.1
+                stability_weekly = 0.001
+                consumer_goods_factor = 0.02
+                research_speed_factor = -0.015
+            }
+        }
+        
+        aus_idea_land_redistribution = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                consumer_goods_factor = 0.04
+                political_power_cost = 0.05
+                min_export = -0.08
+                stability_factor = -0.05
+                stability_weekly = 0.002
+            }
+        }
+        
+        aus_idea_increasing_centralization = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = 0.05
+                stability_factor = 0.02
+                production_factory_efficiency_gain_factor = -0.12
+            }
+        }
+        
+        aus_idea_freed_ideas = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                research_speed_factor = 0.01
+                production_speed_buildings_factor = 0.06
+                conscription_factor = -0.06
+                stability_weekly = -0.002
+            }
+        }
+
+        aus_idea_cut_off_popes_influence = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                research_speed_factor = 0.015
+                political_power_gain = 0.1
+                consumer_goods_factor = 0.05
+                trade_opinion_factor = -0.1
+            }
+        }
+
+        aus_idea_pact_with_bourgeoisie = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                consumer_goods_factor = 0.05
+                min_export = 0.02
+                research_speed_factor = 0.04
+            }
+        }
+        
+        aus_idea_political_christianity = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                drift_defence_factor = 0.3
+                surrender_limit = 0.05
+                stability_factor = -0.1
+                research_speed_factor = -0.005
+                political_power_cost = 0.12
+                stability_weekly = 0.006
+            }
+        }
+        
+        aus_idea_wave_of_new_concepts = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                drift_defence_factor = -0.25
+                conservative_drift = 0.03
+                liberal_drift = 0.03
+                socialist_drift = 0.01
+                centrist_drift = 0.01
+            }
+        }
+        
+        aus_idea_fight_against_illiteracy = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                research_speed_factor = -0.002
+                consumer_goods_factor = 0.2
+            }
+        }
+        
+        aus_idea_literate_peasantry = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                research_speed_factor = 0.05
+                consumer_goods_factor = 0.02
+            }
+        }
+        
+        aus_idea_inspired_by_the_prince = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                consumer_goods_factor = -0.01
+                conscription = 0.005
+                command_power_gain_mult = 0.3
+                political_power_factor = 0.1
+                war_support_weekly = -0.006
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        aus_idea_democracy_1 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = -0.1
+                stability_factor = -0.15
+                consumer_goods_factor = 0.04
+            }
+        }
+        aus_idea_democracy_2_1 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = -0.04
+                stability_factor = -0.15
+                consumer_goods_factor = 0.02
+                conscription_factor = -0.1
+                production_factory_efficiency_gain_factor = 0.06
+                production_factory_max_efficiency_factor = 0.1
+            }
+        }
+        aus_idea_democracy_2_2 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = -0.02
+                stability_factor = -0.15
+                consumer_goods_factor = 0.04
+                socialist_acceptance = 15
+                liberal_acceptance = 15
+                centrist_acceptance = 15
+                conservative_acceptance = 15
+            }
+        }
+        aus_idea_democracy_3 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = 0.04
+                stability_factor = -0.05
+                consumer_goods_factor = 0.02
+                conscription_factor = -0.1
+                production_factory_efficiency_gain_factor = 0.06
+                production_factory_max_efficiency_factor = 0.1
+                socialist_acceptance = 15
+                liberal_acceptance = 15
+                centrist_acceptance = 15
+                conservative_acceptance = 15
+            }
+        }
+
+
+
+
+
+
+
+        aus_idea_absolutism_1 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = 0.08
+                consumer_goods_factor = -0.02
+                drift_defence_factor = 0.15
+            }
+        }
+        aus_idea_absolutism_2_1 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = 0.20
+                consumer_goods_factor = -0.04
+                monthly_population = -0.06
+                stability_weekly = -0.002
+                stability_factor = -0.15
+                required_garrison_factor = 0.25
+                drift_defence_factor = 0.15
+            }
+        }
+        aus_idea_absolutism_2_2 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = 0.16
+                consumer_goods_factor = -0.02
+                drift_defence_factor = 0.15
+                offensive_war_stability_factor = 0.1
+                war_support_factor = -0.15
+                absolutist_drift = 0.01
+                command_power_gain_mult = 0.5
+                max_command_power = 25
+                stability_factor = -0.1
+                opinion_gain_monthly = -0.3
+                improve_relations_maintain_cost_factor = 0.75
+            }
+        }
+        aus_idea_absolutism_3 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = 0.28
+                consumer_goods_factor = -0.04
+                monthly_population = -0.06
+                stability_weekly = -0.002
+                stability_factor = -0.15
+                required_garrison_factor = 0.25
+                drift_defence_factor = 0.15
+                offensive_war_stability_factor = 0.1
+                war_support_factor = -0.15
+                absolutist_drift = 0.01
+                command_power_gain_mult = 0.5
+                max_command_power = 25
+                stability_factor = -0.1
+                opinion_gain_monthly = -0.3
+                improve_relations_maintain_cost_factor = 0.75
+            }
+        }
+
+
+
+
+
+
+        aus_idea_oligarchy_1 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = -0.08
+                stability_weekly = 0.002
+                party_popularity_stability_factor = -0.5
+                absolutist_drift = -0.01
+            }
+        }
+        aus_idea_oligarchy_2_1 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = -0.2
+                stability_weekly = 0.002
+                party_popularity_stability_factor = -0.5
+                absolutist_drift = -0.01
+                experience_gain_army_factor = 0.25
+                experience_gain_navy_factor = 0.4
+                army_morale_factor = 0.08
+
+            }
+        }
+        aus_idea_oligarchy_2_2 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = -0.08
+                stability_weekly = 0.002
+                party_popularity_stability_factor = -0.5
+                absolutist_drift = -0.01
+
+                conservative_drift = 0.01
+                liberal_drift = 0.01
+                political_power_factor = 0.05
+                research_speed_factor = 0.005
+            }
+        }
+        aus_idea_oligarchy_3 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = -0.2
+                stability_weekly = 0.002
+                party_popularity_stability_factor = -0.5
+                absolutist_drift = -0.01
+                experience_gain_army_factor = 0.25
+                experience_gain_navy_factor = 0.4
+                army_morale_factor = 0.08
+
+                conservative_drift = 0.01
+                liberal_drift = 0.01
+                political_power_factor = 0.05
+                research_speed_factor = 0.005
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        aus_idea_free_government = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                monthly_population = 0.05
+                drift_defence_factor = -0.15
+                surrender_limit = 0.1
+                production_speed_buildings_factor = 0.08
+                party_popularity_stability_factor = 0.8
+                stability_factor = -0.05
+                recruitable_population_factor = -0.07
+                industrial_capacity_factory = 0.08
+                industrial_capacity_dockyard = 0.05
+            }
+        }
+        aus_idea_guidance_to_liberty = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                absolutist_drift = 0.02
+                stability_weekly = -0.001
+                war_support_weekly = 0.001
+                political_power_factor = 0.1
+                encryption_factor = 0.06
+                planning_speed = -0.1
+                resistance_target = 0.25
+                monthly_population = -0.02
+            }
+        }
+        aus_idea_democracy_for_the_chosen = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = -0.25
+                stability_weekly = 0.002
+                consumer_goods_factor = 0.12
+                planning_speed = 0.25
+                army_org_factor = 0.06
+                training_time_factor = -0.25
+            }
+        }
+
+
+        aus_idea_moderate_feudalism = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.02 
+                conscription_factor = -0.15
+            }
+        }
+
+
+
+
+        aus_idea_minor_riots = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.05
+                stability_weekly = -0.002
+                weekly_manpower = -20
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        ###Eugen###
+
+        aus_idea_peasants_recruits = {
+            picture = AUS_peasant_recruits
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                monthly_population = 0.1
+                army_org_factor = -0.05
+                planning_speed = -0.15
+            }
+        }
+
+        aus_idea_better_payments = {
+            picture = GFX_idea_AUS_better_payments
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                conscription = 0.005
+                army_morale_factor = 0.05
+                political_power_gain = -0.10
+            }
+        }
+
+        aus_idea_royal_navy = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                industrial_capacity_dockyard = 0.1
+            }
+        }
+
+        aus_idea_increased_militarization = {
+            picture = GFX_idea_AUS_increased_militarization
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                industrial_capacity_factory = 0.05
+                war_support_factor = 0.02
+            }
+        }
+
+        aus_idea_bigger_taxes = {
+            picture = AUS_Taxes
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = 0.05
+            }
+        }
+
+        aus_idea_fight_with_illiteracy = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                research_speed_factor = 0.01
+            }
+        }
+
+        aus_idea_defensive_mobilization = {
+            picture = AUS_defensive_mobilization
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                mobilization_speed = 0.1
+                conscription = 0.005
+                planning_speed = 0.05
+                industrial_capacity_factory = 0.05
+            }
+        }
+        
+        aus_idea_alliance_with_austria = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            }          
+        }
+
+        aus_idea_alliance_with_venice = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            }          
+        }
+
+        aus_idea_austrian_embargo = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                trade_opinion_factor = -0.10
+                consumer_goods_factor = 0.1
+            }          
+        }
+
+
+        aus_idea_increased_religious_unity = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                
+                stability_weekly = 0.005
+            }
+        }
+
+        
+
+        aus_idea_industrial_campaign_1 = {
+            picture = AUS_industrial_campaign
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                production_speed_buildings_factor = 0.05
+            }
+        }
+
+        aus_idea_industrial_campaign_2 = {
+            picture = AUS_industrial_campaign
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                production_speed_buildings_factor = 0.1
+            }
+        }
+
+        aus_idea_industrial_campaign_3 = {
+            picture = AUS_industrial_campaign
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                production_speed_buildings_factor = 0.1
+                consumer_goods_factor = -0.05
+            }
+        }
+
+        aus_idea_industrial_campaign_4 = {
+            picture = AUS_industrial_campaign
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                production_speed_buildings_factor = 0.1
+                consumer_goods_factor = -0.05
+                production_speed_arms_factory_factor = 0.05
+            }
+        }
+
+        aus_idea_industrial_campaign_5 = {
+            picture = AUS_industrial_campaign
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                production_speed_buildings_factor = 0.1
+                consumer_goods_factor = -0.05
+                production_speed_industrial_complex_factor = 0.05
+            }
+        }
+
+        aus_idea_cooperation_with_venice = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            research_bonus = {
+                naval_equipment = 0.1
+            }
+
+            modifier = {
+            }
+        }
+
+        aus_idea_cooperation_with_austria = {
+            picture = AUS_cooperation_with_austria
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            research_bonus = {
+                infantry_weapons = 0.05
+            }
+
+            modifier = {
+            }
+        }
+
+        aus_idea_eugens_rule = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = 0.05
+            }
+        }
+
+        aus_idea_eugens_rule2 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = 0.1
+                stability_weekly = 0.002
+            }
+        }
+
+        aus_idea_eugens_rule3 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = 0.2
+                stability_weekly = 0.002
+            }
+        }
+
+        aus_idea_preparations_for_invasion = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                war_support_weekly = 0.001
+                mobilization_speed = 0.1
+                conversion_cost_civ_to_mil_factor = -0.2
+            }
+        }
+
+        aus_idea_hungarian_landwehr = {
+            picture = GFX_idea_AUS_hungarian_landwehr
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                war_support_weekly = 0.003
+            }
+        }
+
+        aus_idea_preparations_for_invasion_2 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                war_support_weekly = 0.001
+                mobilization_speed = 0.1
+                conversion_cost_civ_to_mil_factor = -0.2
+                army_attack_factor = 0.1
+                army_defence_factor = -0.05
+            }
+        }
+
+        aus_idea_preparations_for_invasion_3 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                war_support_weekly = 0.001
+                conversion_cost_civ_to_mil_factor = -0.05
+                army_attack_factor = 0.08
+                army_defence_factor = -0.05
+            }
+        }
+
+        aus_idea_improved_working_conditions = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                production_factory_efficiency_gain_factor = 0.15
+                consumer_goods_factor = 0.05
+                political_power_cost = 0.15
+            }
+        }
+
+
+
+
+
+
+
+
+        aus_idea_fail_in_imperial_war_1 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = -1
+                stability_weekly = -0.005
+                war_support_weekly = -0.005
+                production_speed_buildings_factor = -0.15
+                industrial_capacity_factory = -0.3
+                consumer_goods_factor = 0.2
+                army_attack_factor = -0.3
+                army_defence_factor = -0.15
+            }
+        }
+
+        aus_idea_fail_in_imperial_war_2 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = -0.75
+                stability_weekly = -0.005
+                war_support_weekly = -0.005
+                production_speed_buildings_factor = -0.12
+                industrial_capacity_factory = -0.22
+                consumer_goods_factor = 0.17
+                army_attack_factor = -0.21
+                army_defence_factor = -0.12
+            }
+        }
+
+        aus_idea_fail_in_imperial_war_3 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = -0.5
+                stability_weekly = -0.003
+                war_support_weekly = -0.003
+                production_speed_buildings_factor = -0.09
+                industrial_capacity_factory = -0.14
+                consumer_goods_factor = 0.12
+                army_attack_factor = -0.13
+                army_defence_factor = -0.08
+            }
+        }
+
+        aus_idea_fail_in_imperial_war_4 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = -0.25
+                stability_weekly = -0.001
+                war_support_weekly = -0.001
+                production_speed_buildings_factor = -0.05
+                industrial_capacity_factory = -0.07
+                consumer_goods_factor = 0.06
+                army_attack_factor = -0.06
+                army_defence_factor = -0.03
+            }
+        }
+
+
+
+
+
+        aus_idea_eager_for_war = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                war_support_weekly = 0.005
+                political_power_gain = 0.15
+                army_attack_factor = 0.05
+            }
+        }
+
+        aus_idea_imitation_of_german_discipline = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                training_time_army_factor = 0.15
+                army_attack_factor = 0.03
+                army_defence_factor = 0.03
+                experience_gain_army_factor = 0.15
+            }
+        }
+
+        aus_idea_navy_improvements = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                naval_coordination = 0.15
+                army_org_factor = -0.02
+                invasion_preparation = 0.1
+                recon_factor = -0.04
+                army_morale_factor = -0.03
+            }
+        }
+
+        aus_idea_rivalry_in_mediterranean = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                navy_max_range_factor = 0.25
+                naval_coordination = 0.08
+                naval_retreat_chance = 0.07
+                convoy_escort_efficiency = 0.07
+                invasion_preparation = 0.05
+                recon_factor = -0.03
+                army_morale_factor = -0.02
+            }
+        }
+
+
+        aus_idea_war_reparations = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                consumer_goods_factor = 0.2
+                production_speed_buildings_factor = -0.2
+                industrial_capacity_factory = -0.2
+                industrial_capacity_dockyard = -0.1
+            }
+        }
+
+        aus_idea_austrian_war_reparations = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                consumer_goods_factor = -0.05
+                production_speed_buildings_factor = 0.05
+                industrial_capacity_factory = 0.05
+                industrial_capacity_dockyard = 0.05
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        aus_idea_reduced_army_qualifications = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                conscription_factor = 0.2
+                army_morale_factor = -0.05
+                dig_in_speed_factor = -0.1
+            }
+        }
+
+        aus_idea_help_for_bavaria = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                consumer_goods_factor = -0.04
+            }
+        }
+
+        aus_idea_help_from_austria = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                consumer_goods_factor = 0.05
+                production_speed_buildings_factor = 0.05
+                industrial_capacity_factory = 0.05
+                research_speed_factor = 0.03
+            }
+        }
+
+        aus_idea_accelerated_trade = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                consumer_goods_factor = -0.03
+                local_resources_factor = 0.05
+                min_export = 0.05
+            }
+        }
+        
+
+        aus_idea_austro_serbian_trade_ties1 = {    #FOR AUSTRIA
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                consumer_goods_factor = -0.02
+            }
+            targeted_modifier = {
+                tag = SER
+                trade_cost_for_target_factor = -0.1
+            }
+        }
+        aus_idea_austro_serbian_trade_ties2 = {     #FOR SERBIA
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                consumer_goods_factor = -0.02           
+            }
+            targeted_modifier = {
+                tag = AUS
+                trade_cost_for_target_factor = -0.1
+            }
+        }
+
+
+
+
+
+
+
+
+        aus_idea_noble_tyranny = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = 0.2
+                stability_weekly = -0.001
+            }
+        }
+
+
+
+
+        aus_idea_national_propaganda = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = 0.05
+                war_support_weekly = 0.001
+                conscription_factor = 0.1
+            }
+        }
+
+
+
+
+
+        aus_idea_emperor_eugens_rule = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = 0.3
+                stability_weekly = 0.003
+                war_support_weekly = 0.002
+            }
+        }
+
+
+
+        aus_idea_navy_improvements = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                naval_coordination = 0.15
+                army_org_factor = -0.02
+                invasion_preparation = 0.1
+                recon_factor = -0.04
+                army_morale_factor = -0.03
+            }
+        }
+
+
+        aus_idea_german_students = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.08
+                research_speed_factor = 0.03
+            }
+        }
+
+
+        aus_idea_export_to_austria = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                local_resources_factor = -0.05
+            }
+        }
+
+        aus_idea_import_from_german_states = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                local_resources_factor = 0.05
+            }
+        }
+
+
+        aus_idea_imperial_research_sharing = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                encryption_factor = -0.09
+                research_speed_factor = 0.05
+            }
+        }
+
+
+
+
+
+        aus_idea_help_from_the_emperor ={
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                production_speed_buildings_factor = 0.06
+                industrial_capacity_factory = 0.04
+                industrial_capacity_dockyard = 0.03
+                consumer_goods_factor = -0.02
+            }
+        }
+
+        aus_idea_focused_support ={
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                production_speed_buildings_factor = 0.09
+                industrial_capacity_factory = 0.07
+                industrial_capacity_dockyard = 0.07
+                consumer_goods_factor = -0.05
+            }
+        }
+
+
+        aus_idea_advisors_from_wien = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = -0.05
+                army_defence_factor = 0.06
+                army_attack_factor = 0.04
+                consumer_goods_factor = -0.03
+            }
+        }
+
+        aus_idea_german_advisors = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = 0.05
+                recon_factor = 0.04
+                army_org_factor = 0.04
+                planning_speed = -0.3
+                max_planning = 0.1
+            }
+        }
+
+
+        aus_idea_imitation_of_german_discipline = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                training_time_army_factor = 0.15
+                army_attack_factor = 0.04
+                army_defence_factor = 0.04
+                experience_gain_army_factor = 0.15
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+        aus_idea_imperial_free_trade = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                consumer_goods_factor = -0.06
+                min_export = 0.04
+                local_resources_factor = 0.05
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+        aus_idea_supervised_clergy = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = 0.1
+                min_export = -0.08
+                consumer_goods_factor = -0.04
+                research_speed_factor = 0.02
+                stability_weekly = -0.002
+                drift_defence_factor = -0.4
+                improve_relations_maintain_cost_factor = 1.5
+            }
+        }
+
+        aus_idea_infuential_clergy = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = -0.06
+                consumer_goods_factor = 0.02
+                encryption_factor = -0.03
+                conscription = 0.003
+                non_core_manpower = 0.03
+                surrender_limit = 0.08
+                production_speed_industrial_complex_factor = 0.07
+                improve_relations_maintain_cost_factor = 0.75
+            }
+        }
+
+        aus_idea_unaccountable_clergy = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = -0.2
+                consumer_goods_factor = 0.05
+                encryption_factor = -0.05
+                conscription = 0.004
+                non_core_manpower = 0.05
+                research_speed_factor = -0.02
+                stability_weekly = -0.001
+                monthly_population = 0.02
+                drift_defence_factor = 0.4
+                army_morale_factor = 0.1
+            }
+        }
+
+
+
+
+
+        aus_idea_no_special_noble_privileges = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = 0.15
+                conscription_factor = -0.15
+                army_org_factor = -0.08
+                recon_factor = -0.07
+                trade_opinion_factor = -0.1
+                political_advisor_cost_factor = 0.3
+                trade_laws_cost_factor = 0.3
+                mobilization_laws_cost_factor = 0.3
+                economy_cost_factor = 0.3
+                monthly_population = 0.04
+                consumer_goods_factor = -0.08
+                production_speed_buildings_factor = 0.1
+                line_change_production_efficiency_factor = 0.07
+            }
+        }
+
+        aus_idea_moderate_noble_privileges = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                conscription_factor = -0.04
+                army_org_factor = -0.03
+                recon_factor = -0.02
+                political_advisor_cost_factor = 0.1
+                trade_laws_cost_factor = 0.1
+                mobilization_laws_cost_factor = 0.1
+                economy_cost_factor = 0.1
+                monthly_population = 0.03
+                consumer_goods_factor = -0.02
+                production_speed_buildings_factor = 0.03
+                line_change_production_efficiency_factor = 0.02
+            }
+        }
+
+        aus_idea_major_noble_privileges = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = -0.1
+                conscription_factor = 0.03
+                army_org_factor = 0.06
+                recon_factor = 0.03
+                monthly_population = -0.04
+                consumer_goods_factor = 0.12
+                production_speed_buildings_factor = -0.08
+                line_change_production_efficiency_factor = -0.07
+                army_attack_factor = 0.06
+                supply_consumption_factor = 0.08
+                dig_in_speed_factor = 0.2
+            }
+        }
+
+
+
+
+
+
+        aus_idea_low_peasantry_rights = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = 0.15
+                monthly_population = -0.15
+                min_export = -0.15
+                consumer_goods_factor = -0.09
+                army_core_attack_factor = -0.08
+                army_core_defence_factor = -0.07
+                offence = 0.05
+                defence = 0.04
+                army_speed_factor = -0.05
+                training_time_factor = 0.13
+                attrition = 0.08
+            }
+        }
+
+        aus_idea_provisional_equality = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = -0.05
+                monthly_population = 0.05
+                army_core_attack_factor = -0.02
+                army_core_defence_factor = -0.01
+                conscription_factor = 0.08
+                training_time_factor = 0.08
+                army_speed_factor = -0.03
+                attrition = 0.02
+                industrial_capacity_factory = 0.04
+                army_org_factor = -0.02
+            }
+        }
+
+        aus_idea_light_serfdom = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = -0.14
+                monthly_population = 0.1
+                min_export = 0.1
+                conscription_factor = 0.1
+                consumer_goods_factor = 0.15
+                army_speed_factor = -0.02
+                training_time_factor = 0.08
+                attrition = 0.02
+                industrial_capacity_factory = 0.08
+                army_org_factor = -0.03
+                production_speed_buildings_factor = 0.04
+                research_speed_factor = 0.02
+            }
+        }
+
+
+
+
+
+
+        
+
+        aus_idea_rivalry_in_mediterranean = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                navy_max_range_factor = 0.25
+                naval_coordination = 0.08
+                naval_retreat_chance = 0.07
+                convoy_escort_efficiency = 0.07
+                invasion_preparation = 0.05
+                recon_factor = -0.03
+                army_morale_factor = -0.02
+            }
+        }
+
+
+
+
+        aus_idea_beck_rzikowsky_doctrine = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                army_defence_factor = 0.09
+                army_attack_factor = -0.06
+                army_speed_factor = -0.04
+                recon_factor = 0.02
+                no_supply_grace = 48
+                attrition = -0.03
+            }            
+        }
+
+
+
+
+
+
+
+        aus_idea_industrialisierungsplan_finished = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = 0.1
+            } 
+        }
+
+
+
+        aus_idea_austrian_war_machine = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                stability_weekly = -0.002
+                political_power_factor = -0.2
+                war_support_weekly = 0.001
+                conscription_factor = 0.1
+                industrial_capacity_factory = 0.075
+                min_export = 0.05
+                army_defence_factor = 0.03
+                army_attack_factor = 0.02
+            } 
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        aus_idea_fail_in_imperial_war_1 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.4
+                war_support_factor = -0.5
+                political_power_factor = -0.4
+                stability_weekly = -0.01
+                war_support_weekly = -0.012
+            } 
+        }
+
+        aus_idea_fail_in_imperial_war_2 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.3
+                war_support_factor = -0.4
+                political_power_factor = -0.3
+                stability_weekly = -0.007
+                war_support_weekly = -0.008
+            } 
+        }
+
+        aus_idea_fail_in_imperial_war_3 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.22
+                war_support_factor = -0.3
+                political_power_factor = -0.24
+                stability_weekly = -0.005
+                war_support_weekly = -0.006
+            } 
+        }
+
+        aus_idea_fail_in_imperial_war_4 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.15
+                war_support_factor = -0.19
+                political_power_factor = -0.18
+                stability_weekly = -0.003
+                war_support_weekly = -0.004
+            } 
+        }
+
+        aus_idea_fail_in_imperial_war_5 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.07
+                war_support_factor = -0.09
+                political_power_factor = -0.1
+                stability_weekly = -0.001
+                war_support_weekly = -0.002
+            } 
+        }
+
+
+
+        aus_idea_special_secret_forces = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                encryption_factor = 0.02
+                decryption_factor = 0.01
+                conscription_factor = -0.02
+                stability_factor = -0.05
+            } 
+        }
+
+        aus_idea_new_army_reforms = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                supply_consumption_factor = -0.03
+                conscription = 0.005
+                attrition = 0.06
+            } 
+        }
+
+
+
+        aus_idea_enraged_generals_1 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                army_org_factor= -0.15
+                army_defence_factor = -0.1
+            } 
+        }
+        aus_idea_enraged_generals_2 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                army_org_factor= -0.07
+                army_defence_factor = -0.06
+            } 
+        }
+        aus_idea_limited_generals_privileges = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                max_planning = -0.5
+                planning_speed = -0.2
+            } 
+        }
+        aus_idea_decentralized_army_leadership = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                encryption_factor = -0.03
+                planning_speed = -0.2
+            } 
+        }
+
+
+
+
+
+        
+        aus_idea_reduced_emperors_power_1 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                stability_weekly = -0.004
+                political_power_factor = -0.25
+            } 
+        }
+        
+        aus_idea_reduced_emperors_power_2 = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                stability_weekly = -0.005
+                political_power_factor = -0.27
+            } 
+        }
+
+
+        aus_idea_better_army_condtions = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                consumer_goods_factor = 0.04
+                supply_consumption_factor = 0.05
+                production_speed_arms_factory_factor = -0.08
+                army_morale_factor = 0.01
+                attrition = -0.01
+            } 
+        }
+
+
+
+
+        aus_idea_frequent_desertions = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                weekly_manpower = -100
+                army_morale_factor = -0.05
+                army_defence_factor = -0.02
+                war_support_weekly = -0.001
+            } 
+        }
+
+        aus_idea_violent_mutinies_in_army = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                weekly_manpower = -120
+                army_morale_factor = -0.02
+                army_defence_factor = -0.03
+            } 
+        }
+
+
+
+
+        aus_idea_greater_training_difficulty = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                training_time_factor = 0.2
+                conscription_factor = -0.02
+                army_defence_factor = 0.03
+                army_attack_factor = 0.03
+            } 
+        }
+
+
+        aus_idea_osterreich_uber_alles = {    # Österreich über alles
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                war_support_weekly = 0.004
+                army_core_attack_factor = 0.07
+                army_core_defence_factor = 0.09
+            } 
+        }
+
+
+
+        aus_idea_military_fanaticism = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                war_support_weekly = 0.005
+                stability_weekly = -0.002
+                army_core_attack_factor = 0.12
+                army_core_defence_factor = 0.15
+                stability_factor = -0.1 
+            } 
+        }
+
+
+
+
+
+
+
+
+
+
+
+        aus_idea_traitorous_army = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                weekly_manpower = -25
+                war_support_weekly = -0.002
+                conscription_factor = -0.1
+                training_time_factor = 0.1
+                land_reinforce_rate = -0.05
+                army_org_factor = -0.02
+                supply_consumption_factor = 0.05
+                encryption_factor = -0.05
+                army_core_attack_factor = -0.08
+                army_core_defence_factor = -0.04
+            } 
+        }
+
+        aus_idea_frequent_desertions = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                weekly_manpower = -10
+                war_support_weekly = -0.001
+                conscription_factor = -0.05
+                training_time_factor = 0.1
+                land_reinforce_rate = -0.04
+                supply_consumption_factor = 0.05
+                encryption_factor = -0.02
+            } 
+        }
+
+        aus_idea_moderate_soldiers_support = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                conscription_factor = 0.02
+                training_time_factor = 0.08
+                land_reinforce_rate = -0.02
+                supply_consumption_factor = 0.03
+            } 
+        }
+
+        aus_idea_high_soldiers_loyalty = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                weekly_manpower = 5
+                conscription_factor = 0.02
+                army_defence_factor = 0.03
+                partisan_effect = -0.08
+            } 
+        }
+
+        aus_idea_fanatical_army = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                stability_weekly = -0.003
+                weekly_manpower = 20
+                war_support_weekly = 0.001
+                conscription_factor = 0.03
+                land_reinforce_rate = 0.02
+                supply_consumption_factor = -0.03
+                partisan_effect = -0.12
+                army_defence_factor = 0.04
+            } 
+        }
+
+
+
+
+        aus_idea_military_intrigues = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                stability_weekly = -0.003
+                conscription = -0.002
+                encryption_factor = -0.05
+                army_attack_factor = -0.1
+                dig_in_speed_factor = -0.7
+                experience_gain_army_factor = -0.5
+                attrition = 0.09
+            } 
+        }
+
+        aus_idea_lack_of_generals_support = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                stability_weekly = -0.001
+                conscription = -0.001
+                encryption_factor = -0.02
+                army_attack_factor = -0.05
+                dig_in_speed_factor = -0.3
+                experience_gain_army_factor = -0.3
+                attrition = 0.04
+            } 
+        }
+
+        aus_idea_limited_generals_approval = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                army_attack_factor = 0.02
+                dig_in_speed_factor = -0.2
+                experience_gain_army_factor = -0.15
+                attrition = 0.02
+                army_org_factor = 0.01
+            } 
+        }
+
+        aus_idea_loyal_generals = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                conscription = 0.001
+                army_attack_factor = 0.05
+                dig_in_speed_factor = -0.1
+                experience_gain_army_factor = -0.1
+                army_org_factor = 0.02
+                planning_speed = 0.1
+                max_planning = -0.05
+            } 
+        }
+
+        aus_idea_highly_obedient_generals = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                stability_weekly = 0.001
+                conscription = 0.003
+                army_attack_factor = 0.08
+                dig_in_speed_factor = -0.1
+                experience_gain_army_factor = -0.05
+                army_org_factor = 0.05
+                planning_speed = 0.2
+                max_planning = -0.15
+            } 
+        }
+
+
+
+
+
+
+
+        aus_idea_austrian_merceneries = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	political_power_factor = -0.1
+            	consumer_goods_factor = 0.05
+            	weekly_manpower = 30
+            	army_attack_factor = 0.08
+            } 
+        }
+
+        aus_idea_swiss_loans = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	political_power_factor = 0.08
+            	consumer_goods_factor = -0.03
+            	min_export = -0.07
+            	production_factory_max_efficiency_factor = 0.04
+            	weekly_manpower = -30
+            } 
+        }
+
+        aus_idea_catholic_zealotry = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_weekly = -0.001
+            	army_org_factor = -0.08
+            	army_attack_factor = 0.07
+            	army_core_defence_factor = 0.15
+            } 
+        }
+
+
+
+        aus_idea_traitorous_attack = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	army_defence_factor = 0.06
+            	conscription_factor = -0.05
+            	war_support_weekly = 0.005
+            	political_power_factor = -0.2
+            } 
+        }
+
+        aus_idea_unprepared_strike = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	army_attack_factor = -0.08
+            	war_support_weekly = -0.003
+            	training_time_army_factor = -0.2
+            	conscription_factor = 0.1
+            	political_power_factor = 0.15
+            	planning_speed = 0.15
+            } 
+        }
+
+        aus_idea_active_mobilization = {
+            picture = AUS_house_of_habsburg
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	conscription_factor = 0.15
+            	weekly_manpower = 150
+            	training_time_factor = -0.1
+            	monthly_population = -0.08
+            } 
+        }
+
+
+
+
+
+
+
+
+
+
+    }
+}

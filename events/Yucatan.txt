@@ -1,0 +1,113 @@
+##################################
+#
+#   Events for Yucatan
+#
+##################################
+
+add_namespace = YUCFlavour
+
+country_event = { #Manuel funds the Diario de Mérida
+	id = YUCFlavour.1
+	title = YUCFlavour.1.t
+	desc = YUCFlavour.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			tag = YUC
+			date > 1890.02.10
+		}
+	option = {
+		name = YUCFlavour.1.a
+		add_political_power = 100
+		add_stability = 0.01
+		SPR = {
+			add_stability = 0.01
+		}
+	}
+}
+
+country_event = { #Manuel funds the Diario de Mérida
+	id = YUCFlavour.2
+	title = YUCFlavour.2.t
+	desc = YUCFlavour.2.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			tag = YUC
+			date > 1890.02.10
+		}
+	option = {
+		name = YUCFlavour.1.a
+		add_political_power = 100
+		add_stability = 0.01
+		SPR = {
+			add_stability = 0.01
+		}
+	}
+}
+
+country_event = { #Spanish Official Murdered
+	id = YUCFlavour.2
+	title = YUCFlavour.2.t
+	desc = YUCFlavour.2.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			tag = YUC
+		}
+	mean_time_to_happen = {
+		days = 200
+		random = 100
+	}
+	option = {
+		name = YUCFlavour.2.a
+		add_political_power = -10
+		add_stability = -0.03
+	}
+}
+
+country_event = { #Mayan Unrest
+	id = YUCFlavour.3
+	title = YUCFlavour.3.t
+	desc = YUCFlavour.3.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			tag = YUC
+		}
+	mean_time_to_happen = {
+		days = 250
+		random = 100
+	}
+	option = {
+		name = YUCFlavour.3.a
+		add_political_power = -100
+		add_stability = -0.05
+	}
+}
+
+country_event = { #Mayan Sabotage
+	id = YUCFlavour.4
+	title = YUCFlavour.4.t
+	desc = YUCFlavour.4.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			tag = YUC
+		}
+	mean_time_to_happen = {
+		days = 250
+		random = 100
+	}
+	option = {
+		name = YUCFlavour.3.a
+		add_political_power = -100
+		add_stability = -0.02
+		damage_building = { type = infrastructure damage = 1 }
+	}
+}

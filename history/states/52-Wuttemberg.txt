@@ -1,0 +1,34 @@
+
+state={
+	id=52
+	name="STATE_52"
+	manpower = 1325711
+	resources={
+		iron = 1
+		wood = 6
+		gunpowder = 2
+		horses = 2  
+	}
+	
+	state_category = city
+
+	history={
+		owner = BAV
+		victory_points = {
+			692 15
+		}
+		victory_points = {
+			708 3 #10
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+			industrial_complex = 1
+		}
+		add_core_of = BAV
+	}
+
+	provinces={
+		692 707 708 3688 3705 6540 6693 9652 9666 11620 11638 11653 
+	}
+}

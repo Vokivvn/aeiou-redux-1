@@ -1,0 +1,29 @@
+
+state={
+	id=850
+	name="STATE_850"
+	manpower = 740291
+	state_category = city
+	
+	resources={
+		iron = 2
+		wood = 2 
+		gunpowder = 3 
+		horses = 2
+	}
+
+
+	history={
+		owner = KLE
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1 
+		}
+		add_core_of = KLE
+	}
+	
+	
+	provinces={
+		3444 3512 6469 
+	}
+}

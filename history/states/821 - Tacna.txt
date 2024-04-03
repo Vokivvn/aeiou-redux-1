@@ -1,0 +1,27 @@
+
+state={
+	id=821
+	name="STATE_821" 
+	manpower = 142418
+	
+	state_category = pastoral
+
+	resources = {
+		horses=2
+		wood=1
+	}
+
+	history={
+		owner = TAC
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = TAC
+
+	}
+
+	provinces={
+		5131 8217 8231 2174 10952 
+	}
+}

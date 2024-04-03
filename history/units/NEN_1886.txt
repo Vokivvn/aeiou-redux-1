@@ -1,0 +1,106 @@
+﻿division_template = {
+	name = "Infantry Division"
+
+	division_names_group = NEN_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+	}
+	priority = 3
+}
+division_template = {
+	name = "Landowner medium_cavalry"
+
+	division_names_group = NEN_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Peasant Battalion"
+
+	division_names_group = NEN_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st New Belfast Veteran Regiment 'Liberty'"
+		location = 7138
+		division_template = "Infantry Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		name = "2nd New Belfast Regiment 'Hutchinson'"
+		location = 7138
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Alabaman Organized Regiment 'Grenville'"
+		location = 12735
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "1st Georgian Organized Regiment 'Redbrook'"
+		location = 12384
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "1st Virginian Organized Regiment 'Sully'"
+		location = 10412
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "1st Popular Organized medium_cavalry"
+		location = 1132
+		division_template = "Landowner medium_cavalry"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "2nd Popular Organized medium_cavalry"
+		location = 7202
+		division_template = "Landowner medium_cavalry"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "1st Volunteer Battalion 'Overland'"
+		location = 788
+		division_template = "Peasant Battalion"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "2nd Volunteer Battalion 'Joseph'"
+		location = 10352
+		division_template = "Peasant Battalion"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "3rd Volunteer Battalion 'Felix'"
+		location = 7791
+		division_template = "Peasant Battalion"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "4th Volunteer Battalion 'Blackshaw'"
+		location = 3957
+		division_template = "Peasant Battalion"
+		start_experience_factor = 0.2
+	}
+}

@@ -1,0 +1,146 @@
+austria_rudolf_mechanics_category = {
+
+	icon = generic_political_actions
+
+	picture = GFX_decision_cat_austria_government
+
+	scripted_gui = AEIOU_Rudolf_OpMech_displayContainer
+
+	visible = { 
+		TAG = AUS
+	}
+	
+	available = { 
+		TAG = AUS
+    }
+
+}
+
+austria_uprising_status = {
+
+	icon = GFX_decision_category_military_operation
+
+	picture = GFX_decision_cat_austria_people
+
+	visible = {
+		TAG = AUS
+	}
+
+	available = {
+		TAG = AUS
+	}
+}
+
+austria_hre_loyalty = {
+
+	icon = GFX_decision_category_military_operation
+
+	picture = GFX_decision_cat_austria_people
+
+	visible = {
+		TAG = AUS
+	}
+
+	available = {
+		TAG = AUS
+	}
+}
+
+austria_army_effort = {
+	icon = GFX_decision_category_military_operation
+
+	picture = GFX_decision_cat_austria_people
+
+	visible = {
+		TAG = AUS
+		hidden_trigger = { has_global_flag = ten_divisions_plan }
+	}
+
+	available = {
+		TAG = AUS
+		hidden_trigger = { has_global_flag = ten_divisions_plan }
+	}
+}
+
+
+
+austria_industrialization_effort = {
+
+	icon = GFX_decision_category_generic_economy
+
+	picture = GFX_decision_cat_austria_people
+
+	visible = {
+		TAG = AUS
+	}
+
+	available = {
+		TAG = AUS
+	}
+}
+
+austria_hre_fragmentation = {
+
+	icon = GFX_decision_category_generic_economy
+
+	picture = GFX_decision_cat_austria_people
+
+	visible = {
+		TAG = AUS
+		hidden_trigger = { has_global_flag = aus_fragmentation_of_hre }
+	}
+
+	available = {
+		TAG = AUS
+		hidden_trigger = { has_global_flag = aus_fragmentation_of_hre }
+	}
+}
+
+
+
+austria_hre_actions = {
+
+	icon = GFX_decision_category_generic_economy
+
+	picture = GFX_decision_cat_austria_people
+
+	visible = {
+		TAG = AUS
+	}
+
+	available = {
+		TAG = AUS
+	}
+}
+
+
+austria_territorial_actions = {
+	icon = GFX_decision_category_generic_economy
+
+	picture = GFX_decision_cat_austria_people
+
+	visible = {
+		TAG = AUS
+		has_global_flag = auseugen_territorial_decisions_unlocked
+	}
+
+	available = {
+		TAG = AUS
+	}
+}
+
+
+
+austria_state_of_army = {
+	icon = GFX_decision_category_generic_economy
+
+	picture = GFX_decision_cat_austria_people
+
+	visible = {
+		TAG = AUS
+	}
+
+	available = {
+		TAG = AUS
+	}
+}

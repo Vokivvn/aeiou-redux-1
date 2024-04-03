@@ -1,0 +1,29 @@
+
+state={
+	id=424
+	name="STATE_424" # Madras
+	manpower = 15791700
+	state_category = rural
+	
+	resources={
+		wood=2
+		horses=1
+	}
+
+	history={
+		owner = VIJ
+		add_core_of = VIJ
+		victory_points = {
+			12180 1
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+
+	}
+
+	provinces={
+		1344 4414 5032 7310 10152 10296 10756 10897 12180 12779 
+	}
+}

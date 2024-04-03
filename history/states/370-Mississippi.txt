@@ -1,0 +1,37 @@
+
+state={
+	id=370
+	name="STATE_370"
+	manpower = 542935
+	
+	state_category = town
+
+	resources={
+		fabric=2
+		wood=2
+	}
+
+	history={
+		owner = LOU
+		victory_points = {
+			4464 1 
+		}
+		victory_points = {
+			7480 1 
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+			4464 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = LOU
+	}
+
+	provinces={
+		1615 4464 4510 4565 4650 7464 7668 8110 10410 10449 12328 12429 7480
+	}
+	
+}

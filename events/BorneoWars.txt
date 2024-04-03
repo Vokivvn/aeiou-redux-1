@@ -1,0 +1,78 @@
+#########################################
+      #Let the fireworks commence!
+#######################################
+
+
+add_namespace = borneowar
+
+	country_event = {
+		id = borneowar.1
+		title = borneowar.1.t
+		desc = borneowar.1.d
+		
+		fire_only_once = yes
+		
+		trigger = {
+			tag = BRU
+			date > 1886.07.09
+		}
+		
+		picture = GFX_country_event_borneo_01.dds
+		
+		option = {
+			name = borneowar.1.a
+            hidden_effect = {
+			    BRU = {
+                   declare_war_on = {
+                        target = DYK
+                        type = annex_everything
+                    }	
+			    } 	
+		    	every_country = {
+	    	        news_event = { id = story_news_events.4 days = 0 }
+	    		}				
+		    }	
+	    }
+    }
+	
+	country_event = {
+		id = borneowar.2
+		title = borneowar.2.t
+		desc = borneowar.2.d
+		
+		fire_only_once = yes
+		
+		trigger = {
+			tag = BRU
+			controls_state = 334
+			has_full_control_of_state = 901
+		}
+		
+		picture = GFX_country_event_borneo_01.dds
+		
+		option = {
+			name = borneowar.2.a
+            white_peace = DYK	
+	    }
+    }
+	
+	country_event = {
+		id = borneowar.3
+		title = borneowar.3.t
+		desc = borneowar.3.d
+		
+		fire_only_once = yes
+		
+		trigger = {
+			tag = DYK
+			has_full_control_of_state = 901
+		}
+		
+		picture = GFX_country_event_borneo_01.dds
+		
+		option = {
+			name = borneowar.3.a
+            white_peace = BRU	
+			transfer_state = 901
+	    }
+    }

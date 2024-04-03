@@ -1,0 +1,25 @@
+
+state={
+	id=820
+	name="STATE_820"
+	manpower = 248173
+	state_category = rural 
+	
+	resources = {
+	    horses = 1 
+	}
+
+	history={
+		owner = ANB
+		
+      buildings = {
+			infrastructure = 3
+		}
+
+		add_core_of = ANB
+	}
+
+	provinces={
+		11404 
+	}
+}

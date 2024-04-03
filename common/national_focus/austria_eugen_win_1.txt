@@ -1,0 +1,811 @@
+focus_tree = {
+	id = austria_eugen_win_1
+
+	country = {
+		factor = 0
+	}
+
+	
+	continuous_focus_position = { x = 50 y = 2000 }
+
+
+
+
+
+
+
+	focus = { 
+		id = AUS_emperor_of_all_germans
+		icon = GFX_
+		cost = 35
+	
+		x = 3
+		y = 0
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = aus_idea_eugens_rule3
+				add_idea = aus_idea_emperor_eugens_rule
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_let_all_roads_lead_to_wien
+		icon = GFX_
+		cost = 35
+	
+		x = 0
+		y = 2
+
+		relative_position_id = AUS_emperor_of_all_germans
+		
+		prerequisite = {
+			focus = AUS_emperor_of_all_germans
+		}
+		prerequisite = {
+			focus = AUS_purge_them
+			focus = AUS_grant_them_titles
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = aus_let_all_roads_lead_to_wien_tt
+			hidden_effect = {
+				every_state = {
+					LIMIT = {
+						controller = {
+							is_in_faction_with = AUS
+							OR = {
+								has_idea = hre_idea_elector
+								has_idea = hre_idea_prince
+								has_idea = hre_idea_conservative
+								has_idea = hre_idea_republic
+							}
+							NOT = {
+								tag = AUS
+							}
+						}
+					}
+					add_building_construction = {
+				    	type = infrastructure
+				    	level = 1
+				    	instant_build = yes
+					}	
+				}
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_stabilize_emperors_position
+		icon = GFX_
+		cost = 35
+	
+		x = -1
+		y = 1
+
+		relative_position_id = AUS_let_all_roads_lead_to_wien
+		
+		prerequisite = {
+			focus = AUS_let_all_roads_lead_to_wien
+		}
+
+		completion_reward = {
+			add_stability = 0.04
+			custom_effect_tooltip = aus_add_5_to_loyalty_in_hre_tt
+			add_5_to_loyalty_in_hre = yes
+		}
+	}
+
+	focus = { 
+		id = AUS_help_members_with_industrialization
+		icon = GFX_
+		cost = 35
+	
+		x = 1
+		y = 1
+
+		relative_position_id = AUS_let_all_roads_lead_to_wien
+		
+		prerequisite = {
+			focus = AUS_let_all_roads_lead_to_wien
+		}
+
+		completion_reward = {
+			IF = {
+				LIMIT = {
+					has_dlc = "Together for Victory"
+					#AUS = { NOT = { TAG = AUS } }
+				}
+				add_to_tech_sharing_group = hre_eugen_research
+				every_other_country = {
+					LIMIT = {
+						is_puppet_of = AUS
+						OR = {
+							has_idea = hre_idea_prince
+							has_idea = hre_idea_elector
+							has_idea = hre_idea_conservative
+							has_idea = hre_idea_republic
+						}
+					}
+					add_to_tech_sharing_group = hre_eugen_research
+				}
+				ELSE = {
+					AUS = {
+						add_ideas = { aus_idea_imperial_research_sharing }
+					}
+					every_other_country = {
+						LIMIT = {
+							is_puppet_of = AUS
+							OR = {
+								has_idea = hre_idea_prince
+								has_idea = hre_idea_elector
+								has_idea = hre_idea_conservative
+								has_idea = hre_idea_republic
+							}
+						}
+						add_ideas = { aus_idea_imperial_research_sharing }
+					}
+				}
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_initiate_kaiserliche_zusammenarbeit
+		icon = GFX_
+		cost = 35
+	
+		x = 1
+		y = 1
+
+		relative_position_id = AUS_stabilize_emperors_position
+		
+		prerequisite = {
+			focus = AUS_stabilize_emperors_position
+		}		
+		prerequisite = {
+			focus = AUS_help_members_with_industrialization
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = aus_add_5_to_loyalty_in_hre_tt
+			add_5_to_loyalty_in_hre = yes
+
+			every_country = {
+				LIMIT = {
+					OR = {
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_conservative
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_prince
+					}
+				}
+				add_opinion_modifier = {
+					target = AUS
+					modifier = AUS_kaiserliche_zusammenarbeit
+				}
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+	focus = { 
+		id = AUS_issue_with_german_nobility
+		icon = GFX_
+		cost = 35
+	
+		x = 5
+		y = 0
+
+		relative_position_id = AUS_emperor_of_all_germans
+
+		completion_reward = {
+			country_event = Auseugen.113
+		}
+	}
+
+	focus = { 
+		id = AUS_purge_them
+		icon = GFX_
+		cost = 35
+	
+		x = -1
+		y = 1
+
+		relative_position_id = AUS_issue_with_german_nobility
+
+		mutually_exclusive = {
+			focus = AUS_grant_them_titles
+		}
+		
+		prerequisite = {
+			focus = AUS_issue_with_german_nobility
+		}
+
+		completion_reward = {
+			add_political_power = 200
+			custom_effect_tooltip = aus_subtract_15_from_loyalty_in_hre_tt
+			subtract_15_from_loyalty_in_hre = yes
+			every_other_country = {
+				LIMIT = {
+					OR = {
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_conservative
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_elector
+					}
+					is_puppet_of = AUS
+				}
+				country_event = Auseugen.126
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_grant_them_titles
+		icon = GFX_
+		cost = 35
+	
+		x = 1
+		y = 1
+
+		relative_position_id = AUS_issue_with_german_nobility
+
+		mutually_exclusive = {
+			focus = AUS_purge_them
+		}
+		
+		prerequisite = {
+			focus = AUS_issue_with_german_nobility
+		}
+
+		completion_reward = {
+			add_stability = -0.05
+			custom_effect_tooltip = aus_add_10_to_loyalty_in_hre_tt
+			every_country = {
+				LIMIT = {
+					OR = {
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_conservative
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_elector
+					}
+					is_puppet_of = AUS
+				}
+				country_event = Auseugen.127
+			}
+			add_10_to_loyalty_in_hre = yes
+		}
+	}
+
+	focus = { 
+		id = AUS_problem_with_opposition
+		icon = GFX_
+		cost = 20
+	
+		x = 1
+		y = 1
+
+		relative_position_id = AUS_purge_them
+		
+		prerequisite = {
+			focus = AUS_purge_them
+			focus = AUS_grant_them_titles
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = { 
+		id = AUS_speech_to_my_people
+		icon = GFX_
+		cost = 35
+	
+		x = -1
+		y = 1
+
+		relative_position_id = AUS_problem_with_opposition
+		
+		mutually_exclusive = {
+			focus = AUS_act_of_terror
+		}
+
+		prerequisite = {
+			focus = AUS_problem_with_opposition
+		}
+
+		completion_reward = {
+			country_event = Auseugen.128
+			custom_effect_tooltip = aus_ruin_opposition_1_tt
+		}
+	}
+
+	focus = { 
+		id = AUS_act_of_terror
+		icon = GFX_
+		cost = 35
+	
+		x = 1
+		y = 1
+
+		relative_position_id = AUS_problem_with_opposition
+		
+		mutually_exclusive = {
+			focus = AUS_speech_to_my_people
+		}
+		
+		prerequisite = {
+			focus = AUS_problem_with_opposition
+		}
+
+		completion_reward = {
+			country_event = Auseugen.12800
+			custom_effect_tooltip = aus_ruin_opposition_2_tt
+		}
+	}
+
+
+
+
+
+	focus = { 
+		id = AUS_abolish_outer_influences
+		icon = GFX_
+		cost = 35
+	
+		x = 0
+		y = 2
+
+		relative_position_id = AUS_problem_with_opposition
+		
+		prerequisite = {
+			focus = AUS_speech_to_my_people
+			focus = AUS_act_of_terror
+		}
+
+		completion_reward = {
+			set_global_flag = aus_abolish_outer_influences
+			custom_effect_tooltip = aus_new_hre_decisions_tt
+		}
+	}
+
+
+
+
+
+
+
+	focus = { 
+		id = AUS_strive_to_german_discipline
+		icon = GFX_
+		cost = 35
+	
+		x = 13
+		y = 0
+
+		completion_reward = {
+			add_timed_idea = {
+			    idea = aus_idea_imitation_of_german_discipline
+			    days = 360
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_spread_catholicism_to_the_north
+		icon = GFX_
+		cost = 35
+	
+		x = 0
+		y = 2
+
+		relative_position_id = AUS_strive_to_german_discipline
+		
+		prerequisite = {
+			focus = AUS_strive_to_german_discipline
+		}
+		prerequisite = {
+			focus = AUS_purge_them
+			focus = AUS_grant_them_titles
+		}
+
+		completion_reward = {
+			set_global_flag = aus_spread_catholicism_to_the_north
+			custom_effect_tooltip = aus_new_hre_decisions_tt
+		}
+	}
+
+	focus = { 
+		id = AUS_separate_the_navy_from_the_infantry
+		icon = GFX_
+		cost = 35
+	
+		x = 0
+		y = 1
+
+		relative_position_id = AUS_spread_catholicism_to_the_north
+		
+		prerequisite = {
+			focus = AUS_spread_catholicism_to_the_north
+		}
+
+		completion_reward = {
+			add_ideas = { aus_idea_navy_improvements }
+		}
+	}
+
+	focus = { 
+		id = AUS_invest_in_better_equipment
+		icon = GFX_
+		cost = 35
+	
+		x = -1
+		y = 1
+
+		relative_position_id = AUS_separate_the_navy_from_the_infantry
+		
+		prerequisite = {
+			focus = AUS_separate_the_navy_from_the_infantry
+		}
+
+		completion_reward = {
+			random_list = {
+			    50 = {
+					add_tech_bonus = {
+					    bonus = 0.75
+					    uses = 1
+					    category = infantry_weapons
+					}
+			    }
+			    40 = {
+					add_tech_bonus = {
+					    bonus = 0.75
+					    uses = 1
+					    category = cavalry
+					}
+			    }
+			    10 = {
+					add_tech_bonus = {
+					    bonus = 0.5
+					    uses = 2
+					    category = infantry_weapons
+					    category = cavalry
+					}
+			    }
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_cut_down_slovakian_forests
+		icon = GFX_
+		cost = 35
+	
+		x = 1
+		y = 1
+
+		relative_position_id = AUS_separate_the_navy_from_the_infantry
+		
+		prerequisite = {
+			focus = AUS_separate_the_navy_from_the_infantry
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = aus_cut_down_slovakian_forests_tt
+			set_global_flag = aus_cut_down_slovakian_forests
+		}
+	}
+
+
+
+
+
+
+
+
+
+	focus = { 
+		id = AUS_promote_wien_university
+		icon = GFX_
+		cost = 35
+	
+		x = 0
+		y = 1
+
+		relative_position_id = AUS_initiate_kaiserliche_zusammenarbeit
+
+		mutually_exclusive = {
+			focus = AUS_imperial_conscription
+		}
+		
+		prerequisite = {
+			focus = AUS_initiate_kaiserliche_zusammenarbeit
+		}
+		prerequisite = {
+			focus = AUS_invest_in_better_equipment
+		}
+		prerequisite = {
+			focus = AUS_cut_down_slovakian_forests
+		}
+
+		completion_reward = {
+			add_ideas = { aus_idea_german_students }
+		}
+	}
+
+	focus = { 
+		id = AUS_imperial_conscription
+		icon = GFX_
+		cost = 35
+	
+		x = 1
+		y = 1
+
+		relative_position_id = AUS_invest_in_better_equipment
+
+		mutually_exclusive = {
+			focus = AUS_promote_wien_university
+		}
+		
+		prerequisite = {
+			focus = AUS_initiate_kaiserliche_zusammenarbeit
+		}
+		prerequisite = {
+			focus = AUS_invest_in_better_equipment
+		}
+		prerequisite = {
+			focus = AUS_cut_down_slovakian_forests
+		}
+
+
+		completion_reward = {
+			set_global_flag = aus_imperial_conscription_unlocked
+			custom_effect_tooltip = aus_new_hre_decisions_tt
+			set_variable = {
+				var = global.imperial_consc_perc
+				value = 0.03
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_imperial_free_trade
+		icon = GFX_
+		cost = 35
+	
+		x = 0
+		y = 1
+
+		relative_position_id = AUS_promote_wien_university
+
+		mutually_exclusive = {
+			focus = AUS_exploit_german_resources
+		}
+		
+		prerequisite = {
+			focus = AUS_promote_wien_university
+			focus = AUS_imperial_conscription
+		}
+
+		completion_reward = {
+			every_country = {
+				LIMIT = {
+					OR = {
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_conservative
+						has_idea = hre_idea_republic
+					}
+				}
+				add_ideas = { aus_idea_imperial_free_trade }
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_exploit_german_resources
+		icon = GFX_
+		cost = 35
+	
+		x = 0
+		y = 1
+
+		relative_position_id = AUS_imperial_conscription
+
+		mutually_exclusive = {
+			focus = AUS_imperial_free_trade
+		}
+		
+		prerequisite = {
+			focus = AUS_promote_wien_university
+			focus = AUS_imperial_conscription
+		}
+
+		completion_reward = {
+			every_country = {
+				LIMIT = {
+					OR = {
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_conservative
+						has_idea = hre_idea_republic
+					}
+				}
+				add_ideas = { aus_idea_export_to_austria }
+			}
+			add_ideas = aus_idea_import_from_german_states
+		}
+	}
+
+	focus = { 
+		id = AUS_help_for_all
+		icon = GFX_
+		cost = 35
+	
+		x = 0
+		y = 1
+
+		relative_position_id = AUS_imperial_free_trade
+
+		mutually_exclusive = {
+			focus = AUS_help_for_the_chosen
+		}
+		
+		prerequisite = {
+			focus = AUS_imperial_free_trade
+			focus = AUS_exploit_german_resources
+		}
+
+		completion_reward = {
+			every_other_country = {
+				LIMIT = {
+					OR = {
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_conservative
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_republic
+					}
+				}
+				add_ideas = { aus_idea_help_from_the_emperor }
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_help_for_the_chosen
+		icon = GFX_
+		cost = 35
+	
+		x = 0
+		y = 1
+
+		relative_position_id = AUS_exploit_german_resources
+
+		mutually_exclusive = {
+			focus = AUS_help_for_all
+		}
+		
+		prerequisite = {
+			focus = AUS_imperial_free_trade
+			focus = AUS_exploit_german_resources
+		}
+
+		completion_reward = {
+			every_other_country = {
+				LIMIT = {
+					OR = {
+						has_idea = hre_idea_elector
+						tag = BRD
+						tag = BAV
+						tag = HAN
+						AND = {
+							OR = {
+								has_idea = hre_idea_republic
+								has_idea = hre_idea_conservative
+								has_idea = hre_idea_elector
+								has_idea = hre_idea_republic
+							}
+							num_of_factories > 20
+						}
+					}
+				}
+				add_ideas = { aus_idea_focused_support }
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_advisors_from_wien
+		icon = GFX_
+		cost = 35
+	
+		x = 0
+		y = 1
+
+		relative_position_id = AUS_help_for_all
+
+		mutually_exclusive = {
+			focus = AUS_advisors_to_wien
+		}
+		
+		prerequisite = {
+			focus = AUS_help_for_all
+			focus = AUS_help_for_the_chosen
+		}
+
+		completion_reward = {
+			every_other_country = {
+				LIMIT = {
+					OR = {
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_conservative
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_republic
+					}
+				}
+				add_ideas = { aus_idea_advisors_from_wien }
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_advisors_to_wien
+		icon = GFX_
+		cost = 35
+	
+		x = 0
+		y = 1
+
+		relative_position_id = AUS_help_for_the_chosen
+
+		mutually_exclusive = {
+			focus = AUS_advisors_from_wien
+		}
+		
+		prerequisite = {
+			focus = AUS_help_for_all
+			focus = AUS_help_for_the_chosen
+		}
+
+		completion_reward = {
+			add_ideas = { aus_idea_german_advisors }
+		}
+	}
+
+	focus = { 
+		id = AUS_restoration_of_an_old_empire
+		icon = GFX_
+		cost = 35
+	
+		x = 5
+		y = 1
+
+		relative_position_id = AUS_advisors_from_wien
+		
+		prerequisite = {
+			focus = AUS_advisors_from_wien
+			focus = AUS_advisors_to_wien
+		}
+		prerequisite = {
+			focus = AUS_abolish_outer_influences
+		}
+
+		completion_reward = {
+			country_event = Auseugen.133
+		}
+	}
+
+
+
+
+}

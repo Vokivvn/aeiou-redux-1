@@ -1,0 +1,7986 @@
+########################
+# AEIOU Events
+###########################
+
+add_namespace = Ausrudolf
+
+country_event = { #A Report for the Emperor
+	id = Ausrudolf.1
+	title = Ausrudolf.1.t
+	desc = Ausrudolf.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.1.a 
+	}
+}
+
+country_event = { #Rudolf's Promises
+	id = Ausrudolf.2 
+	title = Ausrudolf.2.t
+	desc = Ausrudolf.2.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.2.a 		
+		add_to_variable = { aus_var_people = 0.04 }
+		add_political_power = -50
+		add_stability = 0.01
+	}
+}
+
+country_event = { 
+	id = Ausrudolf.3  #Visit Rome
+	title = Ausrudolf.3.t
+	desc = Ausrudolf.3.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.3.a #Request Concordat with the Pope
+		PAP = { country_event = { id = Ausrudolf.17 days = 35 } }
+	}
+}
+
+country_event = { 
+	id = Ausrudolf.4  #Threats and Actions for the Nobles
+	title = Ausrudolf.4.t
+	desc = Ausrudolf.4.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.4.a 
+		add_to_variable = { aus_var_habsburg_nobility = -0.08 }
+		add_to_variable = { aus_var_major_nobility = -0.08 }
+		add_to_variable = { aus_var_minor_nobility = -0.08 }
+		add_stability = -0.03 
+	}
+}
+
+country_event = { 
+	id = Ausrudolf.5 #Presents and Cajoling for the Nobles
+	title = Ausrudolf.5.t
+	desc = Ausrudolf.5.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.5.a 
+		add_to_variable = { aus_var_habsburg_nobility = -0.03 }
+		add_to_variable = { aus_var_major_nobility = -0.03 }
+		add_to_variable = { aus_var_minor_nobility = -0.03 }
+		add_political_power = -100
+		add_stability = -0.01 
+	}
+}
+
+country_event = { 
+	id = Ausrudolf.6 #Meet with the Deutschesmeister of the Teutonic Order
+	title = Ausrudolf.6.t
+	desc = Ausrudolf.6.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.6.a 
+		KOL = { country_event = { id = Ausrudolf.19 days = 10 } }
+	}
+}
+
+country_event = { 
+	id = Ausrudolf.7 #Meet with the Grandmaster of the Teutonic Order
+	title = Ausrudolf.7.t
+	desc = Ausrudolf.7.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.7.a 
+		PRS = { country_event = { id = Ausrudolf.21 days = 20 } }
+	}
+}
+
+country_event = { 
+	id = Ausrudolf.8 #Call for Council
+	title = Ausrudolf.8.t
+	desc = Ausrudolf.8.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.8.a 
+		country_event = { id = Ausrudolf.9 days = 25 }		
+	}
+}
+
+country_event = { 
+	id = Ausrudolf.9 #The Council meets 
+	title = Ausrudolf.9.t
+	desc = Ausrudolf.9.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.9.a 
+        add_political_power = 25		
+	}
+}
+
+country_event = { 
+	id = Ausrudolf.10 #Confront the Church 
+	title = Ausrudolf.10.t
+	desc = Ausrudolf.10.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.10.a 
+		
+		if =  { 
+		    limit = { check_variable = { aus_var_clergy > 0.5 } }
+		}
+		if =  { 
+		    limit = { check_variable = { aus_var_clergy < 0.51 } check_variable = { aus_var_clergy > 0.35 } }
+			add_stability = -0.04
+		}
+		if =  { 
+		    limit = { check_variable = { aus_var_clergy < 0.36 } }
+			add_stability = -0.08
+		}
+	}
+}
+
+country_event = { 
+	id = Ausrudolf.11 #Meet the Relatives 
+	title = Ausrudolf.11.t
+	desc = Ausrudolf.11.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.11.a #Promise to support them
+		trigger = { 
+		    NOT = {
+			    OR = {
+					has_country_flag = AUS_Rudolf_Support_Major_Nobility
+					has_country_flag = AUS_Rudolf_Support_Provincial_Nobility
+				}
+			}
+		}
+		set_country_flag = AUS_Rudolf_Support_Habsburg_Nobility
+		add_to_variable = { aus_var_habsburg_nobility = 0.06 }
+	}
+	option = {
+		name = Ausrudolf.11.b #No promises
+	}
+}
+
+country_event = { 
+	id = Ausrudolf.12 #Meet the German nobles
+	title = Ausrudolf.12.t
+	desc = Ausrudolf.12.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.12.a #Promise to support them
+		trigger = { 
+		    NOT = {
+			    OR = {
+					has_country_flag = AUS_Rudolf_Support_Habsburg_Nobility
+					has_country_flag = AUS_Rudolf_Support_Provincial_Nobility
+				}
+			}
+		}
+		set_country_flag = AUS_Rudolf_Support_Major_Nobility
+		add_to_variable = { aus_var_major_nobility = 0.06 }
+	}
+	option = {
+		name = Ausrudolf.12.b #No promises
+	}
+}
+
+country_event = { 
+	id = Ausrudolf.13 #Meet the Provincial nobles 
+	title = Ausrudolf.13.t
+	desc = Ausrudolf.13.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.13.a  #Promise to support them
+		trigger = { 
+		    NOT = {
+			    OR = {
+					has_country_flag = AUS_Rudolf_Support_Habsburg_Nobility
+					has_country_flag = AUS_Rudolf_Support_Major_Nobility
+				}
+			}
+		}
+		set_country_flag = AUS_Rudolf_Support_Provincial_Nobility
+		add_to_variable = { aus_var_minor_nobility = 0.06 }
+	}
+	option = {
+		name = Ausrudolf.13.b #No promises
+	}
+}
+
+country_event = { 
+	id = Ausrudolf.14 #People's Freedom
+	title = Ausrudolf.14.t
+	desc = Ausrudolf.14.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.14.a 
+		add_to_variable = { aus_var_people = 0.07 } 
+		add_stability = 0.06
+		add_political_power = -125
+	}
+}
+
+country_event = { 
+	id = Ausrudolf.15 #Clergy's Fate 
+	title = Ausrudolf.15.t
+	desc = Ausrudolf.15.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.15.a 
+		if = { 
+		    limit = {
+			    OR = {
+		    	    AND = {
+		        	    has_global_flag = AUS_Austrian_Teutonic_Agreement
+		        		has_global_flag = AUS_Austrian_Deutschesmeister_Agreement
+			            has_global_flag = AUS_Austrian_Catholic_Concordat
+			    	}
+					AND = {
+					    OR = {			
+		        	        has_global_flag = AUS_Austrian_Teutonic_Agreement
+		        	    	has_global_flag = AUS_Austrian_Deutschesmeister_Agreement
+			                has_global_flag = AUS_Austrian_Catholic_Concordat
+                        }
+                        has_country_flag = AUS_flag_Peaceful_Secularization						
+					}
+			  	}
+			}
+			add_ideas = aus_idea_moderate_secularization
+			add_to_variable = { aus_var_clergy = -0.02 }
+			else = {
+			    add_ideas = aus_idea_aggressive_secularization
+				add_to_variable = { aus_var_clergy = -0.07 }
+				
+			}
+			clamp_variable = {
+				var = aus_var_clergy
+				min = 0
+				max = 1
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = Ausrudolf.16 #The New Society
+	title = Ausrudolf.16.t
+	desc = Ausrudolf.16.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.16.a
+	}
+}
+
+country_event = { 
+	id = Ausrudolf.17 #Request Concordat with the Pope
+	title = Ausrudolf.17.t
+	desc = Ausrudolf.17.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = { #Pope agrees to Concordat 
+		name = Ausrudolf.17.a 
+		
+		set_global_flag = AUS_Austrian_Catholic_Concordat
+		AUS = { country_event = { id = Ausrudolf.18 days = 15 } }
+	}
+	
+	option = { #Pope refuses to Concordat 
+		name = Ausrudolf.17.b
+		AUS = { country_event = { id = Ausrudolf.18 days = 15 } }
+	}
+}
+
+country_event = { 
+	id = Ausrudolf.18 #Concordat stuff
+	title = Ausrudolf.18.t
+	desc = Ausrudolf.18.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.18.a #Pope agrees to Concordat
+		trigger = {
+		    has_global_flag = AUS_Austrian_Catholic_Concordat
+		}
+		add_to_variable = { aus_var_clergy = -0.03 }
+		clamp_variable = {
+			var = aus_var_clergy
+			min = 0
+			max = 1
+		}
+	}
+	
+	option = {
+		name = Ausrudolf.18.b #Pope refuses to Concordat 
+		trigger = {
+		    NOT = { has_global_flag = AUS_Austrian_Catholic_Concordat }
+		}
+	    add_to_variable = { aus_var_clergy = -0.08 }
+		clamp_variable = {
+			var = aus_var_clergy
+			min = 0
+			max = 1
+		}
+	}
+}
+
+country_event = { 
+	id = Ausrudolf.19 #A Delegation from Austria - Cologne
+	title = Ausrudolf.19.t
+	desc = Ausrudolf.19.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.19.a #Deutschesmeister agrees to the secularization
+		
+	    AUS = { set_global_flag = AUS_Austrian_Deutschesmeister_Agreement }
+		AUS = { country_event = { id = Ausrudolf.20 days = 15 } }
+	}
+	
+	option = {
+		name = Ausrudolf.19.b #Deutschesmeister does not agree to the secularization
+		
+	    AUS = { country_event = { id = Ausrudolf.20 days = 15 } }
+	}
+}
+
+country_event = { 
+	id = Ausrudolf.20 #The Deutschesmeister's Reply
+	title = Ausrudolf.20.t
+	desc = Ausrudolf.20.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.20.a #Deutschesmeister agrees to the secularization
+		trigger = {
+		    has_global_flag = AUS_Austrian_Deutschesmeister_Agreement
+		}
+		add_to_variable = { aus_var_clergy = -0.01 }
+		clamp_variable = {
+			var = aus_var_clergy
+			min = 0
+			max = 1
+		}
+	}
+	option = {
+		name = Ausrudolf.20.b #Deutschesmeister does not agree to the secularization
+		trigger = {
+		    NOT = { has_global_flag = AUS_Austrian_Deutschesmeister_Agreement }
+		}
+		add_to_variable = { aus_var_clergy = -0.04 }
+		clamp_variable = {
+			var = aus_var_clergy
+			min = 0
+			max = 1
+		}
+	}
+}
+
+country_event = { 
+	id = Ausrudolf.21 #A Delegation from Austria - State of the Teutonic Order
+	title = Ausrudolf.21.t
+	desc = Ausrudolf.21.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.21.a #the Hochmeister agrees to the secularization
+		
+		AUS = { set_global_flag = AUS_Austrian_Teutonic_Agreement }
+		AUS = { country_event = { id = Ausrudolf.22 days = 20 } }
+	}
+	option = {
+		name = Ausrudolf.21.b #Deutschesmeister doesn't agree to the secularization		
+		AUS = { country_event = { id = Ausrudolf.22 days = 20 } }
+	}
+}
+
+country_event = { 
+	id = Ausrudolf.22 #The Hochmeister's answer
+	title = Ausrudolf.22.t
+	desc = Ausrudolf.22.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.22.a #Hochmeister agrees to the secularization
+		trigger = {
+		    has_global_flag = AUS_Austrian_Teutonic_Agreement
+		}
+		add_to_variable = { aus_var_clergy = -0.02 }
+		clamp_variable = {
+			var = aus_var_clergy
+			min = 0
+			max = 1
+		}
+	}
+	option = {
+		name = Ausrudolf.22.b #Hochmeister does not agree to the secularization
+		trigger = {
+		    NOT = { has_global_flag = AUS_Austrian_Teutonic_Agreement }
+		}
+		add_to_variable = { aus_var_clergy = -0.06 }
+		clamp_variable = {
+			var = aus_var_clergy
+			min = 0
+			max = 1
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+country_event = { 
+	id = Ausrudolf.30 #bruh
+	title = Ausrudolf.30.t
+	desc = Ausrudolf.30.d	
+	#picture = GFX_report_news_event_rome_01
+	fire_only_once = yes
+	trigger = {
+		if = {
+			limit = { check_variable = { aus_var_clergy < 0.36 } }
+		}
+	}	
+	option = {
+		name = Ausrudolf.30.a 
+	}
+	option = {
+		name = Ausrudolf.30.b 
+	}
+}
+
+country_event = {
+	id = Ausrudolf.31 #First Estate
+	title = Ausrudolf.31.t
+	desc = Ausrudolf.31.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.31.a 
+		AUS_people_add = yes
+	}
+}
+
+country_event = {
+	id = Ausrudolf.32 #Austrian reaction to the Ivory Market crash
+	title = Ausrudolf.32.t
+	desc = Ausrudolf.32.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.32.a 
+		add_political_power = 10
+	}
+}
+
+country_event = {
+	id = Ausrudolf.33 #Second Estate
+	title = Ausrudolf.33.t
+	desc = Ausrudolf.33.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.32.a 
+		add_political_power = 5
+		AUS_people_add = yes
+	}
+}
+
+country_event = {
+	id = Ausrudolf.34 #Third Estate
+	title = Ausrudolf.34.t
+	desc = Ausrudolf.34.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.34.a 
+		add_stability = 0.01
+	}
+}
+
+country_event = {
+	id = Ausrudolf.35 #Clergy's reaction (to the decision of reconising popes authority)
+	title = Ausrudolf.35.t
+	desc = Ausrudolf.35.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.35.a
+		trigger = {
+			has_global_flag = aus_clergy_pope_1
+		}
+		add_stability = -0.02
+		add_political_power = -15
+	}
+	option = {
+		name = Ausrudolf.35.b
+		trigger = {
+			has_global_flag = aus_clergy_pope_2
+		}
+		add_stability = 0.015
+		add_political_power = 10
+	}
+}
+
+country_event = {
+	id = Ausrudolf.36     # Locke & Voltaire
+	title = Ausrudolf.36.t
+	desc = Ausrudolf.36.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.36.a
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = Ausrudolf.37     # Nietzsche
+	title = Ausrudolf.37.t
+	desc = Ausrudolf.37.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.37.a
+		add_war_support = 0.02
+	}
+}
+
+country_event = {
+	id = Ausrudolf.38     # Burke
+	title = Ausrudolf.38.t
+	desc = Ausrudolf.38.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.38.a
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = Ausrudolf.39     # Read Machiavelli
+	title = Ausrudolf.39.t
+	desc = Ausrudolf.39.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.39.a
+		add_ideas = { aus_idea_inspired_by_the_prince }
+	}
+}
+
+country_event = {
+	id = Ausrudolf.40     # trigger event
+	title = Ausrudolf.40.t
+	desc = Ausrudolf.40.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	hidden = yes
+	
+	option = {
+		name = Ausrudolf.40.a
+		every_country = {
+			LIMIT = {
+				original_tag = AUS
+				has_idea = aus_idea_fight_against_illiteracy
+			}
+			country_event = Ausrudolf.41
+		}
+	}
+}
+
+country_event = {
+	id = Ausrudolf.41     # Peasantry Educated
+	title = Ausrudolf.41.t
+	desc = Ausrudolf.41.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.41.a
+		add_political_power = 75
+		swap_ideas = {
+			remove_idea = aus_idea_fight_against_illiteracy
+			add_idea = aus_idea_literate_peasantry
+		}
+	}
+}
+
+country_event = {
+	id = Ausrudolf.42     # Cutting of Clergy's Influence
+	title = Ausrudolf.42.t
+	desc = Ausrudolf.42.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.42.a
+	}
+}
+
+country_event = {
+	id = Ausrudolf.43     # People's voice     (CAN BE EITHER GOOD OR BAD)
+	title = Ausrudolf.43.t
+	desc = Ausrudolf.43.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.43.a     # another step closer!
+		trigger = {
+			has_global_flag = aus_social_contract_good
+		}
+	}
+	option = {
+		name = Ausrudolf.43.b     # why don't they understand?
+		trigger = {
+			has_global_flag = aus_social_contract_bad
+		}
+		add_stability = -0.025
+		add_timed_idea = {
+			idea = aus_idea_minor_riots
+			days = 90
+		}
+		hidden_effect = {
+			country_event = {
+				id = Ausrudolf.44
+				days = 15
+				random = 120
+			}
+			country_event = {
+				id = Ausrudolf.44
+				days = 30
+				random = 180
+			}
+			country_event = {
+				id = Ausrudolf.44
+				days = 50
+				random = 240
+			}
+			country_event = {
+				id = Ausrudolf.44
+				days = 75
+				random = 300
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Ausrudolf.44     # rioters strike
+	title = Ausrudolf.44.t
+	desc = Ausrudolf.44.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.44.a  # do nothing
+		random_list = {
+			50 = {
+				add_political_power = -10
+				add_stability = -0.005
+				random_list = {
+					33 = {
+						custom_effect_tooltip = aus_strike_habsburg_noble_tt
+						add_to_variable = { aus_var_habsburg_nobility = -0.02 }
+						clamp_variable = {
+							var = aus_var_habsburg_nobility
+							min = 0
+							max = 1
+						}
+					}
+					33 = {
+						custom_effect_tooltip = aus_strike_major_noble_tt
+						add_to_variable = { aus_var_major_nobility = -0.02 }
+						clamp_variable = {
+							var = aus_var_major_nobility
+							min = 0
+							max = 1
+						}
+					}
+					34 = {
+						custom_effect_tooltip = aus_strike_minor_noble_tt
+						add_to_variable = { aus_var_minor_nobility = -0.02 }
+						clamp_variable = {
+							var = aus_var_minor_nobility
+							min = 0
+							max = 1
+						}
+					}
+				}
+			}
+
+			 
+			50 = {
+				custom_effect_tooltip = aus_strike_infrastructure_damaged_tt
+				hidden_effect = {
+					4 = {
+						damage_building	= {
+							type = infrastructure
+							damage = 2
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = Ausrudolf.44.b  # send in the soldiers
+			add_manpower = -150
+			random_list = {
+				65 = {
+					custom_effect_tooltip = aus_strike_people_pacified_tt
+				}
+				30 = {
+					custom_effect_tooltip = aus_strike_incompetent_soldiers_tt
+					add_manpower = -100
+					add_political_power = -25
+				}
+				5 = {
+					custom_effect_tooltip = aus_strike_slaughter_on_the_strikers_tt
+					add_manpower = -200
+					4 = {
+						add_manpower = -250
+					}
+					AUS_people_remove = yes
+				}
+			}
+	}
+}
+
+country_event = {
+	id = Ausrudolf.46     # increasing control (description of rudolf's actions to force nobles to obey)
+	title = Ausrudolf.46.t
+	desc = Ausrudolf.46.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.46.a
+		add_political_power = 15
+	}
+}
+
+
+
+country_event = {
+	id = Ausrudolf.47     # nobles form coalition
+	title = Ausrudolf.47.t
+	desc = Ausrudolf.47.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.47.a
+        add_stability = -0.07
+        custom_effect_tooltip = aus_nobles_furious_tt
+        add_to_variable = { aus_var_habsburg_nobility = -0.1 }
+        add_to_variable = { aus_var_major_nobility = -0.1 }
+        add_to_variable = { aus_var_minor_nobility = -0.1 }
+		clamp_variable = {
+			var = aus_var_habsburg_nobility
+			min = 0
+			max = 1
+		}
+		clamp_variable = {
+			var = aus_var_major_nobility
+			min = 0
+			max = 1
+		}
+		clamp_variable = {
+			var = aus_var_minor_nobility
+			min = 0
+			max = 1
+		}
+        set_global_flag = aus_nobility_unsatisfied
+	}
+}
+
+
+
+country_event = {
+	id = Ausrudolf.48     # The Final Strike (clergy situation)
+	title = Ausrudolf.48.t
+	desc = Ausrudolf.48.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.48.a
+		add_political_power = 150
+		IF = {
+			LIMIT = {
+				check_variable = { aus_var_clergy < 0.4 }
+			}
+			set_global_flag = aus_clergy_unsatisfied
+			custom_effect_tooltip = aus_clergy_furious_tt
+			add_to_variable = { aus_var_clergy = -0.1 }
+			clamp_variable = {
+				var = aus_var_clergy
+				min = 0
+				max = 1
+			}
+			ELSE = {
+				AUS_clergy_remove = yes
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+country_event = {
+	id = Ausrudolf.1000     # DEBUG TOOL
+	title = Ausrudolf.1000.t
+	desc = Ausrudolf.1000.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Ausrudolf.1000.a
+		remove_ideas = { aus_idea_democracy_2_1 }
+	}
+	option = {
+		name = Ausrudolf.1000.b
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+####  #  #   ###  ####  #   #
+#     #  #  #     #     ##  #
+####  #  #  # ##  ####  # # #
+#     #  #  #  #  #     #  ##
+####   ##    ##   ####  #   #
+
+
+
+
+add_namespace = Auseugen
+
+country_event = {
+	id = Auseugen.1 #Restoring Past Order for AUS  FT
+	title = Auseugen.1.t
+	desc = Auseugen.1.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.1.a 
+		add_stability = 0.02
+		every_other_country = {
+				limit = {
+					OR = {
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_prince
+						tag = FRK
+						tag = DOR
+						tag = BRE
+						tag = HAM
+						tag = LBK
+					}
+				}
+				country_event = Auseugen.2
+			}
+	}
+}
+
+country_event = {
+	id = Auseugen.2 #Restoring Past Order for HRE   FT
+	title = Auseugen.2.t
+	desc = Auseugen.2.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.2.a 
+		add_opinion_modifier = {
+			target = AUS
+			modifier = AUS_threat_to_independence
+		}
+	}
+
+	option = {
+		name = Auseugen.2.b
+		add_opinion_modifier = {
+			target = AUS
+			modifier = AUS_threat_to_independence
+		}
+	}
+}
+
+
+country_event = {
+	id = Auseugen.3 #Critisize Decrease of Traditionalism for AUS   FT
+	title = Auseugen.3.t
+	desc = Auseugen.3.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.3.a 
+		add_war_support = 0.02
+		every_other_country = {
+				limit = {
+					OR = {
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_prince
+						tag = FRK
+						tag = DOR
+						tag = BRE
+						tag = HAM
+						tag = LBK
+					}
+				}
+				country_event = Auseugen.4
+			}
+	}
+}
+
+country_event = {
+	id = Auseugen.4 #Critisize Decrease of Traditionalism for HRE   FT
+	title = Auseugen.4.t
+	desc = Auseugen.4.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.4.a 
+		add_opinion_modifier = {
+			target = AUS
+			modifier = AUS_austrian_radical_traditionalism
+		}	
+	}
+}
+
+
+
+country_event = {
+	id = Auseugen.5 #True Faith for AUS   FT
+	title = Auseugen.5.t
+	desc = Auseugen.5.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.5.a 
+		add_stability = -0.03
+		every_other_country = {
+				limit = {
+					OR = {
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_prince
+						tag = FRK
+						tag = DOR
+						tag = BRE
+						tag = HAM
+						tag = LBK
+					}
+					NOT = {
+						tag = BRD
+						tag = MCK
+						tag = LBK
+						tag = HAM
+						tag = BRE
+						tag = OLD
+						tag = KLE
+						tag = SCH
+					}
+				}
+				country_event = Auseugen.6
+			}
+		every_other_country = {
+				limit = {
+					OR = {
+						tag = BRD
+						tag = MCK
+						tag = LBK
+						tag = HAM
+						tag = BRE
+						tag = OLD
+						tag = KLE
+						tag = SCH
+					}
+				}
+				country_event = Auseugen.7
+			}
+	}
+}
+
+country_event = {
+	id = Auseugen.6 #True Faith for catholics   FT
+	title = Auseugen.6.t
+	desc = Auseugen.6.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.6.a 
+		add_opinion_modifier = {
+			target = AUS
+			modifier = AUS_propagated_cathocicism
+		}	
+	}
+}
+
+country_event = {
+	id = Auseugen.7 #True Faith for protestants   FT
+	title = Auseugen.7.t
+	desc = Auseugen.7.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.7.a 
+		add_war_support = 0.03
+		add_opinion_modifier = {
+			target = AUS
+			modifier = AUS_opposed_protestantism
+
+		}	
+	}
+}
+
+
+
+
+
+
+
+country_event = {
+	id = Auseugen.8 #Dissaprove Agressive Expansion for AUS   FT
+	title = Auseugen.8.t
+	desc = Auseugen.8.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.8.a 
+		add_stability = 0.02
+		every_other_country = {
+				limit = {
+					OR = {
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_prince
+						tag = ULM
+						tag = FRK
+						tag = DOR
+					}
+					any_owned_state = {
+						NOT = {
+								is_core_of = PREV
+							}
+					}
+				}
+				country_event = Auseugen.9
+			}
+	}
+}
+
+country_event = {
+	id = Auseugen.9 #Dissaprove Agressive Expansion for Agressive HRE   FT
+	title = Auseugen.9.t
+	desc = Auseugen.9.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.9.a 
+		add_war_support = 0.05
+		add_opinion_modifier = {
+			target = AUS
+			modifier = AUS_intervienes_in_the_foreign_policy
+		}	
+	}
+}
+
+
+
+
+country_event = {
+	id = Auseugen.10 #One King for them all for AUS   FT
+	title = Auseugen.10.t
+	desc = Auseugen.10.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.10.a 
+		every_other_country = {
+				limit = {
+					OR = {
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_prince
+						tag = ULM
+						tag = FRK
+						tag = DOR
+					}
+				}
+				country_event = Auseugen.11
+			}
+	}
+}
+
+country_event = {
+	id = Auseugen.11 #Dissaprove Agressive Expansion for Agressive HRE   FT
+	title = Auseugen.11.t
+	desc = Auseugen.11.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.11.a 
+		add_ideas = aus_idea_defensive_mobilization
+		add_opinion_modifier = {
+			target = AUS
+			modifier = AUS_claimed_our_throne
+		}	
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##########################################
+###VENICE LONG AND GLORIOUS EVENT CHAIN###
+##########################################
+
+
+country_event = {
+	id = Auseugen.12 #Alliance with Venice    #Begining started by focus | VNC
+	title = Auseugen.12.t
+	desc = Auseugen.12.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.12.a   #Thats good idea! 
+		AUS = {
+			add_ideas = { 
+				aus_idea_alliance_with_venice
+			}
+		}
+		VNC = {
+			add_ideas = { 
+				aus_idea_alliance_with_austria
+			}
+			diplomatic_relation = {
+				country = AUS
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		AUS = {
+			country_event = Auseugen.25
+		}
+		ai_chance = {
+			base = 6
+		}
+	}
+	option = {
+		name = Auseugen.12.b   #Only if they pay us! 	
+		AUS = {
+			country_event = Auseugen.13
+		}	
+		ai_chance = {
+			base = 3
+		}
+	}
+	option = {
+		name = Auseugen.12.c   #Maybe not
+		AUS = {
+			country_event = Auseugen.19
+		}
+	}
+}
+
+	
+country_event = {
+	id = Auseugen.13 #Alliance with Venice    ###Only if they pay us! | AUS
+	title = Auseugen.13.t
+	desc = Auseugen.13.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.13.a 		### Okay
+		AUS = {
+			diplomatic_relation = {
+				country = VNC
+				relation = non_aggression_pact
+				active = yes
+			}
+			add_ideas = { 
+				aus_idea_alliance_with_venice
+			}
+			add_political_power = -200
+		}
+		VNC = {
+			add_ideas = { 
+				aus_idea_alliance_with_austria
+			}
+			add_political_power = 200
+		}
+		VNC = {
+			country_event = Auseugen.14
+		}
+		ai_chance = {
+			base = 2
+		}
+	}
+	option = {
+		name = Auseugen.13.b 		### Not an option
+		VNC = {
+			country_event = Auseugen.15
+		}
+	}
+}
+
+
+country_event = {
+	id = Auseugen.14 #Alliance with Venice    ### Okay | VNC
+	title = Auseugen.14.t
+	desc = Auseugen.14.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.14.a 
+	}
+}
+
+
+country_event = {
+	id = Auseugen.15 #Alliance with Venice   ### Not an option | VNC
+	title = Auseugen.15.t
+	desc = Auseugen.15.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.15.a ### We won't sign it!
+		AUS = {
+			country_event = Auseugen.17
+		}
+	}
+
+	option = {
+		name = Auseugen.15.b ### Let's back down 
+		AUS = {
+			diplomatic_relation = {
+				country = VNC
+				relation = non_aggression_pact
+				active = yes
+			}
+			add_ideas = { 
+				aus_idea_alliance_with_venice
+			}
+		}
+		VNC = {
+			add_ideas = { 
+				aus_idea_alliance_with_austria
+			}
+		}
+		AUS = {
+			country_event = Auseugen.16
+		}
+		ai_chance = {
+			base = 2
+		}	
+	}
+}
+
+country_event = {
+	id = Auseugen.16 #Alliance with Venice   ### Let's back down | AUS
+	title = Auseugen.16.t
+	desc = Auseugen.16.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.16.a ### Venice accepts
+		}
+	}
+
+
+country_event = {
+	id = Auseugen.17 #Alliance with Venice   ### We wont sign it! | AUS
+	title = Auseugen.17.t
+	desc = Auseugen.17.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.18.a ### Embargo them!
+		AUS = {
+			add_political_power = -100
+			add_opinion_modifier = {
+				target = VNC
+				modifier = AUS_embargo
+			}	
+		}
+		VNC = {
+			add_ideas = aus_idea_austrian_embargo
+		}
+		VNC = {
+			country_event = Auseugen.18
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.18 #Alliance with Venice    ### Embargo them! VNC
+	title = Auseugen.18.t
+	desc = Auseugen.18.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.18.a ### Oh no
+	}
+}
+
+country_event = {
+	id = Auseugen.19 #Alliance with Venice   ### Maybe not
+	title = Auseugen.19.t
+	desc = Auseugen.19.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+
+	option = {
+		name = Auseugen.19.a ### Maybe an ultimatum would make them wiser
+		VNC = {
+			country_event = Auseugen.21
+		}
+		ai_chance = {
+			base = 3
+		}
+	}	
+	option = {
+		name = Auseugen.19.b ### We'll see what they can do without us!
+		VNC = {
+			country_event = Auseugen.20
+		}
+	}
+
+}
+
+country_event = {
+	id = Auseugen.20 #Alliance with Venice    We'll see what they can do without us! | VMC
+	title = Auseugen.20.t
+	desc = Auseugen.20.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.20.a ### Good
+	}
+}
+
+country_event = {
+	id = Auseugen.21 #Alliance with Venice   ### Maybe an ultimatum would make them wiser
+	title = Auseugen.21.t
+	desc = Auseugen.21.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.21.a ### Now they're talking
+		AUS = {
+			diplomatic_relation = {
+				country = VNC
+				relation = non_aggression_pact
+				active = yes
+			}
+			add_ideas = { 
+				aus_idea_alliance_with_venice
+			}
+		}
+		VNC = {
+			add_ideas = { 
+				aus_idea_alliance_with_austria
+			}
+		}
+		AUS = {
+			country_event = Auseugen.22
+		}
+		ai_chance = {
+			base = 2
+		}
+	}
+
+	option = {
+		name = Auseugen.21.b ### We know what we want
+		AUS = {
+			country_event = Auseugen.23
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.22 #Alliance with Venice   ### Now they're talking
+	title = Auseugen.22.t
+	desc = Auseugen.22.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.22.a ### Maybe they're not that stupid after all
+	}
+}
+
+country_event = {
+	id = Auseugen.23 #Alliance with Venice   ### We know what we want
+	title = Auseugen.23.t
+	desc = Auseugen.23.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.23.a ### Embargo them!
+		AUS = {
+			add_political_power = -100
+			add_opinion_modifier = {
+				target = VNC
+				modifier = AUS_embargo
+			}	
+		}
+		VNC = {
+			add_ideas = aus_idea_austrian_embargo
+		}
+		VNC = {
+			country_event = Auseugen.18
+		}
+		ai_chance = {
+			base = 2
+		}
+	}
+
+	option = {
+		name = Auseugen.23.b ### We'll make peace on our own!
+		AUS = {
+			declare_war_on = {
+				target = VNC
+				type = topple_government
+			}
+		}
+		VNC = {
+			country_event = Auseugen.24
+		} 
+	}
+}
+
+country_event = {
+	id = Auseugen.24 #Alliance with Venice   ### We'll make peace on our own!
+	title = Auseugen.24.t
+	desc = Auseugen.24.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.24.a ### Whoops
+	}
+}
+
+country_event = {
+	id = Auseugen.25 #Alliance with Venice   ### Thats good idea! | AUS
+	title = Auseugen.25.t
+	desc = Auseugen.25.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.25.a ### nice
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+country_event = {
+	id = Auseugen.26 #Brother against Brother for Austria 	FT
+	title = Auseugen.26.t
+	desc = Auseugen.26.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.26.a 
+		every_country = {
+			LIMIT = {
+				OR = {
+					tag = BRD
+					tag = BAV
+					tag = HAN
+					tag = SAX
+					tag = MUN
+					tag = WRZ
+					tag = WUR
+					tag = MCK
+					tag = THU
+					tag = KSS
+				}
+			}
+			country_event = Auseugen.27
+		}
+		every_country = {
+			LIMIT = {
+				NOT = {
+					tag = BRD
+					tag = BAV
+					tag = HAN
+					tag = SAX
+					tag = MUN
+					tag = WRZ
+					tag = WUR
+					tag = MCK
+					tag = THU
+					tag = KSS
+				}
+				OR = {
+					has_idea = hre_idea_prince
+					has_idea = hre_idea_elector
+				}
+			}
+			country_event = Auseugen.28
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.27 #Brother against Brother for major HRE members 	FT
+	title = Auseugen.27.t
+	desc = Auseugen.27.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.27.a
+		add_war_support = 0.05
+		add_opinion_modifier = {
+			target = AUS
+			modifier = AUS_wants_to_subordinate_hre
+
+		}
+	}
+}
+
+
+country_event = {
+	id = Auseugen.28 #Brother against Brother for minor HRE members 	FT
+	title = Auseugen.28.t
+	desc = Auseugen.28.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.28.a 
+		add_opinion_modifier = {
+			target = AUS
+			modifier = AUS_criticized_fratricide
+		}
+	}
+}
+
+
+country_event = {
+	id = Auseugen.29 #Cooperation with Venice for Venice 	FT
+	title = Auseugen.29.t
+	desc = Auseugen.29.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.29.a #ok
+		add_ideas = { aus_idea_cooperation_with_austria }
+		AUS = {
+			add_ideas = { aus_idea_cooperation_with_venice }
+			country_event =  Auseugen.30 
+		}
+		ai_chance = {
+			base = 9
+		}
+	}
+	option = {
+		name = Auseugen.29.b #nope
+		add_political_power = -50
+		add_stability = -0.1
+		AUS = {
+			country_event =  Auseugen.31 
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.30 #Cooperation with Venice for Austria accepted	FT
+	title = Auseugen.30.t
+	desc = Auseugen.30.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.30.a
+	}
+}
+
+country_event = {
+	id = Auseugen.31 #Cooperation with Venice for Austria denied	FT
+	title = Auseugen.31.t
+	desc = Auseugen.31.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.31.a
+	}
+}
+
+
+
+
+country_event = {
+	id = Auseugen.32 #Call Venice to war 1
+	title = Auseugen.32.t
+	desc = Auseugen.32.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.32.a
+		
+	}
+}
+
+country_event = {
+	id = Auseugen.33 #Call Venice to war 2
+	title = Auseugen.33.t
+	desc = Auseugen.33.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.33.a
+	}
+}
+
+country_event = {
+	id = Auseugen.34 #Call Austria to war 1
+	title = Auseugen.34.t
+	desc = Auseugen.34.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.34.a
+		
+	}
+}
+
+country_event = {
+	id = Auseugen.35 #Call Austria to war 2
+	title = Auseugen.35.t
+	desc = Auseugen.35.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.35.a
+	}
+}
+
+
+
+
+
+
+country_event = {
+	id = Auseugen.36 #
+	title = Auseugen.36.t
+	desc = Auseugen.36.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.36.a
+		AUS = {
+			load_focus_tree = austria_eugen_intro
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.37 #
+	title = Auseugen.37.t
+	desc = Auseugen.37.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.37.a
+		AUS = {
+			load_focus_tree = austria_eugen_2
+		}
+	}
+}
+
+
+country_event = {
+	id = Auseugen.38 # invasion plans get worse
+	title = Auseugen.38.t
+	desc = Auseugen.38.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.38.a
+		AUS = {
+			swap_ideas = {
+				remove_idea = aus_idea_preparations_for_invasion_2
+				add_idea = aus_idea_preparations_for_invasion_3
+			}
+			hidden_effect = { 
+				country_event = {
+				    id = Auseugen.39
+				    days = 100
+				    random = 1920
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.39 # invasion plans end
+	title = Auseugen.39.t
+	desc = Auseugen.39.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.39.a
+		AUS = {
+			remove_ideas = { aus_idea_preparations_for_invasion_3 }
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#   #  ####   #####     #####  ####     #     ####
+#   #  #   #  #         #      #   #   # #   #   
+#####  ####   ####      ####   ####    ###   #  ##
+#   #  #  #   #         #      #  #   #   #  #   #  ##
+#   #  #   #  #####     #      #   #  #   #   ###   ##
+
+
+#why the fuck does puppeting non-existing country and THEN giving it its territory work?
+
+country_event = {
+	id = Auseugen.40       #moselland
+	title = Auseugen.40.t
+	desc = Auseugen.40.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.40.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = JUL
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = JUL
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		JUL = { transfer_state = 42 }
+	}
+	option = {
+		name = Auseugen.40.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_moselland_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.41       #berg
+	title = Auseugen.41.t
+	desc = Auseugen.41.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.41.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = JUL
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = JUL
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		JUL = { transfer_state = 51 }
+	}
+	option = {
+		name = Auseugen.41.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_berg_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.42       #oberbayern
+	title = Auseugen.42.t
+	desc = Auseugen.42.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.42.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = BAV
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = BAV
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		BAV = { transfer_state = 52 }
+	}
+	option = {
+		name = Auseugen.42.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_oberbayern_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.43       #niederbayern
+	title = Auseugen.43.t
+	desc = Auseugen.43.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.43.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = BAV
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = BAV
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		BAV = { transfer_state = 53 }
+	}
+	option = {
+		name = Auseugen.43.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_niederbayern_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.44       #franken
+	title = Auseugen.44.t
+	desc = Auseugen.44.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.44.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = WRZ
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = WRZ
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		WRZ = { transfer_state = 54 }
+	}
+	option = {
+		name = Auseugen.44.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_franken_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.45       #kassel
+	title = Auseugen.45.t
+	desc = Auseugen.45.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.45.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = KSS
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = KSS
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		KSS = { transfer_state = 55 }
+	}
+	option = {
+		name = Auseugen.45.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_kassel_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.46       #munster
+	title = Auseugen.46.t
+	desc = Auseugen.46.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.46.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = MUN
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = MUN
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		MUN = { transfer_state = 56 }
+	}
+	option = {
+		name = Auseugen.46.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_munster_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.47       #ulm
+	title = Auseugen.47.t
+	desc = Auseugen.47.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.47.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = ULM
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = ULM
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		ULM = { transfer_state = 57 }
+	}
+	option = {
+		name = Auseugen.47.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_ulm_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.48       #holstein
+	title = Auseugen.48.t
+	desc = Auseugen.48.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.48.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = SCH
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = SCH
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		SCH = { transfer_state = 58 }
+	}
+	option = {
+		name = Auseugen.48.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_holstein_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.49       #hannover
+	title = Auseugen.49.t
+	desc = Auseugen.49.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.49.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = HAN
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = HAN
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		HAN = { transfer_state = 59 }
+	}
+	option = {
+		name = Auseugen.49.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_hannover_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.50       #thuringen
+	title = Auseugen.50.t
+	desc = Auseugen.50.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.50.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = THU
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = THU
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		THU = { transfer_state = 60 }
+	}
+	option = {
+		name = Auseugen.50.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_thuringen_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.51       #mecklenburg
+	title = Auseugen.51.t
+	desc = Auseugen.51.d	
+	picture = GFX_report_news_event_rome_11
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.51.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = MCK
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = MCK
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		MCK = { transfer_state = 61 }
+	}
+	option = {
+		name = Auseugen.51.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_mecklenburg_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.52       #vorpommern
+	title = Auseugen.52.t
+	desc = Auseugen.52.d	
+	picture = GFX_report_news_event_rome_22
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.52.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = BRD
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = BRD
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		BRD = { transfer_state = 62 }
+	}
+	option = {
+		name = Auseugen.52.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_vorpommern_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.53       #hinterpommern
+	title = Auseugen.53.t
+	desc = Auseugen.53.d	
+	picture = GFX_report_news_event_rome_22
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.53.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = BRD
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = BRD
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		BRD = { transfer_state = 63 }
+	}
+	option = {
+		name = Auseugen.53.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_hinterpommern_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.54       #brandenburg
+	title = Auseugen.54.t
+	desc = Auseugen.54.d	
+	picture = GFX_report_news_event_rome_22
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.54.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = BRD
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = BRD
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		BRD = { transfer_state = 64 }
+	}
+	option = {
+		name = Auseugen.54.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_brandenburg_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.55       #sachen
+	title = Auseugen.55.t
+	desc = Auseugen.55.d	
+	picture = GFX_report_news_event_rome_22
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.55.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = SAX
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = SAX
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		SAX = { transfer_state = 65 }
+	}
+	option = {
+		name = Auseugen.55.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_sachen_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.56       #ostmark
+	title = Auseugen.56.t
+	desc = Auseugen.56.d	
+	picture = GFX_report_news_event_rome_22
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.56.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = BRD
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = BRD
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		BRD = { transfer_state = 68 }
+	}
+	option = {
+		name = Auseugen.56.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_ostmark_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.57       #hamburg
+	title = Auseugen.57.t
+	desc = Auseugen.57.d	
+	picture = GFX_report_news_event_rome_22
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.57.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = HAM
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = HAM
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		HAM = { transfer_state = 789 }
+	}
+	option = {
+		name = Auseugen.57.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_hamburg_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.58       #lubeck
+	title = Auseugen.58.t
+	desc = Auseugen.58.d	
+	picture = GFX_report_news_event_rome_22
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.58.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = LBK
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = LBK
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		LBK = { transfer_state = 790 }
+	}
+	option = {
+		name = Auseugen.58.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_lubeck_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.59       #hessen
+	title = Auseugen.59.t
+	desc = Auseugen.59.d	
+	picture = GFX_report_news_event_rome_22
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.59.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = BRD
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = BRD
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		BRD = { transfer_state = 805 }
+	}
+	option = {
+		name = Auseugen.59.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_hessen_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.60       #pfalz
+	title = Auseugen.60.t
+	desc = Auseugen.60.d	
+	picture = GFX_report_news_event_rome_22
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.60.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = BAV
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = BAV
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		BAV = { transfer_state = 807 }
+	}
+	option = {
+		name = Auseugen.60.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_pfalz_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.61       #trier
+	title = Auseugen.61.t
+	desc = Auseugen.61.d	
+	picture = GFX_report_news_event_rome_22
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.61.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = TRI
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = TRI
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		TRI = { transfer_state = 808 }
+	}
+	option = {
+		name = Auseugen.61.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_trier_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.62       #baden
+	title = Auseugen.62.t
+	desc = Auseugen.62.d	
+	picture = GFX_report_news_event_rome_22
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.62.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = BAD
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = BAD
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		BAD = { transfer_state = 814 }
+	}
+	option = {
+		name = Auseugen.62.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_baden_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.63       #wurttemberg
+	title = Auseugen.63.t
+	desc = Auseugen.63.d	
+	picture = GFX_report_news_event_rome_22
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.63.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = WUR
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = WUR
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		WUR = { transfer_state = 817 }
+	}
+	option = {
+		name = Auseugen.63.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_wurttemberg_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.64       #nuremberg
+	title = Auseugen.64.t
+	desc = Auseugen.64.d	
+	picture = GFX_report_news_event_rome_22
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.64.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = NUR
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = NUR
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		NUR = { transfer_state = 818 }
+	}
+	option = {
+		name = Auseugen.64.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_nuremberg_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.65       #ansbach
+	title = Auseugen.65.t
+	desc = Auseugen.65.d	
+	picture = GFX_report_news_event_rome_22
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.65.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = ANB
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = ANB
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		ANB = { transfer_state = 819 }
+	}
+	option = {
+		name = Auseugen.65.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_ansbach_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.66       #bayreuth
+	title = Auseugen.66.t
+	desc = Auseugen.66.d	
+	picture = GFX_report_news_event_rome_22
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.66.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = ANB
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = ANB
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		ANB = { transfer_state = 820 }
+	}
+	option = {
+		name = Auseugen.66.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_bayreuth_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.67       #oldenburg
+	title = Auseugen.67.t
+	desc = Auseugen.67.d	
+	picture = GFX_report_news_event_rome_22
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.67.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = OLD
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = OLD
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		OLD = { transfer_state = 833 }
+	}
+	option = {
+		name = Auseugen.67.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_oldenburg_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.68       #ostfriesland
+	title = Auseugen.68.t
+	desc = Auseugen.68.d	
+	picture = GFX_report_news_event_rome_22
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.68.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = KLE
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = KLE
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		KLE = { transfer_state = 836 }
+	}
+	option = {
+		name = Auseugen.68.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_ostfriesland_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.69       #koln
+	title = Auseugen.69.t
+	desc = Auseugen.69.d	
+	picture = GFX_report_news_event_rome_22
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.69.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = KOL
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = KOL
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		KOL = { transfer_state = 844 }
+	}
+	option = {
+		name = Auseugen.69.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_koln_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.70       #frankfurt
+	title = Auseugen.70.t
+	desc = Auseugen.70.d	
+	picture = GFX_report_news_event_rome_22
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.70.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = FRK
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = FRK
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		FRK = { transfer_state = 849 }
+	}
+	option = {
+		name = Auseugen.70.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_frankfurt_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.71       #kleve
+	title = Auseugen.71.t
+	desc = Auseugen.71.d	
+	picture = GFX_report_news_event_rome_22
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.71.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = KLE
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = KLE
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		KLE = { transfer_state = 850 }
+	}
+	option = {
+		name = Auseugen.71.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_kleve_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.72       #bremen
+	title = Auseugen.72.t
+	desc = Auseugen.72.d	
+	picture = GFX_report_news_event_rome_22
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.72.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = BRE
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = BRE
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		BRE = { transfer_state = 851 }
+	}
+	option = {
+		name = Auseugen.72.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_bremen_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.73       #gottingen
+	title = Auseugen.73.t
+	desc = Auseugen.73.d	
+	picture = GFX_report_news_event_rome_22
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.73.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = HAN
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = HAN
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		HAN = { transfer_state = 852 }
+	}
+	option = {
+		name = Auseugen.73.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_gottingen_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.74       #dortmund
+	title = Auseugen.74.t
+	desc = Auseugen.74.d	
+	picture = GFX_report_news_event_rome_22
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.74.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = DOR
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = DOR
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		DOR = { transfer_state = 853 }
+	}
+	option = {
+		name = Auseugen.74.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_dortmund_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.75       #mark
+	title = Auseugen.75.t
+	desc = Auseugen.75.d	
+	picture = GFX_report_news_event_rome_22
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.75.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = MRK
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = MRK
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		MRK = { transfer_state = 854 }
+	}
+	option = {
+		name = Auseugen.75.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_mark_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.76       #nassau
+	title = Auseugen.76.t
+	desc = Auseugen.76.d	
+	picture = GFX_report_news_event_rome_22
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.76.a 		#accept
+		IF = {
+			LIMIT = {
+				NOT = {
+					country_exists = NSS
+					}
+			}
+			AUS = {
+				set_autonomy = {
+				    target = NSS
+					autonomy_state = autonomy_stabilized_hre_vassal
+				}
+			}
+		}
+		AUS = { country_event = Auseugen.77 }
+		NSS = { transfer_state = 855 }
+	}
+	option = {
+		name = Auseugen.76.b 		#refuse
+		AUS = {
+			set_global_flag = return_of_nassau_wg
+			create_wargoal = {
+				type = hre_fragmentation_wargoal
+				target = PREV
+			}
+			country_event = Auseugen.78
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.77 # *FROM* gives up state
+	title = Auseugen.77.t
+	desc = Auseugen.77.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.77.a
+		
+	}
+}
+
+country_event = {
+	id = Auseugen.78 # *FROM* refuses
+	title = Auseugen.78.t
+	desc = Auseugen.78.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.78.a
+		
+	}
+}
+
+
+
+
+
+
+country_event = {
+	id = Auseugen.79 # Bavaria gets ultimatum
+	title = Auseugen.79.t
+	desc = Auseugen.79.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.79.a 	#refuse
+		AUS = {
+			country_event = Auseugen.80
+		}
+	}
+
+	option = {
+		name = Auseugen.79.b 	#accept
+		AUS = {
+			country_event = Auseugen.81
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.80 # Bavaria refused to ultimatum
+	title = Auseugen.80.t
+	desc = Auseugen.80.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.80.a 	
+		AUS = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = BAV
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.81 # Bavaria accepted ultimatum
+	title = Auseugen.81.t
+	desc = Auseugen.81.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.81.a 	
+		set_autonomy = {
+		    target = BAV
+		    autonomy_state = autonomy_protected_hre_state
+		}
+	}
+}
+
+
+
+
+country_event = {
+	id = Auseugen.82 # Bavaria surrenders
+	title = Auseugen.82.t
+	desc = Auseugen.82.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.82.a
+	}
+}
+
+country_event = {
+	id = Auseugen.83 # We have to surrender [event for bavaria]
+	title = Auseugen.83.t
+	desc = Auseugen.83.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.83.a
+	}
+}
+
+
+
+
+
+
+
+
+
+###  ###   ###   ###   ###   ###
+###  ###   ###   ###   ###   ###
+
+
+###  ###   ###   ###   ###   ###
+###  ###   ###   ###   ###   ###
+
+
+###  ###   ###   ###   ###   ###
+###  ###   ###   ###   ###   ###
+
+
+
+
+
+
+
+
+
+
+
+
+country_event = {
+	id = Auseugen.90 # imperial alliance
+	title = Auseugen.90.t
+	desc = Auseugen.90.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.90.a
+		AUS = {
+			add_to_faction = ROOT
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.91 ### VERY IMPORTANT - THE GREAT GATHERING FOR HRE MEMBERS!!!!!!!!!!!!!!!!!!!!!!
+	title = Auseugen.91.t
+	desc = Auseugen.91.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	timeout_days = 10
+	
+	option = {
+		name = Auseugen.91.a   # refuse
+		ai_chance = {
+			factor = 4
+		}
+		set_global_flag = aus_great_gathering_refusal
+		AUS = {
+			country_event = {
+				id = Auseugen.92
+				days = 5
+				random = 240
+			}
+		}
+	}
+	option = {
+		name = Auseugen.91.b   # join
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					tag = BRD
+					tag = MCK
+					tag = BAV
+					tag = HAN
+					tag = MUN
+					tag = KLE
+					tag = HAM
+					tag = BRE
+					tag = OLD
+					tag = LBK
+				}
+			}
+			modifier = {
+				add = 3
+				AND = {
+					NOT = {
+						TAG = BRD
+						TAG = HAN
+						TAG = MUN
+					}
+					OR = {
+						AND = {
+							TAG = SAX
+							check_variable = { SAX.loyalty > 70 }
+						}
+						AND = {
+							TAG = WRZ
+							check_variable = { WRZ.loyalty > 70 }
+						}
+						AND = {
+							TAG = WUR
+							check_variable = { WUR.loyalty > 70 }
+						}
+						AND = {
+							TAG = MCK
+							check_variable = { MCK.loyalty > 70 }
+						}
+						AND = {
+							TAG = THU
+							check_variable = { THU.loyalty > 70 }
+						}
+						AND = {
+							TAG = KSS
+							check_variable = { KSS.loyalty > 70 }
+						}
+						AND = {
+							TAG = MRK
+							check_variable = { MRK.loyalty > 70 }
+						}
+						AND = {
+							TAG = NSS
+							check_variable = { NSS.loyalty > 70 }
+						}
+						AND = {
+							TAG = SCH
+							check_variable = { SCH.loyalty > 70 }
+						}
+						AND = {
+							TAG = KOL
+							check_variable = { KOL.loyalty > 70 }
+						}
+						AND = {
+							TAG = TRI
+							check_variable = { TRI.loyalty > 70 }
+						}
+						AND = {
+							TAG = JUL
+							check_variable = { JUL.loyalty > 70 }
+						}
+						AND = {
+							TAG = ANB
+							check_variable = { ANB.loyalty > 70 }
+						}
+						AND = {
+							TAG = BAD
+							check_variable = { BAD.loyalty > 70 }
+						}
+						AND = {
+							TAG = NUR
+							check_variable = { NUR.loyalty > 70 }
+						}
+						AND = {
+							TAG = ULM
+							check_variable = { ULM.loyalty > 70 }
+						}
+						AND = {
+							TAG = DOR
+							check_variable = { DOR.loyalty > 70 }
+						}
+						AND = {
+							TAG = FRK
+							check_variable = { FRK.loyalty > 70 }
+						}
+					}
+				}
+			}
+		}
+		custom_effect_tooltip = aus_becomes_puppet_of_aus_tt
+		AUS = {
+			country_event = {
+				id = Auseugen.93
+				days = 5
+				random = 240
+			}
+		}
+	}
+}
+
+
+
+country_event = {
+	id = Auseugen.92 # someone refused
+	title = Auseugen.92.t
+	desc = Auseugen.92.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.92.a
+		FROM = {
+			set_country_flag = gg_war_refused
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.93 # someone accepted
+	title = Auseugen.93.t
+	desc = Auseugen.93.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.93.a
+		AUS = {
+			set_autonomy = {
+			    target = FROM
+			    autonomy_state = autonomy_protected_hre_state
+			}
+		}
+		FROM = {
+			set_country_flag = gg_war_accepted
+		}
+	}
+}
+
+
+
+country_event = {
+	id = Auseugen.94 # great gathering (for austria)
+	title = Auseugen.94.t
+	desc = Auseugen.94.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.94.a
+	}
+}
+
+country_event = {
+	id = Auseugen.95     # hidden event checking if brandenburg is in alliance with austria ###DOES NOT WORK###
+	title = Auseugen.95.t
+	desc = Auseugen.95.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		IF = {
+			LIMIT = {
+				BRD = {
+					NOT = {
+						is_puppet_of = AUS
+						is_in_faction_with = AUS
+					}
+				}
+			}
+			BRD = {
+				country_event = Auseugen.96
+			}	
+		}
+		ELSE = {
+			random_other_country = {
+				LIMIT = {
+					NOT = {
+						tag = BRD
+					}
+					is_puppet = no
+					OR = {
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_conservative
+						has_idea = hre_idea_republic
+					}
+				}
+				country_event = Auseugen.96
+			}
+		}
+	}
+
+	option = {
+		name = Auseugen.95.a
+	}
+}
+
+country_event = {
+	id = Auseugen.96     # coalition event for leader
+	title = Auseugen.96.t
+	desc = Auseugen.96.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+
+	option = {
+		name = Auseugen.96.a #coalition is in fact great idea
+		create_faction = "German Coalition"
+		every_other_country = {
+			LIMIT = {
+				NOT = {
+					is_in_faction_with = AUS
+				}
+				OR = {
+					has_idea = hre_idea_elector
+					has_idea = hre_idea_prince
+					has_idea = hre_idea_conservative
+					has_idea = hre_idea_republic
+				}
+				is_puppet = no
+			}
+			country_event = Auseugen.97
+		}
+
+
+		hidden_effect = {
+			IF = {
+				LIMIT = {
+					is_major = no
+				}
+				set_major = yes
+				set_global_flag = aus_temp_major
+			}
+			AUS = {
+				country_event = {
+					id = Auseugen.100
+					days = 3
+					random = 0
+				}
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = Auseugen.97     # invitation to the coalition
+	title = Auseugen.97.t
+	desc = Auseugen.97.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.97.a # yeah
+		ai_chance = {
+			factor = 1
+		}
+		FROM = {
+			add_to_faction = ROOT
+			country_event = {
+				id = Auseugen.98
+				days = 0
+				random = 48
+			}
+		}
+		hidden_effect = {
+			add_to_variable = {
+				var = global.hre_members_of_war value = 1
+			}
+			IF = {
+				LIMIT = {
+					is_major = no
+				}
+				set_major = yes
+				set_global_flag = aus_temp_major
+			}
+		}
+	}
+	option = {
+		name = Auseugen.97.b # why would you choose this option?
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_idea = hre_idea_elector
+					has_idea = hre_idea_prince
+					has_idea = hre_idea_conservative
+					has_idea = hre_idea_republic
+				}
+			}
+		}
+		FROM = {
+			country_event = {
+				id = Auseugen.99
+				days = 0
+				random = 48
+			}
+		}
+
+	}
+}
+
+
+country_event = {
+	id = Auseugen.98      # someone said yes
+	title = Auseugen.98.t
+	desc = Auseugen.98.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.98.a
+	}
+}
+
+country_event = {
+	id = Auseugen.99      # someone said no
+	title = Auseugen.99.t
+	desc = Auseugen.99.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.99.a
+	}
+}
+
+country_event = {
+	id = Auseugen.100      # [aus] german coalition forms
+	title = Auseugen.100.t
+	desc = Auseugen.100.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.100.a   # we shall start mobilizing
+		FROM = {
+			country_event = {
+				id = Auseugen.101
+				days = 1
+				random = 48
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = Auseugen.101      # [brd] austria mobilizes :o
+	title = Auseugen.101.t
+	desc = Auseugen.101.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.101.a     #mobilize
+		FROM = {
+			country_event = {
+				id = Auseugen.102
+				days = 1
+				random = 48
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.102      # oh no brandenburg mobilizes, what are we gonna do?
+	title = Auseugen.102.t
+	desc = Auseugen.102.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.102.a     #lets go to  W A R
+		set_global_flag = aus_great_gathering_wg
+		custom_effect_tooltip = aus_great_gathering_war_tt
+		hidden_effect = {
+			every_other_country = {
+				LIMIT = {
+					OR = {		
+							has_idea = hre_idea_elector
+							has_idea = hre_idea_prince
+							has_idea = hre_idea_conservative
+							has_idea = hre_idea_republic
+						}
+					NOT = {
+						is_puppet = yes
+						is_in_faction_with = AUS
+					}
+				}
+				AUS = {
+					declare_war_on = {
+						target = PREV
+						type = puppet_wargoal_focus
+					}
+				}
+			}
+			every_country = {
+				LIMIT = {
+					is_puppet_of = AUS
+					OR = {		
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_conservative
+						has_idea = hre_idea_republic
+					}
+				}
+				add_to_war = { 
+				    targeted_alliance = AUS 
+				    enemy = BRD
+				    hostility_reason = asked_to_join
+				}
+			}
+			every_other_country = {
+				news_event = Ausnews.1
+			}
+		}
+	}
+}
+
+
+
+country_event = {
+	id = Auseugen.103      # 50% towards capitulation ### austria dies after great gathering
+	title = Auseugen.103.t
+	desc = Auseugen.103.d	
+	picture = GFX_report_news_event_rome_01
+	fire_only_once = yes
+	is_triggered_only = no
+	
+	trigger = {
+		tag = AUS
+		AUS = {
+			OR = {
+				has_global_flag = aus_great_gathering_wg
+				has_global_flag = aus_great_gathering_wg2
+			}
+			has_war_with = BRD
+			surrender_progress > 0.5
+		}
+	}
+	
+	option = {
+		name = Auseugen.103.a     #Yeah.. we should surrender
+			BRD = {
+				country_event = Auseugen.105
+				white_peace = AUS
+			}
+			every_other_country = {
+				LIMIT = {
+					OR = {
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_conservative
+					}
+					NOT = {
+						tag = BRD
+					}
+					has_war_with = AUS
+				}
+				white_peace = AUS
+			}
+
+			IF = {
+				limit = {
+					has_global_flag = aus_great_gathering_wg
+					NOT = {
+						has_global_flag = aus_great_gathering_wg2
+					}
+				}
+
+				add_ideas = { aus_idea_fail_in_imperial_war_1 }
+				add_war_support = -0.05
+				set_global_flag = aus_ggwar_ended
+				set_global_flag = aus_ggwar_lost
+
+				else = {
+					add_stability = -0.2
+					add_political_power = -200
+				}
+			}
+
+		}
+
+	option = {
+		name = Auseugen.103.b     #Death before dishonor
+			add_war_support = 0.03
+			add_stability = -0.05
+		}
+	}
+
+
+
+country_event = {
+	id = Auseugen.104      # 75% towards capitulation ### austria dies even more after great gathering
+	title = Auseugen.104.t
+	desc = Auseugen.104.d	
+	picture = GFX_report_news_event_rome_01
+	fire_only_once = yes
+	is_triggered_only = no
+
+	trigger = {
+		tag = AUS
+		AUS = {
+			OR = {
+				has_global_flag = aus_great_gathering_wg
+				has_global_flag = aus_great_gathering_wg2
+			}
+			has_war_with = BRD
+			surrender_progress > 0.75
+		}
+	}
+	
+	option = {
+		name = Auseugen.104.a     #We have no other option but to surrender
+			BRD = {
+				country_event = Auseugen.105
+				white_peace = AUS
+			}
+			every_other_country = {
+				LIMIT = {
+					OR = {
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_conservative
+					}
+					NOT = {
+						tag = BRD
+					}
+					has_war_with = AUS
+				}
+				white_peace = AUS
+			}
+			IF = {
+				limit = {
+					has_global_flag = aus_great_gathering_wg
+					NOT = {
+						has_global_flag = aus_great_gathering_wg2
+					}
+				}
+
+				add_stability = -0.05
+				add_political_power = -100
+				add_ideas = { aus_idea_fail_in_imperial_war_1 }
+				set_global_flag = aus_ggwar_worse_surrender
+				set_global_flag = aus_ggwar_ended
+				set_global_flag = aus_ggwar_lost
+
+				else = {
+					add_stability = -0.1
+					add_political_power = -150
+					add_ideas = { aus_idea_international_humiliation }
+				}
+			}
+			
+		}
+	}
+
+
+
+
+
+
+country_event = {
+	id = Auseugen.105      # brandenburg's pov of austrian surrender
+	title = Auseugen.105.t
+	desc = Auseugen.105.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.105.a #only enclave
+			ai_chance = { factor = 10 }
+
+			BRD = {
+				set_state_owner = 813
+			}
+			every_country = {
+				LIMIT = {
+					OR = {
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_conservative
+					}
+					is_puppet_of = AUS
+				}
+				leave_faction = yes
+				AUS = {
+					set_autonomy = {
+						target = PREV
+						autonomy_state = autonomy_free
+					}
+				}
+			}
+			hidden_effect = {
+				every_country = {
+					LIMIT = {
+						has_global_flag = aus_temp_major
+					}
+					set_major = no
+					clr_global_flag = aus_temp_major
+				}
+				country_event = {
+					id = Auseugen.115 
+					days = 15
+					random = 0
+				}
+			}
+			clr_global_flag = aus_ggwar_worse_surrender
+		}
+
+
+	option = {
+		name = Auseugen.105.b #both enclave & war reparations
+			ai_chance = { factor = 40 }
+
+			BRD = {
+				set_state_owner = 813
+			}
+			every_country = {
+				LIMIT = {
+					OR = {
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_conservative
+					}
+					is_puppet_of = AUS
+				}
+				AUS = {
+					set_autonomy = {
+						target = PREV
+						autonomy_state = autonomy_free
+					}
+				}
+			}
+			clr_global_flag = aus_ggwar_worse_surrender
+			AUS = {
+				add_timed_idea = {
+				    idea = aus_idea_war_reparations
+				    days = 180
+				}
+			}
+			every_country = {
+				LIMIT = {
+					OR = {
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_conservative
+					}
+				}
+				leave_faction = yes
+				add_timed_idea = {
+				    idea = aus_idea_austrian_war_reparations
+				    days = 180
+				}
+			}
+			hidden_effect = {
+				every_country = {
+					LIMIT = {
+						has_global_flag = aus_temp_major
+					}
+					set_major = no
+					clr_global_flag = aus_temp_major
+				}
+				country_event = {
+					id = Auseugen.115 
+					days = 15
+					random = 0
+				}
+			}
+		}
+
+
+	option = {
+		name = Auseugen.105.c #OH BOY GIVE ME THAT SWEET SILESIA
+			ai_chance = { factor = 160 }
+
+			trigger = {
+				has_global_flag = aus_ggwar_worse_surrender
+			}
+			BRD = {
+				set_state_owner = 813
+			}
+			SIL = {
+				set_state_owner = 66
+				set_state_owner = 67
+				set_state_owner = 762
+			}
+			set_autonomy = {
+			    target = SIL
+			    autonomy_state = autonomy_puppet
+			}
+			clr_global_flag = aus_ggwar_worse_surrender
+			every_country = {
+				LIMIT = {
+					OR = {
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_conservative
+					}
+					is_puppet_of = AUS
+				}
+				leave_faction = yes
+				AUS = {
+					set_autonomy = {
+						target = PREV
+						autonomy_state = autonomy_free
+					}
+				}
+				
+			}
+			hidden_effect = {
+				SIL = {
+					add_state_core = 66
+					add_state_core = 67
+					add_state_core = 762
+					create_country_leader = {
+						name = "Ludwig IV"
+						desc = "BRD_LEADER_DESC_LUDWIG_IV"
+						picture = "Portrait_BRD_Ludwig_IV.dds"
+						expire = "1965.1.1"
+						ideology = absolutist_moderate
+						traits = {
+						}
+					}
+					set_political_party = {
+					    ideology = absolutist
+					    popularity = 100
+					}
+				} 
+				every_other_country = {
+					LIMIT = {
+						OR = {
+							has_idea = hre_idea_elector
+							has_idea = hre_idea_republic
+							has_idea = hre_idea_prince
+							has_idea = hre_idea_conservative
+						}
+					}
+				}
+				every_country = {
+					LIMIT = {
+						has_global_flag = aus_temp_major
+					}
+					set_major = no
+					clr_global_flag = aus_temp_major
+				}
+				country_event = {
+					id = Auseugen.115 
+					days = 15
+					random = 0
+				}
+			}
+		}
+
+
+
+
+		option = {
+		name = Auseugen.105.d #B O H E M I A
+			ai_chance = { factor = 640 }
+
+			trigger = {
+				has_global_flag = aus_ggwar_worse_surrender
+				country_exists = SIL
+			}
+			IF = {
+				limit = {
+					BRD = {
+						NOT = {
+							controls_state = 813
+						}
+					}
+				}
+				BRD = {
+					set_state_owner = 813
+				}
+			}
+			
+			
+			clr_global_flag = aus_ggwar_worse_surrender
+			every_country = {
+				LIMIT = {
+					OR = {
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_conservative
+					}
+					is_puppet_of = AUS
+				}
+				leave_faction = yes
+				AUS = {
+					set_autonomy = {
+						target = PREV
+						autonomy_state = autonomy_free
+					}
+				}
+				
+			}
+
+			CZE = {
+				set_state_owner = 69
+				set_state_owner = 9
+				set_state_owner = 74
+				set_state_owner = 75
+			}
+
+			hidden_effect = {
+				CZE = {
+					add_state_core = 69
+					add_state_core = 9
+					add_state_core = 74
+					add_state_core = 75
+
+					set_political_party = {
+					    ideology = absolutist
+					    popularity = 100
+					}
+				} 
+				
+				every_country = {
+					LIMIT = {
+						has_global_flag = aus_temp_major
+					}
+					set_major = no
+					clr_global_flag = aus_temp_major
+				}
+				country_event = {
+					id = Auseugen.115 
+					days = 15
+					random = 0
+				}
+			}
+		}
+
+
+	}
+
+country_event = {
+	id = Auseugen.106     # every hre member pov of austrian surrender
+	title = Auseugen.106.t
+	desc = Auseugen.106.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.106.a     
+	}
+}
+
+
+
+
+country_event = {
+	id = Auseugen.107     # every hre member pov - brandenburg chooses option 1
+	title = Auseugen.107.t
+	desc = Auseugen.107.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.107.a     
+	}
+}
+country_event = {
+	id = Auseugen.108     # every hre member pov - brandenburg chooses option 2
+	title = Auseugen.108.t
+	desc = Auseugen.108.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.108.a     
+	}
+}
+country_event = {
+	id = Auseugen.109     # every hre member pov - brandenburg chooses option 3
+	title = Auseugen.109.t
+	desc = Auseugen.109.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.109.a     
+	}
+}
+
+country_event = {
+	id = Auseugen.110     # austrian pov - brandenburg chooses option 1
+	title = Auseugen.110.t
+	desc = Auseugen.110.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.110.a     
+	}
+}
+country_event = {
+	id = Auseugen.111     # austrian pov - brandenburg chooses option 2
+	title = Auseugen.111.t
+	desc = Auseugen.111.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.111.a     
+	}
+}
+country_event = {
+	id = Auseugen.112     # austrian pov - brandenburg chooses option 3
+	title = Auseugen.112.t
+	desc = Auseugen.112.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.112.a     
+	}
+}
+
+
+
+
+ # FINALY some normal events
+
+country_event = {
+	id = Auseugen.113     # issue with german nobility
+	title = Auseugen.113.t
+	desc = Auseugen.113.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.113.a
+		add_political_power = -25
+	}
+}
+
+
+
+
+
+
+country_event = {
+	id = Auseugen.115     # German Coalition Dissolves - Brandenburgian pov
+	title = Auseugen.115.t
+	desc = Auseugen.115.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.115.a
+		every_other_country = {
+			LIMIT = {
+				is_in_faction_with = BRD
+			}
+			country_event = Auseugen.116
+		}
+		BRD = {
+			dismantle_faction = yes
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.116     # German Coalition Dissolves - every HRE member pov
+	title = Auseugen.116.t
+	desc = Auseugen.116.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.116.a
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+country_event = {
+	id = Auseugen.117     # Austrian Offer - Serbian pov [cooperation]
+	title = Auseugen.117.t
+	desc = Auseugen.117.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.117.a #agree
+		AUS = {
+			country_event = Auseugen.118
+		}
+	}
+	option = {
+		name = Auseugen.117.b #dont
+		AUS = {
+			country_event = Auseugen.119
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.118     # Messege from Serbia - accepted offer
+	title = Auseugen.118.t
+	desc = Auseugen.118.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.118.a
+		add_ideas = { aus_idea_austro_serbian_trade_ties1 }
+		SER = {
+			add_ideas = { aus_idea_austro_serbian_trade_ties2 }
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.119     # Messege from Serbia - offer not accepted
+	title = Auseugen.119.t
+	desc = Auseugen.119.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.119.a
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+country_event = {
+	id = Auseugen.120     # Austrian envoy at our doors -  Ottoman pov [warm up relations]
+	title = Auseugen.120.t
+	desc = Auseugen.120.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.120.a #It's wise to accept his arrival
+	}
+	option = {
+		name = Auseugen.120.b #We won't forgive the Habsburgs
+	}
+}
+
+country_event = {
+	id = Auseugen.121     # Ottomans accepted arrival - Austrian pov
+	title = Auseugen.121.t
+	desc = Auseugen.121.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.121.a 
+	}
+}
+
+country_event = {
+	id = Auseugen.122     # Ottomans rejected arrival - Austrian pov
+	title = Auseugen.122.t
+	desc = Auseugen.122.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.122.a 
+	}
+}
+
+
+
+
+
+
+
+
+
+
+country_event = {
+	id = Auseugen.123			# Viennese Speech
+	title = Auseugen.123.t
+	desc = Auseugen.123.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.123.a
+		add_political_power = -60
+		add_popularity = {
+		    ideology = absolutist
+		    popularity = 0.08
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+country_event = {
+	id = Auseugen.124			# Aristocrats pleased and loyal
+	title = Auseugen.124.t
+	desc = Auseugen.124.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.124.a
+		add_popularity = {
+		    ideology = absolutist
+		    popularity = 0.02
+		}
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 1 
+			category = land_doctrine
+		}
+		add_political_power = 120
+	}
+}
+country_event = {
+	id = Auseugen.125			# Noble tyranny continues
+	title = Auseugen.125.t
+	desc = Auseugen.125.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.125.a
+		add_popularity = {
+		    ideology = absolutist
+		    popularity = -0.06
+		}
+		add_political_power = -60
+		add_stability = -0.07
+		add_war_support = -0.03
+	}
+}
+
+
+country_event = {
+	id = Auseugen.126     # The Great Slaughter [Austria purges German Nobles] - hre pov
+	title = Auseugen.126.t
+	desc = Auseugen.126.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.126.a
+		add_political_power = -25
+	}
+}
+
+country_event = {
+	id = Auseugen.127     # Prag Awards [Austria rewards German Nobles] - hre pov
+	title = Auseugen.127.t
+	desc = Auseugen.127.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.127.a
+		add_political_power = 50
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+country_event = {
+	id = Auseugen.128     # the Growing Problem [Ruining opposiiton]
+	title = Auseugen.128.t
+	desc = Auseugen.128.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.128.a
+		random_list = {
+			80 = {
+				country_event = {
+					id = Auseugen.129
+					days = 5
+					random = 120
+				}
+			}
+			20 = {
+				country_event = {
+					id = Auseugen.130
+					days = 5
+					random = 120
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = Auseugen.12800     # the Growing Problem [Ruining opposiiton]
+	title = Auseugen.12800.t
+	desc = Auseugen.12800.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.12800.a
+			60 = {
+				country_event = {
+					id = Auseugen.131
+					days = 5
+					random = 120
+				}
+			}
+			40 = {
+				country_event = {
+					id = Auseugen.132
+					days = 5
+					random = 120
+				}
+			}
+	}
+}
+
+
+country_event = {
+	id = Auseugen.129     # nobles satisfied
+	title = Auseugen.129.t
+	desc = Auseugen.129.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.129.a
+		add_political_power = 50
+		add_stability = 0.03
+	}
+}
+country_event = {
+	id = Auseugen.130     # speech is unsuccesful
+	title = Auseugen.130.t
+	desc = Auseugen.130.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.130.a
+		add_political_power = -10
+		add_stability = -0.01
+	}
+}
+country_event = {
+	id = Auseugen.131     # opposition 'calms down'
+	title = Auseugen.131.t
+	desc = Auseugen.131.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.131.a
+		add_political_power = 75
+		add_stability = 0.08
+		add_war_support = 0.03
+	}
+}
+country_event = {
+	id = Auseugen.132     # public discovers unfair play, opposition (and public) is outraged
+	title = Auseugen.132.t
+	desc = Auseugen.132.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.132.a
+		add_political_power = -40
+		add_stability = -0.06
+		add_war_support = -0.02
+	}
+}
+
+
+
+
+
+
+country_event = {
+	id = Auseugen.133     # Restoration of an old empire
+	title = Auseugen.133.t
+	desc = Auseugen.133.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.133.a
+		add_war_support = 0.04
+		add_political_power = 40
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+country_event = {
+	id = Auseugen.134     # Austria requests us to release some country
+	title = Auseugen.134.t
+	desc = Auseugen.134.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.134.a # their place is in our sphere!
+		AUS = {
+			declare_war_on = {
+			    target = ROOT
+			    type = liberate_wargoal 
+			}
+		}
+	}
+	option = {
+		name = Auseugen.134.b # their place is in fact in the empire
+		every_country = {
+			LIMIT = {
+				is_puppet_of = ROOT
+				has_country_flag = hre_release_this
+			}
+			ROOT = {
+				set_autonomy = {
+					target = PREV
+					autonomy_state = autonomy_free
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+country_event = {
+	id = Auseugen.135     # Austria executes imperial conscription - members POV
+	title = Auseugen.135.t
+	desc = Auseugen.135.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.135.a   # fuck
+		add_manpower = var:imperial_consc_coun
+	}
+}
+
+country_event = {
+	id = Auseugen.136     # Austria gets manpower
+	title = Auseugen.136.t
+	desc = Auseugen.136.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.136.a   # not bad
+		add_manpower = var:global.imperial_consc_final
+	}
+}
+
+
+
+
+
+country_event = {
+	id = Auseugen.137     # Imperial Reconquista
+	title = Auseugen.137.t
+	desc = Auseugen.137.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.137.a   # Our glory will be restored
+		country_event = {
+			id = Auseugen.151
+			days = 5
+		}
+	}
+}
+
+
+
+country_event = {
+	id = Auseugen.138     # Three pillars of the nation
+	title = Auseugen.138.t
+	desc = Auseugen.138.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.138.a   # 
+	}
+}
+
+
+
+
+# what
+
+
+
+
+country_event = {
+	id = Auseugen.140     # Clergy's new Significance
+	title = Auseugen.140.t
+	desc = Auseugen.140.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.140.a   # low significance 	Clergy under strict supervision
+		add_ideas = { aus_idea_supervised_clergy }
+	}	
+	option = {
+		name = Auseugen.140.b   # medium			Clergy dependent on both king & pope but influential
+		add_ideas = { aus_idea_infuential_clergy }
+	}	
+	option = {
+		name = Auseugen.140.c   # hight				Clergy free and unaccountable for almost everything
+		add_ideas = { aus_idea_unaccountable_clergy }
+	}
+}
+
+country_event = {
+	id = Auseugen.141     # Limitation of Nobility's Immunity
+	title = Auseugen.141.t
+	desc = Auseugen.141.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.141.a   # low immunity		Nobility has barely any privileges other than common ones
+		add_ideas = { aus_idea_no_special_noble_privileges }
+	}
+	option = {
+		name = Auseugen.141.b   # medium			Nobility has more privileges than duties
+		add_ideas = { aus_idea_moderate_noble_privileges }
+	}
+	option = {
+		name = Auseugen.141.c   # high 				Nobles able to question king's actions
+		add_ideas = { aus_idea_major_noble_privileges }
+	}
+}
+
+country_event = {
+	id = Auseugen.142     # Fate of the Poor
+	title = Auseugen.142.t
+	desc = Auseugen.142.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.142.a   # low support 		Serfdom active, peasantry abused
+		add_ideas = { aus_idea_low_peasantry_rights }
+	}
+	option = {
+		name = Auseugen.142.b   # medium 			Serfdom still exists, new laws protecting peasants
+		add_ideas = { aus_idea_provisional_equality }
+	}
+	option = {
+		name = Auseugen.142.c   # high 				Serfdom abolished, peasants have normal rights   QUICK CHANGE OF PLANS, SERFDOM IS JUST LESS BAD
+		add_ideas = { aus_idea_light_serfdom }
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+country_event = {
+	id = Auseugen.143			# Austro-Spanish war [global event]
+	title = Auseugen.143.t
+	desc = Auseugen.143.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.143.a 	# another Austrian expansion..
+	}
+}
+
+country_event = {
+	id = Auseugen.144			# Situation with Liege
+	title = Auseugen.144.t
+	desc = Auseugen.144.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.144.a 	# send them ultimatum
+		LIE = {
+			country_event = Auseugen.145
+		}
+	}
+}
+
+
+
+country_event = {
+	id = Auseugen.145			# Ultimatum from Austria - Liege POV
+	title = Auseugen.145.t
+	desc = Auseugen.145.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.145.a 	# join Austrians
+		AUS = {
+			add_to_faction = LIE
+			set_autonomy = {
+			    target = LIE
+			    autonomy_state = puppet
+			}
+		}
+	}
+	option = {
+		name = Auseugen.145.b 	# join Spanish Netherlands
+		AUS = {
+			declare_war_on = {
+				target = LIE
+				type = annex_everything
+			}
+		}
+		IF = {
+			LIMIT = {
+				SPN = {
+					is_in_faction = yes
+				}
+			}
+			every_country = {
+				LIMIT = {
+					is_in_faction_with = SPN
+					is_faction_leader = yes
+				}
+				add_to_faction = LIE
+			}
+		}
+	}
+}
+
+
+
+
+
+country_event = {
+	id = Auseugen.146			# Austro-French war [global event]
+	title = Auseugen.146.t
+	desc = Auseugen.146.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.146.a 	# another Austrian expansion..
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+country_event = {
+	id = Auseugen.147     # Spanish Netherlands die
+	title = Auseugen.147.t
+	desc = Auseugen.147.d	
+	picture = GFX_report_news_event_rome_01
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Auseugen.147.a   # send messege to Spain 
+		SPR = {
+			country_event = Auseugen.148
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.148     # Netherlands surrender!
+	title = Auseugen.148.t
+	desc = Auseugen.148.d	
+	picture = GFX_report_news_event_rome_01
+	fire_only_once = yes
+	is_triggered_only = yes
+
+
+	option = {
+		name = Auseugen.148.a   # give up netherlands for peace
+
+		every_country = {
+			LIMIT = {
+				OR = {
+					has_war_together_with = SPN
+					tag = SPN
+				}
+				is_puppet = no
+				has_war_with = AUS
+			}
+			every_country = {
+				LIMIT = {
+					OR = { 
+						has_war_together_with = AUS
+						tag = AUS
+					}
+					is_puppet = no
+					has_war_with = PREV
+				}
+				white_peace = PREV
+			}
+		}
+
+		IF = {
+			LIMIT = {
+				8 = {
+					owner = {
+						OR = {
+							tag = SPN
+							has_war_together_with = SPN
+						}
+					}
+				}
+			}
+			AUS = {
+				set_state_owner = 8
+				set_state_controller = 8
+			}
+		}
+		IF = {
+			LIMIT = {
+				34 = {
+					owner = {
+						OR = {
+							tag = SPN
+							has_war_together_with = SPN
+						}
+					}
+				}
+			}
+			AUS = {
+				set_state_owner = 34
+				set_state_controller = 34
+			}
+		}
+		IF = {
+			LIMIT = {
+				791 = {
+					owner = {
+						OR = {
+							tag = SPN
+							has_war_together_with = SPN
+						}
+					}
+				}
+			}
+			AUS = {
+				set_state_owner = 791
+				set_state_controller = 791
+			}
+		}
+		IF = {
+			LIMIT = {
+				792 = {
+					owner = {
+						OR = {
+							tag = SPN
+							has_war_together_with = SPN
+						}
+					}
+				}
+			}
+			AUS = {
+				set_state_owner = 792
+				set_state_controller = 792
+			}
+		}
+		IF = {
+			LIMIT = {
+				6 = {
+					owner = {
+						OR = {
+							tag = SPN
+							has_war_together_with = SPN
+						}
+					}
+				}
+			}
+			AUS = {
+				set_state_owner = 6
+				set_state_controller = 6
+			}
+		}
+		IF = {
+			LIMIT = {
+				940 = {
+					owner = {
+						OR = {
+							tag = SPN
+							has_war_together_with = SPN
+						}
+					}
+				}
+			}
+			AUS = {
+				set_state_owner = 940
+				set_state_controller = 940
+			}
+		}
+
+		clr_global_flag = auseugen_austrospanish_war
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+country_event = {
+	id = Auseugen.149     # France dies
+	title = Auseugen.149.t
+	desc = Auseugen.149.d	
+	picture = GFX_report_news_event_rome_01
+	fire_only_once = yes
+	is_triggered_only = no
+	
+	trigger = {
+		has_war_with = AUS
+		has_global_flag = auseugen_austrofrench_war
+		surrender_progress > 0.7
+		tag = FRA
+	}
+
+	option = {
+		name = Auseugen.149.a   # F
+		clr_global_flag = auseugen_austrofrench_war
+		every_country = {
+			LIMIT = {
+				OR = {
+					has_war_together_with = FRA
+					tag = FRA
+				}
+				is_puppet = no
+				has_war_with = AUS
+			}
+			every_country = {
+				LIMIT = {
+					OR = { 
+						has_war_together_with = AUS
+						tag = AUS
+					}
+					is_puppet = no
+					has_war_with = PREV
+				}
+				white_peace = PREV
+			}
+		}
+
+		IF = {
+			LIMIT = {
+				945 = {
+					owner = {
+						OR = {
+							tag = FRA
+							has_war_together_with = FRA
+						}
+					}
+				}
+			}
+			AUS = {
+				set_state_owner = 945
+				set_state_controller = 945	
+			}
+		}
+		IF = {
+			LIMIT = {
+				943 = {
+					owner = {
+						OR = {
+							tag = FRA
+							has_war_together_with = FRA
+						}
+					}
+				}
+			}
+			AUS = {
+				set_state_owner = 943
+				set_state_controller = 943	
+			}
+		}
+		IF = {
+			LIMIT = {
+				944 = {
+					owner = {
+						OR = {
+							tag = FRA
+							has_war_together_with = FRA
+						}
+					}
+				}
+			}
+			AUS = {
+				set_state_owner = 944
+				set_state_controller = 944	
+			}
+		}
+		IF = {
+			LIMIT = {
+				28 = {
+					owner = {
+						OR = {
+							tag = FRA
+							has_war_together_with = FRA
+						}
+					}
+				}
+			}
+			AUS = {
+				set_state_owner = 28
+				set_state_controller = 28	
+			}
+		}
+	}
+}
+
+
+
+
+country_event = {
+	id = Auseugen.150     # People demand peace - France
+	title = Auseugen.150.t
+	desc = Auseugen.150.d	
+	picture = GFX_report_news_event_rome_01
+	fire_only_once = yes
+	is_triggered_only = no
+	
+	trigger = {
+		has_war_with = AUS
+		has_global_flag = auseugen_austrofrench_war
+		28 = {
+			controller = {
+				OR = {
+					tag = AUS
+				is_in_faction_with = AUS
+				}
+			}
+		}
+		945 = {
+			controller = {
+				OR = {
+					tag = AUS
+				is_in_faction_with = AUS
+				}
+			}
+		}
+		944 = {
+			controller = {
+				OR = {
+					tag = AUS
+				is_in_faction_with = AUS
+				}
+			}
+		}
+		943 = {
+			controller = {
+				OR = {
+					tag = AUS
+				is_in_faction_with = AUS
+				}
+			}
+		}
+		tag = FRA
+	}
+
+	option = {
+		name = Auseugen.150.a   # give Austria territories
+		clr_global_flag = auseugen_austrofrench_war
+		every_country = {
+			LIMIT = {
+				OR = {
+					has_war_together_with = FRA
+					tag = FRA
+				}
+				is_puppet = no
+				has_war_with = AUS
+			}
+			every_country = {
+				LIMIT = {
+					OR = { 
+						has_war_together_with = AUS
+						tag = AUS
+					}
+					is_puppet = no
+					has_war_with = PREV
+				}
+				white_peace = PREV
+			}
+		}
+
+		IF = {
+			LIMIT = {
+				945 = {
+					owner = {
+						OR = {
+							tag = FRA
+							has_war_together_with = FRA
+						}
+					}
+				}
+			}
+			AUS = {
+				set_state_owner = 945
+				set_state_controller = 945	
+			}
+		}
+		IF = {
+			LIMIT = {
+				943 = {
+					owner = {
+						OR = {
+							tag = FRA
+							has_war_together_with = FRA
+						}
+					}
+				}
+			}
+			AUS = {
+				set_state_owner = 943
+				set_state_controller = 943	
+			}
+		}
+		IF = {
+			LIMIT = {
+				944 = {
+					owner = {
+						OR = {
+							tag = FRA
+							has_war_together_with = FRA
+						}
+					}
+				}
+			}
+			AUS = {
+				set_state_owner = 944
+				set_state_controller = 944	
+			}
+		}
+		IF = {
+			LIMIT = {
+				28 = {
+					owner = {
+						OR = {
+							tag = FRA
+							has_war_together_with = FRA
+						}
+					}
+				}
+			}
+			AUS = {
+				set_state_owner = 28
+				set_state_controller = 28	
+			}
+		}
+	}
+	option = {
+		name = Auseugen.150.b   # FIGHT
+		add_political_power = -25
+		add_stability = -0.003
+		IF = {
+			LIMIT = {
+				surrender_progress < 0.5
+				has_global_flag = auseugen_austrofrench_war
+				28 = {
+					controller = {
+						OR = {
+							tag = AUS
+						is_in_faction_with = AUS
+						}
+					}
+				}
+				945 = {
+					controller = {
+						OR = {
+							tag = AUS
+						is_in_faction_with = AUS
+						}
+					}
+				}
+				944 = {
+					controller = {
+						OR = {
+							tag = AUS
+						is_in_faction_with = AUS
+						}
+					}
+				}
+				943 = {
+					controller = {
+						OR = {
+							tag = AUS
+						is_in_faction_with = AUS
+						}
+					}
+				}
+			}
+			country_event = {
+				id = Auseugen.150
+				days = 15
+				random = 600
+			}
+		}
+	}
+}
+
+
+
+
+#continuation of imperial reconquista
+
+country_event = {
+	id = Auseugen.151      #southern netherlands??
+	title = Auseugen.151.t
+	desc = Auseugen.151.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.151.a     #Create Belgium
+		set_global_flag = auseugen_reconquista_bel
+		country_event = {
+			id = Auseugen.152
+			days = 5
+		}
+	}
+	option = {
+		name = Auseugen.151.b     #Balkanize the region
+		set_global_flag = auseugen_reconquista_fla
+		set_global_flag = auseugen_reconquista_lie
+		set_global_flag = auseugen_reconquista_wal
+		country_event = {
+			id = Auseugen.152
+			days = 5
+		}
+	}
+	option = {
+		name = Auseugen.151.c     #Occupy
+		add_political_power = 20
+		country_event = {
+			id = Auseugen.152
+			days = 5
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.152      #luxembourg??
+	title = Auseugen.152.t
+	desc = Auseugen.152.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.152.a     #Create puppet state
+		set_global_flag = auseugen_reconquista_lux
+		country_event = {
+			id = Auseugen.153
+			days = 5
+		}
+	}
+	option = {
+		name = Auseugen.152.b     #Add it to Belgium
+		set_global_flag = auseugen_reconquista_bel2
+		clr_global_flag = auseugen_reconquista_bel
+		country_event = {
+			id = Auseugen.153
+			days = 5
+		}
+
+		trigger = {
+			has_global_flag = auseugen_reconquista_bel
+		}
+	}
+	option = {
+		name = Auseugen.152.c     #Integrate
+		set_global_flag = auseugen_reconquista_int_lux
+		country_event = {
+			id = Auseugen.153
+			days = 5
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.153      #eastern france??
+	title = Auseugen.153.t
+	desc = Auseugen.153.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.153.a     #Create Lorraine and Vosges
+		set_global_flag = auseugen_reconquista_lor
+		set_global_flag = auseugen_reconquista_vos
+	}
+	option = {
+		name = Auseugen.153.b     #Integrate Alsace and create puppet states
+		set_global_flag = auseugen_reconquista_lor
+		set_global_flag = auseugen_reconquista_vos2
+		set_global_flag = auseugen_reconquista_int_als
+	}
+	option = {
+		name = Auseugen.153.c     #Integrate Alsace and Moselle, occupy the rest
+		set_global_flag = auseugen_reconquista_int_als
+		set_global_flag = auseugen_reconquista_int_lor
+	}
+}
+
+
+
+
+
+
+
+
+
+
+country_event = {
+	id = Auseugen.154      #recoquista doesn't end
+	title = Auseugen.154.t
+	desc = Auseugen.154.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.154.a
+		add_state_claim = 86
+		add_state_claim = 85
+		add_state_claim = 788
+		add_state_claim = 188
+		add_state_claim = 763
+		add_state_claim = 5
+		add_state_claim = 151
+		add_state_claim = 3
+		add_state_claim = 806
+		add_state_claim = 7
+		add_state_claim = 36
+		add_state_claim = 35
+		add_state_claim = 29
+		add_state_claim = 17
+		hidden_effect = {
+			country_event = {
+				id = Auseugen.155
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.155      #plans with western poland and prussia
+	title = Auseugen.155.t
+	desc = Auseugen.155.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.155.a     #Unify to kingdom of prussia
+		set_global_flag = auseugen_reconquista2_prussia
+		country_event = {
+			id = Auseugen.156
+			days = 5
+		}
+	}
+	option = {
+		name = Auseugen.155.b     #Balkanize BUT give posen to brandenburg
+		set_global_flag = auseugen_reconquista2_teutons
+		set_global_flag = auseugen_reconquista2_danzig
+		set_global_flag = auseugen_reconquista2_posen_to_brd
+		country_event = {
+			id = Auseugen.156
+			days = 5
+		}
+		trigger = {
+			BRD = {
+				exists = yes
+				is_puppet_of = AUS
+			}
+		}
+	}
+	option = {
+		name = Auseugen.155.c     #occupy posen, puppet prussia and cede danzig to them
+		set_global_flag = auseugen_reconquista2_teutons2
+		set_global_flag = auseugen_reconquista2_int_pos
+		country_event = {
+			id = Auseugen.156
+			days = 5
+		}
+	}
+	option = {
+		name = Auseugen.155.e     #Balkanize
+		set_global_flag = auseugen_reconquista2_teutons
+		set_global_flag = auseugen_reconquista2_danzig
+		set_global_flag = auseugen_reconquista2_posen
+		country_event = {
+			id = Auseugen.156
+			days = 5
+		}
+	}
+}
+
+
+country_event = {
+	id = Auseugen.156      #plans with holstein
+	title = Auseugen.156.t
+	desc = Auseugen.156.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.156.a     #cede it to schleswig
+		set_global_flag = auseugen_reconquista2_hol_to_sch
+	}
+	option = {
+		name = Auseugen.156.b     #new country!
+		set_global_flag = auseugen_reconquista2_schleswig
+	}
+	option = {
+		name = Auseugen.156.c     #occupy
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+country_event = {
+	id = Auseugen.157      #Austria [un]Unified more than Ever! 
+	title = Auseugen.157.t
+	desc = Auseugen.157.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.157.a     # yeah thats cool
+		add_political_power = 60
+		add_stability = -0.03
+	}
+}
+
+
+country_event = {
+	id = Auseugen.158      # vereinigungsgesetz ("act of unification"), germans and austrians shall be unified under one country
+	title = Auseugen.158.t
+	desc = Auseugen.158.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.158.a     # the world world hear our words!
+		add_stability = -0.08
+	}
+}
+
+country_event = {
+	id = Auseugen.159      # generals furious (after the critique)
+	title = Auseugen.159.t
+	desc = Auseugen.159.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.159.a     # after all it was their fault!
+		add_war_support = -0.1
+	}
+}
+
+country_event = {
+	id = Auseugen.160      # significance of the emperor weakens
+	title = Auseugen.160.t
+	desc = Auseugen.160.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.160.a     # at least hes honest
+		add_stability = -0.1
+		add_political_power = -80
+	}
+}
+
+country_event = {
+	id = Auseugen.161      # massive desertions occur (after the critique)
+	title = Auseugen.161.t
+	desc = Auseugen.161.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.161.a     # that cant be good
+		add_manpower = -15000
+	}
+}
+
+
+country_event = {
+	id = Auseugen.162      # The Amnesty
+	title = Auseugen.162.t
+	desc = Auseugen.162.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.162.a     # 
+	}
+}
+
+
+country_event = {
+	id = Auseugen.163      # Grazer (emperor's) penance
+	title = Auseugen.163.t
+	desc = Auseugen.163.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.163.a     # 
+		add_political_power = -60
+		add_stability = -0.03
+	}
+}
+
+
+country_event = {
+	id = Auseugen.164      # attempt to control the army
+	title = Auseugen.164.t
+	desc = Auseugen.164.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.164.a     # 
+	}
+}
+
+
+
+
+
+
+country_event = {
+	id = Auseugen.165      # Glory and order!
+	title = Auseugen.165.t
+	desc = Auseugen.165.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.165.a     # Austria shall become power once again
+		add_stability = 0.04
+		add_war_support = 0.07
+		add_political_power = 100
+	}
+}
+
+
+
+country_event = {
+	id = Auseugen.166      # Situation of the Country
+	title = Auseugen.166.t
+	desc = Auseugen.166.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.166.a     #
+		add_stability = 0.03
+	}
+	option = {
+		name = Auseugen.166.b     #
+		add_war_support = 0.05
+		add_stability = -0.02
+	}
+	option = {
+		name = Auseugen.166.c     #
+		add_popularity = {
+		    ideology = absolutist
+		    popularity = 0.02
+		    add_political_power = 20
+		    add_stability = -0.03
+		}
+	}
+}
+
+
+
+country_event = {
+	id = Auseugen.167      # "Enslaved Clergy"
+	title = Auseugen.167.t
+	desc = Auseugen.167.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.167.a     # Distance ourselves from Rome
+		add_stability = 0.03
+		add_political_power = 50
+		AUS_gen_moderately_displease_se = yes
+		PAP = {
+			add_opinion_modifier = {
+				target = AUS
+				modifier = AUS_distanced_from_rome
+			}
+		}
+	}
+	option = {
+		name = Auseugen.167.b     # Tradition is the highest value
+		add_stability = -0.02
+		add_war_support = -0.04
+		add_political_power = -25
+		PAP = {
+			add_political_power = 20
+		}
+		AUS_gen_slightly_appease_se = yes
+	}
+}
+
+
+
+country_event = {
+	id = Auseugen.168      # We will rise once again!       (speech)
+	title = Auseugen.168.t
+	desc = Auseugen.168.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.168.a     # Gott mit uns
+		add_political_power = 15
+		AUS_sol_moderately_appease_se = yes
+		AUS_gen_moderately_appease_se = yes
+	}
+}
+
+
+
+
+
+country_event = {
+	id = Auseugen.169      # Austrians proposition        (loans in switzerland in exchange for merceneries founded by Austria [or sth like that])
+	title = Auseugen.169.t
+	desc = Auseugen.169.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.169.a     # We will accept this Offer
+		SWI = {
+			add_ideas = { aus_idea_austrian_merceneries }
+		}
+		AUS = {
+			add_ideas = { aus_idea_swiss_loans }
+			add_opinion_modifier = {
+				target = SWI
+				modifier = accepted_the_deal
+			}
+			country_event = {
+				id = Auseugen.170
+				days = 5
+				random = 120
+			}
+		}
+	}
+	option = {
+		name = Auseugen.169.b     # No deals with Austrians!
+		AUS = {
+			add_opinion_modifier = {
+				target = SWI
+				modifier = refused_the_deal
+			}
+			country_event = {
+				id = Auseugen.171
+				days = 5
+				random = 120
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = Auseugen.170      # Switzerland accepts
+	title = Auseugen.170.t
+	desc = Auseugen.170.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.170.a     # 
+		
+	}
+}
+
+country_event = {
+	id = Auseugen.171      # Switzerland doesn't accept
+	title = Auseugen.171.t
+	desc = Auseugen.171.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.171.a     # 
+		add_political_power = -5
+	}
+}
+
+
+
+
+
+
+
+country_event = {
+	id = Auseugen.172      # HRE REPORT 1
+	title = Auseugen.172.t
+	desc = Auseugen.172.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.172.a     # 
+
+		ROOT = {
+			random_other_country = {
+				LIMIT = {
+					is_puppet = no
+					OR = {
+						has_idea = hre_idea_conservative
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_elector
+					}
+					any_owned_state = {
+						is_in_home_area = yes
+						any_neighbor_state = {
+							is_owned_by = ROOT
+							is_in_home_area = yes
+						}
+					}
+				}
+				ROOT = {
+					set_variable = { hrereport = PREV }
+				}
+			}
+		}
+	}
+	option = {
+		name = Auseugen.172.b     #
+		add_stability = -0.08
+		add_political_power = -75
+	}
+}
+
+
+country_event = {
+	id = Auseugen.173      # HRE REPORT 2 (wars)
+	title = Auseugen.173.t
+	desc = Auseugen.173.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.173.a     #
+
+		every_country = {
+			LIMIT = {
+				check_variable = { ROOT.hrereport = original_tag }
+			}
+			add_timed_idea = {
+				idea = aus_idea_traitorous_attack
+				days = 100
+			}
+			ROOT = {
+				add_timed_idea = {
+					idea = aus_idea_unprepared_strike
+					days = 100
+				}
+				declare_war_on = {
+					target = PREV
+					type = puppet_wargoal_focus 
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.174      # Second HRE war
+	title = Auseugen.174.t
+	desc = Auseugen.174.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.174.a     #
+		IF = {
+			LIMIT = {
+				BRD = {
+					exists = yes
+					OR = {
+						has_idea = hre_idea_conservative
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_elector
+					}
+					is_puppet = no
+				}
+			}
+			IF = {
+				LIMIT = {
+					ROOT = {
+						tag = BRD
+					}
+				}
+				create_faction = "Second Coalition"
+				every_other_country = {
+					LIMIT = {
+						OR = {
+							has_idea = hre_idea_conservative
+							has_idea = hre_idea_republic
+							has_idea = hre_idea_prince
+							has_idea = hre_idea_elector
+						}
+						is_puppet = no
+						has_war_with = AUS
+						all_other_country = {
+							OR = {
+								tag = AUS
+								is_in_faction_with = AUS
+								NOT = {
+									has_war_with = PREV
+								}
+							}
+						}
+					}
+					PREV = {
+						add_to_faction = PREV
+					}
+				}
+			}
+			ELSE = {
+				set_global_flag = hre_side_needs_leader
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.175      # Second HRE war
+	title = Auseugen.175.t
+	desc = Auseugen.175.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = no
+	hidden = yes
+	fire_only_once = yes
+
+	option = {
+		name = Auseugen.175
+		IF = {
+			LIMIT = {
+				any_country = {
+					OR = {
+						has_idea = hre_idea_conservative
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_elector
+					}
+					is_puppet = no
+					has_war_with = AUS
+					all_other_country = {
+						OR = {
+							tag = AUS
+							is_in_faction_with = AUS
+							NOT = {
+								has_war_with = PREV
+							}
+						}
+					}
+					is_major = yes
+				}
+			}
+			random_country = {
+				LIMIT = {
+					OR = {
+						has_idea = hre_idea_conservative
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_elector
+					}
+					is_puppet = no
+					has_war_with = AUS
+					all_other_country = {
+						OR = {
+							tag = AUS
+							is_in_faction_with = AUS
+							NOT = {
+								has_war_with = PREV
+							}
+						}
+					}
+					is_major = yes
+				}
+				create_faction = "Second Coalition"
+				every_other_country = {
+					LIMIT = {
+						OR = {
+							has_idea = hre_idea_conservative
+							has_idea = hre_idea_republic
+							has_idea = hre_idea_prince
+							has_idea = hre_idea_elector
+						}
+						is_puppet = no
+						has_war_with = AUS
+						all_other_country = {
+							OR = {
+								tag = AUS
+								is_in_faction_with = AUS
+								NOT = {
+									has_war_with = PREV
+								}
+							}
+						}
+					}
+					PREV = {
+						add_to_faction = PREV
+					}
+				}
+			}
+			ELSE = {
+				random_country = {
+					LIMIT = {
+						OR = {
+							has_idea = hre_idea_conservative
+							has_idea = hre_idea_republic
+							has_idea = hre_idea_prince
+							has_idea = hre_idea_elector
+						}
+						is_puppet = no
+						has_war_with = AUS
+						all_other_country = {
+							OR = {
+								tag = AUS
+								is_in_faction_with = AUS
+								NOT = {
+									has_war_with = PREV
+								}
+							}
+						}
+					}
+					create_faction = "Second Coalition"
+					every_other_country = {
+						LIMIT = {
+							OR = {
+								has_idea = hre_idea_conservative
+								has_idea = hre_idea_republic
+								has_idea = hre_idea_prince
+								has_idea = hre_idea_elector
+							}
+							is_puppet = no
+							has_war_with = AUS
+							all_other_country = {
+								OR = {
+									tag = AUS
+									is_in_faction_with = AUS
+									NOT = {
+										has_war_with = PREV
+									}
+								}
+							}
+						}
+						PREV = {
+							add_to_faction = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+
+	trigger = {
+		has_global_flag = hre_side_needs_leader
+		tag = AUS
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+country_event = {
+	id = Auseugen.176			#interest in galicia for aus
+	title = Auseugen.176.t
+	desc = Auseugen.176.d
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+
+	option = {
+		name = Auseugen.176.a
+
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = Auseugen.177			#interest in galicia for plc
+	title = Auseugen.177.t
+	desc = Auseugen.177.d
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+
+	option = {
+		name = Auseugen.177.a
+
+		add_opinion_modifier = {
+			target = AUS
+			modifier = AUS_claimed_galicia
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.178			# Austro-Russian partnership [rus]
+	title = Auseugen.178.t
+	desc = Auseugen.178.d
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+
+	option = {
+		name = Auseugen.178.a
+
+		add_opinion_modifier = {
+			target = FROM
+			modifier = AUS_austro_russian_partnership
+		}
+		add_opinion_modifier = {
+			target = FROM
+			modifier = AUS_austro_russian_partnership_trade
+		}
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = AUS_austro_russian_partnership
+			}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = AUS_austro_russian_partnership_trade
+			}
+		}
+	}
+	option = {
+		name = Auseugen.178.b
+		set_global_flag = aus_eugen_rus_partnership_denied
+	}
+}
+
+country_event = {
+	id = Auseugen.179			# russian reply (can be either good or bad)
+	title = Auseugen.179.t
+	desc = Auseugen.179.d
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+
+	option = {
+		name = Auseugen.179.a
+		IF = {
+			LIMIT = {
+				has_global_flag = aus_eugen_rus_partnership_denied
+			}
+			add_political_power = -25
+			ELSE = {
+				add_political_power = 25
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Auseugen.180			# austrian claims on galicia (official)
+	title = Auseugen.180.t
+	desc = Auseugen.180.d
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+
+	option = {
+		name = Auseugen.180.a
+	}
+}
+
+country_event = {
+	id = Auseugen.181			# we're capitualting (aus)
+	title = Auseugen.181.t
+	desc = Auseugen.181.d
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = aus_eugen_war_with_plc
+		surrender_progress > 0.7
+		original_tag = AUS
+		has_war_with = PLC
+	}
+
+	option = {
+		name = Auseugen.182.a
+		IF = {
+			LIMIT = {
+				owns_state = 67
+				owns_state = 762
+				owns_state = 72
+			}
+			PLC = {
+				set_state_owner = 67
+				set_state_owner = 762
+				set_state_owner = 72
+			}
+			ELSE = {
+				IF = {
+					LIMIT = {
+						owns_state = 72
+						owns_state = 76
+					}
+					PLC = {
+						set_state_owner = 72
+						set_state_owner = 76
+					}
+					ELSE = {
+						IF = {
+							LIMIT = {
+								owns_state = 72
+							}
+							set_state_owner = 72
+						}
+					}
+				}
+				IF = {
+					LIMIT = {
+						owns_state = 73
+					}
+					PLC = {
+						set_state_owner = 73
+					}
+				}
+			}
+		}
+		white_peace = PLC
+
+		clr_global_flag = aus_eugen_war_with_plc
+	}
+}
+
+country_event = {
+	id = Auseugen.182			# we're capitualting (plc)
+	title = Auseugen.182.t
+	desc = Auseugen.182.d
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		has_global_flag = aus_eugen_war_with_plc
+		surrender_progress > 0.7
+		original_tag = PLC
+		has_war_with = AUS
+	}
+
+	option = {
+		name = Auseugen.182.a
+		IF = {
+			LIMIT = {
+				owns_state = 88
+			}
+			AUS = {
+				set_state_owner = 88
+			}
+		}
+		IF = {
+			LIMIT = {
+				owns_state = 91
+			}
+			AUS = {
+				set_state_owner = 91
+			}
+		}
+		IF = {
+			LIMIT = {
+				owns_state = 89
+			}
+			AUS = {
+				set_state_owner = 89
+			}
+		}
+		white_peace = AUS
+		clr_global_flag = aus_eugen_war_with_plc
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+add_namespace = EugenCeremony
+
+
+
+
+
+
+country_event = {
+	id = EugenCeremony.1      # wer
+	title = EugenCeremony.1.t
+	desc = EugenCeremony.1.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = EugenCeremony.1.a     # it will be sorted out later
+
+		randomize_temp_variable = {
+			var = temp_aus_ceremony_1
+			distribution = uniform
+			min = -0.04
+			max = -0.02
+		}
+		randomize_temp_variable = {
+			var = temp_aus_ceremony_2
+			distribution = uniform
+			min = -0.04
+			max = -0.02
+		}
+
+		add_to_variable = { aus_ceremony_sol_var = temp_aus_ceremony_1 }
+		add_to_variable = { aus_ceremony_gen_var = temp_aus_ceremony_2 }
+
+		custom_effect_tooltip = aus_sol_slightly_displease
+		custom_effect_tooltip = aus_gen_slightly_displease
+	}
+	option = {
+		name = EugenCeremony.1.b     # organize the ceremony in the graz cathedral
+		add_political_power = -20
+		
+	}
+	option = {
+		name = EugenCeremony.1.c     # Schönbrunn Palace in Wien is the only possible option
+
+		randomize_temp_variable = {
+			var = temp_aus_ceremony_1
+			distribution = uniform
+			min = 0.005
+			max = 0.02
+		}
+		randomize_temp_variable = {
+			var = temp_aus_ceremony_2
+			distribution = uniform
+			min = 0.005
+			max = 0.02
+		}
+
+		add_to_variable = { aus_ceremony_sol_var = temp_aus_ceremony_1 }
+		add_to_variable = { aus_ceremony_gen_var = temp_aus_ceremony_2 }
+		add_political_power = -50
+
+		custom_effect_tooltip = aus_sol_slightly_appease
+		custom_effect_tooltip = aus_gen_slightly_appease
+		
+	}
+}
+
+country_event = {
+	id = EugenCeremony.2      # who
+	title = EugenCeremony.2.t
+	desc = EugenCeremony.2.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = EugenCeremony.2.a     # brave soldiers
+
+		randomize_temp_variable = {
+			var = temp_aus_ceremony_1
+			distribution = uniform
+			min = 0.015
+			max = 0.02
+		}
+		randomize_temp_variable = {
+			var = temp_aus_ceremony_2
+			distribution = uniform
+			min = -0.015
+			max = -0.005
+		}
+
+		add_to_variable = { aus_ceremony_sol_var = temp_aus_ceremony_1 }
+		add_to_variable = { aus_ceremony_gen_var = temp_aus_ceremony_2 }
+
+		custom_effect_tooltip = aus_sol_moderately_appease
+		custom_effect_tooltip = aus_gen_slightly_displease
+		
+	}
+	option = {
+		name = EugenCeremony.2.b     # loyal generals
+
+		randomize_temp_variable = {
+			var = temp_aus_ceremony_1
+			distribution = uniform
+			min = -0.015
+			max = -0.005
+		}
+		randomize_temp_variable = {
+			var = temp_aus_ceremony_2
+			distribution = uniform
+			min = 0.015
+			max = 0.02
+		}
+
+		add_to_variable = { aus_ceremony_sol_var = temp_aus_ceremony_1 }
+		add_to_variable = { aus_ceremony_gen_var = temp_aus_ceremony_2 }
+
+		custom_effect_tooltip = aus_sol_slightly_displease
+		custom_effect_tooltip = aus_gen_moderately_appease
+		
+	}
+	option = {
+		name = EugenCeremony.2.c     # both
+
+		add_political_power = -15
+
+		randomize_temp_variable = {
+			var = temp_aus_ceremony_1
+			distribution = uniform
+			min = 0
+			max = 0.01
+		}
+		randomize_temp_variable = {
+			var = temp_aus_ceremony_2
+			distribution = uniform
+			min = 0
+			max = 0.01
+		}
+
+		add_to_variable = { aus_ceremony_sol_var = temp_aus_ceremony_1 }
+		add_to_variable = { aus_ceremony_gen_var = temp_aus_ceremony_2 }
+
+
+		custom_effect_tooltip = aus_sol_slightly_appease
+		custom_effect_tooltip = aus_gen_slightly_appease
+		
+	}
+}
+
+country_event = {
+	id = EugenCeremony.3      # how big budget
+	title = EugenCeremony.3.t
+	desc = EugenCeremony.3.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = EugenCeremony.3.a     # bugdet size doesn't make any difference
+		add_political_power = -20
+		
+	}
+	option = {
+		name = EugenCeremony.3.b     # normal budget
+
+		randomize_temp_variable = {
+			var = temp_aus_ceremony_1
+			distribution = uniform
+			min = 0
+			max = 0.02
+		}
+		randomize_temp_variable = {
+			var = temp_aus_ceremony_2
+			distribution = uniform
+			min = 0
+			max = 0.02
+		}
+
+		add_to_variable = { aus_ceremony_sol_var = temp_aus_ceremony_1 }
+		add_to_variable = { aus_ceremony_gen_var = temp_aus_ceremony_2 }
+
+		add_political_power = -50
+
+		custom_effect_tooltip = aus_sol_moderately_appease
+		custom_effect_tooltip = aus_gen_moderately_appease
+		
+	}
+	option = {
+		name = EugenCeremony.3.c     # spend all the savings
+
+		randomize_temp_variable = {
+			var = temp_aus_ceremony_1
+			distribution = uniform
+			min = 0.02
+			max = 0.05
+		}
+		randomize_temp_variable = {
+			var = temp_aus_ceremony_2
+			distribution = uniform
+			min = 0.02
+			max = 0.05
+		}
+
+		add_to_variable = { aus_ceremony_sol_var = temp_aus_ceremony_1 }
+		add_to_variable = { aus_ceremony_gen_var = temp_aus_ceremony_2 }
+
+		add_political_power = -100
+		add_stability = -0.02
+		
+		custom_effect_tooltip = aus_sol_highly_appease
+		custom_effect_tooltip = aus_gen_highly_appease
+	}
+}
+
+country_event = {
+	id = EugenCeremony.4      # invitations
+	title = EugenCeremony.4.t
+	desc = EugenCeremony.4.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = EugenCeremony.4.a     # only austrian nobles
+
+		add_stability = 0.01
+
+		randomize_temp_variable = {
+			var = temp_aus_ceremony_2
+			distribution = uniform
+			min = 0
+			max = 0.01
+		}
+
+		add_to_variable = { aus_ceremony_gen_var = temp_aus_ceremony_2 }
+
+		custom_effect_tooltip = aus_gen_slightly_appease
+	}
+	option = {
+		name = EugenCeremony.4.b     # nobility from the whole HRE
+
+		add_political_power = -50
+		add_stability = -0.02
+
+		randomize_temp_variable = {
+			var = temp_aus_ceremony_1
+			distribution = uniform
+			min = 0.02
+			max = 0.035
+		}
+		randomize_temp_variable = {
+			var = temp_aus_ceremony_2
+			distribution = uniform
+			min = 0.01
+			max = 0.03
+		}
+
+		every_country = {
+			LIMIT = {
+				OR = {
+					has_idea = hre_idea_prince
+					has_idea = hre_idea_elector
+					has_idea = hre_idea_conservative
+					has_idea = hre_idea_republic
+				}
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+			add_opinion_modifier = {
+			    target = ROOT
+			    modifier = AUS_invited_us_to_award_ceremony
+			}
+		}
+
+		add_to_variable = { global.imperial_authority = 10 }
+		custom_effect_tooltip = add_10_imp_auth_tt
+
+		add_to_variable = { aus_ceremony_sol_var = temp_aus_ceremony_1 }
+		add_to_variable = { aus_ceremony_gen_var = temp_aus_ceremony_2 }
+
+		custom_effect_tooltip = aus_sol_moderately_appease
+		custom_effect_tooltip = aus_gen_moderately_appease
+	}
+	option = {
+		name = EugenCeremony.4.c     # invite also the most powerful kings of Europe
+
+		add_political_power = -60
+		add_stability = -0.06
+
+		randomize_temp_variable = {
+			var = temp_aus_ceremony_1
+			distribution = uniform
+			min = 0.03
+			max = 0.04
+		}
+		randomize_temp_variable = {
+			var = temp_aus_ceremony_2
+			distribution = uniform
+			min = 0.03
+			max = 0.05
+		}
+
+		every_country = {
+			LIMIT = {
+				OR = {
+					original_tag = FRA
+					original_tag = ENG
+					original_tag = SCO
+					original_tag = SWE
+					original_tag = DEN
+					original_tag = PLC
+					original_tag = RUS
+					original_tag = GRE
+					original_tag = OTT
+					original_tag = VNC
+					original_tag = ENG
+					original_tag = NAP
+					original_tag = SPR
+					original_tag = POR
+					original_tag = BRD
+					original_tag = HOL
+				}
+				has_opinion = {
+					target = AUS
+					value > -15
+				}
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+			add_opinion_modifier = {
+			    target = ROOT
+			    modifier = AUS_invited_us_to_award_ceremony
+			}
+			country_event = {
+				id = EugenCeremony.6
+				days = 2
+			}
+		}
+
+		add_to_variable = { aus_ceremony_sol_var = temp_aus_ceremony_1 }
+		add_to_variable = { aus_ceremony_gen_var = temp_aus_ceremony_2 }
+
+
+		custom_effect_tooltip = aus_sol_highly_appease
+		custom_effect_tooltip = aus_sol_highly_appease
+	}
+}
+
+
+
+country_event = {
+	id = EugenCeremony.5 #actual ceremony
+	title = EugenCeremony.5.t
+	desc = EugenCeremony.5.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+
+	option = {
+		name = EugenCeremony.5.a
+	}
+}
+
+
+
+
+
+country_event = {
+	id = EugenCeremony.6 # we have been invited to a ceremony
+	title = EugenCeremony.6.t
+	desc = EugenCeremony.6.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+
+	option = {
+		name = EugenCeremony.6.a  # our presence will benefit
+		add_stability = -0.01
+		add_political_power = -15
+		AUS = {
+			add_opinion_modifier = {
+			    target = ROOT
+			    modifier = AUS_accepted_invitation
+			}
+			country_event = {
+				id = EugenCeremony.7
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = EugenCeremony.6.b  # austrians shouldnt be trusted
+		add_stability = 0.01
+		AUS = {
+			add_opinion_modifier = {
+			    target = ROOT
+			    modifier = AUS_declined_invitation
+			}
+			country_event = {
+				id = EugenCeremony.8
+				days = 2
+			}
+		}
+	}
+}
+
+
+
+country_event = {
+	id = EugenCeremony.7 # [??] accepted an invitation
+	title = EugenCeremony.7.t
+	desc = EugenCeremony.7.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+
+	option = {
+		name = EugenCeremony.7.a  # good
+		add_political_power = 10
+	}
+}
+
+
+country_event = {
+	id = EugenCeremony.8 # [??] declined an invitation
+	title = EugenCeremony.8.t
+	desc = EugenCeremony.8.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+
+	option = {
+		name = EugenCeremony.8.a  # das bad
+		add_political_power = -10
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	#####  #   #   ###   #####  #   #
+	#      #   #  #      #      ##  #
+	###    #   #  #  #   ###    # # #
+	#      #   #  #   #  #      #  ##
+	#####  #####   ###   #####  #   #
+ 
+		  #    ####   #   #  #   #
+		 # #   #   #  ## ##   # #
+		 ###   ####   # # #    #
+		#   #  #   #  #   #    #
+		#   #  #   #  #   #    #
+
+#####  #   #  #####  #####  #####  #   #
+#       # #   #        #    #      ## ##
+#####    #    #####    #    ###    # # #
+    #    #        #    #    #      #   #
+#####    #    #####    #    #####  #   #
+
+
+
+add_namespace = EugenArmy
+
+
+country_event = {
+	id = EugenArmy.1
+	title = EugenArmy.1.t
+	desc = EugenArmy.1.d
+
+	is_triggered_only = yes
+	
+	trigger = {
+		check_variable = { aus_var_soldiers_support > 0.9 }
+		original_tag = AUS
+		has_idea = aus_idea_high_soldiers_loyalty
+	}
+
+	fire_only_once = no
+
+	option = {
+		name = EugenArmy.1.a     #
+		swap_ideas = {
+			add_idea = aus_idea_fanatical_army
+			remove_idea = aus_idea_high_soldiers_loyalty
+		}
+	}
+}
+
+country_event = {
+	id = EugenArmy.2
+	title = EugenArmy.2.t
+	desc = EugenArmy.2.d
+
+	is_triggered_only = yes
+	
+	trigger = {
+		check_variable = { aus_var_soldiers_support < 0.9 }
+		original_tag = AUS
+		has_idea = aus_idea_fanatical_army
+	}
+
+	fire_only_once = no
+
+	option = {
+		name = EugenArmy.2.a     #
+		swap_ideas = {
+			add_idea = aus_idea_high_soldiers_loyalty
+			remove_idea = aus_idea_fanatical_army
+		}
+	}
+}
+
+country_event = {
+	id = EugenArmy.3
+	title = EugenArmy.3.t
+	desc = EugenArmy.3.d
+
+	is_triggered_only = yes
+	
+	trigger = {
+		check_variable = { aus_var_soldiers_support > 0.75 }
+		original_tag = AUS
+		has_idea = aus_idea_moderate_soldiers_support
+	}
+
+	fire_only_once = no
+
+	option = {
+		name = EugenArmy.3.a     #
+		swap_ideas = {
+			add_idea = aus_idea_high_soldiers_loyalty
+			remove_idea = aus_idea_moderate_soldiers_support
+		}
+	}
+}
+
+country_event = {
+	id = EugenArmy.4
+	title = EugenArmy.4.t
+	desc = EugenArmy.4.d
+
+	is_triggered_only = yes
+	
+	trigger = {
+		check_variable = { aus_var_soldiers_support < 0.75 }
+		original_tag = AUS
+		has_idea = aus_idea_high_soldiers_loyalty
+	}
+
+	fire_only_once = no
+
+	option = {
+		name = EugenArmy.4.a     #
+		swap_ideas = {
+			add_idea = aus_idea_moderate_soldiers_support
+			remove_idea = aus_idea_high_soldiers_loyalty
+		}
+	}
+}
+
+country_event = {
+	id = EugenArmy.5
+	title = EugenArmy.5.t
+	desc = EugenArmy.5.d
+
+	is_triggered_only = yes
+	
+	trigger = {
+		check_variable = { aus_var_soldiers_support > 0.4 }
+		original_tag = AUS
+		has_idea = aus_idea_frequent_desertions
+	}
+
+	fire_only_once = no
+
+	option = {
+		name = EugenArmy.5.a     #
+		swap_ideas = {
+			add_idea = aus_idea_moderate_soldiers_support
+			remove_idea = aus_idea_frequent_desertions
+		}
+	}
+}
+
+country_event = {
+	id = EugenArmy.6
+	title = EugenArmy.6.t
+	desc = EugenArmy.6.d
+
+	is_triggered_only = yes
+	
+	trigger = {
+		check_variable = { aus_var_soldiers_support < 0.4 }
+		original_tag = AUS
+		has_idea = aus_idea_moderate_soldiers_support
+	}
+
+	fire_only_once = no
+
+	option = {
+		name = EugenArmy.6.a     #
+		swap_ideas = {
+			add_idea = aus_idea_frequent_desertions
+			remove_idea = aus_idea_moderate_soldiers_support
+		}
+	}
+}
+
+country_event = {
+	id = EugenArmy.7
+	title = EugenArmy.7.t
+	desc = EugenArmy.7.d
+
+	is_triggered_only = yes
+	
+	trigger = {
+		check_variable = { aus_var_soldiers_support > 0.2 }
+		original_tag = AUS
+		has_idea = aus_idea_traitorous_army
+	}
+
+	fire_only_once = no
+
+	option = {
+		name = EugenArmy.7.a     #
+		swap_ideas = {
+			add_idea = aus_idea_frequent_desertions
+			remove_idea = aus_idea_traitorous_army
+		}
+	}
+}
+
+country_event = {
+	id = EugenArmy.8
+	title = EugenArmy.8.t
+	desc = EugenArmy.8.d
+
+	is_triggered_only = yes
+	
+	trigger = {
+		check_variable = { aus_var_soldiers_support < 0.2 }
+		original_tag = AUS
+		has_idea = aus_idea_frequent_desertions
+	}
+
+	fire_only_once = no
+
+	option = {
+		name = EugenArmy.8.a     #
+		swap_ideas = {
+			add_idea = aus_idea_traitorous_army
+			remove_idea = aus_idea_frequent_desertions
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+country_event = {
+	id = EugenArmy.9
+	title = EugenArmy.9.t
+	desc = EugenArmy.9.d
+
+	is_triggered_only = yes
+	
+	trigger = {
+		check_variable = { aus_var_soldiers_support > 0.9 }
+		original_tag = AUS
+		has_idea = aus_idea_loyal_generals
+	}
+
+	fire_only_once = no
+
+	option = {
+		name = EugenArmy.9.a     #
+		swap_ideas = {
+			add_idea = aus_idea_highly_obedient_generals
+			remove_idea = aus_idea_loyal_generals
+		}
+	}
+}
+
+country_event = {
+	id = EugenArmy.10
+	title = EugenArmy.10.t
+	desc = EugenArmy.10.d
+
+	is_triggered_only = yes
+	
+	trigger = {
+		check_variable = { aus_var_soldiers_support < 0.9 }
+		original_tag = AUS
+		has_idea = aus_idea_highly_obedient_generals
+	}
+
+	fire_only_once = no
+
+	option = {
+		name = EugenArmy.10.a     #
+		swap_ideas = {
+			add_idea = aus_idea_loyal_generals
+			remove_idea = aus_idea_highly_obedient_generals
+		}
+	}
+}
+
+country_event = {
+	id = EugenArmy.11
+	title = EugenArmy.11.t
+	desc = EugenArmy.11.d
+
+	is_triggered_only = yes
+	
+	trigger = {
+		check_variable = { aus_var_soldiers_support > 0.75 }
+		original_tag = AUS
+		has_idea = aus_idea_limited_generals_approval
+	}
+
+	fire_only_once = no
+
+	option = {
+		name = EugenArmy.11.a     #
+		swap_ideas = {
+			add_idea = aus_idea_loyal_generals
+			remove_idea = aus_idea_limited_generals_approval
+		}
+	}
+}
+
+country_event = {
+	id = EugenArmy.12
+	title = EugenArmy.12.t
+	desc = EugenArmy.12.d
+
+	is_triggered_only = yes
+	
+	trigger = {
+		check_variable = { aus_var_soldiers_support < 0.75 }
+		original_tag = AUS
+		has_idea = aus_idea_loyal_generals
+	}
+
+	fire_only_once = no
+
+	option = {
+		name = EugenArmy.12.a     #
+		swap_ideas = {
+			add_idea = aus_idea_limited_generals_approval
+			remove_idea = aus_idea_loyal_generals
+		}
+	}
+}
+
+country_event = {
+	id = EugenArmy.13
+	title = EugenArmy.13.t
+	desc = EugenArmy.13.d
+
+	is_triggered_only = yes
+	
+	trigger = {
+		check_variable = { aus_var_soldiers_support > 0.4 }
+		original_tag = AUS
+		has_idea = aus_idea_lack_of_generals_support
+	}
+
+	fire_only_once = no
+
+	option = {
+		name = EugenArmy.13.a     #
+		swap_ideas = {
+			add_idea = aus_idea_limited_generals_approval
+			remove_idea = aus_idea_lack_of_generals_support
+		}
+	}
+}
+
+country_event = {
+	id = EugenArmy.14
+	title = EugenArmy.14.t
+	desc = EugenArmy.14.d
+
+	is_triggered_only = yes
+	
+	trigger = {
+		check_variable = { aus_var_soldiers_support < 0.4 }
+		original_tag = AUS
+		has_idea = aus_idea_limited_generals_approval
+	}
+
+	fire_only_once = no
+
+	option = {
+		name = EugenArmy.14.a     #
+		swap_ideas = {
+			add_idea = aus_idea_lack_of_generals_support
+			remove_idea = aus_idea_limited_generals_approval
+		}
+	}
+}
+
+country_event = {
+	id = EugenArmy.15
+	title = EugenArmy.15.t
+	desc = EugenArmy.15.d
+
+	is_triggered_only = yes
+	
+	trigger = {
+		check_variable = { aus_var_soldiers_support > 0.2 }
+		original_tag = AUS
+		has_idea = aus_idea_military_intrigues
+	}
+
+	fire_only_once = no
+
+	option = {
+		name = EugenArmy.10.a     #
+		swap_ideas = {
+			add_idea = aus_idea_lack_of_generals_support
+			remove_idea = aus_idea_military_intrigues
+		}
+	}
+}
+
+country_event = {
+	id = EugenArmy.16
+	title = EugenArmy.16.t
+	desc = EugenArmy.16.d
+
+	is_triggered_only = yes
+	
+	trigger = {
+		check_variable = { aus_var_soldiers_support < 0.2 }
+		original_tag = AUS
+		has_idea = aus_idea_lack_of_generals_support
+	}
+
+	fire_only_once = no
+
+	option = {
+		name = EugenArmy.16.a     #
+		swap_ideas = {
+			add_idea = aus_idea_military_intrigues
+			remove_idea = aus_idea_lack_of_generals_support
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+country_event = {
+	id = Auseugen.1500      # Second war with german states!
+	title = Auseugen.1500.t
+	desc = Auseugen.1500.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.1500.a     #lets go to  W A R
+		set_global_flag = aus_great_gathering_wg2
+		custom_effect_tooltip = aus_great_gathering_war2_tt
+		hidden_effect = {
+			every_other_country = {
+				LIMIT = {
+					OR = {		
+							has_idea = hre_idea_elector
+							has_idea = hre_idea_prince
+							has_idea = hre_idea_conservative
+							has_idea = hre_idea_republic
+						}
+					NOT = {
+						is_puppet = yes
+						is_in_faction_with = AUS
+					}
+				}
+				AUS = {
+					declare_war_on = {
+						target = PREV
+						type = puppet_wargoal_focus
+					}
+				}
+				BRD = {
+					country_event = Auseugen.151
+				}
+			}
+			every_country = {
+				LIMIT = {
+					is_puppet_of = AUS
+					OR = {		
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_conservative
+						has_idea = hre_idea_republic
+					}
+				}
+				add_to_war = { 
+				    targeted_alliance = AUS 
+				    enemy = BRD
+				    hostility_reason = asked_to_join
+				}
+			}
+			clr_global_flag = aus_ggwar_ended
+		}
+	}
+}
+
+
+
+country_event = {
+	id = Auseugen.1510      # German coalition formes.. again (event for BRD)
+	title = Auseugen.1510.t
+	desc = Auseugen.1510.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.1510.a     #let's form second coalition
+		every_other_country	= {
+			limit = {
+				OR = {
+					has_idea = hre_idea_prince
+					has_idea = hre_idea_republic
+					has_idea = hre_idea_elector
+					has_idea = hre_idea_conservative
+				}
+				NOT = {
+					is_in_faction_with = AUS
+				}
+				is_puppet = no
+			}
+			country_event = Auseugen.152
+		}
+		create_faction = "Second Coalition"
+	}
+}
+
+
+
+
+
+country_event = {
+	id = Auseugen.1520      # Invitation to the second coalition
+	title = Auseugen.1520.t
+	desc = Auseugen.1520.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.1520.a     #join
+		BRD = {
+			add_to_faction = ROOT
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					is_major = no
+				}
+				set_major = yes
+				set_country_flag = aus_temp_major
+			}
+			add_to_variable = {
+				var = global.hre_members_of_war value = 1
+			}
+		}
+		
+	}
+	option = {
+		name = Auseugen.1520.b     #refuse to join
+		ai_chance = { factor = 0 }
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+country_event = {
+	id = Auseugen.200      # mod tool
+	title = Auseugen.200.t
+	desc = Auseugen.200.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.200.a
+		set_variable = { global.aus_var_opposition_unity = 0.46 }
+		set_variable = { global.aus_var_opposition_intensity = 0.2 }
+	}
+	option = {
+		name = Auseugen.200.b
+		set_global_flag = auseugen_reconquista_bel
+		set_global_flag = auseugen_reconquista_bel_b
+		set_global_flag = auseugen_reconquista_fla
+		set_global_flag = auseugen_reconquista_fla_b
+		set_global_flag = auseugen_reconquista_lie
+		set_global_flag = auseugen_reconquista_wal
+		set_global_flag = auseugen_reconquista_lux
+		set_global_flag = auseugen_reconquista_lor
+		set_global_flag = auseugen_reconquista_vos
+		set_global_flag = auseugen_reconquista_vos_b
+		set_global_flag = auseugen_reconquista_vos2
+		set_global_flag = auseugen_reconquista2_prussia
+		set_global_flag = auseugen_reconquista2_teutons
+		set_global_flag = auseugen_reconquista2_danzig
+		set_global_flag = auseugen_reconquista2_posen
+		set_global_flag = auseugen_reconquista2_schleswig
+
+		set_global_flag = auseugen_reconquista_int_als
+		set_global_flag = auseugen_reconquista_int_lor
+		set_global_flag = auseugen_reconquista_int_lux
+		set_global_flag = auseugen_reconquista2_int_pos
+
+		set_global_flag = auseugen_reconquista2_posen_to_brd
+		set_global_flag = auseugen_reconquista2_hol_to_sch
+
+		set_global_flag = auseugen_territorial_decisions_unlocked
+		set_global_flag = auseugen_reconquista_2
+	}
+	option = {
+		name = Auseugen.200.c
+		remove_ideas = {
+			aus_idea_fail_in_imperial_war_1
+			aus_idea_fail_in_imperial_war_2
+			aus_idea_fail_in_imperial_war_3
+			aus_idea_fail_in_imperial_war_4
+			aus_idea_fail_in_imperial_war_5
+		}
+		add_ideas = { aus_idea_fail_in_imperial_war_1 }
+	}
+	option = {
+		name = Auseugen.200.D
+		set_variable = { aus_var_loyalty_of_generals = 0.5 }
+		set_variable = { aus_var_soldiers_support = 0.5 }
+	}
+}
+
+
+
+country_event = {
+	id = Auseugen.1000
+	title = Auseugen.1000.t
+	desc = Auseugen.1000.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.1000.a
+		load_focus_tree = austria_eugen_intro
+	}
+	option = {
+		name = Auseugen.1000.b
+		load_focus_tree = austria_eugen_2
+	}
+	option = {
+		name = Auseugen.1000.c
+		load_focus_tree = austria_eugen_3
+	}
+}
+
+country_event = {
+	id = Auseugen.1001
+	title = Auseugen.1001.t
+	desc = Auseugen.1001.d	
+	picture = GFX_report_news_event_rome_01
+	is_triggered_only = yes
+	
+	option = {
+		name = Auseugen.1001.d
+		load_focus_tree = austria_eugen_lose_1
+	}
+	option = {
+		name = Auseugen.1001.e
+		load_focus_tree = austria_eugen_lose_2
+	}
+	option = {
+		name = Auseugen.1001.f
+		load_focus_tree = austria_eugen_win_1
+	}
+	option = {
+		name = Auseugen.1001.g
+		load_focus_tree = austria_eugen_win_2
+	}
+}

@@ -1,0 +1,29 @@
+
+state={
+	id=888
+	name="STATE_888"
+	manpower = 55677
+	
+	state_category = pastoral
+
+	resources = {
+		wood=1
+		horses=2
+	}
+
+	history={
+		owner = BOL
+		victory_points = {
+			12917 1 
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = BOL
+	}
+
+	provinces={
+		12917 13252 13256 13254
+	}
+	
+}

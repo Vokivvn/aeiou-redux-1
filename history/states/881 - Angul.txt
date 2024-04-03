@@ -1,0 +1,26 @@
+
+state={
+	id=881
+	name="STATE_881" 
+	manpower = 50000
+	resources={
+		
+	}
+	
+	state_category = town
+
+	history={
+		owner = MUG
+		add_core_of = MUG
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			10060 1
+		}		
+	}
+
+	provinces={
+		1101 1538 4513 10060 10428
+	}
+}

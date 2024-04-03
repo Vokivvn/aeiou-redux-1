@@ -1,0 +1,24 @@
+﻿capital = 64
+
+# Starting tech
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+	
+}
+
+set_research_slots = 4
+set_convoys = 50
+set_stability = 0.75
+set_politics = {
+	ruling_party = conservative
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+
+}
+set_popularities = {
+	conservative = 100
+}
+
+### Ship Variants ###

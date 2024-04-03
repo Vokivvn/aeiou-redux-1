@@ -1,0 +1,95 @@
+
+is_diplomatic_action_valid_expeditionary_force = {
+	always = no
+}
+
+is_diplomatic_action_valid_request_garrison_support = {
+	always = no
+}
+
+is_diplomatic_action_valid_return_expeditions = {
+	always = no
+}
+
+is_diplomatic_action_valid_create_faction = {
+	always = no 
+}
+
+is_diplomatic_action_valid_join_faction = {
+	always = no 
+}
+
+is_diplomatic_action_valid_offer_join_faction = {
+	always = no 
+}
+
+is_diplomatic_action_valid_leave_faction = {
+	always = no 
+}
+
+is_diplomatic_action_valid_kick_from_faction = {
+	always = no 
+}
+
+is_diplomatic_action_valid_assume_faction_leadership = {
+	always = no 
+}
+
+is_diplomatic_action_valid_request_expeditionary_forces = {
+	always = no
+}
+
+
+has_fragmentation_wg = {
+	OR = {
+		has_global_flag = return_of_moselland_wg
+		has_global_flag = return_of_berg_wg
+		has_global_flag = return_of_oberbayern_wg
+		has_global_flag = return_of_niederbayern_wg
+		has_global_flag = return_of_franken_wg
+		has_global_flag = return_of_kassel_wg
+		has_global_flag = return_of_munster_wg
+		has_global_flag = return_of_ulm_wg
+		has_global_flag = return_of_holstein_wg
+		has_global_flag = return_of_hannover_wg
+		has_global_flag = return_of_thuringen_wg
+		has_global_flag = return_of_mecklenburg_wg
+		has_global_flag = return_of_vorpommern_wg
+		has_global_flag = return_of_hinterpommern_wg
+		has_global_flag = return_of_brandenburg_wg
+		has_global_flag = return_of_sachen_wg
+		has_global_flag = return_of_ostmark_wg
+		has_global_flag = return_of_hamburg_wg
+		has_global_flag = return_of_lubeck_wg
+		has_global_flag = return_of_hessen_wg
+		has_global_flag = return_of_pfalz_wg
+		has_global_flag = return_of_trier_wg
+		has_global_flag = return_of_baden_wg
+		has_global_flag = return_of_wurttemberg_wg
+		has_global_flag = return_of_nuremberg_wg
+		has_global_flag = return_of_ansbach_wg
+		has_global_flag = return_of_bayreuth_wg
+		has_global_flag = return_of_oldenburg_wg
+		has_global_flag = return_of_ostfriesland_wg
+		has_global_flag = return_of_koln_wg
+		has_global_flag = return_of_frankfurt_wg
+		has_global_flag = return_of_kleve_wg
+		has_global_flag = return_of_bremen_wg
+		has_global_flag = return_of_gottingen_wg
+		has_global_flag = return_of_dortmund_wg
+		has_global_flag = return_of_mark_wg
+		has_global_flag = return_of_nassau_wg
+	}
+}
+
+### Country
+
+FRA_golden_age_ended = {
+	custom_trigger_tooltip = {
+		tooltip = FRA_golden_age_ended
+		NOT = { has_country_flag = FRA_golden_age}
+	}
+}
+
+
+

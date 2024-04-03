@@ -1,0 +1,35 @@
+
+state={
+	id=497
+	name="STATE_497"
+	manpower = 473476
+	
+	state_category = rural
+	
+	resources={
+		fabric=2
+		wood=2
+		iron=2
+		steel=2
+	}
+
+	history={
+		owner = POR
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			12853 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = POR
+		victory_points = {
+			12853 1 
+		}
+
+	}
+
+	provinces={
+		2150 2214 2228 5153 5204 5220 10874 10984 12853 12913 12933 12947 12999 
+	}
+}

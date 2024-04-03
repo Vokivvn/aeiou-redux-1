@@ -1,0 +1,694 @@
+guiTypes = {
+
+#	containerWindowType = {    
+#		name = "newideologyview"     
+#		position = { x=5 y=300}	    
+#		size = { width=100%% height=200 }
+#		verticalScrollbar = "right_vertical_slider"
+#		margin = { top = 10 bottom = 10}
+#		
+#		background = {
+#			name = "Background"		
+#			quadTextureSprite ="GFX_tiled_window"
+#		}
+#		instantTextboxType = {
+#			name = "hmm"
+#			position = { x = 160 y = 5 }
+#			font = "hoi_18mbs"
+#			text = "Factions of [Root.GetNameDEF]"
+#			#fixedsize = yes
+#			maxWidth = 250
+#			maxHeight = 18
+#		}
+#		gridboxtype = {
+#			name = "show_grid"
+#			position = { x = 0 y = 35 }
+#			size = { width = 100%% height = 600 }
+#			slotsize = { width = 250 height = 150 }
+#			add_horizontal = yes				
+#			format = "UPPER_LEFT"
+#			max_slots_horizontal = 2           
+#		}
+#	}
+#	containerWindowType = { 
+#		name = "show_entry_ideologies"
+#		#moveable =  yes
+#		
+#	containerWindowType = {    
+#		name = "newideologies_entry"     
+#		position = { x=15 y=0}	
+#		size = { width=250 height=150 }
+#		         
+#		background = {
+#			name = "Background"		
+#			quadTextureSprite ="GFX_tiled_window"
+#		}                      
+#		instantTextboxType = {      
+#			name = "new_ideology_party_name"
+#			position = { x = 15 y = 15 }
+#			font = "hoi_18mbs"
+#			format = centre 
+#			text = "[GetPartyName]"
+#			fixedsize = no
+#			maxWidth = 200   
+#			maxHeight = 14   
+#		}
+#		instantTextboxType = {
+#			name = "new_ideology_popularities" 
+#			position = { x = 25 y = 55 }
+#			font = "hoi_18mbs"
+#			text = "Popularity: [?Root.ideology_popularities_array^i|%2]"
+#			#fixedsize = yes
+#			maxWidth = 180
+#			maxHeight = 18      
+#		} 
+#		iconType ={
+#			name = "new_ideologies_bg_ruling"
+#			spriteType = "GFX_new_ideologies_bg_ruling"
+#			position = { x= 15 y = 105 }
+#			Orientation = "UPPER_LEFT"
+#			scale = 0.55 
+#		}
+#		iconType ={
+#			name = "new_ideologies_icon1"
+#			spriteType = ""
+#			position = { x= 160 y = 40 } 
+#			Orientation = "UPPER_LEFT"
+#			scale = 0.75
+#		}	      		
+#		iconType ={
+#			name = "new_ideologies_ruling"
+#			spriteType = ""
+#			position = { x= 120 y = 107 }
+#			Orientation = "UPPER_LEFT"
+#			scale = 0.85  
+#		}	
+#		instantTextboxType = {
+#			name = "new_ideology_party_ruling"                  
+#			position = { x = -34 y = 112 }
+#			font = "hoi_18mbs"        
+#			text = "[GetNewIdeologyPartyStatus]"
+#			format = centre 
+#			fixedsize = yes
+#			maxWidth = 200
+#			maxHeight = 18
+#		}
+#		instantTextboxType = {
+#			name = "new_ideology_party_leaders"
+#			position = { x = 20 y = 80 }
+#			font = "hoi_18mbs"        
+#			text = NEW_IDEOLOGY_PARTY_LEADER
+#			format = left
+#			fixedsize = yes
+#			maxWidth = 200
+#			maxHeight = 18
+#		}
+#    }		
+#	}
+#
+#	containerWindowType = {    
+#		name = "newideologydiploview"     
+#		position = { x=0 y=40}	    
+#		size = { width=75 height=50 }
+#
+#		# iconType ={
+#			# name = "new_ideologies_box"
+#			# spriteType = "GFX_generic_box_96"
+#			# position = { x= 250 y = 5 }
+#			# Orientation = "UPPER_LEFT"
+#		# }	
+#		instantTextboxType = {
+#			name = "hmm"
+#			position = { x = 250 y = 5 }
+#			font = "hoi_18mbs"
+#			text = "[GetNewIdeologyPartyRulingDiplo]"
+#			format = left
+#			fixedsize = yes
+#			maxWidth = 220                 
+#			maxHeight = 18
+#		}
+#		iconType ={
+#			name = "new_ideologies_icon"
+#			spriteType = ""
+#			position = { x= 405 y = -5 }
+#			Orientation = "UPPER_LEFT"
+#			scale = 0.6
+#		}	
+#	}
+	
+	containerWindowType = {    
+		name = "headofgovernmentbutton"     
+		position = { x=550 y=7}
+		#30 315	    
+		#size = { width=75 height=50 }
+
+		buttonType ={
+			name = "headofgovernmentbutton1"
+			spriteType = "GFX_pol_power_icon"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"  
+			scale = 1.5     
+			pdx_tooltip = HOG_MAIN_BUTTON_TOOLTIP
+		}	      
+	}
+	  
+	containerWindowType = {    
+		name = "headofgovernment"            
+		position = { x=300 y=10}	    
+		size = { width=550 height=450 }
+		moveable = yes 
+
+		background = { 
+			name = "Background"		
+			quadTextureSprite ="GFX_tiled_window"
+		}
+		
+		iconType = {        
+			name = "hog_portrait"     
+			spriteType = "GFX_pol_leader_frame"
+			position = { x= 207 y = 42 }
+			Orientation = "UPPER_LEFT"		
+			pdx_tooltip = HOG_DESCRIPTION_TEST          
+		}
+		iconType = {        
+			name = "hog_loyalty_chart"     
+			spriteType = "GFX_loyalty_bar_0"
+			position = { x= 38 y = 350 }
+			Orientation = "UPPER_LEFT"	
+			pdx_tooltip = HOG_LOYALTY		
+		}
+		iconType = {
+			name = "hog_frame"
+			spriteType = "GFX_pol_leader_frame"
+			position = { x= 203 y = 35 }
+			Orientation = "UPPER_LEFT"	         
+            pdx_tooltip = HOG_DESCRIPTION_TEST	
+		}
+		instantTextboxType = {
+			name = "hog_name"
+			position = { x = 180 y = 260 }
+			font = "hoi_18mbs"
+			text = "[GetHOGPortraitLeaderName][GetHOGPortraitLeaderSurname]"
+			format = centre
+			fixedsize = yes
+			maxWidth = 220                 
+			maxHeight = 18
+			pdx_tooltip = HOG_DESCRIPTION_TEST
+		}
+		instantTextboxType = {
+			name = "hog_title"
+			position = { x = 180 y = 15 }
+			font = "hoi_20bs"
+			text = "[GetHOGPortraitLeaderTitle]"
+			format = centre
+			fixedsize = yes
+			maxWidth = 220                 
+			maxHeight = 18
+			#pdx_tooltip = HOG_DESCRIPTION_TEST
+		}
+		instantTextboxType = {
+			name = "hog_loyalty_title"
+			position = { x = 0 y = 330 }
+			font = "hoi_20bs"
+			text = "Loyalty"
+			format = centre
+			fixedsize = yes
+			maxWidth = 220                 
+			maxHeight = 18
+			#pdx_tooltip = HOG_DESCRIPTION_TEST
+		}
+		instantTextboxType = {
+			name = "hog_skill_title"
+			position = { x = 0 y = 45 }
+			font = "hoi_20bs"
+			text = "Skill"
+			format = centre
+			fixedsize = yes
+			maxWidth = 220                 
+			maxHeight = 18
+			#pdx_tooltip = HOG_DESCRIPTION_TEST
+		}
+		instantTextboxType = {
+			name = "hog_skill_level"
+			position = { x = 0 y = 90 }
+			font = "hoi_30bs"
+			text = "[GetHOGSkill]"
+			format = centre
+			fixedsize = yes
+			maxWidth = 220                 
+			maxHeight = 24
+			pdx_tooltip = HOG_SKILL_LEVEL
+		}
+		instantTextboxType = {
+			name = "hog_political_skill_level"
+			position = { x = 65 y = 180 }
+			font = "hoi_18bs"
+			text = "[GetHOGPoliticalSkill]"
+			format = centre
+			fixedsize = yes
+			maxWidth = 30               
+			maxHeight = 24
+			pdx_tooltip = HOG_POLITICAL_SKILL_LEVEL
+		}
+		instantTextboxType = {
+			name = "hog_unity_skill_level"
+			position = { x = 125 y = 180 }
+			font = "hoi_18bs"
+			text = "[GetHOGUnitySkill]"
+			format = centre
+			fixedsize = yes
+			maxWidth = 30                
+			maxHeight = 24
+			pdx_tooltip = HOG_UNITY_SKILL_LEVEL
+		}
+		instantTextboxType = {
+			name = "hog_industrial_skill_level"
+			position = { x = 65 y = 270 }
+			font = "hoi_18bs"
+			text = "[GetHOGIndustrialSkill]"
+			format = centre
+			fixedsize = yes
+			maxWidth = 30                 
+			maxHeight = 24
+			pdx_tooltip = HOG_INDUSTRIAL_SKILL_LEVEL
+		}
+		instantTextboxType = {
+			name = "hog_military_skill_level"
+			position = { x = 125 y = 270 }
+			font = "hoi_18bs"
+			text = "[GetHOGMilitarySkill]"
+			format = centre
+			fixedsize = yes
+			maxWidth = 30                 
+			maxHeight = 24
+			pdx_tooltip = HOG_MILITARY_SKILL_LEVEL
+		}
+		instantTextboxType = {
+			name = "hog_decisions_title"
+			position = { x = 340 y = 45 }
+			font = "hoi_20bs"
+			text = "Decisions"
+			format = centre
+			fixedsize = yes
+			maxWidth = 220                 
+			maxHeight = 18
+			#pdx_tooltip = HOG_DESCRIPTION_TEST
+		}
+		buttonType = {
+			name = "hog_closebutton"
+			spriteType = "GFX_closebutton"
+			position = { x= 504 y = -45 }
+			Orientation = "LOWER_LEFT"	
+		}
+		buttonType ={
+			name = "hog_new_hog"
+			spriteType = "GFX_pol_power_icon"
+			position = { x= 400 y = 70 }
+			Orientation = "Upper_LEFT" 
+			scale = 1.5     
+			pdx_tooltip = HOG_NEW_HOG_REQUIREMENTS_TOOLTIP
+		}
+		buttonType = {
+			name = "hog_remove_hog"
+			spriteType = "GFX_pol_power_icon"
+			position = { x= 457 y = 70 }
+			Orientation = "Upper_LEFT" 
+			scale = 1.5     
+			pdx_tooltip = HOG_REMOVE_HOG_REQUIREMENTS_TOOLTIP
+		}
+		buttonType = {
+			name = "hog_bribe_hog"
+			spriteType = "GFX_pol_power_icon"
+			position = { x= 400 y = 127 }
+			Orientation = "Upper_LEFT" 
+			scale = 1.5     
+			pdx_tooltip = HOG_BRIBE_HOG_REQUIREMENTS_TOOLTIP
+		}
+	}
+	
+	containerWindowType = {    
+		name = "hrebutton"     
+		position = { x=541 y=65}
+		#30 315	    
+		#size = { width=75 height=50 }
+
+		buttonType ={
+			name = "hrebutton1"
+			spriteType = "GFX_hre_main_button"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"  
+			scale = 0.6
+			pdx_tooltip = HRE_MAIN_BUTTON_TOOLTIP
+		}	      
+	}
+	
+	containerWindowType = {    
+		name = "holyromanempire"            
+		position = { x=300 y=10}	    
+		size = { width=850 height=750 }
+		moveable = yes 
+
+		background = { 
+			name = "Background"		
+			quadTextureSprite ="GFX_tiled_window"
+		}
+		buttonType = {
+			name = "hre_closebutton"
+			spriteType = "GFX_closebutton"
+			position = { x= 804 y = -45 }
+			Orientation = "LOWER_LEFT"	
+		}
+		instantTextboxType = {
+			name = "hre_title"
+			position = { x = 240 y = 15 }
+			font = "barloesious_schrift_36"
+			text = "The Holy Roman Empire"
+			format = centre
+			fixedsize = yes
+			maxWidth = 400                 
+			maxHeight = 36
+			#pdx_tooltip = HOG_DESCRIPTION_TEST
+		}
+		iconType = {
+		    name = "hre_main_icon"
+		    spriteType ="GFX_hre_main"
+		    position = { x = 275 y = 10 }
+		}
+		iconType = {
+			name = "emperor_flag"
+			quadTextureSprite = "GFX_player_flag"
+			position = { x = 55 y = 85 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = HRE_EMPEROR_TOOLTIP
+		}
+		instantTextboxType = {
+			name = "hre_emperor"
+			position = { x = 100 y = 60 }
+			font = "hoi_18bs"
+			text = "Imperial Authority"
+			format = left
+			fixedsize = yes
+			maxWidth = 150               
+			maxHeight = 18
+			#pdx_tooltip = HOG_DESCRIPTION_TEST
+		}
+		instantTextboxType = {
+			name = "hre_emperor_name"
+			position = { x = 55 y = 260 }
+			font = "hoi_18bs"
+			text = "[GetEmperorName]"
+			format = left
+			fixedsize = yes
+			maxWidth = 350               
+			maxHeight = 18
+			#pdx_tooltip = HOG_DESCRIPTION_TEST
+		}
+		instantTextboxType = {
+			name = "hre_elector"
+			position = { x = 55 y = 310 }
+			font = "hoi_18bs"
+			text = "[?global.hre_elector_amount|G0] Electors"
+			format = left
+			fixedsize = yes
+			maxWidth = 150               
+			maxHeight = 18
+			#pdx_tooltip = HOG_DESCRIPTION_TEST
+		}
+		instantTextboxType = {
+			name = "hre_prince"
+			position = { x = 80 y = 540 }
+			font = "hoi_18bs"
+			text = "[?global.hre_prince_amount|G0] Princes"
+			format = left
+			fixedsize = yes
+			maxWidth = 150               
+			maxHeight = 18
+			#pdx_tooltip = HOG_DESCRIPTION_TEST
+		}
+		instantTextboxType = {
+			name = "hre_free_city"
+			position = { x = 370 y = 540 }
+			font = "hoi_18bs"
+			text = "[?global.hre_free_city_amount|G0] Free Cities"
+			format = left
+			fixedsize = yes
+			maxWidth = 150               
+			maxHeight = 18
+			#pdx_tooltip = HOG_DESCRIPTION_TEST
+		}
+
+		instantTextboxType = {
+			name = "hre_imperial_authority"
+			position = { x = 150 y = 110 }
+			font = "hoi_22bs"
+			text = "[?global.imperial_authority|+2]"
+			format = centre
+			fixedsize = yes
+			maxWidth = 75                 
+			maxHeight = 22
+			pdx_tooltip = HRE_IMPERIAL_AUTHORITY_TOOLTIP
+		}
+		instantTextboxType = {
+			name = "hre_imperial_stability"
+			position = { x = 150 y = 160 }
+			font = "hoi_22bs"
+			text = "[?global.imperial_stability|%+=1]"
+			format = centre
+			fixedsize = yes
+			maxWidth = 75                 
+			maxHeight = 22
+			pdx_tooltip = HRE_IMPERIAL_STABILITY_TOOLTIP
+		}
+		instantTextboxType = {
+			name = "hre_imperial_centralization"
+			position = { x = 150 y = 210 }
+			font = "hoi_22bs"
+			text = "[?global.imperial_centralization|%+=0]"
+			format = centre
+			fixedsize = yes
+			maxWidth = 75                 
+			maxHeight = 22
+			pdx_tooltip = HRE_IMPERIAL_CENTRALIZATION_TOOLTIP
+		}
+		buttonType = {
+			name = "hre_controller"
+			spriteType = "GFX_join_hre_button"
+			position = { x= 55 y = -65 }
+			Orientation = "LOWER_LEFT"	
+			#scale = 1.5     
+			pdx_tooltip = HRE_CONTROLLER_TOOLTIP
+		}
+		buttonType = {
+			name = "hre_disband"
+			spriteType = "GFX_disband_hre_button"
+			position = { x= 400 y = -65 }
+			Orientation = "LOWER_LEFT"	
+			#scale = 2     
+			pdx_tooltip = HRE_DISBAND_TOOLTIP
+		}
+		containerWindowType = {
+			name = "elector_list_container_list"
+			position = { x = 20 y = 325 }
+			size = { width= 850 height= 200 }
+			margin = { top = 0 bottom = 0 left = 0 right = 0 }
+
+			background ={
+				name ="Background"
+				#quadTextureSprite = "GFX_generic_box_smallest"
+				position = { x=0 y=0 }
+			}
+			
+			gridboxtype = {
+				name = "show_elector"
+				position = { x = 20 y = -20 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 110 height = 200 }
+				add_vertical = no
+				format = "UPPER_LEFT"
+				max_slots_vertical = 1
+			}
+		}
+		containerWindowType = {
+			name = "prince_list_container_list"
+			verticalScrollbar = "right_vertical_slider"
+			position = { x = 60 y = 560 }
+			size = { width= 275 height= 100 }
+			margin = { top = 0 bottom = 0 left = 0 right = 0 }
+			smooth_scrolling = yes
+			scroll_wheel_factor = 5
+			vertical_scroll_step = 5
+
+			background ={
+				name ="Background"
+				#quadTextureSprite = "GFX_generic_box_smallest"
+				position = { x=0 y=0 }
+			}
+			
+			gridboxtype = {
+				name = "show_prince"
+				position = { x = 0 y = 30 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 50 height = 30 }
+				add_horizontal = yes
+				format = "UPPER_LEFT"
+				max_slots_horizontal = 5
+			}
+		}
+		containerWindowType = {
+			name = "free_city_list_container_list"
+			verticalScrollbar = "right_vertical_slider"
+			position = { x = 350 y = 560 }
+			size = { width= 175 height= 100 }
+			margin = { top = 0 bottom = 0 left = 0 right = 0 }
+			smooth_scrolling = yes
+			scroll_wheel_factor = 5
+			vertical_scroll_step = 5
+
+			background ={
+				name ="Background"
+				#quadTextureSprite = "GFX_generic_box_smallest"
+				position = { x=0 y=0 }
+			}
+			
+			gridboxtype = {
+				name = "show_free_city"
+				position = { x = 0 y = 30 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 50 height = 30 }
+				add_horizontal = yes
+				format = "UPPER_LEFT"
+				max_slots_horizontal = 3
+			}
+		}
+		containerWindowType = {
+			name = "action_list_container_list"
+			verticalScrollbar = "right_vertical_slider"
+			position = { x = 630 y = 100 }
+			size = { width= 200 height= 200 }
+			margin = { top = 15 bottom = 15 left = 0 right = 0 }
+
+			background ={
+				name ="Background"
+				quadTextureSprite ="GFX_tiled_window"
+				position = { x=-15 y=0 }
+			}
+			
+			gridboxtype = {
+				name = "show_action"
+				position = { x = 0 y = 35 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 200 height = 35 }
+				add_horizontal = no
+				format = "UPPER_LEFT"
+				max_slots_horizontal = 1
+			}
+		}
+		instantTextboxType = {
+			name = "hre_actions"
+			position = { x = 700 y = 60 }
+			font = "hoi_18bs"
+			text = "Actions"
+			format = left
+			fixedsize = yes
+			maxWidth = 150               
+			maxHeight = 18
+			#pdx_tooltip = HOG_DESCRIPTION_TEST
+		}
+		instantTextboxType = {
+			name = "hre_actions_sub"
+			position = { x = 640 y = 180 }
+			font = "hoi_18bs"
+			text = HRE_ACTION_SUBSET
+			format = center
+			fixedsize = yes
+			maxWidth = 150               
+			maxHeight = 40
+			#pdx_tooltip = HOG_DESCRIPTION_TEST
+		}
+	}
+	containerWindowType = {  
+		name = "show_elector"
+		iconType = {
+			name = "elector_flag"
+			quadTextureSprite = "GFX_player_flag"
+			position = { x = 5 y = 30 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = HRE_ELECTOR_TOOLTIP
+		}
+		iconType = {
+			name = "elector_pick_flag"
+			quadTextureSprite = "GFX_flag_small2"
+			position = { x = 5 y = 180 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType = {
+			name = "elector_frame"
+			quadTextureSprite = "GFX_small_flag_frame_thin"
+			position = { x = 2 y = 180 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = HRE_ELECTOR_PICK_TOOLTIP
+		}
+		instantTextboxType = {
+			name = "elector_opinion"
+			position = { x = 50 y = 185 }
+			font = "hoi_18mbs"
+			text = "[GetElectorOpinion]"
+			maxWidth = 50
+			maxHeight = 20
+			format = center
+		}
+	}
+	containerWindowType = {  
+		name = "show_prince"
+		iconType = {
+			name = "prince_flag"
+			quadTextureSprite = "GFX_flag_small2"
+			position = { x = 5 y = -30 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType = {
+			name = "prince_frame"
+			quadTextureSprite = "GFX_small_flag_frame_thin"
+			position = { x = 2 y = -30 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = HRE_PRINCE_TOOLTIP
+		}
+	}
+	containerWindowType = {  
+		name = "show_free_city"
+		iconType = {
+			name = "free_city_flag"
+			quadTextureSprite = "GFX_flag_small2"
+			position = { x = 5 y = -30 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType = {
+			name = "free_city_frame"
+			quadTextureSprite = "GFX_small_flag_frame_thin"
+			position = { x = 2 y = -30 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = HRE_FREE_CITY_TOOLTIP
+		}
+	}
+	
+	containerWindowType = {  
+		name = "show_action"
+		instantTextboxType = {
+			name = "hre_actions_test"
+			position = { x = 0 y = -30 }
+			font = "hoi_18bs"
+			text = "[GetActionName]"
+			format = left
+			fixedsize = yes
+			maxWidth = 140               
+			maxHeight = 20
+		}
+		buttonType ={
+			name = "hre_actions_button"
+			spriteType = "GFX_pol_power_icon"
+			position = { x= 140 y = -35 }
+			Orientation = "UPPER_LEFT" 
+			pdx_tooltip = HRE_ACTION_TOOLTIP		
+		}
+	}
+}                              

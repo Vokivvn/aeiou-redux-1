@@ -1,0 +1,41 @@
+ideas = {
+    country = {
+        wur_idea_strong_clergy = {
+            picture = generic_HRE_elector
+
+            allowed = { always = no }
+
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {}
+        }
+
+        wur_idea_merchants_ravensburg = {
+            picture = WUR_Merchants_of_Ravensburg
+            
+            allowed = { always = no }
+
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {}
+        }
+
+        wur_idea_concentrated_power = {
+            picture = WUR_Concentrated_Power
+            
+            allowed = { always = no }
+
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+			stability_factor = 0.10  
+			war_support_factor = -0.10}
+        }
+    }
+}

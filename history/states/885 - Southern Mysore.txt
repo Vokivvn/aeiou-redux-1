@@ -1,0 +1,32 @@
+
+state={
+	id=885
+	name="STATE_885" 
+	manpower = 50000
+	resources={
+		
+	}
+	
+	state_category = town
+
+	resources={
+		wood=2
+		iron=1
+	}
+
+	history={
+		owner = MYS
+		add_core_of = MYS
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			10274 1
+		}		
+	}
+
+	provinces={
+		1238 7363 7447 10130 10274 12275
+	}
+}

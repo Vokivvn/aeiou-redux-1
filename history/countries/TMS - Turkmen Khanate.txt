@@ -1,0 +1,33 @@
+﻿capital = 585
+
+oob = "TMS_1886"
+
+set_research_slots = 1
+
+set_technology = {
+	muskets0 = 1
+	melee = 1
+	basic_cavalry = 1
+}
+
+set_convoys = 10
+
+set_politics = {
+	ruling_party = absolutist
+	elections_allowed = no
+}
+set_popularities = {
+	absolutist = 100
+}
+
+create_country_leader = {
+	name = "Dykma Serdar"
+	desc = "POLITICS_DYKMA SERDER_DESC"
+	picture = "Portrait_TMS_Dykma_Serdar.dds"
+	expire = "1965.1.1"
+	ideology = absolutist_moderate
+	traits = {
+		}
+}
+
+add_to_array = { national_religion_array =  8 }

@@ -1,0 +1,76 @@
+division_template = {
+	name = "Royal Hannoverian Guard Battalion"
+
+	division_names_group = HAN_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Hannoverian Cavalry Division"
+
+	division_names_group = HAN_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Hannoverian Knight Brigade"
+
+	division_names_group = HAN_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Royal Hannoverian Guard Battalion"
+		location = 6377
+		division_template = "Royal Hannoverian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Hannoverian Guard Battalion"
+		location = 6513
+		division_template = "Royal Hannoverian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3rd Royal Hannoverian Guard Battalion"
+		location = 9320
+		division_template = "Royal Hannoverian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Hannoverian Cavalry Division"
+		location = 405
+		division_template = "Royal Hannoverian Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Hannoverian Knight Brigade"
+		location = 374
+		division_template = "Royal Hannoverian Knight Brigade"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Hannoverian Knight Brigade"
+		location = 9375
+		division_template = "Royal Hannoverian Knight Brigade"
+		start_experience_factor = 0.3
+	}
+}

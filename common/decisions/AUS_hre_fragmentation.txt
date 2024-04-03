@@ -1,0 +1,3269 @@
+
+
+
+
+
+austria_hre_fragmentation = {
+	
+
+#	demand_return_of_state = {
+#
+#		icon = generic_prepare_civil_war
+#
+#		available = {
+#			any_other_country = {
+#				OR = {
+#					AND = {
+#						tag = BRD
+#						BRD = {
+#							OR = {
+#							}
+#						}
+#					}
+#				}
+#			}
+#		}
+#
+#		visible = {
+#			NOT = {
+#				tag = AUS
+#			}
+#		}
+#
+#		fire_only_once = no
+#
+#		ai_will_do = {
+#				factor = 10
+#			}
+#
+#		cost = 10
+#
+#		days_remove = 20
+#
+#		complete_effect = {
+#		}
+#
+#		remove_effect = {
+#			}
+#
+#		target_trigger = {
+#       	FROM = {
+#        		OR = {
+#					owns_state = 42 #JUL
+#					owns_state = 51 #JUL
+#					owns_state = 52 #BAV
+#					owns_state = 53 #BAV
+#					owns_state = 54 #WRZ
+#					owns_state = 55 #KSS
+#					owns_state = 56 #MUN
+#					owns_state = 57 #ULM
+#					owns_state = 58 #SCH
+#					owns_state = 59 #HAN
+#					owns_state = 60 #THU
+#					owns_state = 61 #MCK
+#					owns_state = 62 #BRD
+#					owns_state = 63 #BRD
+#					owns_state = 64 #BRD
+#					owns_state = 65 #SAX
+#					owns_state = 68 #BRD
+#					owns_state = 789 #HAM
+#					owns_state = 790 #LBK
+#					owns_state = 805 #BRD
+#					owns_state = 807 #BAV
+#					owns_state = 808 #TRI
+#				   #owns_state = 813 #AUS
+#					owns_state = 814 #BAD
+#					owns_state = 817 #WUR
+#					owns_state = 818 #NUR
+#					owns_state = 819 #ANB
+#					owns_state = 820 #ANB
+#					owns_state = 833 #OLD
+#					owns_state = 836 #KLE
+#					owns_state = 844 #KOL
+#					owns_state = 849 #FRK
+#					owns_state = 850 #KLE
+#					owns_state = 851 #BRE
+#					owns_state = 852 #HAN
+#					owns_state = 853 #DOR
+#					owns_state = 854 #MRK
+#					owns_state = 855 #NSS
+#				}
+#        	}
+#        }
+#	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	demand_return_of_moselland = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_moselland_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 42
+				controls_state = 42
+				NOT = {
+					tag = JUL
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_moselland_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 42
+				controls_state = 42
+				NOT = {
+					tag = JUL
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.40
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 42
+				controls_state = 42
+				NOT = {
+					tag = JUL
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_berg = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_berg_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 51
+				controls_state = 51
+				NOT = {
+					tag = JUL
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_berg_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 51
+				controls_state = 51
+				NOT = {
+					tag = JUL
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.41
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 51
+				controls_state = 51
+				NOT = {
+					tag = JUL
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_oberbayern = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_oberbayern_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 52
+				controls_state = 52
+				NOT = {
+					tag = BAV
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_oberbayern_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 52
+				controls_state = 52
+				NOT = {
+					tag = BAV
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.42
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 52
+				controls_state = 52
+				NOT = {
+					tag = BAV
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_niederbayern = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_niederbayern_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 53
+				controls_state = 53
+				NOT = {
+					tag = BAV
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_niederbayern_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 53
+				controls_state = 53
+				NOT = {
+					tag = BAV
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.43
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 53
+				controls_state = 53
+				NOT = {
+					tag = BAV
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_franken = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_franken_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 54
+				controls_state = 54
+				NOT = {
+					tag = WRZ
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_franken_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 54
+				controls_state = 54
+				NOT = {
+					tag = WRZ
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.44
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 54
+				controls_state = 54
+				NOT = {
+					tag = WRZ
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_kassel = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_kassel_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 55
+				controls_state = 55
+				NOT = {
+					tag = KSS
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_kassel_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 55
+				controls_state = 55
+				NOT = {
+					tag = KSS
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.45
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 55
+				controls_state = 55
+				NOT = {
+					tag = KSS
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+	#AHHHH SHIT WHY DID I DECIDE TO DO THIS
+
+	demand_return_of_munster = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_munster_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 56
+				controls_state = 56
+				NOT = {
+					tag = MUN
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_munster_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 56
+				controls_state = 56
+				NOT = {
+					tag = MUN
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.46
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 56
+				controls_state = 56
+				NOT = {
+					tag = MUN
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_ulm = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_ulm_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 57
+				controls_state = 57
+				NOT = {
+					tag = ULM
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_ulm_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 57
+				controls_state = 57
+				NOT = {
+					tag = ULM
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.47
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 57
+				controls_state = 57
+				NOT = {
+					tag = ULM
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_holstein = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_holstein_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 58
+				controls_state = 58
+				NOT = {
+					tag = SCH
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_holstein_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 58
+				controls_state = 58
+				NOT = {
+					tag = SCH
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.48
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 58
+				controls_state = 58
+				NOT = {
+					tag = SCH
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_hannover = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_hannover_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 59
+				controls_state = 59
+				NOT = {
+					tag = HAN
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_hannover_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 59
+				controls_state = 59
+				NOT = {
+					tag = HAN
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.49
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 59
+				controls_state = 59
+				NOT = {
+					tag = HAN
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_thuringen = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_thuringen_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 60
+				controls_state = 60
+				NOT = {
+					tag = THU
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_thuringen_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 60
+				controls_state = 60
+				NOT = {
+					tag = THU
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.50
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 60
+				controls_state = 60
+				NOT = {
+					tag = THU
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_mecklenburg = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_mecklenburg_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 61
+				controls_state = 61
+				NOT = {
+					tag = MCK
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_mecklenburg_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 61
+				controls_state = 61
+				NOT = {
+					tag = MCK
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.51
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 61
+				controls_state = 61
+				NOT = {
+					tag = MCK
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_vorpommern = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_vorpommern_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 62
+				controls_state = 62
+				NOT = {
+					tag = BRD
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_vorpommern_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 62
+				controls_state = 62
+				NOT = {
+					tag = BRD
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.52
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 62
+				controls_state = 62
+				NOT = {
+					tag = BRD
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_hinterpommern = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_hinterpommern_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 63
+				controls_state = 63
+				NOT = {
+					tag = BRD
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_hinterpommern_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 63
+				controls_state = 63
+				NOT = {
+					tag = BRD
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.53
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 63
+				controls_state = 63
+				NOT = {
+					tag = BRD
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_brandenburg = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_brandenburg_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 64
+				controls_state = 64
+				NOT = {
+					tag = BRD
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_brandenburg_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 64
+				controls_state = 64
+				NOT = {
+					tag = BRD
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.54
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 64
+				controls_state = 64
+				NOT = {
+					tag = BRD
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_sachen = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_sachen_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 65
+				controls_state = 65
+				NOT = {
+					tag = SAX
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_sachen_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 65
+				controls_state = 65
+				NOT = {
+					tag = SAX
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.55
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 65
+				controls_state = 65
+				NOT = {
+					tag = SAX
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_ostmark = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_ostmark_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 68
+				controls_state = 68
+				NOT = {
+					tag = BRD
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_ostmark_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 68
+				controls_state = 68
+				NOT = {
+					tag = BRD
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.56
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 68
+				controls_state = 68
+				NOT = {
+					tag = BRD
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_hamburg = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_hamburg_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 789
+				controls_state = 789
+				NOT = {
+					tag = HAM
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_hamburg_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 789
+				controls_state = 789
+				NOT = {
+					tag = HAM
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.57
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 789
+				controls_state = 789
+				NOT = {
+					tag = HAM
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_lubeck = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_lubeck_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 790
+				controls_state = 790
+				NOT = {
+					tag = LBK
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_lubeck_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 790
+				controls_state = 790
+				NOT = {
+					tag = LBK
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.58
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 790
+				controls_state = 790
+				NOT = {
+					tag = LBK
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_hessen = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_hessen_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 805
+				controls_state = 805
+				NOT = {
+					tag = BRD
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_hessen_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 805
+				controls_state = 805
+				NOT = {
+					tag = BRD
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.59
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 805
+				controls_state = 805
+				NOT = {
+					tag = BRD
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+	#K I L L  M E
+
+	demand_return_of_pfalz = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_pfalz_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 807
+				controls_state = 807
+				NOT = {
+					tag = BAV
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_pfalz_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 807
+				controls_state = 807
+				NOT = {
+					tag = BAV
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.60
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 807
+				controls_state = 807
+				NOT = {
+					tag = BAV
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_trier = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_trier_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 808
+				controls_state = 808
+				NOT = {
+					tag = TRI
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_trier_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 808
+				controls_state = 808
+				NOT = {
+					tag = TRI
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.61
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 808
+				controls_state = 808
+				NOT = {
+					tag = TRI
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_baden = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_baden_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 814
+				controls_state = 814
+				NOT = {
+					tag = BAD
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_baden_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 814
+				controls_state = 814
+				NOT = {
+					tag = BAD
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.62
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 814
+				controls_state = 814
+				NOT = {
+					tag = BAD
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_wurttemberg = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_wurttemberg_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 817
+				controls_state = 817
+				NOT = {
+					tag = WUR
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_wurttemberg_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 817
+				controls_state = 817
+				NOT = {
+					tag = WUR
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.63
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 817
+				controls_state = 817
+				NOT = {
+					tag = WUR
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_nuremberg = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_nuremberg_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 818
+				controls_state = 818
+				NOT = {
+					tag = NUR
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_nuremberg_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 818
+				controls_state = 818
+				NOT = {
+					tag = NUR
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.64
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 818
+				controls_state = 818
+				NOT = {
+					tag = NUR
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_ansbach = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_ansbach_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 819
+				controls_state = 819
+				NOT = {
+					tag = ANB
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_ansbach_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 819
+				controls_state = 819
+				NOT = {
+					tag = ANB
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.65
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 819
+				controls_state = 819
+				NOT = {
+					tag = ANB
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+	#E N D  M Y  S U F F E R I N G
+	demand_return_of_bayreuth = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_bayreuth_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 820
+				controls_state = 820
+				NOT = {
+					tag = ANB
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_bayreuth_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 820
+				controls_state = 820
+				NOT = {
+					tag = ANB
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.66
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 820
+				controls_state = 820
+				NOT = {
+					tag = ANB
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_oldenburg = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_oldenburg_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 833
+				controls_state = 833
+				NOT = {
+					tag = OLD
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_oldenburg_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 833
+				controls_state = 833
+				NOT = {
+					tag = OLD
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.67
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 833
+				controls_state = 833
+				NOT = {
+					tag = OLD
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_ostfriesland = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_ostfriesland_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 836
+				controls_state = 836
+				NOT = {
+					tag = KLE
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_ostfriesland_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 836
+				controls_state = 836
+				NOT = {
+					tag = KLE
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.68
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 836
+				controls_state = 836
+				NOT = {
+					tag = KLE
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_koln = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_koln_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 844
+				controls_state = 844
+				NOT = {
+					tag = KOL
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_koln_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 844
+				controls_state = 844
+				NOT = {
+					tag = KOL
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.69
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 844
+				controls_state = 844
+				NOT = {
+					tag = KOL
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_frankfurt = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_frankfurt_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 849
+				controls_state = 849
+				NOT = {
+					tag = FRK
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_frankfurt_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 849
+				controls_state = 849
+				NOT = {
+					tag = FRK
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.70
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 849
+				controls_state = 849
+				NOT = {
+					tag = FRK
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_kleve = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_kleve_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 836
+				controls_state = 836
+				NOT = {
+					tag = KLE
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_kleve_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 836
+				controls_state = 836
+				NOT = {
+					tag = KLE
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.71
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 836
+				controls_state = 836
+				NOT = {
+					tag = KLE
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_bremen = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_bremen_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 851
+				controls_state = 851
+				NOT = {
+					tag = BRE
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_bremen_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 851
+				controls_state = 851
+				NOT = {
+					tag = BRE
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.72
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 851
+				controls_state = 851
+				NOT = {
+					tag = BRE
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_gottingen = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_gottingen_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 852
+				controls_state = 852
+				NOT = {
+					tag = HAN
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_gottingen_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 852
+				controls_state = 852
+				NOT = {
+					tag = HAN
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.73
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 852
+				controls_state = 852
+				NOT = {
+					tag = HAN
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_dortmund = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_dortmund_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 853
+				controls_state = 853
+				NOT = {
+					tag = DOR
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_dortmund_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 853
+				controls_state = 853
+				NOT = {
+					tag = DOR
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.74
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 853
+				controls_state = 853
+				NOT = {
+					tag = DOR
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_mark = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_mark_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 854
+				controls_state = 854
+				NOT = {
+					tag = MRK
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_mark_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 854
+				controls_state = 854
+				NOT = {
+					tag = MRK
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.75
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 854
+				controls_state = 854
+				NOT = {
+					tag = MRK
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+	demand_return_of_nassau = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {
+				has_global_flag = return_of_nassau_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 855
+				controls_state = 855
+				NOT = {
+					tag = NSS
+					tag = AUS
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = return_of_nassau_wg
+			}
+			any_other_country = {
+				NOT = {
+					has_war_with = AUS
+				}
+				owns_state = 855
+				controls_state = 855
+				NOT = {
+					tag = NSS
+					tag = AUS
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			FROM = {
+				country_event = Auseugen.76
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				NOT = {
+					has_war_with = AUS
+				}
+        		owns_state = 855
+				controls_state = 855
+				NOT = {
+					tag = NSS
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+	#OH MY FUCKING GOD THATS ALL OF IT
+	#FUCK I FORGOT TO ADD VISABLE TRIGGERS
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	add_to_wg_return_of_moselland ={
+		icon = generic_prepare_civil_war
+
+		available = {
+			tag = AUS
+			NOT = { tag = AUS }
+		}
+
+		visible = {
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 20
+
+		complete_effect = {
+			AUS = {
+				set_global_flag = return_of_moselland_wg
+			}
+		}
+
+		remove_effect = {
+			}
+
+		target_trigger = {
+        	FROM = {
+				has_war_with = AUS
+        		owns_state = 42
+				controls_state = 42
+				NOT = {
+					tag = JUL
+					tag = AUS
+				}
+        	}
+        }
+	}
+
+
+
+
+
+
+
+	
+} 

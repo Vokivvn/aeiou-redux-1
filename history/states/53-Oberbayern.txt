@@ -1,0 +1,32 @@
+
+state={
+	id=53
+	name="STATE_53"
+	manpower = 959144
+	
+	state_category = large_town
+	
+	resources = {
+	    wood = 2
+		horses = 1
+	}
+
+	history={
+		owner = BAV
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = BAV
+		victory_points = {
+			9515 3
+		}
+		victory_points = {
+			3571 1
+		}
+	}
+
+	provinces={
+		532 561 571 586 3299 3541 3571 6725 9515 9681 11497
+	}
+}

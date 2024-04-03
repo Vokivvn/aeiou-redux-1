@@ -1,0 +1,33 @@
+﻿capital = 276
+
+#oob = "CAN_1936"
+
+set_research_slots = 3
+set_stability = 0.8
+set_war_support = 0.1
+
+# Starting tech
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	trench_warfare = 1
+	fleet_in_being = 1
+}
+
+set_politics = {
+	ruling_party = conservative
+	last_election = "1935.10.14"
+	election_frequency = 60
+	elections_allowed = yes
+}
+
+set_popularities = {
+	conservative = 100
+}
+
+set_convoys = 100
+set_stability = 0.75

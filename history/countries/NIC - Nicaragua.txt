@@ -1,0 +1,31 @@
+﻿capital = 919
+
+# Starting tech
+set_technology = {
+	muskets0 = 1
+	melee = 1
+	gw_artillery = 1
+	basic_cavalry = 1
+}
+
+set_war_support = 0.1
+set_convoys = 10
+
+set_politics = {
+	ruling_party = conservative
+	last_election = "1934.11.8"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	conservative = 100
+}
+add_to_array = { national_religion_array =  2 }
+
+create_country_leader = {
+	name = "Adan Cardenas"
+	desc = "NIC_LEADER_DESC_CARDENAS"
+	picture = "Portrait_NIC_Adan_Cardenas.dds"
+	expire = "1965.1.1"
+	ideology = conservative_moderate
+}

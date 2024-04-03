@@ -1,0 +1,38 @@
+
+state={
+	id=279
+	name="STATE_279" # Santiago
+	manpower = 131630
+	
+	state_category = town
+	
+	resources={
+		wood=1
+		fabric=1
+		horses=3
+	}
+
+	history={
+		owner = CHL
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
+			8222 = {
+				naval_base = 3
+			}
+			650 = {
+				bunker = 1
+			}
+		}
+		add_core_of = CHL
+		victory_points = {
+			650 10
+		}
+
+	}
+
+	provinces={
+		650 5169 5191 8194 8222 8229 12954 12984 5118 
+	}
+}

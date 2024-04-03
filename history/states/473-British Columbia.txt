@@ -1,0 +1,23 @@
+
+state={
+	id=473
+	name="STATE_473"
+	manpower = 3780
+	resources={
+		horses=1 # was: 2
+	}
+	
+	state_category = pastoral
+
+	history={
+		owner = SHS
+		add_core_of = SHS
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces={
+      1737 4343 4877 7761 7820 7853 10644 12578 	
+	}
+}

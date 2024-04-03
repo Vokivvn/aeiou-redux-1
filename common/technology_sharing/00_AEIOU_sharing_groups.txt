@@ -1,0 +1,13 @@
+ technology_sharing_group = {
+
+	id = hre_eugen_research
+	name = hre_eugen_research_name
+	desc = hre_eugen_research_desc
+	picture = GFX_commonwealth_research
+    
+	research_sharing_per_country_bonus = 0.04
+
+    available = {
+        is_in_faction_with = AUS
+    }
+}

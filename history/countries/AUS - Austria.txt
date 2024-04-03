@@ -1,0 +1,426 @@
+capital = 4
+
+oob = "AUS_1886"
+
+set_research_slots = 3
+
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+	melee = 1
+	basic_cavalry = 1
+	melee_improvements = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	militia = 1
+}
+
+if = {
+	limit = { has_dlc = "Together for Victory" }
+	set_autonomy = {
+		target = MIL
+		autonomy_state = autonomy_colony
+	}
+	else = { puppet = MIL }
+}
+	
+
+add_ideas = {
+	hre_idea_emperor
+    aus_idea_winds_of_change
+	aus_idea_disorganized_army
+	aus_idea_high_feudalism
+	aus_idea_habsburg_dynasty
+}
+
+set_politics = {
+	ruling_party = absolutist
+	elections_allowed = no
+}
+set_popularities = {
+	liberal = 8
+	centrist = 2
+	conservative = 13
+	absolutist = 77
+}
+
+add_to_array = { national_religion_array =  2 }
+add_to_array = { national_religion_array =  1 }
+set_variable = { aus_var_opposition_unity = 0.46 }
+set_variable = { aus_var_opposition_intensity = 0.2 }
+set_variable = { hog_party = 4 }
+
+set_stability = 0.50 
+
+create_country_leader = {
+	name = "Rudolf III"
+	desc = "AUS_LEADER_DESC_RUDOLF_III"
+	picture = "Portrait_AUS_Rudolf_III.dds"
+	expire = "1965.1.1"
+	ideology = absolutist_radical
+	traits = {
+		personal_trait_revolutionary
+	}
+}
+
+
+create_field_marshal = {
+	name = "Friedrich von Beck-Rzikowsky"
+	picture = ""
+	id = 01
+	traits = { infantry_officer career_officer trait_mountaineer  }
+	skill = 3
+    attack_skill = 3
+    defense_skill = 2
+    planning_skill = 4
+    logistics_skill = 2
+}
+create_field_marshal = {
+	name = "Franz Conrad von Hötzendorf"
+	picture = ""
+	id = 02
+	traits = { hill_fighter ranger adaptable brilliant_strategist }
+	skill = 3
+    attack_skill = 2
+    defense_skill = 2
+    planning_skill = 3
+    logistics_skill = 3
+}
+create_field_marshal = {
+	name = "Franz Rohr von Denta"
+	picture = ""
+	id = 03
+	traits = { trait_cautious }
+	skill = 1
+    attack_skill = 1
+    defense_skill = 2
+    planning_skill = 1
+    logistics_skill = 2
+}
+create_field_marshal = {
+	name = "Svetozar Boroević"
+	picture = ""
+	id = 013
+	traits = { inflexible_strategist defensive_doctrine }
+	skill = 2
+    attack_skill = 1
+    defense_skill = 3
+    planning_skill = 3
+    logistics_skill = 2
+}
+
+
+
+create_corps_commander = {
+	name = "Moritz von Auffenberg"
+	picture = ""
+	id = 04
+	traits = { infantry_officer trait_reckless organizer }
+	skill = 4
+    attack_skill = 4
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Adolf von Brudermann"
+	picture = ""
+	id = 05
+	traits = { cavalry_officer }
+	skill = 2
+    attack_skill = 2
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Johann Haas von Haagenfels"
+	picture = ""
+	id = 06
+	traits = {  }
+	skill = 1
+    attack_skill = 2
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Rudolf Carl von Slatin"
+	picture = ""
+	id = 07
+	traits = { commando }
+	skill = 3
+    attack_skill = 3
+    defense_skill = 2
+    planning_skill = 1
+    logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Karl Maria Wiligut"
+	picture = ""
+	id = 08
+	traits = { trait_reckless }
+	skill = 2
+    attack_skill = 2
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Albrecht Friedrich Rudolf"
+	picture = ""
+	id = 09
+	traits = { politically_connected }
+	skill = 2
+    attack_skill = 2
+    defense_skill = 2
+    planning_skill = 1
+    logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Viktor Dankl von Krasnik"
+	picture = ""
+	id = 010
+	traits = { old_guard }
+	skill = 3
+    attack_skill = 1
+    defense_skill = 3
+    planning_skill = 2
+    logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Eduard von Böhm-Ermolli"
+	picture = ""
+	id = 011
+	traits = {  }
+	skill = 1
+    attack_skill = 2
+    defense_skill = 1
+    planning_skill = 2
+    logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Stjepan Sarkotić"
+	picture = ""
+	id = 012
+	traits = { trickster }
+	skill = 2
+    attack_skill = 3
+    defense_skill = 1
+    planning_skill = 2
+    logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Marijan Varešanin"
+	picture = ""
+	id = 014
+	traits = { old_guard }
+	skill = 2
+    attack_skill = 1
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Alfred von Kropatschek"
+	picture = ""
+	id = 015
+	traits = { bearer_of_artillery }
+	skill = 2
+    attack_skill = 3
+    defense_skill = 2
+    planning_skill = 1
+    logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Alfred Redl"
+	picture = ""
+	id = 016
+	traits = {  }
+	skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 3
+    logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Robert von Sterneck"
+	picture = ""
+	id = 017
+	traits = { war_hero trait_engineer }
+	skill = 4
+    attack_skill = 4
+    defense_skill = 3
+    planning_skill = 3
+    logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Alexander von Krobatin"
+	picture = ""
+	id = 018
+	traits = { career_officer }
+	skill = 3
+    attack_skill = 3
+    defense_skill = 1
+    planning_skill = 2
+    logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Hermann Kövess von Kövessháza"
+	picture = ""
+	id = 019
+	traits = {  }
+	skill = 2
+    attack_skill = 1
+    defense_skill = 2
+    planning_skill = 3
+    logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Sándor Szurmay"
+	picture = ""
+	id = 020
+	traits = { politically_connected  brilliant_strategist skilled_staffer }
+	skill = 3
+    attack_skill = 2
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 4
+}
+create_corps_commander = {
+	name = "Rudolf von Brudermann"
+	picture = ""
+	id = 021
+	traits = { cavalry_officer cavalry_leader infantry_leader }
+	skill = 4
+    attack_skill = 4
+    defense_skill = 3
+    planning_skill = 3
+    logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Karl von Pflanzer-Baltin"
+	picture = "Portrait_Karl_Pflanzer_Baltin.dds"
+	id = 022
+	traits = { media_personality cavalry_officer }
+	skill = 3
+    attack_skill = 2
+    defense_skill = 3
+    planning_skill = 2
+    logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Belá Ervin Graf und Freiherr von Bothmer zu Schwegerhoff"
+	picture = ""
+	id = 023
+	traits = {  }
+	skill = 2
+    attack_skill = 1
+    defense_skill = 2
+    planning_skill = 1
+    logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Samu Hazai"
+	picture = ""
+	id = 024
+	traits = {  }
+	skill = 2
+    attack_skill = 1
+    defense_skill = 3
+    planning_skill = 2
+    logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Wilhelm von Schaumburg-Lippe"
+	picture = ""
+	id = 025
+	traits = { politically_connected }
+	skill = 3
+    attack_skill = 2
+    defense_skill = 2
+    planning_skill = 3
+    logistics_skill = 2
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+create_navy_leader = {
+	name = "Maximilian Daublebsky von Sterneck"
+    picture = ""
+	traits = { old_guard bold }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	maneuvering_skill = 1
+	coordination_skill = 2
+}
+create_navy_leader = {
+	name = "Maximilian Njegovan"
+    picture = ""
+	traits = { cuts_corners }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 1
+}
+create_navy_leader = {
+	name = "Hermann von Spaun"
+    picture = ""
+	traits = { navy_career_officer naval_lineage fleet_protector }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	maneuvering_skill = 1
+	coordination_skill = 3
+}
+create_navy_leader = {
+	name = "Siegfried Popper"
+    picture = ""
+	traits = { chief_engineer }
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+set_variable = { hog_name = 1000 }
+set_variable = { hog_title = 1 }
+set_variable = { hog_loyalty = 0.6235 }
+set_variable = { hog_exp = 11 }
+set_variable = { hog_political_skill = 0.025 }
+set_variable = { hog_unity_skill = 0 }
+set_variable = { hog_industrial_skill = 0.025 }
+set_variable = { hog_military_skill = 0 }
+set_country_flag = has_hog

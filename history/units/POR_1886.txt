@@ -1,0 +1,140 @@
+﻿division_template = {
+	name = "Royal Portuguese Garrison Battalion"
+
+	division_names_group = POR_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+		line_infantry = { x = 0 y = 4 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+		line_infantry = { x = 1 y = 2 }
+		line_infantry = { x = 1 y = 3 }
+		line_infantry = { x = 1 y = 4 }
+		line_infantry = { x = 2 y = 0 }
+		line_infantry = { x = 2 y = 1 }
+		line_infantry = { x = 2 y = 2 }
+		line_infantry = { x = 2 y = 3 }
+		line_infantry = { x = 2 y = 4 }
+		line_infantry = { x = 3 y = 0 }
+		line_infantry = { x = 3 y = 1 }
+		line_infantry = { x = 3 y = 2 }
+		line_infantry = { x = 3 y = 3 }
+		line_infantry = { x = 3 y = 4 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Portuguese Cavalry Division"
+
+	division_names_group = POR_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 0 y = 2 }
+		medium_cavalry = { x = 0 y = 3 }
+		medium_cavalry = { x = 0 y = 4 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+		medium_cavalry = { x = 1 y = 2 }
+		medium_cavalry = { x = 1 y = 3 }
+		medium_cavalry = { x = 1 y = 4 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Portuguese Knight Brigade"
+
+	division_names_group = POR_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+#division_template = {
+#	name = "Royal Portuguese Scout Battalion"
+#
+#	division_names_group = POR_ARM_01
+#
+#	regiments = {
+#		line_infantry = { x = 0 y = 0 }
+#	}
+#	priority = 1
+#}
+
+units = {
+	division = {
+		name = "1st Royal Portuguese Garrison Battalion"
+		location = 11805
+		division_template = "Royal Portuguese Garrison Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Portuguese Garrison Battalion"
+		location = 3790
+		division_template = "Royal Portuguese Garrison Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3rd Royal Portuguese Garrison Battalion"
+		location = 9817
+		division_template = "Royal Portuguese Garrison Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4th Royal Portuguese Garrison Battalion"
+		location = 10513
+		division_template = "Royal Portuguese Garrison Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "5th Royal Portuguese Garrison Battalion"
+		location = 5168
+		division_template = "Royal Portuguese Garrison Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Portuguese Cavalry Division"
+		location = 7594
+		division_template = "Royal Portuguese Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Portuguese Cavalry Division"
+		location = 5218
+		division_template = "Royal Portuguese Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Portuguese Knight Brigade"
+		location = 6996
+		division_template = "Royal Portuguese Knight Brigade"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Portuguese Knight Brigade"
+		location = 9869
+		division_template = "Royal Portuguese Knight Brigade"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3rd Royal Portuguese Knight Brigade"
+		location = 6880
+		division_template = "Royal Portuguese Knight Brigade"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4th Royal Portuguese Knight Brigade"
+		location = 11673
+		division_template = "Royal Portuguese Knight Brigade"
+		start_experience_factor = 0.3
+	}
+}

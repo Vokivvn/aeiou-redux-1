@@ -1,0 +1,26 @@
+
+state={
+	id=880
+	name="STATE_880" 
+	manpower = 50000
+	resources={
+		
+	}
+	
+	state_category = town
+
+	history={
+		owner = MUG
+		add_core_of = MUG
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			10807 1
+		}		
+	}
+
+	provinces={
+		1949 2036 7080 10807
+	}
+}

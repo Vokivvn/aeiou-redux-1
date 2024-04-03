@@ -1,0 +1,27 @@
+﻿capital = 459
+
+# Starting tech
+set_technology = {
+	muskets0 = 1
+}
+
+set_convoys = 20
+
+set_politics = {
+	ruling_party = apolitical
+	elections_allowed = no
+}
+
+set_popularities = {
+	apolitical = 100
+}
+
+create_country_leader = {
+	name = "Ahmed Ben Bella"
+	desc = ""
+	picture = "gfx/leaders/SAU/Portrait_Arabia_Generic_1.dds"
+	ideology = apolitical_sub
+	traits = {
+		#
+	}
+}

@@ -1,0 +1,26 @@
+
+state={
+	id=891
+	name="STATE_891" 
+	manpower = 50000
+	resources={
+		wood=4
+	}
+	
+	state_category = town
+
+	history={
+		owner = CHI
+		add_core_of = CHI
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			9948 1
+		}		
+	}
+
+	provinces={
+		1073 7015 7093 7518 9948 10075 12008 12065 12319
+	}
+}

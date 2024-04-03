@@ -1,0 +1,4 @@
+native_diplomacy_category = {
+	picture = GFX_decision_cat_netherlands_industrialization
+	icon = oppression
+}

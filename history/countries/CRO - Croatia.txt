@@ -1,0 +1,24 @@
+﻿capital = 109
+
+set_research_slots = 2
+
+#oob = "CRO_1936"
+
+set_technology = {
+	muskets0 = 1
+	bayonet = 1	
+}
+
+
+set_convoys = 5
+
+set_politics = {
+	ruling_party = conservative
+	last_election = "1935.6.9"
+	election_frequency = 12
+	elections_allowed = no # none after offset 1
+}
+set_popularities = {
+	conservative = 100
+}
+

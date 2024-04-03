@@ -1,0 +1,25 @@
+state = {
+	id = 925
+	name = "STATE_925"
+	manpower = 1200
+	resources = {
+	}
+	
+	state_category = town
+
+	history = {
+		owner = SAH
+		add_core_of = SAH
+		add_claim_by = MOR
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			1958 1
+		}
+
+	}
+	provinces = {
+		1958
+	}
+}

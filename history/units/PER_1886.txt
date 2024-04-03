@@ -1,0 +1,109 @@
+division_template = {
+	name = "Royal Persian Guard Battalion"
+
+	division_names_group = PER_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+		line_infantry = { x = 0 y = 4 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+		line_infantry = { x = 1 y = 2 }
+		line_infantry = { x = 1 y = 3 }
+		line_infantry = { x = 1 y = 4 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Persian Cavalry Division"
+
+	division_names_group = PER_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 0 y = 2 }
+		medium_cavalry = { x = 0 y = 3 }
+		medium_cavalry = { x = 0 y = 4 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Persian Warrior Brigade"
+
+	division_names_group = PER_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 0 y = 2 }
+		melee_battalion = { x = 0 y = 3 }
+		melee_battalion = { x = 0 y = 4 }
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+		melee_battalion = { x = 1 y = 2 }
+		melee_battalion = { x = 1 y = 3 }
+		melee_battalion = { x = 1 y = 4 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Royal Persian Guard Battalion"
+		location = 10837
+		division_template = "Royal Persian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Persian Guard Battalion"
+		location = 1896
+		division_template = "Royal Persian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3rd Royal Persian Guard Battalion"
+		location = 7982
+		division_template = "Royal Persian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4th Royal Persian Guard Battalion"
+		location = 12333
+		division_template = "Royal Persian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Persian Cavalry Division"
+		location = 7953
+		division_template = "Royal Persian Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Persian Cavalry Division"
+		location = 2026
+		division_template = "Royal Persian Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3rd Royal Persian Cavalry Division"
+		location = 7661
+		division_template = "Royal Persian Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Persian Warrior Brigade"
+		location = 6997
+		division_template = "Royal Persian Warrior Brigade"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Persian Warrior Brigade"
+		location = 4893
+		division_template = "Royal Persian Warrior Brigade"
+		start_experience_factor = 0.3
+	}
+}

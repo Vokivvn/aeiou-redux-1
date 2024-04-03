@@ -1,0 +1,26 @@
+
+state={
+	id=50
+	name="STATE_50"
+	manpower = 23970
+	
+	state_category = rural
+	
+	resources={
+		wood=1
+		horses=3
+		fabric=2
+	}
+
+	history={
+		owner = SPG
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SPG
+	}
+
+	provinces={
+		12952 2169 12946 5173 11009
+	}
+}

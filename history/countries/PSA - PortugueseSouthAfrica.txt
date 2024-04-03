@@ -1,0 +1,21 @@
+﻿capital = 681
+
+#oob = "PSA_1886"
+
+set_research_slots = 2
+
+set_technology = {
+	muskets0 = 1
+}
+
+set_convoys = 10
+
+set_politics = {
+	ruling_party = despotist
+	elections_allowed = no
+}
+set_popularities = {
+	despotist = 100
+}
+
+add_to_array = { national_religion_array =  2 }

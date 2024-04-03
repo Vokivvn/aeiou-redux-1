@@ -1,0 +1,942 @@
+scripted_gui = {
+
+	holy_roman_empire_button = {
+       window_name = "hrebutton"
+       parent_window_token = politics_tab
+	   
+       context_type = player_context
+  
+        visible = { 
+			NOT = { has_global_flag = end_of_hre }
+		}
+		
+ 		properties = {
+		}
+		
+        effects = {
+		    hrebutton1_click = {
+                set_temp_variable = { show = 1 }
+                subtract_from_temp_variable = { show = show_aeiou_hre }
+                set_variable = { show_aeiou_hre = show }
+				ROOT = { find_hre_decisions = yes }
+            }				
+        }
+		
+		dynamic_lists = {
+		}
+		
+        triggers = {
+        }
+		
+		ai_enabled = {
+		    always = yes
+		}	
+		
+		ai_test_interval = 5
+		ai_weights = {
+			hrebutton1_click = {
+				ai_will_do = {
+					base  = -1
+					modifier = {
+						add = 2
+						if = {
+							LIMIT = {
+								OR = {
+									has_idea = hre_idea_elector
+									has_idea = hre_idea_prince
+									has_idea = hre_idea_free_city
+									has_idea = hre_idea_republic
+									has_idea = hre_idea_conservative
+								}
+							}
+							ROOT = {
+								has_opinion = {
+									target = var:global.hre_emperor
+									value < -60
+								}
+							}
+						}
+						else = {
+							check_variable = { score_array_position_var > 16 }
+							any_owned_state = {
+								is_capital = yes
+								is_on_continent = europe
+							}
+							hre_allowed_countries = yes
+							any_neighbor_country = {
+								OR = {
+									has_idea = hre_idea_emperor
+									has_idea = hre_idea_elector
+									has_idea = hre_idea_prince
+									has_idea = hre_idea_free_city
+									has_idea = hre_idea_republic
+									has_idea = hre_idea_conservative
+								}
+							}
+							var:global.hre_emperor = {
+								ROOT = {
+									has_opinion = {
+										target = PREV
+										value > 80
+									}
+								}
+							}
+						}
+					}
+					modifier = {
+						add = 2
+						NOT = { tag = global.hre_emperor }
+						var:global.hre_emperor = {
+							any_owned_state = {
+								LIMIT = {
+									is_capital = yes
+								}
+								is_controlled_by = ROOT
+							}
+						}
+						all_of_scopes = {
+							array = global.elector_tag_array
+							
+							THIS = {
+								OR = {
+									any_owned_state = {
+										LIMIT = {
+											is_capital = yes
+										}
+										NOT = { is_controlled_by = THIS }
+									}
+										is_in_faction_with = ROOT
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	holy_roman_empire = {
+       window_name = "holyromanempire"
+       #parent_window_token = politics_tab
+	   
+       context_type = player_context
+  
+        visible = { 
+            check_variable = { show_aeiou_hre > 0 }		
+		}
+		
+		properties = {
+			emperor_flag = { 
+				image = "[?global.hre_emperor.GetFlag]"
+			} 
+			elector_flag = {
+				image = "[?global.elector_tag_array^i.GetFlag]" 
+			}
+			elector_pick_flag = {
+				image = "[GetElectorPickFlag]"
+			}
+			prince_flag = {
+				image = "[?global.prince_tag_array^i.GetFlag]" 
+			}
+			free_city_flag = {
+				image = "[?global.free_city_tag_array^i.GetFlag]" 
+			}
+			show_action = {
+				#size = { height = 600 }
+			}
+		}
+		
+        effects = { 
+		    hre_closebutton_click = {
+                set_temp_variable = { show = 1 }
+                subtract_from_temp_variable = { show = show_aeiou_hre }
+                set_variable = { show_aeiou_hre = show }					
+			}
+			hre_actions_button_click = {
+				if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 1 }
+					}
+					set_global_flag = HRE_called_to_war
+					imperial_authority_call_to_arms_loss = yes
+					every_country  = {
+						LIMIT = {
+							has_war = no
+							OR = {
+								has_idea = hre_idea_elector
+								has_idea = hre_idea_prince
+								has_idea = hre_idea_free_city
+								has_idea = hre_idea_republic
+								has_idea = hre_idea_conservative
+							}
+						}
+						country_event = HREEvent.3
+					}
+				}
+				else_if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 2 }
+					}
+					hidden_effect = {
+						set_global_flag = has_toured_recently
+						country_event = { days = 365 id = HREEvent.4 }
+					}
+					set_temp_variable = { base_imperial_gain_temp = -10 }
+					imperial_authority = yes
+					set_temp_variable = { base_imperial_stability_gain_temp = 0.015 }
+					imperial_stability = yes
+					every_country  = {
+						LIMIT = {
+							has_war = no
+							OR = {
+								has_idea = hre_idea_elector
+								has_idea = hre_idea_prince
+								has_idea = hre_idea_free_city
+								has_idea = hre_idea_republic
+								has_idea = hre_idea_conservative
+							}
+						}
+						country_event = HREEvent.5
+					}
+				}
+				else_if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 3 }
+					}
+					add_political_power = -50
+					set_temp_variable = { base_imperial_gain_temp = 1 }
+					imperial_authority = yes
+				}
+				else_if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 4 }
+					}
+					set_temp_variable = { base_imperial_gain_temp = -100 }
+					imperial_authority = yes
+					hre_remove_post_industry_misc = yes
+					if = {
+						LIMIT = { has_idea = hre_idea_pope_excommunicated }
+						remove_ideas = hre_idea_pope_excommunicated
+					}
+					every_country  = {
+						LIMIT = {
+							OR = {
+								has_idea = hre_idea_elector
+								has_idea = hre_idea_prince
+								has_idea = hre_idea_free_city
+								has_idea = hre_idea_republic
+								has_idea = hre_idea_conservative
+							}
+						}
+						country_event = HREEvent.6
+					}
+					eoanb_add_50_prestige_score = yes
+					hidden_effect = {
+						set_global_flag = end_of_hre
+						every_country = {
+							LIMIT = {
+								check_variable = { show_aeiou_hre > 0 }	
+							}
+							set_variable = { show_aeiou_hre = 0 }
+						}
+						every_country = {
+							LIMIT = {
+								has_idea = hre_idea_elector
+							}
+							remove_ideas = hre_idea_elector
+						}
+						find_electors = yes
+						every_country = {
+							LIMIT = {
+								has_idea = hre_idea_prince
+							}
+							remove_ideas = hre_idea_prince
+						}
+						find_princes = yes
+						every_country = {
+							LIMIT = {
+								OR = {
+									has_idea = hre_idea_free_city
+									has_idea = hre_idea_republic
+									has_idea = hre_idea_conservative
+								}
+							}
+							remove_ideas = hre_idea_free_city
+							remove_ideas = hre_idea_republic
+							remove_ideas = hre_idea_conservative
+						}
+						find_free_cities = yes
+						every_country = {
+							country_event = { days = 15 id = story_news_events.23 }
+						}
+						if = {
+							LIMIT = {
+								has_cosmetic_tag = GER_UNIFIED
+							}
+							clr_global_flag = form_germany_flag
+						}
+					}
+					set_cosmetic_tag = HRE_UNIFIED
+				}
+				else_if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 5 }
+					}
+					add_political_power = -25
+					var:global.hre_emperor = {
+						add_opinion_modifier = {
+							target = ROOT
+							modifier = HRE_distance
+						}
+						ROOT = {
+							add_opinion_modifier = {
+								target = PREV
+								modifier = HRE_distance
+							}
+						}
+					}
+				}
+				else_if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 6 }
+					}
+					civil_war_check = yes
+					set_temp_variable = { base_imperial_gain_temp = -50 }
+					imperial_authority = yes
+					imperial_stability_centralization = yes
+					set_temp_variable = { base_imperial_centralization_gain_temp = 0.10 }
+					imperial_centralization = yes
+					set_temp_variable = { base_imperial_efficiency_gain_temp = 0.25 }
+					imperial_efficiency = yes
+					hidden_effect = {
+						set_global_flag = HRE_EFFICIENCY_I
+						find_hre_decisions = yes
+					}
+				}
+				else_if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 7 }
+					}
+					civil_war_check = yes
+					set_temp_variable = { base_imperial_gain_temp = -75 }
+					imperial_authority = yes
+					imperial_stability_centralization = yes
+					set_temp_variable = { base_imperial_centralization_gain_temp = 0.10 }
+					imperial_centralization = yes
+					set_temp_variable = { base_imperial_efficiency_gain_temp = 0.25 }
+					imperial_efficiency = yes
+					hidden_effect = {
+						set_global_flag = HRE_EFFICIENCY_II
+						find_hre_decisions = yes
+					}
+				}
+				else_if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 8 }
+					}
+					civil_war_check = yes
+					set_temp_variable = { base_imperial_gain_temp = -50 }
+					imperial_authority = yes
+					imperial_stability_centralization = yes
+					set_temp_variable = { base_imperial_centralization_gain_temp = 0.10 }
+					imperial_centralization = yes
+					hre_military_access = yes
+					hidden_effect = {
+						set_global_flag = HRE_MILITARY_ACCESS_I
+						find_hre_decisions = yes
+					}
+				}
+				else_if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 9 }
+					}
+					civil_war_check = yes
+					set_temp_variable = { base_imperial_gain_temp = -75 }
+					imperial_authority = yes
+					imperial_stability_centralization = yes
+					set_temp_variable = { base_imperial_centralization_gain_temp = 0.10 }
+					imperial_centralization = yes
+					hre_imperial_army = yes
+					hidden_effect = {
+						set_global_flag = HRE_MILITARY_ACCESS_II
+						find_hre_decisions = yes
+					}
+				}
+				else_if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 10 }
+					}
+					civil_war_check = yes
+					set_temp_variable = { base_imperial_gain_temp = -100 }
+					imperial_authority = yes
+					imperial_stability_centralization = yes
+					set_temp_variable = { base_imperial_centralization_gain_temp = 0.10 }
+					imperial_centralization = yes
+					hre_militaristic_oath = yes
+					hidden_effect = {
+						find_hre_decisions = yes
+					}
+				}
+				else_if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 11 }
+					}
+					civil_war_check = yes
+					set_temp_variable = { base_imperial_gain_temp = -50 }
+					imperial_authority = yes
+					imperial_stability_centralization = yes
+					set_temp_variable = { base_imperial_centralization_gain_temp = 0.10 }
+					imperial_centralization = yes
+					hre_defense_of_the_empire = yes
+					hidden_effect = {
+						find_hre_decisions = yes
+					}
+				}
+				else_if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 12 }
+					}
+					civil_war_check = yes
+					set_temp_variable = { base_imperial_gain_temp = -75 }
+					imperial_authority = yes
+					imperial_stability_centralization = yes
+					set_temp_variable = { base_imperial_centralization_gain_temp = 0.10 }
+					imperial_centralization = yes
+					hre_call_of_the_empire = yes
+					hidden_effect = {
+						find_hre_decisions = yes
+					}
+				}
+				else_if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 13 }
+					}
+					civil_war_check = yes
+					set_temp_variable = { base_imperial_gain_temp = -50 }
+					imperial_authority = yes
+					imperial_stability_centralization = yes
+					set_temp_variable = { base_imperial_centralization_gain_temp = 0.10 }
+					imperial_centralization = yes
+					hre_emperor_industry = yes
+					hidden_effect = {
+						set_global_flag = HRE_EMPEROR_INDUSTRY_I
+						find_hre_decisions = yes
+					}
+				}
+				else_if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 14 }
+					}
+					civil_war_check = yes
+					set_temp_variable = { base_imperial_gain_temp = -75 }
+					imperial_authority = yes
+					imperial_stability_centralization = yes
+					set_temp_variable = { base_imperial_centralization_gain_temp = 0.10 }
+					imperial_centralization = yes
+					hre_emperor_industry_ii = yes
+					hidden_effect = {
+						set_global_flag = HRE_EMPEROR_INDUSTRY_II
+						find_hre_decisions = yes
+					}
+				}
+				else_if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 15 }
+					}
+					civil_war_check = yes
+					set_temp_variable = { base_imperial_gain_temp = -100 }
+					imperial_authority = yes
+					imperial_stability_centralization = yes
+					set_temp_variable = { base_imperial_centralization_gain_temp = 0.10 }
+					imperial_centralization = yes
+					add_ideas = hre_idea_pope_excommunicated
+					hidden_effect = {
+						set_global_flag = EXCOMMUNICATION_OF_POPE
+						find_hre_decisions = yes
+					}
+				}
+			}
+			hre_controller_click = {
+				if = {
+					LIMIT = {
+						has_idea = hre_idea_elector
+					}
+					remove_ideas = hre_idea_elector
+					find_electors = yes
+					hre_remove_military_access = yes
+					hre_remove_post_industry = yes
+				}
+				else_if = {
+					LIMIT = {
+						has_idea = hre_idea_prince
+					}
+					remove_ideas = hre_idea_prince
+					find_princes = yes
+					hre_remove_military_access = yes
+					hre_remove_post_industry = yes
+				}
+				else_if = {
+					LIMIT = {
+						OR = {
+							has_idea = hre_idea_free_city
+							has_idea = hre_idea_republic
+							has_idea = hre_idea_conservative
+						}
+					}
+					remove_ideas = hre_idea_free_city
+					remove_ideas = hre_idea_republic
+					remove_ideas = hre_idea_conservative
+					find_free_cities = yes
+					hre_remove_military_access = yes
+					hre_remove_post_industry = yes
+				}
+				else = {
+					add_ideas = hre_idea_prince
+					find_princes = yes
+					add_to_variable = { global.imperial_authority = 1 }
+					hre_add_military_access = yes
+					hre_add_post_industry = yes
+				}
+			}
+			hre_disband_click = {
+				ROOT = {
+					eoanb_add_50_prestige_score = yes
+					every_country = {
+						country_event = story_news_events.19
+					}
+				}
+				set_global_flag = end_of_hre
+				hre_remove_post_industry_misc = yes
+				every_country = {
+					LIMIT = {
+						has_idea = hre_idea_emperor
+					}
+					if = {
+						LIMIT = { has_idea = hre_idea_pope_excommunicated }
+						remove_ideas = hre_idea_pope_excommunicated
+					}
+					remove_ideas = hre_idea_emperor
+				}
+				find_emperor = yes
+				every_country = {
+					LIMIT = {
+						has_idea = hre_idea_elector
+					}
+					remove_ideas = hre_idea_elector
+				}
+				find_electors = yes
+				every_country = {
+					LIMIT = {
+						has_idea = hre_idea_prince
+					}
+					remove_ideas = hre_idea_prince
+				}
+				find_princes = yes
+				every_country = {
+					LIMIT = {
+						OR = {
+							has_idea = hre_idea_free_city
+							has_idea = hre_idea_republic
+							has_idea = hre_idea_conservative
+						}
+					}
+					remove_ideas = hre_idea_free_city
+					remove_ideas = hre_idea_republic
+					remove_ideas = hre_idea_conservative
+				}
+				find_free_cities = yes
+				every_country = {
+					LIMIT = {
+						check_variable = { show_aeiou_hre > 0 }	
+					}
+					set_variable = { show_aeiou_hre = 0 }
+				}
+				clear_variable = global.imperial_authority
+				clear_variable = global.imperial_stability
+				clear_variable = global.imperial_centralization
+			}
+        }
+		
+		dynamic_lists = {
+			show_elector = {
+				array = global.elector_tag_array
+				entry_container = show_elector
+			}
+			show_prince = {
+				array = global.prince_tag_array
+				entry_container = show_prince
+			}
+			show_free_city = {
+				array = global.free_city_tag_array
+				entry_container = show_free_city
+			}
+			show_action = {
+				array = ROOT.hre_decisions_array
+				entry_container = show_action 
+			}
+		}
+		
+        triggers = {
+			hre_actions_button_click_enabled = {
+				if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 1 }
+					}
+					hre_not_caled_to_war_trigger = yes
+					OR = {
+						hre_defensive_war_trigger = yes
+						hre_offensive_war_trigger = yes
+					}
+				}
+				else_if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 2 }
+					}
+					set_temp_variable = { imperial_authority_check_temp = 10 }
+					imperial_authority_check_trigger = yes
+					hre_not_toured = yes
+				}
+				else_if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 3 }
+					}
+					has_political_power > 50
+				}
+				else_if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 4 }
+					}
+					set_temp_variable = { imperial_authority_check_temp = 100 }
+					imperial_authority_check_trigger = yes
+					set_temp_variable = { imperial_centralization_check_temp = 0.50 }
+					imperial_centralization_check_trigger = yes
+				}
+				else_if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 5 }
+					}
+					has_political_power > 25
+					NOT = { 
+						has_opinion_modifier = HRE_distance
+					}
+				}
+				else_if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 6 }
+					}
+					set_temp_variable = { imperial_authority_check_temp = 50 }
+					imperial_authority_check_trigger = yes
+				}
+				else_if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 7 }
+					}
+					set_temp_variable = { imperial_authority_check_temp = 75 }
+					imperial_authority_check_trigger = yes
+				}
+				else_if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 8 }
+					}
+					set_temp_variable = { imperial_authority_check_temp = 50 }
+					imperial_authority_check_trigger = yes
+				}
+				else_if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 9 }
+					}
+					set_temp_variable = { imperial_authority_check_temp = 75 }
+					imperial_authority_check_trigger = yes
+				}
+				else_if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 10 }
+					}
+					set_temp_variable = { imperial_authority_check_temp = 100 }
+					imperial_authority_check_trigger = yes
+					hre_AUS = yes
+				}
+				else_if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 11 }
+					}
+					set_temp_variable = { imperial_authority_check_temp = 50 }
+					imperial_authority_check_trigger = yes
+				}
+				
+				else_if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 12 }
+					}
+					set_temp_variable = { imperial_authority_check_temp = 75 }
+					imperial_authority_check_trigger = yes
+				}
+				else_if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 13 }
+					}
+					set_temp_variable = { imperial_authority_check_temp = 50 }
+					imperial_authority_check_trigger = yes
+				}
+				
+				else_if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 14 }
+					}
+					set_temp_variable = { imperial_authority_check_temp = 75 }
+					imperial_authority_check_trigger = yes
+				}
+				else_if = {
+					LIMIT = {
+						check_variable = { hre_decisions_array^i = 15 }
+					}
+					set_temp_variable = { imperial_authority_check_temp = 100 }
+					imperial_authority_check_trigger = yes
+				}
+			}
+			hre_controller_click_enabled = {
+				if = {
+					LIMIT = {
+						OR = {
+							has_idea = hre_idea_elector
+							has_idea = hre_idea_prince
+							has_idea = hre_idea_free_city
+							has_idea = hre_idea_republic
+							has_idea = hre_idea_conservative
+						}
+					}
+					var:global.hre_emperor = {
+						ROOT = {
+							has_opinion = {
+								target = PREV.PREV
+								value < -60
+							}
+						}
+					}
+				}
+				else_if = {
+					LIMIT = {
+						check_variable = { score_array_position_var > 16 }
+						any_owned_state = {
+							is_capital = yes
+							is_on_continent = europe
+						}
+						hre_allowed_countries = yes
+						any_neighbor_country = {
+							OR = {
+								has_idea = hre_idea_emperor
+								has_idea = hre_idea_elector
+								has_idea = hre_idea_prince
+								has_idea = hre_idea_free_city
+								has_idea = hre_idea_republic
+								has_idea = hre_idea_conservative
+							}
+						}
+					}
+					set_variable = { opinion_required = 80 }
+					if = {
+						LIMIT = { OR = { tag = SWI tag = HOL } }
+						add_to_variable = { opinion_required = 40 }
+					}
+					var:global.hre_emperor = {
+						ROOT = {
+							has_opinion = {
+								target = PREV
+								value > opinion_required
+							}
+						}
+					}
+				}
+				else = {
+					always = no
+				}
+			}
+			hre_disband_click_enabled = {
+				NOT = { tag = global.hre_emperor }
+				var:global.hre_emperor = {
+					any_owned_state = {
+						LIMIT = {
+							is_capital = yes
+						}
+						is_controlled_by = ROOT
+					}
+				}
+				all_of_scopes = {
+					array = global.elector_tag_array
+					
+					THIS = {
+						OR = {
+							any_owned_state = {
+								LIMIT = {
+									is_capital = yes
+								}
+								NOT = { is_controlled_by = THIS }
+							}
+								is_in_faction_with = ROOT
+						}
+					}
+				}
+			}
+			hre_actions_sub_visible = {
+				NOT = {
+					OR = {
+						has_idea = hre_idea_emperor
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_free_city
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_conservative
+					}
+				}
+			}
+        }
+		
+		ai_enabled = {
+		    always = yes
+		}	
+		
+		ai_test_interval = 1
+		ai_weights = {
+			hre_closebutton_click = {
+				ai_will_do = {
+					base  = 1
+					modifier = {
+						add = -2
+						OR = {
+							AND = {
+								if = {
+									LIMIT = {
+										OR = {
+											has_idea = hre_idea_elector
+											has_idea = hre_idea_prince
+											has_idea = hre_idea_free_city
+											has_idea = hre_idea_republic
+											has_idea = hre_idea_conservative
+										}
+									}
+									ROOT = {
+										has_opinion = {
+											target = var:global.hre_emperor
+											value < -60
+										}
+									}
+								}
+								else = {
+									check_variable = { score_array_position_var > 16 }
+									any_owned_state = {
+										is_capital = yes
+										is_on_continent = europe
+									}
+									hre_allowed_countries = yes
+									any_neighbor_country = {
+										OR = {
+											has_idea = hre_idea_emperor
+											has_idea = hre_idea_elector
+											has_idea = hre_idea_prince
+											has_idea = hre_idea_free_city
+											has_idea = hre_idea_republic
+											has_idea = hre_idea_conservative
+										}
+									}
+									var:global.hre_emperor = {
+										ROOT = {
+											has_opinion = {
+												target = PREV
+												value > 80
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					modifier = {
+						add = -2
+						NOT = { tag = global.hre_emperor }
+						var:global.hre_emperor = {
+							any_owned_state = {
+								LIMIT = {
+									is_capital = yes
+								}
+								is_controlled_by = ROOT
+							}
+						}
+						all_of_scopes = {
+							array = global.elector_tag_array
+							
+							THIS = {
+								OR = {
+									any_owned_state = {
+										LIMIT = {
+											is_capital = yes
+										}
+										NOT = { is_controlled_by = THIS }
+									}
+										is_in_faction_with = ROOT
+								}
+							}
+						}
+					}
+				}
+			}
+			
+			hre_controller_click = {
+				ai_will_do = {
+					base  = -100
+					modifier = {
+						add = 500
+						if = {
+							LIMIT = {
+								OR = {
+									has_idea = hre_idea_elector
+									has_idea = hre_idea_prince
+									has_idea = hre_idea_free_city
+									has_idea = hre_idea_republic
+									has_idea = hre_idea_conservative
+								}
+							}
+							ROOT = {
+								has_opinion = {
+									target = var:global.hre_emperor
+									value < -60
+								}
+							}
+						}
+						else = {
+							check_variable = { score_array_position_var > 16 }
+							any_owned_state = {
+								is_capital = yes
+								is_on_continent = europe
+							}
+							hre_allowed_countries = yes
+							any_neighbor_country = {
+								OR = {
+									has_idea = hre_idea_emperor
+									has_idea = hre_idea_elector
+									has_idea = hre_idea_prince
+									has_idea = hre_idea_free_city
+									has_idea = hre_idea_republic
+									has_idea = hre_idea_conservative
+								}
+							}
+							var:global.hre_emperor = {
+								ROOT = {
+									has_opinion = {
+										target = PREV
+										value > 80
+									}
+								}
+							}
+						}
+					}
+					
+				}
+			}
+			hre_disband_click = {
+				ai_will_do = {
+					base  = 1000
+				}
+			}
+		}	
+	}
+}

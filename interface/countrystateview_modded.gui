@@ -1,0 +1,18 @@
+guiTypes = {
+	
+	containerWindowType = {    
+		name = "claimbutton"     
+		position = { x=450 y=50}	    
+		#size = { width=75 height=50 }
+
+		buttonType ={
+			name = "claim"
+			spriteType = "GFX_pol_power_icon"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"  
+			scale = 1.5    
+			pdx_tooltip = CLAIM_BUTTON_TOOLTIP
+			pdx_tooltip_delayed = CLAIM_BUTTON_TOOLTIP_DELAYED
+		}	      
+	}
+}                              

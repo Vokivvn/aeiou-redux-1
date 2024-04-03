@@ -1,0 +1,66 @@
+division_template = {
+	name = "Royal Saxonian Guard Battalion"
+
+	division_names_group = SAX_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Saxonian Cavalry Division"
+
+	division_names_group = SAX_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Saxonian Knight Brigade"
+
+	division_names_group = SAX_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Royal Saxonian Guard Battalion"
+		location = 514
+		division_template = "Royal Saxonian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Saxonian Guard Battalion"
+		location = 3535
+		division_template = "Royal Saxonian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Saxonian Cavalry Division"
+		location = 9471
+		division_template = "Royal Saxonian Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Saxonian Knight Brigade"
+		location = 11415
+		division_template = "Royal Saxonian Knight Brigade"
+		start_experience_factor = 0.3
+	}
+}

@@ -1,0 +1,27 @@
+
+state={
+	id=396
+	name="STATE_396"
+	manpower = 27063
+	state_category = rural
+
+	resources={
+		wood=2 
+	}
+
+	history={
+		owner = CHR
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = CHR
+		victory_points = {
+			1595 5 
+		}
+
+	}
+
+	provinces={
+	  1595 1881 4527 4531 7551 9796 9810 10448 11621 11635 12437 831
+	}
+}

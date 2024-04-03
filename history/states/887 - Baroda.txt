@@ -1,0 +1,26 @@
+
+state={
+	id=887
+	name="STATE_887" 
+	manpower = 50000
+	resources={
+		
+	}
+	
+	state_category = town
+
+	history={
+		owner = MAR
+		add_core_of = MAR
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			11993 1
+		}		
+	}
+
+	provinces={
+		4072 7060 7177 7205 7430 10019 10311 10872 11993
+	}
+}

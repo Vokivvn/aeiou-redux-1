@@ -1,0 +1,8 @@
+french_border_war_category = {
+	picture = generic_border_conflicts
+	icon = border_conflicts
+}
+the_brabantian_question_category = {
+	picture = GFX_decision_cat_netherlands_industrialization
+	icon = oppression
+}

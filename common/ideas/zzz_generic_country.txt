@@ -1,0 +1,658 @@
+ideas = {
+
+    country = {
+
+        generic_idea_winds_of_change = {
+            
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                stability_weekly = -0.07
+            }
+        }
+
+        generic_idea_renovated_absolutism = {
+            
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                production_speed_buildings_factor = -0.05
+                research_speed_factor = -0.08
+            }
+        }
+
+        generic_idea_winds_of_change1 = {
+
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                stability_weekly = -0.07
+            }
+        }
+
+        generic_idea_winds_of_change2 = {
+
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                stability_weekly = -0.07
+            }
+        }
+
+        generic_idea_renovated_absolutism1 = {
+            
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                production_speed_buildings_factor = -0.03
+                research_speed_factor = -0.04
+            }
+        }
+
+        generic_idea_dreams_of_liberalism = {
+
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                research_speed_factor = 0.05
+                production_speed_buildings_factor = 0.02
+            }
+        }
+  
+        generic_idea_stabilized_liberties = {
+
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = 0.01
+                stability_weekly = 0.07
+            }
+        }
+
+        generic_idea_feudal_corporationism = {
+
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                line_change_production_efficiency_factor = 0.05
+            }
+        }
+		
+        generic_idea_decentralized_economy = {
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+			picture = generic_decentralized_economy
+
+            removal_cost = -1
+
+            modifier = {
+                production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				line_change_production_efficiency_factor = -0.1
+            }
+        }
+		
+        generic_idea_decentralized_economy1 = {
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+			picture = generic_decentralized_economy
+            removal_cost = -1
+
+            modifier = {
+                production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				line_change_production_efficiency_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.15
+				conversion_cost_civ_to_mil_factor = -0.1
+				conversion_cost_mil_to_civ_factor = -0.1
+            }
+        }
+		
+        generic_idea_centralized_economy = {
+			picture = generic_centralized_economy
+
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                production_speed_arms_factory_factor = -0.1
+				production_speed_industrial_complex_factor = -0.1
+				line_change_production_efficiency_factor = 0.15 
+            }
+        }
+		
+        generic_idea_centralized_economy1 = {
+		picture = generic_centralized_economy
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                production_speed_arms_factory_factor = -0.1
+				production_speed_industrial_complex_factor = -0.1
+				line_change_production_efficiency_factor = 0.15 
+				stability_factor = 0.1
+            }
+        }
+		
+        generic_idea_support_peasants = {
+			icon= GFX_idea_support_peasants
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+			
+            modifier = {
+                local_resources_factor  = 0.15
+            }
+        }
+		
+        generic_idea_land_to_gentry = {
+
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                research_speed_factor = 0.08
+            }
+        }
+		
+        generic_idea_superior_craftsmanship = {
+		
+			picture = generic_supperior_craftmanship
+
+            allowed = {
+                always = no
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = -0.05
+            }
+        }
+		
+        generic_idea_superior_communications = {
+
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                min_export = -0.05
+				industry_repair_factor = 0.05
+				political_power_factor = 0.02 
+            }
+        }
+		
+		generic_idea_banking_boom = { 
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = 0.15
+            }
+		}
+		
+		generic_idea_joint_stock_companies = { 
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				min_export = 0.1
+				industrial_capacity_dockyard = 0.1
+				research_speed_factor = 0.05
+            }
+		}
+		
+		generic_idea_printing_money = { 
+		
+			picture = generic_money_printing
+		
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				stability_weekly = -0.004
+				production_speed_industrial_complex_factor = 0.1
+            }
+		}
+		
+        generic_idea_rural_migration = {
+
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                industrial_capacity_factory = 0.09
+				local_resources_factor = -0.1
+            }
+        }
+		
+		
+        generic_idea_large_land_owners = {
+
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                global_building_slots_factor = 0.15
+				consumer_goods_factor = -0.05
+				stability_factor = -0.001
+            }
+        }
+		
+        generic_idea_growth_manufactories = {
+
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+                production_speed_buildings_factor = 0.12
+				industrial_capacity_factory = 0.05
+            }
+        }
+		
+        generic_idea_end_guild_system = {
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                production_factory_efficiency_gain_factor = 0.10
+				industrial_capacity_factory = 0.05
+            }
+        }
+		
+        generic_idea_removed_internal_trade_barriers = {
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                production_speed_infrastructure_factor = 0.1
+				local_resources_factor = 0.1
+            }
+        }
+		
+        generic_idea_integrating_workers = {
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_cost = 0.9
+				stability_weekly = 0.01
+				war_support_weekly = 0.01
+            }
+        }
+
+		generic_idea_bourgeois_recruits = {
+
+            allowed = {
+                always = no
+            }
+			picture = generic_Burgeois_Support
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+				conscription_factor = 0.05
+				production_factory_max_efficiency_factor = -0.1				
+				war_support_weekly = 0.004
+            }
+        }
+
+		generic_idea_levies_from_nobles = {
+			icon = GFX_idea_generic_noble_support
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {				
+				conscription_factor = 0.05
+				political_power_factor = -0.15
+				war_support_weekly = 0.002
+            }
+        }
+
+		generic_idea_reorganized_levies = {
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+            removal_cost = -1
+
+            modifier = {				
+				conscription = 0.005
+            }
+        }
+
+		generic_idea_integrating_mercenaries = {
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+            removal_cost = -1
+
+            modifier = {				
+				conscription_factor = -0.05
+				army_org_factor = 0.1
+				army_org_regain = 0.1
+            }
+        }
+
+		generic_idea_quality_over_quantity = {
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+            removal_cost = -1
+
+            modifier = {				
+				conscription_factor = -0.05
+				training_time_factor = 0.2
+				max_dig_in = 5
+            }
+        }
+
+		generic_idea_quality_over_quantity1 = {
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+            removal_cost = -1
+			icon = GFX_idea_quality_idea
+            modifier = {				
+				conscription_factor = -0.05
+				training_time_factor = 0.2
+				max_dig_in = 5
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+            }
+        }
+
+		generic_idea_streamlined_uniforms = {
+
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {				
+				line_change_production_efficiency_factor = 0.1
+            }
+        }
+
+		generic_idea_ready_for_war = {
+
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {				
+				mobilization_speed = 0.2
+				war_support_weekly = 0.005
+            }
+        }
+
+		generic_idea_naval_golden_age = {
+
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {				
+				industrial_capacity_dockyard = 0.2
+				production_speed_naval_base_factor = 0.25
+            }
+        }
+
+    }
+	
+	hidden_ideas = {
+
+		continuous_naval_production = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_dockyard = 0.2
+			}
+		}
+
+
+		continuous_air_production = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				fighter_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				cv_fighter_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				jet_fighter_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				cv_CAS_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				CAS_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				nav_bomber_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				cv_nav_bomber_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				rocket_interceptor_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				tac_bomber_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				jet_tac_bomber_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				jet_strat_bomber_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				heavy_fighter_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				strat_bomber_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				transport_plane_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				guided_missile_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+			}		
+		}
+	}
+
+}

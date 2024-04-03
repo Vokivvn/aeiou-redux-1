@@ -1,0 +1,31 @@
+
+state={
+	id=852
+	name="STATE_852"
+	manpower = 480303
+	state_category = town
+	
+	resources={
+		iron = 3
+		wood = 5
+	}
+
+
+	history={
+		owner = HAN
+		victory_points = {
+			6513 5 
+		}
+		buildings = {
+			infrastructure = 3
+	    	arms_factory = 1 
+	    	industrial_complex = 1 
+		}
+		add_core_of = HAN
+	}
+	
+	
+	provinces={
+		6513 11402 11493 526 9375
+	}
+}

@@ -1,0 +1,29 @@
+
+state={
+	id=487
+	name="STATE_487"
+	manpower = 351848
+	
+	state_category = rural
+
+	resources = {
+		wood=2
+		gunpowder=2
+		horses=2
+		steel=1
+	}
+
+	history={
+		owner = BOL
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = BOL
+	}
+
+	provinces={
+		2160 5188 8211 8240 10924 10982 10996 12902 12916 12973 13251
+	}
+	
+}

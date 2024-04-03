@@ -1,0 +1,31 @@
+﻿capital = 545
+
+#oob = "AFR_1886"
+
+# Starting tech
+#set_technology = {	-Africa don't need this 
+#	muskets0 = 1
+#	grenade = 1
+#}
+
+#set_convoys = 0
+
+set_politics = {
+	ruling_party = apolitical
+#	last_election = "1936.1.1"
+#	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	apolitical = 100
+}
+
+create_country_leader = {
+	name = "Tribal Councils"
+	picture = "gfx/leaders/Africa/Portrait_Generic_Tribal_Council.dds"
+	expire = "1999.12.31"
+	ideology = apolitical_sub
+	traits = { 
+		personal_trait_unorganised_tribes
+	}
+}

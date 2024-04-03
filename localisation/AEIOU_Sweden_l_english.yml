@@ -1,0 +1,11 @@
+﻿l_english:
+
+    #Events
+    SWEMarketcrash.1.t:0 "The crumple of an era"
+    SWEMarketcrash.1.d:0 "Two days ago Sweden's market flourished everywhere from Brazil to Russia and the goods that our many merchants and traders transported were sold in the most motley of shops and markets and the biggest, most important of all the luxury goods was Ivory. How could we have imagined that now our economy would be in such a ruinous estate along with the ones of our many trade partners?\n\nFollowing a sudden collapse in shipments of Ivory from our colonies in Africa due to a cholera outbreak that infected several of our ships several merchants from Denmark and New England were forced to look for another source of raw materials, which in turn were turned towards the Russian State, who welcomed their new trade partners with open arms. Now we are left to toil in an attempt to recover our lost prestige and our absolutely obliterated economy that has led to the loss of thousands of jobs in many cities. The farmers have now curiously become the only ones unaffected by all of this collapse due to Ivory being a 'luxury' good."
+    SWEMarketcrash.1.a:0 "How shall we pay our debtors now?"
+    
+    #Ideas
+    swe_collapse_bruh:0 "Total Economic Collapse"
+    swe_collapse_bruh_desc:0 "The economy of this country has been completely obliterated by the collapse of the Ivory Market trade and all of its subsequent changes. It will take years of slow progress and a lot of inversion from the government to reverse this horrific situation.\n\nIn the meantime, due to this uncertainty, the population looks for more drastic measures, further and further away from the moderate leadership, hoping that these drastic changes might help them in any way."
+    

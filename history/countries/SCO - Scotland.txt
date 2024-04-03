@@ -1,0 +1,33 @@
+﻿capital = 121
+
+oob = "SCO_1886"
+
+# Starting tech
+set_technology = {
+	muskets0 = 1
+	melee = 1
+	basic_cavalry = 1
+	melee_improvements = 1
+}
+
+set_convoys = 20
+
+set_politics = {
+	ruling_party = despotist
+	elections_allowed = no 
+}
+set_popularities = {
+	despotist = 70
+	revolutionary = 1
+	liberal = 9
+	conservative = 10
+	absolutist = 10
+}
+
+ create_country_leader = {
+	name = "Mary III"
+	picture = "Portrait_SCO_Mary_III.dds"
+	expire = "1965.1.1"
+    ideology = despotist_moderate
+}
+add_to_array = { national_religion_array =  3 }

@@ -1,0 +1,21 @@
+﻿capital = 554
+
+# Starting tech
+set_technology = {
+	muskets0 = 1
+	
+	fuel_silos = 1
+}
+
+set_convoys = 5
+
+
+set_politics = {
+	ruling_party = conservative
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	conservative = 100
+}

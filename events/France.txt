@@ -1,0 +1,1556 @@
+###########################
+# France Events
+###########################
+
+add_namespace = FRAIvorymarket
+add_namespace = FRARealmevents
+add_namespace = FRALouisiana
+add_namespace = FRAEconomy
+add_namespace = FRACentralized
+add_namespace = FRANobleRevolt
+add_namespace = FRADecentralizedInterventionist
+add_namespace = FRASpanishWar
+
+country_event = { #Report from the market
+	id = FRAIvorymarket.1
+	title = FRAIvorymarket.1.t
+	desc = FRAIvorymarket.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRAIvorymarket.1.a 
+		set_country_flag = FRAMarketcrash
+	}
+}
+
+country_event = { #Matters of state
+	id = FRARealmevents.1
+	title = FRARealmevents.1.t
+	desc = FRARealmevents.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRARealmevents.1.a 
+	}
+}
+
+country_event = { #Lambert Report
+	id = FRALouisiana.1
+	title = FRALouisiana.1.t
+	desc = FRALouisiana.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRALouisiana.1.a 
+		add_war_support = 0.1
+		add_political_power = -50
+	}
+}
+
+country_event = { #Partition of Comancheria
+	id = FRALouisiana.2
+	title = FRALouisiana.2.t
+	desc = FRALouisiana.2.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = FRALouisiana.2.a #We can handle them alone
+		add_political_power = -50
+		if = {
+			limit = { NOT = { country_exists = LAK } }
+			declare_war_on = {
+				target = CCH
+				type = annex_everything 
+			}
+			set_global_flag = mexicodoesnotjoin
+			
+		}
+	}
+	option = {
+		name = FRALouisiana.2.b #Offer the Mexicans
+		add_war_support = 0.05
+		add_political_power = 35
+		MEX = {
+			country_event = FRALouisiana.3
+		}
+	}
+}
+
+country_event = { #Partition of Comancheria - Mexican side
+	id = FRALouisiana.3
+	title = FRALouisiana.3.t
+	desc = FRALouisiana.3.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = FRALouisiana.3.a #Why would we join
+		ai_chance = { factor = 20 }
+		FRA = { 
+		country_event = FRALouisiana.4
+		}
+	}
+	option = {
+		name = FRALouisiana.3.b #Accept
+		ai_chance = { factor = 80 }
+			declare_war_on = {
+				target = CCH
+				type = annex_everything
+			}
+			FRA = {declare_war_on = {
+				target = CCH
+				type = annex_everything
+			}
+			}
+			LOU = {declare_war_on = {
+				target = CCH
+				type = annex_everything
+			}
+			}
+			add_political_power = 30
+			set_global_flag = mexicojoinstoo
+	}
+}
+
+country_event = { #Partition of Comancheria - Mexico says no
+	id = FRALouisiana.4
+	title = FRALouisiana.4.t
+	desc = FRALouisiana.4.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = FRALouisiana.4.a 
+		if = {
+			limit = { NOT = { country_exists = LAK } }
+			declare_war_on = {
+				target = CCH
+				type = annex_everything 
+			}
+			set_global_flag = mexicodoesnotjoin
+		}
+		add_political_power = -20
+	}
+}
+
+country_event = { #Partition of Comancheria - Peace deal for France
+	id = FRALouisiana.5
+	title = FRALouisiana.5.t
+	desc = FRALouisiana.5.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+		has_global_flag = mexicojoinstoo
+		FRA = {
+			has_war_with = CCH }
+			
+		CCH = { 
+			surrender_progress > 0.9
+			}
+		}
+		
+	fire_only_once = yes
+	
+	option = {
+		name = FRALouisiana.5.a #It's all for us!
+		ai_chance = { factor = 1 }
+		LOU = {
+			transfer_state = 871
+			transfer_state = 873
+			transfer_state = 872
+		}
+		add_political_power = -100
+		add_stability = -0.02
+		MEX = { country_event = FRALouisiana.6 }
+	}
+	option = {
+		name = FRALouisiana.5.b #Honour our treaty
+		ai_chance = { factor = 99 }
+		MEX = {
+			transfer_state = 872
+		}
+		LOU = {
+			transfer_state = 871
+			transfer_state = 873
+		}
+		MEX = { country_event = FRALouisiana.7 }
+	}
+}
+
+country_event = { #Partition of Comancheria - France annexes everything, Mexican reaction
+	id = FRALouisiana.6
+	title = FRALouisiana.6.t
+	desc = FRALouisiana.6.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = FRALouisiana.6.a #This is an act of war
+		MEX = {
+			declare_war_on = {
+				target = LOU
+				type = topple_government 
+			}
+		}
+		set_global_flag = andaleguerra
+	}
+	
+	option = {
+		name = FRALouisiana.6.b #Don't risk a war
+		add_political_power = -100
+	}
+}
+country_event = { #Partition of Comancheria - France honours the treaty
+	id = FRALouisiana.7
+	title = FRALouisiana.7.t
+	desc = FRALouisiana.7.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = FRALouisiana.7.a #Good
+		add_political_power = 50
+		add_stability = 0.05
+	}
+}
+
+country_event = { #Partition of Comancheria - Scripted Franco-Mexican peace deal
+	id = FRALouisiana.8
+	title = FRALouisiana.8.t
+	desc = FRALouisiana.8.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+		has_global_flag = andaleguerra
+		MEX = { has_full_control_of_State = 861 } }
+	
+	fire_only_once = yes
+	
+	option = {
+		name = FRALouisiana.8.a 
+		MEX = { whitepeace = LOU
+				whitepeace = FRA
+				whitepeace = CAN
+		}
+		MEX = { transfer_state = 861
+				transfer_state = 872
+				transfer_state = 871
+				transfer_state = 873
+		}
+		FRA = { country_event = FRALouisiana.9}
+		add_political_power = 200
+		add_war_support = 0.1
+		add_stability = 0.1
+	}
+}
+
+country_event = { #Partition of Comancheria French reaction to the Peace deal
+	
+	id = FRALouisiana.9
+	title = FRALouisiana.9.t
+	desc = FRALouisiana.9.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = FRALouisiana.9.a 
+		add_political_power = -100
+	}
+}
+
+country_event = { #Redrawing the Louisianan borders
+	
+	id = FRALouisiana.10
+	title = FRALouisiana.10.t
+	desc = FRALouisiana.10.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = FRALouisiana.10.a 
+		add_stability = 0.02
+		add_political_power = 25
+	}
+}
+
+country_event = { #Grant rights to natives
+	
+	id = FRALouisiana.11
+	title = FRALouisiana.11.t
+	desc = FRALouisiana.11.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = FRALouisiana.11.a 
+		add_stability = 0.02
+		add_political_power = -50
+	}
+}
+
+
+country_event = { #Royal Grants to the barons
+	
+	id = FRAEconomy.1
+	title = FRAEconomy.1.t
+	desc = FRAEconomy.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = FRAEconomy.1.a 
+		swap_ideas = {
+				add_idea = fra_economic_revitalization1
+				remove_idea = fra_economic_revitalization
+			}
+	}
+}
+
+country_event = { #Peasant support
+	
+	id = FRAEconomy.2
+	title = FRAEconomy.2.t
+	desc = FRAEconomy.2.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = FRAEconomy.2.a 
+		swap_ideas = {
+				add_idea = fra_economic_revitalization3
+				remove_idea = fra_economic_revitalization2
+			}
+	}
+}
+
+country_event = { #The Yoke Never Lifts
+	
+	id = FRALouisiana.12
+	title = FRALouisiana.12.t
+	desc = FRALouisiana.12.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = FRALouisiana.12.a 
+		add_stability = -0.02
+		add_political_power = 100
+	}
+}
+
+country_event = { #New England invades the Cherokee
+	
+	id = FRALouisiana.13
+	title = FRALouisiana.13.t
+	desc = FRALouisiana.13.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = FRALouisiana.13.a 
+		add_political_power = 20
+		add_war_support = 0.05
+		LOU = {
+		add_war_support = 0.1 }
+	}
+}
+
+country_event = { #Invasion of Vijayanagara
+	
+	id = FRAEconomy.3
+	title = FRAEconomy.3.t
+	desc = FRAEconomy.3.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = FRAEconomy.3.a 
+		add_political_power = 100
+		add_stability = 0.01
+		add_war_support = 0.05
+		set_country_flag = FRA_invasion_VIJ
+	}
+}
+
+country_event = { #Slaves and Gold surely are fun.
+	
+	id = FRAEconomy.4
+	title = FRAEconomy.4.t
+	desc = FRAEconomy.4.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = FRAEconomy.4.a 
+		COU = {
+			country_event = COUDiplomacy.1
+		}
+	}
+}
+
+country_event = { #Courland says no
+	
+	id = FRAEconomy.5
+	title = FRAEconomy.5.t
+	desc = FRAEconomy.5.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = FRAEconomy.5.a 
+		add_political_power = -100
+	}
+}
+
+country_event = { #Courland says yes
+	
+	id = FRAEconomy.6
+	title = FRAEconomy.6.t
+	desc = FRAEconomy.6.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = FRAEconomy.6.a 
+		add_political_power = 100
+		add_stability = 0.02
+		FRA = { transfer_state = 908}
+	}
+}
+
+country_event = { #Expedition inland
+	
+	id = FRAEconomy.7
+	title = FRAEconomy.7.t
+	desc = FRAEconomy.7.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = FRAEconomy.7.a 
+		add_political_power = 50
+	}
+}
+
+country_event = { #Angry neighbour
+	id = FRARealmevents.2
+	title = FRARealmevents.2.t
+	desc = FRARealmevents.2.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRARealmevents.2.a 
+		add_stability = 0.1
+		add_war_support = 0.05
+		add_political_power = 25
+	}
+}
+
+country_event = { #Meeting with Duke of Aquitaine
+	id = FRACentralized.1
+	title = FRACentralized.1.t
+	desc = FRACentralized.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		#With Him
+		name = FRACentralized.1.a 
+		complete_national_focus = FRA_with_him
+	}
+	option = {
+		#With Him
+		name = FRACentralized.1.b
+		complete_national_focus = FRA_without_him
+	}
+}
+
+country_event = { #Still Time for Diplomacy
+	id = FRACentralized.2
+	title = FRACentralized.2.t
+	desc = FRACentralized.2.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		#Agree
+		name = FRACentralized.2.a 
+		ai_chance = { factor = 10 }
+		FRA = { country_event = FRACentralized.3 }
+	}
+	option = {
+		#Too Far Gone
+		name = FRACentralized.2.b
+		ai_chance = { factor = 90 }
+		FRA = { country_event = FRACentralized.4 }
+	}
+}
+
+country_event = { #Still Time for Diplomacy - Agree
+	id = FRACentralized.3
+	title = FRACentralized.3.t
+	desc = FRACentralized.3.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		#Agree
+		name = FRACentralized.3.a 
+		clr_global_flag = fra_noble_revolt
+		white_peace = FROM
+		remove_ideas = fra_offensive_measures1
+		remove_ideas = fra_offensive_measures
+		every_country = {
+			LIMIT = { OR = { tag = FROM is_in_faction_with = FROM} }
+			every_owned_state = {
+				LIMIT = { is_core_of = FRA }
+				FRA = {
+					transfer_state = PREV
+				}
+			}
+		}
+		add_political_power = -200
+	}
+}
+
+country_event = { #Still Time for Diplomacy - Too Far Gone
+	id = FRACentralized.4
+	title = FRACentralized.4.t
+	desc = FRACentralized.4.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		#Too Far Gone
+		name = FRACentralized.4.a 
+	}
+}
+
+country_event = { 
+	id = FRANobleRevolt.1
+	title = FRANobleRevolt.1.t
+	desc = FRANobleRevolt.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRANobleRevolt.1.a 
+		random_state = { 
+			limit = { 
+				is_owned_and_controlled_by = ROOT 
+				is_in_home_area = yes
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_state = { 
+			limit = { 
+				is_owned_and_controlled_by = ROOT 
+				is_in_home_area = yes
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+country_event = { #France Wins
+	id = FRADecentralizedInterventionist.1
+	title = FRADecentralizedInterventionist.1.t
+	desc = FRADecentralizedInterventionist.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+		tag = FRA
+		has_war_with = SIA
+		has_country_flag = indochinese_war	
+		SIA = { 
+			surrender_progress > 0.15
+		}
+	}
+		
+	fire_only_once = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.1.a 
+		FRA = {
+			white_peace = SIA
+			transfer_state = 890
+			clr_country_flag = indochinese_war	
+		}
+		SIA = {
+			add_stability = -0.05
+		}
+	}
+}
+
+country_event = { #Siam Wins
+	id = FRADecentralizedInterventionist.2
+	title = FRADecentralizedInterventionist.2.t
+	desc = FRADecentralizedInterventionist.2.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+		tag = FRA
+		has_war_with = SIA
+		has_country_flag = indochinese_war	
+		SIA = { 
+			has_full_control_of_state = 890
+		}
+	}
+		
+	fire_only_once = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.2.a 
+		FRA = {
+			set_temp_variable = { noble_support_temp = -0.1 }
+			FRA_noble_support = yes
+			white_peace = SIA
+			clr_country_flag = indochinese_war	
+			set_country_flag = indochinese_war_lost	
+		}
+		SIA = {
+			country_event = FRADecentralizedInterventionist.3
+		}
+	}
+}
+
+country_event = { #Siam Wins
+	id = FRADecentralizedInterventionist.3
+	title = FRADecentralizedInterventionist.3.t
+	desc = FRADecentralizedInterventionist.3.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.3.a 
+		add_stability = 0.05
+	}
+}
+
+country_event = { #Eyes on Indochina
+	id = FRADecentralizedInterventionist.4
+	title = FRADecentralizedInterventionist.4.t
+	desc = FRADecentralizedInterventionist.4.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.4.a 
+	}
+}
+
+country_event = { #India Plan
+	id = FRADecentralizedInterventionist.5
+	title = FRADecentralizedInterventionist.5.t
+	desc = FRADecentralizedInterventionist.5.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.5.a 
+		complete_national_focus = FRA_colony_of_caroline
+	}
+	
+	option = {
+		name = FRADecentralizedInterventionist.5.b
+		complete_national_focus = FRA_colony_of_raj
+	}
+}
+
+country_event = { #Purchase Portuguese Territory
+	id = FRADecentralizedInterventionist.6
+	title = FRADecentralizedInterventionist.6.t
+	desc = FRADecentralizedInterventionist.6.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.6.a 
+		ai_chance = { factor = 60 }
+		if = {
+			LIMIT = {
+				IND = { NOT = { has_cosmetic_tag = IND_FRA_CAR } }
+			}
+			IND = { add_state_core = 423 }
+		}
+		IND = { transfer_state = 423 }
+		FRA = {
+			country_event = FRADecentralizedInterventionist.7
+		}
+	}
+	
+	option = {
+		name = FRADecentralizedInterventionist.6.b
+		ai_chance = { factor = 40 }
+		FRA = {
+			country_event = FRADecentralizedInterventionist.8
+		}
+	}
+}
+
+country_event = { #Purchase Portuguese Territory - success
+	id = FRADecentralizedInterventionist.7
+	title = FRADecentralizedInterventionist.7.t
+	desc = FRADecentralizedInterventionist.7.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.7.a 
+		add_timed_idea = {
+			idea = fra_sale_of_mudurai
+			days = 730
+		}
+		POR = {
+			add_timed_idea = {
+				idea = fra_sale_of_mudurai_por
+				days = 730
+			}
+		}
+	}
+}
+
+country_event = { #Purchase Portuguese Territory - failure
+	id = FRADecentralizedInterventionist.8
+	title = FRADecentralizedInterventionist.8.t
+	desc = FRADecentralizedInterventionist.8.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.8.a 
+	}
+}
+
+country_event = { #French Cooperation
+	id = FRADecentralizedInterventionist.9
+	title = FRADecentralizedInterventionist.9.t
+	desc = FRADecentralizedInterventionist.9.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.6.a 
+		ai_chance = { factor = 80 }
+		FRA = {
+			country_event = FRADecentralizedInterventionist.10
+		}
+	}
+	
+	option = {
+		name = FRADecentralizedInterventionist.6.b
+		ai_chance = { factor = 20 }
+		FRA = {
+			country_event = FRADecentralizedInterventionist.11
+		}
+	}
+}
+
+country_event = { #French Cooperation - Accepted
+	id = FRADecentralizedInterventionist.10
+	title = FRADecentralizedInterventionist.10.t
+	desc = FRADecentralizedInterventionist.10.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.10.a 
+		set_autonomy = {
+			target = MYS
+			autonomy_state =  autonomy_colony
+		}
+	}
+}
+
+country_event = { #French Cooperation - Failure
+	id = FRADecentralizedInterventionist.11
+	title = FRADecentralizedInterventionist.11.t
+	desc = FRADecentralizedInterventionist.11.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.11.a 
+	}
+}
+
+country_event = { #Talks with Portugal
+	id = FRADecentralizedInterventionist.12
+	title = FRADecentralizedInterventionist.12.t
+	desc = FRADecentralizedInterventionist.12.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.12.a 
+	}
+}
+
+country_event = { #Anti-English Sentiment
+	id = FRADecentralizedInterventionist.13
+	title = FRADecentralizedInterventionist.13.t
+	desc = FRADecentralizedInterventionist.13.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.13.a 
+		add_opinion_modifier = {
+			target = ENG
+			modifier = FRA_anti_english_sentiment
+		}
+		ENG = {
+			add_opinion_modifier = {
+			target = FRA
+			modifier = FRA_anti_french_sentiment
+			}
+		}
+	}
+}
+
+country_event = { #Scottish Ally
+	id = FRADecentralizedInterventionist.14
+	title = FRADecentralizedInterventionist.14.t
+	desc = FRADecentralizedInterventionist.14.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.14.a 
+	}
+}
+
+country_event = { #Scotland accepts or denies French support
+	id = FRADecentralizedInterventionist.15
+	title = FRADecentralizedInterventionist.15.t
+	desc = FRADecentralizedInterventionist.15.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.15.a 
+		ai_chance = { factor = 95 }
+		ENG = {
+			add_opinion_modifier = {
+				target = SCO
+				modifier = SCO_FRA_support
+			}
+		}
+		IRE = {
+			add_opinion_modifier = {
+				target = SCO
+				modifier = SCO_FRA_support
+			}
+		}
+	}
+	
+	option = {
+		name = FRADecentralizedInterventionist.15.b
+		ai_chance = { factor = 5 }
+		FRA = {
+			set_country_flag = FRA_SCO_diplomacy_ended
+		}
+	}
+}
+
+country_event = { #Scotland accepts or denies the Cherbourg Agreement
+	id = FRADecentralizedInterventionist.16
+	title = FRADecentralizedInterventionist.16.t
+	desc = FRADecentralizedInterventionist.16.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.16.a 
+		ai_chance = { factor = 80 }
+		add_ideas = sco_cherbourg_agreement
+		FRA = {
+			add_ideas = fra_cherbourg_agreement
+		}
+		ENG = {
+			add_opinion_modifier = {
+				target = SCO
+				modifier = SCO_FRA_cherbourg_agreement
+			}
+		}
+		IRE = {
+			add_opinion_modifier = {
+				target = SCO
+				modifier = SCO_FRA_cherbourg_agreement
+			}
+		}
+	}
+	
+	option = {
+		name = FRADecentralizedInterventionist.16.b
+		ai_chance = { factor = 20 }
+		FRA = {
+			set_country_flag = FRA_SCO_diplomacy_ended
+		}
+	}
+}
+
+country_event = { #Anti-English Sentiment
+	id = FRADecentralizedInterventionist.17
+	title = FRADecentralizedInterventionist.17.t
+	desc = FRADecentralizedInterventionist.17.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.17.a 
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 0.5
+			uses = 1
+			category = industry
+		}
+		SCO = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+}
+
+country_event = { #Golden Age
+	id = FRADecentralizedInterventionist.18
+	title = FRADecentralizedInterventionist.18.t
+	desc = FRADecentralizedInterventionist.18.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.18.a 
+		add_ideas = fra_golden_age
+		set_country_flag = FRA_golden_age
+	}
+}
+
+country_event = { #Spain Assessment
+	id = FRADecentralizedInterventionist.19
+	title = FRADecentralizedInterventionist.19.t
+	desc = FRADecentralizedInterventionist.19.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.19.a 
+		add_stability = 0.05
+	}
+}
+
+country_event = { #Habsburgs
+	id = FRADecentralizedInterventionist.20
+	title = FRADecentralizedInterventionist.20.t
+	desc = FRADecentralizedInterventionist.20.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.20.a 
+	}
+}
+
+country_event = { #Pfalz
+	id = FRADecentralizedInterventionist.21
+	title = FRADecentralizedInterventionist.21.t
+	desc = FRADecentralizedInterventionist.21.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.21.a 
+		807 = {
+			add_claim_by = FRA
+		}
+	}
+}
+
+country_event = { #Sardinia
+	id = FRADecentralizedInterventionist.22
+	title = FRADecentralizedInterventionist.22.t
+	desc = FRADecentralizedInterventionist.22.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.22.a 
+		114 = {
+			add_claim_by = FRA
+		}
+	}
+}
+
+country_event = { #Rosellon Diplomacy
+	id = FRADecentralizedInterventionist.23
+	title = FRADecentralizedInterventionist.23.t
+	desc = FRADecentralizedInterventionist.23.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.23.a 
+		ai_chance = { factor = 40 }
+		FRA = { 
+			add_state_core = 793
+			transfer_state = 793
+			diplomatic_relation = {
+				country = ROOT
+				relation = guarantee
+				active = yes
+			}
+		}
+	}
+	
+	option = {
+		name = FRADecentralizedInterventionist.23.b
+		ai_chance = { factor = 60 }
+		793 = {
+			add_claim_by = FRA
+		}
+	}
+}
+
+country_event = { #Absolutists Down South
+	id = FRADecentralizedInterventionist.24
+	title = FRADecentralizedInterventionist.24.t
+	desc = FRADecentralizedInterventionist.24.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.24.a 
+		add_war_support = 0.025
+	}
+}
+
+country_event = { #Absolutists Down South
+	id = FRADecentralizedInterventionist.25
+	title = FRADecentralizedInterventionist.25.t
+	desc = FRADecentralizedInterventionist.25.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.25.a 
+		922 = {
+			add_building_construction = {
+				type = bunker
+				level = 1
+				instant_build = yes
+				province = 13269
+			}
+		}
+		19 = {
+			add_building_construction = {
+				type = bunker
+				level = 1
+				instant_build = yes
+				province = 743
+			}
+		}
+	}
+}
+
+country_event = { #1851
+	id = FRADecentralizedInterventionist.26
+	title = FRADecentralizedInterventionist.26.t
+	desc = FRADecentralizedInterventionist.26.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.26.a 
+		ai_chance = { factor = 60 }
+		trigger = { POR = {  is_in_faction = no NOT = { has_country_flag = SPR_flag_accepted_alliance } } }
+		if = { 
+			LIMIT = {
+				is_in_faction = no
+			}
+			create_faction = FRA_ENTENTE_ALLIANCE_FACTION
+		}
+		add_to_faction = POR
+	}
+	
+	option = {
+		name = FRADecentralizedInterventionist.26.b
+		ai_chance = { factor = 40 }
+		custom_effect_tooltip = FRA_SPANISH_COLONIAL_INTERVENTION
+	}
+}
+
+country_event = { #Rosellon
+	id = FRADecentralizedInterventionist.27
+	title = FRADecentralizedInterventionist.27.t
+	desc = FRADecentralizedInterventionist.27.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.27.a 
+		793 = {
+			add_claim_by = FRA
+		}
+	}
+}
+
+country_event = { #Scotland Accepts our Alliance
+	id = FRADecentralizedInterventionist.28
+	title = FRADecentralizedInterventionist.28.t
+	desc = FRADecentralizedInterventionist.28.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.28.a 
+	}
+}
+
+country_event = { #Scotland Denies our Alliance
+	id = FRADecentralizedInterventionist.29
+	title = FRADecentralizedInterventionist.29.t
+	desc = FRADecentralizedInterventionist.29.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRADecentralizedInterventionist.29.a 
+		add_war_support = -0.03
+		add_political_power = 25
+	}
+	
+	option = {
+		name = FRADecentralizedInterventionist.29.b
+		add_war_support = 0.03
+		add_political_power = -25
+	}
+}
+
+country_event = { #Northern Border Situation
+	id = FRASpanishWar.1
+	title = FRASpanishWar.1.t
+	desc = FRASpanishWar.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRASpanishWar.1.a 
+	}
+}
+
+country_event = { #Southern Border Situation
+	id = FRASpanishWar.2
+	title = FRASpanishWar.2.t
+	desc = FRASpanishWar.2.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRASpanishWar.2.a 
+	}
+}
+
+country_event = { #Spanish Embarrassment
+	id = FRASpanishWar.3
+	title = FRASpanishWar.3.t
+	desc = FRASpanishWar.3.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRASpanishWar.3.a 
+	}
+}
+
+country_event = { #A New Approach
+	id = FRASpanishWar.4
+	title = FRASpanishWar.4.t
+	desc = FRASpanishWar.4.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRASpanishWar.4.a 
+	}
+}
+
+country_event = { #The Franco-Spanish War
+	id = FRASpanishWar.5
+	title = FRASpanishWar.5.t
+	desc = FRASpanishWar.5.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRASpanishWar.5.a 
+	}
+}
+
+country_event = { #France's Strategy
+	id = FRASpanishWar.6
+	title = FRASpanishWar.6.t
+	desc = FRASpanishWar.6.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRASpanishWar.6.a 
+		trigger = {
+			POR = {
+				OR ={
+					is_in_faction = no
+					is_in_faction_with = FRA
+				}
+			}
+		}
+		add_political_power = -25
+		POR = {
+			country_event = FRASpanishWar.7
+		}
+	}
+	option = {
+		name = FRASpanishWar.6.a 
+		complete_national_focus = FRA_is_dissent_from_within
+	}
+}
+
+country_event = { #Portugal's Decision
+	id = FRASpanishWar.7
+	title = FRASpanishWar.7.t
+	desc = FRASpanishWar.7.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRASpanishWar.7.a 
+		ai_chance = { factor = 60 }
+		FRA = { country_event = FRASpanishWar.8 }
+	}
+	option = {
+		name = FRASpanishWar.7.b
+		trigger = {
+			is_in_faction = no
+		}
+		ai_chance = { factor = 40 }
+		FRA = { country_event = FRASpanishWar.9 }
+	}
+}
+
+country_event = { #Portugal Accepts
+	id = FRASpanishWar.8
+	title = FRASpanishWar.8.t
+	desc = FRASpanishWar.8.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRASpanishWar.8.a 
+		complete_national_focus = FRA_is_the_portuguese
+		if = { 
+			LIMIT = {
+				is_in_faction = no
+			}
+			create_faction = FRA_ENTENTE_ALLIANCE_FACTION
+		}
+		add_to_faction = POR
+	}
+}
+
+country_event = { #Portugal Denies
+	id = FRASpanishWar.9
+	title = FRASpanishWar.9.t
+	desc = FRASpanishWar.9.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRASpanishWar.9.a 
+		complete_national_focus = FRA_is_dissent_from_within
+	}
+}
+
+country_event = { #Arm Shipments
+	id = FRASpanishWar.10
+	title = FRASpanishWar.10.t
+	desc = FRASpanishWar.10.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRASpanishWar.10.a 
+		add_stability = 0.1
+		add_war_support = -0.025
+		add_political_power = -50
+	}
+}
+
+country_event = { #Arm Shipments - East
+	id = FRASpanishWar.11
+	title = FRASpanishWar.11.t
+	desc = FRASpanishWar.11.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRASpanishWar.11.a 
+		SPE = {
+			add_stability = -0.1
+			add_war_support = -0.1
+			add_political_power = -50
+		}
+	}
+}
+
+country_event = { #Arm Shipments - West
+	id = FRASpanishWar.12
+	title = FRASpanishWar.12.t
+	desc = FRASpanishWar.12.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRASpanishWar.11.a 
+		SPW = {
+			if = {
+				LIMIT = { CUB = { exists = yes } }
+				add_stability = -0.05
+				add_war_support = -0.05
+				add_political_power = -25
+			}
+			else = {
+				add_stability = -0.15
+				add_war_support = -0.15
+				add_political_power = -75
+			}
+		}
+	}
+}
+
+country_event = { #Arm Shipments - Yucatan
+	id = FRASpanishWar.13
+	title = FRASpanishWar.13.t
+	desc = FRASpanishWar.13.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FRASpanishWar.13.a 
+		YUC = {
+			white_peace = FRA
+			start_civil_war = {
+				ideology = conservative
+				size = 0.1
+			}
+			every_country = {
+				LIMIT = { original_tag = PREV }
+				add_manpower = 10000
+					if = {
+					limit = {
+						NOT = { has_country_flag = melee_merc }
+					}
+					set_country_flag = melee_merc
+					load_oob = "unlock_melee_mercs"
+				}
+				random_state = { 
+					limit = { 
+						is_owned_and_controlled_by = PREV 
+					}
+					create_unit = {
+						division = "division_template = \"Melee Mercenaries\" start_experience_factor = 0.3" 
+						owner = PREV
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+		}
+	}
+}

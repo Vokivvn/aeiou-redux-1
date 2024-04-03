@@ -1,0 +1,23 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				
+				set_variable = { hog_name = 0 }
+				set_variable = { hog_surname = 0 }
+				set_variable = { hog_desc = 0 }
+				set_variable = { hog_portrait = 0 }
+				LIMIT = {
+					check_variable = { hog_title < 1 }
+				}
+				set_variable = { hog_party = 0 }
+				set_variable = { hog_loyalty = 0 }
+				set_variable = { hog_exp = 0}	
+				set_variable = { hog_political_skill = 0}
+				set_variable = { hog_unity_skill = 0}
+				set_variable = { hog_industrial_skill = 0}
+				set_variable = { hog_military_skill = 0}
+			}
+		}
+	}
+}

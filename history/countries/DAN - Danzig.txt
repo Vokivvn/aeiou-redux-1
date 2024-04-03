@@ -1,0 +1,34 @@
+capital = 85
+
+
+set_research_slots = 3
+
+
+
+# Starting tech
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+	melee = 1
+	basic_cavalry = 1
+	melee_improvements = 1
+}
+
+add_ideas = {
+}
+	
+
+set_convoys = 800
+
+# DIPLOMACY
+
+set_politics = {
+	ruling_party = conservative
+	elections_allowed = no
+}
+set_popularities = {
+	conservative = 100
+}
+
+
+add_to_array = { national_religion_array =  2 }	

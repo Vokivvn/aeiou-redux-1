@@ -1,0 +1,28 @@
+﻿capital = 271
+
+#oob = "ETH_1886"
+
+# Starting tech
+set_technology = {
+	muskets0 = 1
+}
+
+set_convoys = 5
+
+set_politics = {
+	ruling_party = absolutist
+	elections_allowed = no
+}
+set_popularities = {
+	absolutist = 100
+}
+
+add_to_array = { national_religion_array =  4 }
+
+create_country_leader = {
+	name = "Menelik II"
+	desc = "POLITICS_MENELIK_II_DESC"
+	picture = "Portrait_ETH_Menelik_II.dds"
+	expire = "1965.1.1"
+	ideology = absolutist_moderate
+}

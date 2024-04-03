@@ -1,0 +1,23 @@
+
+state={
+	id=893
+	name="STATE_893" 
+	manpower = 5472
+	resources={
+		wood=2
+	}
+	
+	state_category = rural
+
+	history={
+		owner = HTS
+		add_core_of = HTS
+		buildings = {
+			infrastructure = 2
+		}
+	}
+
+	provinces={
+	   7771 1875 3750 4839 12566 6722
+	}
+}

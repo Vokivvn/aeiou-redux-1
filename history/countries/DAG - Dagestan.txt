@@ -1,0 +1,22 @@
+﻿capital = 832
+
+#oob = "DAG_1886"
+
+set_research_slots = 3
+
+set_politics = {
+	ruling_party = absolutist
+	elections_allowed = no
+}
+set_popularities = {
+	absolutist = 100
+}
+
+add_to_array = { national_religion_array =  8 }
+
+create_country_leader = {
+	name = "Jammaludin Imam"
+	desc = "DAG_LEADER_DESC_JAMMALUDIN"
+	picture = "Portrait_DAG_Jammaludin.dds"
+	ideology = absolutist_moderate
+}

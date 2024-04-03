@@ -1,0 +1,29 @@
+
+state={
+	id=512
+	name="STATE_512"
+	manpower = 498018
+	
+	state_category = rural
+	
+	resources={
+		horses=5 
+		wood=1
+		fabric=3
+	}
+
+	history={
+		owner = NPG
+		buildings = {
+			infrastructure = 2
+			10953 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = NPG
+	}
+
+	provinces={
+		2149 2199 8161 8176 8192 10935 10953 10981 11005 12306 12321 12349 12494 12982 12920 5121 8251 5219 2215 12998 11021
+	}
+}

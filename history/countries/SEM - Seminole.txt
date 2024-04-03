@@ -1,0 +1,39 @@
+﻿capital = 800
+
+#oob = "BEL_1936"
+
+set_research_slots = 2
+set_stability = 0.5
+set_war_support = 0.8
+
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+
+	trench_warfare = 1
+	fuel_silos = 1
+	fuel_refining = 1
+}
+
+set_politics = {
+	ruling_party = apolitical
+	elections_allowed = no
+}
+
+set_popularities = {
+	apolitical = 100
+}
+
+set_convoys = 80
+
+create_country_leader = {
+	name = "Hulputta Micco"
+	desc = "POLITICS_HULPUTTA_MICCO_DESC"
+	picture = "Portrait_SEM_Hulputta_Micco.dds"
+	expire = "1905.1.1"
+	ideology = apolitical_sub
+}
+add_to_array = { national_religion_array =  2 }

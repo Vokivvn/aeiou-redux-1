@@ -1,0 +1,30 @@
+
+state={
+	id=845
+	name="STATE_845" 
+	manpower = 50000
+	resources={
+		
+	}
+	
+	state_category = town
+
+	history={
+		owner = POI
+		add_core_of = POI
+		buildings = {
+			7265 = {
+				naval_base = 2
+			}
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		victory_points = {
+			7265 1
+		}		
+	}
+
+	provinces={
+		7265
+	}
+}

@@ -1,0 +1,539 @@
+# focus = { 
+    # id = generic_black_year_of_the_conservatives
+    # icon = GFX_goal_support_democracy
+    # cost = 10
+	
+    # available = {
+	    # OR = {
+            # has_government = conservative 
+			# has_government = oligarchic 
+			# has_government = free_city
+		# }
+    # }
+
+    # x = 13
+    # y = 1
+    # completion_reward = {
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_black_year_of_the_conservatives"
+    # }
+# }
+
+# focus = {
+    # id = generic_support_citizens
+    # icon = GFX_goal_generic_national_unity
+    # cost = 10
+    # prerequisite = { focus = generic_black_year_of_the_conservatives }
+    # relative_position_id = generic_black_year_of_the_conservatives
+    # x = 1
+    # y = 1
+    # completion_reward = {
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_support_citizens"
+    # }
+# }        
+
+# focus = {
+    # id = generic_support_armies
+    # icon = GFX_goal_generic_military_sphere
+    # cost = 10
+    # prerequisite = { focus = generic_black_year_of_the_conservatives }
+    # relative_position_id = generic_black_year_of_the_conservatives
+    # x = -1
+    # y = 1
+    # completion_reward = {
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_support_armies"
+    # }
+# } 
+
+# focus = {
+    # id = generic_renovation_or_death
+    #icon = 
+    # cost = 10
+    # prerequisite = { focus = generic_support_citizens }
+    # prerequisite = { focus = generic_support_armies }
+    # relative_position_id = generic_support_citizens
+    # x = -1
+    # y = 1
+	
+    # completion_reward = {
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_renovation_or_death"
+        # add_political_power = 50
+        # add_ideas = generic_idea_renovation_or_death
+    # }
+# }
+
+# focus = {
+    # id = generic_strengthen_the_trade_routes
+    # icon = GFX_goal_generic_trade
+    # cost = 10
+    # prerequisite = { focus = generic_renovation_or_death }
+    # relative_position_id = generic_renovation_or_death
+    # x = -2
+    # y = 1
+	
+    # completion_reward = {
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_strengthen_the_trade_routes"
+        # swap_ideas = {
+            # add_idea = generic_idea_renovation_or_death1
+            # remove_idea = generic_idea_renovation_or_death
+        # }
+    # }
+# }
+
+# focus = {
+    # id = generic_purge_inefficient_bureaucrats
+    # icon = GFX_focus_generic_self_management
+    # cost = 10
+    # prerequisite = { focus = generic_renovation_or_death } 
+    # relative_position_id = generic_renovation_or_death
+    # x = 0
+    # y = 1
+	
+    # completion_reward = {
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_purge_inefficient_bureaucrats"
+    # }
+# }
+
+# focus = {
+    # id = generic_fight_corruption
+    # icon = GFX_goal_generic_forceful_treaty
+    # cost = 10
+    # prerequisite = { focus = generic_renovation_or_death }
+    # relative_position_id = generic_renovation_or_death
+    # x = 2
+    # y = 1
+	
+    # completion_reward = {
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_fight_corruption"
+    # }
+# }
+
+# focus = {
+    # id = generic_support_patricians
+    #icon = 
+    # cost = 10
+    # mutually_exclusive = { focus = generic_support_plebeians }
+    # prerequisite = { focus = generic_strengthen_the_trade_routes }
+	# prerequisite = { focus = generic_purge_inefficient_bureaucrats }
+	# prerequisite = { focus = generic_fight_corruption }
+    # relative_position_id = generic_renovation_or_death
+    # x = -2
+    # y = 2
+	
+    # completion_reward = {
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_support_patricians"
+    # }
+# }
+ 
+# focus = {
+    # id = generic_support_plebeians
+    #icon = 
+    # cost = 10
+	# mutually_exclusive = { focus = generic_support_patricians }
+    # prerequisite = { focus = generic_strengthen_the_trade_routes }
+	# prerequisite = { focus = generic_purge_inefficient_bureaucrats }
+	# prerequisite = { focus = generic_fight_corruption }
+    # relative_position_id = generic_renovation_or_death
+    # x = 2
+    # y = 2
+	
+    # completion_reward = {
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_support_plebeians"
+    # }
+# }
+
+ 
+# focus = {
+    # id = generic_extend_suffrage
+    #icon = 
+    # cost = 10
+    # prerequisite = { focus = generic_support_plebeians }
+    # relative_position_id = generic_renovation_or_death
+    # x = 3
+    # y = 3
+    # completion_reward = {
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_extend_suffrage"
+    # }
+# }
+
+# focus = {
+    # id = generic_land_redistribution
+    #icon = 
+    # cost = 10
+    # prerequisite = { focus = generic_support_plebeians }
+    # relative_position_id = generic_renovation_or_death
+    # x = 1
+    # y = 3
+    # completion_reward = {
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_land_redistribution"
+    # }
+# }
+
+# focus = {
+    # id = generic_oligarchic_families
+    #icon = 
+    # cost = 10
+    # prerequisite = { focus = generic_support_patricians }
+    # relative_position_id = generic_renovation_or_death
+    # x = -3
+    # y = 3
+    # completion_reward = {
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_strongmen_in_country"
+    # }
+# }  
+
+# focus = {
+    # id = generic_only_rich_vote 
+    #icon = 
+    # cost = 10 
+    # prerequisite = { focus = generic_support_patricians }
+    # relative_position_id = generic_renovation_or_death
+    # x = -1
+    # y = 3
+    # completion_reward = { 
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_strongmen_in_country"
+    # }
+# }
+
+# focus = {
+    # id = generic_abolish_nobility_titles
+    #icon = 
+    # cost = 10 
+    # prerequisite = { focus = generic_land_redistribution }
+    # relative_position_id = generic_renovation_or_death
+    # x = 1
+    # y = 4
+    # completion_reward = { 
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_abolish_nobility_titles"
+    # }
+# }
+
+# focus = {
+    # id = generic_equal_taxation
+    # icon = 
+    # cost = 10 
+    # prerequisite = { focus = generic_extend_suffrage }
+    # relative_position_id = generic_renovation_or_death
+    # x = 3
+    # y = 4
+    # completion_reward = { 
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_equal_taxation"
+    # }
+# }
+
+# focus = {
+    # id = generic_revise_laws
+    # icon = 
+    # cost = 10 
+    # prerequisite = { focus = generic_only_rich_vote }
+    # relative_position_id = generic_renovation_or_death
+    # x = -1
+    # y = 4
+    # completion_reward = { 
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_revise_laws"
+    # }
+# }
+
+
+# focus = {
+    # id = generic_the_new_nobility
+    # icon = 
+    # cost = 10 
+    # prerequisite = { focus = generic_oligarchic_families }
+    # relative_position_id = generic_renovation_or_death
+    # x = -3
+    # y = 4
+    # completion_reward = { 
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_the_new_nobility"
+    # }
+# }
+
+
+# focus = {
+    # id = generic_civic_revolution
+    # icon = 
+    # cost = 10
+    # prerequisite = { focus = generic_the_new_nobility focus = generic_abolish_nobility_titles }
+	# prerequisite = { focus = generic_revise_laws focus = generic_equal_taxation }
+    # relative_position_id = generic_renovation_or_death
+    # x = 0
+    # y = 5
+    # completion_reward = {
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_civic_revolution"
+    # }
+# } 
+
+##################
+#MONARCHY BRANCH #
+##################
+
+# focus = {
+    # id = generic_absolutistisms_stand
+    # icon = GFX_focus_generic_absolutistisms_stand
+    # cost = 10
+
+    # x = 4
+    # y = 1
+	
+	# available = {
+	    # NOT = {
+	        # OR = {
+                # has_government = conservative 
+		    	# has_government = oligarchic 
+		    	# has_government = free_city
+		    # }
+		# }
+	# }
+	
+	
+    # completion_reward = {
+       # log = "[GetDateText]: [Root.GetName]: Focus generic_absolutistisms_stand"
+       # add_political_power = 150
+    # }
+# }
+
+# focus = {
+    # id = generic_winds_of_change
+    # icon =  
+    # cost = 10
+    # prerequisite = { focus = generic_absolutistisms_stand }
+    # relative_position_id = generic_absolutistisms_stand 
+    # x = -2
+    # y = 1
+    # mutually_exclusive = {
+       # focus = generic_the_old_is_new_again
+    # }
+    # completion_reward = {
+       # log = "[GetDateText]: [Root.GetName]: Focus generic_winds_of_change"
+       # add_stability = -0.1
+       # add_ideas = generic_idea_winds_of_change
+    # }
+# }
+
+# focus = {
+    # id = generic_the_old_is_new_again
+    # icon = GFX_focus_generic_the_old_is_new_again
+    # cost = 10
+    # prerequisite = { focus = generic_absolutistisms_stand }
+    # relative_position_id = generic_absolutistisms_stand
+    # x = 2
+    # y = 1
+    # mutually_exclusive = {
+        # focus = generic_winds_of_change
+    # }
+    # completion_reward = {
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_the_old_is_new_again"
+        # add_ideas = generic_idea_renovated_absolutism
+    # }
+# }
+
+# focus = {
+    # id = generic_revolutionary_sentiment
+    # icon = GFX_focus_generic_revolutionary_sentiment
+    # cost = 10
+    # prerequisite = { focus = generic_winds_of_change }
+    # relative_position_id = generic_winds_of_change
+    # x = -1
+    # y = 1
+    # mutually_exclusive = { focus = generic_distribution_of_powers }
+	
+    # completion_reward = {
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_revolutionary_sentiment"
+        # add_stability = -0.1
+        # add_war_support = 0.1
+        # swap_ideas = {
+            # add_idea = generic_idea_winds_of_change1
+            # remove_idea = generic_idea_winds_of_change
+        # }
+    # }
+# }
+
+# focus = {
+    # id = generic_distribution_of_powers
+    # icon = GFX_focus_generic_redistribution_of_powers
+    # cost = 10
+    # prerequisite = { focus = generic_winds_of_change }
+    # relative_position_id = generic_winds_of_change
+    # x = 1
+    # y = 1
+	# mutually_exclusive = { focus = generic_revolutionary_sentiment }
+	
+    # completion_reward = {
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_distribution_of_powers"
+        # add_political_power = 50
+        # swap_ideas = {
+            # add_idea = generic_idea_winds_of_change2
+            # remove_idea = generic_idea_winds_of_change
+        # }
+    # }
+# }
+
+# focus = {
+    # id = generic_outlaw_revolutionary_ideas
+    # icon = 
+    # cost = 10
+    # prerequisite = { focus = generic_the_old_is_new_again }
+    # relative_position_id = generic_the_old_is_new_again
+    # x = 0
+    # y = 1
+    # completion_reward = {
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_outlaw_revolutionary_ideas"
+        # add_stability = -0.04
+    # }
+# }
+
+# focus = {
+    # id = generic_down_with_the_estates
+    # icon = 
+    # cost = 10
+    # prerequisite = { focus = generic_revolutionary_sentiment }
+    # relative_position_id = generic_revolutionary_sentiment
+    # x = 0
+    # y = 1
+    # completion_reward = {
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_down_with_the_estates"
+        # hidden_effect = {
+            # random_list = {
+                # 25 = {
+                    # set_politics = { ruling_party = oligarchic }
+                # }
+                # 25 = {
+                    # set_politics = { ruling_party = socialist }
+                # }
+                # 25 = {
+                    # set_politics = { ruling_party = conservative }
+                # }
+                # 25 = {
+                    # set_politics = { ruling_party = revolutionary }
+                # }
+            # }
+        # }
+    # }
+# }
+
+# focus = {
+    # id = generic_the_first_constitution
+    # icon = 
+    # cost = 10
+    # prerequisite = { focus = generic_distribution_of_powers }
+    # relative_position_id = generic_distribution_of_powers
+    # x = 0
+    # y = 1
+    # completion_reward = {
+        # log = "[GetDateText]: [Root.GetName]: Focus focus_name"
+        #also add a tech bonus
+        # add_political_power = 50
+    # }
+# }
+
+# focus = {
+    # id = generic_renew_noble_customs
+    # icon = 
+    # cost = 10
+    # prerequisite = { focus = generic_outlaw_revolutionary_ideas }
+    # relative_position_id = generic_outlaw_revolutionary_ideas
+    # x = 0
+    # y = 1
+    # completion_reward = {
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_renew_noble_customs"
+        # add_stability = 0.05
+    # }
+# }
+
+# focus = {
+    # id = generic_cult_of_the_monarch
+    # icon = 
+    # cost = 10
+    # prerequisite = { focus = generic_outlaw_revolutionary_ideas }
+    # relative_position_id = generic_outlaw_revolutionary_ideas
+    # x = 2
+    # y = 1
+    # completion_reward = {
+        # log = "[GetDateText]: [Root.GetName]: Focus focus_name"
+        # add_political_power = 50
+        # add_war_support = 0.05
+    # }
+# }
+
+# focus = {
+    # id = generic_dream_of_liberalism
+    # icon = 
+    # cost = 10
+    # prerequisite = { focus = generic_down_with_the_estates }
+    # relative_position_id = generic_down_with_the_estates
+    # x = 0
+    # y = 1
+    # completion_reward = {
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_dream_of_liberalism"
+        # swap_ideas = {
+            # add_idea = generic_idea_dreams_of_liberalism
+            # remove_idea = generic_idea_winds_of_change1
+        # }
+    # }
+# }
+
+# focus = {
+    # id = generic_peace_for_our_time
+    # icon = 
+    # cost = 10
+    # prerequisite = { focus = generic_the_first_constitution }
+    # relative_position_id = generic_the_first_constitution
+    # x = 0
+    # y = 1
+    # completion_reward = {
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_peace_for_our_time"
+        # swap_ideas = {
+            # add_idea = generic_idea_stabilized_liberties
+            # remove_idea = generic_idea_winds_of_change2
+        # }
+    # }
+# }
+
+# focus = {
+    # id = generic_absolutist_corporationism
+    # icon = 
+    # cost = 10
+    # prerequisite = { focus = generic_renew_noble_customs }
+    # relative_position_id = generic_renew_noble_customs
+    # x = 0
+    # y = 1
+    # completion_reward = {
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_absolutist_corporationism"
+        # add_timed_idea = { idea = generic_idea_absolutist_corporationism days = 1000 }
+        # swap_ideas = {
+            # add_idea = generic_idea_renovated_absolutism1
+            # remove_idea = generic_idea_renovated_absolutism
+        # }
+    # }
+# }
+
+# focus = {
+    # id = generic_a_content_populace
+    # icon = 
+    # cost = 10
+    # prerequisite = {
+        # focus = generic_dream_of_liberalism
+        # focus = generic_peace_for_our_time
+    # }
+    # relative_position_id = generic_dream_of_liberalism
+    # x = 1
+    # y = 1
+    # completion_reward = {
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_a_content_populace"
+        # add_political_power = 100
+    # }
+# }
+
+# focus = {
+    # id = generic_thriving_absolutism
+    # icon = 
+    # cost = 10
+    # prerequisite = { focus = generic_absolutist_corporationism }
+    # relative_position_id = generic_absolutist_corporationism
+    # x = 0
+    # y = 1
+    # completion_reward = {
+        # log = "[GetDateText]: [Root.GetName]: Focus generic_thriving_absolutism"
+        # add_stability = 0.1
+        # add_political_power = 100
+    # }
+# }

@@ -1,0 +1,24 @@
+
+state={
+	id=62
+	name="STATE_62"
+	manpower = 98020
+	
+	
+	state_category = pastoral
+
+	history={
+		owner = BRD
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			3312 2
+		}
+		add_core_of = BRD
+	}
+
+	provinces={
+		349 3207 3312 
+	}
+}

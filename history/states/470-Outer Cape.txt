@@ -1,0 +1,19 @@
+
+state= {
+	id=470
+	name="STATE_470"
+	manpower = 3356
+	
+	state_category = pastoral
+
+	history= {
+		owner = AFR
+		add_core_of = AFR
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces={
+	  4822 10697 12419 10442
+	}
+}

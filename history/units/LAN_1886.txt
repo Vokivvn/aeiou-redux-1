@@ -1,0 +1,22 @@
+﻿division_template = {
+	name = "Infantry Guard"
+
+	division_names_group = CHI_INF_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+	}
+}
+
+units = {
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1316
+		division_template = "Infantry Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.2
+	}
+}

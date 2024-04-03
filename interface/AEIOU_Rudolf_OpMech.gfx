@@ -1,0 +1,19 @@
+SpriteTypes = {
+
+	spriteType = {
+		name = "GFX_OpMech_map_bg"
+		texturefile = "gfx/interface/rudolf_OpMech/OpMech_map_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_OpMech_tab"
+		texturefile = "gfx/interface/rudolf_OpMech/OpMech_tab.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_OpMech_bg"
+		texturefile = "gfx/interface/rudolf_OpMech/OpMech_bg.dds"
+	}
+
+}

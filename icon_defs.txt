@@ -1,0 +1,60 @@
+	SpriteType = {
+		name = "GFX_AUS_focus_Emancipation"
+		texturefile = "gfx/interface/goals/AUS_focus_Emancipation.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_AUS_focus_End_Temporal_Authority"
+		texturefile = "gfx/interface/goals/AUS_focus_End_Temporal_Authority.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_AUS_focus_Equality"
+		texturefile = "gfx/interface/goals/AUS_focus_Equality.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_AUS_focus_Inspiration_Greece"
+		texturefile = "gfx/interface/goals/AUS_focus_Inspiration_Greece.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_AUS_focus_Inspiration_Rome"
+		texturefile = "gfx/interface/goals/AUS_focus_Inspiration_Rome.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_AUS_focus_Peoples_Emperor"
+		texturefile = "gfx/interface/goals/AUS_focus_Peoples_Emperor.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_AUS_focus_Present_Democracy"
+		texturefile = "gfx/interface/goals/AUS_focus_Present_Democracy.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_AUS_focus_Promises_People"
+		texturefile = "gfx/interface/goals/AUS_focus_Promises_People.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_AUS_focus_Rudolf's_Bane"
+		texturefile = "gfx/interface/goals/AUS_focus_Rudolf's_Bane.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_AUS_focus_Visit_Koln"
+		texturefile = "gfx/interface/goals/AUS_focus_Visit_Koln.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_AUS_focus_Visit_Konigsberg"
+		texturefile = "gfx/interface/goals/AUS_focus_Visit_Konigsberg.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_AUS_focus_Visit_Rome"
+		texturefile = "gfx/interface/goals/AUS_focus_Visit_Rome.dds"
+	}
+

@@ -1,0 +1,22 @@
+state= {
+	id=901
+	name="STATE_901"
+	manpower = 391061
+	resources={
+		wood=3
+	}
+	
+	state_category = rural
+
+	history= {
+		owner = BRU
+		add_core_of = BRU
+
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces={
+		1230 2222 7424 5226 2047 7415 1404 5176 2170
+	}
+}

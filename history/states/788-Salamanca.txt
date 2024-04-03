@@ -1,0 +1,38 @@
+
+state={
+	id=788
+	name="STATE_788"
+	manpower = 1241053
+	
+	state_category = city
+	
+	resources = {
+	    wood = 1
+		gunpowder = 3
+		horses = 3
+	}
+
+	history={
+		owner = PRS
+		controller = PRS
+		
+		victory_points = {
+			6332 10 
+		}
+
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 2 
+			6332 = {
+				naval_base = 3
+
+			}
+		}
+		add_core_of = PRS
+	}
+
+	provinces={
+		348 395 6332 11265 11245 6402 13218 13219 3380
+	}
+}

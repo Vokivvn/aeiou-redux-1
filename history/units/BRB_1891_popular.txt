@@ -1,0 +1,64 @@
+division_template = {
+	name = "Peasant Armed Battalion"
+
+	division_names_group = BRB_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Peasant Mob"
+
+	division_names_group = BRB_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Boeren uit Brussel"
+		location = 516
+		division_template = "Peasant Armed Battalion"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "2nd Boeren uit Brussel"
+		location = 516
+		division_template = "Peasant Armed Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Brabantse boeren"
+		location = 6598
+		division_template = "Peasant Armed Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Revolutionnaires de Wallonie"
+		location = 11407
+		division_template = "Peasant Armed Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Foule revolutionnaire"
+		location = 9444
+		division_template = "Peasant Mob"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Revolutionaire menigte"
+		location = 3576
+		division_template = "Peasant Mob"
+		start_experience_factor = 0.1
+	}
+}

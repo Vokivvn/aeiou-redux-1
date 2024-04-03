@@ -1,0 +1,38 @@
+defined_text = {
+	name = GetCatholicSupportName
+	text = {
+		trigger = {
+            check_variable = { 
+			var = spr_var_catholic_influence
+            value = 0.25		
+			compare = less_than_or_equals 
+			}			
+		}
+		localization_key = "very low support" 
+	}
+	text = {
+		trigger = {	
+            check_variable = { spr_var_catholic_influence >  0.25 }		
+            check_variable = { 
+			var = spr_var_catholic_influence
+            value = 0.5	
+			compare = less_than_or_equals 
+			}			
+		}
+		localization_key = "low support"
+	}
+	text = {
+		trigger = {		
+            check_variable = { spr_var_catholic_influence >  0.5 }		
+            check_variable = { 
+			var = spr_var_catholic_influence
+            value = 0.75 		
+			compare = less_than_or_equals 
+			}		
+		}
+		localization_key = "high support"
+	}
+	text = {
+		localization_key = "very high support"
+	}
+}

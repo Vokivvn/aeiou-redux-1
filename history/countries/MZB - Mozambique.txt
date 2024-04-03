@@ -1,0 +1,22 @@
+﻿capital = 544
+
+oob = "MZB_1936"
+
+# Starting tech
+set_technology = {
+	muskets0 = 1
+	grenade = 1
+}
+
+set_convoys = 5
+
+set_politics = {
+	ruling_party = absolutist
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	absolutist = 100
+}

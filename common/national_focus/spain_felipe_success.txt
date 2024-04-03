@@ -1,0 +1,384 @@
+
+focus_tree = {
+	id = Spain_felipe_success
+	
+	country = {
+		factor = 0
+		
+	}
+	default = no
+	continuous_focus_position = { x = 50 y = 2000 }
+
+
+	###########
+	#  Start  #
+	###########
+	
+	focus = { 
+		id = SPR_the_stab_in_the_back
+		icon = GFX_goal_generic_major_war
+		cost = 50
+	
+		x = 7
+		y = 0
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = { 
+		id = SPR_a_challenged_phoenix
+		icon = GFX_SPR_A_Challenged_Phoenix
+		cost = 40
+		
+		prerequisite = { focus = SPR_the_stab_in_the_back }
+		relative_position_id = SPR_the_stab_in_the_back
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			country_event = SPRSecondfelipe.3
+		}
+	}
+	
+	### Diplo
+	
+	focus = { 
+		id = SPR_request_international_backup
+		icon = GFX_goal_generic_propaganda
+		cost = 40
+		
+		prerequisite = { focus = SPR_a_challenged_phoenix }
+		relative_position_id = SPR_a_challenged_phoenix
+	
+		x = -4
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.05
+			country_event = SPRSecondfelipe.4
+		}
+	}
+	
+	focus = { 
+		id = SPR_envoy_in_tuscany
+		icon = GFX_SPR_Envoy_to_Tuscany
+		cost = 40
+		
+		prerequisite = { focus = SPR_request_international_backup }
+		relative_position_id = SPR_request_international_backup
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			country_event = SPRSecondfelipe.5
+		}
+	}
+	
+	focus = { 
+		id = SPR_in_the_papacy
+		icon = GFX_AUS_focus_Visit_Rome
+		cost = 40
+		
+		prerequisite = { focus = SPR_request_international_backup }
+		relative_position_id = SPR_request_international_backup
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			country_event = SPRSecondfelipe.6
+		}
+	}
+	
+	focus = { 
+		id = SPR_invite_portugal
+		icon = GFX_SPR_rally_portuguese
+		cost = 40
+		
+		prerequisite = { focus = SPR_request_international_backup }
+		relative_position_id = SPR_request_international_backup
+	
+		x = 0
+		y = 2
+		
+		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = SPR_rally_the_portguese
+				}
+				country_event = SPRSecondfelipe.7
+				add_stability = 0.05
+				
+			}
+			else {
+				country_event = SPRSecondfelipe.7
+				add_stability = -0.05
+				add_political_power = -50
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_form_absolutist_defense_pact
+		icon = GFX_SPR_Absolutist_Defence_Pact
+		cost = 40
+		
+		available = {
+			has_completed_focus = SPR_envoy_in_tuscany
+			has_completed_focus = SPR_in_the_papacy
+		}
+		
+		prerequisite = { focus = SPR_invite_portugal }
+		relative_position_id = SPR_invite_portugal
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			create_faction = SPR_FACTION_ABSOLUTIST
+			every_other_country = {
+				limit = { has_country_flag = SPR_flag_accepted_alliance }
+				SPR = {
+					add_to_faction = PREV
+				}
+			}
+		}
+	}
+	
+	### Politics
+	
+	focus = { 
+		id = SPR_national_hope
+		icon = GFX_goal_generic_national_unity
+		cost = 40
+		
+		prerequisite = { focus = SPR_a_challenged_phoenix }
+		relative_position_id = SPR_a_challenged_phoenix
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	
+	focus = { 
+		id = SPR_down_with_the_insurgents
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		cost = 40
+		
+		prerequisite = { focus = SPR_national_hope }
+		relative_position_id = SPR_national_hope
+		mutually_exclusive = { focus = SPR_issue_a_general_pardon }
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_political_power = -100
+			add_stability = 0.02
+		}
+	}
+	
+	focus = { 
+		id = SPR_issue_a_general_pardon
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 40
+		
+		prerequisite = { focus = SPR_national_hope }
+		relative_position_id = SPR_national_hope
+		mutually_exclusive = { focus = SPR_down_with_the_insurgents }
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_political_power = -100
+			add_stability = -0.05
+			country_event = SPRSecondfelipe.18
+		}
+	}
+	
+	focus = { 
+		id = SPR_relax_the_1886_laws
+		icon = GFX_focus_generic_treaty
+		cost = 40
+		
+		prerequisite = { 
+			focus = SPR_down_with_the_insurgents 
+			focus = SPR_issue_a_general_pardon 
+		}
+		relative_position_id = SPR_national_hope
+	
+		x = 0
+		y = 2
+		
+		completion_reward = {
+			add_stability = 0.02
+			#country_event = SPREarlyfelipe.2
+		}
+	}
+	
+	focus = { 
+		id = SPR_no_more_distractions
+		icon = GFX_goal_generic_demand_territory
+		cost = 40
+		
+		prerequisite = { focus = SPR_relax_the_1886_laws }
+		relative_position_id = SPR_relax_the_1886_laws
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			country_event = SPRSecondfelipe.20
+		}
+	}
+	
+	### Army
+	
+	focus = { 
+		id = SPR_secret_manoeuvres
+		icon = GFX_goal_generic_position_armies
+		cost = 40
+		
+		prerequisite = { focus = SPR_a_challenged_phoenix }
+		relative_position_id = SPR_a_challenged_phoenix
+	
+		x = 4
+		y = 1
+		
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+	
+	focus = { 
+		id = SPR_refill_our_arsenals
+		icon = GFX_goal_generic_small_arms
+		cost = 20
+		
+		prerequisite = { focus = SPR_secret_manoeuvres }
+		relative_position_id = SPR_secret_manoeuvres
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_ideas = spr_idea_spanish_bull_0
+		}
+	}
+	focus = { 
+		id = SPR_refill_our_economy
+		icon = GFX_goal_what_how
+		cost = 20
+		
+		prerequisite = { focus = SPR_secret_manoeuvres }
+		relative_position_id = SPR_secret_manoeuvres
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_resource = {
+					type = wood
+					amount = 3
+					state = 168
+				}
+			add_resource = {
+					type = iron
+					amount = 2
+					state = 169
+				}
+			add_resource = {
+					type = gunpowder
+					amount = 2
+					state = 938
+				}
+		}
+	}
+	
+	focus = { 
+		id = SPR_the_spanish_bull
+		icon = GFX_SPR_the_spanish_bull
+		cost = 40
+		
+		prerequisite = { focus = SPR_refill_our_arsenals }
+		relative_position_id = SPR_refill_our_arsenals
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = spr_idea_spanish_bull_0
+				add_idea = spr_idea_spanish_bull_1
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_is_ready_to_attack
+		icon = GFX_SPR_ready_to_attack
+		cost = 40
+		
+		prerequisite = { focus = SPR_the_spanish_bull }
+		relative_position_id = SPR_the_spanish_bull
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = spr_idea_spanish_bull_1
+				add_idea = spr_idea_spanish_bull_2
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_united_for_battle
+		icon = GFX_goal_generic_military_deal
+		cost = 40
+		
+		prerequisite = { focus = SPR_is_ready_to_attack }
+		relative_position_id = SPR_is_ready_to_attack
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = spr_idea_spanish_bull_2
+				add_idea = spr_idea_spanish_bull_3
+			}
+		}
+	}
+	
+	#end
+	
+	
+	focus = { 
+		id = SPR_war_in_sight
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 40
+		
+		prerequisite = { focus = SPR_form_absolutist_defense_pact }
+		prerequisite = { focus = SPR_no_more_distractions }
+		prerequisite = { focus = SPR_united_for_battle }
+		relative_position_id = SPR_a_challenged_phoenix
+	
+		x = 0
+		y = 6
+		
+		completion_reward = {
+			army_experience = 5
+			load_focus_tree = Spain_felipe_downfall
+		}
+	}
+}

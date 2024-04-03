@@ -1,0 +1,508 @@
+focus_tree = {
+	id = france_decentralization_focus
+	
+	country = {
+		factor = 0
+		
+	}
+	
+	default = no
+	continuous_focus_position = { x = 50 y = 2000 }
+
+
+	###########
+	#  Start  #
+	###########
+	
+	focus = { 
+		id = FRA_ally_of_nobility
+		icon = GFX_AUS_focus_Presents_Cajoling
+		cost = 40
+	
+		x = 5
+		y = 0
+		
+		completion_reward = {
+			set_temp_variable = { noble_support_temp = 0.05 }
+			FRA_noble_support = yes
+			add_political_power = 100
+			#country_event
+		}
+	}
+	focus = { 
+		id = FRA_one_country
+		icon = GFX_FRA_matters_state
+		cost = 25
+		prerequisite = { focus = FRA_ally_of_nobility }
+		relative_position_id = FRA_ally_of_nobility
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.02
+			#country_event
+		}
+	}
+	focus = { 
+		id = FRA_one_language
+		icon = GFX_FRA_Maintain_the_yoke
+		cost = 25
+		prerequisite = { focus = FRA_one_country }
+		relative_position_id = FRA_one_country
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.02
+			#country_event
+		}
+	}
+	focus = { 
+		id = FRA_many_nobles
+		icon = GFX_generic_noble_support
+		cost = 25
+		prerequisite = { focus = FRA_ally_of_nobility }
+		relative_position_id = FRA_ally_of_nobility
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_war_support = 0.02
+			#country_event
+		}
+	}
+	focus = { 
+		id = FRA_many_armies
+		icon = GFX_focus_generic_little_entente
+		cost = 25
+		prerequisite = { focus = FRA_many_nobles }
+		relative_position_id = FRA_many_nobles
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_war_support = 0.02
+		}
+	}
+	focus = { 
+		id = FRA_road_to_unified_front
+		icon = GFX_FRA_Hexagon_Ready
+		cost = 40
+		prerequisite = { focus = FRA_one_language }
+		prerequisite = { focus = FRA_many_armies }
+		relative_position_id = FRA_one_language
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	### Literacy ###
+	
+	focus = { 
+		id = FRA_extensive_literacy_campaign
+		icon = GFX_SPR_boost_noble_scholarships
+		cost = 30
+		prerequisite = { focus = FRA_road_to_unified_front }
+		relative_position_id = FRA_road_to_unified_front
+		x = -4
+		y = 1
+		
+		completion_reward = {
+			add_ideas = fra_pro_french_stance
+		}
+	}
+	focus = { 
+		id = FRA_adapt_weitling_ideas
+		icon = GFX_focus_generic_revolutionary_sentiment
+		cost = 25
+		prerequisite = { focus = FRA_extensive_literacy_campaign }
+		relative_position_id = FRA_extensive_literacy_campaign
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			#country_event
+		}
+	}
+	focus = { 
+		id = FRA_encourage_moderate_thought
+		icon = GFX_focus_generic_feudalisms_stand
+		cost = 25
+		prerequisite = { focus = FRA_extensive_literacy_campaign }
+		relative_position_id = FRA_extensive_literacy_campaign
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = fra_pro_french_stance
+				add_idea = fra_pro_french_stance1
+			}
+		}
+	}
+	focus = { 
+		id = FRA_bourbon_propaganda
+		icon = GFX_focus_generic_monarchy_2
+		cost = 30
+		prerequisite = { focus = FRA_adapt_weitling_ideas }
+		prerequisite = { focus = FRA_encourage_moderate_thought }
+		relative_position_id = FRA_adapt_weitling_ideas
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			#country_event
+		}
+	}
+	focus = { 
+		id = FRA_downplay_rudolf
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 30
+		prerequisite = { focus = FRA_bourbon_propaganda }
+		relative_position_id = FRA_bourbon_propaganda
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			#country_event
+		}
+	}
+	
+	### Diplomacy ###
+	
+	focus = { 
+		id = FRA_reforge_diplomatic_network
+		icon = GFX_goal_generic_major_alliance
+		cost = 30
+		prerequisite = { focus = FRA_road_to_unified_front }
+		relative_position_id = FRA_road_to_unified_front
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+	focus = { 
+		id = FRA_renovate_ties_to_commonwealth
+		icon = GFX_FRA_Reemploy_Merchant_Shipping
+		cost = 25
+		prerequisite = { focus = FRA_reforge_diplomatic_network }
+		relative_position_id = FRA_reforge_diplomatic_network
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			#country_event
+		}
+	}
+	focus = { 
+		id = FRA_extracontinental_naval_reorganization
+		icon = GFX_FRA_ocean_going_navy
+		cost = 25
+		prerequisite = { focus = FRA_renovate_ties_to_commonwealth }
+		relative_position_id = FRA_renovate_ties_to_commonwealth
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			navy_experience = 10
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				custom_effect_tooltip = generic_navy_initial_designs_mtg_tt
+				hidden_effect = {
+					set_technology = {
+						early_ship_hull_light = 1
+						basic_battery = 1
+					}
+				}
+				create_equipment_variant = {
+					name = "Acadia Class"
+					type = ship_hull_light_1
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = ship_light_battery_1
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+						fixed_ship_engine_slot = light_ship_engine_1
+					}
+				}
+				load_oob = "FRA_naval_reorganization_mtg"
+			} else {
+				custom_effect_tooltip = generic_navy_initial_designs_tt
+				hidden_effect = {
+					set_technology = {
+						early_destroyer = 1
+					}
+				}
+				load_oob = "FRA_naval_reorganization_legacy"
+			}
+		}
+	}
+	focus = { 
+		id = FRA_demand_swiss_passage
+		icon = GFX_goal_generic_demand_territory
+		cost = 25
+		prerequisite = { focus = FRA_reforge_diplomatic_network }
+		relative_position_id = FRA_reforge_diplomatic_network
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			#country_event
+		}
+	}
+	focus = { 
+		id = FRA_negotiate_with_burmese
+		icon = GFX_goal_generic_military_deal
+		cost = 25
+		prerequisite = { focus = FRA_demand_swiss_passage }
+		relative_position_id = FRA_demand_swiss_passage
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			#country_event
+		}
+	}
+	focus = { 
+		id = FRA_offer_sweden_commercial_backup
+		icon = GFX_AUS_bigger_taxes
+		cost = 30
+		prerequisite = { focus = FRA_extracontinental_naval_reorganization }
+		prerequisite = { focus = FRA_negotiate_with_burmese }
+		relative_position_id = FRA_extracontinental_naval_reorganization
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			#country_event
+		}
+	}
+	
+	### Economy ###
+	
+	focus = { 
+		id = FRA_age_of_industrialization
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 30
+		
+		bypass = {
+			NOT = { controls_state = 16 }
+		}
+		
+		prerequisite = { focus = FRA_road_to_unified_front }
+		relative_position_id = FRA_road_to_unified_front
+		x = 4
+		y = 1
+		
+		completion_reward = {
+			16 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = { 
+		id = FRA_rally_villages
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		cost = 25
+		prerequisite = { focus = FRA_age_of_industrialization }
+		relative_position_id = FRA_age_of_industrialization
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			#country_event
+		}
+	}
+	focus = { 
+		id = FRA_advisors_from_paris
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 25
+		prerequisite = { focus = FRA_rally_villages }
+		relative_position_id = FRA_rally_villages
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+	focus = { 
+		id = FRA_form_royal_industrial_fund
+		icon = GFX_FRA_Economic_revival
+		cost = 25
+		prerequisite = { focus = FRA_age_of_industrialization }
+		relative_position_id = FRA_age_of_industrialization
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_ideas = fra_royal_industrial_fund
+		}
+	}
+	focus = { 
+		id = FRA_reinvest_our_budget
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 25
+		prerequisite = { focus = FRA_form_royal_industrial_fund }
+		relative_position_id = FRA_form_royal_industrial_fund
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = -0.02
+		}
+	}
+	focus = { 
+		id = FRA_combat_corruption
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		cost = 25
+		prerequisite = { focus = FRA_form_royal_industrial_fund }
+		relative_position_id = FRA_form_royal_industrial_fund
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			#country_event
+		}
+	}
+	focus = { 
+		id = FRA_heartland_of_industries
+		icon = GFX_focus_generic_industry_3
+		cost = 30
+		
+		bypass = {
+			NOT = {
+				controls_state = 14
+				controls_state = 19
+				controls_state = 27
+			}
+		}
+		
+		prerequisite = { focus = FRA_advisors_from_paris }
+		prerequisite = { focus = FRA_reinvest_our_budget }
+		relative_position_id = FRA_advisors_from_paris
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			if = {
+				LIMIT = { controls_state = 14 }
+				14 = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				LIMIT = { controls_state = 19 }
+				19 = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				LIMIT = { controls_state = 27 }
+				27 = {
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	### end ###
+	
+	focus = { 
+		id = FRA_army_to_support_king
+		icon = GFX_SPR_Absolutist_Defence_Pact
+		cost = 30
+		prerequisite = { focus = FRA_downplay_rudolf }
+		prerequisite = { focus = FRA_offer_sweden_commercial_backup }
+		relative_position_id = FRA_downplay_rudolf
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			army_experience = 10
+			load_oob = "FRA_army_for_king"
+		}
+	}
+	focus = { 
+		id = FRA_industry_to_support_army
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 30
+		
+		bypass = {
+			NOT = {
+				controls_state = 15
+				controls_state = 24
+			}
+		}
+		
+		prerequisite = { focus = FRA_heartland_of_industries }
+		prerequisite = { focus = FRA_offer_sweden_commercial_backup }
+		relative_position_id = FRA_heartland_of_industries
+		x = -2
+		y = 1
+		
+		completion_reward = {
+			if = {
+				LIMIT = { controls_state = 24 }
+				24 = {
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				LIMIT = { controls_state = 15 }
+				15 = {
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			
+		}
+	}
+	focus = { 
+		id = FRA_country_ready_to_protect
+		icon = GFX_FRA_artillery_battalion
+		cost = 40
+		prerequisite = { focus = FRA_army_to_support_king }
+		prerequisite = { focus = FRA_industry_to_support_army }
+		relative_position_id = FRA_army_to_support_king
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			add_political_power = 100
+			#country_event
+			hidden_effect = { remove_ideas = fra_pro_french_stance1 }
+			load_focus_tree = france_decentralization_interventionist_focus
+		}
+	}
+}

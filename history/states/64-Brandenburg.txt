@@ -1,0 +1,35 @@
+
+state={
+	id=64
+	name="STATE_64"
+	manpower = 2327017
+
+	state_category = large_city
+	
+	resources = {
+	    wood = 4
+		gunpowder = 2 
+		horses = 3 
+	}
+
+	history={
+		owner = BRD
+		victory_points = {
+			6521 20 
+		}
+		victory_points = {
+			3522 5 
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+			industrial_complex = 1
+
+		}
+		add_core_of = BRD
+	}
+
+	provinces={
+		375 425 3561 3367 3499 3522 6487 6521 6582 9428 9456 9496 9560 11219 11359 11444 11505 11468
+	}
+}

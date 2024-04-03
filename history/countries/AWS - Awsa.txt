@@ -1,0 +1,28 @@
+capital = 268 #Yerevan, Armenia
+
+#oob = "ARM_1886"
+
+set_research_slots = 3
+
+set_politics = {
+	ruling_party = absolutist
+	elections_allowed = no
+}
+set_popularities = {
+	absolutist = 100
+}
+
+add_to_array = { national_religion_array =  8 }
+
+create_country_leader = {
+	name = "Arefani Legesse Tesfa"
+	picture = "gfx/leaders/Africa/Portrait_Generic_Africa6.dds"
+	
+	#desc = ""
+	ideology = absolutist_moderate
+	expire = "1999.1.1"
+	traits = {
+		#
+	}
+}
+

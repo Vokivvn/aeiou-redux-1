@@ -1,0 +1,100 @@
+﻿l_english:
+
+ ###Ideas
+
+  hre_idea_elector:0 "Elector of the HRE"
+  hre_idea_elector_desc:0 "This state has, since the thirteenth century, been granted the privilege of electing the Holy Roman Emperor. In practice, there hasn’t been an emperor elected since the fifteenth century that hasn’t been from the Habsburg family, mainly due to regional rivalries. Despite this, being an elector has conferred an amount of prestige amongst the peerage of the Empire and usually exercises influence on their neighbors. The title is greatly sought after as it can be passed onto one's successor. Religion plays a large part in the electoral politics as the balance is kept with not all of the voters being temporal leaders. Some are represented by bishoprics.\n\nThis state that has been confirmed as an elector is one of the most influential in the Holy Roman Empire. It often exert their will heavily over their less powerful neighbors, leading a small coalition within the Imperial Diet. This state also benefits from theoretically being protected from foreign invaders by the Emperor."
+
+  hre_idea_prince:0 "Prince of the HRE"
+  hre_idea_prince_desc:0 "The title of Prince in the Holy Roman Empire means that this state is only beholden to the Emperor as liege and receives representation in the Imperial Diet. Despite the title, this state does not need to be a principality and the Princes are a diverse group within the confines of the Empire. It includes archdukes, dukes, margraves, landgraves, counts palatine, and counts. Representation in the Imperial Diet is important for this state because it is one way that they can influence the politics around them.\n\nPrinces differ from being an Elector due to it being inheritable by any male member of the family rather than primogeniture. This state retains a great amount of independence within the Empire, and will strain at any attempts to limit that autonomy. Though they chaff under imperial rule this state is also guaranteed independence by the Emperor in Wien against all foreign attackers. Whether or not this applies to wars within the empire is largely up to the new Emperor."
+
+  hre_idea_emperor:0 "Emperor of the HRE"
+  hre_idea_emperor_desc:0 "The Emperor of the Holy Roman Empire is elected by Elector States, made up of peerage of the empire. Since the 14th century only members of the Habsburg family have been emperor. Once elected the new emperor was usually crowned by the Pope with his blessing, though that practice fell out of style in the 15th century. The newly crowned emperor, Rudolph, has brought back the tradition and was crowned by the Pope.\n\nThe power of the Emperor is limited, as over the years the actual borders of the Empire have shrunk. While every Prince, and Prince Elector, owes fealty to the Emperor how strong this actually is largely dependent on the Emperor in question. Counts, dukes, and Margraves usually run their domain as quasi-kingdoms having almost absolute authority within them. Large affairs and disputes are settled in the Imperial Diet, which Rudolph plans to receive from its obscurity. Another important function of the Emperor is they are to keep the constitute vassals free from foreign invasion."
+
+  hre_idea_free_city:0 "Free City"
+  hre_idea_free_city_desc:0 "These cities are considered self-ruling rather than being subject to the whims of princes, be them ecclesiastical or temporal. Because they are only subject to the Emperor, these cities have been given almost free reign with their politics and evolved powerful middle classes centered around commerce. This large amount of autonomy has caused these bodies to be hotbeds for technological and economic innovation, though they are limited in scope by their small size and the Emperor in power.\n\nGuaranteed their independence and representation in the Imperial Diet by imperial decree, they despite their small size have continued to make an impact on politics around the Empire. Those who wish to step on the independence of the Free Cities have to contend directly with the Habsburg emperor in Wien. Though the amount has decreased, there is still a healthy rivalry between those in the traditional Swabian territory and those in Rhenish territory in the Imperial Diet."
+  
+  hre_idea_conservative:0 "City-State of the HRE"
+  hre_idea_conservative_desc:0 ""
+  
+  hre_idea_pope_excommunicated:0 "Pope Excommunicated from HRE"
+  hre_idea_pope_excommunicated_desc:0 "0"
+
+  hre_idea_ongoing_conversion:0 "Ongoing Conversion"
+
+ ###Focus Tree
+ 
+ ### EVENTS ###
+ 
+ HREEvent.1.t:0 "Attack on the HRE!"
+ HREEvent.1.d:0 "."
+ HREEvent.1.a:0 "We shall strike back!"
+ HREEvent.1.b:0 "We don't have the time to deal with them."
+ 
+ HREEvent.2.t:0 "The War is Over"
+ HREEvent.2.d:0 "."
+ HREEvent.2.a:0 "A Return to Normality"
+
+ HREEvent.3.t:0 "Call to Arms!"
+ HREEvent.3.d:0 "."
+ HREEvent.3.a:0 "For the Empire!"
+ HREEvent.3.b:0 "We Shall Remain Neutral"
+ 
+ HREEvent.5.t:0 "The Emperor Tours the Empire"
+ HREEvent.5.d:0 "."
+ HREEvent.5.a:0 "A Great Day for Unity"
+ 
+ HREEvent.6.t:0 "Consolidation of the Empire"
+ HREEvent.6.d:0 "."
+ HREEvent.6.a:0 "We are Stronger Together!"
+ HREEvent.6.b:0 "We will not stand with the emperor"
+ 
+ HREEvent.7.t:0 "The [FROM.GetName] pushes for [GetActionName]"
+ HREEvent.7.d:0 "."
+ HREEvent.7.a:0 "We progress towards unification"
+ HREEvent.7.b:0 "How Dare the Emperor!"
+ 
+ HREEvent.9.t:0 "The HRE Reaches a Breaking Point"
+ HREEvent.9.d:0 "."
+ HREEvent.9.a:0 "We will side with the Traditionalists"
+ HREEvent.9.b:0 "We better not get involved in other's games"
+ HREEvent.9.c:0 "For the Emperor!"
+
+
+
+
+
+
+
+### Decisions ###
+ 
+
+imperial_conversion:0 "Imperial Conversion"
+
+imperial_conversion_tt:0 "[ROOT.getFlag]§Y[ROOT.getName]§! will be §Cconverted§! to §OCatholicism§!"
+
+
+
+
+### Tooltips ###
+
+more_than_20_imp_auth_tt:0 "More than §Y20 Imperial Authority§!"
+
+add_10_imp_auth_tt:0 "Imperial Authority will increase by §G10§!"
+
+add_25_imp_auth_tt:0 "Imperial Authority will increase by §G25§!"
+
+subs_20_imp_auth_tt:0 "Imperial Authority will decrease by §R20§!"
+
+
+add_2_imp_centr_tt:0 "Imperial Centralization will increase by §G2%§!"
+
+
+add_4_imp_stab_tt:0 "Imperial Stability will increase by §G4%§!"
+subs_4_imp_stab_tt:0 "Imperial Stability will decrease by §R4%§!"
+
+
+
+### Opinion Modifiers ###
+
+HRE_threatened_us:0 "Threatened us"

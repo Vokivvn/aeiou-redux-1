@@ -1,0 +1,29 @@
+
+state={
+	id=504
+	name="STATE_504"
+	manpower=122987
+
+	state_category = rural
+
+	resources = {
+		wood=2
+		horses=3
+	}
+
+	history={
+		owner = POR
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = POR
+
+	}
+
+	provinces={
+		2111 2181 5200 8189 8224 10959 12951 
+	}
+	
+	buildings_max_level_factor=1.000
+}

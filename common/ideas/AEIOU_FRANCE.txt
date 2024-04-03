@@ -1,0 +1,976 @@
+ideas = {
+
+	political_advisor = {
+		FRA_gustave_eiffel = {
+			allowed = {
+				original_tag = FRA
+			}
+
+			traits = { 
+				conservative_advisor
+				renowned_architect
+			}
+		}
+		FRA_hector_malot = {
+			allowed = {
+				original_tag = FRA
+			}
+
+			traits = { 
+				apolitical_advisor
+				recognized_writer
+			}
+		}
+		FRA_pierre_emile_levasseur = {
+			allowed = {
+				original_tag = FRA
+			}
+
+			traits = { 
+				apolitical_advisor
+				renovative_economist
+			}
+		}
+		FRA_henri_becquerel= {
+			allowed = {
+				original_tag = FRA
+			}
+
+			traits = { 
+				apolitical_advisor
+				esteemed_scientist
+			}
+		}
+	}
+	theorist = {
+		FRA_charles_de_freycinet = {
+
+			allowed = {
+				original_tag = FRA
+			}
+			
+			cost = 200
+
+			traits = { 
+				smoke_seller
+				military_theorist 
+			}
+		}
+		FRA_henri_rieunier = {
+
+			allowed = {
+				original_tag = FRA
+			}
+			
+			cost = 200
+
+			traits = { 
+				frontal_attack_expert
+				naval_theorist 
+			}
+		}
+	}
+	
+	army_chief = {
+		FRA_raoul_de_boisdeffre = {
+
+			allowed = {
+				original_tag = FRA
+			}
+			
+			cost = 180
+
+			traits = { 
+				army_cavalry_2
+			}
+		}
+		FRA_joseph_de_miribel = {
+
+			allowed = {
+				original_tag = FRA
+			}
+			
+			cost = 180
+
+			traits = { 
+				army_artillery_2 
+			}
+		}
+	}
+	
+	navy_chief = {
+		FRA_jules_francois_emile_krantz = {
+
+			allowed = {
+				original_tag = FRA
+			}
+			
+			cost = 180
+
+			traits = { 
+				navy_amphibious_assault_3 
+			}
+		}
+		FRA_armand_besnard = {
+
+			allowed = {
+				original_tag = FRA
+			}
+			
+			cost = 180
+
+			traits = { 
+				navy_chief_decisive_battle_3
+			}
+		}
+	}
+	
+	high_command = {
+		FRA_auguste_mercier = {
+
+			allowed = {
+				original_tag = FRA
+			}
+			
+			cost = 180
+
+			traits = { 
+				army_artillery_2
+			}
+		}
+		FRA_francois_logerot = {
+
+			allowed = {
+				original_tag = FRA
+			}
+			
+			cost = 180
+
+			traits = { 
+				offensive_lynx
+			}
+		}
+		FRA_jean_baptiste_billot = {
+
+			allowed = {
+				original_tag = FRA
+			}
+			
+			cost = 180
+
+			traits = { 
+				army_regrouping_1
+			}
+		}
+	}
+	
+	country = {
+		fra_ramping_decentralization = {
+			picture = FRA_ramping_decentralization
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.10
+				stability_factor = 0.15
+				conscription_factor = -0.1
+			}
+		}	
+		fra_nationalist_breeding_ground = {
+			picture = FRA_nationalistic_breeding_ground
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.1
+				stability_factor = -0.4
+				conscription_factor = -0.1
+				production_speed_buildings_factor = -0.1
+			}
+		}	
+		fra_decaying_military = {
+			picture = FRA_decaying_military
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = -0.02
+				offence = -0.1
+				defence = -0.1
+				industrial_capacity_factory = -0.05
+			}
+		}	
+		fra_extracontinental_agitation = {
+			picture = FRA_extracontinental_agitation
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.1
+			}
+		}	
+		#Focus Enforce a military parade in Paris
+			fra_military_parade = {
+				picture = 
+				allowed = {
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				removal_cost = -1
+
+				modifier = {
+					war_support_factor = 0.20
+					stability_factor = 0.15
+					conscription_factor = 0.05
+				}
+				
+				targeted_modifier = {
+					tag = SPR
+					attack_bonus_against = 0.1
+					defense_bonus_against = 0.1
+				}
+			}
+		#Economic Revitalization
+		fra_economic_revitalization = {
+				picture = 
+				allowed = {
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				removal_cost = -1
+
+				modifier = {
+					stability_factor = 0.10
+					industrial_capacity_factory = 0.08
+					consumer_goods_factor = -0.05
+					political_power_factor = 0.05
+					trade_laws_cost_factor = -0.2
+					trade_opinion_factor = 0.05
+				}
+			}
+		#Granted barons
+		fra_economic_revitalization1 = {
+				picture = 
+				allowed = {
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				removal_cost = -1
+
+				modifier = {
+					stability_factor = 0.11
+					industrial_capacity_factory = 0.1
+					consumer_goods_factor = -0.03
+					political_power_factor = 0.05
+					trade_laws_cost_factor = -0.2
+					trade_opinion_factor = 0.05
+					production_speed_infrastructure_factor = 0.05
+				}
+			}
+		#Reemploy merchant shipping
+		fra_economic_revitalization2 = {
+				picture = 
+				allowed = {
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				removal_cost = -1
+
+				modifier = {
+					stability_factor = 0.11
+					industrial_capacity_factory = 0.07
+					consumer_goods_factor = -0.06
+					political_power_factor = 0.02
+					trade_laws_cost_factor = -0.2
+					trade_opinion_factor = 0.05
+					production_speed_infrastructure_factor = 0.05
+					production_speed_dockyard_factor = 0.05
+				}
+			}
+		#Support the peasantry
+		fra_economic_revitalization3 = {
+				picture = 
+				allowed = {
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				removal_cost = -1
+
+				modifier = {
+					stability_factor = 0.15
+					industrial_capacity_factory = 0.08
+					consumer_goods_factor = -0.1
+					political_power_factor = 0.05
+					trade_laws_cost_factor = -0.2
+					trade_opinion_factor = 0.05
+					production_speed_infrastructure_factor = 0.06
+					production_speed_dockyard_factor = 0.06
+				}
+			}
+		fra_economic_revitalization4 = {
+				picture = 
+				allowed = {
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				removal_cost = -1
+
+				modifier = {
+					stability_factor = 0.2
+					industrial_capacity_factory = 0.12
+					consumer_goods_factor = -0.1
+					political_power_factor = 0.06
+					trade_laws_cost_factor = -0.2
+					trade_opinion_factor = 0.05
+					production_speed_infrastructure_factor = 0.06
+					production_speed_dockyard_factor = 0.06
+				}
+			}
+		fra_colonial_adventures = {
+				picture = FRA_colonial_adventures
+				allowed = {
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				removal_cost = -1
+
+				modifier = {
+					war_support_factor = 0.05
+					consumer_goods_factor = 0.05
+					conscription_factor = 0.03
+					offence = 0.05
+				}
+			}
+		fra_bigger_better = {
+				picture = FRA_ramping_decentralization
+				allowed = {
+					always = yes
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				removal_cost = -1
+
+				modifier = {
+					war_support_factor = -0.05
+					stability_factor = -0.10
+				}
+			}
+			fra_bigger_better1 = {
+				picture = FRA_ramping_decentralization
+				allowed = {
+					always = yes
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				removal_cost = -1
+
+				modifier = {
+					war_support_factor = -0.05
+					stability_factor = -0.10
+					conscription_factor = 0.08
+				}
+			}
+		fra_organized_decentralization = {
+				picture = FRA_ramping_decentralization
+				allowed = {
+					always = yes
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				removal_cost = -1
+
+				modifier = {
+					war_support_factor = 0.06
+					stability_factor = 0.2
+					conscription_factor = -0.02
+				}
+			}
+		fra_pro_french_stance = {
+            picture = generic_victors_of_ww1
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				research_speed_factor = 0.05
+				stability_weekly = 0.01
+				political_power_factor = 0.02
+            }
+        }
+		fra_pro_french_stance1 = {
+            picture = generic_victors_of_ww1
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				research_speed_factor = 0.05
+				stability_weekly = 0.01
+				political_power_factor = 0.02
+				despotist_drift = 0.1
+            }
+        }
+		fra_royal_industrial_fund = {
+            picture = generic_supperior_craftmanship
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				line_change_production_efficiency_factor = 0.02
+				production_factory_max_efficiency_factor = 0.02
+				production_speed_dockyard_factor = 0.05
+            }
+        }
+		
+		fra_offensive_measures = {
+            picture = generic_victors_of_ww1
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				offence = 0.05
+				defence = 0.05
+				army_org_factor = 0.10
+				land_reinforce_rate = 0.02
+            }
+        }
+		
+		fra_offensive_measures1 = {
+            picture = generic_victors_of_ww1
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				offence = 0.05
+				defence = 0.05
+				army_org_factor = 0.10
+				land_reinforce_rate = 0.02
+				conscription_factor = 0.05
+            }
+        }
+		
+		fra_fight_for_estamental_rights = {
+            picture = generic_victors_of_ww1
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				offence = 0.05
+				defence = 0.05
+				stability_factor = 0.2
+				war_support_factor = 0.2
+				political_power_gain = 0.02
+            }
+        }
+		
+		fra_fight_for_estamental_rights1 = {
+            picture = generic_victors_of_ww1
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				offence = 0.05
+				defence = 0.05
+				stability_factor = 0.2
+				war_support_factor = 0.2
+				political_power_gain = 0.02
+				conscription_factor = 0.10
+            }
+        }
+		
+		fra_fight_for_estamental_rights2 = {
+            picture = generic_victors_of_ww1
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				offence = 0.05
+				defence = 0.05
+				stability_factor = 0.2
+				war_support_factor = 0.2
+				political_power_gain = 0.02
+				conscription_factor = 0.10
+				production_speed_buildings_factor = 0.05
+            }
+        }
+		
+		fra_fight_for_estamental_rights3 = {
+            picture = generic_victors_of_ww1
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				offence = 0.05
+				defence = 0.05
+				stability_factor = 0.2
+				war_support_factor = 0.2
+				political_power_gain = 0.02
+				conscription_factor = 0.10
+				production_speed_buildings_factor = 0.05
+				surrender_limit = 0.25
+            }
+        }
+		
+		fra_rule_the_waves = {
+			picture = generic_sea_focused_navy
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+			modifier = {
+				industrial_capacity_dockyard = 0.05
+				navy_max_range_factor = 0.1
+				naval_speed_factor = 0.05
+			}
+		}
+		
+		fra_the_unstoppable_army = {
+			picture = eng_special_air_service
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+			modifier = {
+				offence = 0.03
+				defence = 0.05
+				army_org_factor = 0.05
+				land_reinforce_rate = 0.05
+				army_speed_factor = -0.05
+			}
+		}
+		
+		fra_economic_improvements = {
+			picture = generic_Burgeois_Support
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.02
+				line_change_production_efficiency_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.05
+				research_speed_factor = 0.02
+			}
+		}
+		
+		fra_indochinese_logistics = {
+			picture = generic_victors_of_ww1
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+			modifier = {
+				land_reinforce_rate = 0.10
+				attrition = -0.1
+				army_org_factor = 0.05
+			}
+		}
+		
+		fra_noble_support_very_high = {
+            picture = AUS_winds_of_change
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.10
+				war_support_factor = -0.10
+				conscription_factor = -0.05
+            }
+        }
+		
+		fra_noble_support_high = {
+            picture = AUS_winds_of_change
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				political_power_gain = 0.02
+				stability_factor = 0.05
+				war_support_factor = -0.05
+				conscription_factor = -0.02
+            }
+        }
+		
+		fra_noble_support_average = {
+            picture = AUS_winds_of_change
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+            }
+        }
+		
+		fra_noble_support_low = {
+            picture = AUS_winds_of_change
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				political_power_gain = -0.02
+				stability_factor = -0.05
+				war_support_factor = 0.05
+				conscription_factor = 0.02
+            }
+        }
+		
+		fra_noble_support_very_low = {
+            picture = AUS_winds_of_change
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				political_power_gain = -0.05
+				stability_factor = -0.10
+				war_support_factor = 0.10
+				conscription_factor = 0.05
+            }
+        }
+		
+		fra_sale_of_mudurai = {
+            picture = AUS_winds_of_change
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				political_power_gain = -0.15
+				consumer_goods_factor = 0.15
+            }
+        }
+		
+		fra_sale_of_mudurai_por = {
+            picture = AUS_winds_of_change
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				political_power_gain = 0.15
+				consumer_goods_factor = -0.15
+            }
+        }
+		
+		fra_indian_resistance = {
+            picture = AUS_winds_of_change
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				conscription_factor = -0.25
+				industrial_capacity_factory = -0.15
+            }
+        }
+		
+		fra_linguistic_division = {
+            picture = AUS_winds_of_change
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				political_power_gain = -0.15
+				production_speed_buildings_factor = -0.05
+            }
+        }
+		
+		fra_cherbourg_agreement = {
+            picture = generic_supperior_craftmanship
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				local_resources_factor	= 0.05
+				production_speed_buildings_factor = 0.05
+				min_export = 0.05
+            }
+			
+			targeted_modifier = {
+				tag = SCO
+				trade_cost_for_target_factor = -0.25
+			}
+        }
+		
+		sco_cherbourg_agreement = {
+            picture = generic_supperior_craftmanship
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				local_resources_factor	= 0.05
+				production_speed_buildings_factor = 0.05
+				min_export = 0.05
+            }
+			
+			targeted_modifier = {
+				tag = FRA
+				trade_cost_for_target_factor = -0.25
+			}
+        }
+		
+		fra_golden_age = {
+			picture = generic_Burgeois_Support
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+			
+			cancel = {
+				FRA_golden_age_ended = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_gain = 0.15
+				research_speed_factor = 0.03
+			}
+		}
+		
+		fra_netherland_front = {
+			picture = FRA_scw_intervention_nationalists_focus
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+			
+			cancel = {
+				SPN = {
+					OR = {
+						NOT = { has_war_with = FRA }
+						has_capitulated = yes
+					}
+				}
+			}
+
+			modifier = {
+				army_speed_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = SPN
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+		
+		fra_spr_war = {
+			picture = idea_chi_war_of_resistance
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+			
+			cancel = {
+				SPR = {
+					NOT = { has_war_with = FRA }
+				}
+			}
+
+			modifier = {
+				army_org_factor = 0.05
+				breakthrough_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = SPR
+				attack_bonus_against = 0.05
+			}
+		}
+		
+		fra_spr_war1 = {
+			picture = idea_chi_war_of_resistance2
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+			
+			cancel = {
+				SPR = {
+					NOT = { has_war_with = FRA }
+				}
+			}
+
+			modifier = {
+				army_org_factor = 0.1
+				army_org_regain = 0.1
+				recon_factor = 0.2
+				defence = 0.1
+			}
+			targeted_modifier = {
+				tag = SPR
+				attack_bonus_against = 0.05
+			}
+		}
+		
+		fra_spr_war2 = {
+			picture = idea_chi_war_of_resistance3
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+			
+			cancel = {
+				SPR = {
+					NOT = { has_war_with = FRA }
+				}
+			}
+
+			modifier = {
+				army_org_factor = 0.15
+				army_org_regain = 0.1
+				recon_factor = 0.2
+				defence = 0.05
+				org_loss_when_moving = 0.05
+			}
+			targeted_modifier = {
+				tag = SPR
+				attack_bonus_against = 0.10
+			}
+		}
+		
+		fra_spr_war3 = {
+			picture = idea_chi_war_of_resistance3
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+			
+			cancel = {
+				SPR = {
+					NOT = { has_war_with = FRA }
+				}
+			}
+
+			modifier = {
+				army_org_factor = 0.2
+				army_org_regain = 0.1
+				recon_factor = 0.2
+				org_loss_when_moving = 0.1
+				breakthrough_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = SPR
+				attack_bonus_against = 0.15
+			}
+		}
+	}
+	
+	hidden_ideas = {
+	
+		fra_eclaircissement_francaise = {
+            picture = generic_supperior_craftmanship
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				political_advisor_cost_factor = -0.10
+            }
+        }
+		
+	}
+}

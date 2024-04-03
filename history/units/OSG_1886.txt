@@ -1,0 +1,19 @@
+division_template = {
+	name = "Osage Tribesmen"
+
+	division_names_group = OSG_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "Osage Tribesmen"
+		location = 1827
+		division_template = "Osage Tribesmen"
+		start_experience_factor = 0.5
+	}
+}

@@ -1,0 +1,20 @@
+state={
+	id=883
+	name="STATE_883"
+	
+    
+	history={
+		owner = BLK
+		add_core_of = BLK
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces={
+        1262 7718 3706 4765 10552 3769 10611 3481
+	}
+	manpower = 6612
+	buildings_max_level_factor = 1.000
+	state_category = pastoral
+}

@@ -1,0 +1,1917 @@
+defined_text = {
+	name = GetIdeologyName
+	text = {
+		trigger = {
+			check_variable = { v = chauvinism_var }
+		}
+		localization_key = "CHAUVINISM_TITLE"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = despotism_var }
+		}
+		localization_key = "DESPOTISM_TITLE"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = conservatism_var }
+		}
+		localization_key = "CONSERVATISM_TITLE"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = liberalism_var }
+		}
+		localization_key = "LIBERALISM_TITLE"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = progressivism_var }
+		}
+		localization_key = "PROGRESSIVISM_TITLE"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = socialism_var }
+		}
+		localization_key = "SOCIALISM_TITLE"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = communism_var }
+		}
+		localization_key = "COMMUNISM_TITLE"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = anarchism_var }
+		}
+		localization_key = "ANARCHISM_TITLE"
+	}
+	text = {
+	    localization_key "ANARCHISM_TITLE"
+	}
+}
+
+defined_text = {
+	name = GetPartyName
+	text = {
+		trigger = {
+			check_variable = { v = chauvinism_var }
+		}
+		localization_key = "CHAUVINISM_PARTY_TITLE"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = despotism_var }
+		}
+		localization_key = "DESPOTISM_PARTY_TITLE"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = conservatism_var }
+		}
+		localization_key = "CONSERVATISM_PARTY_TITLE"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = liberalism_var }
+		}
+		localization_key = "LIBERALISM_PARTY_TITLE"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = progressivism_var }
+		}
+		localization_key = "PROGRESSIVISM_PARTY_TITLE"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = socialism_var }
+		}
+		localization_key = "SOCIALISM_PARTY_TITLE"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = communism_var }
+		}
+		localization_key = "COMMUNISM_PARTY_TITLE"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = anarchism_var }
+		}
+		localization_key = "ANARCHISM_PARTY_TITLE"
+	}
+}
+
+
+defined_text = {
+	name = GetRulingPartyNameChauvinism
+	text = {
+		trigger = {		
+            OR = {		
+	      		check_variable = { chauvinism_ruling_party = 1 }
+		    	check_variable = { v = chauvinism_var }
+			}
+			tag = FRA
+		}
+		localization_key = "CHAUVINISM_TITLE_FRA"
+	}
+	text = {
+		trigger = {		
+            OR = {		
+	      		check_variable = { chauvinism_ruling_party = 1 }
+		    	check_variable = { v = chauvinism_var }
+			}
+			tag = SPR
+		}
+		localization_key = "CHAUVINISM_TITLE_SPR"
+	}
+	text = {
+		trigger = {		
+            OR = {		
+	      		check_variable = { chauvinism_ruling_party = 1 }
+		    	check_variable = { v = chauvinism_var }
+			}
+		}
+		localization_key = "CHAUVINISM_TITLE_GENERIC"
+	}
+}
+ 
+
+defined_text = {
+	name = GetRulingPartyNameDespotism
+	text = {
+		trigger = {
+		    OR = {
+		     	check_variable = { despotism_ruling_party = 1 }
+		    	check_variable = { v = despotism_var }
+			}
+			tag = FRA
+		}
+		localization_key = "DESPOTISM_TITLE_FRA"
+	}
+	text = {
+		trigger = {
+		    OR = {
+		     	check_variable = { despotism_ruling_party = 1 }
+		    	check_variable = { v = despotism_var }
+			}
+			tag = SPR
+		}
+		localization_key = "DESPOTISM_TITLE_SPR"
+	}
+	text = {
+		trigger = {
+		    OR = {
+		     	check_variable = { despotism_ruling_party = 1 }
+		    	check_variable = { v = despotism_var }
+			}
+		}
+		localization_key = "DESPOTISM_TITLE_GENERIC"
+	}
+}
+
+defined_text = {
+	name = GetRulingPartyNameConservatism
+	text = {
+		trigger = {
+		    OR = {
+		    	check_variable = { conservatism_ruling_party = 1 }
+			    check_variable = { v = conservatism_var }
+			}
+			tag = FRA 
+		}
+		localization_key = "CONSERVATISM_TITLE_FRA"
+	}
+	text = {
+		trigger = {
+		    OR = {
+		    	check_variable = { conservatism_ruling_party = 1 }
+			    check_variable = { v = conservatism_var }
+			}
+			tag = SPR 
+		}
+		localization_key = "CONSERVATISM_TITLE_SPR"
+	}
+	text = {
+		trigger = {
+		    OR = {
+		    	check_variable = { conservatism_ruling_party = 1 }
+			    check_variable = { v = conservatism_var }
+			}
+		}
+		localization_key = "CONSERVATISM_TITLE_GENERIC"
+	}
+}
+
+defined_text = {
+	name = GetRulingPartyNameLiberalism
+	text = {
+		trigger = {
+		    OR = {
+	    		check_variable = { liberalism_ruling_party = 1 }
+	     		check_variable = { v = liberalism_var }
+			}
+			tag = FRA 
+		}
+		localization_key = "LIBERALISM_TITLE_FRA"
+	}
+	text = {
+		trigger = {
+		    OR = {
+	    		check_variable = { liberalism_ruling_party = 1 }
+	     		check_variable = { v = liberalism_var }
+			}
+			tag = SPR 
+		}
+		localization_key = "LIBERALISM_TITLE_SPR"
+	}
+	text = {
+		trigger = {
+		    OR = {
+	    		check_variable = { liberalism_ruling_party = 1 }
+	     		check_variable = { v = liberalism_var }
+			}
+		}
+		localization_key = "LIBERALISM_TITLE_GENERIC"
+	}
+}
+
+
+defined_text = {
+	name = GetRulingPartyNameProgressivism
+	text = {
+		trigger = {
+		    OR = {
+		    	check_variable = { progressivism_ruling_party = 1 }
+		    	check_variable = { v = progressivism_var }
+			}
+			tag = FRA 
+		}
+		localization_key = "PROGRESSIVISM_TITLE_FRA"
+	}
+	text = {
+		trigger = {
+		    OR = {
+		    	check_variable = { progressivism_ruling_party = 1 }
+		    	check_variable = { v = progressivism_var }
+			}
+			tag = SPR 
+		}
+		localization_key = "PROGRESSIVISM_TITLE_SPR"
+	}
+	text = {
+		trigger = {
+		    OR = {
+		    	check_variable = { progressivism_ruling_party = 1 }
+		    	check_variable = { v = progressivism_var }
+			}
+		}
+		localization_key = "PROGRESSIVISM_TITLE_GENERIC"
+	}
+}
+
+
+defined_text = {
+	name = GetRulingPartyNameSocialism
+	text = {
+		trigger = {
+		    OR = {
+	    		check_variable = { socialism_ruling_party = 1 }
+	    		check_variable = { v = socialism_var }
+			}
+		}
+		localization_key = "SOCIALISM_TITLE_GENERIC"
+	}
+}
+
+
+
+defined_text = {
+	name = GetRulingPartyNameCommunism
+	text = {
+		trigger = {
+		    OR = {
+    			check_variable = { communism_ruling_party = 1 }
+		    	check_variable = { v = communism_var }
+			}
+		}
+		localization_key = "COMMUNISM_TITLE_GENERIC"
+	}
+}
+
+
+defined_text = {
+	name = GetRulingPartyNameAnarchism
+	text = {
+		trigger = {
+		    OR = {
+			    check_variable = { anarchism_ruling_party = 1 }
+				check_variable = { v = anarchism_var }
+			}
+		}
+		localization_key = "ANARCHISM_TITLE_GENERIC"
+	}
+}
+
+defined_text = {
+	name = GetPartyLeader
+	text = {
+		trigger = {
+	        check_variable = { v = chauvinism_var }
+         	meta_trigger = {
+        		text = {
+	        		check_variable = { [IDEOLOGY]_leader = 1 }
+	         	}
+	        	IDEOLOGY = "[GetNewIdeologyNameMeta]"
+        	}
+			tag = FRA 
+		}
+	    localization_key = "CHAUVINISM_LEADER_FRA"
+	}
+	text = {
+		trigger = {
+	        check_variable = { v = despotism_var }
+         	meta_trigger = {
+        		text = {
+	        		check_variable = { [IDEOLOGY]_leader = 1 }
+	         	}
+	        	IDEOLOGY = "[GetNewIdeologyNameMeta]"
+        	}
+			tag = FRA 
+		}
+	    localization_key = "DESPOTISM_LEADER_FRA"
+	}
+	text = {
+		trigger = {
+	        check_variable = { v = conservatism_var }
+         	meta_trigger = {
+        		text = {
+	        		check_variable = { [IDEOLOGY]_leader = 1 }
+	         	}
+	        	IDEOLOGY = "[GetNewIdeologyNameMeta]"
+        	}
+			tag = FRA 
+		}
+	    localization_key = "CONSERVATISM_LEADER_FRA"
+	}
+	text = {
+		trigger = {
+	        check_variable = { v = liberalism_var }
+         	meta_trigger = {
+        		text = {
+	        		check_variable = { [IDEOLOGY]_leader = 1 }
+	         	}
+	        	IDEOLOGY = "[GetNewIdeologyNameMeta]"
+        	}
+			tag = FRA 
+		}
+	    localization_key = "LIBERALISM_LEADER_FRA"
+	}
+	text = {
+		trigger = {
+	        check_variable = { v = progressivism_var }
+         	meta_trigger = {
+        		text = {
+	        		check_variable = { [IDEOLOGY]_leader = 1 }
+	         	}
+	        	IDEOLOGY = "[GetNewIdeologyNameMeta]"
+        	}
+			tag = FRA 
+		}
+	    localization_key = "PROGRESSIVISM_LEADER_FRA"
+	}
+	text = {
+		trigger = {
+	        check_variable = { v = chauvinism_var }
+         	meta_trigger = {
+        		text = {
+	        		check_variable = { [IDEOLOGY]_leader = 1 }
+	         	}
+	        	IDEOLOGY = "[GetNewIdeologyNameMeta]"
+        	}
+			tag = ENG 
+		}
+	    localization_key = "CHAUVINISM_LEADER_ENG"
+	}
+	text = {
+		trigger = {
+	        check_variable = { v = despotism_var }
+         	meta_trigger = {
+        		text = {
+	        		check_variable = { [IDEOLOGY]_leader = 1 }
+	         	}
+	        	IDEOLOGY = "[GetNewIdeologyNameMeta]"
+        	}
+			tag = ENG 
+		}
+	    localization_key = "DESPOTISM_LEADER_ENG"
+	}
+	text = {
+		trigger = {
+	        check_variable = { v = conservatism_var }
+         	meta_trigger = {
+        		text = {
+	        		check_variable = { [IDEOLOGY]_leader = 1 }
+	         	}
+	        	IDEOLOGY = "[GetNewIdeologyNameMeta]"
+        	}
+			tag = ENG 
+		}
+	    localization_key = "CONSERVATISM_LEADER_ENG"
+	}
+	text = {
+		trigger = {
+	        check_variable = { v = liberalism_var }
+         	meta_trigger = {
+        		text = {
+	        		check_variable = { [IDEOLOGY]_leader = 1 }
+	         	}
+	        	IDEOLOGY = "[GetNewIdeologyNameMeta]"
+        	}
+			tag = ENG 
+		}
+	    localization_key = "LIBERALISM_LEADER_ENG"
+	}
+	text = {
+		trigger = {
+	        check_variable = { v = progressivism_var }
+         	meta_trigger = {
+        		text = {
+	        		check_variable = { [IDEOLOGY]_leader = 1 }
+	         	}
+	        	IDEOLOGY = "[GetNewIdeologyNameMeta]"
+        	}
+			tag = ENG 
+		}
+	    localization_key = "PROGRESSIVISM_LEADER_ENG"
+	}
+	text = {    
+		trigger = {
+	        check_variable = { v = chauvinism_var }
+         	meta_trigger = {
+        		text = {
+	        		check_variable = { [IDEOLOGY]_leader = 1 }
+	         	}
+	        	IDEOLOGY = "[GetNewIdeologyNameMeta]"
+        	}
+			tag = SPR 
+		}
+	    localization_key = "CHAUVINISM_LEADER_SPR"
+	}
+	text = {
+		trigger = {
+	        check_variable = { v = despotism_var }
+         	meta_trigger = {
+        		text = {
+	        		check_variable = { [IDEOLOGY]_leader = 1 }
+	         	}
+	        	IDEOLOGY = "[GetNewIdeologyNameMeta]"
+        	}
+			tag = SPR 
+		}
+	    localization_key = "DESPOTISM_LEADER_SPR"
+	}
+	text = {
+		trigger = {
+	        check_variable = { v = conservatism_var }
+         	meta_trigger = {
+        		text = {
+	        		check_variable = { [IDEOLOGY]_leader = 1 }
+	         	}
+	        	IDEOLOGY = "[GetNewIdeologyNameMeta]"
+        	}
+			tag = SPR 
+		}
+	    localization_key = "CONSERVATISM_LEADER_SPR"
+	}
+	text = {
+		trigger = {
+	        check_variable = { v = liberalism_var }
+         	meta_trigger = {
+        		text = {
+	        		check_variable = { [IDEOLOGY]_leader = 1 }
+	         	}
+	        	IDEOLOGY = "[GetNewIdeologyNameMeta]"
+        	}
+			tag = SPR 
+		}
+	    localization_key = "LIBERALISM_LEADER_SPR"
+	}
+	text = {
+		trigger = {
+	        check_variable = { v = progressivism_var }
+         	meta_trigger = {
+        		text = {
+	        		check_variable = { [IDEOLOGY]_leader = 1 }
+	         	}
+	        	IDEOLOGY = "[GetNewIdeologyNameMeta]"
+        	}
+			tag = SPR 
+		}
+	    localization_key = "PROGRESSIVISM_LEADER_SPR"
+	}
+	text = {
+	    trigger = {
+         	meta_trigger = {
+        		text = {
+	        		check_variable = { [IDEOLOGY]_leader = 0 }
+	         	}
+	        	IDEOLOGY = "[GetNewIdeologyNameMeta]"
+        	}
+		}
+	    localization_key = ""
+	}
+	text = {
+	    localization_key = ""
+	}
+}
+
+
+defined_text = {
+	name = GetPartyLeader2
+	text = {
+		trigger = {
+	        check_variable = { chauvinism_ruling_party = 1 }
+			tag = FRA 
+		}
+	    localization_key = "Georges Boulanger"
+	}
+	text = {
+		trigger = {
+	        check_variable = { despotism_ruling_party = 1 }
+			tag = FRA 
+		}
+	    localization_key = "Charles XI"
+	}
+	text = {
+		trigger = {
+	        check_variable = { conservatism_ruling_party = 1 }
+			tag = FRA 
+		}
+	    localization_key = "Patrice de MacMahon"
+	}
+	text = {
+		trigger = {
+	        check_variable = { liberalism_ruling_party = 1}
+			tag = FRA 
+		}
+	    localization_key = "Philippe d'Orleans"
+	}
+	text = {
+		trigger = {
+	        check_variable = { progressivism_ruling_party = 1 }
+			tag = FRA 
+		}
+	    localization_key = "Emile Zola"
+	}
+	text = {
+		trigger = {
+	        check_variable = { chauvinism_ruling_party = 1 }
+			tag = ENG 
+		}
+	    localization_key = "Joseph Chamberlain"
+	}
+	text = {
+		trigger = {
+	        check_variable = { despotism_ruling_party = 1 }
+			tag = ENG 
+		}
+	    localization_key = "Cecil Rhodes"
+	}
+	text = {
+		trigger = {
+	        check_variable = { conservatism_ruling_party = 1 }
+			tag = ENG 
+		}
+	    localization_key = "Stafford Northcote"
+	}
+	text = {
+		trigger = {
+	        check_variable = { liberalism_ruling_party = liberalism_var }
+			tag = ENG 
+		}
+	    localization_key = "Charles Dilkes"
+	}
+	text = {
+		trigger = {
+	        check_variable = { progressivism_ruling_party = progressivism_var }
+			tag = ENG 
+		}
+	    localization_key = "George B. Shaw"
+	}
+	text = {
+		trigger = {
+	        check_variable = { chauvinism_ruling_party = 1 }
+			tag = SPR 
+		}
+	    localization_key = "Ramón Nocedal"
+	}
+	text = {
+		trigger = {
+	        check_variable = { despotism_ruling_party = 1 }
+			tag = SPR 
+		}
+	    localization_key = "Charles XI"
+	}
+	text = {
+		trigger = {
+	        check_variable = { conservatism_ruling_party = 1 }
+			tag = SPR 
+		}
+	    localization_key = "Cánovas del Castillo"
+	}
+	text = {
+		trigger = {
+	        check_variable = { liberalism_ruling_party = 1}
+			tag = SPR 
+		}
+	    localization_key = "Práxedes Mateo Sagasta"
+	}
+	text = {
+		trigger = {
+	        check_variable = { progressivism_ruling_party = 1 }
+			tag = SPR 
+		}
+	    localization_key = "Francisco Pi y Margall"
+	}
+	text = {
+	    localization_key = "Alex Jones"
+	}
+}
+
+defined_text = {
+	name = GetNewIdeologyNameMeta
+	text = {
+		trigger = {
+			check_variable = { v = chauvinism_var }
+		}
+		localization_key = "chauvinism"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = despotism_var }
+		}
+		localization_key = "despotism"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = conservatism_var }
+		}
+		localization_key = "conservatism"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = liberalism_var }
+		}
+		localization_key = "liberalism"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = progressivism_var }
+		}
+		localization_key = "progressivism"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = socialism_var }
+		}
+		localization_key = "socialism"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = communism_var }
+		}
+		localization_key = "communism"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = anarchism_var }
+		}
+		localization_key = "anarchism"
+	}
+}
+
+
+defined_text = {
+	name = GetNewIdeologyNameMeta1 
+	text = {
+		trigger = {
+			check_variable = { chauvinism_ruling_party = 1 }
+		}
+		localization_key = "chauvinism"
+	}
+	text = {
+		trigger = {
+			check_variable = { despotism_ruling_party = 1 }
+		}
+		localization_key = "despotism"
+	}
+	text = {
+		trigger = {
+			check_variable = { conservatism_ruling_party = 1 }
+		}
+		localization_key = "conservatism"
+	}
+	text = {
+		trigger = {
+			check_variable = { liberalism_ruling_party = 1 }
+		}
+		localization_key = "liberalism"
+	}
+	text = {
+		trigger = {
+			check_variable = { progressivism_ruling_party = 1 }
+		}
+		localization_key = "progressivism"
+	}
+	text = {
+		trigger = {
+			check_variable = { socialism_ruling_party = 1 }
+		}
+		localization_key = "socialism"
+	}
+	text = {
+		trigger = {
+			check_variable = { communism_ruling_party = 1 }
+		}
+		localization_key = "communism"
+	}
+	text = {
+		trigger = {
+			check_variable = { anarchism_ruling_party = 1 }
+		}
+		localization_key = "anarchism"
+	}
+}
+
+
+defined_text = {
+	name = GetNewIdeologyNameMeta2
+	text = {
+		trigger = {
+			check_variable = { chauvinism_ruling_party = 1 }
+		}
+		localization_key = "1"
+	}
+	text = {
+		trigger = {
+			check_variable = { despotism_ruling_party = 1 }
+		}
+		localization_key = "2"
+	}
+	text = {
+		trigger = {
+			check_variable = { conservatism_ruling_party = 1 }
+		}
+		localization_key = "3"
+	}
+	text = {
+		trigger = {
+			check_variable = { liberalism_ruling_party = 1 }
+		}
+		localization_key = "4"
+	}
+	text = {
+		trigger = {
+			check_variable = { progressivism_ruling_party = 1 }
+		}
+		localization_key = "5"
+	}
+	text = {
+		trigger = {
+			check_variable = { socialism_ruling_party = 1 }
+		}
+		localization_key = "6"
+	}
+	text = {
+		trigger = {
+			check_variable = { communism_ruling_party = 1 }
+		}
+		localization_key = "7"
+	}
+	text = {
+		trigger = {
+			check_variable = { anarchism_ruling_party = 1 }
+		}
+		localization_key = "8"
+	}
+}
+
+
+defined_text = {
+	name = GetGovTypeNameMeta
+	text = {
+		trigger = {
+			has_government = absolutist
+		}
+		localization_key = "absolutist"
+	}
+	text = {
+		trigger = {
+			has_government = absolute
+		}
+		localization_key = "absolute"
+	}
+	text = {
+		trigger = {
+			has_government = elective
+		}
+		localization_key = "elective"
+	}
+	text = {
+		trigger = {
+			has_government = constitutional
+		}
+		localization_key = "constitutional"
+	}
+	text = {
+		trigger = {
+			has_government = tribal_confederation
+		}
+		localization_key = "tribal_confederation"
+	}
+	text = {
+		trigger = {
+			has_government = oligarchic
+		}
+		localization_key = "oligarchic"
+	}
+	text = {
+		trigger = {
+			has_government = socialist
+		}
+		localization_key = "socialist"
+	}
+	text = {
+		trigger = {
+			has_government = conservative
+		}
+		localization_key = "conservative"
+	}
+	text = {
+		trigger = {
+			has_government = revolutionary
+		}
+		localization_key = "revolutionary"
+	}
+	text = {
+		trigger = {
+			has_government = free_city
+		}
+		localization_key = "free_city"
+	}
+	text = {
+		trigger = {
+			has_government = dictatorship
+		}
+		localization_key = "classic_dictatorship"
+	}
+	text = {
+		trigger = {
+			has_government = colonial
+		}
+		localization_key = "colonial_administration"
+	}
+	text = {
+		trigger = {
+			has_government = theocracy
+		}
+		localization_key = "classic_theocracy"
+	}
+}
+
+defined_text = {
+	name = GetNewIdeologyNameMetaCapital
+	text = {
+		trigger = {
+			check_variable = { v = chauvinism_var }
+		}
+		localization_key = "CHAUVINISM"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = despotism_var }
+		}
+		localization_key = "DESPOTISM"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = conservatism_var }
+		}
+		localization_key = "CONSERVATISM"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = liberalism_var }
+		}
+		localization_key = "LIBERALISM"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = progressivism_var }
+		}
+		localization_key = "PROGRESSIVISM"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = socialism_var }
+		}
+		localization_key = "SOCIALISM"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = communism_var }
+		}
+		localization_key = "COMMUNISM"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = anarchism_var }
+		}
+		localization_key = "ANARCHISM"
+	}
+}
+
+defined_text = {
+	name = GetNewIdeologyPartyLeaderExisting
+	text = {
+		trigger = {
+         	meta_trigger = {
+        		text = {
+	        		check_variable = { [IDEOLOGY]_leader = 1 }
+	         	}
+	        	IDEOLOGY = "[GetNewIdeologyNameMeta]"
+        	}
+		}
+		localization_key = "Led by "
+	}
+	text = {
+        localization_key = ""	
+	}
+}
+
+defined_text = {
+	name = GetNewIdeologyPartyStatus
+	text = {
+		trigger = {
+         	meta_trigger = {
+        		text = {
+	        		check_variable = { [IDEOLOGY]_ruling_party = 1 }
+	         	}
+	        	IDEOLOGY = "[GetNewIdeologyNameMeta]"
+        	}
+		}
+		localization_key = "RULING"
+	}
+	text = {
+		trigger = {
+         	meta_trigger = {
+        		text = {
+	        		check_variable = { [IDEOLOGY]_coalition_party = 1 }
+	         	}
+	        	IDEOLOGY = "[GetNewIdeologyNameMeta]"
+        	}
+		}
+		localization_key = "COALITION"
+	}
+	text = {
+        localization_key = "OPPOSITION"	
+	}
+}
+
+
+defined_text = {
+	name = GetNewIdeologyPartyStatusIcon
+	text = {
+		trigger = {
+         	meta_trigger = {
+        		text = {
+	        		check_variable = { [IDEOLOGY]_ruling_party = 1 }
+	         	}
+	        	IDEOLOGY = "[GetNewIdeologyNameMeta]"
+        	}
+		}
+		localization_key = "GFX_new_ideologies_ruling_icon"
+	}
+	text = {
+		trigger = {
+         	meta_trigger = {
+        		text = {
+	        		check_variable = { [IDEOLOGY]_coalition_party = 1 }
+	         	}
+	        	IDEOLOGY = "[GetNewIdeologyNameMeta]"
+        	}
+		}
+		localization_key = "GFX_new_ideologies_coalition_icon"
+	}
+	text = {
+        localization_key = ""	
+	}
+}
+
+
+defined_text = {
+	name = GetNewIdeologyPartyIcon
+	text = {
+		trigger = {
+         	check_variable = { despotism_ruling_party = 1 }
+		}
+		localization_key = "GFX_new_ideologies_chauvinism_icon"
+	}
+	text = {
+		trigger = {
+			check_variable = { despotism_ruling_party = 1 }
+		}
+		localization_key = "GFX_new_ideologies_despotism_icon"
+	}
+	text = {
+		trigger = {
+			check_variable = { conservatism_ruling_party = 1 }
+		}
+		localization_key = "GFX_new_ideologies_conservatism_icon"
+	}
+	text = {
+		trigger = {
+			check_variable = { liberalism_ruling_party = 1 }
+		}
+		localization_key = "GFX_new_ideologies_liberalism_icon"
+	}
+	text = {
+		trigger = {
+			check_variable = { progressivism_ruling_party = 1 }
+		}
+		localization_key = "GFX_new_ideologies_progressivism_icon"
+	}
+	text = {
+		trigger = {
+			check_variable = { socialism_ruling_party = 1 }
+		}
+		localization_key = "GFX_new_ideologies_socialism_icon"
+	}
+	text = {
+		trigger = {
+			check_variable = { communism_ruling_party = 1 }
+		}
+		localization_key = "GFX_new_ideologies_communism_icon"
+	}
+	text = {
+		trigger = {
+			check_variable = { anarchism_ruling_party = 1  }
+		}
+		localization_key = "GFX_new_ideologies_anarchism_icon"
+	}
+	text = {
+        localization_key = ""	
+	}
+}
+
+
+
+defined_text = {
+	name = GetNewIdeologyPartyIcon1
+	text = {
+		trigger = {
+         	check_variable = { v = chauvinism_var }
+		}
+		localization_key = "GFX_new_ideologies_chauvinism_icon"
+	}
+	text = {
+		trigger = {
+            check_variable = { v = despotism_var }
+		}
+		localization_key = "GFX_new_ideologies_despotism_icon"
+	}
+	text = {
+		trigger = {
+           	check_variable = { v = conservatism_var }
+		}
+		localization_key = "GFX_new_ideologies_conservatism_icon"
+	}
+	text = {
+		trigger = {
+            check_variable = { v = liberalism_var }
+		}
+		localization_key = "GFX_new_ideologies_liberalism_icon"
+	}
+	text = {
+		trigger = {
+           	check_variable = { v = progressivism_var }
+		}
+		localization_key = "GFX_new_ideologies_progressivism_icon"
+	}
+	text = {
+		trigger = {
+            check_variable = { v = socialism_var }
+		}
+		localization_key = "GFX_new_ideologies_socialism_icon"
+	}
+	text = {
+		trigger = {
+            check_variable = { v = communism_var }
+		}
+		localization_key = "GFX_new_ideologies_communism_icon"
+	}
+	text = {
+		trigger = {
+           	check_variable = { v = anarchism_var }
+		}
+		localization_key = "GFX_new_ideologies_anarchism_icon"
+	}
+	text = {
+        localization_key = ""	
+	}
+}
+
+
+defined_text = {
+	name = GetNewIdeologyPartyRulingDiplo
+	text = {
+		trigger = {
+			check_variable = { chauvinism_ruling_party = 1 }
+		}
+		localization_key = "CHAUVINISM_PARTY_TITLE"
+	}
+	text = {
+		trigger = {
+			check_variable = { despotism_ruling_party = 1 }
+		}
+		localization_key = "DESPOTISM_PARTY_TITLE"
+	}
+	text = {
+		trigger = {
+			check_variable = { conservatism_ruling_party = 1 }
+		}
+		localization_key = "CONSERVATISM_PARTY_TITLE"
+	}
+	text = {
+		trigger = {
+			check_variable = { liberalism_ruling_party = 1 }
+		}
+		localization_key = "LIBERALISM_PARTY_TITLE"
+	}
+	text = {
+		trigger = {
+			check_variable = { progressivism_ruling_party = 1 }
+		}
+		localization_key = "PROGRESSIVISM_PARTY_TITLE"
+	}
+	text = {
+		trigger = { 
+			check_variable = { socialism_ruling_party = 1 }
+		}
+		localization_key = "SOCIALISM_PARTY_TITLE"
+	}
+	text = {
+		trigger = {
+			check_variable = { communism_ruling_party = 1 }
+		}
+		localization_key = "COMMUNISM_PARTY_TITLE"
+	}
+	text = {
+		trigger = {
+			check_variable = { anarchism_ruling_party = 1 }
+		}
+		localization_key = "ANARCHISM_PARTY_TITLE"
+	}
+}
+
+defined_text = {
+	name = GetHOGPortraitLeader
+	text = {
+		trigger = {
+			check_variable = { hog_name = 1000 }
+		}
+		localization_key = "Portrait_AUS_Carl_Menger"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_name = 2000 }
+		}
+		localization_key = "Portrait_SPR_Pedro_de_Zuniga"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_name = 2001 }
+		}
+		localization_key = "Portrait_HOG_none"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_name = 2002 }
+		}
+		localization_key = "Portrait_HOG_none"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_name = 2003 }
+		}
+		localization_key = "Portrait_SPR_Pascual_Cucala"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_name = 2004 }
+		}
+		localization_key = "Portrait_SPR_Anselmo_Lorenzo"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_name = 2005 }
+		}
+		localization_key = "Portrait_SPR_Manuel_Ruiz_Zorrilla"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_name = 2006 }
+		}
+		localization_key = "Portrait_HOG_none"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_name = 2007 }
+		}
+		localization_key = "Portrait_SPR_Marquis_Urbano_Feijoo"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_name = 10000 }
+		}
+		localization_key = "Portrait_GUA_Juan_Barrundia"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 101 }
+		}
+		localization_key = "Portrait_HOG_generic_Europe1"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 102 }
+		}
+		localization_key = "Portrait_HOG_generic_Europe2"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 103 }
+		}
+		localization_key = "Portrait_HOG_generic_Europe3"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 104 }
+		}
+		localization_key = "Portrait_HOG_generic_Europe4"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 105 }
+		}
+		localization_key = "Portrait_HOG_generic_Europe5"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 106 }
+		}
+		localization_key = "Portrait_HOG_generic_Europe6"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 107 }
+		}
+		localization_key = "Portrait_HOG_generic_Europe7"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 108 }
+		}
+		localization_key = "Portrait_HOG_generic_Europe8"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 109 }
+		}
+		localization_key = "Portrait_HOG_generic_Europe9"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 110 }
+		}
+		localization_key = "Portrait_HOG_generic_Europe10"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 111 }
+		}
+		localization_key = "Portrait_HOG_generic_Europe11"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 112 }
+		}
+		localization_key = "Portrait_HOG_generic_Europe12"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 113 }
+		}
+		localization_key = "Portrait_HOG_generic_Europe13"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 114 }
+		}
+		localization_key = "Portrait_HOG_generic_Europe14"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 201 }
+		}
+		localization_key = "Portrait_HOG_generic_Arabia1"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 202 }
+		}
+		localization_key = "Portrait_HOG_generic_Arabia2"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 203 }
+		}
+		localization_key = "Portrait_HOG_generic_Arabia3"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 204 }
+		}
+		localization_key = "Portrait_HOG_generic_Arabia4"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 205 }
+		}
+		localization_key = "Portrait_HOG_generic_Arabia5"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 301 }
+		}
+		localization_key = "Portrait_HOG_generic_Africa1"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 302 }
+		}
+		localization_key = "Portrait_HOG_generic_Africa2"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 303 }
+		}
+		localization_key = "Portrait_HOG_generic_Africa3"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 304 }
+		}
+		localization_key = "Portrait_HOG_generic_Africa4"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 305 }
+		}
+		localization_key = "Portrait_HOG_generic_Africa5"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 306 }
+		}
+		localization_key = "Portrait_HOG_generic_Africa6"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 401 }
+		}
+		localization_key = "Portrait_HOG_generic_North_America1"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 402 }
+		}
+		localization_key = "Portrait_HOG_generic_North_America2"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 403 }
+		}
+		localization_key = "Portrait_HOG_generic_North_America3"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 404 }
+		}
+		localization_key = "Portrait_HOG_generic_North_America4"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_portrait = 405 }
+		}
+		localization_key = "Portrait_HOG_generic_North_America5"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = has_hog
+			}
+		}
+		localization_key = "Portrait_HOG_none"
+	}
+}
+defined_text = {
+	name = GetHOGLoyalty
+		text = {
+			trigger = {
+				check_variable = { hog_loyalty < 0.0625 }
+			}
+			localization_key = "GFX_loyalty_bar_0"
+		}
+		text = {
+			trigger = {
+				check_variable = { var = hog_loyalty value = 0.0625 compare = greater_than_or_equals}
+				check_variable = { hog_loyalty < 0.1875 }
+			}
+			localization_key = "GFX_loyalty_bar_12_5"
+		}
+		text = {
+			trigger = {
+				check_variable = { var = hog_loyalty value = 0.1875 compare = greater_than_or_equals}
+				check_variable = { hog_loyalty < 0.3125 }
+			}
+			localization_key = "GFX_loyalty_bar_25"
+		}
+		text = {
+			trigger = {
+				check_variable = { var = hog_loyalty value = 0.3125 compare = greater_than_or_equals}
+				check_variable = { hog_loyalty < 0.4375 }
+			}
+			localization_key = "GFX_loyalty_bar_37_5"
+		}
+		text = {
+			trigger = {
+				check_variable = { var = hog_loyalty value = 0.4375 compare = greater_than_or_equals}
+				check_variable = { hog_loyalty < 0.5625 }
+			}
+			localization_key = "GFX_loyalty_bar_50"
+		}
+		text = {
+			trigger = {
+				check_variable = { var = hog_loyalty value = 0.5625 compare = greater_than_or_equals}
+				check_variable = { hog_loyalty < 0.6875 }
+			}
+			localization_key = "GFX_loyalty_bar_62_5"
+		}
+		text = {
+			trigger = {
+				check_variable = { var = hog_loyalty value = 0.6875 compare = greater_than_or_equals}
+				check_variable = { hog_loyalty < 0.8125 }
+			}
+			localization_key = "GFX_loyalty_bar_75"
+		}
+		text = {
+			trigger = {
+				check_variable = { var = hog_loyalty value = 0.8125 compare = greater_than_or_equals}
+				check_variable = { hog_loyalty < 0.9375 }
+			}
+			localization_key = "GFX_loyalty_bar_87_5"
+		}
+		text = {
+			trigger = {
+				check_variable = { var = hog_loyalty value = 0.9375 compare = greater_than_or_equals}
+			}
+			localization_key = "GFX_loyalty_bar_100"
+		}
+}
+
+
+defined_text = {
+	name = GetHOGPortraitLeaderDesc
+	text = {
+		trigger = {
+			check_variable = { hog_name = 1000 }
+		}
+		localization_key = AUS_CARL_MENGER_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_name = 2000 }
+		}
+		localization_key = SPR_PEDRO_DE_ZUNIGA_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_name = 2001 }
+		}
+		localization_key = SPR_ENRIQUE_SENATE_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_name = 2002 }
+		}
+		localization_key = SPR_JOSE_ABASCAL_Y_CARRENDAND_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_name = 2003 }
+		}
+		localization_key = SPR_PASCUAL_CUCALA_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_name = 2004 }
+		}
+		localization_key = SPR_ANSELMO_LORENZO_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_name = 2005 }
+		}
+		localization_key = "SPR_MANUEL_RUIZ_ZORRILLA_DESC"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_name = 2006 }
+		}
+		localization_key = "SPR_FRANCISCO_ARMERO_Y_DIAZ_DESC"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_name = 2007 }
+		}
+		localization_key = "SPR_MARQUIS_URBANO_FEIJOO_DESC"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_name = 10000 }
+		}
+		localization_key = GUA_JUAN_BARRUNDIA_DESC
+	}
+	#Stability
+	text = {
+		trigger = {
+			check_variable = { hog_desc = 1 }
+		}
+		localization_key = GENERIC_1_HOG_DESC
+	}
+	#Political Power
+	text = {
+		trigger = {
+			check_variable = { hog_desc = 2 }
+		}
+		localization_key = GENERIC_2_HOG_DESC
+	}
+	#Military
+	text = {
+		trigger = {
+			check_variable = { hog_desc = 3 }
+		}
+		localization_key = GENERIC_3_HOG_DESC
+	}
+	#Industry
+	text = {
+		trigger = {
+			check_variable = { hog_desc = 4 }
+		}
+		localization_key = GENERIC_4_HOG_DESC
+	}
+	#Religion
+	text = {
+		trigger = {
+			check_variable = { hog_desc = 5 }
+		}
+		localization_key = GENERIC_5_HOG_DESC
+	}
+	#Research
+	text = {
+		trigger = {
+			check_variable = { hog_desc = 6 }
+		}
+		localization_key = GENERIC_6_HOG_DESC
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = has_hog
+			}
+		}
+		localization_key = UNKNOWN_DESC
+	}
+}
+defined_text = {
+	name = GetHOGPortraitLeaderTitle
+	text = {
+		trigger = {
+			check_variable = { hog_title = 1 }
+		}
+		localization_key = "Chancellor"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_title = 2 }
+		}
+		localization_key = LEADER_TITLE_CORTES_GENERALES
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_title = 10 }
+		}
+		localization_key = LEADER_TITLE_INTERIM_PRESIDENT
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_title < 1 }
+		}
+		localization_key = LEADER_TITLE_HEAD_OF_GOVERNMENT
+	}
+}
+
+defined_text = {
+	name = GetHOGPortraitLeaderIdeology
+	text = {
+		trigger = {
+			check_variable = { hog_party = 1 }
+		}
+		localization_key = CHAUVINISM_TITLE_GENERIC
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_party = 2 }
+		}
+		localization_key = DESPOTISM_TITLE_GENERIC
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_party = 3 }
+		}
+		localization_key = CONSERVATISM_TITLE_GENERIC
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_party = 4 }
+		}
+		localization_key = LIBERALISM_TITLE_GENERIC
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_party = 5 }
+		}
+		localization_key = PROGRESSIVISM_TITLE_GENERIC
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_party = 6 }
+		}
+		localization_key = SOCIALISM_TITLE_GENERIC
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_party = 7 }
+		}
+		localization_key = COMMUNISM_TITLE_GENERIC
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_party = 8 }
+		}
+		localization_key = ANARCHISM_TITLE_GENERIC
+	}
+}
+defined_text = {
+	name = GetHOGExpNeeded
+	text = {
+		trigger = {
+			check_variable = { hog_exp < 11 }
+		}
+		localization_key = "they are at: [?hog_exp]/11 xp before they level up."
+	}
+	text = {
+		trigger = {
+			check_variable = { var = hog_exp value = 11 compare = greater_than_or_equals}
+			check_variable = { hog_exp < 37 }
+		}
+		localization_key = "they are at: [?hog_exp]/37 xp before they level up."
+	}
+	text = {
+		trigger = {
+			check_variable = { var = hog_exp value = 37 compare = greater_than_or_equals}
+			check_variable = { hog_exp < 67 }
+		}
+		localization_key = "they are at: [?hog_exp]/67 xp before they level up."
+	}
+	text = {
+		trigger = {
+			check_variable = { var = hog_exp value = 67 compare = greater_than_or_equals}
+			check_variable = { hog_exp < 101 }
+		}
+		localization_key = "they are at: [?hog_exp]/101 xp before they level up."
+	}
+	text = {
+		trigger = {
+			check_variable = { var = hog_exp value = 101 compare = greater_than_or_equals}
+		}
+		localization_key = "they have achieved the max level."
+	}
+}
+defined_text = {
+	name = GetHOGSkill
+	text = {
+		trigger = {
+			check_variable = { hog_exp < 11 }
+		}
+		localization_key = "1"
+	}
+	text = {
+		trigger = {
+			check_variable = { var = hog_exp value = 11 compare = greater_than_or_equals}
+			check_variable = { hog_exp < 37 }
+		}
+		localization_key = "2"
+	}
+	text = {
+		trigger = {
+			check_variable = { var = hog_exp value = 37 compare = greater_than_or_equals}
+			check_variable = { hog_exp < 67 }
+		}
+		localization_key = "3"
+	}
+	text = {
+		trigger = {
+			check_variable = { var = hog_exp value = 67 compare = greater_than_or_equals}
+			check_variable = { hog_exp < 101 }
+		}
+		localization_key = "4"
+	}
+	text = {
+		trigger = {
+			check_variable = { var = hog_exp value = 101 compare = greater_than_or_equals}
+		}
+		localization_key = "5"
+	}
+}
+defined_text = {
+	name = GetHOGPoliticalSkill
+	text = {
+		trigger = {
+			check_variable = { hog_political_skill = 0 }
+		}
+		localization_key = "0"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_political_skill = 0.025 }
+		}
+		localization_key = "1"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_political_skill = 0.050 }
+		}
+		localization_key = "2"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_political_skill = 0.075 }
+		}
+		localization_key = "3"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_political_skill = 0.100 }
+		}
+		localization_key = "4"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_political_skill = 0.125 }
+		}
+		localization_key = "5"
+	}
+}
+defined_text = {
+	name = GetHOGUnitySkill
+	text = {
+		trigger = {
+			check_variable = { hog_unity_skill = 0 }
+		}
+		localization_key = "0"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_unity_skill = 0.025 }
+		}
+		localization_key = "1"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_unity_skill = 0.050 }
+		}
+		localization_key = "2"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_unity_skill = 0.075 }
+		}
+		localization_key = "3"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_unity_skill = 0.100 }
+		}
+		localization_key = "4"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_unity_skill = 0.125 }
+		}
+		localization_key = "5"
+	}
+}
+defined_text = {
+	name = GetHOGIndustrialSkill
+	text = {
+		trigger = {
+			check_variable = { hog_industrial_skill = 0 }
+		}
+		localization_key = "0"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_industrial_skill = 0.025 }
+		}
+		localization_key = "1"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_industrial_skill = 0.050 }
+		}
+		localization_key = "2"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_industrial_skill = 0.075 }
+		}
+		localization_key = "3"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_industrial_skill = 0.100 }
+		}
+		localization_key = "4"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_industrial_skill = 0.125 }
+		}
+		localization_key = "5"
+	}
+}
+defined_text = {
+	name = GetHOGMilitarySkill
+	text = {
+		trigger = {
+			check_variable = { hog_military_skill = 0 }
+		}
+		localization_key = "0"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_military_skill = 0.025 }
+		}
+		localization_key = "1"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_military_skill = 0.050 }
+		}
+		localization_key = "2"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_military_skill = 0.075 }
+		}
+		localization_key = "3"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_military_skill = 0.100 }
+		}
+		localization_key = "4"
+	}
+	text = {
+		trigger = {
+			check_variable = { hog_military_skill = 0.125 }
+		}
+		localization_key = "5"
+	}
+}

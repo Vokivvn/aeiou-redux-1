@@ -1,0 +1,211 @@
+SpriteTypes = {                   
+	SpriteType = {
+		name = "GFX_idea_AUS_house_of_habsburg"
+		texturefile = "gfx/interface/ideas/austria/AUS_house_of_habsburg.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_AUS_disorganised_army"
+		texturefile = "gfx/interface/ideas/austria/AUS_disorganised_army.dds"
+	}       
+
+	SpriteType = {
+		name = "GFX_idea_AUS_high_feudalism"
+		texturefile = "gfx/interface/ideas/austria/AUS_high_feudalism.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_AUS_winds_of_change"
+		texturefile = "gfx/interface/ideas/austria/AUS_winds_of_change.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_generic_HRE_elector"
+		texturefile = "gfx/interface/ideas/generic/generic_HRE_elector.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_generic_HRE_emperor"
+		texturefile = "gfx/interface/ideas/generic/generic_HRE_emperor.dds"
+	}       
+
+	SpriteType = {
+		name = "GFX_idea_generic_HRE_free_city"
+		texturefile = "gfx/interface/ideas/generic/generic_HRE_free_city.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_generic_HRE_prince"
+		texturefile = "gfx/interface/ideas/generic/generic_HRE_prince.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_SPR_backwards_economy"
+		texturefile = "gfx/interface/ideas/spain/SPR_backwards_economy.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SPR_strong_regional_fueros"
+		texturefile = "gfx/interface/ideas/spain/SPR_Strong_Regional_Fueros.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SPR_religious_fanaticism"
+		texturefile = "gfx/interface/ideas/spain/SPR_religious_fanaticism.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_generic_centralized_economy"
+		texturefile = "gfx/interface/ideas/generic/focus_centralized_economy.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_generic_decentralized_economy"
+		texturefile = "gfx/interface/ideas/generic/focus_decentralized_economy.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SPR_religious_teaching"
+		texturefile = "gfx/interface/ideas/spain/SPR_religious_teaching.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_generic_noble_support"
+		texturefile = "gfx/interface/ideas/generic/focus_generic_noble_support.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SPR_anticlerical_terrorism"
+		texturefile = "gfx/interface/ideas/spain/SPR_anticlerical_terrorism.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_WUR_Concentrated_Power"
+		texturefile = "gfx/interface/ideas/wurttemberg/WUR_Concentrated_Power.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SAX_Lions_of_Dresden"
+		texturefile = "gfx/interface/ideas/saxony/SAX_Lions_of_Dresden.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SPN_Brabantian_Nationalism"
+		texturefile = "gfx/interface/ideas/spanish_netherlands/SPN_Brabantian_Nationalism.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SPN_Ongoing_Industrialisation"
+		texturefile = "gfx/interface/ideas/spanish_netherlands/SPN_Ongoing_Industrialisation.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SPN_Burgeois_Opposition"
+		texturefile = "gfx/interface/ideas/spanish_netherlands/SPN_Burgeois_Opposition.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_TUS_fortification_effort"
+		texturefile = "gfx/interface/ideas/tuscany/TUS_fortification_effort.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SAX_Wittin_Line"
+		texturefile = "gfx/interface/ideas/saxony/SAX_Wittin_Line.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SAX_Wittin_Line"
+		texturefile = "gfx/interface/ideas/trier/TRI_university.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_TRI_church_taxes"
+		texturefile = "gfx/interface/ideas/trier/TRI_church_taxes.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_generic_Burgeois_Support"
+		texturefile = "gfx/interface/ideas/generic/Burgeois_Support.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_generic_supperior_craftmanship"
+		texturefile = "gfx/interface/ideas/generic/Supperior_Craftmanship.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_WUR_Merchants_of_Ravensburg"
+		texturefile = "gfx/interface/ideas/wurttemberg/WUR_Merchants_of_Ravensburg.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_Sociedad_Industrial_Flamenco-Espanola"
+		texturefile = "gfx/interface/ideas/spanish_netherlands/Sociedad_Industrial_Flamenco-Espanola.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SPN_Noble_Funded_Banks"
+		texturefile = "gfx/interface/ideas/spanish_netherlands/SPN_Noble_Funded_Banks.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SPR_Light_Economic_Ties"
+		texturefile = "gfx/interface/ideas/spain/SPR_Light_Economic_Ties.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SPR_Severe_Economic_Ties"
+		texturefile = "gfx/interface/ideas/spain/SPR_Severe_Economic_Ties.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SPR_Economic_Ties"
+		texturefile = "gfx/interface/ideas/spain/SPR_Economic_Ties.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_AUS_Taxes"
+		texturefile = "gfx/interface/ideas/austria/AUS_Taxes.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_generic_money_printing"
+		texturefile = "gfx/interface/ideas/generic/focus_money_printing.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_AUS_industrial_campaign"
+		texturefile = "gfx/interface/ideas/austria/AUS_industrial_campaign.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_AUS_peasant_recruits"
+		texturefile = "gfx/interface/ideas/austria/AUS_peasant_recruits.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_FRA_decaying_military"
+		texturefile = "gfx/interface/ideas/france/FRA_decaying_military.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_FRA_ramping_decentralization"
+		texturefile = "gfx/interface/ideas/france/FRA_ramping_decentralization.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_FRA_nationalistic_breeding_ground"
+		texturefile = "gfx/interface/ideas/france/FRA_nationalistic_breeding_ground.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_FRA_extracontinental_agitation"
+		texturefile = "gfx/interface/ideas/france/FRA_extracontinental_agitation.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_AUS_cooperation_with_austria"
+		texturefile = "gfx/interface/ideas/austria/AUS_cooperation_with_austria.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_AUS_defensive_mobilization"
+		texturefile = "gfx/interface/ideas/austria/AUS_defensive_mobilization.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_FRA_colonial_adventures"
+		texturefile = "gfx/interface/ideas/France/FRA_colonial_adventures.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_LAK_native_lib_army"
+		texturefile = "gfx/interface/ideas/France/FRA_colonial_adventures.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_quality_idea"
+		texturefile = "gfx/interface/ideas/Generic/quality_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_support_peasants"
+		texturefile = "gfx/interface/ideas/Generic/Support_the_Peasantry.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_AUS_better_payments"
+		texturefile = "gfx/interface/ideas/AUS_better_payments.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_AUS_hungarian_landwehr"
+		texturefile = "gfx/interface/ideas/AUS_hungarian_landwehr.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_AUS_increased_militarization"
+		texturefile = "gfx/interface/ideas/AUS_increased_militarization.dds"
+	}
+}

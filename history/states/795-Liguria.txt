@@ -1,0 +1,33 @@
+
+state={
+	id=795
+	name="STATE_795" 
+	manpower = 770802
+	resources={
+		wood = 2
+		horses=2
+		gunpowder =1
+	}
+	
+	state_category = large_town
+
+	history={
+		owner = GEN
+		add_core_of = GEN
+		buildings = {
+			6788 = {
+				naval_base = 4
+			}
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		victory_points = {
+			6788 10 
+		}		
+	}
+
+	provinces={
+		6788 3772 11891
+	}
+}

@@ -1,0 +1,658 @@
+focus_tree = {
+	id = france_first_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 12
+			tag = FRA
+		}
+	}
+	
+	default = no
+	continuous_focus_position = { x = 50 y = 2000 }
+
+
+	###########
+	#  Start  #
+	###########
+	
+	focus = { 
+		id = FRA_matters_of_state
+		icon = GFX_FRA_matters_state
+		cost = 50
+	
+		x = 3
+		y = 0
+		
+		
+		
+		completion_reward = {
+			add_political_power = 100
+			country_event = FRARealmevents.1
+		}
+	}
+	focus = { 
+		id = FRA_lambert_report
+		icon = GFX_FRA_Lambert_Report
+		cost = 15
+		available = {
+			has_country_flag = FRA_nativefireworks
+		}
+		prerequisite = { focus = FRA_matters_of_state }
+		relative_position_id = FRA_matters_of_state
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			country_event = FRALouisiana.1
+		}
+	}
+	focus = { 
+		id = FRA_secure_caroline
+		icon = GFX_goal_generic_fortify_city
+		cost = 40
+		prerequisite = { focus = FRA_lambert_report }
+		relative_position_id = FRA_lambert_report
+		x = -2
+		y = 1
+		
+		completion_reward = {
+			395 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 9450
+				}
+			}
+			394 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 12357
+				}
+			}
+		}
+	}
+	focus = { 
+		id = FRA_renovate_orleanian_harbor
+		icon = GFX_FRA_renovate_the_orleanian_harbour
+		cost = 30
+		prerequisite = { focus = FRA_secure_caroline }
+		relative_position_id = FRA_secure_caroline
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			371 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard 
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base 
+					level = 2
+					instant_build = yes
+					province = 7552
+				}
+			}
+		}
+	}
+	focus = { 
+		id = FRA_riverup_estratagems
+		icon = GFX_focus_generic_feudalisms_stand
+		cost = 25
+		prerequisite = { focus = FRA_secure_caroline }
+		relative_position_id = FRA_secure_caroline
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			army_experience = 15
+		}
+	}
+	focus = { 
+		id = FRA_partition_comancheria
+		icon = GFX_goal_generic_position_armies
+		cost = 20
+		prerequisite = { focus = FRA_riverup_estratagems } 
+		prerequisite = { focus = FRA_renovate_orleanian_harbor }
+		relative_position_id = FRA_renovate_orleanian_harbor
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			country_event = FRALouisiana.2
+		}
+	}
+	focus = { 
+		id = FRA_newenglish_reinforcements
+		icon = GFX_focus_usa_honor_the_confederacy
+		cost = 30
+		prerequisite = { focus = FRA_partition_comancheria }
+		mutually_exclusive = { focus = FRA_stand_alone }	
+		relative_position_id = FRA_partition_comancheria
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			set_temp_variable = { noble_support_temp = -0.015 }
+			FRA_noble_support = yes
+		}
+	}
+	focus = { 
+		id = FRA_stand_alone
+		icon = GFX_focus_generic_home_defense
+		cost = 30
+		prerequisite = { focus = FRA_partition_comancheria }
+		mutually_exclusive = { focus = FRA_newenglish_reinforcements }	
+		relative_position_id = FRA_partition_comancheria		
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			set_temp_variable = { noble_support_temp = 0.015 }
+			FRA_noble_support = yes
+			FCN = { add_manpower = 5000 }
+			LOU = { add_manpower = 5000 }
+		}
+	}
+	focus = { 
+		id = FRA_for_the_colonies
+		icon = GFX_goal_generic_demand_territory
+		cost = 40
+		prerequisite = { focus = FRA_stand_alone focus = FRA_newenglish_reinforcements} 
+		relative_position_id = FRA_stand_alone
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+	focus = { 
+		id = FRA_redraw_louisiana_borders
+		icon = GFX_FRA_Redraw_the_Borders_of_Louisiana
+		cost = 30
+		prerequisite = { focus = FRA_lambert_report }
+		relative_position_id = FRA_lambert_report
+		x = 2
+		y = 2
+		
+		completion_reward = {
+			country_event = { id = FRALouisiana.10 days = 0 }
+		}
+	}
+	focus = { 
+		id = FRA_grant_rights
+		icon = GFX_FRA_Grant_Rights_to_Natives
+		cost = 20
+		prerequisite = { focus = FRA_redraw_louisiana_borders }
+		mutually_exclusive = { focus = FRA_yoke_mantained }
+		relative_position_id = FRA_redraw_louisiana_borders		
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			country_event = { id = FRALouisiana.11 days = 0 }
+		}
+	}
+	focus = { 
+		id = FRA_yoke_mantained
+		icon = GFX_FRA_Maintain_the_yoke
+		cost = 20
+		prerequisite = { focus = FRA_redraw_louisiana_borders }
+		mutually_exclusive = { focus = FRA_grant_rights }		
+		relative_position_id = FRA_redraw_louisiana_borders	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			country_event = { id = FRALouisiana.12 days = 0 }
+		}
+	}
+	focus = { 
+		id = FRA_never_again
+		icon = GFX_AUS_focus_Presents_Cajoling
+		cost = 25
+		prerequisite = { focus = FRA_grant_rights }
+		mutually_exclusive = { focus = FRA_yoke_mantained }		
+		relative_position_id = FRA_grant_rights	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = { 
+		id = FRA_confiscate_armament
+		icon = GFX_FRA_Confiscate_Native_Armament
+		cost = 25
+		prerequisite = { focus = FRA_yoke_mantained }
+		relative_position_id = FRA_yoke_mantained		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2500
+				producer = FRA
+			}
+		}
+	}
+	focus = { 
+		id = FRA_native_security_council
+		icon = GFX_FRA_create_a_native_security_council
+		cost = 60
+		prerequisite = { focus = FRA_never_again focus = FRA_confiscate_armament }	
+		relative_position_id = FRA_never_again	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.08
+			remove_ideas = fra_extracontinental_agitation
+		}
+	}
+	
+	# Army Branch
+	
+	
+	focus = { 
+		id = FRA_reform_armee
+		icon = GFX_FRA_reform_armee
+		cost = 25
+		x = 8
+		y = 0
+		
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+	focus = { 
+		id = FRA_oceangoing_navy
+		icon = GFX_FRA_ocean_going_navy
+		cost = 25
+		x = 12
+		y = 0
+		
+		completion_reward = {
+			navy_experience = 10
+		}
+	}
+	focus = { 
+		id = FRA_bigger_better
+		icon = GFX_focus_generic_little_entente
+		cost = 50
+		prerequisite = { focus = FRA_reform_armee }
+		prerequisite = { focus = FRA_oceangoing_navy }
+		mutually_exclusive = { focus =  FRA_trust_noble_system }
+		relative_position_id = FRA_reform_armee		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			set_temp_variable = { noble_support_temp = -0.1 }
+			FRA_noble_support = yes
+			swap_ideas = {
+				add_idea = fra_bigger_better
+				remove_idea = fra_ramping_decentralization
+			} 
+			set_country_flag = bigger_better
+			custom_effect_tooltip = FRA_UNDER_CONSTRUCTION
+		}
+	}
+	
+	focus = { 
+		id = FRA_requisation_of_manpower
+		icon = GFX_focus_generic_military_academy
+		cost = 25
+		prerequisite = { focus = FRA_bigger_better }
+		relative_position_id = FRA_bigger_better	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = fra_bigger_better1
+				remove_idea = fra_bigger_better
+			} 
+		}
+	}
+		focus = { 
+		id = FRA_angry_neighbour
+		icon = GFX_FRA_The_Angry_neighbour
+		cost = 25
+		prerequisite = { focus = FRA_reform_armee }
+		prerequisite = { focus = FRA_oceangoing_navy }
+		relative_position_id = FRA_reform_armee
+		x = 2
+		y = 2
+		
+		completion_reward = {
+			country_event = { id = FRARealmevents.2 days = 0 }
+		}
+	}
+	focus = { 
+		id = FRA_trust_noble_system
+		icon = GFX_FRA_trust_nobility
+		cost = 25
+		prerequisite = { focus = FRA_reform_armee }
+		prerequisite = { focus = FRA_oceangoing_navy }
+		mutually_exclusive = { focus =  FRA_bigger_better }
+		relative_position_id = FRA_oceangoing_navy
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			set_temp_variable = { noble_support_temp = 0.1 }
+			FRA_noble_support = yes
+			swap_ideas = {
+				add_idea = fra_organized_decentralization
+				remove_idea = fra_ramping_decentralization
+			}
+			set_country_flag = trust_noble_system
+		}
+	}
+	focus = { 
+		id = FRA_royal_artillery_battalion
+		icon = GFX_FRA_artillery_battalion
+		cost = 25
+		prerequisite = { focus = FRA_trust_noble_system }
+		relative_position_id = FRA_trust_noble_system
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			load_oob = "FRA_artillerybuff"
+		}
+	}
+	focus = { 
+		id = FRA_fund_mezieres
+		icon = GFX_goal_generic_defence
+		cost = 25
+		prerequisite = { focus = FRA_angry_neighbour }
+		prerequisite = { focus = FRA_requisation_of_manpower focus = FRA_royal_artillery_battalion }
+		relative_position_id = FRA_angry_neighbour
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			31 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+			19 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+			922 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+		}
+	}
+	focus = { 
+		id = FRA_bastion_aquitaine
+		icon = GFX_FRA_Forts_Gascony
+		cost = 25
+		prerequisite = { focus = FRA_fund_mezieres }
+		relative_position_id = FRA_fund_mezieres
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			19 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 743
+				}
+			}
+			31 = {
+				add_building_construction = {
+					type = bunker
+					level = 4
+					instant_build = yes
+					province = 3392
+				}
+			}
+		}
+	}
+	focus = { 
+		id = FRA_economic_revival
+		icon = GFX_FRA_Economic_revival
+		cost = 50
+		x = 16
+		y = 0
+		available = {
+			has_country_flag = FRAMarketcrash
+		}
+		completion_reward = {
+			add_ideas = { 
+				fra_economic_revitalization
+			}
+		}
+	}
+	focus = { 
+		id = FRA_royal_grant_baron
+		icon = GFX_FRA_grants_barons
+		cost = 40
+		x = 15
+		y = 1
+		prerequisite = { focus = FRA_economic_revival } 
+		completion_reward = {
+			country_event = { id = FRAEconomy.1 days = 0 }
+			    
+		}
+	}
+	focus = { 
+		id = FRA_search_new_market
+		icon = GFX_search_for_new_markets
+		cost = 40
+		x = 18
+		y = 1
+		prerequisite = { focus = FRA_economic_revival } 
+		completion_reward = {
+			add_ideas = { 
+			fra_colonial_adventures
+			}
+		}
+	}
+	focus = { 
+		id = FRA_silk_road
+		icon = GFX_focus_usa_focus_on_asia
+		cost = 30
+		x = 17
+		y = 2
+		prerequisite = { focus = FRA_search_new_market } 
+		completion_reward = {
+		add_resource = {
+			type = fabric
+			amount = 10
+			state = 848
+		}
+		add_resource = {
+			type = iron
+			amount = 4
+			state = 320
+		}
+		}
+	}
+	focus = { 
+		id = FRA_canadian_wood
+		icon = GFX_FRA_Canada_Wood
+		cost = 35
+		x = 19
+		y = 2
+		prerequisite = { focus = FRA_search_new_market } 
+		completion_reward = {
+		add_resource = {
+			type = wood
+			amount = 10
+			state = 682
+		}
+		add_resource = {
+			type = wood
+			amount = 10
+			state = 466
+		}
+		}
+	}
+	focus = { 
+		id = FRA_repurpose_africa
+		icon = GFX_FRA_repurpose_africa
+		cost = 35
+		x = 18
+		y = 3
+		prerequisite = { focus = FRA_silk_road } 
+		prerequisite = { focus = FRA_canadian_wood } 
+		completion_reward = {
+		add_resource = {
+			type = fabric
+			amount = 1
+			state = 459
+		}
+		add_resource = {
+			type = horses
+			amount = 1
+			state = 837
+		}
+		}
+	}
+	focus = { 
+		id = FRA_reemploy_merchant_shipping
+		icon = GFX_FRA_Reemploy_Merchant_Shipping
+		cost = 35
+		x = 15
+		y = 2
+		prerequisite = { focus = FRA_royal_grant_baron } 
+		completion_reward = {
+			swap_ideas = {
+				add_idea = fra_economic_revitalization2
+				remove_idea = fra_economic_revitalization1
+			}
+		}
+	}
+	focus = { 
+		id = FRA_support_peasants
+		icon = GFX_FRA_Support_the_Peasantry
+		cost = 40
+		x = 15
+		y = 3
+		prerequisite = { focus = FRA_reemploy_merchant_shipping } 
+		completion_reward = {
+			country_event = { id = FRAEconomy.2 days = 0 }
+		}
+	}
+	focus = { 
+		id = FRA_hexagon_ready
+		icon = GFX_FRA_Hexagon_Ready
+		cost = 40
+		x = 15
+		y = 5
+		prerequisite = { focus = FRA_support_peasants } 
+		prerequisite = { focus = FRA_bastion_aquitaine } 
+		completion_reward = {
+			swap_ideas = {
+				add_idea = fra_economic_revitalization4
+				remove_idea = fra_economic_revitalization3
+			}
+		}
+	}
+	focus = { 
+		id = FRA_indian_rivalry
+		icon = GFX_Indian_Rivalry
+		cost = 60
+		x = 15
+		y = 6
+		prerequisite = { focus = FRA_hexagon_ready } 
+		
+		will_lead_to_war_with = VIJ
+		
+		completion_reward = {
+			declare_war_on = {
+				target = VIJ
+				type = annex_everything
+			}
+			custom_effect_tooltip = FRA_INDIAN_RIVALRY
+			country_event = { id = FRAEconomy.3 days = 0 }
+		}
+	}
+	focus = { 
+		id = FRA_sale_saintandrew
+		icon = GFX_FRA_sale_andrews
+		cost = 50
+		x = 19
+		y = 5
+		prerequisite = { focus = FRA_support_peasants } 
+		prerequisite = { focus = FRA_repurpose_africa } 
+		completion_reward = {
+			country_event = { id = FRAEconomy.4 days = 0 }
+		}
+	}
+	focus = { 
+		id = FRA_expedition_inland
+		icon = GFX_FRA_expedition_inland
+		cost = 40
+		x = 19
+		y = 6
+		prerequisite = { focus = FRA_sale_saintandrew } 
+		completion_reward = {
+			country_event = { id = FRAEconomy.7 days = 0 }
+		}
+	}
+	focus = { 
+		id = FRA_ethos_of_future
+		icon = GFX_FRA_Ethos_Of_Future
+		cost = 40
+		available = {
+			has_completed_focus = FRA_for_the_colonies
+			has_completed_focus = FRA_native_security_council
+		}
+		
+		x = 17
+		y = 7
+		prerequisite = { focus = FRA_expedition_inland } 
+		prerequisite = { focus = FRA_indian_rivalry } 
+		completion_reward = {
+			if = {
+				LIMIT = { has_completed_focus = FRA_bigger_better }
+				load_focus_tree = france_centralization_focus
+			}
+			else = {
+				load_focus_tree = france_decentralization_focus
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,97 @@
+﻿division_template = {
+	name = "Brigada Revolucionaria"
+	division_names_group = SPAN_INFB_02
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	division = {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 7622 # Havana
+		division_template = "Brigada Revolucionaria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+
+	}
+	division = {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 7622 # Havana
+		division_template = "Brigada Revolucionaria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+
+	}
+	
+	division = {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 13267 # Havana
+		division_template = "Brigada Revolucionaria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+
+	}
+
+	division = {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 13265
+		division_template = "Brigada Revolucionaria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+
+	}
+
+	division = {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 5
+		}
+		location = 10498
+		division_template = "Brigada Revolucionaria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+
+	}
+	division = {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 12347 # Havana
+		division_template = "Brigada Revolucionaria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+
+	}
+
+	##### No Notable Naval Forces #####
+}
+
+##### No Notable Air Forces #####
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = musket_equipment_0
+			creator = "CUB"
+		}
+		requested_factories = 1
+		progress = 0.54
+		efficiency = 100
+	}
+}

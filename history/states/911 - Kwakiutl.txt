@@ -1,0 +1,18 @@
+state= {
+	id=911
+	name="STATE_911"
+	manpower = 4356
+	
+	state_category = pastoral
+
+	history= {
+		owner = KWK
+		add_core_of = KWK
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces={
+	   1393 1858 10273 10258 12231 10228 4870 1323 4385
+	}
+}

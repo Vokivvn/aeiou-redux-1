@@ -1,0 +1,1188 @@
+
+focus_tree = {
+	id = generic
+	country = {
+		factor = 0
+	}
+	default = yes
+	continuous_focus_position = { x = 50 y = 2000 }
+
+
+	###########
+	# ECONOMY #
+	###########
+
+
+#decentralization
+	focus = { 
+		id = generic_economy_decentralized_economy
+		icon = GFX_generic_decentralized_economy
+		cost = 70
+		
+		mutually_exclusive = { focus = generic_economy_centralized_economy }
+	
+		x = 4
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_economy_decentralized_economy"
+			add_ideas = generic_idea_decentralized_economy
+		}
+	}
+	
+	focus = { 
+		id = generic_economy_help_peasants	
+		icon = GFX_FRA_Support_the_Peasantry
+		cost = 70
+		
+		prerequisite = { focus = generic_economy_decentralized_economy }
+		relative_position_id = generic_economy_decentralized_economy
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_economy_help_peasants"
+			
+			add_stability = 0.05 
+			add_timed_idea = { idea = generic_idea_support_peasants days = 200 }
+		}
+	}
+	
+	focus = { 
+		id = generic_economy_land_to_gentry
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		cost = 70
+		
+		prerequisite = { focus = generic_economy_decentralized_economy }
+		relative_position_id = generic_economy_decentralized_economy
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_economy_land_to_gentry"
+			
+			add_timed_idea = { idea = generic_idea_land_to_gentry days = 150 }
+			add_political_power = 50 
+		}
+	}
+	
+	focus = { 
+		id = generic_economy_rural_growth
+		icon = GFX_focus_generic_industry_1
+		cost = 70
+		
+		prerequisite = { focus = generic_economy_land_to_gentry }
+		prerequisite = { focus = generic_economy_help_peasants }
+		relative_position_id = generic_economy_decentralized_economy
+	
+		x = 0
+		y = 2
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_economy_rural_growth"
+			random_state = { 
+				limit = { 
+					is_owned_and_controlled_by = ROOT 
+					is_in_home_area = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+#centralization
+	focus = {
+		id = generic_economy_centralized_economy
+		cost = 70
+		icon = GFX_generic_centralized_economy
+		
+		mutually_exclusive = { focus = generic_economy_decentralized_economy }
+	
+		x = 10
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_economy_centralized_economy"
+			
+			add_ideas = generic_idea_centralized_economy
+		}
+	}        
+	
+	
+	focus = { 
+		id = generic_economy_rural_migration
+		icon = GFX_focus_generic_military_academy
+		cost = 70
+		
+		prerequisite = { focus = generic_economy_centralized_economy }
+		relative_position_id = generic_economy_centralized_economy
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_economy_rural_migration"
+			
+			add_timed_idea = { idea = generic_idea_rural_migration days = 175 }
+			add_stability = -0.03
+		}
+	}      
+	
+	focus = { 
+		id = generic_economy_help_big_owners 
+		icon = GFX_focus_generic_diplomatic_treaty  
+		cost = 70
+		
+		prerequisite = { focus = generic_economy_rural_migration }
+		relative_position_id = generic_economy_centralized_economy
+	
+		x = -1
+		y = 2
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_economy_help_big_owners"
+			
+			add_timed_idea = { idea = generic_idea_large_land_owners days = 125 }
+			add_stability = -0.05
+		}
+	}
+	
+	focus = { 
+		id = generic_economy_growth_of_manufactories 
+		icon = GFX_focus_generic_industry_2
+		cost = 70
+		
+		prerequisite = { focus = generic_economy_rural_migration }
+		relative_position_id = generic_economy_centralized_economy
+	
+		x = 1
+		y = 2
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_economy_growth_of_manufactories"
+			
+			add_timed_idea = { idea = generic_idea_growth_manufactories days = 145 }
+		}
+	}
+	
+#Military_industrial complex
+	focus = { 
+		id = generic_economy_arms_manufactories_growth
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 70
+		
+		prerequisite = { 
+			focus = generic_economy_help_big_owners 
+			focus = generic_economy_rural_growth
+		}
+		relative_position_id = generic_economy_centralized_economy
+	
+		x = -3
+		y = 3
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_economy_arms_manufactories_growth"
+			
+			random_state = { 
+				limit = { 
+					is_owned_and_controlled_by = ROOT 
+					is_in_home_area = yes
+					check_variable = { ROOT.num_core_states > 0 }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	
+	focus = { 
+		id = generic_economy_invest_in_capital
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 70
+		
+		prerequisite = { 
+			focus = generic_economy_arms_manufactories_growth 
+		}
+		relative_position_id = generic_economy_centralized_economy
+	
+		x = -3
+		y = 4
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_economy_invest_in_capital"
+			
+			capital_scope = { 
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+#second decentralization
+	
+	focus = { 
+		id = generic_economy_superior_craftsmanship
+		icon = GFX_focus_generic_industry_2
+		cost = 70
+		
+		prerequisite = { 
+			focus = generic_economy_rural_growth 
+		}
+		relative_position_id = generic_economy_decentralized_economy
+	
+		x = 0
+		y = 3
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_economy_superior_craftsmanship"
+			
+			add_timed_idea = { idea = generic_idea_superior_craftsmanship days = 250 }
+		}
+	}
+	
+	focus = { 
+		id = generic_economy_superior_communications
+		icon = GFX_goal_generic_air_production
+		cost = 70
+		
+		prerequisite = {
+			focus = generic_economy_superior_craftsmanship 
+		}
+		relative_position_id = generic_economy_decentralized_economy
+	
+		x = 0
+		y = 4
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_economy_superior_communications"
+			
+			add_timed_idea = { idea = generic_idea_superior_communications	days = 250 }
+		}
+	}
+	
+	focus = { 
+		id = generic_economy_goldsmiths_to_bankers
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 70
+		
+		prerequisite = {
+			focus = generic_economy_superior_communications 
+		}
+		relative_position_id = generic_economy_superior_communications
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_economy_goldsmiths_to_bankers"
+			
+			add_timed_idea = { idea = generic_idea_banking_boom	days = 300 }
+		}
+	}
+	
+	focus = { 
+		id = generic_economy_joint_stock_companies
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 70
+		
+		prerequisite = {
+			focus = generic_economy_superior_communications 
+		}
+		relative_position_id = generic_economy_superior_communications
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_economy_superior_communications"
+			
+			add_ideas = generic_idea_joint_stock_companies
+		}
+	}
+	
+	focus = { 
+		id = generic_economy_license_money_printing
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 70
+		
+		prerequisite = {
+			focus = generic_economy_goldsmiths_to_bankers 
+		}
+		relative_position_id = generic_economy_goldsmiths_to_bankers
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_economy_license_money_printing"
+			add_political_power = 100
+			add_timed_idea = { idea = generic_idea_printing_money	days = 175 }
+		}
+	}
+	
+	focus = { 
+		id = generic_economy_flourishing_artisans
+		icon = GFX_focus_generic_industry_3
+		cost = 70
+		
+		prerequisite = { focus = generic_economy_goldsmiths_to_bankers }
+		prerequisite = { focus = generic_economy_joint_stock_companies }
+		relative_position_id = generic_economy_goldsmiths_to_bankers
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_economy_flourishing_artisans"
+			
+			swap_ideas = {
+				remove_idea = generic_idea_decentralized_economy
+				add_idea = generic_idea_decentralized_economy1
+			}
+		}
+	}
+	
+	focus = { 
+		id = generic_economy_private_infrastructure
+		icon = GFX_goal_continuous_non_factory_construct
+		cost = 70
+		
+		prerequisite = { focus = generic_economy_joint_stock_companies }
+		prerequisite = { focus = generic_economy_invest_in_capital }
+		relative_position_id = generic_economy_joint_stock_companies
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_economy_private_infrastructure"
+			
+			random_state = { 
+				limit = { 
+					free_building_slots = {
+						building = infrastructure
+						size > 3
+					}
+					is_owned_and_controlled_by = ROOT 
+					is_in_home_area = yes
+					check_variable = { ROOT.num_core_states > 1 }
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_state = { 
+				limit = { 
+					is_owned_and_controlled_by = ROOT 
+					is_in_home_area = yes
+					check_variable = { ROOT.num_core_states > 2 }
+					free_building_slots = {
+						building = infrastructure
+						size > 2
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+#second centralization
+	
+	focus = { 
+		id = generic_economy_promote_mercantilism
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 70
+		
+		prerequisite = { focus = generic_economy_growth_of_manufactories }
+		prerequisite = { focus = generic_economy_help_big_owners }
+		relative_position_id = generic_economy_centralized_economy
+	
+		x = 0
+		y = 3
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_economy_promote_mercantilism"
+			
+			random_state = { 
+				limit = { 
+					is_owned_and_controlled_by = ROOT 
+					is_in_home_area = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = generic_economy_growth_of_commerce
+		icon = GFX_goal_generic_trade
+		cost = 70
+		
+		prerequisite = { focus = generic_economy_promote_mercantilism }
+		relative_position_id = generic_economy_centralized_economy
+	
+		x = 0
+		y = 4
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_economy_growth_of_commerce"
+			
+			random_state = { 
+				limit = { 
+					is_owned_and_controlled_by = ROOT 
+					is_in_home_area = yes
+					check_variable = { ROOT.num_core_states > 1 }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_state = { 
+				limit = { 
+					is_owned_and_controlled_by = ROOT 
+					is_in_home_area = yes
+					check_variable = { ROOT.num_core_states > 2 }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = generic_economy_create_a_national_bank
+		icon = GFX_focus_generic_self_management
+		cost = 70
+		
+		prerequisite = { focus = generic_economy_growth_of_commerce }
+		relative_position_id = generic_economy_growth_of_commerce
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_economy_create_a_national_bank"
+			swap_ideas = {
+				remove_idea = generic_idea_centralized_economy
+				add_idea = generic_idea_centralized_economy1
+			}
+		}
+	}
+	
+	focus = { 
+		id = generic_economy_end_the_guild_system
+		icon = GFX_goal_generic_political_pressure
+		cost = 70
+		
+		prerequisite = { focus = generic_economy_growth_of_commerce }
+		relative_position_id = generic_economy_growth_of_commerce
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_economy_end_the_guild_system"
+			add_timed_idea = {
+				idea = generic_idea_end_guild_system
+				days = 365
+			}
+			add_stability = -0.05
+		}
+	}
+	
+	focus = { 
+		id = generic_economy_invest_in_infrastructure
+		icon = GFX_goal_generic_construction2
+		cost = 70
+		
+		prerequisite = { focus = generic_economy_create_a_national_bank }
+		prerequisite = { focus = generic_economy_invest_in_capital }
+		relative_position_id = generic_economy_create_a_national_bank
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_economy_invest_in_infrastructure"
+			
+			random_state = { 
+				limit = { 
+					is_owned_and_controlled_by = ROOT 
+					is_in_home_area = yes
+					check_variable = { ROOT.num_core_states > 1 }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_state = { 
+				limit = { 
+					is_owned_and_controlled_by = ROOT 
+					is_in_home_area = yes
+					check_variable = { ROOT.num_core_states > 2 }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = generic_economy_remove_internal_trade_barriers
+		icon = GFX_goal_generic_position_armies
+		cost = 70
+		
+		prerequisite = { focus = generic_economy_create_a_national_bank }
+		prerequisite = { focus = generic_economy_end_the_guild_system }
+		relative_position_id = generic_economy_create_a_national_bank
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_economy_remove_internal_trade_barriers"
+			
+			add_ideas = generic_idea_removed_internal_trade_barriers
+		}
+	}
+	
+	focus = { 
+		id = generic_integrate_the_new_workers
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 70
+		
+		prerequisite = { focus = generic_economy_end_the_guild_system }
+		relative_position_id = generic_economy_end_the_guild_system
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_integrate_the_new_workers"
+			
+			add_timed_idea = { idea = generic_idea_integrating_workers days = 70}
+		}
+	}
+	
+	############
+	# MILITARY #
+	############
+	
+	focus = {
+		id = generic_arms_race
+		icon = GFX_goal_generic_small_arms
+		cost = 70
+	
+		x = 23
+		y = 1
+	
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus generic_arms_race"
+		add_political_power = 50
+		army_experience = 10
+		navy_experience = 10
+		}
+	}
+	
+	focus = {
+		id = generic_military_efficiency
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		cost = 70
+		relative_position_id = generic_arms_race
+	
+		x = -4
+		y = 1
+	
+		prerequisite = { focus = generic_arms_race }
+	
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus generic_military_efficiency"
+		add_tech_bonus = {
+				bonus = 0.25
+				uses = 2
+				category = support_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_bourgeois_recruits
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = generic_military_efficiency }
+		mutually_exclusive = { focus = generic_levies_from_nobles }
+		cost = 70
+		relative_position_id = generic_military_efficiency
+		x = -4
+		y = 1
+	
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus generic_bourgeois_recruits"
+			add_timed_idea = { idea = generic_idea_bourgeois_recruits days = 180 }
+		}
+	}
+	
+	focus = {
+		id = generic_quality_over_quantity
+		icon = GFX_focus_eng_special_air_service
+		prerequisite = { focus = generic_bourgeois_recruits }
+		cost = 70
+		relative_position_id = generic_bourgeois_recruits
+		x = 1
+		y = 1
+	
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus generic_quality_over_quantity"
+			army_experience = 20
+			add_ideas = { generic_idea_quality_over_quantity }
+		}
+	}
+	
+	focus = {
+		id = generic_integrate_the_mercenaries
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = generic_bourgeois_recruits }
+		cost = 70
+		relative_position_id = generic_bourgeois_recruits
+		x = -1
+		y = 1
+	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_integrate_the_mercenaries"
+			army_experience = 10
+			add_timed_idea = { idea = generic_idea_integrating_mercenaries days = 250 }
+		}
+	}
+	
+	focus = {
+		id = generic_new_model_army
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = generic_quality_over_quantity }
+		prerequisite = { focus = generic_integrate_the_mercenaries }
+		cost = 70
+		relative_position_id = generic_bourgeois_recruits
+		x = 0
+		y = 2
+	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_new_model_army"
+			swap_ideas = {
+				remove_idea = generic_idea_quality_over_quantity
+				add_idea = generic_idea_quality_over_quantity1
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_levies_from_nobles
+		icon = GFX_generic_noble_support
+		prerequisite = { focus = generic_military_efficiency }
+		mutually_exclusive = { focus = generic_bourgeois_recruits }
+		cost = 70
+		relative_position_id = generic_military_efficiency
+		x = 0
+		y = 1
+	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_levies_from_nobles"
+			add_timed_idea = { idea = generic_idea_levies_from_nobles days = 180 }
+		}
+	}
+	
+	focus = {
+		id = generic_reorganize_levies
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 70
+		relative_position_id = generic_levies_from_nobles
+		x = -1
+		y = 1
+	
+		prerequisite = { focus = generic_levies_from_nobles }
+	
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus generic_reorganize_levies"
+			add_ideas = generic_idea_reorganized_levies
+		}
+	}
+	
+	focus = {
+		id = generic_streamlined_uniforms
+		icon = GFX_goal_generic_army_artillery
+		cost = 70
+		relative_position_id = generic_levies_from_nobles
+		x = 1
+		y = 1
+	
+		prerequisite = { focus = generic_levies_from_nobles }
+	
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus generic_streamlined_uniforms"
+		add_timed_idea = { idea = generic_idea_streamlined_uniforms days = 150 }
+		add_tech_bonus = {
+				bonus = 0.2
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_19th_century_strategies
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 70
+		relative_position_id = generic_levies_from_nobles
+	
+		x = 0
+		y = 2
+	
+		prerequisite = { focus = generic_reorganize_levies }
+		prerequisite = { focus = generic_streamlined_uniforms }
+	
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus generic_19th_century_strategies"
+		army_experience = 10
+		add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_fund_war_strategists
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 70
+		relative_position_id = generic_military_efficiency
+	
+		x = 4
+		y = 1
+
+		prerequisite = { focus = generic_military_efficiency }
+	
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus generic_fund_war_strategists"
+		add_tech_bonus = {
+				bonus = 0.35
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_rethink_gunpowder
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = generic_fund_war_strategists }
+		cost = 70
+		relative_position_id = generic_fund_war_strategists	
+		x = -1
+		y = 1
+	
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus generic_rethink_gunpowder"
+		army_experience = 10
+		add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				technology = muskets1
+				technology = muskets2
+				technology = muskets3
+				technology = rifles
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_modernize_melee_equipment
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		prerequisite = { focus = generic_fund_war_strategists }
+		cost = 70
+		relative_position_id = generic_fund_war_strategists	
+		x = 1
+		y = 1
+	
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus generic_modernize_melee_equipment"
+		army_experience = 10
+		add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				technology = melee1
+				technology = melee2
+				technology = melee3
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_permanent_military_research
+		icon = GFX_goal_continuous_reduce_training_time
+		prerequisite = { focus = generic_rethink_gunpowder }
+		prerequisite = { focus = generic_modernize_melee_equipment }
+		available = {
+			num_of_factories > 35
+		}
+		cost = 70
+		relative_position_id = generic_fund_war_strategists	
+		x = 0
+		y = 2
+	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_permanent_military_research"
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = generic_ready_for_war
+		icon = GFX_goal_generic_major_war
+		prerequisite = {
+			focus = generic_permanent_military_research
+			focus = generic_19th_century_strategies
+			focus = generic_new_model_army
+		}
+		cost = 70
+		relative_position_id = generic_military_efficiency
+		x = 0
+		y = 4
+	
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus generic_ready_for_war"
+		add_timed_idea = { idea = generic_idea_ready_for_war days = 200 }
+		}
+	}
+	
+	focus = {
+		id = generic_navy_initial_designs
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = generic_arms_race }
+		available = {
+			if = {
+				any_owned_state = {
+					is_coastal = yes
+				}     
+			}
+		}
+		relative_position_id = generic_arms_race
+		cost = 70
+	
+		x = 4
+		y = 1
+	
+	
+	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_navy_initial_designs"      
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				custom_effect_tooltip = generic_navy_initial_designs_mtg_tt
+				hidden_effect = {
+					set_technology = {
+						early_ship_hull_light = 1
+						basic_battery = 1
+					}
+				}
+				create_equipment_variant = {
+					name = "Gunboat Class"
+					type = ship_hull_light_1
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = ship_light_battery_1
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+						fixed_ship_engine_slot = light_ship_engine_1
+					}
+				}
+			} else {
+				custom_effect_tooltip = generic_navy_initial_designs_tt
+				hidden_effect = {
+					set_technology = {
+						early_destroyer = 1
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_with_sail_and_cannonball
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = generic_navy_initial_designs }
+		cost = 70
+		relative_position_id = generic_navy_initial_designs
+		x = -1
+		y = 1
+	
+		available = {
+			if = {
+				any_owned_state = {
+					is_coastal = yes
+				}     
+			}
+		}
+	
+	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_with_sail_and_cannonball"      
+			navy_experience = 20
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 2
+				category = naval_equipment
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_enemy_fleets_sunk
+		icon = GFX_goal_generic_navy_anti_submarine
+		prerequisite = { focus = generic_with_sail_and_cannonball }
+		available = {
+			if = {
+			any_owned_state = {
+					is_coastal = yes
+				}     
+			}
+		}
+		relative_position_id = generic_with_sail_and_cannonball
+		cost = 70
+		x = 0
+		y = 1
+	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_enemy_fleets_sunk"
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_naval_cruiser_design
+		icon = GFX_goal_continuous_naval_production
+		prerequisite = { focus = generic_enemy_fleets_sunk }
+		available = {
+			if = {
+			any_owned_state = {
+					is_coastal = yes
+				}     
+			}
+		}
+		relative_position_id = generic_enemy_fleets_sunk
+		cost = 70
+		x = 0
+		y = 1
+	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_naval_cruiser_design"
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					technology = early_ship_hull_cruiser
+					technology = basic_ship_hull_cruiser
+				}
+			} else = {
+				add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					category = ca_tech
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_ports_secured
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = generic_navy_initial_designs }
+		relative_position_id = generic_navy_initial_designs
+		cost = 70
+	
+		x = 1
+		y = 1
+	
+		available = {
+			if = {
+			any_owned_state = {
+					is_coastal = yes
+				}     
+			}
+		}
+	
+	
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus generic_ports_secured"
+		random_owned_state = {
+			limit = { is_coastal = yes }
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard 
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base 
+					level = 1
+					instant_build = yes
+					province = {
+						limit_to_coastal = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_waves_will_be_ruled
+		icon = GFX_goal_generic_wolf_pack
+		cost = 70
+		prerequisite = { focus = generic_ports_secured }
+		relative_position_id = generic_ports_secured
+		x = 0
+		y = 1
+	
+		available = {
+			if = {
+			any_owned_state = {
+					is_coastal = yes
+				}     
+			}
+		}
+	
+	
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus generic_waves_will_be_ruled"
+		random_owned_state = {
+			limit = { is_coastal = yes }
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard 
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base 
+					level = 1
+					instant_build = yes
+					province = {
+						limit_to_coastal = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_design_pride_of_the_fleet
+		icon = GFX_focus_generic_coastal_fort
+		prerequisite = { focus = generic_waves_will_be_ruled }
+		available = {
+			if = {
+			any_owned_state = {
+					is_coastal = yes
+				}     
+			}
+		}
+		cost = 70
+		relative_position_id = generic_waves_will_be_ruled
+		x = 0
+		y = 1
+	
+	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus generic_design_pride_of_the_fleet"
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					technology = early_ship_hull_heavy
+					technology = basic_ship_hull_heavy
+				}
+			} else = {
+				add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					category = bb_tech
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = generic_naval_golden_age
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = generic_design_pride_of_the_fleet }
+		prerequisite = { focus = generic_naval_cruiser_design }
+		relative_position_id = generic_navy_initial_designs
+		
+		cost = 70
+	
+		x = 0
+		y = 4
+	
+		available = {
+			if = {
+			any_owned_state = {
+					is_coastal = yes
+				}     
+			}
+		}
+	
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus generic_naval_golden_age"
+		add_timed_idea = { idea = generic_idea_naval_golden_age days = 300 }
+		}
+	}
+
+}

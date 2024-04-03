@@ -1,0 +1,32 @@
+
+state={
+	id=5
+	name="STATE_5"
+	manpower = 344571
+	state_category = rural
+	
+	resources = {
+	    wood = 4
+	}
+
+	history={
+		victory_points = {
+			6375 3
+		}
+		#victory_points = {
+		#	11386 1
+		#}
+		owner = PLC
+		controller = PLC
+		
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = PLC
+		add_claim_by = PRS 
+	}
+
+	provinces={
+		266 3351 6347 6375 9327 9346 9372 9398 11386 
+	}
+}

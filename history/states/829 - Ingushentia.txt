@@ -1,0 +1,21 @@
+state={
+	id=829
+	name="STATE_829"
+
+	history={
+		owner = ING
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = ING
+
+	}
+
+	provinces={
+		6669 9702 6671 1530 4534 12309 4605 6436
+	}
+	manpower = 368676
+	buildings_max_level_factor = 1.000
+	state_category = town
+}

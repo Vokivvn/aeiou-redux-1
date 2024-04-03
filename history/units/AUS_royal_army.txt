@@ -1,0 +1,220 @@
+division_template = {
+	name = "Kaiserlich Königliche Infanterie Division"		# infantry
+	division_names_group = AUS_DEC_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+		line_infantry = { x = 0 y = 4 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+		line_infantry = { x = 1 y = 2 }
+		line_infantry = { x = 1 y = 3 }
+		line_infantry = { x = 1 y = 4 }
+		line_infantry = { x = 2 y = 0 }
+		line_infantry = { x = 2 y = 1 }
+		line_infantry = { x = 2 y = 2 }
+		line_infantry = { x = 2 y = 3 }
+		line_infantry = { x = 2 y = 4 }
+		militia = { x = 3 y = 0 }
+		militia = { x = 3 y = 1 }
+		militia = { x = 3 y = 2 }
+		militia = { x = 3 y = 3 }
+		militia = { x = 3 y = 4 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		recon = { x = 0 y = 2 }
+		military_police = { x = 0 y = 3 }
+		maintenance_company = { x = 0 y = 4 }		
+	}
+}
+
+division_template = {
+	name = "Königlich Ungarische Infanterie Division"  		# "worse" infantry
+	division_names_group = AUS_DEC_02
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+		line_infantry = { x = 0 y = 4 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+		line_infantry = { x = 1 y = 2 }
+		line_infantry = { x = 1 y = 3 }
+		line_infantry = { x = 1 y = 4 }
+		melee_battalion = { x = 2 y = 0 }
+		melee_battalion = { x = 2 y = 1 }
+		melee_battalion = { x = 2 y = 2 }
+		melee_battalion = { x = 2 y = 3 }
+		melee_battalion = { x = 2 y = 4 }
+		melee_battalion = { x = 3 y = 0 }
+		melee_battalion = { x = 3 y = 1 }
+		melee_battalion = { x = 3 y = 2 }
+		melee_battalion = { x = 3 y = 3 }
+		melee_battalion = { x = 3 y = 4 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		recon = { x = 0 y = 2 }
+		military_police = { x = 0 y = 3 }
+		maintenance_company = { x = 0 y = 4 }
+	}
+}
+
+division_template = {
+	name = "Kaiserlich Königliche Reitende Division"  		# light cavalry
+	division_names_group = AUS_DEC_03
+
+	regiments = {
+		light_cavalry = { x = 0 y = 0 }
+		light_cavalry = { x = 0 y = 1 }
+		light_cavalry = { x = 0 y = 2 }
+		light_cavalry = { x = 0 y = 3 }
+		light_cavalry = { x = 0 y = 4 }
+		light_cavalry = { x = 1 y = 0 }
+		light_cavalry = { x = 1 y = 1 }
+		light_cavalry = { x = 1 y = 2 }
+		light_cavalry = { x = 1 y = 3 }
+		light_cavalry = { x = 1 y = 4 }
+		light_cavalry = { x = 2 y = 0 }
+		light_cavalry = { x = 2 y = 1 }
+		light_cavalry = { x = 2 y = 2 }
+		light_cavalry = { x = 2 y = 3 }
+		light_cavalry = { x = 2 y = 4 }
+		light_cavalry = { x = 3 y = 0 }
+		light_cavalry = { x = 3 y = 1 }
+		light_cavalry = { x = 3 y = 2 }
+		light_cavalry = { x = 3 y = 3 }
+		light_cavalry = { x = 3 y = 4 }
+	}
+}
+
+units = {	
+
+	division = {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 11666  # Vienna
+		division_template = "Kaiserlich Königliche Infanterie Division"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+
+	division = {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 11666  # Vienna
+		division_template = "Kaiserlich Königliche Infanterie Division"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+
+	division = {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 11666  # Vienna
+		division_template = "Kaiserlich Königliche Infanterie Division"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+
+	division = {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 11666  # Vienna
+		division_template = "Kaiserlich Königliche Infanterie Division"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+
+
+	division = {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 9660  # Budapest
+		division_template = "Königlich Ungarische Infanterie Division"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+
+	division = {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 9660  # Budapest
+		division_template = "Königlich Ungarische Infanterie Division"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+
+	division = {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 9660  # Budapest
+		division_template = "Königlich Ungarische Infanterie Division"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+
+	division = {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 9660  # Budapest
+		division_template = "Königlich Ungarische Infanterie Division"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+
+
+
+
+
+	division = {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+
+		location = 11666  # Vienna
+		division_template = "Kaiserlich Königliche Reitende Division"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	
+
+	division = {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+
+		location = 11666  # Vienna
+		division_template = "Kaiserlich Königliche Reitende Division"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+
+}
+

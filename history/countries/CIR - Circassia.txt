@@ -1,0 +1,28 @@
+﻿capital = 827 #Yerevan, Armenia
+
+#oob = "CIR_1886"
+
+set_research_slots = 3
+
+
+
+set_politics = {
+	ruling_party = absolutist
+	elections_allowed = no
+}
+set_popularities = {
+	absolutist = 100
+}
+
+create_country_leader = {
+	name = "Salih Hulusi"
+	desc = "POLITICS_SALIH_HULUSI_DESC"
+	picture = "Portrait_CIR_Salih_Hulusi.dds"
+	expire = "1965.1.1"
+	ideology = absolutist_moderate
+	traits = {
+		#
+	}
+}
+
+add_to_array = { national_religion_array =  8 }

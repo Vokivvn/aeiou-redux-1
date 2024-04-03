@@ -1,0 +1,30 @@
+
+state={
+	id=195
+	name="STATE_195"
+	manpower = 315240
+	
+	state_category = city
+
+	history={
+		owner = SWE
+		victory_points = {
+			3151 5
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+			dockyard = 1
+			3151 ={
+				naval_base = 5
+				coastal_bunker = 2
+			}
+		}
+		add_core_of = SWE
+	}
+
+	provinces={
+	 149 3151  
+	}
+}

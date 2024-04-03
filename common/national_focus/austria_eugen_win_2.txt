@@ -1,0 +1,480 @@
+focus_tree = {
+	id = austria_eugen_win_2
+
+	country = {
+		factor = 0
+	}
+
+	
+	continuous_focus_position = { x = 50 y = 2000 }
+
+
+
+
+	focus = { 
+		id = AUS_our_own_reconquista
+		icon = GFX_
+		cost = 35
+	
+		x = 8
+		y = 0
+
+		completion_reward = {
+			country_event = Auseugen.137
+			set_global_flag = auseugen_territorial_decisions_unlocked
+		}
+	}
+
+
+
+
+
+	focus = { 
+		id = AUS_last_efforts_in_the_economy
+		icon = GFX_
+		cost = 35
+	
+		x = -5
+		y = 1
+
+		relative_position_id = AUS_our_own_reconquista
+		
+		prerequisite = {
+			focus = AUS_our_own_reconquista
+		}
+
+		completion_reward = {
+			IF = {
+				limit = {
+					AUS = { controls_state = 109 }
+				}
+				109 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = industrial_complex
+					    level = 1
+					    instant_build = yes
+					}
+				}
+				else = {
+					random_owned_state = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+						    type = industrial_complex
+						    level = 1
+						    instant_build = yes
+						}
+					}
+				}
+			}
+			IF = {
+				limit = {
+					AUS = { controls_state = 824 }
+				}
+				824 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = arms_factory
+					    level = 1
+					    instant_build = yes
+					}
+				}
+				else = {
+					random_owned_state = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+						    type = arms_factory
+						    level = 1
+						    instant_build = yes
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_beck_rzikowsky_doctrine
+		icon = GFX_
+		cost = 35
+	
+		x = 0
+		y = 1
+
+		relative_position_id = AUS_last_efforts_in_the_economy
+		
+		prerequisite = {
+			focus = AUS_last_efforts_in_the_economy
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+			    bonus = 1.75
+			    uses = 1
+			    category = infantry_weapons
+			}
+			add_timed_idea = {
+				idea = aus_idea_beck_rzikowsky_doctrine
+				days = 1080
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_finish_industrialisierungsplan
+		icon = GFX_
+		cost = 35
+	
+		x = 0
+		y = 1
+
+		relative_position_id = AUS_beck_rzikowsky_doctrine
+		
+		prerequisite = {
+			focus = AUS_beck_rzikowsky_doctrine
+		}
+
+		completion_reward = {
+			IF = {
+				LIMIT = {
+					AUS = { controls_state = 4 }
+				}
+				4 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = industrial_complex
+					    level = 1
+					    instant_build = yes
+					}
+				}
+			}
+			add_timed_idea = {
+				idea = aus_idea_industrialisierungsplan_finished
+				days = 360
+			}
+		}
+	}
+
+
+
+
+
+
+
+	focus = { 
+		id = AUS_get_empire_ready_for_war
+		icon = GFX_
+		cost = 35
+	
+		x = 0
+		y = 1
+
+		relative_position_id = AUS_our_own_reconquista
+		
+		prerequisite = {
+			focus = AUS_our_own_reconquista
+		}
+
+		completion_reward = {
+			add_political_power = -180
+			random_state = {
+				LIMIT = {
+					owner = {
+						tag = AUS
+					}
+					arms_factory > 1
+				}
+				remove_building = {
+				    type = arms_factory
+				    level = 2
+				}
+				PREV = {
+					random_state = {
+						LIMIT = {
+							owner = {
+								tag = AUS
+							}
+							arms_factory > 1
+							NOT = { state = PREV.PREV }
+						}
+						remove_building = {
+						    type = arms_factory
+						    level = 2
+						}
+					}
+				}
+			}
+			every_country = {
+				LIMIT = {
+					OR = {
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_conservative
+					}
+				}
+				add_offsite_building = {
+					type = arms_factory
+					level = 1
+				}
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_final_naval_reform
+		icon = GFX_
+		cost = 35
+	
+		x = 0
+		y = 1
+
+		relative_position_id = AUS_get_empire_ready_for_war
+		
+		prerequisite = {
+			focus = AUS_get_empire_ready_for_war
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = aus_idea_navy_improvements
+				add_idea = aus_idea_rivalry_in_mediterranean
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_restore_austrian_netherlands
+		icon = GFX_
+		cost = 35
+	
+		x = -1
+		y = 1
+
+		relative_position_id = AUS_final_naval_reform
+		
+		prerequisite = {
+			focus = AUS_final_naval_reform
+		}
+
+		available = {
+	    	IF = {
+	    		limit = {
+	    			has_global_flag = aus_cooldown_mechanic
+	    		}
+	    		custom_trigger_tooltip = {
+				    tooltip = aus_cooldown_tt
+					check_variable = { global.auswarcooldown < global.date }
+				}
+	    	}
+	    }
+
+		completion_reward = {
+			set_global_flag = auseugen_austrospanish_war
+
+			declare_war_on = {
+				target = SPN
+				type = liberate_wargoal
+			}
+
+			set_global_flag = aus_cooldown_mechanic
+			set_variable = { global.auswarcooldown = global.date }
+			add_to_variable = { global.auswarcooldown = 2.88 }
+
+			hidden_effect = {
+				country_event = {
+					id = Auseugen.144
+					days = 5
+				}
+			}
+		}
+
+		will_lead_to_war_with = SPN
+	}
+
+	focus = { 
+		id = AUS_fate_of_empires_oldest_enemy
+		icon = GFX_
+		cost = 35
+	
+		x = 1
+		y = 1
+
+		relative_position_id = AUS_final_naval_reform
+		
+		prerequisite = {
+			focus = AUS_final_naval_reform
+		}
+
+		available = {
+	    	IF = {
+	    		limit = {
+	    			has_global_flag = aus_cooldown_mechanic
+	    		}
+	    		custom_trigger_tooltip = {
+				    tooltip = aus_cooldown_tt
+					check_variable = { global.auswarcooldown < global.date }
+				}
+	    	}
+	    }
+
+		completion_reward = {
+			set_global_flag = auseugen_austrofrench_war
+
+			declare_war_on = {
+				target = FRA
+				type = liberate_wargoal
+			}
+
+			set_global_flag = aus_cooldown_mechanic
+			set_variable = { global.auswarcooldown = global.date }
+			add_to_variable = { global.auswarcooldown = 2.88 }
+		}
+
+		will_lead_to_war_with = FRA
+	}
+
+
+
+
+
+	focus = { 
+		id = AUS_problems_with_estates
+		icon = GFX_
+		cost = 35
+	
+		x = 5
+		y = 1
+
+		relative_position_id = AUS_our_own_reconquista
+		
+		prerequisite = {
+			focus = AUS_our_own_reconquista
+		}
+
+		completion_reward = {
+			country_event = Auseugen.138
+		}
+	}
+
+	focus = { 
+		id = AUS_clergys_influence
+		icon = GFX_
+		cost = 35
+	
+		x = -1
+		y = 1
+
+		relative_position_id = AUS_problems_with_estates
+		
+		prerequisite = {
+			focus = AUS_problems_with_estates
+		}
+
+		completion_reward = {
+			country_event = Auseugen.140
+		}
+	}
+
+	focus = { 
+		id = AUS_nobles_privileges
+		icon = GFX_
+		cost = 35
+	
+		x = 1
+		y = 1
+
+		relative_position_id = AUS_problems_with_estates
+		
+		prerequisite = {
+			focus = AUS_problems_with_estates
+		}
+
+		completion_reward = {
+			country_event = Auseugen.141
+		}
+	}
+
+	focus = { 
+		id = AUS_serfdom_issue
+		icon = GFX_
+		cost = 35
+	
+		x = 1
+		y = 1
+
+		relative_position_id = AUS_clergys_influence
+		
+		prerequisite = {
+			focus = AUS_clergys_influence
+		}
+		prerequisite = {
+			focus = AUS_nobles_privileges
+		}
+
+		completion_reward = {
+			country_event = Auseugen.142
+		}
+	}
+
+
+
+
+
+	focus = { 
+		id = AUS_true_war_machine
+		icon = GFX_
+		cost = 35
+	
+		x = 1
+		y = 1
+
+		relative_position_id = AUS_restore_austrian_netherlands
+		
+		prerequisite = {
+			focus = AUS_finish_industrialisierungsplan
+		}
+		prerequisite = {
+			focus = AUS_restore_austrian_netherlands
+		}
+		prerequisite = {
+			focus = AUS_fate_of_empires_oldest_enemy
+		}
+		prerequisite = {
+			focus = AUS_serfdom_issue
+		}
+
+		completion_reward = {
+			add_ideas = { aus_idea_austrian_war_machine }
+		}
+	}
+
+	focus = { 
+		id = AUS_reclamation_of_the_ancient_territories
+		icon = GFX_
+		cost = 35
+	
+		x = 0
+		y = 1
+
+		relative_position_id = AUS_true_war_machine
+		
+		prerequisite = {
+			focus = AUS_true_war_machine
+		}
+
+		completion_reward = {
+			add_state_claim = 86
+			add_state_claim = 85
+			add_state_claim = 788
+			add_state_claim = 188
+			add_state_claim = 763
+			add_state_claim = 5
+			add_state_claim = 151
+			add_state_claim = 3
+			add_state_claim = 806
+			add_state_claim = 29
+			add_state_claim = 17
+			set_global_flag = auseugen_reconquista_2
+		}
+	}

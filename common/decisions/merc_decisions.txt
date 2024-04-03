@@ -1,0 +1,871 @@
+army_actions = {
+	
+	#Mercs will get reworked later on
+	mobilize_country = {
+		
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_war = yes
+			allowed_to_mobilize = yes
+		}
+
+		visible = {
+			has_tech = militia 
+			NOT = { has_country_flag = country_mobilized }
+		}
+
+		fire_only_once = no
+
+		days_remove = 5
+		days_re_enable = 0
+
+		complete_effect = {
+			set_country_flag = country_mobilized
+			add_stability = -0.10
+			add_threat = 5
+		}
+
+		remove_effect = {
+			load_oob = "mobilization"
+			every_owned_state = {
+				LIMIT = {
+					is_in_home_area = yes
+					state_population_k > 150
+				}
+				if = { 
+					LIMIT = { state_population_k > 1500 }
+					create_unit = {
+						division = "division_template = \"Large Militia\" start_experience_factor = 0.1 start_equipment_factor = 0.4" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = no
+						count = 1
+					}
+				}
+				else_if = { 
+					LIMIT = { state_population_k > 750 }
+					create_unit = {
+						division = "division_template = \"Medium Militia\" start_experience_factor = 0.1 start_equipment_factor = 0.4" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = no
+						count = 1
+					}
+				}
+				else = {
+					create_unit = {
+						division = "division_template = \"Small Militia\" start_experience_factor = 0.1 start_equipment_factor = 0.4" 
+						owner = ROOT
+						allow_spawning_on_enemy_provs = no
+						count = 1
+					}
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 10
+		}
+	}
+	additional_funding_for_military_service = {
+		
+		icon = generic_prepare_civil_war
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+
+		days_remove = 30
+		days_re_enable = 60
+		
+		cost = 50
+
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			add_manpower = 5000
+		}
+	}
+	hire_melee_mercs = {
+		
+		icon = generic_prepare_civil_war
+		
+		available = {
+			has_army_experience > 10
+			NOT = { has_country_flag = hiring_merc }
+		}
+
+		visible = {
+			has_tech = melee
+			NOT = { has_tech = modernize_army }
+			is_ai = no
+		}
+
+		highlight_states = {
+			#random_state = { 
+			#	limit = { 
+			#		OR = {
+			#			is_owned_and_controlled_by = ROOT 
+			#			any_neighbor_state = { is_coastal = yes }
+			#		}
+			#		is_in_home_area = yes
+			#	}
+			#	set_temp_variable = { var:merc_state_temp = id }
+			#}
+			#state = merc_state_temp
+		}
+
+		fire_only_once = no
+
+		days_remove = 30
+		days_re_enable = 180
+
+		complete_effect = {
+			set_country_flag = hiring_merc
+			army_experience = -10
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = melee_merc }
+				}
+				set_country_flag = melee_merc
+				load_oob = "unlock_melee_mercs"
+			}
+			random_state = { 
+				limit = { 
+					#OR = {
+						is_owned_and_controlled_by = ROOT 
+						#random_country = {
+						#	limit = {
+						#		is_owner_neighbor_of = SPR
+						#	}
+						#	any_owned_state = {
+						#		any_neighbor_state = {
+						#			is_controlled_by = SPR
+						#		}
+						#	}
+						#}
+					#}
+					#is_in_home_area = yes
+				}
+				create_unit = {
+					division = "division_template = \"Melee Mercenaries\" start_experience_factor = 0.3" 
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+			clr_country_flag = hiring_merc
+		}
+	}
+	hire_line_infantry_mercs = {
+		
+		icon = generic_prepare_civil_war
+		
+		available = {
+			has_army_experience > 15
+			NOT = { has_country_flag = hiring_merc }
+		}
+
+		visible = {
+			has_tech = muskets0
+			num_of_factories > 5
+			NOT = { has_tech = modernize_army }
+			is_ai = no
+		}
+
+		highlight_states = {
+			#random_state = { 
+			#	limit = { 
+			#		OR = {
+			#			is_owned_and_controlled_by = ROOT 
+			#			any_neighbor_state = { is_coastal = yes }
+			#		}
+			#		is_in_home_area = yes
+			#	}
+			#	set_temp_variable = { var:merc_state_temp = id }
+			#}
+			#state = merc_state_temp
+		}
+
+		fire_only_once = no
+
+		days_remove = 45
+		days_re_enable = 365
+
+		complete_effect = {
+			set_country_flag = hiring_merc
+			army_experience = -15
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = line_merc }
+				}
+				set_country_flag = line_merc
+				load_oob = "unlock_line_mercs"
+			}
+			random_state = { 
+				limit = { 
+					#OR = {
+						is_owned_and_controlled_by = ROOT 
+						#random_country = {
+						#	limit = {
+						#		is_owner_neighbor_of = SPR
+						#	}
+						#	any_owned_state = {
+						#		any_neighbor_state = {
+						#			is_controlled_by = SPR
+						#		}
+						#	}
+						#}
+					#}
+					#is_in_home_area = yes
+				}
+				create_unit = {
+					division = "division_template = \"Line Infantry Mercenaries\" start_experience_factor = 0.3" 
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+			clr_country_flag = hiring_merc
+		}
+	}
+	hire_light_cavalry_mercs = {
+		
+		icon = generic_prepare_civil_war
+		
+		available = {
+			has_army_experience > 20
+			NOT = { has_country_flag = hiring_cavalry_merc }
+		}
+
+		visible = {
+			has_tech = lancers  
+			num_of_factories > 5
+			NOT = { has_tech = modernize_army }
+			is_ai = no
+		}
+
+		highlight_states = {
+			#random_state = { 
+			#	limit = { 
+			#		OR = {
+			#			is_owned_and_controlled_by = ROOT 
+			#			any_neighbor_state = { is_coastal = yes }
+			#		}
+			#		is_in_home_area = yes
+			#	}
+			#	set_temp_variable = { var:merc_state_temp = id }
+			#}
+			#state = merc_state_temp
+		}
+
+		fire_only_once = no
+
+		days_remove = 105
+		days_re_enable = 365
+
+		complete_effect = {
+			set_country_flag = hiring_cavalry_merc
+			army_experience = -20
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = light_cavalry_merc }
+				}
+				set_country_flag = light_cavalry_merc
+				load_oob = "unlock_light_cavalry_mercs"
+			}
+			random_state = { 
+				limit = { 
+					#OR = {
+						is_owned_and_controlled_by = ROOT 
+						#random_country = {
+						#	limit = {
+						#		is_owner_neighbor_of = SPR
+						#	}
+						#	any_owned_state = {
+						#		any_neighbor_state = {
+						#			is_controlled_by = SPR
+						#		}
+						#	}
+						#}
+					#}
+					#is_in_home_area = yes
+				}
+				create_unit = {
+					division = "division_template = \"Light Cavalry Mercenaries\" start_experience_factor = 0.3" 
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+			clr_country_flag = hiring_cavalry_merc
+		}
+	}
+	hire_medium_cavalry_mercs = {
+		
+		icon = generic_prepare_civil_war
+		
+		available = {
+			has_army_experience > 15
+			NOT = { has_country_flag = hiring_cavalry_merc }
+		}
+
+		visible = {
+			has_tech = basic_cavalry 
+			num_of_factories > 10
+			NOT = { has_tech = modernize_army }
+			is_ai = no
+		}
+
+		highlight_states = {
+			#random_state = { 
+			#	limit = { 
+			#		OR = {
+			#			is_owned_and_controlled_by = ROOT 
+			#			any_neighbor_state = { is_coastal = yes }
+			#		}
+			#		is_in_home_area = yes
+			#	}
+			#	set_temp_variable = { var:merc_state_temp = id }
+			#}
+			#state = merc_state_temp
+		}
+
+		fire_only_once = no
+
+		days_remove = 90
+		days_re_enable = 365
+
+		complete_effect = {
+			set_country_flag = hiring_cavalry_merc
+			army_experience = -15
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = medium_cavalry_merc }
+				}
+				set_country_flag = medium_cavalry_merc
+				load_oob = "unlock_medium_cavalry_mercs"
+			}
+			random_state = { 
+				limit = { 
+					#OR = {
+						is_owned_and_controlled_by = ROOT 
+						#random_country = {
+						#	limit = {
+						#		is_owner_neighbor_of = SPR
+						#	}
+						#	any_owned_state = {
+						#		any_neighbor_state = {
+						#			is_controlled_by = SPR
+						#		}
+						#	}
+						#}
+					#}
+					#is_in_home_area = yes
+				}
+				create_unit = {
+					division = "division_template = \"Medium Cavalry Mercenaries\" start_experience_factor = 0.3" 
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+			clr_country_flag = hiring_cavalry_merc
+		}
+	}
+	hire_heavy_cavalry_mercs = {
+		
+		icon = generic_prepare_civil_war
+		
+		available = {
+			has_army_experience > 25
+			NOT = { has_country_flag = hiring_cavalry_merc }
+		}
+
+		visible = {
+			has_tech = basic_cavalry 
+			num_of_factories > 20
+			NOT = { has_tech = modernize_army }
+			is_ai = no
+		}
+
+		highlight_states = {
+			#random_state = { 
+			#	limit = { 
+			#		OR = {
+			#			is_owned_and_controlled_by = ROOT 
+			#			any_neighbor_state = { is_coastal = yes }
+			#		}
+			#		is_in_home_area = yes
+			#	}
+			#	set_temp_variable = { var:merc_state_temp = id }
+			#}
+			#state = merc_state_temp
+		}
+
+		fire_only_once = no
+
+		days_remove = 150
+		days_re_enable = 365
+
+		complete_effect = {
+			set_country_flag = hiring_cavalry_merc
+			army_experience = -25
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = heavy_cavalry_merc }
+				}
+				set_country_flag = heavy_cavalry_merc
+				load_oob = "unlock_heavy_cavalry_mercs"
+			}
+			random_state = { 
+				limit = { 
+					#OR = {
+						is_owned_and_controlled_by = ROOT 
+						#random_country = {
+						#	limit = {
+						#		is_owner_neighbor_of = SPR
+						#	}
+						#	any_owned_state = {
+						#		any_neighbor_state = {
+						#			is_controlled_by = SPR
+						#		}
+						#	}
+						#}
+					#}
+					#is_in_home_area = yes
+				}
+				create_unit = {
+					division = "division_template = \"Heavy Cavalry Mercenaries\" start_experience_factor = 0.3" 
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+			clr_country_flag = hiring_cavalry_merc
+		}
+	}
+	
+	### AI ###
+	
+	hire_melee_mercs_ai = {
+		
+		icon = generic_prepare_civil_war
+		
+		available = {
+			NOT = { has_country_flag = hiring_merc }
+		}
+
+		visible = {
+			has_tech = melee
+			NOT = { has_tech = modernize_army }
+			is_ai = yes
+		}
+
+		highlight_states = {
+			#random_state = { 
+			#	limit = { 
+			#		OR = {
+			#			is_owned_and_controlled_by = ROOT 
+			#			any_neighbor_state = { is_coastal = yes }
+			#		}
+			#		is_in_home_area = yes
+			#	}
+			#	set_temp_variable = { var:merc_state_temp = id }
+			#}
+			#state = merc_state_temp
+		}
+
+		fire_only_once = no
+
+		days_remove = 15
+		days_re_enable = 90
+
+		complete_effect = {
+			set_country_flag = hiring_merc
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = melee_merc }
+				}
+				set_country_flag = melee_merc
+				load_oob = "unlock_melee_mercs"
+			}
+			random_state = { 
+				limit = { 
+					#OR = {
+						is_owned_and_controlled_by = ROOT 
+						#random_country = {
+						#	limit = {
+						#		is_owner_neighbor_of = SPR
+						#	}
+						#	any_owned_state = {
+						#		any_neighbor_state = {
+						#			is_controlled_by = SPR
+						#		}
+						#	}
+						#}
+					#}
+					#is_in_home_area = yes
+				}
+				create_unit = {
+					division = "division_template = \"Melee Mercenaries\" start_experience_factor = 0.3" 
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+			clr_country_flag = hiring_merc
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				num_divisions < num_of_factories
+			}
+		}
+	}
+	hire_line_infantry_mercs_ai = {
+		
+		icon = generic_prepare_civil_war
+		
+		available = {
+			has_army_experience > 5
+			NOT = { has_country_flag = hiring_merc }
+		}
+
+		visible = {
+			has_tech = muskets0
+			num_of_factories > 5
+			NOT = { has_tech = modernize_army }
+			is_ai = yes
+		}
+
+		highlight_states = {
+			#random_state = { 
+			#	limit = { 
+			#		OR = {
+			#			is_owned_and_controlled_by = ROOT 
+			#			any_neighbor_state = { is_coastal = yes }
+			#		}
+			#		is_in_home_area = yes
+			#	}
+			#	set_temp_variable = { var:merc_state_temp = id }
+			#}
+			#state = merc_state_temp
+		}
+
+		fire_only_once = no
+
+		days_remove = 30
+		days_re_enable = 180
+
+		complete_effect = {
+			set_country_flag = hiring_merc
+			army_experience = -5
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = line_merc }
+				}
+				set_country_flag = line_merc
+				load_oob = "unlock_line_mercs"
+			}
+			random_state = { 
+				limit = { 
+					#OR = {
+						is_owned_and_controlled_by = ROOT 
+						#random_country = {
+						#	limit = {
+						#		is_owner_neighbor_of = SPR
+						#	}
+						#	any_owned_state = {
+						#		any_neighbor_state = {
+						#			is_controlled_by = SPR
+						#		}
+						#	}
+						#}
+					#}
+					#is_in_home_area = yes
+				}
+				create_unit = {
+					division = "division_template = \"Line Infantry Mercenaries\" start_experience_factor = 0.3" 
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+			clr_country_flag = hiring_merc
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				num_divisions < num_of_factories
+			}
+		}
+	}
+	hire_light_cavalry_mercs_ai = {
+		
+		icon = generic_prepare_civil_war
+		
+		available = {
+			has_army_experience > 10
+			NOT = { has_country_flag = hiring_cavalry_merc }
+		}
+
+		visible = {
+			has_tech = lancers  
+			num_of_factories > 5
+			NOT = { has_tech = modernize_army }
+			is_ai = yes
+		}
+
+		highlight_states = {
+			#random_state = { 
+			#	limit = { 
+			#		OR = {
+			#			is_owned_and_controlled_by = ROOT 
+			#			any_neighbor_state = { is_coastal = yes }
+			#		}
+			#		is_in_home_area = yes
+			#	}
+			#	set_temp_variable = { var:merc_state_temp = id }
+			#}
+			#state = merc_state_temp
+		}
+
+		fire_only_once = no
+
+		days_remove = 45
+		days_re_enable = 180
+
+		complete_effect = {
+			set_country_flag = hiring_cavalry_merc
+			army_experience = -10
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = light_cavalry_merc }
+				}
+				set_country_flag = light_cavalry_merc
+				load_oob = "unlock_light_cavalry_mercs"
+			}
+			random_state = { 
+				limit = { 
+					#OR = {
+						is_owned_and_controlled_by = ROOT 
+						#random_country = {
+						#	limit = {
+						#		is_owner_neighbor_of = SPR
+						#	}
+						#	any_owned_state = {
+						#		any_neighbor_state = {
+						#			is_controlled_by = SPR
+						#		}
+						#	}
+						#}
+					#}
+					#is_in_home_area = yes
+				}
+				create_unit = {
+					division = "division_template = \"Light Cavalry Mercenaries\" start_experience_factor = 0.3" 
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+			clr_country_flag = hiring_cavalry_merc
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				num_divisions < num_of_factories
+			}
+		}
+	}
+	hire_medium_cavalry_mercs_ai = {
+		
+		icon = generic_prepare_civil_war
+		
+		available = {
+			has_army_experience > 5
+			NOT = { has_country_flag = hiring_cavalry_merc }
+		}
+
+		visible = {
+			has_tech = basic_cavalry 
+			num_of_factories > 10
+			NOT = { has_tech = modernize_army }
+			is_ai = yes
+		}
+
+		highlight_states = {
+			#random_state = { 
+			#	limit = { 
+			#		OR = {
+			#			is_owned_and_controlled_by = ROOT 
+			#			any_neighbor_state = { is_coastal = yes }
+			#		}
+			#		is_in_home_area = yes
+			#	}
+			#	set_temp_variable = { var:merc_state_temp = id }
+			#}
+			#state = merc_state_temp
+		}
+
+		fire_only_once = no
+
+		days_remove = 30
+		days_re_enable = 180
+
+		complete_effect = {
+			set_country_flag = hiring_cavalry_merc
+			army_experience = -5
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = medium_cavalry_merc }
+				}
+				set_country_flag = medium_cavalry_merc
+				load_oob = "unlock_medium_cavalry_mercs"
+			}
+			random_state = { 
+				limit = { 
+					#OR = {
+						is_owned_and_controlled_by = ROOT 
+						#random_country = {
+						#	limit = {
+						#		is_owner_neighbor_of = SPR
+						#	}
+						#	any_owned_state = {
+						#		any_neighbor_state = {
+						#			is_controlled_by = SPR
+						#		}
+						#	}
+						#}
+					#}
+					#is_in_home_area = yes
+				}
+				create_unit = {
+					division = "division_template = \"Medium Cavalry Mercenaries\" start_experience_factor = 0.3" 
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+			clr_country_flag = hiring_cavalry_merc
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				num_divisions < num_of_factories
+			}
+		}
+	}
+	hire_heavy_cavalry_mercs_ai = {
+		
+		icon = generic_prepare_civil_war
+		
+		available = {
+			has_army_experience > 15
+			NOT = { has_country_flag = hiring_cavalry_merc }
+		}
+
+		visible = {
+			has_tech = basic_cavalry 
+			num_of_factories > 20
+			NOT = { has_tech = modernize_army }
+			is_ai = yes
+		}
+
+		highlight_states = {
+			#random_state = { 
+			#	limit = { 
+			#		OR = {
+			#			is_owned_and_controlled_by = ROOT 
+			#			any_neighbor_state = { is_coastal = yes }
+			#		}
+			#		is_in_home_area = yes
+			#	}
+			#	set_temp_variable = { var:merc_state_temp = id }
+			#}
+			#state = merc_state_temp
+		}
+
+		fire_only_once = no
+
+		days_remove = 60
+		days_re_enable = 180
+
+		complete_effect = {
+			set_country_flag = hiring_cavalry_merc
+			army_experience = -15
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = heavy_cavalry_merc }
+				}
+				set_country_flag = heavy_cavalry_merc
+				load_oob = "unlock_heavy_cavalry_mercs"
+			}
+			random_state = { 
+				limit = { 
+					#OR = {
+						is_owned_and_controlled_by = ROOT 
+						#random_country = {
+						#	limit = {
+						#		is_owner_neighbor_of = SPR
+						#	}
+						#	any_owned_state = {
+						#		any_neighbor_state = {
+						#			is_controlled_by = SPR
+						#		}
+						#	}
+						#}
+					#}
+					#is_in_home_area = yes
+				}
+				create_unit = {
+					division = "division_template = \"Heavy Cavalry Mercenaries\" start_experience_factor = 0.3" 
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+			clr_country_flag = hiring_cavalry_merc
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				num_divisions < num_of_factories
+			}
+		}
+	}
+}

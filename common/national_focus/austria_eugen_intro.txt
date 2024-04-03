@@ -1,0 +1,685 @@
+#################
+###Eugen Intro###
+#################
+
+
+focus_tree = {
+	id = austria_eugen_intro
+	
+	country = {
+		factor = 0
+	}
+
+
+	default = no
+	continuous_focus_position = { x = 40 y = 2000 }
+
+
+
+
+	#### START ####
+
+	focus = { 
+		id = AUS_new_hope
+		icon = GFX_AUS_The_New_Hope
+		cost = 30
+	
+		x = 7
+		y = 0
+		
+		completion_reward = {
+			add_ideas = { aus_idea_eugens_rule }
+		}
+	}
+
+
+
+
+
+
+
+	#### HRE PART ####
+
+	focus = { 
+		id = AUS_restoring_past_order
+		icon = GFX_AUS_focus_Presents_Cajoling
+		cost = 30
+	
+		x = 1
+		y = 1
+		
+
+		prerequisite = { focus = AUS_new_hope }
+
+		completion_reward = {
+			country_event = {
+			    id = Auseugen.1
+			    days = 0
+			    random = 0
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_criticise_the_decrease_of_traditionalism
+		icon = GFX_focus_mex_triumph_over_the_cristeros
+		cost = 30
+	
+		x = 0
+		y = 2
+		
+
+		prerequisite = { focus = AUS_restoring_past_order }
+
+		completion_reward = {
+			country_event = {
+			    id = Auseugen.3
+			    days = 0
+			    random = 0
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_true_faith
+		icon = GFX_SPR_lex_christi
+		cost = 30
+	
+		x = 0
+		y = 3
+		
+
+		prerequisite = { focus = AUS_criticise_the_decrease_of_traditionalism }
+
+		completion_reward = {
+			country_event = {
+			    id = Auseugen.5
+			    days = 0
+			    random = 0
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_brother_against_brother
+		icon = GFX_goal_generic_special_forces
+		cost = 30
+	
+		x = 2
+		y = 2
+		
+
+		prerequisite = { focus = AUS_restoring_past_order }
+
+		completion_reward = {
+			country_event = Auseugen.26		
+		}
+	}
+
+	focus = { 
+		id = AUS_dissaprove_agressive_expansion
+		icon = GFX_AUS_focus_Threats_Actions
+		cost = 30
+	
+		x = 2
+		y = 3
+		
+
+		prerequisite = { focus = AUS_brother_against_brother }
+
+		completion_reward = {
+			country_event = Auseugen.8
+		}
+	}
+
+	focus = { 
+		id = AUS_one_king_for_all
+		icon = GFX_AUS_focus_Peoples_Emperor
+		cost = 30
+	
+		x = 1
+		y = 4
+		
+
+		prerequisite = { focus = AUS_dissaprove_agressive_expansion }
+		prerequisite = { focus = AUS_true_faith }
+
+		completion_reward = {
+			country_event = Auseugen.10
+		}
+	}
+
+	focus = { 
+		id = AUS_send_missions
+		icon = GFX_SPR_boost_noble_scholarships
+		cost = 30
+	
+		x = 1
+		y = 5
+		
+
+		prerequisite = { focus = AUS_one_king_for_all }
+
+		completion_reward = {
+			custom_effect_tooltip = aus_eugen_decisions1
+			set_global_flag = hre_missions_sent	
+		}
+	}
+
+	focus = { 
+		id = AUS_negotiations_with_electors
+		icon = GFX_AUS_focus_Negotiations_with_Electors
+		cost = 30
+	
+		x = 0
+		y = 6
+		
+
+		prerequisite = { focus = AUS_send_missions }
+
+		completion_reward = {
+			custom_effect_tooltip = aus_eugen_decisions2
+			set_global_flag = hre_majors_missions_sent
+		}
+	}
+
+	focus = { 
+		id = AUS_reasure_the_loyalty_of_princes
+		icon = GFX_SPR_silent_court
+		cost = 30
+	
+		x = 2
+		y = 6
+		
+
+		prerequisite = { focus = AUS_send_missions }
+
+		completion_reward = {
+			custom_effect_tooltip = aus_eugen_decisions3		
+			set_global_flag = hre_minors_missions_sent
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+####ARMY/NAVY PART####
+
+
+	focus = { 
+		id = AUS_gemeinsame_armee
+		icon = GFX_AUS_Gemeinsame_Armee
+		cost = 25
+	
+		x = 7
+		y = 1
+		
+
+		prerequisite = { focus = AUS_new_hope }
+
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+
+
+	focus = { 
+		id = AUS_renew_alliance_with_venice
+		icon = GFX_goal_generic_major_alliance
+		cost = 25
+	
+		x = 5
+		y = 2
+		
+
+		prerequisite = { focus = AUS_gemeinsame_armee }
+
+		completion_reward = {
+			VNC = {
+				country_event = Auseugen.12
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_konigliche_krigsmarine
+		icon = GFX_AUS_Konigliche_Kriegsmarine
+		cost = 30
+	
+		x = 5
+		y = 3
+		
+
+		prerequisite = { focus =  AUS_renew_alliance_with_venice }
+
+		completion_reward = {
+			navy_experience = 25
+		}
+	}
+
+	focus = { 
+		id = AUS_peasants_recruits
+		icon = GFX_focus_generic_little_entente
+		cost = 30
+	
+		x = 9
+		y = 2
+		
+
+		prerequisite = { focus = AUS_gemeinsame_armee }
+
+		completion_reward = {
+			add_timed_idea = {
+			    idea = aus_idea_peasants_recruits
+			    days = 180
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_better_payments
+		icon = GFX_AUS_Better_Payments
+		cost = 30
+	
+		x = 9
+		y = 3
+		
+
+		prerequisite = { focus = AUS_peasants_recruits }
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = aus_idea_better_payments
+				days = 180
+			} 
+						
+		}
+	}
+
+	focus = { 
+		id = AUS_cooperation_with_venice
+		icon = GFX_AUS_focus_Cooperation_with_Venice
+		cost = 25
+	
+		x = 5
+		y = 4
+		
+
+		prerequisite = { focus = AUS_konigliche_krigsmarine }
+
+		completion_reward = {
+			VNC = {
+				country_event = Auseugen.29
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_fund_the_royal_navy
+		icon = GFX_AUS_Fund_the_Royal_Navy
+		cost = 30
+	
+		x = 7
+		y = 4
+		
+
+		prerequisite = { focus = AUS_konigliche_krigsmarine }
+		prerequisite = { focus = AUS_better_payments }
+
+		completion_reward = {
+			add_ideas = aus_idea_royal_navy
+		}
+	}
+
+	focus = { 
+		id = AUS_recruit_new_admirals
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		cost = 30
+	
+		x = 6
+		y = 5
+		
+
+		prerequisite = { focus = AUS_cooperation_with_venice }
+		prerequisite = { focus = AUS_fund_the_royal_navy }
+
+		completion_reward = {
+			create_navy_leader = {
+				name = "Archduke Leopold Ludwig"
+			    picture = ""
+				traits = { gentlemanly }
+				attack_skill = 2
+				defense_skill = 3
+				maneuvering_skill = 2
+				coordination_skill = 3
+			}
+			set_global_flag = aus_hermann_von_spaun_promoted
+			custom_effect_tooltip = aus_promote_hermann_von_spaun_tt
+		}
+	}
+
+	focus = { 
+		id = AUS_war_propaganda
+		icon = GFX_goal_generic_political_pressure
+		cost = 40
+	
+		x = 9
+		y = 4
+		
+
+		prerequisite = { focus = AUS_better_payments }
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = -30
+		}
+	}
+
+	focus = { 
+		id = AUS_modernize_the_army
+		icon = GFX_focus_generic_the_old_is_new_again
+		cost = 30
+	
+		x = 10
+		y = 5
+		
+
+		prerequisite = { focus = AUS_war_propaganda }
+		prerequisite = { focus = AUS_increase_militarization }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_ready_for_war
+		icon = GFX_goal_generic_major_war
+		cost = 35
+	
+		x = 7
+		y = 6
+		
+		prerequisite = { focus = AUS_recruit_new_admirals }
+		prerequisite = { focus = AUS_modernize_the_army }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+	####PROMISES PART####
+
+
+	
+
+	focus = { 
+		id = AUS_kings_promises
+		icon = GFX_AUS_focus_Deal_Nobility
+		cost = 25
+	
+		x = 14
+		y = 1
+		
+
+		prerequisite = { focus = AUS_new_hope }
+
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = absolutist
+				popularity = 0.03
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_start_industrial_campaign
+		icon = GFX_AUS_start_industrial_campaign
+		cost = 25
+	
+		x = 12
+		y = 2
+		
+
+		prerequisite = { focus = AUS_kings_promises }
+
+		completion_reward = {
+			add_ideas = { aus_idea_industrial_campaign_1 }
+			set_global_flag = aus_industrial_campaign_started
+		}
+	}
+
+	focus = { 
+		id = AUS_wien_ofen_pesth_plan
+		icon = GFX_AUS_wien_ofen_pesth_plan
+		cost = 30
+	
+		x = 12
+		y = 3
+		
+
+		prerequisite = { focus = AUS_start_industrial_campaign }
+
+		completion_reward = {
+			custom_effect_tooltip = aus_eugen_decisions4
+			set_global_flag = wien_ofen_pesth_plan_completed
+		}
+	}
+
+	focus = { 
+		id = AUS_increase_militarization
+		icon = GFX_goal_generic_demand_territory
+		cost = 30
+	
+		x = 12
+		y = 4
+		
+
+		prerequisite = { focus = AUS_wien_ofen_pesth_plan }
+
+		completion_reward = {
+			add_ideas = aus_idea_increased_militarization
+		}
+	}
+
+	focus = { 
+		id = AUS_take_care_of_heretics
+		icon = GFX_goal_generic_CAS
+		cost = 35
+	
+		x = 16
+		y = 2
+		
+
+		prerequisite = { focus = AUS_kings_promises }
+
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = 50
+			add_timed_idea = {
+				idea = aus_idea_increased_religious_unity
+				days = 70
+			}
+
+		}
+	}
+
+	focus = { 
+		id = AUS_fund_hungarian_university
+		icon = GFX_SPR_Popular_laws
+		cost = 60
+	
+		x = 14
+		y = 3
+		
+
+		prerequisite = { focus = AUS_start_industrial_campaign }
+		prerequisite = { focus = AUS_take_care_of_heretics }
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+
+	focus = { 
+		id = AUS_bypass_the_obligation
+		icon = GFX_AUS_focus_Emancipation
+		cost = 35
+	
+		x = 15
+		y = 4
+		
+
+		prerequisite = { focus = AUS_take_care_of_heretics }
+		mutually_exclusive = { focus = AUS_help_the_peasantry}
+
+		completion_reward = {
+			add_stability = -0.07
+			add_political_power = 100
+		}
+	}
+
+	focus = { 
+		id = AUS_bigger_taxes
+		icon = GFX_AUS_bigger_taxes
+		cost = 35
+	
+		x = 15
+		y = 5
+		
+
+		prerequisite = { focus = AUS_bypass_the_obligation }
+
+		completion_reward = {
+			add_stability = -0.04
+			add_ideas = aus_idea_bigger_taxes
+		}
+	}
+
+	focus = { 
+		id = AUS_help_the_peasantry
+		icon = GFX_AUS_focus_Equality
+		cost = 25
+	
+		x = 17
+		y = 4
+		
+
+		prerequisite = { focus = AUS_take_care_of_heretics }
+		mutually_exclusive = { focus = AUS_bypass_the_obligation}
+
+		completion_reward = {
+			add_political_power = -50
+			add_stability = 0.02	
+		}
+	}
+
+	focus = { 
+		id = AUS_fight_with_illiteracy
+		icon = GFX_AUS_focus_Promises_People
+		cost = 45
+	
+		x = 17
+		y = 5
+		
+
+		prerequisite = { focus = AUS_help_the_peasantry }
+
+		completion_reward = {
+			add_political_power = -50
+			add_stability = 0.03		
+			add_ideas = aus_idea_fight_with_illiteracy
+		}
+	}
+
+	focus = { 
+		id = AUS_completion_of_the_initial_program
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 20
+	
+		x = 14
+		y = 6
+		
+
+		prerequisite = { focus = AUS_modernize_the_army }
+		prerequisite = { focus = AUS_fund_hungarian_university }
+		prerequisite = { focus = AUS_bigger_taxes
+						 focus = AUS_fight_with_illiteracy }
+
+
+		completion_reward = {
+			add_political_power = 40
+		}
+	}
+
+
+
+
+
+	####END####
+
+
+	focus = { 
+		id = AUS_just_the_beginning
+		icon = GFX_AUS_focus_Visit_Rome
+		cost = 50
+	
+		x = 7
+		y = 7
+		
+
+		prerequisite = { focus = AUS_negotiations_with_electors }
+		prerequisite = { focus = AUS_reasure_the_loyalty_of_princes }
+		prerequisite = { focus = AUS_ready_for_war }
+		prerequisite = { focus = AUS_completion_of_the_initial_program }
+
+		completion_reward = {
+			swap_ideas = {
+			    remove_idea = aus_idea_eugens_rule
+			    add_idea = aus_idea_eugens_rule2
+			}
+			hidden_effect = { load_focus_tree = austria_eugen_2 }
+		}
+	}
+
+
+}

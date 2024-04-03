@@ -1,0 +1,43 @@
+ideas = {
+    country = {
+        tri_idea_university = {
+            picture = TRI_university
+
+            allowed = { always = no }
+
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                research_speed_factor = 0.02
+            }
+        }
+
+        tri_idea_church_taxes = {
+            picture = TRI_church_taxes
+            
+            allowed = { always = no }
+
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = 0.1
+            }
+        }
+
+        tri_idea_rhenish_trade = {
+            picture = generic_HRE_elector
+            
+            allowed = { always = no }
+
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {}
+        }
+    }
+}

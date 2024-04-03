@@ -1,0 +1,27 @@
+state={
+	id=878
+	name="STATE_878"
+	
+	resources={
+		wood=1
+		horses=1
+	}
+    
+	history={
+		owner = TLW
+		add_core_of = TLW
+		buildings = {
+		610 = {
+				naval_base = 1
+			}
+		infrastructure = 2
+		}
+	}
+
+	provinces={
+      12281 528 10151 3471 11733 505 11495 3644 610 781 6665 6482 3588
+	}
+	manpower = 5658
+	buildings_max_level_factor = 1.000
+	state_category = rural
+}

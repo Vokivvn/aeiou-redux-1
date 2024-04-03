@@ -1,0 +1,46 @@
+﻿capital = 854
+
+set_oob = "MRK_1886"
+
+set_research_slots = 3
+
+set_stability = 0.6
+set_war_support = 0.5
+
+# Starting tech
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+	melee = 1
+	basic_cavalry = 1
+	melee_improvements = 1
+}
+
+add_ideas = {
+	hre_idea_prince
+}
+	
+
+set_convoys = 800
+
+# DIPLOMACY
+
+set_politics = {
+	ruling_party = absolutist
+	elections_allowed = no
+}
+set_popularities = {
+	absolutist = 100
+}
+
+add_to_array = { national_religion_array =  2 }
+
+# Order matters - here Chamberlain becomes starting leader
+
+create_country_leader = {
+	name = "Friedrich II"
+	desc = "POLITICS_FRIEDRICH_LIMBURG"
+	picture = "Portrait_MRK_Friedrich.dds"
+	expire = "1910.6.19"
+	ideology = absolutist_moderate
+}

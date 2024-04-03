@@ -1,0 +1,78 @@
+division_template = {
+	name = "Ukrainian Musketeers"
+
+	division_names_group = UKR_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Orzhitsky's Cossacks"
+
+	division_names_group = UKR_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Ukrainian Noblemen"
+
+	division_names_group = UKR_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Ukrainian Musketeer Brigade"
+		location = 9566
+		division_template = "Ukrainian Musketeers"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Ukrainian Musketeer Brigade"
+		location = 11504
+		division_template = "Ukrainian Musketeers"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3rd Ukrainian Musketeer Brigade"
+		location = 11683
+		division_template = "Ukrainian Musketeers"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Orzhitsky's Cossacks"
+		location = 525
+		division_template = "Orzhitsky's Cossacks"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Kharkiv Host"
+		location = 418
+		division_template = "Orzhitsky's Cossacks"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Zaporozhian Host"
+		location = 11405
+		division_template = "Orzhitsky's Cossacks"
+		start_experience_factor = 0.3
+	}
+}

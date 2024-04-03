@@ -1,0 +1,25 @@
+﻿capital = 27
+
+set_research_slots = 3
+
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+	melee = 1
+	basic_cavalry = 1
+	melee_improvements = 1
+}
+
+set_politics = {
+	ruling_party = absolutist
+	elections_allowed = no
+}
+set_popularities = {
+	absolutist = 85
+	conservative = 5
+	despotist = 10
+}
+
+set_stability = 0.45
+
+add_to_array = { national_religion_array =  2 }

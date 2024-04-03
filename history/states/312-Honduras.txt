@@ -1,0 +1,34 @@
+state=
+{
+	id=312
+	name="STATE_312"
+	manpower=265520
+	resources={
+		wood=2
+	}
+	
+	state_category = rural
+	history=
+	{
+		owner = GUA
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+			12865 = {
+				naval_base = 1
+			}
+			8017 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = GUA
+		victory_points = {
+			12865 3 
+		}
+
+	}
+	provinces={
+		8017 12865 13247
+	}
+}

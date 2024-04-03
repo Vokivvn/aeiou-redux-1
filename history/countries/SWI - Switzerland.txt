@@ -1,0 +1,40 @@
+﻿capital = 3
+
+oob = "SWI_1886"
+
+set_research_slots = 3
+
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+	melee = 1
+}
+
+set_politics = {
+	ruling_party = conservative
+	elections_allowed = no
+}
+set_popularities = {
+	conservative = 25
+	despotist = 10
+	apolitical = 5
+	centrist = 10
+	liberal = 15
+	socialist = 10
+	weitlingist = 10
+	communist = 5
+	revolutionary = 10
+}
+
+set_stability = 0.85
+
+add_to_array = { national_religion_array =  2 }
+add_to_array = { national_religion_array =  3 }
+
+create_country_leader = {
+	name = "Federal Council"
+	desc = "POLITICS_FEDERAL_COUNCIL_DESC"
+	picture = "Portrait_Switzerland_Federal_council.dds"
+	expire = "1965.1.1"
+	ideology = conservative_moderate
+}

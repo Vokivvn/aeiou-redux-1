@@ -1,0 +1,519 @@
+﻿l_english:
+    ####Political Advisors
+    FRA_gustave_eiffel:0 "Gustave Eiffel"
+    FRA_hector_malot:0 "Hector Malot"
+    FRA_pierre_emile_levasseur:0 "Pierre Émile Levasseur"
+    FRA_henri_becquerel:0 "Henri Becquerel"
+    
+    FRA_charles_de_freycinet:0 "Charles de Freycinet"
+    FRA_henri_rieunier:0 "Henri Rieunier"
+    
+    FRA_raoul_de_boisdeffre:0 "Raoul de Boisdeffre"
+    FRA_joseph_de_miribel:0 "Joseph de Miribel"
+    
+    FRA_jules_francois_emile_krantz:0 "Jules François Émile Krantz"
+    FRA_henri_rieunier:0 "Armand Besnard"
+    
+    FRA_auguste_mercier:0 "Auguste Mercier"
+    FRA_francois_logerot:0 "François Logerot"
+    FRA_jean_baptiste_billot:0 "Jean-Baptiste Billot"
+    
+    ####Ideas
+    fra_extracontinental_agitation:0 "Extracontinental Agitation"
+    fra_extracontinental_agitation_desc:0 "Ever since the age of the Anglo-French conflicts in Canada to our great victories against the Indians the Kingdom of France has always been a seafaring nation. However, our nation has never dedicated much effort to assimilating said natives and perhaps to our detriment those peoples have refused to embrace our culture on their own, leading to their wish to secede from us once again.\n\nThis is the cause of much distress for Monsieur Lambert, the current leader of our Louisianan colony, the most dissident of all."
+    
+    fra_decaying_military:0 "Decaying Military"
+    fra_decaying_military_desc:0 "It's been a long time since the last great conflict erupted in Europe and since, most nations have embraced a tactic of proxy wars and colonial uprisings which surprisingly worked when we supported the Latin-American colonies gain their independence from the Spanish Absolutists.\n\nUnluckily for us, this has meant that the army has become lazy and mutinous, and most of the heads of the General Armée are unambitious corrupt generals that grant posts in exchange for money and favours. This, mixed with the peasant's apathy towards a military career and its subsequent lack of fresh recruits has led to it becoming derisory and is continuously mocked by our souther neighbours, who entrench themselves in our border preparing one final push against our nation."
+    
+    fra_nationalist_breeding_ground:0 "Nationalistic Breeding Ground"
+    fra_nationalist_breeding_ground_desc:0 "France is one, but the French people aren't. From Basques and Occitans in the south to Bretons, Alsatians and Brabantians in the North our nation is continuously divided linguistically, politically and economically, with some parts of the country paying less taxes than others and some peoples refusing to acknowledge that the people that rule from Palace of Versailles even exists.\n\nDue to our decentralization these people believe themselves to be something different than French, and this has led to several nationalist movements so perhaps it is now the moment to proclaim French as the only language and punish those who do not comply.\n\nLet them face the Bourbon wrath."
+    
+    fra_ramping_decentralization:0 "Rampant Decentralization"
+    fra_ramping_decentralization_desc:0 "Unlike our southern neighbour, the Kingdom of France is known for its high level of decentralization. The noble families of Bretagne, Aquitaine and the many petty comtes, dukes and vicomtes that populate the Midi have stirred French politics for many generations. The Bourbon family has become a synonym of Moderate Absolutism over the time, as even if their intentions aren't the most moderate, the vassals are absolutely willing to remember each king of their duty as their suzerain, and this means respecting the Moderate Feudal contract. This can prove both beneficial and inefficient, as the Monarchy cannot gather as much soldiery as it would like just like the old Feudal contracts dictates, but this also means that we can be sure that we will have their support in any way or another, diplomatically or economically, as the same exact contract dictates that they are forced to comply no matter what.\n\nSome of them may become unruly should someone attempt to change the status quo."
+    
+    fra_economic_revitalization:0 "Economic Revitalization"
+    fra_economic_revitalization_desc:0 "Following the crash of the Ivory Market the French people have had to adapt to a tighter budget and longer workhours, but in exchange, we've managed to secure a safe transition between Ivory trade and whatever our great nation decides to invest in next. Only time can tell what new markets we'll find, but we can surely say we're proud of what has been achieved up until now."
+   
+    fra_economic_revitalization1:0 "Economic Revitalization"
+    fra_economic_revitalization1_desc:0 "Following the crash of the Ivory Market the French people have had to adapt to a tighter budget and longer workhours, but in exchange, we've managed to secure a safe transition between Ivory trade and whatever our great nation decides to invest in next. Only time can tell what new markets we'll find, but we can surely say we're proud of what has been achieved up until now."
+    
+    fra_economic_revitalization2:0 "Economic Revitalization"
+    fra_economic_revitalization2_desc:0 "Following the crash of the Ivory Market the French people have had to adapt to a tighter budget and longer workhours, but in exchange, we've managed to secure a safe transition between Ivory trade and whatever our great nation decides to invest in next. Only time can tell what new markets we'll find, but we can surely say we're proud of what has been achieved up until now."
+    
+    fra_economic_revitalization3:0 "Economic Revitalization"
+    fra_economic_revitalization3_desc:0 "Following the crash of the Ivory Market the French people have had to adapt to a tighter budget and longer workhours, but in exchange, we've managed to secure a safe transition between Ivory trade and whatever our great nation decides to invest in next. Only time can tell what new markets we'll find, but we can surely say we're proud of what has been achieved up until now."
+    
+    fra_economic_revitalization4:0 "Economic Revitalization"
+    fra_economic_revitalization4_desc:0 "Following the crash of the Ivory Market the French people have had to adapt to a tighter budget and longer workhours, but in exchange, we've managed to secure a safe transition between Ivory trade and whatever our great nation decides to invest in next. Only time can tell what new markets we'll find, but we can surely say we're proud of what has been achieved up until now."
+    
+    fra_colonial_adventures:0 "Colonial Adventures"
+    fra_colonial_adventures_desc:0 "The French nation has always been one of great exploration and famous adventurers, but for the past hundred years we've been focusing more and more of our resources into mantaining what we have instead of continuately expanding our businesses abroad. This has led to a stagnant economic growth, and certain sectors have been allowed to simply decay as they weren't as profitable before as they are now.\n\nNow, even though the Ivory Market Crash has proven to be a catastrophe for our people, it is also led us to a land of new opportunities and new monopolies to be obtained, such as the one of silk or wood. Both sectors are already occupied, but we can surely make ourselves a little place either by diplomacy or by force."
+   
+    fra_bigger_better:0 "Centralized Army"
+    fra_bigger_better_desc:0 "To have more options of winning a hypothetical but very probable conflict against our southern neighbour it is mandatory that we have a unified high command, unified levies, and unified message system. That way we'll ensure there are no miscommunications nor many small disorganized armies.\n\nThe nobility will not like loosing some of their military privileges, but it is for the greater good of the realm."
+    
+    fra_bigger_better1:0 "Centralized Army"
+    fra_bigger_better1_desc:0 "To have more options of winning a hypothetical but very probable conflict against our southern neighbour it is mandatory that we have a unified high command, unified levies, and unified message system. That way we'll ensure there are no miscommunications nor many small disorganized armies.\n\nThe nobility will not like loosing some of their military privileges, but it is for the greater good of the realm."
+    
+    fra_organized_decentralization:0 "Organized Decentralization"
+    fra_organized_decentralization_desc:0 ""
+    
+    fra_pro_french_stance:0 "Pro-French Stance"
+    fra_pro_french_stance_desc:0 ""
+    
+    fra_pro_french_stance1:0 "Pro-French Stance"
+    fra_pro_french_stance1_desc:0 ""
+    
+    fra_royal_industrial_fund:0 "Royal Industrial Fund"
+    fra_royal_industrial_fund_desc:0 ""
+    
+    fra_noble_support_very_high:0 "Noble Support: §GVery High§!"
+    fra_noble_support_very_high_desc:0 ""
+    fra_noble_support_high:0 "Noble Support: §GHigh§!"
+    fra_noble_support_high_desc:0 ""
+    fra_noble_support_average:0 "Noble Support: Average"
+    fra_noble_support_average_desc:0 ""
+    fra_noble_support_low:0 "Noble Support: §RLow§!"
+    fra_noble_support_low_desc:0 ""
+    fra_noble_support_very_low:0 "Noble Support: §RVery Low§!"
+    fra_noble_support_very_low_desc:0 ""
+    
+    fra_offensive_measures:0 "§ROffensive Measures§!"
+    fra_offensive_measures_desc:0 ""
+    fra_offensive_measures1:0 "§ROffensive Measures§!"
+    fra_offensive_measures1_desc:0 ""
+    
+    fra_eclaircissement_francaise:0 "Éclaircissement Française"
+    fra_eclaircissement_francaise_desc:0 ""
+    
+    fra_fight_for_estamental_rights:0 "The Fight for Estamental Rights"
+    fra_fight_for_estamental_rights_desc:0 ""
+    fra_fight_for_estamental_rights1:0 "The Fight for Estamental Rights"
+    fra_fight_for_estamental_rights1_desc:0 ""
+    fra_fight_for_estamental_rights2:0 "The Fight for Estamental Rights"
+    fra_fight_for_estamental_rights2_desc:0 ""
+    fra_fight_for_estamental_rights3:0 "The Fight for Estamental Rights"
+    fra_fight_for_estamental_rights3_desc:0 ""
+    
+    fra_rule_the_waves:0 "Rule the Waves"
+    fra_rule_the_waves_desc:0 ""
+    
+    fra_the_unstoppable_army:0 "The Unstoppable Army"
+    fra_the_unstoppable_army_desc:0 ""
+    
+    fra_economic_improvements:0 "Economic Improvements"
+    fra_economic_improvements_desc:0 ""
+    
+    fra_indochinese_logistics:0 "Indochinese Logistics"
+    fra_indochinese_logistics_desc:0 ""
+    
+    fra_sale_of_mudurai:0 "The Mudurai Sale"
+    fra_sale_of_mudurai_desc:0 ""
+    fra_sale_of_mudurai_por:0 "The Mudurai Sale"
+    fra_sale_of_mudurai_por_desc:0 ""
+    
+    fra_indian_resistance:0 "Indian Resistance"
+    fra_indian_resistance_desc:0 ""
+    
+    fra_linguistic_division:0 "Linguistic Division"
+    fra_linguistic_division_desc:0 ""
+    
+    fra_cherbourg_agreement:0 "Cherbourg Agreement"
+    fra_cherbourg_agreement_desc:0 ""
+    sco_cherbourg_agreement:0 "Cherbourg Agreement"
+    sco_cherbourg_agreement_desc:0 ""
+    
+    fra_golden_age:0 "The French Golden Age" 
+    fra_golden_age_desc:0 "" 
+    
+    fra_netherland_front:0 "The Netherlands Front" 
+    fra_netherland_front_desc:0 "" 
+    
+    fra_spr_war:0 "The Southern Front" 
+    fra_spr_war_desc:0 "" 
+    fra_spr_war1:0 "Defence of the Ebro" 
+    fra_spr_war1_desc:0 "" 
+    fra_spr_war2:0 "The Continued Offensive" 
+    fra_spr_war2_desc:0 ""
+    fra_spr_war3:0 "Refined Anti-Spanish Tactics" 
+    fra_spr_war3_desc:0 "" 
+    
+    ### Factions
+    
+    BRI_FACTION_NOBLES:0 "Alliance Duché"
+    FRA_ENTENTE_ALLIANCE_FACTION:0 "French Entente"
+    
+    ### Dynamic Modifiers
+    FRA_galicia_campaign:0 "The Galicia Campaign"
+    
+    ### Effects
+    
+    NOBLE_SUPPORT_CHANGE:0 "We will [FRANobleSupportChange] §YNoble Support§!"
+    NOBLE_SUPPORT_LOST:0 "§RLose [?noble_support_temp|1%]§!"
+    NOBLE_SUPPORT_GAINED:0 "§GGain [?noble_support_temp|1%]§!"
+    NOBLE_REVOLT_CHECK:0 "§YLow noble support can cause a§! §Rnoble revolt§!"
+    FRA_INDOCHINA_WAR:0 "§YThis focus will start a§! §Rwar with [SIA.GetNameDef]§!"
+    FRA_COCHINCHINA:0 "§YThis focus will establish§! §Rthe colony of Cochinchina§!"
+    FRA_IND_CAROLINE:0 "§YThis focus will establish§! §Rthe colony of Caroline§!"
+    FRA_IND:0 "§YThis focus will establish§! §Rthe French Raj§!"
+    FRA_two_indias:0 "§YThis focus will officiate the§! §RTwo Indias Compromise§!"
+    FRA_SPANISH_COLONIAL_INTERVENTION:0 "§YWe will focus on creating§! §Runrest§! §Ywithin§! §R[SPR.GetNameDef]'s colonies§!"
+    FRA_INDIAN_RIVALRY:0 "§Y§RLosing Vijayawada§! in this §Rwar§! will result in a §RWhite Peace§!§!"
+    FRA_MOBILIZE_NOBLES:0 "We will §Ymobilize the French Nobility§! to fight for us in the §RFranco-Spanish War§!"
+    FRA_FRANCO_SPANISH_PORTUGAL:0 "§GPortugal§! has §Yjoined us§! in our §Rwar§!"
+    FRA_FRANCO_SPANISH_DISSENT:0 "We have decided to §Ysupport Dissent§! within the §RSpanish Colonies§!"
+    FRA_UNDER_CONSTRUCTION:0 "§RThis path is currently under construction with its content only lasting for a couple of years!§!"
+    
+    ### Focus Trees
+    
+    france_decentralization_focus:0 "One Kingdom, Many Nobles"
+    france_decentralization_interventionist_focus:0 "The English and Spanish Counter"
+    france_centralization_focus:0 "The Kingdom Rules All"
+    
+    #### OOBs
+    
+    FRA_army_for_king:0 "Charles' Finest Heavy Cavalry Battalion"
+    FRA_heavy_cavalry:0 "The Royal Heavy Cavalry Division"
+    
+    ### Decisions
+    
+    IND_order:0 "already securing another region in India"
+    
+    noble_support:0 "Noble Support"
+    noble_support_desc:0 "France is a kingdom consisting of many duchies and counties, many of which §Ydo not always agree with the crown's decisions§!. Trying to improve their support of the kingdom will cause a §Ggreater unity between the regions of France§! but it would also §Rhinder the king§!. However, giving the king more power §Gwill put the French people under a common banner§! but it would also be §Rdivisive among many of the nobility§!. Our current §YNoble Support§! is [FRANobleSupport]."
+    
+    noble_constant:0 ""
+    noble_constant_desc:0 ""
+    
+    power_to_the_nobles:0 "Power to the Nobles"
+    power_to_the_nobles_desc:0 ""
+    
+    king_realm:0 "The King's Realm"
+    king_realm_desc:0 ""
+    
+    confiscate_noble_property:0 "Confiscate Noble Property"
+    confiscate_noble_property_desc:0 ""
+    
+    expand_king_guard:0 "Expand the King's Guard"
+    expand_king_guard_desc:0 ""
+    
+    control_northern_ports:0 "Regain our Control over the Northern Ports"
+    control_northern_ports_desc:0 "The creation of Caroline has resulted in the recent uptick of our northern ports in India. Reaffirming our control over the local region with increased garrisons will allow us to better utilize local trade and prevent foreigners from invading French lands."
+    
+    control_vijayawada:0 "Secure the Port of Vijayawada"
+    control_vijayawada_desc:0 "Vijayawada has long been an important port in the Bay of Bengal and now acts as the gateway to out Vijayanagara territories. However, the creation of Caroline has jeopardized the port with former foes now striking at the start of our supply lines. Stopping them is a must if we want to keep our control over India."
+    
+    control_madurai:0 "Establish Loyalty in Mudurai"
+    control_madurai_desc:0 "Madurai has long been part of the Portuguese Empire and our recent acquisition of the territory has created some unrest in the region. Despite the local people having more western values, their loyalty to the Portuguese king undermines our new control over the land. Hopefully a few compromises and an increase to the local militia will convince them to be loyal to the French monarchy as well."
+    
+    control_southern_vijayanagara:0 "Protect the Roads of Bangalore"
+    control_southern_vijayanagara_desc:0 ""
+    
+    control_northern_vijayanagara:0 "Set-up the Temporarily Capital of Nouvelle-Dijon"
+    control_northern_vijayanagara_desc:0 ""
+    
+    control_mysore:0 "Garrison the West Coast"
+    control_mysore_desc:0 ""
+    
+    control_bombay:0 "Establish the Capital of Nouvelle-Lyon"
+    control_bombay_desc:0 ""
+    
+    control_antevedi:0 "Secure Antevedi"
+    control_antevedi_desc:0 ""
+    
+    control_valdetamil:0 "Secure Valdetamil"
+    control_valdetamil_desc:0 ""
+    
+    #Opinions
+    
+    FRA_anti_english_sentiment:0 "Anti-English Sentiment"
+    FRA_anti_french_sentiment:0 "Anti-French Sentiment"
+    SCO_FRA_support:0 "French Support"
+    SCO_FRA_cherbourg_agreement:0 "The Cherbourg Agreement"
+    
+    ###Triggers
+    
+    FRA_SCO_DIPLOMACY_ENDED_TRIGGER:0 "§YDiplomacy§! between §Y[FRA.GetNameDef]§! and §Y[SCO.GetNameDef]§! has §Rended§!"
+    FRA_indochinese_war_lost_TRIGGER:0 "§Y[FRA.GetName]§! has lost the §RIndochinese War§!"
+    NOT_FRA_VIJ_second_war_TRIGGER:0 "§Y[FRA.GetName]§! isn't fighting §Y[VIJ.GetNameDef]§! in a war"
+    FRA_MYS_WAR_WON_TRIGGER:0 "§Y[FRA.GetName]§! has beat §Y[M.GetNameDef]§! in a war"
+    NOT_FRA_MYS_WAR_WON_TRIGGER:0 "§Y[FRA.GetName]§! has not beat §Y[MYS.GetNameDef]§! in a war"
+    NOT_FRA_MAR_WAR_TRIGGER:0 "§Y[FRA.GetName]§! isn't fighting §Y[MYS.GetNameDef]§! in a war"
+    SPAIN_HAS_PICKED_A_SIDE:0 "The §RConspiration in Zarzuela§! has occurred in §YSpain§!"
+    SPAIN_HAS_WENT_REGENCY:0 "§YFelipe VI§! was killed in the §RConspiration in Zarzuela§!"
+    SPAIN_FELIPE_SURVIVES:0 "§YFelipe VI§! has survived the §RConspiration in Zarzuela§!"
+    FRA_golden_age_ended:0 "The §YFrench Golden Age§! has §Rended§!"
+    
+   #### Events
+    FRAIvorymarket.1.t:0 "Report from Sweden"
+    FRAIvorymarket.1.d:0 "Bleak news come from the snow covered heartland of Sweden. Stockolm is known as the center of all and every trade that goes through the North Sea since the decay and collapse of the Hanseatic League but for the last few days it's remained strangely silent. Nothing came in, nothing came out. It has been rumoured that Queen Carola herself had visited the famous 'Elfenbensmarknaden' and didn't come out with good news.\n\nThe only thing we now know is that now Ivory is almost unsellable and that our economy, who had invested quite a few coins into the Ivory trade and all the goods that came with it, it is now left almost unsalvageable. We are lucky that we didn't invest as much as our northern neighbours but still. It has meant a hard hit to the Royal Treasury which we must now overcome without giving even the slightest look of weakness, or else our always power-hungry southern neighbour may strike us without warning.\n\nPerhaps it is time to give a good use to those lands obtained in India centuries ago that have been there just as a reminder of our military capabilities, but nothing more. Is it time, perhaps, to change that?"
+    FRAIvorymarket.1.a:0 "We must overturn these hardships first"
+    
+    FRARealmevents.1.t:0 "Matters of state"
+    FRARealmevents.1.d:0 "It is just a normal day in the life of King Charles XI. He first gets up, attends some matters of state that range from servants and peasants complaining of grain shortages or cow stealings to high nobles complaining that their servants don't pay enough. This usually takes him around four to five hours but this week something is different.\n\nAfter packing off extremely quickly the last of the debtors King Charles meets with his High Command, which is mostly filled with unready generals that have never ever fought in a war but boast several medals in their chest. The only one that has seen some kind of combat is Monsieur Arsène Lambert, who is the current leader of the French lands of Louisiana currently visiting the mainland. He had been a junior commander during the invasion of Algeria more than forty years prior and since then his career has done nothing but rise. He now constantly clashes with the unruly natives that raid the woodcutters and miners that inhabit the inland regions of Louisiana and ravage the road system that transports resources from New Orleans to Ottawa. He informs King Charles that the natives have united under a new High Chief, whose name is yet unknown, and that said Chief has said no to mantaining friendly negotiations with the French military.\n\nThis has, of course, worried King Charles deeply and fears that he might instigate a rebellion in the near future, but nothing is yet planned nor is it going to be planned at least for the following months, such is the way of the French high command."
+    FRARealmevents.1.a:0 "These things take some time..."
+    
+    FRALouisiana.1.t:0 "The Lambert Report"
+    FRALouisiana.1.d:0 "Grievous news come from Louisiana. According to Governor Lambert, the 'Ghost Leader' that had been ravaging our comrades in the inlands has been identified as 'Nuage Rouge', leader of the Oglala Lakota, one of the most unruly tribes of the northwest. He has apparently managed to unite many tribes under his command and has proclaimed a 'Lakota Native State' whose intentions are not of independence but just to spite our local colonial rulers.\n\nSeveral of our units have been attacked and we fear that something even more massive is coming towards the south. We must also be ready to strike several of the native groups out of our colonial borders since several of our informants have told the Louisianan leadership that there have been some 'hidden talks' between heads of tribes.\n\nWe must also be wary of the Mexicans and New English, who have ambitions both on Texas and the Easternmost parts of the New Orleans region. But first; we've got a Cloud to destroy!"
+    FRALouisiana.1.a:0 "Pour la Louisiana!"
+    
+    FRALouisiana.2.t:0 "Partition of Comanchería"
+    FRALouisiana.2.d:0 "As if we didn't have enough having to take care of Nuage Rouge, the native bastard has also called into his rebellion several of the tens of chiefdoms that populate the uncivilized areas of North America. Their aim is to get rid of all of the Frenchmen, and surely, their methods to do so will be as barbaric as their traditions.\n\nOne of such tribes are the Comanche, a loose confederation of several smaller tribes that decided to unite to form the human conglomerate of Comancheria, sitting between our southwestern border and the northern side of Mexico. They have conducted raids on our unguarded peoples in the past, but now they've embraced Nuage Rouge's call and have launched a full proned attack towards our more properly protected positions, ravaging everything in their path.\n\nThere is a way in which we could get rid of this scoundrel though. Following the same way in which the Lakota chieftain recalled his own loyalists to his aid, we could also take advantage of our diplomatic abilities, far more advanced than whatever those natives did, and get the Emperor of Mexico to join in the fray. We would have to grant him some land taken from the defeated Comanche but surely, we can't win alone; right?"
+    FRALouisiana.2.a:0 "We can handle them alone"
+    FRALouisiana.2.b:0 "We need all help we can get"
+    
+    FRALouisiana.3.t:0 "Partition of Comanchería"
+    FRALouisiana.3.d:0 "Emperor Francisco Fernando has always wanted to expand the borders of his country for the sake of glory and prosperity for his Habsburg Dynasty, with his branch always in the shadows of Austria and the Kingdom of the Romans. Even though he always keeps the military loyal and ready to strike whomever he seems fit; the opportunity has never arisen. That is, until now.\n\nEarly that morning an envoy had come from New Orleans, the struggling capital of the neighbouring colonial possession of France. With a nervous tone in his voice, he quickly notified the emperor and his ministers that Arsène Lambert, governor of the region, was in dire need of help, fearing for his life and of those of his loyal citizens. Nuage Rouge was nearing both the southern capital and the northern rich cities, and also that the natives were advancing in Canada, with the local governor unable to stop the flood of peoples wishing to reclaim their land.\n\nHe had come with a proposition; Mexico would enter the conflict in France's side and in return gain some land stolen from the Comanche, who often led raids on Mexican lands and killed loyal servants of the Emperor. Emperor Francisco Fernando had always heard about those raids, but as long as the main native chieftain didn't endorse them he wouldn't be able to break the native treaties his father had signed long ago. Now those treaties are broken and the army is as ready as ever, and that can only mean one thing. However, Emperor Francisco Fernando is a wise man, and doesn't really want to have to take on every single tribe on his border. What shall our answer be?"
+    FRALouisiana.3.a:0 "We shall join for the glory of the Empire"
+    FRALouisiana.3.b:0 "French affairs will remain in French hands only"
+    
+    FRALouisiana.4.t:0 "Partition of Comanchería"
+    FRALouisiana.4.d:0 "We have been betrayed once again. Those Mexicans, whom we thought were our friends and their coward emperor, who was though to be supporter of the Western Colonial Cause, have refused to help us in our conflict against the native hordes, leaving us either to perish or to do all the work alone.\n\nWe don't know why the Austrian chose not to aid us in our conflict. Was perhaps the thought of having to actually fight too much for his coward self, or maybe there was some hidden darker interest behind his negative? Our scouts have recently noticed several Mexican Ritter Battalions patroling the border between the Comanche and ourselves, which could be literally that, just patrolling, but we can't really be sure, at least not now that Louisiana's survival is pending on a very tight rope.\n\nGovernor Lambert is certain that even if the Mexicans have refused to strike us they would surely at least respect our proud peoples, who have been constantly harassed by the uncivilized natives and now fight for their lives. Emperor Franz Ferdinand will not take advantage of our weakness... Right?"
+    FRALouisiana.4.a:0 "Right?"
+    
+    FRALouisiana.5.t:0 "Partition of Comanchería"
+    FRALouisiana.5.d:0 "We did it! After many hardships and tens of hundreds of dead countrymen at least one of Nuage Rouge's lapdogs has been defeated. The lands of the Comanche have been ravaged in a combined attack carried masterfully by both our troops and the brave Mexicans, who had to cross the mountains that separated their lands from the native savages in no time in order to achieve success in our ambitions.\n\nAs the victors that we are, and occupying most of the lands ourselves, we must now decide what to do with the domains of the defeated foe. The most reasonable and sensible decision would be to hand over the promised demarcation line to Emperor Franz Ferdinand, who sacrificed many of his men for another man's cause, but there's also the economic aspect of the treaty, which he hadn't really noticed until our troops were occupying most of the territory. It seems as if this place isn't as desolate as we thought, and precisely, in the lands that would have to go to the Mexicans we found several natural mines of precious metals and silver, incredibly expensive to purchase in Europe.\n\nIf we decide to annex all of the lands for ourselves the Mexican army won't be able to react quick enough, however, should our position against the other natives worsen, which isn't a very far fetched reality, the Mexicans could attack us with the wrath of a thousand cannons, scorching all lands that they stepped into, and our diminished and tire units could do nothing but look in despair. We must now decide then; will we fulfill our promise, or will we follow our economic hunger?"
+    FRALouisiana.5.a:0 "That silver sounds too good to pass"
+    FRALouisiana.5.b:0 "France is not a nation of traitors"
+    
+    FRALouisiana.6.t:0 "Partition of Comanchería - France Annexes Everything!"
+    FRALouisiana.6.d:0 "This is a black day in Mexican history, one of the darkest in our recent history. Those traitorous french, after taking advantage of our benevolence and our wish to support the colonial cause, have refused to grant us what is rightfully ours. It seems as if they didn't control enough land already and  didn't import enough gold even though their market is full with it and their domains are as vast as all of our country. They had to break a treaty and show the entire world what a deceitful bunch they are for some gold found in almost unreachable mountains and valleys, fiercely protected by the natives.\n\nThe citizens of our capital gathered today in front of Emperor Francisco Fernando's Palace demanding answers, repayment and a public apology from the French, or else they would take up arms against the government for letting such an affront pass without any repercussions. Of course, the government itself was deeply angered by this selfish action, directed by King Charles 'the Vulture', as he is beginning to be known  in Mexico. Just like the animal, he lets others catch and kill their prey just to steal it himself.\n\nIt's widely understood that this action must not go unpunished, however the Government is divided whether we should go to war to reclaim our rightful piece of the Comanche cake or if we should demand money as payment; maybe even some of that Gold they've found, which would surely boost our coinage. Of course, why ask for some of it when you can just take it for yourself, having the right claim for it."
+    FRALouisiana.6.a:0 "Por México! A la guerra!"
+    FRALouisiana.6.b:0 "We can't really risk a conflict..."
+    
+    FRALouisiana.7.t:0 "Partition of Comanchería - France Honours the Treaty"
+    FRALouisiana.7.d:0 "Rejoice countrymen! Today is a day of celebration, a day of joy, a day of parades that show and acknowledge our military proess. After many years of decay under the threat of being invaded at any moment by the treacherous Spanish, today we breathe with relief, for our armies have shun in the battlefields like never before, with our Riteros routing the enemy with brilliant gallantry and efficacy.\n\nThe French were the ones to sign the official treaty with the Comanche leadership, but they were kind in their victory and let our diplomats take almost as much credit as their own men, who are still embroiled in a war on their own. This should serve to their units as much of a morale boost as it did to ours. Both our armies' leadership met after the battle, and a treaty of friendship was signed to commemorate such an auspicious event. Everywhere in Mexico, from the arid deserts of the Northeast to the Jungle in the south, celebrations have erupted, praising Emperor Francisco Fernando and his valiant men, chanting songs in a mixture of Hispanicized German, and praising the Habsburg dynasty as the saviours of the trouble lands that once formed New Spain.\n\nSpeaking of them, the threat is not yet gone; however, now we can breathe with relief, for we've now made a friend whose interests also clash with the Spanish and who can protect us and attack at unison should the time to do so arose."
+    FRALouisiana.7.a:0 "Dios Salve a Francisco el César"
+    
+    FRAEconomy.1.t:0 "The Barons on the rise"
+    FRAEconomy.1.d:0 "Regarding our ancient feudal system, it is no doubt that the Barons represent the biggest part of the nobility. No Count, Viscout or even Marquis can do as much as a Baron. Those high ranking titles are surely good for a lineage's prestige, but when the time of mingling with the commoners comes, it is the Barons who do all the funding and make sure all the laws are followed. Despite having expensive palaces or houses, the Barons tend to be far more down to Earth than the high nobility and often invest in the small group of peasants they rule.\n\nThey say that the French nobility is just 1% of the population, but if we had a Baron for each town there would be hundreds of thousands of them. It is for this reason that we must keep supporting the lower nobility, for it is their duty to ensure the well being of their subject, and they achieve so in a more personal matter than a Duke would ever be able to. With these grants we will be ensuring that no Baron that lost their fortune in the Ivory market will go on to live in poverty, and although in the beginning the populace might dislike the government for giving money to the nobility instead of the peasants, they'll surely understand how the economy works even if they're not educated."
+    FRAEconomy.1.a:0 "The base of everything"
+    
+    FRAEconomy.2.t:0 "Supporting the less capable"
+    FRAEconomy.2.d:0 "As expected, the commoners didn't understand our Baron empowering scheme, and so, there have been a certain amount of complaints and threats of revolt during the past few months. In an attempt to quell the anger of the populace, we've been forced to act directly towards the lower classes instead of taking a more longer but efficient route. The Baron grants will continue, but another part of the slightly diminished treasure will be rerouted to funding better agricultural matters in the north, where our backwards economic system pales in comparison with the new technology the Spanish use. This is a matter of prestige, not of envy, and as such, we'll attempt to make our nation look far more advanced in the eyes of our European partners. Even if we cannot sustain the cost of heavily investing in Industry, like Spain has done, we can surely attempt to improve the lives of those who live away from the urban areas and who tend to be more prone to mutinees than their bourgeois counterpart. By granting several bulls to the best bidder, the ones with most cattle or more possibilities of progressing, we'll ensure that nobody is left behind in the bid for progress; well, except those who couldn't already sustain themselves before the crisis, but that group of peoples didn't support anything to the government and they'll continue to not do so in the future."
+    FRAEconomy.2.a:0 "Help for the helpless"
+    
+    FRAEconomy.3.t:0 "Invasion of Vijayanagara"
+    FRAEconomy.3.d:0 "France is a great country, and the French are a great, strong and brave people that are surely ready to do anything for their beloved homeland. It is for this reason that thousands of men have been transported to the confine of the Empire, where only the most courageous and valiant of men have dared go beforehand. This war agains the backwards natives should be one of easy victories and ascension in the ranks for everyone. It should also distract our people from certain issues that are currently going down in the closest circles of the government while strengthening our position against the Spanish in the Indian subcontinent.\n\nIt is very possible that the European nations will complain about this sudden switch of objectives but Austria and Spain are both embroiled in their own issues, too busy to worry about what their better neighbour is doing."
+    FRAEconomy.3.a:0 "Or at least we hope so."
+    
+    FRAEconomy.4.t:0 "The Sale of St. Andrews"
+    FRAEconomy.4.d:0 "France is a great country, and the French are a great strong and brave people, but sometimes, that is not enough to guarantee our prestige in the international sphere. The Spanish and the Portuguese both have wide colonial empires that give them so many profits that they have completely been left unharmed by the Ivory Market Crash, but us, instead, have seen our gains completely cut in half.\n\nTo fix that we've completely repurposed our holdings and concessions in Africa to better suit the new trade routes and goods, such as Gold, Diamonds and Slaves which are imported to the plantations in the Caribbean and Louisiana. To further improve our situation, High Command believes it would be beneficial to purchase St. Andrews, also known as Fort Bayona; one of the few colonial posessions of the Duchy of Courland-Livonia.\n\nWould this mean a loss of prestige from their part? Well, certainly yes, but that isn't what the Courlanders need right now, being the Russians knocking on their door with a second Great Northern War about to happen. We assume they'd prefer our Francs to better defend themselves rather than some colonial posessions that are currently unprofitable."
+    FRAEconomy.4.a:0 "Now we can only wait."
+    
+    FRAEconomy.5.t:0 "Courland says no"
+    FRAEconomy.5.d:0 "Our messenger has just arrived from Libau bearing extremely bad news. The Duke of Courland-Livonia has thanked our interest in supporting their war effort against the Russian menace but has politely declined our offer to buy their colony in exchange of economic and military aid.\n\nHe notes that the posession of said colony, although currently lacking economic support or value, is of great pride and honour for their people and the merchant route from Courland to Africa is one of the most transited routes in the entirey world, meaning that the cost of passage grants them money on its own. It is for this reason and several, more private, reasons that he has declined our kind offer."
+    FRAEconomy.5.a:0 "We almost had it."
+    
+    FRAEconomy.6.t:0 "Courland says yes"
+    FRAEconomy.6.d:0 "Our messenger has just arrived from Libau bearing extremely auspicious news. The Duke of Courland-Livonia has thanked our interest in supporting their small country's war effort against the Russian menace and has gladly accepted our offer. As men of word, we'll begin disembarking in our new posession right after everything has been paid off and all the support they could ever dream of has been delievered, not before or during.\n\nThe French nation as a whole will remember their gest when the day of greater despair arrives in the East."
+    FRAEconomy.6.a:0 "A great day for France!"
+    
+    FRAEconomy.7.t:0 "Expedition inland"
+    FRAEconomy.7.d:0 "To further improve our possibilties in the African continent, we should fund some explorers of our own to learn more about the African continent, whose peoples are mostly uncontacted by the White Man.\n\nUsing the same tactic as we did with our North American expeditions; they are the first step for a further colonial control. By sending these explorers we'll gain access to all the resources of the regions we explore, and also learn if the people that live there are friendly or have murderous intentions. We'll also have to analyze if their technology is advanced enough to pose a threat to our intentions."
+    FRAEconomy.7.a:0 "To Africa and beyond!"
+    
+    FRARealmevents.2.t:0 "Analysis of the Southern Front"
+    FRARealmevents.2.d:0 "It's come to our attention that Spain, under the current monarch Felipe VI, has undergone a great reformation of their military, followed with the purges of those deemed unfit to command a modern unit. Unlike them though, our military entities are as corrupt and lazy as ever, and we fear that when the Spaniards finish their preparations for war, which doesn't look like it's going to take them too much, they will immediately invade us.\n\nApart from the Polish-Lithuanian Commonwealth, with whom we have some kind of military alliance, the rest of Europe would not care a bit if the Spaniard armies marched through Paris or deposed our beloved king.\n\nThe Holy Roman Empire, ruled by the inefficient and dreamy Rudolf, is too busy with their own infighting to actually accomplish anything useful or to even do something more than complain when the day of our demise arrives. It's not like they were our friends anyways, they've been like that since the 1830s, when King Charles XI's annexed Alsace and Lorraine from their previous Saxon-Bavarian owners. The only thing we can do now is prepare for a war in which we'll be alone and abandoned by almost everyone else."
+    FRARealmevents.2.a:0 "Get the machinery moving!"
+    
+    FRACentralized.1.t:0 "The Meeting Commences"
+    FRACentralized.1.d:0 ""
+    FRACentralized.1.a:0 "We will agree to his terms"
+    FRACentralized.1.b:0 "His demands are outlandish!"
+    
+    FRACentralized.2.t:0 "A Meeting Surrounded by Conflict"
+    FRACentralized.2.d:0 ""
+    FRACentralized.2.a:0 "Perhaps both parties can come out with something..."
+    FRACentralized.2.b:0 "How dare they demand our submission after such treachery!"
+    
+    FRACentralized.3.t:0 "The Meeting is Successful!"
+    FRACentralized.3.d:0 ""
+    FRACentralized.3.a:0 "For Unity! For the Kingdom of France!"
+    
+    FRACentralized.4.t:0 "The War Continues"
+    FRACentralized.4.d:0 ""
+    FRACentralized.4.a:0 "We gave them peace but they chose war."
+    
+    FRANobleRevolt.1.t:0 "An Industry for the Army"
+    FRANobleRevolt.1.d:0 ""
+    FRANobleRevolt.1.a:0 "May Charles Tremble"
+    
+    FRADecentralizedInterventionist.1.t:0 "Victory in Indochina"
+    FRADecentralizedInterventionist.1.d:0 "As the king was enjoying a glass of wine at his large and beautiful table, an adviser soon came hurrying to him. Panting and excited, he soon announced the news of their victory at Cochin-chine. As he himself raised his glass to toast on his own, a small grin appeared on his face. He had managed to earn a positive point, he knew people would be more appreciative now, he knew the nobles would stop pestering him with nonsense as it seemed he knew what he was doing. The news spread quickly, the populace began to raise their bottoms in the chant of "King and Country" while several military divisions prepared for the occasion paraded through the streets of Paris with their heads held high. Soldiers standing guard shouted and chanted excitedly as newspaper prints appeared proclaiming their victory in Asia. He sighed with relief; he no longer needed to worry about that and now basked in the glory of his military and strategic victory. The king would soon be enjoying new spices and riches worthy of another glass of wine as French flags were now raised in the southern part of Asia."
+    FRADecentralizedInterventionist.1.a:0 "The French Empire Continues to Grow"
+    
+    FRADecentralizedInterventionist.2.t:0 "The Long Trip Back Home"
+    FRADecentralizedInterventionist.2.d:0 ""
+    FRADecentralizedInterventionist.2.a:0 "We Will Be Back!"
+    
+    FRADecentralizedInterventionist.3.t:0 "End of the French Invasion"
+    FRADecentralizedInterventionist.3.d:0 ""
+    FRADecentralizedInterventionist.3.a:0 "A Great Day for the People and the King"
+    
+    FRADecentralizedInterventionist.4.t:0 "The Indochinese Gambit"
+    FRADecentralizedInterventionist.4.d:0 ""
+    FRADecentralizedInterventionist.4.a:0 "Hopefully All Ends Well"
+    
+    FRADecentralizedInterventionist.5.t:0 "The India Plan"
+    FRADecentralizedInterventionist.5.d:0 ""
+    FRADecentralizedInterventionist.5.a:0 "The colony will be Caroline"
+    FRADecentralizedInterventionist.5.b:0 "The colony will be the Raj"
+    
+    FRADecentralizedInterventionist.6.t:0 "The Sale of Mudurai"
+    FRADecentralizedInterventionist.6.d:0 ""
+    FRADecentralizedInterventionist.6.a:0 "We will sell Mudurai at a steep price"
+    FRADecentralizedInterventionist.6.b:0 "Our territory isn't worth selling"
+    
+    FRADecentralizedInterventionist.7.t:0 "Portugal agrees to the purchase of Mudurai"
+    FRADecentralizedInterventionist.7.d:0 ""
+    FRADecentralizedInterventionist.7.a:0 "Another win for the Kingdom of France"
+    
+    FRADecentralizedInterventionist.8.t:0 "Portugal refuses our offer"
+    FRADecentralizedInterventionist.8.d:0 ""
+    FRADecentralizedInterventionist.8.a:0 "Too bad... for them"
+    
+    FRADecentralizedInterventionist.9.t:0 "France Offers Us Protection for Influence"
+    FRADecentralizedInterventionist.9.d:0 ""
+    FRADecentralizedInterventionist.9.a:0 "Our future is secure in the French Sphere"
+    FRADecentralizedInterventionist.9.b:0 "Working with outsiders would only hurt us!"
+    
+    FRADecentralizedInterventionist.10.t:0 "Mysore Accepts Our Support"
+    FRADecentralizedInterventionist.10.d:0 ""
+    FRADecentralizedInterventionist.10.a:0 "Our influence continues to grow!"
+    
+    FRADecentralizedInterventionist.11.t:0 "Mysore Refuses Our Cooperation"
+    FRADecentralizedInterventionist.11.d:0 ""
+    FRADecentralizedInterventionist.11.a:0 "They will later see why they picked wrong."
+    
+    FRADecentralizedInterventionist.12.t:0 "The India Situation"
+    FRADecentralizedInterventionist.12.d:0 ""
+    FRADecentralizedInterventionist.12.a:0 "We will need some time to compose a compromise"
+    
+    FRADecentralizedInterventionist.13.t:0 "The Shattered Rival on the British Isles"
+    FRADecentralizedInterventionist.13.d:0 "England and France have been rivals since the start of politics and just as every ruler despised each other, so did the population of each of these countries. Their constant fighting over trade, colonies, and the power of balance throughout Europe continues to rage on as recently they have started to disagree even more. The French nobility enraged with this made sure to spread their sentiment to the lower classes of the nation, and now it has become a common topic in local politics and tavern-talks how the English dare to push people around regardless of consequence and proclaim themselves as righteous rulers of Europe. As the people became more discontent towards the inaction of the king towards the clear enemy, the nobles took advantage of this to push the king to break the relative peace between the two. Following protests and several meetings, it spread around too quickly to be controlled.\nNow the entirety of the nation had been turned against the English, everyone holding the same beliefs as the higher estates, thinking that they could benefit from this although it will only lead to further instability, division, and an increase in taxes and military conscription. If the king didn't do anything they'd take advantage of that to start another political campaign but this time, instead of advocating for him, against him. "
+    FRADecentralizedInterventionist.13.a:0 "And they will remain divided"
+    
+    FRADecentralizedInterventionist.14.t:0 "The Enemy of the English"
+    FRADecentralizedInterventionist.14.d:0 "Today, the French delegation met with the Scottish government to begin their discussions on what both nations perceive as a common threat. This is the first time the two countries have held talks at this level. The meeting began quietly and tentatively as both delegations first wanted to see how much they could exchange regarding their skepticism and possible hatred towards the English. As the conversation ran its course, it was not long before the last words were exchanged. The Scots had got a rough idea of what the French were driving at, but without having said it directly.\nIt ended with the all-too-familiar words 'we'll think about it' as both delegations left the official building to return to their respective countries. They could only hope for the best, as getting rid of the rising English menace and confine them to the limits of their island and prevent them from restoring the glory of their old Empire back would be of great benefit to both kingdoms. One less power to deal with in the future. "
+    FRADecentralizedInterventionist.14.a:0 "And the rekindling of an old alliance"
+    
+    FRADecentralizedInterventionist.15.t:0 "France Offers Their Support"
+    FRADecentralizedInterventionist.15.d:0 ""
+    FRADecentralizedInterventionist.15.a:0 "We are to graciously accept"
+    FRADecentralizedInterventionist.15.b:0 "We don't need help from the French!"
+    
+    FRADecentralizedInterventionist.16.t:0 "The Cherbourg Agreement"
+    FRADecentralizedInterventionist.16.d:0 ""
+    FRADecentralizedInterventionist.16.a:0 "We will both become unyielding"
+    FRADecentralizedInterventionist.16.b:0 "We will not be a part of the French Sphere"
+    
+    FRADecentralizedInterventionist.17.t:0 "Review of the Scottish Economy"
+    FRADecentralizedInterventionist.17.d:0 ""
+    FRADecentralizedInterventionist.17.a:0 "This information will benefit both of us"
+    
+    FRADecentralizedInterventionist.18.t:0 "A New Economic Boom"
+    FRADecentralizedInterventionist.18.d:0 ""
+    FRADecentralizedInterventionist.18.a:0 "To Riches and Prosperity!"
+    
+    FRADecentralizedInterventionist.19.t:0 "The Spanish Assessment"
+    FRADecentralizedInterventionist.19.d:0 ""
+    FRADecentralizedInterventionist.19.a:0 "May France remain supreme"
+    
+    FRADecentralizedInterventionist.20.t:0 "The Land of Habsburgs"
+    FRADecentralizedInterventionist.20.d:0 ""
+    FRADecentralizedInterventionist.20.a:0 "We must prepare"
+    
+    FRADecentralizedInterventionist.21.t:0 "Our Claim to Pfalz"
+    FRADecentralizedInterventionist.21.d:0 ""
+    FRADecentralizedInterventionist.21.a:0 "Our army won't shatter"
+    
+    FRADecentralizedInterventionist.22.t:0 "Our Claim to Sardinia"
+    FRADecentralizedInterventionist.22.d:0 ""
+    FRADecentralizedInterventionist.22.a:0 "Our navy won't disperse"
+    
+    FRADecentralizedInterventionist.23.t:0 "France Demands Rosellon for Protection"
+    FRADecentralizedInterventionist.23.d:0 ""
+    FRADecentralizedInterventionist.23.a:0 "We must accept"
+    FRADecentralizedInterventionist.23.b:0 "Our army has another thing to say."
+    
+    FRADecentralizedInterventionist.24.t:0 "The King with an Iron Fist"
+    FRADecentralizedInterventionist.24.d:0 ""
+    FRADecentralizedInterventionist.24.a:0 "But we stand above!"
+    
+    FRADecentralizedInterventionist.25.t:0 "Spanish Military Movements at our Border!"
+    FRADecentralizedInterventionist.25.d:0 ""
+    FRADecentralizedInterventionist.25.a:0 "Our Forts will Still Stand!"
+    
+    FRADecentralizedInterventionist.26.t:0 "Memories From 1851"
+    FRADecentralizedInterventionist.26.d:0 ""
+    FRADecentralizedInterventionist.26.a:0 "Our Alliance with Portugal"
+    FRADecentralizedInterventionist.26.b:0 "Our Funding of Spanish Rebels"
+    
+    FRADecentralizedInterventionist.27.t:0 "Our Other Motive"
+    FRADecentralizedInterventionist.27.d:0 ""
+    FRADecentralizedInterventionist.27.a:0 "May we gain Rosellon!"
+    
+    FRADecentralizedInterventionist.28.t:0 "Scotland Accepts our Prospect"
+    FRADecentralizedInterventionist.28.d:0 "He shook hands with him, and that was the end of the meeting with the Scottish representative. As the King was escorted back to his palace, pride and satisfaction could be felt in his person as he looked over at the streets while his carriage made its way to his Majesty's house. At last, the Kingdom of France and the Kingdom of Scotland had agreed to meet regarding a common threat, the English. Both parties were getting along well as they had similar methods of rule and views on the threat of their enemy. After a long discussion, they had come to a mutual agreement of an alliance in the likely event that France attacked the suspicious Republic of England. Immediately after entering his palace, the king had the chiefs of the military summoned to him to discuss further planning, and every one of them shared the same feeling, greed.\nOne of the generals warned them, for greed leads to ruin. He was soon escorted out at the request of the king, as not a single doubt could be allowed during the discussion of his majesty's plans. This surpassed anything he had done before, the conquest of his long hated enemies would not only effectively assert his supremacy throughout Europe, but it would prove to everyone how great and powerful his nation was under his rule. There was no room for error, he could already feel the jubilant nobility and the great feasts that would be held in his honor when he subdued them."
+    FRADecentralizedInterventionist.28.a:0 "To the glorious future of our nations!"
+    
+    FRADecentralizedInterventionist.29.t:0 "Scotland Denies our Prospect"
+    FRADecentralizedInterventionist.29.d:0 "'Cowards!' echoed throughout the king's hollow and extravagant throne room as he slammed down his fist. The proposal of an alliance between them and the Scots had abruptly failed, as they had rejected it. Furious at this, he came to the realization that perhaps it was best that they did not help, as their participation would most likely hinder their campaign. The chiefs of the military were reconvened to replan their original approach to the English threat, as they now stood alone without an ally on the island. Many generals suggested the king drop plans to enclose the Republic, but that would lead to instability, protests, and public discontent that could include the military.\nAfter a heated and protracted discussion, the king had finally come to a decision that he would soon announce to the heads of the military as well as to the angry and impatient nobility who were urging him to respond to the strong anti-English sentiment. In any case, France was not the only country that felt this way toward them. The Irish seemed to bear a grudge against the oppressive English, and it was safe to assume that the king knew of it and did not forget it in his careful planning. He opened the doors to the meeting room and sat down, looking at all present who would soon stop talking as he entered. After taking a seat, he took a deep breath and began to speak."
+    FRADecentralizedInterventionist.29.a:0 "We have better things to deal with!"
+    FRADecentralizedInterventionist.29.b:0 "We will wait until another opportunity arises!"
+    
+    FRASpanishWar.1.t:0 "Brunet's Report"
+    FRASpanishWar.1.d:0 ""
+    FRASpanishWar.1.a:0 "There is much to be done!"
+    
+    FRASpanishWar.2.t:0 "Danjou's Report"
+    FRASpanishWar.2.d:0 ""
+    FRASpanishWar.2.a:0 "The Southern Army will improve!"
+    
+    FRASpanishWar.3.t:0 "The Spanish Chagrin"
+    FRASpanishWar.3.d:0 ""
+    FRASpanishWar.3.a:0 "Their facade continues to falter"
+    
+    FRASpanishWar.4.t:0 "With Time on Our Side..."
+    FRASpanishWar.4.d:0 ""
+    FRASpanishWar.4.a:0 "The Spaniard's Iron Fist will rot into rust"
+    
+    FRASpanishWar.5.t:0 "The Clock Strikes Midnight Once Again..."
+    FRASpanishWar.5.d:0 ""
+    FRASpanishWar.5.a:0 "So we will continue to prove ourselves"
+    
+    FRASpanishWar.6.t:0 "The Dijon Meeting"
+    FRASpanishWar.6.d:0 ""
+    FRASpanishWar.6.a:0 "The Portuguese will surely help us again"
+    FRASpanishWar.6.b:0 "Spanish colonial dissent will assure our victory"
+    
+    FRASpanishWar.7.t:0 "France Wants Our Support"
+    FRASpanishWar.7.d:0 ""
+    FRASpanishWar.7.a:0 "It is time to prove ourselves for 1853"
+    FRASpanishWar.7.b:0 "Maybe we should not get involved this time"
+    
+    FRASpanishWar.8.t:0 "Portugal Accepts Our Offer"
+    FRASpanishWar.8.d:0 ""
+    FRASpanishWar.8.a:0 "And we shall proceed together!"
+    
+    FRASpanishWar.9.t:0 "Portugal Declines Our Offer"
+    FRASpanishWar.9.d:0 ""
+    FRASpanishWar.9.a:0 "We will stick to the alternative"
+    
+    FRASpanishWar.10.t:0 "The armament shipments begin"
+    FRASpanishWar.10.d:0 ""
+    FRASpanishWar.10.a:0 "All that remains is who gets them first..."
+    
+    FRASpanishWar.11.t:0 "French Arms Arrive at the [SPE.GetName]"
+    FRASpanishWar.11.d:0 ""
+    FRASpanishWar.11.a:0 "The flame of unrest grows"
+    
+    FRASpanishWar.12.t:0 "French Arms Arrive at the [SPW.GetName]"
+    FRASpanishWar.12.d:0 ""
+    FRASpanishWar.12.a:0 "The flame of unrest grows"
+    
+    FRASpanishWar.13.t:0 "French Arms Arrive at the [YUC.GetName]"
+    FRASpanishWar.13.d:0 ""
+    FRASpanishWar.13.a:0 "The flame of unrest grows"
+    

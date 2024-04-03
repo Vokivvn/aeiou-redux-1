@@ -1,0 +1,20 @@
+state={
+	id=879
+	name="STATE_879"
+	
+    
+	history={
+		owner = MDC
+		add_core_of = MDC
+		buildings = {
+			infrastructure = 2
+		}
+	}
+
+	provinces={
+    10159 4331 12134 10305 4347
+	}
+	manpower = 4512
+	buildings_max_level_factor = 1.000
+	state_category = pastoral
+}

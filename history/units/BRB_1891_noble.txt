@@ -1,0 +1,64 @@
+division_template = {
+	name = "Noble Armed Battalion"
+
+	division_names_group = BRB_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Swordsmen Battalion"
+
+	division_names_group = BRB_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Boeren uit Lille"
+		location = 11430
+		division_template = "Noble Armed Battalion"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "2nd Boeren uit Lille"
+		location = 11430
+		division_template = "Noble Armed Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Duinkerken boeren"
+		location = 575
+		division_template = "Noble Armed Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Nobles of Luxembourg"
+		location = 11407
+		division_template = "Noble Armed Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Contracted Swordsmen"
+		location = 11435
+		division_template = "Noble Armed Battalion"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "2nd Contracted Swordsmen"
+		location = 9536
+		division_template = "Noble Armed Battalion"
+		start_experience_factor = 0.5
+	}
+}

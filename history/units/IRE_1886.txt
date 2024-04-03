@@ -1,0 +1,90 @@
+﻿division_template = {
+	name = "Royal Irish Guard Group"
+
+	division_names_group = IRE_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+		line_infantry = { x = 0 y = 4 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+		line_infantry = { x = 1 y = 2 }
+		line_infantry = { x = 1 y = 3 }
+		line_infantry = { x = 1 y = 4 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Irish Cavalry Division"
+
+	division_names_group = IRE_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 0 y = 2 }
+		medium_cavalry = { x = 0 y = 3 }
+		medium_cavalry = { x = 0 y = 4 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+		medium_cavalry = { x = 1 y = 2 }
+		medium_cavalry = { x = 1 y = 3 }
+		medium_cavalry = { x = 1 y = 4 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Irish Knight Battalion"
+
+	division_names_group = IRE_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Royal Irish Guard Group"
+		location = 285
+		division_template = "Royal Irish Guard Group"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Irish Guard Group"
+		location = 6289
+		division_template = "Royal Irish Guard Group"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3rd Royal Irish Guard Group"
+		location = 3396
+		division_template = "Royal Irish Guard Group"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Irish Cavalry Division"
+		location = 303
+		division_template = "Royal Irish Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Irish Knight Battalion"
+		location = 11371
+		division_template = "Royal Irish Knight Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Irish Knight Battalion"
+		location = 11303
+		division_template = "Royal Irish Knight Battalion"
+		start_experience_factor = 0.3
+	}
+}

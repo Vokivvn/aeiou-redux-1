@@ -1,0 +1,488 @@
+###########################
+# HOG Events
+###########################
+
+add_namespace = HREEvent
+country_event = {
+	id = HREEvent.1
+	title = HREEvent.1.t
+	desc = HREEvent.1.d
+	
+	fixed_random_seed = no
+	fire_only_once = no
+		
+	is_triggered_only = yes
+	
+	picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = HREEvent.1.a
+		ai_chance = {
+			factor = 100
+		}
+		set_temp_variable = { prestige_score_temp = 3 }
+		add_prestige_score = yes
+		every_country  = {
+			LIMIT = {
+				has_country_flag = HRE_Defender
+			}
+			save_event_target_as = Defender
+			clr_country_flag = HRE_Defender
+			set_country_flag = joined_HRE_faction
+		}
+		every_country  = {
+			LIMIT = {
+				has_country_flag = HRE_Aggresor
+			}
+			declare_war_on = {
+				target = ROOT
+				type = topple_government
+			}
+			clr_country_flag = HRE_Aggresor
+		}
+		if = {
+			LIMIT = {
+				is_in_faction = no
+			}
+			create_faction = HRE_FACTION
+			set_country_flag = HRE_faction_formed
+		}
+		add_to_faction = event_target:Defender
+	}
+	
+	option = {
+		name = HREEvent.1.b
+		ai_chance = {
+			factor = 0
+		}
+		add_stability = -0.05
+	}
+}
+country_event = {
+	id = HREEvent.2
+	title = HREEvent.2.t
+	desc = HREEvent.2.d
+	
+	fixed_random_seed = no
+	fire_only_once = no
+		
+	trigger = {
+		has_country_flag = HRE_faction_formed
+		has_war = no
+	}
+	
+	picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = HREEvent.2.a
+		ai_chance = {
+			factor = 100
+		}
+		every_country = {
+			LIMIT = {
+				has_country_flag = joined_HRE_faction
+			}
+			ROOT = {
+				remove_from_faction = PREV
+			}
+			clr_country_flag = joined_HRE_faction
+		}
+		if = {
+			LIMIT = {
+				has_country_flag = HRE_faction_formed
+			}
+			ROOT = {
+				dismantle_faction = yes
+			}
+			clr_country_flag = HRE_faction_formed
+		}
+		clr_global_flag = HRE_called_to_war
+	}
+}
+country_event = {
+	id = HREEvent.3
+	title = HREEvent.3.t
+	desc = HREEvent.3.d
+	
+	fixed_random_seed = no
+	fire_only_once = no
+		
+	is_triggered_only = yes
+	
+	picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = HREEvent.3.a
+		ai_chance = {
+			factor = 80
+			modifier = {
+				add = 10
+				has_opinion = {
+					target = var:global.hre_emperor
+					value > 40
+				}
+			}
+			modifier = {
+				add = -100
+				OVERLORD = {
+					has_war_with = var:global.hre_emperor
+				}
+			}
+		}
+		ROOT = {
+			set_country_flag = joined_HRE_faction
+		}
+		random_country = {
+			LIMIT = {
+				has_idea = hre_idea_emperor
+			}
+			if = {
+				LIMIT = {
+					is_in_faction = no
+				}
+				create_faction = HRE_FACTION
+				set_country_flag = HRE_faction_formed
+			}
+			add_to_faction = ROOT
+		}
+	}
+	
+	option = {
+		name = HREEvent.3.b
+		trigger = {
+			NOT = { has_global_flag = OATH_FOR_SUPPORT }
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				add = 10
+				has_opinion = {
+					target = var:global.hre_emperor
+					value < -20
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = HREEvent.4
+	title = HREEvent.4.t
+	desc = HREEvent.4.d
+	
+	hidden = yes
+	fire_only_once = no
+		
+	is_triggered_only = yes
+	
+	picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = HREEvent.4.a
+		clr_global_flag = has_toured_recently
+	}
+}
+
+country_event = {
+	id = HREEvent.5
+	title = HREEvent.5.t
+	desc = HREEvent.5.d
+	
+	fire_only_once = no
+		
+	is_triggered_only = yes
+	
+	picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = HREEvent.5.a
+		add_opinion_modifier = {
+			target = FROM
+			modifier = HRE_emperor_tour
+		}
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = HRE_emperor_tour
+			}
+		}
+	}
+}
+
+country_event = { #HRE Consolidating
+	id = HREEvent.6
+	title = HREEvent.6.t
+	desc = HREEvent.6.d
+	
+	fire_only_once = no
+		
+	is_triggered_only = yes
+	
+	picture = GFX_report_news_event_prague_01
+	
+	
+	option = {
+		name = HREEvent.6.a
+		every_state = {
+			LIMIT = {
+				is_core_of = ROOT
+			}
+			add_core_of = FROM
+		}
+		FROM = {
+			annex_country = { target = ROOT transfer_troops = yes }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	
+	option = {
+		name = HREEvent.6.b
+		every_state = {
+			LIMIT = {
+				is_core_of = ROOT
+			}
+			add_core_of = FROM
+		}
+	}
+}
+
+country_event = { #Reforms
+	id = HREEvent.7
+	title = HREEvent.7.t
+	desc = HREEvent.7.d
+	
+	fire_only_once = no
+		
+	is_triggered_only = yes
+	
+	picture = GFX_report_news_event_prague_01
+	
+	fixed_random_seed = no
+	
+	
+	option = {
+		name = HREEvent.7.a #Yes
+		ai_chance = {
+			factor = 80
+			modifier = {
+				add = 10
+				has_opinion = {
+					target = var:global.hre_emperor
+					value > 40
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = HREEvent.7.b #No
+		ai_chance = {
+			factor = 20
+			modifier = {
+				add = 10
+				has_opinion = {
+					target = var:global.hre_emperor
+					value < -20
+				}
+			}
+		}
+		add_opinion_modifier = {
+			target = FROM
+			modifier = HRE_disliked_reform
+		}
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = HRE_disliked_reform
+			}
+		}
+		hidden_effect = {
+			if = {
+				LIMIT = {
+					has_idea = hre_idea_elector
+					check_variable = { global.imperial_stability < 0.20 }
+					NOT = { has_global_flag = HRE_civil_war }
+				}
+				random_country = {
+					90 = {
+						modifier = {
+							add = -10
+							check_variable = { global.imperial_stability < 0.10 }     
+						}
+					}
+					10 = {
+						modifier = {
+							add = 10
+							check_variable = { global.imperial_stability < 0.10 }     
+						}
+						set_global_flag = HRE_civil_war
+						country_event = { days = 15 id = HREEvent.8 }
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { #HRE civil war
+	id = HREEvent.8
+	title = HREEvent.8.t
+	desc = HREEvent.8.d
+	
+	fire_only_once = no
+		
+	is_triggered_only = yes
+	hidden = yes
+	
+	picture = GFX_report_news_event_prague_01
+	
+	fixed_random_seed = no
+	
+	
+	option = {
+		name = HREEvent.8.a
+		if = {
+			LIMIT = {
+				is_in_faction = no
+			}
+			create_faction = HRE_TRADITIONALISTS
+			set_country_flag = HRE_traditionalist_leader
+			
+		}
+		var:global.hre_emperor = {
+			if = {
+				LIMIT = {
+					is_in_faction = no
+				}
+				create_faction = HRE_FACTION
+			}
+			set_global_flag = HRE_called_to_war
+			declare_war_on = {
+				target = ROOT
+				type = topple_government 
+			}
+		}
+		every_country = {
+			LIMIT = {
+				OR = {
+					has_idea = hre_idea_elector
+					has_idea = hre_idea_prince
+					has_idea = hre_idea_free_city
+					has_idea = hre_idea_republic
+					has_idea = hre_idea_conservative
+				}
+				NOT = { has_country_flag = HRE_traditionalist_leader }
+			}
+			country_event = HREEvent.9
+		}
+		every_country = {
+			country_event = { days = 15 id = story_news_events.24 }
+		}
+	}
+}
+
+country_event = { #HRE civil war
+	id = HREEvent.9
+	title = HREEvent.9.t
+	desc = HREEvent.9.d
+	
+	fire_only_once = no
+		
+	is_triggered_only = yes
+	
+	picture = GFX_report_news_event_prague_01
+	
+	fixed_random_seed = no
+	
+	
+	option = {
+		name = HREEvent.9.a
+		ai_chance = {
+			factor = 75
+			modifier = {
+				add = 10
+				has_opinion = {
+					target = var:global.hre_emperor
+					value < -20
+				}
+			}
+			modifier = {
+				add = -10
+				has_opinion = {
+					target = var:global.hre_emperor
+					value > 20
+				}
+			}
+		}
+		trigger = {
+			NOT = {
+				has_opinion = {
+					target = var:global.hre_emperor
+					value > 40
+				}
+			}
+		}
+		random_country = {
+			LIMIT = { 
+				has_country_flag = HRE_traditionalist_leader
+			}
+			add_to_faction = ROOT
+		}
+	}
+	
+	option = {
+		name = HREEvent.9.b
+		ai_chance = {
+			factor = 25
+			modifier = {
+				add = -10
+				has_opinion = {
+					target = var:global.hre_emperor
+					value < -20
+				}
+			}
+			modifier = {
+				add = -10
+				has_opinion = {
+					target = var:global.hre_emperor
+					value > 20
+				}
+			}
+		}
+		trigger = {
+			NOT = { has_global_flag = OATH_FOR_SUPPORT }
+		}
+		add_stability = -0.02
+	}
+	
+	option = {
+		name = HREEvent.9.c
+		ai_chance = {
+			factor = 75
+			modifier = {
+				add = -10
+				has_opinion = {
+					target = var:global.hre_emperor
+					value < -20
+				}
+			}
+			modifier = {
+				add = 10
+				has_opinion = {
+					target = var:global.hre_emperor
+					value > 20
+				}
+			}
+		}
+		trigger = {
+			NOT = {
+				has_opinion = {
+					target = var:global.hre_emperor
+					value < -40
+				}
+			}
+		}
+		var:global.hre_emperor = {
+			add_to_faction = ROOT
+		}
+	}
+}

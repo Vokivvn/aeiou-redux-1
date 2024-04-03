@@ -1,0 +1,298 @@
+the_brabantian_question_category = {
+	bring_industrialization_to_netherlands = {        ############
+	   icon = border_war
+		allowed = {
+        original_tag = SPR
+    }
+	 visible = {
+		has_global_flag = spanishindustrialization
+	}
+	fire_only_once = yes
+	ai_will_do = {
+			factor = 1
+		}
+	cost = 100
+	days_remove = 1
+	remove_effect  = { 
+	    country_event = SPRNetherlands.1
+			}
+		}
+		first_steampowered_farms = {            ###############
+	   icon = border_war
+		allowed = {
+        original_tag = SPR
+    }
+	 visible = {
+		has_country_flag = engineisnorth
+	}
+	fire_only_once = yes
+	ai_will_do = {
+			factor = 1
+		}
+	cost = 20
+	days_remove = 60
+	complete_effect  = { 
+	   SPR = { country_event = { days = 60 id = SPRNetherlands.2 }}
+			}
+		}
+	revolutionize_the_cities = {        ###########
+	   icon = border_war
+		allowed = {
+        original_tag = SPR
+    }
+	visible = {
+		has_country_flag = firstfarms
+	}
+	fire_only_once = yes
+	ai_will_do = {
+			factor = 1
+		}
+	cost = 20
+	days_remove = 10
+	remove_effect  = {
+	    consumer_goods_factor = -0.02
+		monthly_population = 0.02
+		set_country_flag = revolutionizedcities	
+		SPR = { country_event = { days = 60 id = SPRNetherlands.5 }}
+			}
+		}
+	serf_controlled_latifundia = {        ############
+	   icon = border_war
+		allowed = {
+        original_tag = SPR
+    }
+	 visible = {
+		has_country_flag = firstfarms
+		NOT = { has_country_flag = noblepriority }
+	}
+	fire_only_once = yes
+	ai_will_do = {
+			factor = 1
+		}
+	cost = 25
+	days_remove = 20
+	complete_effect = {
+		set_country_flag = serflatifundia
+    }
+	remove_effect  = {
+	    country_event = SPRNetherlands.3	
+		set_country_flag = peasantsofbrabant
+			}
+		}
+		attempt_end_medieval_corporationism= {        ############
+	   icon = border_war
+		allowed = {
+        original_tag = SPR
+    }
+	 visible = {
+		has_country_flag = serflatifundia
+	}
+	fire_only_once = yes
+	ai_will_do = {
+			factor = 1
+		}
+	cost = 50
+	days_remove = 100
+	remove_effect  = {
+	    country_event = SPRNetherlands.14
+		add_political_power = 100
+			}
+		}
+	 noble_economic_priority = {        ####################
+	   icon = border_war
+	allowed = {
+        original_tag = SPR
+    }
+	 visible = {
+		has_country_flag = firstfarms 
+		NOT = { has_country_flag = serflatifundia }
+        }
+	fire_only_once = yes
+	ai_will_do = {
+			factor = 1
+		}
+	cost = 25
+	days_remove = 20
+	complete_effect = {
+		set_country_flag = noblepriority
+    }		
+	remove_effect  = {
+	    country_event = SPRNetherlands.4
+		set_country_flag = noblesrevolttoo
+
+			}
+		}
+	noble_banking = {        ####################
+	   icon = border_war
+	allowed = {
+        original_tag = SPR
+    }
+	 visible = {
+		has_country_flag = noblepriority
+	}
+	fire_only_once = yes
+	ai_will_do = {
+			factor = 1
+		}
+	cost = 80
+	days_remove = 50
+	remove_effect  = {
+	    country_event = SPRNetherlands.16
+		add_political_power = 120
+			}
+		}
+		 improve_the_road_system = {        ####################
+	   icon = border_war
+		allowed = {
+        original_tag = SPR
+    }
+	 visible = {
+		has_country_flag = revolutionizedcities
+	}
+	fire_only_once = yes
+	ai_will_do = {
+			factor = 1
+		}
+	cost = 25
+	days_remove = 80
+	remove_effect  = {
+	set_country_flag = improvedroads
+		SPN = {
+		add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				}
+			}
+		}
+	sociedad_industrial_flamencoespanola = {        ####################
+	 icon = border_war
+		allowed = {
+        original_tag = SPR
+    }
+	 visible = {
+		has_country_flag = improvedroads
+	}
+	fire_only_once = yes
+	ai_will_do = {
+			factor = 1
+		}
+	cost = 60
+	days_remove = 60
+	remove_effect  = { 
+		SPN = {
+				add_ideas = spn_sociedad_flamencoespanola }
+		SPR = {
+				add_ideas = spn_sociedad_flamencoespanola }
+				}
+			}
+	stop_foreign_imports = {        ####################
+	 icon = border_war
+		allowed = {
+        original_tag = SPR
+    }
+	 visible = {
+		has_country_flag = improvedroads
+	}
+	fire_only_once = yes
+	ai_will_do = {
+			factor = 1
+		}
+	cost = 40
+	days_remove = 45
+	remove_effect  = { 
+		country_event = SPRNetherlands.9
+		set_country_flag = itsliegetime
+				}
+			}
+	request_liege_trespassing_rights = {        ####################
+	 icon = border_war
+		allowed = {
+        original_tag = SPR
+    }
+	 visible = {
+		has_country_flag = itsliegetime
+	}
+	fire_only_once = yes
+	ai_will_do = {
+			factor = 1
+		}
+	cost = 50
+	days_remove = 15
+	remove_effect  = { 
+		country_event = SPRNetherlands.10
+				}
+			}
+	sell_liege_rotary_engines = {        ####################
+	 icon = border_war
+		allowed = {
+        original_tag = SPR
+    }
+	 visible = {
+		has_country_flag = liegesaysyes
+	}
+	fire_only_once = yes
+	ai_will_do = {
+			factor = 1
+		}
+	cost = 65
+	days_remove = 50
+	remove_effect  = { 
+		add_political_power = 30
+		set_country_flag = liegeeconomy
+		LIE = {
+		add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+	      }
+		}
+	joint_economic_partnership = {        ####################
+	 icon = border_war
+		allowed = {
+        original_tag = SPR
+    }
+	 visible = {
+		has_country_flag = liegeeconomy
+	}
+	fire_only_once = yes
+	ai_will_do = {
+			factor = 1
+		}
+	cost = 50
+	days_remove = 30
+	remove_effect  = { 
+		add_political_power = 30
+		LIE = {
+				add_ideas = spn_sociedad_flamencoespanola }
+		set_country_flag = liegeannexationtime
+	      }
+		}
+	bring_liege_into_spanish_sphere = {        ####################
+	 icon = border_war
+		allowed = {
+        original_tag = SPR
+    }
+	 visible = {
+		has_country_flag = liegeannexationtime
+	}
+	fire_only_once = yes
+	ai_will_do = {
+			factor = 1
+		}
+	cost = 150
+	days_remove = 40
+	remove_effect  = { 
+		add_political_power = 100
+		country_event = SPRNetherlands.13
+	      }
+		}
+	  }

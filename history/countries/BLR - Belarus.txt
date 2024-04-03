@@ -1,0 +1,46 @@
+﻿capital = 242 #Smolensk
+
+oob = "BLR_1886"
+
+set_research_slots = 2
+
+# Starting tech
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_military_police = 1
+	grenade = 1
+
+	muskets1 = 1
+	gw_artillery = 1
+	mass_assault = 1
+	fleet_in_being = 1
+}
+
+set_politics = {
+	ruling_party = absolutist
+}
+
+set_popularities = {
+    absolutist = 100
+}
+
+add_to_array = { national_religion_array =  1 }
+
+create_country_leader = {
+    name = "Emeryk Hutten-Czapsky"
+    desc = ""
+    picture = "Portrait_BLR_Emeryk_I.dds"
+    expire = "1965.1.1"
+    ideology = absolutist_moderate
+    traits = {
+        #
+    }
+}
+
+
+
+

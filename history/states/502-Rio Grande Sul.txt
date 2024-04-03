@@ -1,0 +1,32 @@
+
+state={
+	id=502
+	name="STATE_502"
+	manpower = 571775
+	
+	resources = {
+		horses=2
+		steel=1
+	}
+
+	state_category = rural
+
+	history={
+		owner = POR
+		buildings = {
+			infrastructure = 2
+			10447 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = POR
+		victory_points = {
+			10447 3 
+		}
+
+	}
+
+	provinces={
+		1542 1585 1598 4436 4575 4589 4604 5110 7581 7594 7638 10447 12396 12440 1626 1641 12481 10347 
+	}
+}

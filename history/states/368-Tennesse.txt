@@ -1,0 +1,30 @@
+
+state={
+	id=368
+	name="STATE_368"
+	manpower = 25911
+	
+	state_category = rural
+	
+	resources={
+		iron=2
+		wood=2
+	}
+
+
+	history={
+		owner = CHR
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = CHR
+		victory_points = {
+			12501 3 
+		}
+
+	}
+
+	provinces={
+		913 1758 8083 10281 10824 12501 12670 5059 10657
+	}
+}

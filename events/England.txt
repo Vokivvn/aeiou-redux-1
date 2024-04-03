@@ -1,0 +1,62 @@
+﻿###########################
+#
+# England 
+#
+###########################
+
+add_namespace = ENGFlavour
+add_namespace = ENGMarketcrash
+add_namespace = ENGScotland
+
+country_event = { #the Martinet of Albion           
+	id = ENGFlavour.1
+	title = ENGFlavour.1.t
+	desc = ENGFlavour.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		date > 1886.01.10
+		is_ai = no 
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = ENGFlavour.1.a 
+	}
+}
+
+country_event = { #Reaction to the market crash
+	id = ENGMarketcrash.1
+	title = ENGMarketcrash.1.t
+	desc = ENGMarketcrash.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ENGMarketcrash.1.a 
+		add_ideas = eng_collapse_bruh
+	}
+}
+
+country_event = { #RIP England
+	id = ENGScotland.1
+	title = ENGScotland.1.t
+	desc = ENGScotland.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ENGScotland.1.a
+		add_war_support = 0.2
+		add_political_power = 100
+	}
+}

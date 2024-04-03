@@ -1,0 +1,46 @@
+claim_trigger = {
+	set_temp_variable = { power_position = ROOT.score_array_position_var  }
+	clamp_temp_variable = { 
+		var = power_position
+		min = 4
+		max = 100
+	}
+	add_to_temp_variable = { power_position = 21 }
+	multiply_temp_variable = { power_position = 2 }
+	set_temp_variable = { local_industry = 1  }
+	set_temp_variable = { local_arms_factory = arms_factory_level  }
+	divide_temp_variable = { local_arms_factory = 5 }
+	add_to_temp_variable = { local_industry = local_arms_factory }
+	set_temp_variable = { local_civilian_factory = industrial_complex_level  }
+	divide_temp_variable = { local_civilian_factory = 10 }
+	add_to_temp_variable = { local_industry = local_civilian_factory }
+	set_temp_variable = { local_infrastructure = infrastructure_level  }
+	divide_temp_variable = { local_infrastructure = 20 }
+	add_to_temp_variable = { local_industry = local_infrastructure }
+	multiply_temp_variable = { power_position = local_industry }
+	
+	check_variable = {
+		var = ROOT.political_power
+		value = power_position
+		compare = greater_than_or_equals
+	} 
+	
+	OR = {
+		AND = {
+			is_coastal = yes
+			check_variable = {
+				var = ROOT.score_array_position_var
+				value = 16
+				compare = less_than_or_equals
+			} 
+		}
+		any_neighbor_state = {
+			OR = {
+				is_claimed_by = ROOT
+				is_owned_by = ROOT
+			}
+		}
+	}
+
+
+}

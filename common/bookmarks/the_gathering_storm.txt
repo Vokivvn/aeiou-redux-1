@@ -1,0 +1,99 @@
+bookmarks = {
+	bookmark = {
+		name = "AEIOU_NAME"
+		desc = "AEIOU_DESC"
+		date = 1886.1.1.12
+		picture = "GFX_select_date_1939"
+		default_country = "AUS"
+		default = yes
+	
+		"AUS" = {
+			history = AUS_AEIOU_DESC
+			ideology = absolutist
+			ideas={
+			}
+			focuses = {
+			}
+		}
+		"SPR" = {
+			history = SPR_AEIOU_DESC
+			ideology = absolutist
+			ideas={
+			}
+			focuses = {
+			}
+		}
+		"FRA" = {
+			history = FRA_AEIOU_DESC
+			ideology = absolute
+			ideas={
+			}
+			focuses = {
+			}
+		}
+		"ENG" = {
+			history = ENG_AEIOU_DESC
+			ideology = conservative
+			ideas = {
+			}
+			focuses = {
+			}
+			
+		}
+		"SWE" = {
+			history = SWE_AEIOU_DESC
+			ideology = constitutional
+			ideas = {
+			}
+			focuses = {
+			}
+			
+		}
+		"OTT" = {
+			history = OTT_AEIOU_DESC
+			ideology = absolute
+			ideas = {
+			}
+			focuses = {
+			}
+			
+		}
+		"CHI" = {
+			history = CHI_AEIOU_DESC
+			ideology = absolute
+			ideas = {
+			}
+			focuses = {
+			}
+			
+		}
+		
+		"---" = {
+			history = CHI_AEIOU_DESC
+			
+		}
+		
+		"PLC" = {
+			history = "PLC_AEIOU_DESC"
+			minor = yes 
+			ideology = elective
+		}
+		
+		"GRE" = {
+			history = "GRE_AEIOU_DESC"
+			minor = yes 
+			ideology = constitutional
+		}
+		
+		"MEX" = {
+			history = "MEX_AEIOU_DESC"
+			minor = yes 
+			ideology = constitutional
+		}
+		
+		effect = {
+			randomize_weather = 12345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

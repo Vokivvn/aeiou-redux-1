@@ -1,0 +1,32 @@
+state={
+	id=833
+	name="STATE_833"
+	
+	resources = {
+	    gunpowder = 1 
+		wood = 1 
+		horses = 2 
+	}
+
+	history={
+		owner = OLD
+		victory_points = {
+			309 5 
+		}
+		buildings = {
+			infrastructure = 3
+			241 = {
+			    naval_base = 1 
+			}
+			industrial_complex = 1 
+		}
+		add_core_of = OLD
+
+	}
+     
+	provinces={
+		241 336 309
+	}
+	manpower = 409822
+	state_category = town
+}

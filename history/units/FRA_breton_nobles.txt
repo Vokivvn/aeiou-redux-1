@@ -1,0 +1,41 @@
+﻿division_template = {
+	name = "Noble Breton Battalion"
+	is_locked = yes
+
+	division_names_group = FRA_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+		line_infantry = { x = 0 y = 4 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+		line_infantry = { x = 1 y = 2 }
+		line_infantry = { x = 1 y = 3 }
+		line_infantry = { x = 1 y = 4 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Noble Breton Battalion"
+		location = 3552
+		division_template = "Noble Breton Battalion"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "2nd Noble Breton Battalion"
+		location = 6536
+		division_template = "Noble Breton Battalion"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "3rd Noble Breton Battalion"
+		location = 9495
+		division_template = "Noble Breton Battalion"
+		start_experience_factor = 0.2
+	}
+}

@@ -1,0 +1,21 @@
+
+state={
+	id=469
+	name="STATE_469"
+	manpower = 37540
+	
+	state_category = rural
+
+	history={
+		owner = DNE
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		add_core_of = DNE
+	}
+
+	provinces={
+		736 3498 9669 11440 4739 515 1804 6726 7787 10684 1671 12682 3800 13183 13168 13187 4695 13185 6779 13167 7348
+	}
+}

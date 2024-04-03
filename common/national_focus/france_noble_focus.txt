@@ -1,0 +1,458 @@
+focus_tree = {
+	id = france_noble_focus
+	
+	country = {
+		factor = 0
+		
+	}
+	
+	default = no
+	continuous_focus_position = { x = 50 y = 2000 }
+
+
+	###########
+	#  Start  #
+	###########
+	
+	focus = { 
+		id = FRA_industrialize_our_homeland
+		icon = GFX_FRA_Economic_revival
+		cost = 10
+	
+	
+		x = 2
+		y = 0
+		
+		completion_reward = {
+			country_event = FRANobleRevolt.1
+		}
+	}
+	
+	focus = { 
+		id = FRA_arm_the_serfs
+		icon = GFX_focus_generic_revolutionary_sentiment
+		cost = 10
+		
+		relative_position_id = FRA_industrialize_our_homeland
+		x = 2
+		y = 0
+		
+		completion_reward = {
+			load_oob = "FRA_militia"
+			random_controlled_state = {
+				create_unit = {
+					division = "division_template = \"French Militia\" start_experience_factor = 0.1" 
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+					count = 3
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = FRA_pursue_ideological_unity
+		icon = GFX_focus_generic_redistribution_of_powers
+		cost = 20
+		
+		
+		prerequisite = { focus = FRA_industrialize_our_homeland }
+		prerequisite = { focus = FRA_arm_the_serfs }
+		relative_position_id = FRA_industrialize_our_homeland
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			#country_event
+			add_stability = 0.05
+		}
+	}
+	
+	focus = { 
+		id = FRA_burgeois_serf_all_Serve
+		icon = GFX_FRA_artillery_battalion
+		cost = 10
+		
+		
+		prerequisite = { focus = FRA_pursue_ideological_unity }
+		relative_position_id = FRA_pursue_ideological_unity
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = fra_fight_for_estamental_rights1
+				remove_idea = fra_fight_for_estamental_rights
+			}
+		}
+	}
+	
+	### Left
+	
+	focus = { 
+		id = FRA_keep_grain_flowing
+		icon = GFX_FRA_Reemploy_Merchant_Shipping
+		cost = 10
+		
+		
+		prerequisite = { focus = FRA_burgeois_serf_all_Serve }
+		relative_position_id = FRA_burgeois_serf_all_Serve
+		x = -2
+		y = 1
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = fra_fight_for_estamental_rights2
+				remove_idea = fra_fight_for_estamental_rights1
+			}
+		}
+	}
+	
+	focus = { 
+		id = FRA_protect_capital
+		icon = GFX_focus_generic_home_defense
+		cost = 20
+		
+		
+		prerequisite = { focus = FRA_keep_grain_flowing }
+		relative_position_id = FRA_keep_grain_flowing
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			if = {
+				LIMIT = { tag = BRI }
+				15 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = 3552
+					}
+				}
+			}
+			else_if = {
+				LIMIT = { tag = AQU }
+				19 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = 9737
+					}
+				}
+			}
+			else_if = {
+				LIMIT = { tag = BUR }
+				27 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = 3652
+					}
+				}
+			}
+			else_if = {
+				LIMIT = { tag = PRO }
+				21 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = 11834
+					}
+				}
+			}
+			else_if = {
+				LIMIT = { tag = NRM }
+				15 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = 9434
+					}
+				}
+			}
+			else_if = {
+				LIMIT = { tag = LOR }
+				943 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = 9559
+					}
+				}
+			}
+			else_if = {
+				LIMIT = { tag = VOS }
+				28 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = 9503
+					}
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = FRA_fight_until_last_serf
+		icon = GFX_FRA_Hexagon_Ready
+		cost = 20
+		
+		
+		prerequisite = { focus = FRA_protect_capital }
+		relative_position_id = FRA_protect_capital
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = fra_fight_for_estamental_rights3
+				remove_idea = fra_fight_for_estamental_rights2
+			}
+		}
+	}
+	
+	focus = { 
+		id = FRA_wall_off_enemy
+		icon = GFX_goal_generic_construct_military
+		cost = 20
+		
+		
+		prerequisite = { focus = FRA_keep_grain_flowing }
+		relative_position_id = FRA_keep_grain_flowing
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			if = {
+				LIMIT = { tag = BRI }
+				15 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 6536
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 9495
+					}
+				}
+				30 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 11465
+					}
+				}
+			}
+			else_if = {
+				LIMIT = { tag = AQU }
+				31 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 6766
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 11699
+					}
+				}
+				922 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 13269
+					}
+				}
+			}
+			else_if = {
+				LIMIT = { tag = BUR }
+				27 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 3652
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 817
+					}
+				}
+				17 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 9642
+					}
+				}
+			}
+			else_if = {
+				LIMIT = { tag = PRO }
+				21 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 911
+					}
+				}
+				32 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 3768
+					}
+				}
+			}
+			else_if = {
+				LIMIT = { tag = NRM }
+				15 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 485
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 11563
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 6449
+					}
+				}
+			}
+			else_if = {
+				LIMIT = { tag = LOR }
+				944 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 11516
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 3560
+					}
+				}
+			}
+			else_if = {
+				LIMIT = { tag = VOS }
+				28 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 678
+					}
+				}
+				945 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 521
+					}
+				}
+			}
+		}
+	}
+	
+	### Right
+	
+	focus = { 
+		id = FRA_promise_tax_reform
+		icon = GFX_SPR_regency_legitimized_government
+		cost = 15
+		
+		
+		prerequisite = { focus = FRA_burgeois_serf_all_Serve }
+		relative_position_id = FRA_burgeois_serf_all_Serve
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			#country_event
+		}
+	}
+	
+	focus = { 
+		id = FRA_acquire_foreign_gunnery
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10
+		
+		
+		prerequisite = { focus = FRA_promise_tax_reform }
+		relative_position_id = FRA_promise_tax_reform
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment 
+				amount = 2000
+				producer = ROOT
+			}
+			add_political_power = -150
+		}
+	}
+	
+	focus = { 
+		id = FRA_mercenary_cavalry_leads_charge
+		icon = GFX_focus_generic_feudalisms_stand
+		cost = 15
+		
+		
+		prerequisite = { focus = FRA_wall_off_enemy }
+		prerequisite = { focus = FRA_acquire_foreign_gunnery }
+		relative_position_id = FRA_wall_off_enemy
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = medium_cavalry_merc }
+				}
+				set_country_flag = medium_cavalry_merc
+				load_oob = "unlock_medium_cavalry_mercs"
+			}
+			random_controlled_state = {
+				create_unit = {
+					division = "division_template = \"Medium Cavalry Mercenaries\" start_experience_factor = 0.4" 
+					owner = ROOT
+					allow_spawning_on_enemy_provs = yes
+					count = 2
+				}
+			}
+		}
+	}

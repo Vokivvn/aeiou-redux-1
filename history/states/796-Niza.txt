@@ -1,0 +1,30 @@
+
+state={
+	id=796
+	name="STATE_796" 
+	manpower = 162241
+	resources={
+		
+	}
+	
+	state_category = town
+
+	history={
+		owner = PIE
+		add_core_of = PIE
+		buildings = {
+			9909 = {
+				naval_base = 3
+			}
+			infrastructure = 3
+			dockyard=1
+		}
+		victory_points = {
+			9909 5 
+		}		
+	}
+
+	provinces={
+		9909 3959
+	}
+}

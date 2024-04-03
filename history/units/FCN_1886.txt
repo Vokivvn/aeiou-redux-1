@@ -1,0 +1,83 @@
+﻿division_template = {
+	name = "Colonial Infantry"
+
+	division_names_group = FRA_COL_02
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+		line_infantry = { x = 0 y = 4 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+		line_infantry = { x = 1 y = 2 }
+		line_infantry = { x = 1 y = 3 }
+		line_infantry = { x = 1 y = 4 }
+	}
+}
+
+division_template = {
+	name = "Light Cavalry Division"
+
+	division_names_group = FRA_DLC_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 0 y = 2 }
+		medium_cavalry = { x = 0 y = 3 }
+		medium_cavalry = { x = 0 y = 4 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+		medium_cavalry = { x = 1 y = 2 }
+		medium_cavalry = { x = 1 y = 3 }
+		medium_cavalry = { x = 1 y = 4 }
+	}
+}
+
+units = {
+	#medium_cavalry
+	division = { #medium_cavalry
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12149
+		division_template = "Light Cavalry Division"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.5
+	}
+	
+	#Infantry
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6710
+		division_template = "Colonial Infantry"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 4345
+		division_template = "Colonial Infantry"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 3712
+		division_template = "Colonial Infantry"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+}

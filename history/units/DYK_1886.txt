@@ -1,0 +1,59 @@
+division_template = {
+	name = "Tribal Dayak Guard Battalion"
+
+	division_names_group = DYK_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Tribal Dayak Warrior Brigade"
+
+	division_names_group = DYK_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Tribal Dayak Warrior Brigade"
+		location = 10237
+		division_template = "Tribal Dayak Warrior Brigade"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Tribal Dayak Warrior Brigade"
+		location = 10325
+		division_template = "Tribal Dayak Warrior Brigade"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3rd Tribal Dayak Warrior Brigade"
+		location = 7296
+		division_template = "Tribal Dayak Warrior Brigade"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4th Tribal Dayak Warrior Brigade"
+		location = 2184
+		division_template = "Tribal Dayak Warrior Brigade"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "5th Tribal Dayak Warrior Brigade"
+		location = 4409
+		division_template = "Tribal Dayak Warrior Brigade"
+		start_experience_factor = 0.3
+	}
+}

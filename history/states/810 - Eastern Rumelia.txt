@@ -1,0 +1,22 @@
+
+state={
+	id=810
+	name="STATE_810"
+	manpower = 12924
+	resources={
+		iron=3
+	}
+	state_category = pastoral
+
+	history={
+		owner = GRE
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = GRE
+	}
+
+	provinces={
+		3937 11813 6923 893 9862 878
+	}
+}

@@ -1,0 +1,405 @@
+focus_tree = {
+	id = france_centralization_focus
+	
+	country = {
+		factor = 0
+		
+	}
+	
+	default = no
+	continuous_focus_position = { x = 50 y = 2000 }
+
+
+	###########
+	#  Start  #
+	###########
+	
+	focus = { 
+		id = FRA_rearrange_noble_customs
+		icon = GFX_focus_generic_redistribution_of_powers
+		cost = 30
+	
+		x = 2
+		y = 0
+		
+		completion_reward = {
+			#country_event
+		}
+	}
+	
+	focus = { 
+		id = FRA_take_over_parisian_barons
+		icon = GFX_AUS_focus_Threats_Actions
+		cost = 35
+	
+		x = 5
+		y = 0
+		
+		completion_reward = {
+			add_political_power = -50
+			#country_event
+		}
+	}
+	
+	### Left ###
+	
+	focus = { 
+		id = FRA_reinforce_bourbon_strongpoints
+		icon = GFX_goal_generic_construct_military
+		cost = 25
+		
+		bypass = {
+			NOT = { controls_state = 16 }
+		}
+		prerequisite = { focus = FRA_rearrange_noble_customs }
+		relative_position_id = FRA_rearrange_noble_customs
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			16 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 11506
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 9523
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = FRA_nationalize_noble_armories
+		icon = GFX_FRA_reform_armee
+		cost = 25
+		
+		bypass = {
+			NOT = { controls_state = 24 }
+		}
+		prerequisite = { focus = FRA_reinforce_bourbon_strongpoints }
+		relative_position_id = FRA_reinforce_bourbon_strongpoints
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			set_temp_variable = { noble_support_temp = -0.02 }
+			FRA_noble_support = yes
+			24 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				create_unit = {
+					division = "division_template = \"Royal French Garrison Battalion\" start_experience_factor = 0.3" 
+					owner = FRA
+					allow_spawning_on_enemy_provs = yes
+					count = 2
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = FRA_people_cause
+		icon = GFX_goal_generic_demand_territory
+		cost = 25
+		prerequisite = { focus = FRA_rearrange_noble_customs }
+		prerequisite = { focus = FRA_take_over_parisian_barons }
+		relative_position_id = FRA_rearrange_noble_customs
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			#country_event
+		}
+	}
+	
+	focus = { 
+		id = FRA_god_on_our_side
+		icon = GFX_FRA_Ethos_Of_Future
+		cost = 25
+		prerequisite = { focus = FRA_people_cause }
+		relative_position_id = FRA_people_cause
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			#country_event
+		}
+	}
+	
+	focus = { 
+		id = FRA_avoid_repeating_rudolf
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 40
+		prerequisite = { focus = FRA_nationalize_noble_armories }
+		prerequisite = { focus = FRA_god_on_our_side }
+		relative_position_id = FRA_nationalize_noble_armories
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			#country_event
+		}
+	}
+	
+	### Right ### 
+	
+	focus = { 
+		id = FRA_negotiate_with_duke_of_aquitaine
+		icon = GFX_goal_generic_major_alliance
+		cost = 30
+		prerequisite = { focus = FRA_take_over_parisian_barons }
+		relative_position_id = FRA_take_over_parisian_barons
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			country_event = FRACentralized.1
+		}
+	}
+	
+	focus = { 
+		id = FRA_with_him
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10
+		mutually_exclusive = {
+			focus = FRA_without_him
+		}
+		available = {
+			always = no
+		}
+		
+		prerequisite = { focus = FRA_negotiate_with_duke_of_aquitaine }
+		relative_position_id = FRA_negotiate_with_duke_of_aquitaine
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			set_temp_variable = { noble_support_temp = 0.035 }
+			FRA_noble_support = yes
+			add_stability = 0.05
+			add_political_power = -100
+		}
+	}
+	
+	focus = { 
+		id = FRA_without_him
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10
+		mutually_exclusive = {
+			focus = FRA_with_him
+		}
+		available = {
+			always = no
+		}
+		
+		prerequisite = { focus = FRA_negotiate_with_duke_of_aquitaine }
+		relative_position_id = FRA_negotiate_with_duke_of_aquitaine
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			set_temp_variable = { noble_support_temp = -0.035 }
+			FRA_noble_support = yes
+			add_stability = -0.05
+			add_political_power = 100
+		}
+	}
+	
+	focus = { 
+		id = FRA_en_route_to_capital
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 40
+		
+		bypass = {
+			NOT = { controls_state = 16 }
+		}
+		prerequisite = { focus = FRA_with_him focus = FRA_without_him }
+		relative_position_id = FRA_with_him
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			16 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			if = {
+				LIMIT = { controls_state = 14 }
+				14 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				LIMIT = { controls_state = 19 }
+				19 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				LIMIT = { controls_state = 21 }
+				21 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				LIMIT = { controls_state = 27 }
+				27 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	### End ###
+	
+	focus = { 
+		id = FRA_promise_break_medieval_monopolies
+		icon = GFX_FRA_Support_the_Peasantry
+		cost = 30
+		prerequisite = { focus = FRA_avoid_repeating_rudolf }
+		relative_position_id = FRA_avoid_repeating_rudolf
+		x = -2
+		y = 1
+		
+		completion_reward = {
+			#country_event
+		}
+	}
+	
+	focus = { 
+		id = FRA_aid_burgeois_banks
+		icon = GFX_AUS_bigger_taxes
+		cost = 30
+		prerequisite = { focus = FRA_promise_break_medieval_monopolies }
+		relative_position_id = FRA_promise_break_medieval_monopolies
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.02
+		}
+	}
+	
+	focus = { 
+		id = FRA_strengthen_military_ranks
+		icon = GFX_focus_generic_military_mission
+		cost = 30
+		prerequisite = { focus = FRA_avoid_repeating_rudolf }
+		prerequisite = { focus = FRA_en_route_to_capital }
+		relative_position_id = FRA_avoid_repeating_rudolf
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			create_corps_commander = {
+				name = "François de Négrier"
+				picture = ""
+				traits = { cavalry_officer }
+				id = 14001
+				skill = 5
+				attack_skill = 4
+				defense_skill = 1
+				planning_skill = 3
+				logistics_skill = 5
+			}
+		}
+	}
+	
+	focus = { 
+		id = FRA_found_king_guard
+		icon = GFX_FRA_artillery_battalion
+		cost = 30
+		prerequisite = { focus = FRA_strengthen_military_ranks }
+		relative_position_id = FRA_strengthen_military_ranks
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			set_country_flag = FRA_king_guard
+			load_oob = "FRA_king_guard"
+			16 = {
+				create_unit = {
+					division = "division_template = \"The King's Guard\" start_experience_factor = 0.5" 
+					owner = FRA
+					allow_spawning_on_enemy_provs = yes
+					count = 1
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = FRA_deal_with_constitutionalists
+		icon = GFX_SPR_regency_legitimized_government
+		cost = 30
+		prerequisite = { focus = FRA_en_route_to_capital }
+		relative_position_id = FRA_en_route_to_capital
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			#country_event
+		}
+	}
+	
+	focus = { 
+		id = FRA_eclaircissement_francaise
+		icon = GFX_AUS_focus_Present_Democracy
+		cost = 30
+		prerequisite = { focus = FRA_deal_with_constitutionalists }
+		relative_position_id = FRA_deal_with_constitutionalists
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_political_power = 100
+			add_ideas = fra_eclaircissement_francaise
+		}
+	}
+	
+	focus = { 
+		id = FRA_time_to_strike
+		icon = GFX_FRA_The_Angry_neighbour
+		cost = 40
+		prerequisite = { focus = FRA_aid_burgeois_banks }
+		prerequisite = { focus = FRA_found_king_guard }
+		prerequisite = { focus = FRA_eclaircissement_francaise }
+		relative_position_id = FRA_found_king_guard
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			#country_event
+			FRA_revolt_check = yes
+		}
+	}
+}

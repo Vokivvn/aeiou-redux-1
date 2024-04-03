@@ -1,0 +1,476 @@
+SpriteTypes = {                   
+	SpriteType = {
+		name = "GFX_focus_generic_feudalisms_stand"
+		texturefile = "gfx/interface/goals/generic_trees/focus_generic_feudalisms_stand.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_generic_redistribution_of_powers"
+		texturefile = "gfx/interface/goals/generic_trees/focus_generic_redistribution_of_powers.dds"
+	}       
+
+	SpriteType = {
+		name = "GFX_focus_generic_revolutionary_sentiment"
+		texturefile = "gfx/interface/goals/generic_trees/focus_generic_revolutionary_sentiment.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_generic_the_old_is_new_again"
+		texturefile = "gfx/interface/goals/generic_trees/focus_generic_the_old_is_new_again.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_AUS_focus_Emancipation"
+		texturefile = "gfx/interface/goals/Austria/AUS_focus_Emancipation.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_AUS_focus_End_Temporal_Authority"
+		texturefile = "gfx/interface/goals/Austria/AUS_focus_End_Temporal_Authority.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_AUS_focus_Equality"
+		texturefile = "gfx/interface/goals/Austria/AUS_focus_Equality.dds"
+	}
+
+	SpriteType = {              
+		name = "GFX_AUS_focus_Inspiration_Greece"
+		texturefile = "gfx/interface/goals/Austria/AUS_focus_Inspiration_Greece.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_AUS_focus_Inspiration_Rome"
+		texturefile = "gfx/interface/goals/Austria/AUS_focus_Inspiration_Rome.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_AUS_focus_Peoples_Emperor"
+		texturefile = "gfx/interface/goals/Austria/AUS_focus_Peoples_Emperor.dds"
+	}
+        
+	SpriteType = {             
+		name = "GFX_AUS_focus_Present_Democracy"
+		texturefile = "gfx/interface/goals/Austria/AUS_focus_Present_Democracy.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_AUS_focus_Promises_People"
+		texturefile = "gfx/interface/goals/Austria/AUS_focus_Promises_People.dds"
+	}
+                           
+	SpriteType = {               
+		name = "GFX_AUS_focus_Rudolfs_Bane"
+		texturefile = "gfx/interface/goals/Austria/AUS_focus_Rudolf's_Bane.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_AUS_focus_Visit_Koln"
+		texturefile = "gfx/interface/goals/Austria/AUS_focus_Visit_Koln.dds"
+	}     
+
+	SpriteType = {
+		name = "GFX_AUS_focus_Visit_Konigsberg"
+		texturefile = "gfx/interface/goals/Austria/AUS_focus_Visit_Konigsberg.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_AUS_focus_Visit_Rome"
+		texturefile = "gfx/interface/goals/Austria/AUS_focus_Visit_Rome.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_AUS_focus_Presents_Cajoling"
+		texturefile = "gfx/interface/goals/Austria/AUS_focus_Presents_Cajoling.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_AUS_focus_Threats_Actions"
+		texturefile = "gfx/interface/goals/Austria/AUS_focus_Threats_Actions.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_AUS_focus_Deal_Nobility"
+		texturefile = "gfx/interface/goals/Austria/AUS_focus_Deal_Nobility.dds"
+	}
+	SpriteType = {
+		name = "GFX_AUS_focus_New_Society"
+		texturefile = "gfx/interface/goals/Austria/AUS_focus_New_Society.dds"
+	}
+	SpriteType = {
+		name = "GFX_AUS_focus_Clergy_Fate"
+		texturefile = "gfx/interface/goals/Austria/AUS_focus_Clergy_Fate.dds"
+	}
+    SpriteType = {
+		name = "GFX_SPR_focus_kings_duty"
+		texturefile = "gfx/interface/goals/Spain/SPR_focus_kings_duty.dds"
+	}
+	 SpriteType = {
+		name = "GFX_SPR_rally_portuguese"
+		texturefile = "gfx/interface/goals/Spain/SPR_rally_portuguese.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_circulo_economico_caribeno"
+		texturefile = "gfx/interface/goals/Spain/SPR_circulo_economico_caribeno.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_focus_on_the_enemy"
+		texturefile = "gfx/interface/goals/Spain/SPR_focus_on_the_enemy.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_Peasant_Rebellion"
+		texturefile = "gfx/interface/goals/Spain/SPR_Peasant_Rebellion.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_catholic_teaching"
+		texturefile = "gfx/interface/goals/Spain/SPR_catholic_teaching.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_Popular_laws"
+		texturefile = "gfx/interface/goals/Spain/SPR_Popular_laws.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_National_Salvation_Movement"
+		texturefile = "gfx/interface/goals/Spain/SPR_National_Salvation_Movement.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_Centro-American_cake"
+		texturefile = "gfx/interface/goals/Spain/SPR_Centro-American_cake.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_Old_colonies_new_colonies"
+		texturefile = "gfx/interface/goals/Spain/SPR_Old_colonies_new_colonies.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_safe_borders"
+		texturefile = "gfx/interface/goals/Spain/SPR_safe_borders.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_safe_routes"
+		texturefile = "gfx/interface/goals/Spain/SPR_safe_routes.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_toledo_manifesto"
+		texturefile = "gfx/interface/goals/Spain/SPR_toledo_manifesto.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_lex_christi"
+		texturefile = "gfx/interface/goals/Spain/SPR_lex_christi.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_reversed_economy"
+		texturefile = "gfx/interface/goals/Spain/SPR_reversed_economy.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_dawn_of_a_new_era"
+		texturefile = "gfx/interface/goals/Spain/SPR_dawn_of_a_new_era.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_boost_noble_scholarships"
+		texturefile = "gfx/interface/goals/Spain/SPR_boost_noble_scholarships.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_wealthy_universities"
+		texturefile = "gfx/interface/goals/Spain/SPR_wealthy_universities.dds"
+	}
+	SpriteType = {
+		name = "GFX_generic_centralized_economy"
+		texturefile = "gfx/interface/goals/generic_trees/focus_centralized_economy.dds"
+	}
+	SpriteType = {
+		name = "GFX_generic_decentralized_economy"
+		texturefile = "gfx/interface/goals/generic_trees/focus_decentralized_economy.dds"
+	}
+	SpriteType = {
+		name = "GFX_generic_noble_support"
+		texturefile = "gfx/interface/goals/generic_trees/focus_generic_noble_support.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_aragon_nobles"
+		texturefile = "gfx/interface/goals/Spain/SPR_aragon_nobles.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_castile_nobles"
+		texturefile = "gfx/interface/goals/Spain/SPR_castile_nobles.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_vascongadas_nobles"
+		texturefile = "gfx/interface/goals/Spain/SPR_vascongadas_nobles.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_felipes_demise"
+		texturefile = "gfx/interface/goals/Spain/SPR_felipes_demise.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_assure_the_clericy"
+		texturefile = "gfx/interface/goals/Spain/SPR_assure_the_clericy.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_silent_court"
+		texturefile = "gfx/interface/goals/Spain/SPR_silent_court.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_alienated_peasants"
+		texturefile = "gfx/interface/goals/Spain/SPR_alienated_peasants.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_anticlerical_terrorism"
+		texturefile = "gfx/interface/goals/Spain/SPR_anticlerical_terrorism.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_treacherous_waters"
+		texturefile = "gfx/interface/goals/Spain/SPR_treacherous_waters.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_meeting_the_challengers"
+		texturefile = "gfx/interface/goals/Spain/SPR_meeting_the_challengers.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_cuban_rumblings"
+		texturefile = "gfx/interface/goals/Spain/SPR_cuban_rumblings.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_jewel_remains_loyal"
+		texturefile = "gfx/interface/goals/Spain/SPR_jewel_remains_loyal.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_the_spanish_bull"
+		texturefile = "gfx/interface/goals/Spain/SPR_the_spanish_bull.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_north_to_south"
+		texturefile = "gfx/interface/goals/Spain/SPR_north_to_south.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_disaster_over_disaster"
+		texturefile = "gfx/interface/goals/Spain/SPR_disaster_over_disaster.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_conscript_the_natives"
+		texturefile = "gfx/interface/goals/Spain/SPR_conscript_the_natives.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_political_inquisition"
+		texturefile = "gfx/interface/goals/Spain/SPR_political_inquisition1.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_Religious_Emancipation"
+		texturefile = "gfx/interface/goals/Spain/SPR_Religious_Emancipation.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_The_regency_shall_live_on"
+		texturefile = "gfx/interface/goals/Spain/SPR_The_regency_shall_live_on.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_regency_legitimized_government"
+		texturefile = "gfx/interface/goals/Spain/SPR_regency_legitimized_government.dds"
+	}
+	SpriteType = {
+		name = "GFX_AUS_austria_venice"
+		texturefile = "gfx/interface/goals/Austria/AUS_austria_venice.dds"
+	}
+	SpriteType = {
+		name = "GFX_AUS_start_industrial_campaign"
+		texturefile = "gfx/interface/goals/Austria/AUS_start_industrial_campaign.dds"
+	}
+	SpriteType = {
+		name = "GFX_AUS_bigger_taxes"
+		texturefile = "gfx/interface/goals/Austria/AUS_bigger_taxes.dds"
+	}
+	SpriteType = {
+		name = "GFX_AUS_wien_ofen_pesth_plan"
+		texturefile = "gfx/interface/goals/Austria/AUS_wien_ofen_pesth_plan.dds"
+	}
+	SpriteType = {
+		name = "GFX_AUS_focus_Bring_Industralization_to_Transylvania"
+		texturefile = "gfx/interface/goals/Austria/AUS_focus_Bring_Industralization_to_Transylvania.dds"
+	}
+	SpriteType = {
+		name = "GFX_AUS_focus_Develop_Bohemia"
+		texturefile = "gfx/interface/goals/Austria/AUS_focus_Develop_Bohemia.dds"
+	}
+	SpriteType = {
+		name = "GFX_AUS_focus_Protect_Fragmentation"
+		texturefile = "gfx/interface/goals/Austria/AUS_focus_Protect_Fragmentation.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_ready_to_attack"
+		texturefile = "gfx/interface/goals/Spain/SPR_ready_to_attack.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_A_Challenged_Phoenix"
+		texturefile = "gfx/interface/goals/Spain/SPR_A_Challenged_Phoenix.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_Absolutist_Defence_Pact"
+		texturefile = "gfx/interface/goals/Spain/SPR_Absolutist_Defence_Pact.dds"
+	}
+	SpriteType = {
+		name = "GFX_SPR_Envoy_to_Tuscany"
+		texturefile = "gfx/interface/goals/Spain/SPR_Envoy_to_Tuscany.dds"
+	}
+	SpriteType = {
+		name = "GFX_AUS_Better_Payments"
+		texturefile = "gfx/interface/goals/Austria/AUS_Better_Payments.dds"
+	}
+	SpriteType = {
+		name = "GFX_AUS_Fund_the_Royal_Navy"
+		texturefile = "gfx/interface/goals/Austria/AUS_Fund_the_Royal_Navy.dds"
+	}
+	SpriteType = {
+		name = "GFX_AUS_Gemeinsame_Armee"
+		texturefile = "gfx/interface/goals/Austria/AUS_Gemeinsame_Armee.dds"
+	}
+	SpriteType = {
+		name = "GFX_AUS_Konigliche_Kriegsmarine"
+		texturefile = "gfx/interface/goals/Austria/AUS_Konigliche_Kriegsmarine.dds"
+	}
+	SpriteType = {
+		name = "GFX_AUS_The_New_Hope"
+		texturefile = "gfx/interface/goals/Austria/AUS_The_New_Hope.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_Lambert_Report"
+		texturefile = "gfx/interface/goals/France/FRA_Lambert_Report.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_Hexagon_Ready"
+		texturefile = "gfx/interface/goals/France/FRA_Hexagon_Ready.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_matters_state"
+		texturefile = "gfx/interface/goals/France/FRA_matters_state.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_colonial_adventures"
+		texturefile = "gfx/interface/goals/France/FRA_colonial_adventures.dds"
+	}
+	SpriteType = {
+		name = "GFX_Indian_Rivalry"
+		texturefile = "gfx/interface/goals/France/FRA_indian_rivalry.dds"
+	}
+	SpriteType = {
+		name = "GFX_search_for_new_markets"
+		texturefile = "gfx/interface/goals/France/FRA_search_for_new_markets.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_grants_barons"
+		texturefile = "gfx/interface/goals/France/FRA_grants_barons.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_trust_nobility"
+		texturefile = "gfx/interface/goals/France/FRA_trust_nobility.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_Canada_Wood"
+		texturefile = "gfx/interface/goals/France/FRA_Canada_Wood.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_Economic_revival"
+		texturefile = "gfx/interface/goals/France/FRA_Economic_revival.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_artillery_battalion"
+		texturefile = "gfx/interface/goals/France/FRA_artillery_battalion.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_reform_armee"
+		texturefile = "gfx/interface/goals/France/FRA_reform_armee.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_Forts_Gascony"
+		texturefile = "gfx/interface/goals/France/FRA_Forts_Gascony.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_Ethos_Of_Future"
+		texturefile = "gfx/interface/goals/France/FRA_Ethos_Of_Future.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_Reemploy_Merchant_Shipping"
+		texturefile = "gfx/interface/goals/France/FRA_Reemploy_Merchant_Shipping.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_ocean_going_navy"
+		texturefile = "gfx/interface/goals/France/FRA_ocean_going_navy.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_Support_the_Peasantry"
+		texturefile = "gfx/interface/goals/France/FRA_Support_the_Peasantry.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_The_Angry_neighbour"
+		texturefile = "gfx/interface/goals/France/FRA_The_Angry_neighbour.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_Redraw_the_Borders_of_Louisiana"
+		texturefile = "gfx/interface/goals/France/FRA_Redraw_the_Borders_of_Louisiana.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_repurpose_africa"
+		texturefile = "gfx/interface/goals/France/FRA_repurpose_africa.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_expedition_inland"
+		texturefile = "gfx/interface/goals/France/FRA_expedition_inland.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_Confiscate_Native_Armament"
+		texturefile = "gfx/interface/goals/France/FRA_Confiscate_Native_Armament.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_Grant_Rights_to_Natives"
+		texturefile = "gfx/interface/goals/France/FRA_Grant_Rights_to_Natives.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_sale_andrews"
+		texturefile = "gfx/interface/goals/France/FRA_sale_andrews.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_Maintain_the_yoke"
+		texturefile = "gfx/interface/goals/France/FRA_Maintain_the_yoke.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_create_a_native_security_council"
+		texturefile = "gfx/interface/goals/France/FRA_create_a_native_security_council.dds"
+	}
+	SpriteType = {
+		name = "GFX_FRA_renovate_the_orleanian_harbour"
+		texturefile = "gfx/interface/goals/France/FRA_renovate_the_orleanian_harbour.dds"
+	}
+
+
+	SpriteType = {
+		name = "GFX_AUS_focus_Austrian_Democracy"
+		texturefile = "gfx/interface/goals/Austria/AUS_focus_Austrian_Democracy.dds"
+	}
+	SpriteType = {
+		name = "GFX_AUS_focus_Austrian_Parliament"
+		texturefile = "gfx/interface/goals/Austria/AUS_focus_Austrian_Parliament.dds"
+	}
+	SpriteType = {
+		name = "GFX_AUS_focus_Cooperation_with_Venice"
+		texturefile = "gfx/interface/goals/Austria/AUS_focus_Cooperation_with_Venice.dds"
+	}
+	SpriteType = {
+		name = "GFX_AUS_focus_Negotiations_with_Electors"
+		texturefile = "gfx/interface/goals/Austria/AUS_focus_Negotiations_with_Electors.dds"
+	}
+	SpriteType = {
+		name = "GFX_AUS_focus_Recognise_Popes_Authority"
+		texturefile = "gfx/interface/goals/Austria/AUS_focus_Recognise_Popes_Authority.dds"
+	}
+	SpriteType = {
+		name = "GFX_AUS_focus_silesian_forts"
+		texturefile = "gfx/interface/goals/Austria/AUS_focus_silesian_forts.dds"
+	}
+	SpriteType = {
+		name = "GFX_AUS_focus_The_Beginning"
+		texturefile = "gfx/interface/goals/Austria/AUS_focus_The_Beginning.dds"
+	}
+	SpriteType = {
+		name = "GFX_AUS_focus_Support_Gallicanism"
+		texturefile = "gfx/interface/goals/Austria/AUS_focus_Support_Gallicalism.dds"
+	}
+}
+
+

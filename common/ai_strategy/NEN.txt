@@ -1,0 +1,22 @@
+conflict_against_SEM = {
+	enable = {
+		tag = NEN
+		country_exists = SEM
+		threat > 25
+	}
+	abort = {
+		NOT = { country_exists = SEM }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "SEM"
+		value = 400
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = "SEM"
+		value = 400
+	}
+}

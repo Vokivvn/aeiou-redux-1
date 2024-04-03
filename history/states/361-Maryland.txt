@@ -1,0 +1,35 @@
+
+state={
+	id=361
+	name="STATE_361"
+	manpower = 648930
+	
+	state_category = town
+
+	resources={
+		iron=2
+		steel=1
+		gunpowder=2
+		wood=3
+	}
+
+	history={
+		owner = SDE
+		victory_points = {
+			6984 5 
+		}
+		buildings = {
+			infrastructure = 3
+			6984 = {
+				naval_base = 2
+
+			}
+		}
+		add_core_of = SDE
+
+	}
+
+	provinces={
+		6892 6984 9758 9786 6845 3824 6869 11785 822 3917
+	}
+}

@@ -1,0 +1,24 @@
+
+state={
+	id=896
+	name="STATE_896" 
+	manpower = 125613
+	resources={
+		wood=2
+	}
+	
+	state_category = town
+
+	history={
+		owner = KHI
+		add_core_of = KHI
+		buildings = {
+			infrastructure = 2
+		}
+		
+	}
+
+	provinces={
+	     12471 4488 4618 4499 10470 12161 1623 1554 1532 10420 7501 1573 7775 4629 9605 
+	}
+}

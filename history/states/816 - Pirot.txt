@@ -1,0 +1,20 @@
+state={
+	id=816
+	name="STATE_816"
+	manpower = 30880
+	resources={ 
+	}
+	state_category = town
+	
+	history={
+		owner = BUL
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = BUL 
+	}
+
+	provinces={
+	   11868 11857 11832 
+	}
+}

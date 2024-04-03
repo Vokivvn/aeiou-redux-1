@@ -1,0 +1,32 @@
+
+state={
+	id=13
+	name="STATE_13"
+	manpower = 254010
+	
+	resources={
+		wood = 1 
+		gunpowder = 1
+		horses = 1 
+	}
+	
+	state_category = town
+	history={
+		owner = SWE
+		victory_points = {
+			3152 5 
+		}
+		buildings = {
+			infrastructure = 3
+			3152 = {
+				naval_base = 2
+				coastal_bunker = 1
+			}
+		}
+		add_core_of = SWE
+	}
+
+	provinces={
+		83 185 496 567 3074 3152 6201 9079 11127 11426 
+	}
+}

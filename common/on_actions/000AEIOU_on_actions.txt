@@ -1,0 +1,385 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			AUS = {
+				add_to_array = { relic_storage_array = 2 }
+				add_to_array = { relic_storage_array = 3 }
+			}
+			every_country = {
+				country_lock_all_division_template = yes
+				add_dynamic_modifier = {
+					modifier = hog_effect_modifier
+				}
+			}
+		    random_country = {
+		    	set_new_ideologies = yes 
+			}
+			AUS = { 
+			    set_variable = { aus_var_habsburg_nobility = 0.54 }
+				set_variable = { aus_var_major_nobility = 0.46 }
+				set_variable = { aus_var_minor_nobility = 0.42 }
+				set_variable = { aus_var_people = 0.64 }
+				set_variable = { aus_var_clergy = 0.42 }
+				set_variable = { hog_loyalty = 0.6235 }
+				find_emperor = yes	
+				find_electors = yes	
+				find_princes = yes
+				find_free_cities = yes
+				set_variable = { global.imperial_authority = 0 }
+				find_imperial_authority_gain = yes
+				set_variable = { global.imperial_authority_gain_efficiency = 0.50 }
+				set_variable = { global.imperial_stability = 0.67 }
+			}
+			GUA = {
+				set_variable = { gua_var_spanish_resentment = 0.00 }
+				set_variable = { hog_loyalty = 0.7854 }
+			}
+			SPR = {
+				set_variable = { spr_var_catholic_influence = 0.82 }
+				set_variable = { spr_var_regency_felipe = 0.00 }
+				set_variable = { spr_var_regency_popular = 0.00 }
+				set_variable = { hog_loyalty = 0.9125 }
+			}
+		    set_global_flag = PANAMA_CANAL_BLOCKED
+			set_global_flag = SUEZ_CANAL_BLOCKED
+			set_global_flag = KIEL_CANAL_BLOCKED
+
+					   ### HRE SETUP
+			set_variable = { BRD.loyalty = 0.10 }
+			set_variable = { BAV.loyalty = 0.30 }
+			set_variable = { HAN.loyalty = 0.25 }
+			set_variable = { MUN.loyalty = 0.20 } 
+			set_variable = { SAX.loyalty = 0.45 }
+			set_variable = { WRZ.loyalty = 0.40 } 
+			set_variable = { WUR.loyalty = 0.40 } 
+			set_variable = { MCK.loyalty = 0.45 } 
+			set_variable = { THU.loyalty = 0.40 } 
+			set_variable = { KSS.loyalty = 0.35 } 
+			set_variable = { MRK.loyalty = 0.40 }
+			set_variable = { NSS.loyalty = 0.40 } 
+			set_variable = { SCH.loyalty = 0.45 } 
+			set_variable = { OLD.loyalty = 0.45 }
+			set_variable = { KLE.loyalty = 0.50 }
+			set_variable = { KOL.loyalty = 0.30 }
+			set_variable = { TRI.loyalty = 0.45 }
+			set_variable = { JUL.loyalty = 0.50 }
+			set_variable = { ANB.loyalty = 0.50 }
+			set_variable = { BAD.loyalty = 0.45 }
+			set_variable = { NUR.loyalty = 0.50 }
+			set_variable = { ULM.loyalty = 0.45 }
+
+
+
+
+
+
+			set_variable = { global.hre_members_of_war = 0 }
+			set_variable = { global.hre_amount_of_capitulated_countries = 0 }
+
+		}
+	}
+	#used when puppeting in a peace conference
+	#ROOT = nation being puppeted, FROM = overlord
+	
+	#used when puppeting through the occupied territories menu during peace time (or when releasing from non-core but owned territory, f.e. Britain releasing Egypt)
+	#ROOT = nation being released, FROM = overlord
+	
+	on_release_as_puppet = {
+		effect = {
+		    set_new_ideologies_puppet = yes 
+		}
+	}
+	on_subject_free = {
+		effect = {
+			if = {
+				limit = { 
+					TAG = TIB
+				} 
+				abandon_colony_tag = yes
+			}
+			if = {
+				limit = { 
+					TAG = MON
+				} 
+				abandon_colony_tag = yes
+			}
+			if = {
+				limit = { 
+					TAG = YUC
+				} 
+				abandon_colony_tag = yes
+			}
+		}
+	}
+
+	on_daily = {
+		effect = {
+			set_temp_variable  = { hre_temp = BRD.loyalty }		  # elector
+			    add_to_temp_variable = { hre_temp = BAV.loyalty } # elector
+				add_to_temp_variable = { hre_temp = HAN.loyalty } # elector
+				add_to_temp_variable = { hre_temp = MUN.loyalty }
+				add_to_temp_variable = { hre_temp = SAX.loyalty } # elector
+				add_to_temp_variable = { hre_temp = WRZ.loyalty }
+				add_to_temp_variable = { hre_temp = WUR.loyalty }
+				add_to_temp_variable = { hre_temp = MCK.loyalty }
+				add_to_temp_variable = { hre_temp = THU.loyalty }
+				add_to_temp_variable = { hre_temp = KSS.loyalty }
+				add_to_temp_variable = { hre_temp = MRK.loyalty }
+				add_to_temp_variable = { hre_temp = NSS.loyalty } # elector
+				add_to_temp_variable = { hre_temp = SCH.loyalty } # puppet of DEN
+				add_to_temp_variable = { hre_temp = OLD.loyalty } 
+				add_to_temp_variable = { hre_temp = KLE.loyalty }
+				add_to_temp_variable = { hre_temp = KOL.loyalty } # elector & puppet of PRS
+				add_to_temp_variable = { hre_temp = TRI.loyalty } # elector
+				add_to_temp_variable = { hre_temp = JUL.loyalty }
+				add_to_temp_variable = { hre_temp = ANB.loyalty }
+				add_to_temp_variable = { hre_temp = BAD.loyalty }
+				add_to_temp_variable = { hre_temp = NUR.loyalty }
+				add_to_temp_variable = { hre_temp = ULM.loyalty }
+				# add_to_temp_variable = { hre_temp = BRE.loyalty }
+				# add_to_temp_variable = { hre_temp = HAM.loyalty }
+				# add_to_temp_variable = { hre_temp = LBK.loyalty }
+				# add_to_temp_variable = { hre_temp = DOR.loyalty }
+				# add_to_temp_variable = { hre_temp = FRK.loyalty }
+
+			    divide_temp_variable = { hre_temp = 22 }
+
+			    set_variable = { hre_loyalty = hre_temp }
+
+			    
+		}
+	}
+
+	
+	
+	#FROM is war target
+	on_declare_war = {
+		effect = {
+			if = {
+				LIMIT = {
+					FROM = {
+						OR = {
+							has_idea = hre_idea_free_city
+							has_idea = hre_idea_conservative
+							has_idea = hre_idea_republic
+						}
+					}
+				}
+				if = {
+					LIMIT = {
+						ROOT = {
+							has_idea = hre_idea_emperor
+						}
+					}
+					add_stability = -0.10
+				}
+				else = {
+					FROM = {
+						set_country_flag = HRE_Defender
+					}
+					ROOT = {
+						set_country_flag = HRE_Aggresor
+					}
+					every_country = {
+						LIMIT = {
+							has_idea = hre_idea_emperor
+						}
+						country_event = { days = 0 id = HREEvent.1 }
+					}
+				}
+			}
+			if = {
+				LIMIT = {
+					FROM = {
+						OR = {
+							has_idea = hre_idea_elector
+							has_idea = hre_idea_prince
+						}
+					}
+				}
+				if = {
+					LIMIT = {
+						ROOT = {
+							has_idea = hre_idea_emperor
+						}
+					}
+					add_stability = -0.05
+				}
+				else_if = {
+					LIMIT = {
+						ROOT = {
+							OR = {
+								has_idea = hre_idea_free_city
+								has_idea = hre_idea_conservative
+								has_idea = hre_idea_republic
+								has_idea = hre_idea_elector
+								has_idea = hre_idea_prince
+							}
+						}
+					}
+				}
+				else = {
+					FROM = {
+						set_country_flag = HRE_Defender
+					}
+					ROOT = {
+						set_country_flag = HRE_Aggresor
+					}
+					every_country = {
+						LIMIT = {
+							has_idea = hre_idea_emperor
+						}
+						country_event = { days = 0 id = HREEvent.1 }
+					}
+				}
+			}
+		}
+	}	
+	
+	on_annex = {
+		effect = {
+			if = {
+				LIMIT = {
+					FROM = {
+						has_idea = hre_idea_emperor
+					}
+				}
+				FROM = {
+					hre_next_emperor_election_chain = yes
+				}
+				find_emperor = yes
+			}	
+			if = {
+				LIMIT = {
+					FROM = {
+						has_idea = hre_idea_elector
+					}
+				}
+				FROM = {
+					remove_ideas = hre_idea_elector
+				}
+				find_electors = yes
+				hre_remove_post_industry = yes
+			}
+			if = {
+				LIMIT = {
+					FROM = {
+						has_idea = hre_idea_prince
+					}
+				}
+				FROM = {
+					remove_ideas = hre_idea_prince
+				}
+				find_princes = yes
+				hre_remove_post_industry = yes
+			}
+			if = {
+				LIMIT = {
+					FROM = {
+						OR = {
+							has_idea = hre_idea_free_city
+							has_idea = hre_idea_conservative
+							has_idea = hre_idea_republic
+						}
+					}
+				}
+				FROM = {
+					remove_ideas = hre_idea_free_city
+					remove_ideas = hre_idea_conservative
+					remove_ideas = hre_idea_republic
+				}
+				find_free_cities = yes
+				hre_remove_post_industry = yes
+			}
+		}
+	}
+	
+	on_puppet = {
+		effect = {
+			set_new_ideologies_puppet = yes 
+			if = {
+				LIMIT = {
+					FROM = {
+						has_idea = hre_idea_emperor
+					}
+				}
+				FROM = {
+					hre_next_emperor_election_chain = yes
+				}
+				find_emperor = yes
+			}	
+		}
+	}
+	
+	on_monthly = {
+		effect = {
+			if = {
+				LIMIT = {
+					has_idea = hre_idea_emperor
+				}
+				monthly_imperial_authority = yes
+			}
+		}
+	}
+	
+	on_weekly = {
+		effect = {
+			for_each_loop = {
+				array = global.elector_tag_array
+				value = v
+				index = i
+				
+				if = {
+					LIMIT = {
+						var:v = {
+							NOT = { check_variable = { hre_emperor_vote = var:global.hre_emperor } has_country_flag = ai_emperor_relation_boost }
+							OR = {
+								is_subject = no
+								is_subject_of = var:global.hre_emperor
+							}
+						}
+					}
+					var:v = {
+						set_country_flag = ai_emperor_relation_boost
+						var:global.hre_emperor = {
+							add_ai_strategy = {
+								id = PREV
+								type = befriend
+								value = 2000
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	on_peaceconference_ended = { #From Lost
+		effect = {
+			IF = {
+				LIMIT = { 
+					ROOT = {
+						OR = {
+							tag = global.hre_emperor
+							has_country_flag = HRE_traditionalist_leader
+						}
+					}
+					FROM = {
+						OR = {
+							tag = global.hre_emperor
+							has_country_flag = HRE_traditionalist_leader
+						}
+					}
+				}
+				clr_global_flag = HRE_called_to_war
+				clr_global_flag = HRE_civil_war
+				ROOT = {
+					clr_country_flag = HRE_traditionalist_leader
+				}
+				FROM = {
+					clr_country_flag = HRE_traditionalist_leader
+				}
+			}
+		}
+	}
+}

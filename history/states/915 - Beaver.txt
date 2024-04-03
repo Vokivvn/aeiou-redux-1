@@ -1,0 +1,18 @@
+state= {
+	id=915
+	name="STATE_915"
+	manpower = 3356
+	
+	state_category = pastoral
+
+	history= {
+		owner = BEV
+		add_core_of = BEV
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces={
+	    1347 1763 6754
+	}
+}

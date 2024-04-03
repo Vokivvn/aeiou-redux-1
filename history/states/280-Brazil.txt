@@ -1,0 +1,28 @@
+
+state={
+	id=280
+	name="STATE_280"
+	manpower=181061	
+
+	state_category = pastoral
+
+	resources = {
+		wood=5
+		horses=1
+	}
+
+	history={
+		owner = POR
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = POR
+
+	}
+
+	provinces={
+		2142 2147 2204 8175 11010 12939 
+	}
+
+	buildings_max_level_factor=1.000
+}

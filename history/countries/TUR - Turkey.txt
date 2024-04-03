@@ -1,0 +1,39 @@
+﻿capital = 49
+
+#oob = "TUR_1936"
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "TUR_1936_naval_mtg"
+	else = {
+		set_naval_oob = "TUR_1936_naval_legacy"
+	}
+}
+
+set_research_slots = 3
+
+add_ideas = {
+	limited_conscription
+}
+
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+	grenade = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+}
+
+set_politics = {
+	ruling_party = absolutist
+	last_election = "1935.2.8"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	conservative = 10
+	absolutist = 90
+}
+
+set_convoys = 20
+set_stability = 0.55
+

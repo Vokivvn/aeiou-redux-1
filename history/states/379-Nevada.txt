@@ -1,0 +1,25 @@
+
+state={
+	id=379
+	name="STATE_379"
+	manpower = 34846
+	
+	state_category = rural
+	
+	resources={
+		steel=2
+	}
+
+	history={
+		owner = MEX
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = MEX
+	}
+
+	provinces={
+		4521 4607 4736 4799 4816 7827 7879 10422 10591 12399 12425 
+	}
+}

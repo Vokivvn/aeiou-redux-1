@@ -1,0 +1,23 @@
+
+state={
+	id=826
+	name="STATE_826" 
+	manpower = 380952
+	
+	state_category = rural
+
+	history={
+		owner = PER
+		victory_points = {
+			6997 3 
+		}
+		buildings = {
+			infrastructure = 1
+		}
+
+	}
+
+	provinces={
+		6997 6642 4660
+	}
+}

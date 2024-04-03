@@ -1,0 +1,31 @@
+
+state={
+	id=944
+	name="STATE_944"
+	manpower = 292274
+	
+	state_category = town
+	
+	resources={
+        iron = 4
+        horses = 2
+	}	
+	
+	history={
+		owner = FRA
+		victory_points = {
+			3560 1
+		}
+		victory_points = {
+			11516 5 
+		}
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = FRA
+	}
+
+	provinces={
+		3560 5291 11516
+	}
+}

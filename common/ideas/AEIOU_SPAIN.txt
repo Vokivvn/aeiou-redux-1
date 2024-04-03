@@ -1,0 +1,2164 @@
+ideas = {
+
+	political_advisor = {
+		SPR_Joaquin_Lopez_Puigcerver = {
+			allowed = {
+				original_tag = SPR
+			}
+
+			traits = { 
+				conservative_advisor
+				expert_burgeois
+			}
+		}
+		SPR_Segismundo_Moret = {
+			allowed = {
+				original_tag = SPR
+			}
+
+			traits = { 
+				loyalist_advisor
+				renowned_architect
+			}
+		}
+		SPR_Aureliano_Rivas = {
+			allowed = {
+				original_tag = SPR
+			}
+
+			traits = { 
+				loyalist_advisor
+				development_genius
+			}
+		}
+		SPR_Teodoro_Aranzadi = {
+			allowed = {
+				original_tag = SPR
+			}
+
+			traits = { 
+				apolitical_advisor
+				renowned_anthropologist
+			}
+		}
+		SPR_Felipe_Picatoste = {
+			allowed = {
+				original_tag = SPR
+			}
+
+			traits = { 
+				apolitical_advisor
+				connected_citizen
+			}
+		}
+		SPR_Juan_Fagues_y_Virgili = {
+			allowed = {
+				original_tag = SPR
+			}
+
+			traits = { 
+				liberal_advisor
+				famous_chemist
+			}
+		}
+		SPR_Inocente_Pauli= {
+			allowed = {
+				original_tag = SPR
+			}
+
+			traits = { 
+				apolitical_advisor
+				esteemed_scientist
+			}
+		}
+	}
+	theorist = {
+	 SPR_Jose_Chinchilla = {
+
+			allowed = {
+				original_tag = SPR
+			}
+			
+			cost = 200
+
+			traits = { 
+			harsh_disciplinarian
+			military_theorist 
+			}
+		}
+	SPR_Angel_Aznar_y_Butigieg = {
+
+			allowed = {
+				original_tag = SPR
+			}
+			
+			cost = 200
+
+			traits = { 
+			smoke_seller
+			military_theorist 
+			}
+		}
+	SPR_Joaquin_Togores_y_Fabregas = {
+
+			allowed = {
+				original_tag = SPR
+			}
+			
+			cost = 200
+
+			traits = { 
+			frontal_attack_expert
+			naval_theorist 
+			}
+		}
+	SPR_Isaac_Peral = {
+
+			allowed = {
+				original_tag = SPR
+			}
+			
+			cost = 200
+
+			traits = { 
+			revolutionary_tactician
+			naval_theorist 
+			}
+		}
+	}
+	
+	army_chief = {
+		SPR_Manuel_Puigvert = {
+
+			allowed = {
+				original_tag = SPR
+			}
+			
+			cost = 180
+
+			traits = { 
+			army_chief_defensive_2
+			army_chief_old_guard
+			}
+		}
+		SPR_Miguel_de_Cardenas = {
+
+			allowed = {
+				original_tag = SPR
+			}
+			
+			cost = 180
+
+			traits = { 
+			army_chief_organizational_1
+			army_chief_old_guard
+			}
+		}
+		SPR_Felix_Ferrer = {
+
+			allowed = {
+				original_tag = SPR
+			}
+			
+			cost = 180
+
+			traits = { 
+			smoke_seller_2
+			army_chief_drill_2
+			}
+		}
+	}
+	
+	navy_chief = {
+		SPR_Jose_Maria_Beranguer = {
+
+			allowed = {
+				original_tag = SPR
+			}
+			
+			cost = 180
+
+			traits = { 
+			navy_chief_decisive_battle_2
+			}
+		}
+		SPR_Luis_Hernandez_Pinzon= {
+
+			allowed = {
+				original_tag = SPR
+			}
+			
+			cost = 180
+
+			traits = { 
+			navy_chief_maneuver_1
+			}
+		}
+		SPR_Juan_Bautista_Viniegra = {
+
+			allowed = {
+				original_tag = SPR
+			}
+			
+			cost = 180
+
+			traits = { 
+			navy_chief_commerce_raiding_2
+			}
+		}
+	}
+	
+	high_command = {
+		SPR_Juan_Prim = {
+
+			allowed = {
+				original_tag = SPR
+			}
+			
+			cost = 180
+
+			traits = { 
+			defense_master
+			}
+		}
+		SPR_Francisco_Cavero = {
+
+			allowed = {
+				original_tag = SPR
+			}
+			
+			cost = 180
+
+			traits = { 
+			offensive_lynx
+			}
+		}
+		SPR_Manuel_Pavia= {
+
+			allowed = {
+				original_tag = SPR
+			}
+			
+			cost = 180
+
+			traits = { 
+			offensive_lynx
+			}
+		}
+		SPR_Marian_Vayreda= {
+
+			allowed = {
+				original_tag = SPR
+			}
+			
+			cost = 180
+
+			traits = { 
+			army_artillery_3
+			}
+		}
+	}
+
+		
+
+    country = {
+
+        spr_idea_strong_regional_fueros = {
+            picture = SPR_strong_regional_fueros
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+				conscription_factor = -0.1
+				stability_factor = 0.05 
+            }
+        }
+		
+        spr_idea_backwards_economy = {
+            picture = SPR_backwards_economy
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = -0.02 	
+				production_speed_buildings_factor = -0.1
+				line_change_production_efficiency_factor = -0.15
+				production_factory_efficiency_gain_factor = -0.10
+            }
+        }
+		
+        spr_idea_backwards_economy10 = {
+            picture = SPR_backwards_economy
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = -0.02 	
+				production_speed_buildings_factor = -0.05
+				line_change_production_efficiency_factor = -0.15
+				production_factory_efficiency_gain_factor = -0.10
+				research_speed_factor = 0.02
+            }
+        }
+		
+        spr_idea_backwards_economy01 = {
+            picture = SPR_backwards_economy
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = -0.02 	
+				production_speed_buildings_factor = -0.1
+            }
+        }
+		
+        spr_idea_backwards_economy11 = {
+            picture = SPR_backwards_economy
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = -0.02 	
+				production_speed_buildings_factor = -0.05
+				research_speed_factor = 0.02
+            }
+        }
+		
+        spr_idea_foreign_personel = {
+            picture = generic_research_bonus
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				research_speed_factor = 0.02
+            }
+        }
+		
+        spr_idea_no_more_stagnation = {
+            picture = generic_production_bonus
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				monthly_population = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+            }
+        }
+		
+		spr_idea_religious_xenophobia = {
+            picture = SPR_religious_fanaticism
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = { 
+				political_power_gain = -0.05
+				trade_opinion_factor = -0.2
+				research_speed_factor = -0.08
+				war_support_factor = 0.05
+				conscription_factor = -0.05
+				conscription = 0.002
+            }
+        }
+		
+		spr_idea_religious_fanaticism = {
+            picture = SPR_religious_fanaticism
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				political_power_gain = 0.10
+                stability_factor = 0.05  
+				trade_opinion_factor = -0.1
+				research_speed_factor = -0.02
+            }
+        }
+		
+		spr_idea_religious_zeal = {
+            picture = SPR_religious_fanaticism
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.02 
+				trade_opinion_factor = -0.05
+				research_speed_factor = -0.01
+            }
+        }
+		
+		spr_idea_religious_endorsement = {
+            picture = SPR_religious_fanaticism
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = { 
+				political_power_gain = 0.03
+				stability_factor = 0.01
+				trade_opinion_factor = -0.05
+            }
+        }
+		
+		spr_idea_religious_observance = {
+            picture = SPR_religious_fanaticism
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = { 
+				stability_factor = -0.05
+				trade_opinion_factor = 0.05
+            }
+        }
+		
+		spr_idea_religious_tolerance = {
+            picture = SPR_religious_fanaticism
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = { 
+				stability_factor = -0.1
+				political_power_gain = -0.1
+				trade_opinion_factor = 0.10
+				research_speed_factor = 0.01
+				war_support_factor = -0.05
+            }
+        }
+		
+		spr_idea_religious_xenophilia = {
+            picture = SPR_religious_fanaticism
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = { 
+				stability_factor = -0.5
+				stability_weekly = 0.01
+				political_power_gain = -0.25
+				trade_opinion_factor = 0.25
+				research_speed_factor = 0.05
+				war_support_factor = -0.25
+            }
+        }
+		
+        spr_idea_religious_teaching = {
+            picture = SPR_religious_teaching
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                stability_weekly = 0.001
+				research_speed_factor = -0.05
+            }
+        }
+		
+		spr_idea_pursue_scientific_discovery = {
+            picture = SPR_religious_fanaticism
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                stability_weekly = -0.001
+				research_speed_factor = 0.03
+            }
+        }
+		
+        spr_idea_circuito_economico_caribeno = {
+            picture = AUS_winds_of_change
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                local_resources_factor = 0.05  
+				production_speed_buildings_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+            }
+        }
+		
+        spr_idea_circuito_economico_caribeno1 = {
+            picture = AUS_winds_of_change
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                local_resources_factor = 0.05  
+				production_speed_buildings_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+                production_speed_infrastructure_factor = 0.05
+            }
+        }
+		
+        spr_idea_spice_route = {
+            picture = eng_steady_as_she_goes
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                production_factory_efficiency_gain_factor = 0.1
+            }
+        }
+		
+        spr_idea_readied_troops = {
+            picture = generic_manpower_bonus
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                war_support_factor = 0.05
+				mobilization_speed = 0.1
+            }
+        }
+		
+        spr_idea_trembling_enemies = {
+            picture = FRA_army_of_aggression_focus
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                war_support_factor = 0.03
+                offence = 0.05
+                defence = 0.05
+            }
+        }
+		spr_idea_religious_tension = {
+            picture = chi_war_of_resistance2
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.10	
+				war_support_factor = -0.10
+				production_speed_buildings_factor = -0.05
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+            }
+        }
+		spr_idea_religious_tension1 = {
+            picture = chi_war_of_resistance2
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.10	
+				war_support_factor = -0.10
+				production_speed_buildings_factor = -0.15
+				industrial_capacity_factory = -0.10
+				industrial_capacity_dockyard = -0.10
+            }
+        }
+		spr_idea_anti_clerical_terrorism = {
+            picture = SPR_anticlerical_terrorism
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.10	
+				war_support_factor = -0.10
+				defence = -0.10
+				local_intel_to_enemies = 0.15
+				occupation_cost = 0.05
+				local_factory_sabotage = 0.10
+            }
+        }
+		spr_idea_rule_of_many = {
+            picture = generic_victors_of_ww1
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                stability_weekly = -0.001
+				political_power_factor = 0.10
+            }
+        }
+		spr_idea_rule_of_many1 = {
+            picture = generic_victors_of_ww1
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				political_power_factor = 0.10
+            }
+        }
+		spr_secular_towns = {
+            picture = generic_king_handled
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				stability_weekly = -0.001
+				industrial_capacity_factory = 0.10
+            }
+        }
+		spr_industrial_developments0 = {
+            picture = generic_exploit_mines
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_infrastructure_factor = 0.1
+				production_speed_buildings_factor = 0.03
+            }
+        }
+		spr_industrial_developments10 = {
+            picture = generic_exploit_mines
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_infrastructure_factor = 0.1
+				production_speed_buildings_factor = 0.05
+            }
+        }
+		spr_industrial_developments01 = {
+            picture = generic_exploit_mines
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_infrastructure_factor = 0.1
+				production_speed_buildings_factor = 0.03
+				local_resources_factor = 0.05
+            }
+        }
+		spr_industrial_developments11 = {
+            picture = generic_exploit_mines
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_infrastructure_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				local_resources_factor = 0.05
+            }
+        }
+		spr_industrial_developments2 = {
+            picture = generic_exploit_mines
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_infrastructure_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				local_resources_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+            }
+        }
+		spr_constitution_promise = {
+            picture = generic_deal_with_the_devil
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				stability_weekly = 0.001
+            }
+        }
+		spr_opposition_from_inquisition = {
+            picture = generic_purge
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				war_support_weekly = -0.001
+            }
+        }
+		spr_cuban_call = {
+            picture = FRA_national_mobilization_focus
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				local_resources_factor = -0.10
+				occupation_cost = 0.05
+				local_factory_sabotage = 0.10
+            }
+        }
+		spr_conscript_natives = {
+            picture = generic_manpower_bonus
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				conscription_factor = 0.1
+            }
+        }
+		spr_disastrous_campaign = {
+            picture = tfv_can_conscription_crisis
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				stability_weekly = -0.02
+            }
+        }
+		
+		spr_french_reparations = {
+            picture = SPR_backwards_economy
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				political_power_gain = -0.10
+				consumer_goods_factor = 0.10
+            }
+        }
+		
+		spr_french_reparations1 = {
+            picture = SPR_backwards_economy
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				political_power_gain = 0.05
+				consumer_goods_factor = -0.05
+            }
+        }
+		
+		spr_idea_spanish_bull_0 = {
+            picture = FRA_national_mobilization_focus
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				industrial_capacity_factory = 0.05
+            }
+		}
+		
+		spr_idea_spanish_bull_1 = {
+            picture = FRA_national_mobilization_focus
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				industrial_capacity_factory = 0.05
+                offence = 0.05
+            }
+		}
+		
+		spr_idea_spanish_bull_2 = {
+            picture = FRA_national_mobilization_focus
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				industrial_capacity_factory = 0.05
+                offence = 0.05
+                defence = 0.05
+            }
+		}
+		
+		spr_idea_spanish_bull_3 = {
+            picture = FRA_national_mobilization_focus
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				industrial_capacity_factory = 0.05
+                offence = 0.05
+                defence = 0.05
+				conscription_factor = 0.05
+            }
+		}
+		
+		spr_idea_political_schism = {
+            picture = generic_king_handled
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				stability_weekly = -0.01
+            }
+		}
+		
+		spr_idea_modern_nation = {
+            picture = AUS_winds_of_change
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_infrastructure_factor = 0.05
+            }
+		}
+		
+		spr_idea_bourger_investments = {
+            picture = generic_production_bonus
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_industrial_complex_factor = 0.02
+            }
+		}
+		
+		spr_idea_wounded_bull = {
+            picture = FRA_matignon_agreements
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				conscription_factor = 0.05
+            }
+		}
+		
+		spr_idea_reignited_moral = {
+            picture = chi_war_of_resistance3
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				offence = 0.02
+            }
+		}
+		
+		spr_idea_regency_propaganda = {
+            picture = chi_war_of_resistance3
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				conscription_factor = 0.03
+            }
+		}
+		
+		spr_idea_improve_spanish_armada = {
+            picture = chi_war_of_resistance3
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				industrial_capacity_dockyard = 0.1	
+            }
+			equipment_bonus = {
+				ship_hull_light = {
+					instant = no
+					build_cost_ic = -0.10
+				}
+			}
+		}
+		
+		
+		spr_idea_new_tercio = {
+            picture = chi_war_of_resistance3
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				offence = 0.02
+            }
+		}
+		
+		spr_idea_civil_war = {
+            picture = generic_victors_of_ww1
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				surrender_limit = 0.50 
+            }
+		}
+		
+		spr_idea_peasants_of_spain = {
+            picture = prc_low_popular_support3
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				monthly_population = -0.10
+				conscription_factor = 0.10
+            }
+		}
+		
+		spr_idea_reorganize_masses = {
+            picture = generic_manpower_bonus
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				army_org_factor = 0.05
+				land_reinforce_rate = 0.05
+            }
+		}
+		
+		spr_idea_focus_traitor = {
+            picture = chi_army_corruption3
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            targeted_modifier = {
+				tag = SPF
+				defense_bonus_against = 0.10
+				offence_bonus_against = 0.05
+            }
+		}
+		
+		spr_idea_focus_central_government = {
+            picture = chi_wargaming_division
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            targeted_modifier = {
+				tag = SPR
+				defense_bonus_against = 0.10
+				offence_bonus_against = 0.05
+            }
+		}
+		
+		spr_idea_defender_of_liberty = {
+            picture = FRA_scw_intervention_nationalists_focus
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				production_factory_max_efficiency_factor = 0.05
+            }
+		}
+		
+		spr_idea_benevolent_globalism = {
+            picture = CAN_wartime_prices_and_trade_board
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				trade_opinion_factor = 0.10
+            }
+		}
+		
+		spr_idea_equality_before_state = {
+            picture = neutral_foreign_policy
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.05
+            }
+		}
+		
+		spr_idea_economized_budget = {
+            picture = generic_goods_red_bonus
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.05
+				consumer_goods_factor = -0.05
+            }
+		}
+		
+		spr_idea_people_for_king = {
+            picture = HUN_hungarian_monarchy_democratic
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				conscription_factor = 0.10
+            }
+		}
+		
+		spr_idea_everything_for_king = {
+            picture = HUN_hungarian_monarchy
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				land_reinforce_rate = 0.05
+				army_org_factor = 0.05
+				defence = 0.02
+            }
+		}
+		
+		spr_idea_until_last_man = {
+            picture = generic_reserve_divisions
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				conscription_factor = 0.10
+				equipment_bonus = {
+					infantry_equipment = {
+						instant = no
+						build_cost_ic = -0.10
+					}
+				}
+				production_factory_efficiency_gain_factor = 0.05
+				line_change_production_efficiency_factor = 0.05
+            }
+		}
+		
+		spr_idea_one_last_push = {
+            picture = HUN_secret_rearmament
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				defence = -0.03
+				offence = 0.05
+            }
+		}
+		
+		spr_idea_obliterate_resistance = {
+            picture = generic_secret_police
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				occupation_cost = -0.50
+            }
+		}
+		
+		spr_idea_felipe_back = {
+            picture = SPA_embrace_the_spanish_destiny
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = 0.10
+            }
+		}
+		
+		spr_idea_definitive_purge = {
+            picture = generic_purge
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				conscription_factor = -0.10
+				monthly_population = -0.10
+            }
+		}
+		
+		spr_idea_weak_army_foundations = {
+            picture = anti_soviet_pact
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				army_speed_factor = -0.25
+				offence = -0.10
+				defence = -0.05
+            }
+		}
+		
+		spr_idea_civil_war_recovery = {
+            picture = generic_production_bonus
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.20
+				production_factory_max_efficiency_factor = -0.10
+				line_change_production_efficiency_factor = -0.10
+				research_speed_factor = -0.10
+				political_power_factor = -0.01
+            }
+		}
+		
+		spr_idea_civil_war_recovery10 = {
+            picture = generic_production_bonus
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.20
+				production_factory_max_efficiency_factor = -0.05
+				line_change_production_efficiency_factor = -0.05
+				research_speed_factor = -0.10
+				political_power_factor = -0.01
+            }
+		}
+		
+		spr_idea_civil_war_recovery01 = {
+            picture = generic_production_bonus
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.10
+				production_factory_max_efficiency_factor = -0.10
+				line_change_production_efficiency_factor = -0.10
+				political_power_factor = -0.01
+            }
+		}
+		
+		spr_idea_civil_war_recovery11 = {
+            picture = generic_production_bonus
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.10
+				production_factory_max_efficiency_factor = -0.05
+				line_change_production_efficiency_factor = -0.05
+				political_power_factor = -0.01
+            }
+		}
+		
+		spr_idea_civil_war_recovery2 = {
+            picture = generic_production_bonus
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.17
+				production_factory_max_efficiency_factor = -0.07
+				line_change_production_efficiency_factor = -0.10
+				research_speed_factor = -0.10
+				political_power_factor = -0.01
+            }
+		}
+		
+		spr_idea_civil_war_recovery210 = {
+            picture = generic_production_bonus
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.10
+				production_factory_max_efficiency_factor = -0.07
+				line_change_production_efficiency_factor = -0.10
+				research_speed_factor = -0.10
+				political_power_factor = -0.01
+            }
+		}
+		
+		spr_idea_civil_war_recovery220 = {
+            picture = generic_production_bonus
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.10
+				research_speed_factor = -0.10
+				political_power_factor = -0.01
+            }
+		}
+		
+		spr_idea_civil_war_recovery201 = {
+            picture = generic_production_bonus
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.17
+				production_factory_max_efficiency_factor = -0.07
+				line_change_production_efficiency_factor = -0.10
+				political_power_factor = -0.01
+            }
+		}
+		
+		spr_idea_civil_war_recovery211 = {
+            picture = generic_production_bonus
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.10
+				production_factory_max_efficiency_factor = -0.07
+				line_change_production_efficiency_factor = -0.10
+				political_power_factor = -0.01
+            }
+		}
+		
+		spr_idea_civil_war_recovery221 = {
+            picture = generic_production_bonus
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.10
+				political_power_factor = -0.01
+            }
+		}
+		
+		spr_idea_civil_war_recovery3 = {
+            picture = generic_production_bonus
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.20
+				production_factory_max_efficiency_factor = -0.10
+				line_change_production_efficiency_factor = -0.10
+				political_power_factor = -0.01
+            }
+		}
+		
+		spr_idea_civil_war_recovery0001 = {
+            picture = generic_production_bonus
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.05
+				production_factory_max_efficiency_factor = -0.10
+				line_change_production_efficiency_factor = -0.10
+				research_speed_factor = -0.10
+				political_power_factor = -0.01
+            }
+		}
+		
+		spr_idea_civil_war_recovery3001 = {
+            picture = generic_production_bonus
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.05
+				production_factory_max_efficiency_factor = -0.10
+				line_change_production_efficiency_factor = -0.10
+				political_power_factor = -0.01
+            }
+		}
+		
+		spr_idea_civil_war_recovery3100 = {
+            picture = generic_production_bonus
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.20
+				line_change_production_efficiency_factor = -0.10
+				political_power_factor = -0.01
+            }
+		}
+		
+		spr_idea_civil_war_recovery3101 = {
+            picture = generic_production_bonus
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.05
+				line_change_production_efficiency_factor = -0.10
+				political_power_factor = -0.01
+            }
+		}
+		
+		spr_idea_civil_war_recovery3010 = {
+            picture = generic_production_bonus
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.20
+				production_factory_max_efficiency_factor = -0.10
+				political_power_factor = -0.01
+            }
+		}
+		
+		spr_idea_civil_war_recovery3011 = {
+            picture = generic_production_bonus
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.05
+				production_factory_max_efficiency_factor = -0.10
+				political_power_factor = -0.01
+            }
+		}
+		
+		spr_idea_civil_war_recovery3110 = {
+            picture = generic_production_bonus
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.20
+				political_power_factor = -0.01
+            }
+		}
+		
+		spr_idea_civil_war_recovery3111 = {
+            picture = generic_production_bonus
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.05
+				political_power_factor = -0.01
+            }
+		}
+		
+		spr_idea_spanish_nationalism = {
+            picture = SPR_Light_Economic_Ties
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				stability_factor = 0.10
+				monthly_population = 0.05
+            }
+		}
+		
+		spr_idea_constitution = {
+            picture = HUN_treaty_of_triannon
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				political_power_factor = 0.10
+				monthly_population = 0.01
+            }
+		}
+		
+		spr_idea_international_workforce = {
+            picture = generic_supperior_craftmanship
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+            }
+		}
+		
+		spr_idea_liberal_constitution = {
+            picture = Sociedad_Industrial_Flamenco-Espanola
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.01
+            }
+		}
+		
+      spr_idea_sun_never_sets = {
+            picture = generic_production_bonus
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				mobilization_speed = 0.1 
+				non_core_manpower = 0.025
+            }
+		}
+		
+		spr_idea_local_machinery = {
+            picture = generic_production_bonus
+            allowed = { always = no } 
+            allowed_civil_war = { always = yes }
+
+            removal_cost = -1
+
+            modifier = {
+				research_speed_factor = 0.05
+				industrial_capacity_factory = 0.05
+            }
+		}
+		
+		spr_from_every_town = {
+            picture = generic_production_bonus
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+				monthly_population = 0.05 
+            }
+        }
+		
+		spr_from_every_city = {
+            picture = generic_production_bonus
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				line_change_production_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.05
+            }
+        }
+		
+		spr_francisco_age = {
+            picture = generic_production_bonus
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				occupation_cost = -0.05
+            }
+        }
+		
+		spr_idea_franco_spanish_war = {
+            picture = generic_victors_of_ww1
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				army_speed_factor = -0.25
+				offence = -0.10
+				defence = -0.05
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.10
+            }
+        }
+		
+		spr_idea_ongoing_reconstruction = {
+            picture = generic_production_bonus
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.15
+				conscription_factor = -0.10
+				production_factory_max_efficiency_factor = -0.15
+				political_power_gain = -0.02
+				research_speed_factor = -0.15
+            }
+        }
+		
+		spr_idea_ongoing_reconstruction10 = {
+            picture = generic_production_bonus
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.05
+				conscription_factor = -0.10
+				production_factory_max_efficiency_factor = -0.15
+				political_power_gain = -0.02
+				research_speed_factor = -0.15
+            }
+        }
+		
+		spr_idea_ongoing_reconstruction01 = {
+            picture = generic_production_bonus
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.15
+				conscription_factor = -0.05
+				production_factory_max_efficiency_factor = -0.15
+				political_power_gain = -0.02
+				research_speed_factor = -0.15
+            }
+        }
+		
+		spr_idea_ongoing_reconstruction11 = {
+            picture = generic_production_bonus
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.05
+				conscription_factor = -0.05
+				production_factory_max_efficiency_factor = -0.15
+				political_power_gain = -0.02
+				research_speed_factor = -0.15
+            }
+        }
+		
+		spr_idea_ongoing_reconstruction2 = {
+            picture = generic_production_bonus
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.05
+				conscription_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				political_power_gain = -0.02
+				research_speed_factor = -0.15
+            }
+        }
+		
+		spr_idea_ongoing_reconstruction3 = {
+            picture = generic_production_bonus
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				conscription_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				political_power_gain = -0.02
+				research_speed_factor = -0.15
+            }
+        }
+		
+		spr_idea_strangers_in_power = {
+            picture = generic_production_bonus
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				conscription_factor = -0.20
+				resistance_target = 0.10
+				production_speed_buildings_factor = -0.10
+				stability_weekly = -0.001
+            }
+        }
+		
+		spr_idea_strangers_in_power1 = {
+            picture = generic_production_bonus
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				conscription_factor = -0.20
+				production_speed_buildings_factor = -0.10
+            }
+        }
+		
+		spr_idea_franco_spanish_migration = {
+            picture = GFX_idea_SPR_Severe_Economic_Ties
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                industrial_capacity_factory = 0.05
+				monthly_population = 0.05
+            }
+			targeted_modifier = {
+				tag = SPR
+				industrial_capacity_factory = 0.05
+				monthly_population = 0.05
+			}
+		}
+		
+		spr_idea_franco_spanish_migration1 = {
+            picture = GFX_idea_SPR_Severe_Economic_Ties
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                industrial_capacity_factory = 0.05
+				monthly_population = 0.05
+				production_speed_infrastructure_factor = 0.05
+            }
+			targeted_modifier = {
+				tag = SPR
+				industrial_capacity_factory = 0.05
+				monthly_population = 0.05
+				production_speed_infrastructure_factor = 0.05
+			}
+		}
+		
+		spr_idea_franco_spanish_migration2 = {
+            picture = GFX_idea_SPR_Severe_Economic_Ties
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                industrial_capacity_factory = 0.05
+				monthly_population = 0.05
+				production_speed_infrastructure_factor = 0.05
+				mobilization_speed = 0.05
+				offence = 0.02
+            }
+			targeted_modifier = {
+				tag = SPR
+				industrial_capacity_factory = 0.05
+				monthly_population = 0.05
+				production_speed_infrastructure_factor = 0.05
+				mobilization_speed = 0.05
+				offence = 0.02
+			}
+		}
+		
+		spr_idea_eradicated_inquisition = {
+            picture = GFX_idea_SPR_Severe_Economic_Ties
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                research_speed_factor = 0.02
+            }
+		}
+		
+		spr_idea_CRRA = {
+            picture = generic_supperior_craftmanship
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.15
+				conscription_factor = -0.10
+				production_factory_max_efficiency_factor = -0.15
+				political_power_gain = -0.02
+				research_speed_factor = -0.15
+            }
+        }
+		
+		spr_idea_CRRA1 = {
+            picture = generic_supperior_craftmanship
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.15
+				conscription_factor = -0.10
+				production_factory_max_efficiency_factor = -0.05
+				political_power_gain = -0.02
+				research_speed_factor = -0.15
+            }
+        }
+		
+		spr_idea_CRRA2 = {
+            picture = generic_supperior_craftmanship
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.05
+				conscription_factor = -0.10
+				production_factory_max_efficiency_factor = -0.05
+				political_power_gain = -0.02
+				research_speed_factor = -0.15
+            }
+        }
+		
+		spr_idea_CRRA11 = {
+            picture = generic_supperior_craftmanship
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.15
+				production_factory_max_efficiency_factor = -0.05
+				political_power_gain = -0.02
+				research_speed_factor = -0.15
+            }
+        }
+		
+		spr_idea_CRRA21 = {
+            picture = generic_supperior_craftmanship
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				political_power_gain = -0.02
+				research_speed_factor = -0.15
+            }
+        }
+		
+		spr_idea_CRRA201 = {
+            picture = generic_supperior_craftmanship
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.05
+				conscription_factor = -0.10
+				production_factory_max_efficiency_factor = -0.05
+				political_power_gain = -0.02
+				research_speed_factor = -0.15
+				monthly_population = 0.05
+            }
+        }
+		
+		spr_idea_CRRA211 = {
+            picture = generic_supperior_craftmanship
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				political_power_gain = -0.02
+				research_speed_factor = -0.15
+				monthly_population = 0.05
+            }
+        }
+		
+		spr_idea_CRRA2001 = {
+            picture = generic_supperior_craftmanship
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.05
+				conscription_factor = -0.10
+				production_factory_max_efficiency_factor = -0.05
+				political_power_gain = -0.02
+				research_speed_factor = -0.05
+            }
+        }
+		
+		spr_idea_CRRA2101 = {
+            picture = generic_supperior_craftmanship
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				political_power_gain = -0.02
+				research_speed_factor = -0.05
+            }
+        }
+		
+		spr_idea_CRRA2011 = {
+            picture = generic_supperior_craftmanship
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.05
+				conscription_factor = -0.10
+				production_factory_max_efficiency_factor = -0.05
+				political_power_gain = -0.02
+				research_speed_factor = -0.05
+				monthly_population = 0.05
+            }
+        }
+		
+		spr_idea_CRRA2111 = {
+            picture = generic_supperior_craftmanship
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_buildings_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				political_power_gain = -0.02
+				research_speed_factor = -0.05
+				monthly_population = 0.05
+            }
+        }
+		
+		spr_idea_CRRA3 = {
+            picture = generic_supperior_craftmanship
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				production_factory_max_efficiency_factor = -0.05
+				political_power_gain = -0.02
+				monthly_population = 0.05
+            }
+        }
+		
+		spr_idea_CRRA4 = {
+            picture = generic_supperior_craftmanship
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				production_factory_max_efficiency_factor = -0.05
+				political_power_gain = -0.02
+				monthly_population = 0.05
+				research_speed_factor = 0.10
+            }
+        }
+		
+		spr_idea_armament_dealings = {
+            picture = HUN_secret_rearmament
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				production_speed_arms_factory_factor = 0.1
+            }
+        }
+		
+		spr_idea_shared_powers = {
+            picture = HUN_secret_rearmament
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				political_power_factor = 0.01
+				stability_weekly = 0.001
+            }
+        }
+		
+		spr_idea_debased_currency = {
+            picture = HUN_secret_rearmament
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				stability_factor = -0.02
+				political_power_gain = -0.02
+				industrial_capacity_factory = 0.05
+				line_change_production_efficiency_factor = 0.05
+            }
+        }
+		
+		spr_idea_compulsory_schooling = {
+            picture = HUN_secret_rearmament
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				industrial_capacity_factory = 0.02
+				research_speed_factor = 0.05
+            }
+        }
+		
+		spr_idea_compulsory_schooling1 = {
+            picture = HUN_secret_rearmament
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				industrial_capacity_factory = 0.02
+				research_speed_factor = 0.07
+            }
+        }
+		
+		spr_idea_compulsory_schooling2 = {
+            picture = HUN_secret_rearmament
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				industrial_capacity_factory = 0.02
+				research_speed_factor = 0.09
+            }
+        }
+		
+		aqu_model_puppet = {
+            picture = generic_production_bonus
+            allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				conscription_factor = 0.05
+				stability_factor = 0.10
+				production_speed_buildings_factor = 0.10
+            }
+        }
+		
+		mor_idea_home_advantage = {
+            picture = chi_war_of_resistance3
+            allowed = { always = no } 
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            targeted_modifier = {
+				tag = SPR
+				defense_bonus_against = 0.25
+			}
+		}
+		
+		sam_idea_severe_ties = {
+            picture = SPR_Severe_Economic_Ties
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                offence = -0.05
+                defence = -0.05
+				local_resources_factor	= -0.20
+				min_export = 0.15
+            }
+			targeted_modifier = {
+				tag = SPR
+				trade_cost_for_target_factor = -0.20
+			}
+		}
+		
+		sam_idea_moderate_ties = {
+            picture = SPR_Economic_Ties
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                offence = -0.03
+                defence = -0.03
+				local_resources_factor	= -0.10
+				min_export = 0.10
+            }
+			targeted_modifier = {
+				tag = SPR
+				trade_cost_for_target_factor = -0.10
+			}
+        }
+		
+		sam_idea_light_ties = {
+            picture = SPR_Light_Economic_Ties
+            allowed = { always = no }
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                offence = -0.01
+                defence = -0.01
+				local_resources_factor	= -0.05
+				min_export = 0.05
+            }
+			targeted_modifier = {
+				tag = SPR
+				trade_cost_for_target_factor = -0.05
+			}
+        }
+	}
+	
+	
+	hidden_ideas = {
+	
+	#Focus From every town
+		
+	}
+}

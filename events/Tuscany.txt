@@ -1,0 +1,29 @@
+###################################
+# Tuscany Events
+###################################
+
+add_namespace = TUSDiplomacy
+
+country_event = { #The king's duty
+	id = TUSDiplomacy.1
+	title = TUSDiplomacy.1.t
+	desc = TUSDiplomacy.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = TUSDiplomacy.1.a
+		ai_chance = {
+			factor = 80
+		}
+		SPR = { country_event = SPRSecondFelipe.8 }
+	}
+	option = {
+	ai_chance = {
+			factor = 20
+		}
+		name = TUSDiplomacy.1.b
+	}
+}

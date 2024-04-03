@@ -1,0 +1,12 @@
+﻿units = {	
+	fleet = {
+		name = "French Naval Group"			
+		naval_base = 3552 # Brest
+		task_force = {
+			name = "French Naval Group"
+			location = 3552 # Brest
+			ship = { name = "Gloire" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FRA creator = FRA version_name = "Acadia Class" } } }
+			ship = { name = "Winter Lace" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FRA creator = FRA version_name = "Acadia Class" } } }
+		}								
+	}
+}

@@ -1,0 +1,25 @@
+
+state={
+	id=863
+	name="STATE_863" 
+	manpower = 98685
+	resources={
+		wood=1
+	}
+	
+	state_category = pastoral
+
+	history={
+		owner = LOU
+		add_core_of = LOU
+		add_core_of = CHR
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}	
+	}
+
+	provinces={
+	   10586 1987 7615 10615 7797
+	}
+}

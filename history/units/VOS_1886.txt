@@ -1,0 +1,59 @@
+division_template = {
+	name = "Vosgian Guard Battalion"
+	division_names_group = LOR_ARM_01
+
+	regiments = {
+		ine_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+		line_infantry = { x = 0 y = 4 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+		line_infantry = { x = 1 y = 2 }
+		line_infantry = { x = 1 y = 3 }
+		line_infantry = { x = 1 y = 4 }
+		priority = 1
+	}
+	support = {	
+	}
+}
+
+division_template = {
+	name = "Vosgian Knight Brigade"
+
+	division_names_group = LOR_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 0 y = 2 }
+		melee_battalion = { x = 0 y = 3 }
+		melee_battalion = { x = 0 y = 4 }
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+		melee_battalion = { x = 1 y = 2 }
+		melee_battalion = { x = 1 y = 3 }
+		melee_battalion = { x = 1 y = 4 }
+	}
+	priority = 1
+}
+
+
+units = {	
+
+	division = {	
+		name = "1st Vosgian Guard Battalion"
+		location = 1346
+		division_template = "Vosgian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Vosgian Knight Brigade"
+		location = 11642
+		division_template = "Vosgian Knight Brigade"
+		start_experience_factor = 0.3
+	}
+
+}
+

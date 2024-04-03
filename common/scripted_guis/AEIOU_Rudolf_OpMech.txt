@@ -1,0 +1,10 @@
+scripted_gui = {
+
+	AEIOU_Rudolf_OpMech_DisplayContainer = {
+		name = "AEIOU_Rudolf_OpMech_Display"
+		context_type = decision_category
+
+		visible = { tag = AUS }
+
+	}
+}

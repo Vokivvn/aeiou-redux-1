@@ -1,0 +1,328 @@
+game_rule_actions = {
+	switch_to_LOS = {
+		icon = border_war
+		activation = {
+			always = no
+		}
+		
+		visible = {
+			is_ai = no
+			
+			LOS = {
+				is_ai = yes
+			}
+		}
+
+		days_mission_timeout = 5
+		selectable_mission = yes
+		fire_only_once = yes
+
+		complete_effect = {
+			LOS = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+	
+	switch_to_COS = {
+		icon = border_war
+		activation = {
+			always = no
+		}
+
+		visible = {
+			is_ai = no
+			
+			COS = {
+				is_ai = yes
+			}
+		}
+
+		days_mission_timeout = 5
+		selectable_mission = yes
+		fire_only_once = yes
+
+		complete_effect = {
+			COS = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+	
+	switch_to_GUA = {
+		icon = border_war
+		activation = {
+			always = no
+		}
+
+		visible = {
+			is_ai = no
+			
+			GUA = {
+				is_ai = yes
+			}
+		}
+
+		days_mission_timeout = 5
+		selectable_mission = yes
+		fire_only_once = yes
+
+		complete_effect = {
+			GUA = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+	
+	switch_to_HON = {
+		icon = border_war
+		activation = {
+			always = no
+		}
+
+		visible = {
+			is_ai = no
+			
+			HON = {
+				is_ai = yes
+			}
+		}
+
+		days_mission_timeout = 5
+		selectable_mission = yes
+		fire_only_once = yes
+
+		complete_effect = {
+			HON = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+	
+	switch_to_ELS = {
+		icon = border_war
+		activation = {
+			always = no
+		}
+
+		visible = {
+			is_ai = no
+			
+			ELS = {
+				is_ai = yes
+			}
+		}
+
+		days_mission_timeout = 5
+		selectable_mission = yes
+		fire_only_once = yes
+
+		complete_effect = {
+			ELS = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+	
+	switch_to_NIC = {
+		icon = border_war
+		activation = {
+			always = no
+		}
+
+		visible = {
+			is_ai = no
+			
+			NIC = {
+				is_ai = yes
+			}
+		}
+
+		days_mission_timeout = 5
+		selectable_mission = yes
+		fire_only_once = yes
+
+		complete_effect = {
+			NIC = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+	
+	## France ##
+	
+	switch_to_AQU = {
+		icon = border_war
+		activation = {
+			always = no
+		}
+		
+		visible = {
+			is_ai = no
+			
+			AQU = {
+				is_ai = yes
+			}
+		}
+
+		days_mission_timeout = 5
+		selectable_mission = yes
+		fire_only_once = yes
+
+		complete_effect = {
+			AQU = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+	
+	switch_to_PRO = {
+		icon = border_war
+		activation = {
+			always = no
+		}
+		
+		visible = {
+			is_ai = no
+			
+			PRO = {
+				is_ai = yes
+			}
+		}
+
+		days_mission_timeout = 5
+		selectable_mission = yes
+		fire_only_once = yes
+
+		complete_effect = {
+			PRO = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+	
+	switch_to_BUR = {
+		icon = border_war
+		activation = {
+			always = no
+		}
+		
+		visible = {
+			is_ai = no
+			
+			BUR = {
+				is_ai = yes
+			}
+		}
+
+		days_mission_timeout = 5
+		selectable_mission = yes
+		fire_only_once = yes
+
+		complete_effect = {
+			BUR = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+	
+	switch_to_VOS = {
+		icon = border_war
+		activation = {
+			always = no
+		}
+		
+		visible = {
+			is_ai = no
+			
+			VOS = {
+				is_ai = yes
+			}
+		}
+
+		days_mission_timeout = 5
+		selectable_mission = yes
+		fire_only_once = yes
+
+		complete_effect = {
+			VOS = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+	
+	switch_to_LOR = {
+		icon = border_war
+		activation = {
+			always = no
+		}
+		
+		visible = {
+			is_ai = no
+			
+			LOR = {
+				is_ai = yes
+			}
+		}
+
+		days_mission_timeout = 5
+		selectable_mission = yes
+		fire_only_once = yes
+
+		complete_effect = {
+			LOR = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+	
+	switch_to_NRM = {
+		icon = border_war
+		activation = {
+			always = no
+		}
+		
+		visible = {
+			is_ai = no
+			
+			NRM = {
+				is_ai = yes
+			}
+		}
+
+		days_mission_timeout = 5
+		selectable_mission = yes
+		fire_only_once = yes
+
+		complete_effect = {
+			NRM = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+	
+	switch_to_BRI = {
+		icon = border_war
+		activation = {
+			always = no
+		}
+		
+		visible = {
+			is_ai = no
+			
+			BRI = {
+				is_ai = yes
+			}
+		}
+
+		days_mission_timeout = 5
+		selectable_mission = yes
+		fire_only_once = yes
+
+		complete_effect = {
+			BRI = {
+				change_tag_from = ROOT
+			}
+		}
+	}
+}

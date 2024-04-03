@@ -1,0 +1,5728 @@
+###########################
+# Spain Events
+###########################
+
+add_namespace = SPREastindies
+add_namespace = SPREarlyfelipe
+add_namespace = SPRFlavour
+add_namespace = SPRSecondfelipe
+add_namespace = SPRCentroamerica
+add_namespace = SPRCuba
+add_namespace = SPRIndia
+add_namespace = SPRReligion
+add_namespace = SPRChinaffair
+add_namespace = SPRRegency
+add_namespace = SPRNetherlands
+add_namespace = SPREnrique
+add_namespace = SPRFelipe
+add_namespace = SPRFrancisco
+add_namespace = SPRAlfonso
+
+country_event = { #Ballad in Manila
+	id = SPREastindies.1
+	title = SPREastindies.1.t
+	desc = SPREastindies.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPREastindies.1.a 
+		add_stability = -0.05
+		add_political_power = -100
+	}
+}
+country_event = { #The king's duty
+	id = SPREarlyfelipe.1
+	title = SPREarlyfelipe.1.t
+	desc = SPREarlyfelipe.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPREarlyfelipe.1.a 
+	}
+}
+
+country_event = { #The Toledo Manifesto
+	id = SPREarlyfelipe.2
+	title = SPREarlyfelipe.2.t
+	desc = SPREarlyfelipe.2.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPREarlyfelipe.2.a 
+		920 = {
+			add_core_of = YUC
+		}
+	}
+}
+
+country_event = { #National Salvation Movement
+	id = SPREarlyfelipe.3
+	title = SPREarlyfelipe.3.t
+	desc = SPREarlyfelipe.3.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPREarlyfelipe.3.a 
+		add_political_power = 10
+	}
+}
+
+country_event = { #Popular Laws of 1886
+	id = SPREarlyfelipe.4
+	title = SPREarlyfelipe.4.t
+	desc = SPREarlyfelipe.4.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPREarlyfelipe.4.a 
+		
+	}
+}
+
+country_event = { #Threat to the Establishment
+	id = SPREarlyfelipe.5
+	title = SPREarlyfelipe.5.t
+	desc = SPREarlyfelipe.5.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPREarlyfelipe.5.a 
+		
+	}
+}
+
+country_event = { #Lex Christi
+	id = SPREarlyfelipe.6
+	title = SPREarlyfelipe.6.t
+	desc = SPREarlyfelipe.6.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPREarlyfelipe.6.a 
+		
+	}
+}
+
+country_event = { #Francisco marries Louise of Tuscany
+	id = SPRFlavour.1
+	title = SPRFlavour.1.t
+	desc = SPRFlavour.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			tag = SPR
+			date > 1888.06.12
+		}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = SPRFlavour.1.a 
+		add_political_power = 100
+	}
+}
+
+country_event = { #Somethings is brewing in the Rif
+	id = SPRFlavour.2
+	title = SPRFlavour.2.t
+	desc = SPRFlavour.2.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			tag = SPR
+			date > 1888.12.08
+		}
+		
+	fire_only_once = yes
+	
+	option = {
+		name = SPRFlavour.2.a 
+		
+	}
+}
+
+country_event = { #Marriage of Enrique and Blanche
+	id = SPRFlavour.4
+	title = SPRFlavour.4.t
+	desc = SPRFlavour.4.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			tag = SPR
+			date > 1887.06.16
+		}
+		
+	fire_only_once = yes
+	
+	option = {
+		name = SPRFlavour.4.a 
+		add_stability = -0.10
+	}
+}
+
+country_event = { #Lex Expiatoria
+	id = SPREarlyfelipe.7
+	title = SPREarlyfelipe.7.t
+	desc = SPREarlyfelipe.7.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPREarlyfelipe.7.a 
+		
+	}
+}
+
+country_event = {
+	id = SPREarlyfelipe.8
+	title = SPREarlyfelipe.8.t
+	desc = SPREarlyfelipe.8.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPREarlyfelipe.8.a
+		add_political_power = 100
+		hidden_effect = {
+			every_country = {
+	    	        news_event = { id = story_news_events.8 days = 0 }
+	    	}		
+		}
+	}
+}
+
+country_event = {
+	id = SPREarlyfelipe.9
+	title = SPREarlyfelipe.9.t
+	desc = SPREarlyfelipe.9.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPREarlyfelipe.9.a
+	}
+}
+
+country_event = {
+	id = SPREarlyfelipe.10
+	title = SPREarlyfelipe.10.t
+	desc = SPREarlyfelipe.10.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPREarlyfelipe.10.a
+	}
+}
+
+country_event = {
+	id = SPREarlyfelipe.11
+	title = SPREarlyfelipe.11.t
+	desc = SPREarlyfelipe.11.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPREarlyfelipe.11.a
+	}
+}
+
+country_event = {
+	id = SPREarlyfelipe.12
+	title = SPREarlyfelipe.12.t
+	desc = SPREarlyfelipe.12.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPREarlyfelipe.12.a
+	}
+}
+
+country_event = {
+	id = SPREarlyfelipe.13
+	title = SPREarlyfelipe.13.t
+	desc = SPREarlyfelipe.13.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPREarlyfelipe.13.a
+	}
+}
+
+country_event = {
+	id = SPREarlyfelipe.14
+	title = SPREarlyfelipe.14.t
+	desc = SPREarlyfelipe.14.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPREarlyfelipe.14.a
+	}
+}
+
+country_event = {
+	id = SPREarlyfelipe.15
+	title = SPREarlyfelipe.15.t
+	desc = SPREarlyfelipe.15.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPREarlyfelipe.15.a
+		hidden_effect = {
+			random_list = {
+				0 = { 
+					modifier = {
+						add = 40
+						NOT = { has_country_flag = gamerule_felipe }
+					}
+					country_event = SPRSecondfelipe.1
+				} ##40
+				0 = { 
+					modifier = {
+						add = 60
+						NOT = { has_country_flag = gamerule_regency }
+					}
+					country_event = SPRSecondfelipe.2
+				} ##60
+			}
+		}
+	}
+	fixed_random_seed = no
+}
+country_event = { #Fails
+	id = SPRSecondfelipe.1
+	title = SPRSecondfelipe.1.t
+	desc = SPRSecondfelipe.1.d
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRSecondfelipe.1.a
+		load_focus_tree = Spain_felipe_failure
+		hidden_effect = {
+			set_global_flag = SPR_Regency
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Regency Council"
+				desc = "SPR_LEADER_DESC_REGENCY_COUNCIL"
+				picture = "Portrait_SPR_Regency_Council.dds"
+				expire = "1965.1.1"
+				ideology = absolutist_radical
+				traits = {
+				}
+			}
+			SPN = {
+				retire_country_leader = yes
+				create_country_leader = {
+					name = "Regency Council"
+					desc = "SPR_LEADER_DESC_REGENCY_COUNCIL"
+					picture = "Portrait_SPR_Regency_Council.dds"
+					expire = "1965.1.1"
+					ideology = despotist_moderate
+					traits = {
+					#
+					}
+				}
+			}
+			add_to_variable = { hog_loyalty = -0.5000 }
+			FRA = { 
+				set_temp_variable = { noble_support_temp = -0.1 }
+				FRA_noble_support = yes
+			}
+		}
+	}
+}
+
+country_event = { #Success
+	id = SPRSecondfelipe.2
+	title = SPRSecondfelipe.2.t
+	desc = SPRSecondfelipe.2.d
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRSecondfelipe.2.a
+		load_focus_tree = Spain_felipe_success 
+		hidden_effect = {
+			set_global_flag = SPR_Felipe
+			FRA = { 
+				set_temp_variable = { noble_support_temp = 0.1 }
+				FRA_noble_support = yes
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = SPREarlyfelipe.16
+	title = SPREarlyfelipe.16.t
+	desc = SPREarlyfelipe.16.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPREarlyfelipe.16.a
+	}
+}
+
+country_event = {
+	id = SPREarlyfelipe.17
+	title = SPREarlyfelipe.17.t
+	desc = SPREarlyfelipe.17.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPREarlyfelipe.17.a
+	}
+}
+
+country_event = {
+	id = SPRSecondfelipe.3
+	title = SPRSecondfelipe.3.t
+	desc = SPRSecondfelipe.3.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRSecondfelipe.3.a
+	}
+}
+
+country_event = {
+	id = SPRSecondfelipe.4
+	title = SPRSecondfelipe.4.t
+	desc = SPRSecondfelipe.4.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRSecondfelipe.4.a
+	}
+}
+
+country_event = {
+	id = SPRSecondfelipe.5
+	title = SPRSecondfelipe.5.t
+	desc = SPRSecondfelipe.5.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRSecondfelipe.5.a
+		TUS = { country_event = SPRSecondfelipe.8 }
+	}
+}
+
+country_event = {
+	id = SPRSecondfelipe.6
+	title = SPRSecondfelipe.6.t
+	desc = SPRSecondfelipe.6.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRSecondfelipe.6.a
+		PAP = { country_event = SPRSecondfelipe.12 }
+	}
+}
+
+country_event = {
+	id = SPRSecondfelipe.7
+	title = SPRSecondfelipe.7.t
+	desc = SPRSecondfelipe.7.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRSecondfelipe.7.a
+		POR = { country_event = SPRSecondfelipe.17 }
+	}
+}
+
+country_event = {
+	id = SPRSecondfelipe.8
+	title = SPRSecondfelipe.8.t
+	desc = SPRSecondfelipe.8.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRSecondfelipe.8.a #Refuse
+		SPR = { country_event = SPRSecondfelipe.9 }
+	}
+	option = {
+		name = SPRSecondfelipe.8.b #Accept
+		SPR = { country_event = SPRSecondfelipe.10 }
+		set_country_flag = SPR_flag_accepted_alliance
+	}
+}
+
+country_event = {
+	id = SPRSecondfelipe.9
+	title = SPRSecondfelipe.9.t
+	desc = SPRSecondfelipe.9.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRSecondfelipe.9.a
+	}
+}
+
+country_event = {
+	id = SPRSecondfelipe.10
+	title = SPRSecondfelipe.10.t
+	desc = SPRSecondfelipe.10.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRSecondfelipe.10.a
+	}
+}
+
+country_event = {
+	id = SPRSecondfelipe.11
+	title = SPRSecondfelipe.11.t
+	desc = SPRSecondfelipe.11.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRSecondfelipe.11.a
+		add_political_power = -100
+		army_experience = -15
+	}
+}
+
+country_event = {
+	id = SPRSecondfelipe.12
+	title = SPRSecondfelipe.12.t
+	desc = SPRSecondfelipe.12.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRSecondfelipe.12.a #Pope says yes
+		SPR = { country_event = SPRSecondfelipe.14 }
+		set_country_flag = SPR_flag_accepted_alliance
+	}
+	option = {
+		name = SPRSecondfelipe.12.b #Pope says no
+		SPR = { country_event = SPRSecondfelipe.13 }
+	}
+}
+
+country_event = {
+	id = SPRSecondfelipe.13 #The Pope says Nope
+	title = SPRSecondfelipe.13.t
+	desc = SPRSecondfelipe.13.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRSecondfelipe.13.a
+	}
+}
+
+country_event = {
+	id = SPRSecondfelipe.14 #The Pope Says Yope
+	title = SPRSecondfelipe.14.t
+	desc = SPRSecondfelipe.14.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRSecondfelipe.14.a
+		add_political_power = 20
+	}
+}
+
+country_event = {
+	id = SPRSecondfelipe.15 #Portugal accepts
+	title = SPRSecondfelipe.15.t
+	desc = SPRSecondfelipe.15.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRSecondfelipe.15.a
+		add_political_power = 20
+	}
+}
+
+
+country_event = {
+	id = SPRSecondfelipe.16 #Portugal refuses
+	title = SPRSecondfelipe.16.t
+	desc = SPRSecondfelipe.16.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRSecondfelipe.16.a
+		add_political_power = 20
+	}
+}
+
+country_event = {
+	id = SPRSecondfelipe.17 #Portugal decides
+	title = SPRSecondfelipe.17.t
+	desc = SPRSecondfelipe.17.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRSecondfelipe.17.a
+		SPR = { country_event = SPRSecondfelipe.15 }
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = SPRSecondfelipe.17.b
+		SPR = { country_event = SPRSecondfelipe.16 }
+		set_country_flag = SPR_flag_accepted_alliance
+		ai_chance = {
+			factor = 0
+			modifier = {
+				add = 60
+				is_in_faction = no
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SPRSecondfelipe.18 #Felipe pardons people
+	title = SPRSecondfelipe.18.t
+	desc = SPRSecondfelipe.18.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRSecondfelipe.18.a
+		add_political_power = 50
+		add_stability = 0.01
+	}
+}
+
+country_event = {
+	id = SPRSecondfelipe.19 #Francisco Proclaims Monarchical Continuism
+	title = SPRSecondfelipe.19.t
+	desc = SPRSecondfelipe.19.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRSecondfelipe.19.a
+		add_political_power = 20
+	}
+}
+
+country_event = {
+	id = SPRSecondfelipe.20 #No more distractions
+	title = SPRSecondfelipe.20.t
+	desc = SPRSecondfelipe.20.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRSecondfelipe.20.a
+		add_political_power = 50
+		add_stability = 0.01
+	}
+}
+
+country_event = {
+	id = SPREnrique.1 #France
+	title = SPREnrique.1.t
+	desc = SPREnrique.1.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPREnrique.1.a
+		ai_chance = {
+			factor = 60
+		}
+		SPP = { country_event = SPREnrique.2 }
+		add_manpower = -10000
+	}
+	option = {
+		name = SPREnrique.1.b
+		ai_chance = {
+			factor = 40
+		}
+		SPP = { country_event = SPREnrique.3 }
+	}
+}
+
+country_event = {
+	id = SPREnrique.2 #France
+	title = SPREnrique.2.t
+	desc = SPREnrique.2.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPREnrique.2.a
+		complete_national_focus = SPP_with_them
+		load_oob = SPP_1886_french_volunteers
+		random_controlled_state = {
+			create_unit = {
+				division = "division_template = \"French Volunteer Battalion\" start_experience_factor = 0.3" 
+				owner = SPF
+				allow_spawning_on_enemy_provs = yes
+				count = 4
+			}
+		}
+		hidden_effect = {
+			SPR = {
+				set_country_flag = FRA_helped
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SPREnrique.3 #France
+	title = SPREnrique.3.t
+	desc = SPREnrique.3.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPREnrique.3.a
+		complete_national_focus = SPP_without_them
+	}
+}
+
+country_event = {
+	id = SPREnrique.4 #French Puppet
+	title = SPREnrique.4.t
+	desc = SPREnrique.4.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPREnrique.4.a
+		ai_chance = {
+			factor = 85
+		}
+		complete_national_focus = SPR_cortes_assemble
+	}
+	option = {
+		name = SPREnrique.4.b
+		ai_chance = {
+			factor = 15
+		}
+		complete_national_focus = SPR_everyone_gets_a_chance
+	}
+}
+
+country_event = {
+	id = SPREnrique.5 #French Puppet
+	title = SPREnrique.5.t
+	desc = SPREnrique.5.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPREnrique.5.a
+		ai_chance = {
+			factor = 20
+		}
+		complete_national_focus = SPR_underground_liberal
+	}
+	option = {
+		name = SPREnrique.5.b
+		ai_chance = {
+			factor = 70
+			modifier = {
+				add = 10
+				NOT = { has_completed_focus = SPR_everyone_gets_a_chance }
+			}
+		}
+		complete_national_focus = SPR_heirs_of_absolutism
+	}
+	option = {
+		name = SPREnrique.5.c
+		trigger = {
+			has_completed_focus = SPR_everyone_gets_a_chance
+		}
+		ai_chance = {
+			factor = 0
+			modifier = {
+				add = 10
+				has_completed_focus = SPR_everyone_gets_a_chance
+			}
+		}
+		complete_national_focus = SPR_god_and_serfdom_under_one_banner
+	}
+}
+
+country_event = {
+	id = SPRFelipe.1 #Tuscany
+	title = SPRFelipe.1.t
+	desc = SPRFelipe.1.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRFelipe.1.a
+		ai_chance = {
+			factor = 85
+		}
+		hidden_effect = {
+			SPF = {
+				create_faction = SPF_FACTION_ALLIES_FACTION
+				add_to_faction = TUS
+			}
+			114 = {add_core_of = TUS }
+			transfer_state = 114
+			114 = {remove_core_of = SPF }
+		}
+	}
+	option = {
+		name = SPRFelipe.1.b
+		ai_chance = {
+			factor = 15
+		}
+	}
+}
+
+country_event = {
+	id = SPRFelipe.2 #Cuba
+	title = SPRFelipe.2.t
+	desc = SPRFelipe.2.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRFelipe.2.a
+		hidden_effect = {
+			SPF = {
+				set_autonomy = {
+					target = CUB
+					autonomy_state =  autonomy_colony
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SPRChinaffair.1
+	title = SPRChinaffair.1.t
+	desc = SPRChinaffair.1.d
+	
+	fire_only_once = yes
+		
+	trigger = {
+			tag = SPR
+			date > 1889.02.24
+		}
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+	ai_chance = {
+			factor = 100
+		}
+		name = SPRChinaffair.1.a
+		SPR = { country_event = { days = 211 id = SPRChinaffair.2 }}	
+	}
+}
+
+country_event = {
+	id = SPRChinaffair.2            #The explosion of the San Fernando
+	title = SPRChinaffair.2.t
+	desc = SPRChinaffair.2.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRChinaffair.2.a
+			ai_chance = {
+			factor = 100
+		}
+		SPR = { country_event = { days = 1 id = SPRChinaffair.3 }}	
+	}
+}
+
+country_event = {
+	id = SPRChinaffair.3            #Blame the chinese loyalists
+	title = SPRChinaffair.3.t
+	desc = SPRChinaffair.3.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRChinaffair.3.a   #Punish the ones involved
+			ai_chance = {
+			factor = 60
+		}
+		SPR = { country_event = { days = 1 id = SPRChinaffair.4 }}	
+	}
+	option = {
+		name = SPRChinaffair.3.b   #Point at the chinese government
+		ai_chance = {
+			factor = 40
+		}
+		SPR = { country_event = { days = 20 id = SPRChinaffair.5 }}	
+	}
+}
+
+country_event = {
+	id = SPRChinaffair.4            #Event about the execution of the ones involved
+	title = SPRChinaffair.4.t
+	desc = SPRChinaffair.4.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+			ai_chance = {
+			factor = 100
+		}
+		name = SPRChinaffair.4.a   #Dead
+	}
+}
+
+country_event = {
+	id = SPRChinaffair.5            #Point at the Chinese government
+	title = SPRChinaffair.5.t
+	desc = SPRChinaffair.5.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRChinaffair.5.a   # Issue a formal complaint
+		ai_chance = {
+			factor = 60
+		}
+		CHI = { country_event = { days = 1 id = SPRChinaffair.8 }}	
+	}
+	option = {
+		name = SPRChinaffair.5.b   # Demand reparations
+		ai_chance = {
+			factor = 40
+		}
+		CHI = { country_event = { days = 1 id = SPRChinaffair.7 }}	
+	}
+}
+
+country_event = {
+	id = SPRChinaffair.7           #China receives the reparation payment request
+	title = SPRChinaffair.7.t
+	desc = SPRChinaffair.7.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRChinaffair.7.a   #Ok
+		ai_chance = {
+			factor = 30
+		}
+		SPR = { country_event = { days = 1 id = SPRChinaffair.9 }}	
+	}
+	option = {
+		name = SPRChinaffair.7.b   #Not Ok
+		ai_chance = {
+			factor = 70
+		}
+		CHI = { country_event = { days = 1 id = SPRChinaffair.10 }}	
+	}
+}
+
+country_event = {
+	id = SPRChinaffair.8           #China receives the complaint (End)
+	title = SPRChinaffair.8.t
+	desc = SPRChinaffair.8.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRChinaffair.8.a   #Ok	
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = SPRChinaffair.9           #China pays reparations 
+	title = SPRChinaffair.9.t
+	desc = SPRChinaffair.9.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRChinaffair.9.a   #Offer an economic treaty	
+		ai_chance = {
+			factor = 100
+		}
+		CHI = { country_event = { days = 1 id = SPRChinaffair.11 }}	#China receives message
+		
+	}
+}
+
+country_event = {
+	id = SPRChinaffair.10          #China doesn't pay reparations
+	title = SPRChinaffair.10.t
+	desc = SPRChinaffair.10.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRChinaffair.10.a   #Send an ultimatum
+		ai_chance = {
+			factor = 80
+		}
+		CHI = { country_event = { days = 1 id = SPRChinaffair.12 }}			
+	}
+	option = {
+		name = SPRChinaffair.10.b   #Do nothing
+		ai_chance = {
+			factor = 20
+		}		
+	}
+}
+
+country_event = {
+	id = SPRChinaffair.11          #Received economic treaty (China)
+	title = SPRChinaffair.11.t
+	desc = SPRChinaffair.11.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRChinaffair.11.a   #Accept
+		ai_chance = {
+			factor = 40
+		}
+		SPR = { country_event = { days = 1 id = SPRChinaffair.13 }}			
+	}
+	option = {
+		name = SPRChinaffair.11.b   #No
+		ai_chance = {
+			factor = 60
+		}
+		SPR = { country_event = { days = 1 id = SPRChinaffair.14 }}			
+	}
+}
+
+country_event = {
+	id = SPRChinaffair.12          #China receives ultimatum
+	title = SPRChinaffair.12.t
+	desc = SPRChinaffair.12.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRChinaffair.12.a   #Back down and pay
+		ai_chance = {
+			factor = 40
+		}
+		SPR = { country_event = { days = 1 id = SPRChinaffair.15 }}			
+	}
+	option = {
+		name = SPRChinaffair.12.b   #Come and get it (Karansebes time)
+		ai_chance = {
+			factor = 60
+		}
+		SPR = { country_event = { days = 1 id = SPRChinaffair.16 }}			
+	}
+}
+
+country_event = {
+	id = SPRChinaffair.13          #China accepts economic treaty and non-aggression (End)
+	title = SPRChinaffair.13.t
+	desc = SPRChinaffair.13.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRChinaffair.13.a   #End	
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = SPRChinaffair.14          #China denies economic treaty but mantains neutrality (End)
+	title = SPRChinaffair.14.t
+	desc = SPRChinaffair.14.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRChinaffair.14.a   #End	
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = SPRChinaffair.15         #China backs down and pays (End)
+	title = SPRChinaffair.15.t
+	desc = SPRChinaffair.15.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRChinaffair.15.a   #Good	
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = SPRChinaffair.16         #Karansebes but in Spanish, the generals blame the Chinese despite knowing they messed up.
+	title = SPRChinaffair.16.t
+	desc = SPRChinaffair.16.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRChinaffair.16.a   
+		ai_chance = {
+			factor = 100
+		}
+		SPR = { country_event = { days = 1 id = SPRChinaffair.17 }} #Spanish bombardment of a Chinese port
+		CHI = { country_event = { days = 1 id = SPRChinaffair.18 }} #China gets wind of the Spanish things
+	}
+}
+
+country_event = {
+	id = SPRChinaffair.17         #Bombing of Fuzhou
+	title = SPRChinaffair.17.t
+	desc = SPRChinaffair.17.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRChinaffair.17.a   #Excuse ourselves and pay heavy reparations	
+		ai_chance = {
+			factor = 50
+		}
+		CHI = { country_event = { days = 1 id = SPRChinaffair.19 }} 
+		every_country = {
+		news_event = { id = story_news_events.9 days = 1 }}
+	}
+	option = {
+		name = SPRChinaffair.17.b   #This is the casus belli we were looking for	
+		ai_chance = {
+			factor = 50
+		}
+		CHI = { country_event = { days = 1 id = SPRChinaffair.20 }} 
+	}
+}
+
+country_event = {
+	id = SPRChinaffair.18         #China reacts to Karansebes
+	title = SPRChinaffair.18.t
+	desc = SPRChinaffair.18.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRChinaffair.18.a   #We better mobilize
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = SPRChinaffair.19         #Spain excuses and pays for our losses
+	title = SPRChinaffair.19.t
+	desc = SPRChinaffair.19.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRChinaffair.19.a   #They better leave for good
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = SPRChinaffair.20         #Declare war on Spain
+	title = SPRChinaffair.20.t
+	desc = SPRChinaffair.20.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRChinaffair.20.a   
+		ai_chance = {
+			factor = 100
+		}
+		declare_war_on = {
+							target = SPR
+							type = annex_everything
+						}
+		SPR = { country_event = { days = 1 id = SPRChinaffair.21}} 
+		every_country = {
+		news_event = { id = story_news_events.10 days = 1 }}
+	}
+}
+
+country_event = {
+	id = SPRChinaffair.21       #China declares war on us
+	title = SPRChinaffair.21.t
+	desc = SPRChinaffair.21.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRChinaffair.21.a  
+		ai_chance = {
+			factor = 100
+		}		
+		hidden_effect = {
+		SPR = { country_event = { days = 15 id = SPRChinaffair.22}} 
+		}
+	}
+}
+country_event = {
+	id = SPRChinaffair.22       #Bombing of Taiwan, neglect of their things
+	title = SPRChinaffair.22.t
+	desc = SPRChinaffair.22.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRChinaffair.22.a   
+	}
+}
+
+country_event = {
+	id = SPRChinaffair.23       #Spanish peace deal
+	title = SPRChinaffair.23.t
+	desc = SPRChinaffair.23.d
+	
+	fire_only_once = yes
+		
+	trigger = {
+	tag = SPR
+	SPR = { has_war_with = CHI }
+	CHI = { surrender_progress > 0.15 }
+	}
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRChinaffair.23.a   
+		ai_chance = {
+			factor = 100
+		}
+		white_peace = CHI
+		SPE = { transfer_state = 591}
+		every_country = {
+	    	        news_event = { id = story_news_events.11 days = 0 }
+	    		}
+	}
+}
+
+
+country_event = {
+	id = SPRChinaffair.24       #Chinese peace deal
+	title = SPRChinaffair.24.t
+	desc = SPRChinaffair.24.d
+	
+	fire_only_once = yes
+		
+	trigger = {
+	tag = CHI
+	SPR = { has_war_with = CHI }
+	SPE = { surrender_progress > 0.10 }
+	}
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRChinaffair.24.a   
+		ai_chance = {
+			factor = 100
+		}
+		white_peace = SPR
+		CHI = { transfer_state = 929}
+		CHI = { transfer_state = 524}
+		CHI = { country_event = { days = 27 id = SPRChinaffair.25 }}
+		every_country = {
+	    	        news_event = { id = story_news_events.12 days = 0 }
+	    		}
+			}
+}
+
+
+country_event = {
+	id = SPRChinaffair.25      #Taiwanese Revolution
+	title = SPRChinaffair.25.t
+	desc = SPRChinaffair.25.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	immediate = {
+		every_country = {
+				news_event = { id = story_news_events.16 days = 0 }
+		}
+		929 = { add_core_of = TWN }
+		524 = { add_core_of = TWN }
+		set_global_flag = TWN_revolution
+		TWN = {	
+			set_technology = {
+				muskets0 = 1
+				melee = 1
+			}
+			set_state_owner = 929
+			set_state_controller = 929
+			declare_war_on = {
+				target = CHI
+				type = liberate_wargoal
+			}
+			set_province_controller = 9955
+			load_oob = "TWN_revolt"
+		}
+	}
+	
+	option = {
+		name = SPRChinaffair.25.a  
+		ai_chance = {
+			factor = 100
+			}		
+		}
+	option = {
+		name = SPRChinaffair.25.b
+		ai_chance = {
+			factor = 0
+		}
+		hidden_effect = {
+			TWN = {
+				change_tag_from = SPR
+			}
+		}		
+	}
+}
+
+country_event = { #The Writing of the Olentzero
+	id = SPRFlavour.3
+	title = SPRFlavour.3.t
+	desc = SPRFlavour.3.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			tag = SPR
+			date > 1891.12.25
+		}
+		
+		fire_only_once = yes
+	
+	option = {
+		name = SPRFlavour.3.a 
+		
+	}
+}
+
+country_event = { #The Maragatos ask for help
+	id = SPRFlavour.5
+	title = SPRFlavour.5.t
+	desc = SPRFlavour.5.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			tag = SPR
+			date > 1889.2.17
+		}
+		
+	fire_only_once = yes
+	
+	option = {
+		name = SPRFlavour.5.a 
+		add_stability = 0.01
+		add_political_power = 20
+		add_manpower = -2000
+	}
+	option = {
+		name = SPRFlavour.5.b 
+		add_stability = 0.05
+		add_political_power = 100
+		add_manpower = -10000
+	}
+	option = {
+		name = SPRFlavour.5.c 
+		add_stability = -0.01
+	}
+}
+
+country_event = { #The crime was in Granada
+	id = SPRFlavour.6
+	title = SPRFlavour.6.t
+	desc = SPRFlavour.6.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			tag = SPR
+			date > 1889.12.27
+		}
+		
+		fire_only_once = yes
+	
+	option = {
+		name = SPRFlavour.6.a 
+		add_stability = 0.02
+		add_manpower = -500
+	}
+}
+
+country_event = { #The lost city of Arekoratos
+	id = SPRFlavour.7
+	title = SPRFlavour.7.t
+	desc = SPRFlavour.7.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			tag = SPR
+			date > 1890.4.4
+		}
+		
+		fire_only_once = yes
+	
+	option = {
+		name = SPRFlavour.7.a 
+		add_stability = -0.01
+		add_political_power = 100
+	}
+	option = {
+		name = SPRFlavour.7.b
+		add_stability = 0.01
+		add_political_power = -50
+	}
+}
+
+country_event = { #Biology Breakout
+	id = SPRFlavour.8
+	title = SPRFlavour.8.t
+	desc = SPRFlavour.8.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			tag = SPR
+			date > 1889.2.1
+		}
+		
+		fire_only_once = yes
+	
+	option = {
+		name = SPRFlavour.8.a 
+		add_popularity = {
+				ideology = theocratic
+				popularity = 0.1
+			}
+	}
+	option = {
+		name = SPRFlavour.8.b 
+		add_popularity = {
+				ideology = theocratic
+				popularity = -0.2
+			}
+	}
+}
+
+country_event = { #Asteroid!
+	id = SPRFlavour.9
+	title = SPRFlavour.9.t
+	desc = SPRFlavour.9.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			tag = SPR
+			date > 1891.11.23
+		}
+		
+		fire_only_once = yes
+	
+	option = {
+		name = SPRFlavour.9.a 
+		add_political_power = 10
+	}
+}
+
+country_event = { #Whiteshirt duel
+	id = SPRFlavour.10
+	title = SPRFlavour.10.t
+	desc = SPRFlavour.10.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			tag = SPR
+			date > 1888.10.2
+		}
+		
+		fire_only_once = yes
+	
+	option = {
+		name = SPRFlavour.10.a 
+		add_stability = 0.01
+	}
+}
+
+##### Centroamerican decisions
+
+country_event = { #Initiation event
+	id = SPRCentroamerica.1
+	title = SPRCentroamerica.1.t
+	desc = SPRCentroamerica.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.1.a 
+		set_global_flag = SPRCentroamericancake
+		
+	}
+}
+
+country_event = { #Negotiate with Costa Rica part 1
+	id = SPRCentroamerica.2
+	title = SPRCentroamerica.2.t
+	desc = SPRCentroamerica.2.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.2.a 
+		COS = { country_event = { days = 2 id = SPRCentroamerica.3 }}
+		set_global_flag = ongoing_negotiations
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Costa Rica receives the message
+	id = SPRCentroamerica.3
+	title = SPRCentroamerica.3.t
+	desc = SPRCentroamerica.3.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = { #Denied
+		name = SPRCentroamerica.3.a 
+		add_political_power = 50
+		SPR = { country_event = { days = 1 id = SPRCentroamerica.4 }}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = { #Accepted
+		name = SPRCentroamerica.3.b 
+		add_political_power = -50
+		SPR = { country_event = { days = 1 id = SPRCentroamerica.5 }}
+		ai_chance = {
+			factor = 60
+		}
+	}
+}
+
+country_event = { #Costa Rica has denied our advances
+	id = SPRCentroamerica.4
+	title = SPRCentroamerica.4.t
+	desc = SPRCentroamerica.4.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.4.a #Send an ultimatum
+		COS = { country_event = { days = 2 id = SPRCentroamerica.6 }}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Costa Rica bows down
+	id = SPRCentroamerica.5
+	title = SPRCentroamerica.5.t
+	desc = SPRCentroamerica.5.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.5.a #Light economic ties
+		COS = { add_ideas = sam_idea_light_ties }
+		clr_global_flag = ongoing_negotiations
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Costa Rica receives an ultimatum
+	id = SPRCentroamerica.6
+	title = SPRCentroamerica.6.t
+	desc = SPRCentroamerica.6.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.6.a #Bow down
+		SPR = { country_event = { days = 2 id = SPRCentroamerica.7 }}
+		ai_chance = {
+			factor = 80
+		}
+	}
+	option = {
+		name = SPRCentroamerica.6.b #Still no
+		SPR = { country_event = { days = 2 id = SPRCentroamerica.8 }}
+		ai_chance = {
+			factor = 20
+		}
+	}
+}
+
+country_event = { #Costa Rica bows down 2nd attempt
+	id = SPRCentroamerica.7
+	title = SPRCentroamerica.7.t
+	desc = SPRCentroamerica.7.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.7.a #Moderate economic ties
+		COS = { add_ideas = sam_idea_moderate_ties }
+		clr_global_flag = ongoing_negotiations
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Spain declares war on Costa Rica
+	id = SPRCentroamerica.8
+	title = SPRCentroamerica.8.t
+	desc = SPRCentroamerica.8.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.8.a 
+				declare_war_on = {
+							target = COS
+							type = annex_everything
+						}
+	 COS = { country_event = { days = 2 id = SPRCentroamerica.9 }}	
+	 ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Costa Rica shits itself
+	id = SPRCentroamerica.9
+	title = SPRCentroamerica.9.t
+	desc = SPRCentroamerica.9.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.9.a #Beg for peace
+	 SPR = { country_event = { days = 2 id = SPRCentroamerica.10 }}	
+	 ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Costa Rica bows down 3rd time
+	id = SPRCentroamerica.10
+	title = SPRCentroamerica.10.t
+	desc = SPRCentroamerica.10.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.10.a #Severe ties
+	    COS = { add_ideas = sam_idea_severe_ties }
+		white_peace = COS
+		clr_global_flag = ongoing_negotiations
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Negotiate with Nicaragua part 1
+	id = SPRCentroamerica.11
+	title = SPRCentroamerica.11.t
+	desc = SPRCentroamerica.11.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.11.a 
+		NIC = { country_event = { days = 2 id = SPRCentroamerica.12 }}
+		set_global_flag = ongoing_negotiations
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Nicaragua receives the message
+	id = SPRCentroamerica.12
+	title = SPRCentroamerica.12.t
+	desc = SPRCentroamerica.12.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = { #Denied
+		name = SPRCentroamerica.12.a 
+		add_political_power = 50
+		SPR = { country_event = { days = 1 id = SPRCentroamerica.13 }}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = { #Accepted
+		name = SPRCentroamerica.12.b 
+		add_political_power = -50
+		SPR = { country_event = { days = 1 id = SPRCentroamerica.14 }}
+		ai_chance = {
+			factor = 60
+		}
+	}
+}
+
+country_event = { #Nicaragua has denied our advances
+	id = SPRCentroamerica.13
+	title = SPRCentroamerica.13.t
+	desc = SPRCentroamerica.13.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.13.a #Send an ultimatum
+		NIC = { country_event = { days = 2 id = SPRCentroamerica.15 }}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Nicaragua bows down
+	id = SPRCentroamerica.14
+	title = SPRCentroamerica.14.t
+	desc = SPRCentroamerica.14.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.14.a #Light economic ties
+		NIC = { add_ideas = sam_idea_light_ties }
+		clr_global_flag = ongoing_negotiations
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Nicaragua receives an ultimatum
+	id = SPRCentroamerica.15
+	title = SPRCentroamerica.15.t
+	desc = SPRCentroamerica.15.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.15.a #Bow down
+		SPR = { country_event = { days = 2 id = SPRCentroamerica.16 }}
+		ai_chance = {
+			factor = 80
+		}
+	}
+	option = {
+		name = SPRCentroamerica.15.b #Still no
+		SPR = { country_event = { days = 2 id = SPRCentroamerica.17 }}
+		ai_chance = {
+			factor = 20
+		}
+	}
+}
+
+country_event = { #Nicaragua bows down 2nd attempt
+	id = SPRCentroamerica.16
+	title = SPRCentroamerica.16.t
+	desc = SPRCentroamerica.16.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.16.a #Moderate economic ties
+		NIC = { add_ideas = sam_idea_moderate_ties }
+		clr_global_flag = ongoing_negotiations
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Spain declares war on Nicaragua
+	id = SPRCentroamerica.17
+	title = SPRCentroamerica.17.t
+	desc = SPRCentroamerica.17.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.17.a 
+				declare_war_on = {
+							target = NIC
+							type = annex_everything
+						}
+	 NIC = { country_event = { days = 2 id = SPRCentroamerica.18 }}	
+	 ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Nicaragua shits itself
+	id = SPRCentroamerica.18
+	title = SPRCentroamerica.18.t
+	desc = SPRCentroamerica.18.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.18.a #Beg for peace
+	 SPR = { country_event = { days = 2 id = SPRCentroamerica.19 }}	
+	 ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Nicaragua bows down 3rd time
+	id = SPRCentroamerica.19
+	title = SPRCentroamerica.19.t
+	desc = SPRCentroamerica.19.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.19.a #Severe ties
+	    NIC = { add_ideas = sam_idea_severe_ties }
+		white_peace = NIC
+		clr_global_flag = ongoing_negotiations
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = { #Negotiate with El Salvador part 1
+	id = SPRCentroamerica.20
+	title = SPRCentroamerica.20.t
+	desc = SPRCentroamerica.20.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.20.a 
+		ELS = { country_event = { days = 2 id = SPRCentroamerica.21 }}
+		set_global_flag = ongoing_negotiations
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #El Salvador receives the message
+	id = SPRCentroamerica.21
+	title = SPRCentroamerica.21.t
+	desc = SPRCentroamerica.21.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = { #Denied
+		name = SPRCentroamerica.21.a 
+		add_political_power = 50
+		SPR = { country_event = { days = 1 id = SPRCentroamerica.22 }}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = { #Accepted
+		name = SPRCentroamerica.21.b 
+		add_political_power = -50
+		SPR = { country_event = { days = 1 id = SPRCentroamerica.23 }}
+		ai_chance = {
+			factor = 60
+		}
+	}
+}
+
+country_event = { #El Salvador has denied our advances
+	id = SPRCentroamerica.22
+	title = SPRCentroamerica.22.t
+	desc = SPRCentroamerica.22.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.22.a #Send an ultimatum
+		ELS = { country_event = { days = 2 id = SPRCentroamerica.24 }}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #El Salvador bows down
+	id = SPRCentroamerica.23
+	title = SPRCentroamerica.23.t
+	desc = SPRCentroamerica.23.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.23.a #Light economic ties
+		ELS = { add_ideas = sam_idea_light_ties }
+		clr_global_flag = ongoing_negotiations
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #El Salvador receives an ultimatum
+	id = SPRCentroamerica.24
+	title = SPRCentroamerica.24.t
+	desc = SPRCentroamerica.24.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.24.a #Bow down
+		SPR = { country_event = { days = 2 id = SPRCentroamerica.25}}
+		ai_chance = {
+			factor = 80
+		}
+	}
+	option = {
+		name = SPRCentroamerica.24.b #Still no
+		SPR = { country_event = { days = 2 id = SPRCentroamerica.26 }}
+		ai_chance = {
+			factor = 20
+		}
+	}
+}
+
+country_event = { #El Salvador bows down 2nd attempt
+	id = SPRCentroamerica.25
+	title = SPRCentroamerica.25.t
+	desc = SPRCentroamerica.25.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.25.a #Moderate economic ties
+		ELS = { add_ideas = sam_idea_moderate_ties }
+		clr_global_flag = ongoing_negotiations
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Spain declares war on El Salvador
+	id = SPRCentroamerica.26
+	title = SPRCentroamerica.26.t
+	desc = SPRCentroamerica.26.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.26.a 
+				declare_war_on = {
+							target = ELS
+							type = annex_everything
+						}
+	 ELS = { country_event = { days = 2 id = SPRCentroamerica.27 }}	
+	 ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #El Salvador shits itself
+	id = SPRCentroamerica.27
+	title = SPRCentroamerica.27.t
+	desc = SPRCentroamerica.27.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.27.a #Beg for peace
+	 SPR = { country_event = { days = 2 id = SPRCentroamerica.28 }}	
+	 ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #El Salvador bows down 3rd time
+	id = SPRCentroamerica.28
+	title = SPRCentroamerica.28.t
+	desc = SPRCentroamerica.28.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.28.a #Severe ties
+	    ELS = { add_ideas = sam_idea_severe_ties }
+		white_peace = ELS
+		clr_global_flag = ongoing_negotiations
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = { #Negotiate with Los Altos part 1
+	id = SPRCentroamerica.29
+	title = SPRCentroamerica.29.t
+	desc = SPRCentroamerica.29.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.29.a 
+		LOS = { country_event = { days = 2 id = SPRCentroamerica.30 }}
+		set_global_flag = ongoing_negotiations
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Los Altos receives the message
+	id = SPRCentroamerica.30
+	title = SPRCentroamerica.30.t
+	desc = SPRCentroamerica.30.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = { #Denied
+		name = SPRCentroamerica.30.a 
+		add_political_power = 50
+		SPR = { country_event = { days = 1 id = SPRCentroamerica.31 }}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = { #Accepted
+		name = SPRCentroamerica.30.b 
+		add_political_power = -50
+		SPR = { country_event = { days = 1 id = SPRCentroamerica.32 }}
+		ai_chance = {
+			factor = 60
+		}
+	}
+}
+
+country_event = { #Los Altos has denied our advances
+	id = SPRCentroamerica.31
+	title = SPRCentroamerica.31.t
+	desc = SPRCentroamerica.31.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.31.a #Send an ultimatum
+		LOS = { country_event = { days = 2 id = SPRCentroamerica.33 }}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Los Altos bows down
+	id = SPRCentroamerica.32
+	title = SPRCentroamerica.32.t
+	desc = SPRCentroamerica.32.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.32.a #Light economic ties
+		LOS = { add_ideas = sam_idea_light_ties }
+		clr_global_flag = ongoing_negotiations
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Los Altos receives an ultimatum
+	id = SPRCentroamerica.33
+	title = SPRCentroamerica.33.t
+	desc = SPRCentroamerica.33.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.33.a #Bow down
+		SPR = { country_event = { days = 2 id = SPRCentroamerica.34 }}
+		ai_chance = {
+			factor = 80
+		}
+	}
+	option = {
+		name = SPRCentroamerica.33.b #Still no
+		SPR = { country_event = { days = 2 id = SPRCentroamerica.35 }}
+		ai_chance = {
+			factor = 20
+		}
+	}
+}
+
+country_event = { #Los Altos bows down 2nd attempt
+	id = SPRCentroamerica.34
+	title = SPRCentroamerica.34.t
+	desc = SPRCentroamerica.34.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.34.a #Moderate economic ties
+		LOS = { add_ideas = sam_idea_moderate_ties }
+		clr_global_flag = ongoing_negotiations
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Spain declares war on Los Altos
+	id = SPRCentroamerica.35
+	title = SPRCentroamerica.35.t
+	desc = SPRCentroamerica.35.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.35.a 
+		declare_war_on = {
+			target = LOS
+			type = annex_everything
+		}
+		LOS = { country_event = { days = 2 id = SPRCentroamerica.36 }}	
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Los Altos shits itself
+	id = SPRCentroamerica.36
+	title = SPRCentroamerica.36.t
+	desc = SPRCentroamerica.36.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.36.a #Beg for peace
+	 SPR = { country_event = { days = 2 id = SPRCentroamerica.37 }}	
+	 ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Los Altos bows down 3rd time
+	id = SPRCentroamerica.37
+	title = SPRCentroamerica.37.t
+	desc = SPRCentroamerica.37.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRCentroamerica.37.a #Severe ties
+	    LOS = { add_ideas = sam_idea_severe_ties }
+		white_peace = LOS
+		clr_global_flag = ongoing_negotiations
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #United Centroamerica falls to the Spanish
+	id = SPRCentroamerica.38
+	title = SPRCentroamerica.38.t
+	desc = SPRCentroamerica.38.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+		YUC = { 
+			has_full_control_of_state = 313
+			has_full_control_of_state = 316
+			has_full_control_of_state = 311
+			has_full_control_of_state = 474
+			has_war_with = GUA
+		}
+	}
+	option = {
+		name = SPRCentroamerica.37.a #Creation of New Spain
+		YUC = {
+			annex_country = { target = GUA }
+			set_cosmetic_tag = YUC_NEWSPAIN
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Shits Going down
+	id = SPRCuba.1
+	title = SPRCuba.1.t
+	desc = SPRCuba.1.d
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = SPRCuba.1.a
+		country_event = {
+			id = SPRCuba.2
+			days = 17
+			random = 3
+		}
+	}
+}
+
+country_event = { #Complete mutineers
+	id = SPRCuba.2
+	title = SPRCuba.2.t
+	desc = SPRCuba.2.d
+	
+	immediate = {
+		hidden_effect = {
+			315 = { add_core_of = CUB }
+			923 = { add_core_of = CUB }
+			924 = { add_core_of = CUB }
+			930 = { add_core_of = CUB }
+			set_global_flag = CUB_revolution
+			CUB = {
+				
+				set_technology = {
+					muskets0 = 1
+					melee = 1
+				}
+				set_politics = {
+					ruling_party = revolutionary
+					last_election = "1889.1.10"
+					election_frequency = 48
+					elections_allowed = yes
+				}
+				add_to_array = { national_religion_array =  2 }
+				
+				set_state_owner = 315
+				set_state_controller = 315
+				
+			}
+			SPR = {
+				
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = SPRCuba.2.a
+		ai_chance = {
+			factor = 100
+		}
+		CUB = {
+			declare_war_on = {
+				target = SPW
+				type = liberate_wargoal
+			}
+			set_province_controller = 7622
+			set_province_controller = 13263
+			set_province_controller = 12347
+			load_oob = "CUB_revolt"
+		}
+		add_to_war = { 
+			targeted_alliance = SPW 
+			enemy = CUB
+			hostility_reason = asked_to_join
+		}
+		complete_national_focus = SPR_night_of_mutineers
+	}
+
+	option = {
+		name = SPRCuba.2.b
+		ai_chance = {
+			factor = 0
+		}
+		CUB = {
+			declare_war_on = {
+				target = SPW
+				type = liberate_wargoal
+			}
+			set_province_controller = 7622
+			set_province_controller = 13263
+			set_province_controller = 12347
+			load_oob = "CUB_revolt"
+		}
+		add_to_war = { 
+			targeted_alliance = SPW 
+			enemy = CUB
+			hostility_reason = asked_to_join
+		}
+		complete_national_focus = SPR_night_of_mutineers
+		CUB = { change_tag_from = ROOT }
+	}
+}
+country_event = {
+	id = SPRCuba.3
+	title = SPRCuba.3.t
+	desc = SPRCuba.3.d
+	
+	fire_only_once = yes
+		
+	trigger = {
+		tag = CUB
+		has_war_with = SPW
+		has_global_flag = CUB_revolution
+		NOT = { has_country_flag = CUBRefuse } 
+		controls_state = 930
+		controls_state = 923
+		has_full_control_of_state = 924
+	}
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRCuba.3.a
+		ai_chance = {
+			factor = 75
+		}
+		white_peace = SPR
+		transfer_state = 923
+		transfer_state = 924
+		clr_global_flag = CUB_revolution
+		set_variable = { scripted_war = 0  }
+		set_global_flag = CUB_lives
+		country_event = {
+			id = SPRCuba.11
+			days = 27
+			random = 3
+		}
+		every_country = {
+	    	        news_event = { id = story_news_events.14 days = 0 }
+	    }
+
+		SPR = {
+			complete_national_focus = SPR_disaster_over_disaster
+			set_variable = { scripted_war = 0  }
+		}
+	}
+	option = {
+		name = SPRCuba.3.b
+		ai_chance = {
+			factor = 25
+		}
+		add_stability = -0.10
+		add_war_support = -0.05
+		set_country_flag = CUBRefuse
+	}
+}
+country_event = {
+	id = SPRCuba.4
+	title = SPRCuba.4.t
+	desc = SPRCuba.4.d
+	
+	fire_only_once = yes
+		
+	trigger = {
+		tag = CUB
+		has_war_with = SPR
+		has_global_flag = CUB_revolution
+		has_country_flag = CUBRefuse
+		SPW = {
+			has_capitulated = yes
+		}
+	}
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRCuba.4.a
+		white_peace = SPR
+		transfer_state = 923
+		transfer_state = 924
+		transfer_state = 930
+		add_war_support = 0.05
+		clr_global_flag = CUB_revolution
+		set_variable = { scripted_war = 0  }
+		set_global_flag = CUB_lives
+		country_event = {
+			id = SPRCuba.11
+			days = 27
+			random = 3
+		}
+		every_country = {
+	    	        news_event = { id = story_news_events.14 days = 0 }
+	    }
+		SPR = {
+			complete_national_focus = SPR_disaster_over_disaster
+			set_variable = { scripted_war = 0  }
+		}
+	}
+}
+country_event = {
+	id = SPRCuba.5
+	title = SPRCuba.5.t
+	desc = SPRCuba.5.d
+	
+	fire_only_once = yes
+		
+	trigger = {
+		tag = CUB
+		has_war_with = SPW
+		has_global_flag = CUB_GUA_revolution
+		NOT = { has_country_flag = CUBRefuse } 
+		controls_state = 923
+		controls_state = 930
+		has_full_control_of_state = 924
+		YUC = {
+			has_capitulated = yes
+		}
+	}
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRCuba.5.a
+		ai_chance = {
+			factor = 75
+		}
+		white_peace = SPR
+		transfer_state = 923
+		transfer_state = 924
+		clr_global_flag = CUB_GUA_revolution
+		set_variable = { scripted_war = 0  }
+		set_global_flag = CUB_lives
+		country_event = {
+			id = SPRCuba.11
+			days = 27
+			random = 3
+		}
+		GUA = {
+			transfer_state = 311
+			white_peace = SPR
+			set_variable = { scripted_war = 0  }
+		}
+		every_country = {
+	    	        news_event = { id = story_news_events.14 days = 0 }
+	    		}
+		SPR = {
+			complete_national_focus = SPR_disaster_over_disaster
+			set_variable = { scripted_war = 0  }
+		}
+	}
+	option = {
+		name = SPRCuba.5.b
+		ai_chance = {
+			factor = 25
+		}
+		add_stability = -0.10
+		add_war_support = -0.05
+		set_country_flag = CUBRefuse
+		clr_global_flag = CUB_GUA_Revolution
+		set_global_flag = CUB_revolution
+		GUA = {
+			set_variable = { scripted_war = 0  }
+			transfer_state = 311
+			white_peace = SPR
+		}
+	}
+}
+country_event = {
+	id = SPRCuba.6
+	title = SPRCuba.6.t
+	desc = SPRCuba.6.d
+	
+	fire_only_once = yes
+		
+	trigger = {
+		tag = CUB
+		has_war_with = SPR
+		has_global_flag = CUB_GUA_revolution
+		has_country_flag = CUBRefuse
+		SPW = {
+			has_capitulated = yes
+		}
+		YUC = {
+			has_capitulated = yes
+		}
+	}
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRCuba.6.a
+		white_peace = SPR
+		transfer_state = 923
+		transfer_state = 924
+		transfer_state = 930	
+		transfer_state = 315
+		add_war_support = 0.05
+		clr_global_flag = CUB_GUA_revolution
+		set_variable = { scripted_war = 0  }
+		set_global_flag = CUB_lives
+		country_event = {
+			id = SPRCuba.11
+			days = 27
+			random = 3
+		}
+		GUA = {
+			set_variable = { scripted_war = 0  }
+			transfer_state = 311
+			white_peace = SPR
+		}
+		every_other_country = {
+			limit = {
+				NOT = { tag = CUB }
+	    	    country_event = { id = story_news_events.14 days = 0 }
+			}
+		}
+		SPR = {
+			complete_national_focus = SPR_disaster_over_disaster
+			set_variable = { scripted_war = 0  }
+		}
+	}
+}
+country_event = {
+	id = SPRCuba.7
+	title = SPRCuba.7.t
+	desc = SPRCuba.7.d
+	
+	fire_only_once = yes
+		
+	trigger = {
+		tag = SPR
+		has_war_with = CUB
+		has_global_flag = CUB_GUA_revolution
+		GUA = {
+			surrender_progress > 0.4
+		}
+		CUB = {
+			has_capitulated = yes
+		}
+	}
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRCuba.7.a
+		white_peace = GUA
+		GUA = {
+			set_variable = { scripted_war = 0  }
+		}
+		CUB = {
+			set_variable = { scripted_war = 0  }
+		}
+		YUC = {
+			transfer_state = 920
+		}
+		SPW = {
+			annex_country = { target = CUB }
+		}
+		clr_global_flag = CUB_GUA_revolution
+		set_variable = { scripted_war = 0  }
+		complete_national_focus = SPR_jewel_remains_loyal
+	}
+}
+country_event = {
+	id =  SPRCuba.8
+	title = SPRCuba.8.t
+	desc = SPRCuba.8.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRCuba.8.a
+		CUB = {
+			set_variable = { scripted_war = 0  }
+		}
+		SPW = {
+			annex_country = { target = CUB }
+		}
+		clr_global_flag = CUB_revolution
+		set_variable = { scripted_war = 0  }
+		complete_national_focus = SPR_jewel_remains_loyal
+	}
+}
+
+country_event = {
+	id = SPRCuba.9  #Cuban Civil War averted
+	title = SPRCuba.9.t
+	desc = SPRCuba.9.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRCuba.9.a
+	}
+}
+
+country_event = {
+	id = SPRCuba.10  #Cuban Civil War not averted
+	title = SPRCuba.10.t
+	desc = SPRCuba.10.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRCuba.10.a
+		start_civil_war = {
+			ideology = apolitical
+			size = 0.5
+		}
+	}
+}
+
+country_event = {
+	id = SPRCuba.11  #Reform Government
+	title = SPRCuba.11.t
+	desc = SPRCuba.11.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRCuba.11.a
+		add_popularity = {
+			ideology = conservative
+			popularity = 0.95
+		}
+		set_politics = {
+			ruling_party = conservative
+			elections_allowed = no
+		}
+	}
+}
+
+country_event = {
+	id = SPRCuba.12  #Giving ai boats
+	title = SPRCuba.12.t
+	desc = SPRCuba.12.d
+	
+	fire_only_once = yes
+		
+	trigger = {
+		tag = SPR
+		has_global_flag = CUB_GUA_revolution
+		is_ai = yes
+	}
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRCuba.12.a
+		if = {
+			LIMIT = {
+				has_dlc = "Man the Guns"
+			}
+			set_technology = {
+				mtg_transport = 1
+			}
+			else = {
+				set_technology = {
+					transport = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SPRRegency.1  #Felipe
+	title = SPRRegency.1.t
+	desc = SPRRegency.1.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRRegency.1.a
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			if = {
+				LIMIT = {
+					NOT = {
+						has_idea = spr_idea_civil_war
+					}
+				}
+				add_ideas = spr_idea_civil_war
+				add_timed_idea = {
+					idea = spr_idea_weak_army_foundations
+					days = 120
+				}
+				set_global_flag = SPR_civil_war
+				
+			}
+			every_state = {
+				LIMIT = {
+					is_core_of = SPR
+				}
+				add_core_of = SPF
+			}
+			start_civil_war = {
+				ideology = weitlingist
+				size = 0.2
+				capital = 167
+				states = { 114 118 167 168 173 177 172 }
+			}
+			random_country = {
+				limit = {
+					original_tag = SPR
+					has_government = weitlingist
+				}
+				SPF = {
+					annex_country = { target = PREV transfer_troops = yes }
+				}
+			}
+			SPF = {
+				
+				country_lock_all_division_template = yes
+				inherit_technology = SPR
+				if ={
+					LIMIT = { has_tech = modernize_army }
+					set_technology = { modernize_army = 0 }
+				}
+				set_capital = 167
+				declare_war_on = {
+					target = SPR
+					type = spanish_civil_war_wargoal
+				}
+				load_oob = "SPF_Army"
+				167 = { 
+					create_unit = {
+						division = "name = \"1st Royal Felipian Guard Battalion\" division_template = \"Royal Felipian Guard Battalion\" start_experience_factor = 0.3" 
+						owner = SPF
+					}
+				}
+				172 = { 
+					create_unit = {
+						division = "name = \"2nd Royal Felipian Guard Battalion\" division_template = \"Royal Felipian Guard Battalion\" start_experience_factor = 0.3" 
+						owner = SPF
+					}
+				}
+				173 = { 
+					limit = { 
+						is_controlled_by = SPF 
+					}
+					create_unit = {
+						division = "name = \"3rd Royal Felipian Guard Battalion\" division_template = \"Royal Felipian Guard Battalion\" start_experience_factor = 0.3" 
+						owner = SPF
+					}
+				}
+				168 = { 
+					create_unit = {
+						division = "name = \"1st Royal Felipian Cavalry Division\" division_template = \"Royal Felipian Cavalry Division\" start_experience_factor = 0.3" 
+						owner = SPF
+					}
+				}
+				118 = { 
+					create_unit = {
+						division = "name = \"2nd Royal Felipian Cavalry Division\" division_template = \"Royal Felipian Cavalry Division\" start_experience_factor = 0.3" 
+						owner = SPF
+					}
+				}
+				if = {
+					LIMIT = {
+						ROOT = { check_variable = { spr_var_regency_felipe > 0.09 }}
+					}
+					167 = { 
+						create_unit = {
+							division = "name = \"4th Royal Felipian Guard Battalion\" division_template = \"Royal Felipian Guard Battalion\" start_experience_factor = 0.3" 
+							owner = SPF
+						}
+					}
+					177 = { 
+						create_unit = {
+							division = "name = \"5th Royal Felipian Guard Battalion\" division_template = \"Royal Felipian Guard Battalion\" start_experience_factor = 0.3" 
+							owner = SPF
+						}
+					}
+					173 = { 
+						create_unit = {
+							division = "name = \"3rd Royal Felipian Cavalry Division\" division_template = \"Royal Felipian Cavalry Division\" start_experience_factor = 0.3" 
+							owner = SPF
+						}
+					}
+				}
+				if = {
+					LIMIT = {
+						ROOT = { check_variable = { spr_var_regency_felipe > 0.24 }}
+					}
+					118 = { 
+						create_unit = {
+							division = "name = \"6th Royal Felipian Guard Battalion\" division_template = \"Royal Felipian Guard Battalion\" start_experience_factor = 0.3" 
+							owner = SPF
+						}
+					}
+					172 = { 
+						create_unit = {
+							division = "name = \"4th Royal Felipian Cavalry Division\" division_template = \"Royal Felipian Cavalry Division\" start_experience_factor = 0.3" 
+							owner = SPF
+						}
+					}
+				}
+				if = {
+					LIMIT = {
+						ROOT = { check_variable = { spr_var_regency_felipe > 0.44 }}
+					}
+					167 = { 
+						create_unit = {
+							division = "name = \"7th Royal Felipian Guard Battalion\" division_template = \"Royal Felipian Guard Battalion\" start_experience_factor = 0.3" 
+							owner = SPF
+						}
+					}
+					168 = { 
+						create_unit = {
+							division = "name = \"8th Royal Felipian Guard Battalion\" division_template = \"Royal Felipian Guard Battalion\" start_experience_factor = 0.3" 
+							owner = SPF
+						}
+					}
+					177 = { 
+						create_unit = {
+							division = "division_template = \"Royal Felipian Cavalry Division\" start_experience_factor = 0.3" 
+							owner = SPF
+						}
+					}
+				}
+				if = {
+					LIMIT = {
+						country_exists = SPP
+					}
+					declare_war_on = {
+						target = SPP
+						type = spanish_civil_war_wargoal
+					}
+				}
+				add_ideas = spr_idea_civil_war
+			}
+		}
+	}
+	option = {
+		name = SPRRegency.1.b
+		ai_chance = {
+			factor = 0
+		}
+		hidden_effect = {
+			if = {
+				LIMIT = {
+					NOT = {
+						has_idea = spr_idea_civil_war
+					}
+				}
+				add_ideas = spr_idea_civil_war
+				add_timed_idea = {
+					idea = spr_idea_weak_army_foundations
+					days = 120
+				}
+				set_global_flag = SPR_civil_war
+				
+			}
+			every_state = {
+				LIMIT = {
+					is_core_of = SPR
+				}
+				add_core_of = SPF
+			}
+			start_civil_war = {
+				ideology = weitlingist
+				size = 0.2
+				capital = 167
+				states = { 114 118 167 168 173 177 172 }
+			}
+			random_country = {
+				limit = {
+					original_tag = SPR
+					has_government = weitlingist
+				}
+				SPF = {
+					annex_country = { target = PREV transfer_troops = yes }
+				}
+			}
+			SPF = {
+				
+				country_lock_all_division_template = yes
+				inherit_technology = SPR
+				if ={
+					LIMIT = { has_tech = modernize_army }
+					set_technology = { modernize_army = 0 }
+				}
+				set_capital = 167
+				declare_war_on = {
+					target = SPR
+					type = spanish_civil_war_wargoal
+				}
+				load_oob = "SPF_Army"
+				167 = { 
+					create_unit = {
+						division = "name = \"1st Royal Felipian Guard Battalion\" division_template = \"Royal Felipian Guard Battalion\" start_experience_factor = 0.3" 
+						owner = SPF
+					}
+				}
+				172 = { 
+					create_unit = {
+						division = "name = \"2nd Royal Felipian Guard Battalion\" division_template = \"Royal Felipian Guard Battalion\" start_experience_factor = 0.3" 
+						owner = SPF
+					}
+				}
+				173 = { 
+					create_unit = {
+						division = "name = \"3rd Royal Felipian Guard Battalion\" division_template = \"Royal Felipian Guard Battalion\" start_experience_factor = 0.3" 
+						owner = SPF
+					}
+				}
+				168 = { 
+					create_unit = {
+						division = "name = \"1st Royal Felipian Cavalry Division\" division_template = \"Royal Felipian Cavalry Division\" start_experience_factor = 0.3" 
+						owner = SPF
+					}
+				}
+				118 = { 
+					create_unit = {
+						division = "name = \"2nd Royal Felipian Cavalry Division\" division_template = \"Royal Felipian Cavalry Division\" start_experience_factor = 0.3" 
+						owner = SPF
+					}
+				}
+				if = {
+					LIMIT = {
+						ROOT = { check_variable = { spr_var_regency_felipe > 0.09 }}
+					}
+					167 = { 
+						create_unit = {
+							division = "name = \"4th Royal Felipian Guard Battalion\" division_template = \"Royal Felipian Guard Battalion\" start_experience_factor = 0.3" 
+							owner = SPF
+						}
+					}
+					177 = { 
+						create_unit = {
+							division = "name = \"5th Royal Felipian Guard Battalion\" division_template = \"Royal Felipian Guard Battalion\" start_experience_factor = 0.3" 
+							owner = SPF
+						}
+					}
+					173 = { 
+						create_unit = {
+							division = "name = \"3rd Royal Felipian Cavalry Division\" division_template = \"Royal Felipian Cavalry Division\" start_experience_factor = 0.3" 
+							owner = SPF
+						}
+					}
+				}
+				if = {
+					LIMIT = {
+						ROOT = { check_variable = { spr_var_regency_felipe > 0.24 }}
+					}
+					118 = { 
+						create_unit = {
+							division = "name = \"6th Royal Felipian Guard Battalion\" division_template = \"Royal Felipian Guard Battalion\" start_experience_factor = 0.3" 
+							owner = SPF
+						}
+					}
+					172 = { 
+						create_unit = {
+							division = "name = \"4th Royal Felipian Cavalry Division\" division_template = \"Royal Felipian Cavalry Division\" start_experience_factor = 0.3" 
+							owner = SPF
+						}
+					}
+				}
+				if = {
+					LIMIT = {
+						ROOT = { check_variable = { spr_var_regency_felipe > 0.44 }}
+					}
+					167 = { 
+						create_unit = {
+							division = "name = \"7th Royal Felipian Guard Battalion\" division_template = \"Royal Felipian Guard Battalion\" start_experience_factor = 0.3" 
+							owner = SPF
+						}
+					}
+					168 = { 
+						create_unit = {
+							division = "name = \"8th Royal Felipian Guard Battalion\" division_template = \"Royal Felipian Guard Battalion\" start_experience_factor = 0.3" 
+							owner = SPF
+						}
+					}
+					177 = { 
+						create_unit = {
+							division = "division_template = \"Royal Felipian Cavalry Division\" start_experience_factor = 0.3" 
+							owner = SPF
+						}
+					}
+				}
+				if = {
+					LIMIT = {
+						country_exists = SPP
+					}
+					declare_war_on = {
+						target = SPP
+						type = spanish_civil_war_wargoal
+					}
+				}
+				add_ideas = spr_idea_civil_war
+				change_tag_from = SPR
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SPRRegency.2  #Revolt Timer
+	title = SPRRegency.2.t
+	desc = SPRRegency.2.d
+	
+	fire_only_once = no
+		
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRRegency.2.a
+		hidden_effect = {
+			add_to_variable = { spr_var_regency_popular = 0.05 }
+			if = {
+				LIMIT = {
+					NOT = {
+						has_global_flag = SPR_Civil_war_ended
+						has_global_flag = SPR_popular_revolt
+					}
+				}
+				country_event = { id = SPRRegency.2 days = 10 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SPRRegency.3  #Revolt
+	title = SPRRegency.3.t
+	desc = SPRRegency.3.d
+	
+	fire_only_once = yes
+		
+	trigger = {
+		SPR = {
+			has_completed_focus = SPR_legitimized_government
+		}
+		NOT = {
+			has_global_flag = SPR_popular_revolt
+			has_global_flag = SPR_Civil_war_ended
+		}
+		check_variable = { spr_var_regency_popular > 0.99 }
+	}
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRRegency.3.a
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			if = {
+				LIMIT = {
+					NOT = {
+						has_idea = spr_idea_civil_war
+					}
+				}
+				add_timed_idea = {
+					idea = spr_idea_weak_army_foundations
+					days = 120
+				}
+				add_ideas = spr_idea_civil_war
+				set_global_flag = SPR_civil_war
+				
+			}
+			every_state = {
+				LIMIT = {
+					is_core_of = SPR
+				}
+				add_core_of = SPP
+			}
+			start_civil_war = {
+				ideology = weitlingist
+				size = 0.2
+				capital = 166
+				states = { 166 171 174 178 939 175}
+			}
+			random_country = {
+				limit = {
+					original_tag = SPR
+					has_government = weitlingist
+				}
+				SPP = {
+					annex_country = { target = PREV transfer_troops = yes }
+				}
+			}
+			SPP = {
+				
+				country_lock_all_division_template = yes
+				inherit_technology = SPR
+				if ={
+					LIMIT = { has_tech = modernize_army }
+					set_technology = { modernize_army = 0 }
+				}
+				set_capital = 166
+				declare_war_on = {
+					target = SPR
+					type = spanish_civil_war_wargoal
+				}
+				if = {
+					LIMIT = {
+						country_exists = SPF
+					}
+					declare_war_on = {
+						target = SPF
+						type = spanish_civil_war_wargoal
+					}
+				}
+				add_ideas = spr_idea_civil_war
+				load_oob = "SPP_1886"
+				166 = { 
+					create_unit = {
+						division = "division_template = \"Spanish Revolutionary War Battalion\" start_experience_factor = 0.3" 
+						owner = SPP
+					}
+				}
+				171 = { 
+					create_unit = {
+						division = "division_template = \"Spanish Revolutionary War Battalion\" start_experience_factor = 0.3" 
+						owner = SPP
+					}
+				}
+				166 = { 
+					create_unit = {
+						division = "division_template = \"Spanish Revolutionary Militia Division\" start_experience_factor = 0.2" 
+						owner = SPP
+						count = 2
+					}
+				}
+				171 = { 
+					create_unit = {
+						division = "division_template = \"Spanish Revolutionary Militia Division\" start_experience_factor = 0.2" 
+						owner = SPP
+						count = 2
+					}
+				}
+				174 = { 
+					create_unit = {
+						division = "division_template = \"Spanish Revolutionary Militia Division\" start_experience_factor = 0.2" 
+						owner = SPP
+						count = 2
+					}
+				}
+				939 = { 
+					create_unit = {
+						division = "division_template = \"Spanish Revolutionary Militia Division\" start_experience_factor = 0.2" 
+						owner = SPP
+						count = 2
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = SPRRegency.3.b
+		ai_chance = {
+			factor = 0
+		}
+		hidden_effect = {
+			if = {
+				LIMIT = {
+					NOT = {
+						has_idea = spr_idea_civil_war
+					}
+				}
+				add_ideas = spr_idea_civil_war
+				add_timed_idea = {
+					idea = spr_idea_weak_army_foundations
+					days = 120
+				}
+				set_global_flag = SPR_civil_war
+				
+			}
+			every_state = {
+				LIMIT = {
+					is_core_of = SPR
+				}
+				add_core_of = SPP
+			}
+			start_civil_war = {
+				ideology = weitlingist
+				size = 0.2
+				capital = 166
+				states = { 166 171 174 178 939 175}
+			}
+			random_country = {
+				limit = {
+					original_tag = SPR
+					has_government = weitlingist
+				}
+				SPP = {
+					annex_country = { target = PREV transfer_troops = yes }
+				}
+			}
+			SPP = {
+				
+				country_lock_all_division_template = yes
+				inherit_technology = SPR
+				if ={
+					LIMIT = { has_tech = modernize_army }
+					set_technology = { modernize_army = 0 }
+				}
+				set_capital = 166
+				declare_war_on = {
+					target = SPR
+					type = spanish_civil_war_wargoal
+				}
+				if = {
+					LIMIT = {
+						country_exists = SPF
+					}
+					declare_war_on = {
+						target = SPF
+						type = spanish_civil_war_wargoal
+					}
+				}
+				add_ideas = spr_idea_civil_war
+				load_oob = "SPP_1886"
+				166 = { 
+					create_unit = {
+						division = "division_template = \"Spanish Revolutionary War Battalion\" start_experience_factor = 0.3" 
+						owner = SPP
+					}
+				}
+				171 = { 
+					create_unit = {
+						division = "division_template = \"Spanish Revolutionary War Battalion\" start_experience_factor = 0.3" 
+						owner = SPP
+					}
+				}
+				166 = { 
+					create_unit = {
+						division = "division_template = \"Spanish Revolutionary Militia Division\" start_experience_factor = 0.2" 
+						owner = SPP
+						count = 2
+					}
+				}
+				171 = { 
+					create_unit = {
+						division = "division_template = \"Spanish Revolutionary Militia Division\" start_experience_factor = 0.2" 
+						owner = SPP
+						count = 2
+					}
+				}
+				174 = { 
+					create_unit = {
+						division = "division_template = \"Spanish Revolutionary Militia Division\" start_experience_factor = 0.2" 
+						owner = SPP
+						count = 2
+					}
+				}
+				939 = { 
+					create_unit = {
+						division = "division_template = \"Spanish Revolutionary Militia Division\" start_experience_factor = 0.2" 
+						owner = SPP
+						count = 2
+					}
+				}
+				change_tag_from = SPR
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SPRRegency.4  #Civil War Ends
+	title = SPRRegency.4.t
+	desc = SPRRegency.4.d
+	
+	fire_only_once = yes
+		
+	trigger = {
+		OR = {
+			tag = SPR
+			tag = SPP
+			tag = SPF
+		}
+		has_idea = spr_idea_civil_war
+		num_of_controlled_states > 2
+		count_triggers = { #Done to allow civil war to end even if France owns some Spanish land
+			amount = 2
+			SPR = {
+				NOT = {
+					controls_state = 41
+					controls_state = 118
+					controls_state = 165
+					controls_state = 166
+					controls_state = 167
+					controls_state = 168
+					controls_state = 169
+					controls_state = 170
+					controls_state = 171
+					controls_state = 172
+					controls_state = 173
+					controls_state = 174
+					controls_state = 175
+					controls_state = 176
+					controls_state = 793
+					controls_state = 936
+					controls_state = 937
+					controls_state = 938
+					controls_state = 939
+				}
+			}
+			SPP = {
+				NOT = {
+					controls_state = 41
+					controls_state = 118
+					controls_state = 165
+					controls_state = 166
+					controls_state = 167
+					controls_state = 168
+					controls_state = 169
+					controls_state = 170
+					controls_state = 171
+					controls_state = 172
+					controls_state = 173
+					controls_state = 174
+					controls_state = 175
+					controls_state = 176
+					controls_state = 793
+					controls_state = 936
+					controls_state = 937
+					controls_state = 938
+					controls_state = 939
+				}
+			}
+			SPF = {
+				NOT = {
+					controls_state = 41
+					controls_state = 118
+					controls_state = 165
+					controls_state = 166
+					controls_state = 167
+					controls_state = 168
+					controls_state = 169
+					controls_state = 170
+					controls_state = 171
+					controls_state = 172
+					controls_state = 173
+					controls_state = 174
+					controls_state = 175
+					controls_state = 176
+					controls_state = 793
+					controls_state = 936
+					controls_state = 937
+					controls_state = 938
+					controls_state = 939
+				}
+			}
+		}
+	}
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRRegency.4.a
+		hidden_effect = {
+			if = {
+				LIMIT = {
+					SPP = { has_completed_focus = SPP_with_them }
+				}
+				FRA = {
+					add_manpower = 7500
+					army_experience = 15
+				}
+			}
+			if = {
+				LIMIT = {
+					SPR = {
+						has_war_with = CUB
+					}
+				}
+				if = {
+					LIMIT = {
+						ROOT = { tag = SPF }
+					}
+					SPR = {
+						set_autonomy = {
+							target = CUB
+							autonomy_state =  autonomy_colony
+						}
+					}
+					if = {
+						LIMIT = {
+							NOT = { CUB = { controls_state = 930 } }
+						}
+						CUB = {
+							transfer_state = 930
+						}
+					}
+				}
+				else = {
+					SPW = { annex_country = { target = CUB } }
+				}
+			}
+			if = {
+				LIMIT = {
+					SPR = {
+						has_war_with = TUS
+					}
+				}
+				SPR = {
+					white_peace = TUS
+				}
+			}
+			if = {
+				LIMIT = {
+					tag = SPF
+				}
+				SPR = {
+					set_country_flag = SPR_Felipe_Won
+					retire_country_leader = yes 
+					create_country_leader = {
+						name = "Felipe VI"
+						desc = "SPR_LEADER_DESC_FELIPE_VI"
+						picture = "Portrait_SPR_Felipe_VI.dds"
+						expire = "1965.1.1"
+						ideology = absolutist_radical
+						traits = {
+							personal_trait_zealot
+						}
+					}
+					add_ideas = spr_idea_everything_for_king
+					add_ideas = spr_idea_obliterate_resistance
+					add_ideas = spr_idea_felipe_back
+					add_timed_idea = {
+						idea = spr_idea_definitive_purge
+						days = 730
+					}
+					if = {
+						LIMIT = {
+							TUS = { controls_state = 114 }
+						}
+						114 = {
+							remove_core_of = SPR
+						}
+					}
+					remove_hog = yes
+					set_variable = { hog_name = ROOT.hog_name }
+					set_variable = { hog_desc = ROOT.hog_desc }
+					set_variable = { hog_portrait = ROOT.hog_portrait }
+					set_variable = { hog_party = ROOT.hog_party }
+					set_variable = { hog_loyalty = ROOT.hog_loyalty }
+					set_variable = { hog_name = ROOT.hog_exp }
+					set_variable = { hog_desc = ROOT.hog_political_skill }
+					set_variable = { hog_portrait = ROOT.hog_unity_skill }
+					set_variable = { hog_party = ROOT.hog_industrial_skill }
+					set_variable = { hog_loyalty = ROOT.hog_military_skill }
+					if = {	#Has HOG?
+						LIMIT = {
+							ROOT = {
+								has_country_flag = has_hog
+							}
+						}
+						set_country_flag = has_hog
+					}
+					change_tag_from = SPF
+				}
+			}
+			if = {
+				LIMIT = {
+					tag = SPP
+				}
+				SPR = {
+					set_country_flag = SPR_Enrique_Won
+					add_popularity = {
+						ideology = centrist
+						popularity = 0.45
+					}
+					set_politics = {
+						ruling_party = centrist
+						elections_allowed = no
+					}
+					retire_country_leader = yes 
+					create_country_leader = {
+						name = "Enrique V"
+						desc = "SPR_LEADER_DESC_ENRIQUE_V"
+						picture = "Portrait_SPR_Enrique_II.dds"
+						expire = "1965.1.1"
+						ideology = centrist_moderate
+						traits = {
+							#
+						}
+					}
+					add_ideas = spr_idea_reorganize_masses
+					add_ideas = spr_idea_people_for_king
+					if = {
+						LIMIT = {
+							SPP = {
+								has_completed_focus = SPP_defender_of_liberty
+							}
+						}
+						add_ideas = spr_idea_benevolent_globalism
+					}
+					if = {
+						LIMIT = {
+							SPP = {
+								has_completed_focus = SPP_benevolent_globalism
+							}
+						}
+						add_ideas = spr_idea_benevolent_globalism
+						
+					}
+					if = {
+						LIMIT = {
+							SPP = {
+								has_completed_focus = SPP_economize_budget
+							}
+						}
+						add_timed_idea = {
+							idea = spr_idea_economized_budget
+							days = 730
+						}
+						else = {
+							add_timed_idea = {
+								idea = spr_idea_equality_before_state
+								days = 730
+							}
+						}
+					}
+					remove_hog = yes
+					set_variable = { hog_name = ROOT.hog_name }
+					set_variable = { hog_desc = ROOT.hog_desc }
+					set_variable = { hog_portrait = ROOT.hog_portrait }
+					set_variable = { hog_party = ROOT.hog_party }
+					set_variable = { hog_loyalty = ROOT.hog_loyalty }
+					set_variable = { hog_name = ROOT.hog_exp }
+					set_variable = { hog_desc = ROOT.hog_political_skill }
+					set_variable = { hog_portrait = ROOT.hog_unity_skill }
+					set_variable = { hog_party = ROOT.hog_industrial_skill }
+					set_variable = { hog_loyalty = ROOT.hog_military_skill }
+					if = {	#Has HOG?
+						LIMIT = {
+							ROOT = {
+								has_country_flag = has_hog
+							}
+						}
+						set_country_flag = has_hog
+					}
+					change_tag_from = SPP
+				}
+			}
+			SPF = {
+				dismantle_faction = yes
+			}
+			every_state = {
+				LIMIT = {
+					OR = {
+						is_core_of = SPF
+						is_core_of = SPP
+					}
+				}
+				remove_core_of = SPF
+				remove_core_of = SPP
+			}
+			every_country = {
+				LIMIT = { is_puppet_of = SPF }
+				SPR = {
+					white_peace = PREV
+					set_autonomy = {
+						target = PREV
+						autonomy_state =  autonomy_colony
+					}
+				}
+			}
+			SPR = {
+				remove_ideas = spr_idea_civil_war
+				set_variable = { scripted_war = 0  }
+				if = {
+					LIMIT = {
+						OR = {
+							ROOT = {
+								tag = SPP
+								tag = SPF
+							}
+						}
+					}
+					remove_ideas = spr_idea_improve_spanish_armada
+					remove_ideas = spr_idea_new_tercio
+				}
+				annex_country = {
+					target = SPP
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = SPF
+					transfer_troops = yes
+				}
+				add_ideas = spr_idea_civil_war_recovery
+				complete_national_focus = SPR_benevolent_absolutism_at_its_finest
+				set_global_flag = SPR_civil_war_finished
+			}
+		}
+		SPR = {
+			load_focus_tree = Spain_post_civil_war
+		}
+	}
+}
+
+country_event = {
+	id = SPRRegency.5  #Zuniga leaves
+	title = SPRRegency.5.t
+	desc = SPRRegency.5.d
+	
+	fire_only_once = yes
+		
+	trigger = {
+		tag = SPR
+		has_idea = spr_idea_civil_war
+		check_variable = { hog_loyalty < 0.65 }
+	}
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRRegency.5.a
+		hidden_effect = {
+			remove_hog = yes
+			add_stability = -0.15
+			SPF = {
+				country_event = SPRRegency.6
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SPRRegency.6  #Zuniga joins
+	title = SPRRegency.6.t
+	desc = SPRRegency.6.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRRegency.6.a
+		hidden_effect = {
+			remove_hog = yes
+			set_variable = { hog_name = 2000 }
+			set_variable = { hog_party = 2 }
+			set_variable = { hog_loyalty = 0.9000 }
+			set_variable = { hog_exp = 37 }
+			set_variable = { hog_political_skill = 0.025 }
+			set_variable = { hog_unity_skill = 0.025 }
+			set_variable = { hog_industrial_skill = 0 }
+			set_variable = { hog_military_skill = 0.025 }
+			set_country_flag = has_hog
+			add_stability = 0.10
+		}
+	}
+}
+
+country_event = { ## showcase event
+	id = SPRRegency.10
+	title = SPRRegency.10.t
+	desc = SPRRegency.10.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRRegency.10.a
+		hidden_effect = {
+			118 = {add_core_of = SPF }
+			167 = {add_core_of = SPF }
+			168 = {add_core_of = SPF }
+			169 = {add_core_of = SPF }
+			173 = {add_core_of = SPF }
+			175 = {add_core_of = SPF }
+			177 = {add_core_of = SPF }
+			
+			166 = {add_core_of = SPP }
+			171 = {add_core_of = SPP }
+			174 = {add_core_of = SPP }
+			SPF = {
+				transfer_state = 118
+				transfer_state = 167
+				transfer_state = 168
+				transfer_state = 169
+				transfer_state = 173
+				transfer_state = 175
+				transfer_state = 177
+				set_capital = 167
+			}
+			SPP = {
+				transfer_state = 166
+				transfer_state = 171
+				transfer_state = 174
+				set_capital = 166
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SPRRegency.11  #Choices
+	title = SPRRegency.11.t
+	desc = SPRRegency.11.d
+	
+	fire_only_once = no
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRRegency.11.a
+		complete_national_focus = SPR_side_france
+		hidden_effect = {
+			set_country_flag = SPR_has_sided_FRA
+		}
+	}
+	option = {
+		name = SPRRegency.11.b
+		complete_national_focus = SPR_side_savoy
+	}
+	
+	option = {
+		name = SPRRegency.11.c
+		trigger = {
+			TUS = {
+				controls_state = 114
+			}
+		}
+		complete_national_focus = SPR_denounce_loss_of_sardinia
+	}
+} 
+
+country_event = {
+	id = SPRRegency.12  #Purge of Backstabbers
+	title = SPRRegency.12.t
+	desc = SPRRegency.12.d
+	
+	fire_only_once = no
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRRegency.12.a
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = TUS
+			expire = 0
+		}
+	}
+} 
+
+country_event = {
+	id = SPRRegency.13  #Rudolf as example
+	title = SPRRegency.13.t
+	desc = SPRRegency.13.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRRegency.13.a
+		add_stability = 0.05
+	}
+} 
+
+## Indian border War
+country_event = { ## After Spain strikes French India
+	id = SPRIndia.1
+	title = SPRIndia.1.t
+	desc = SPRIndia.1.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRIndia.1.a
+		ai_chance = {
+			factor = 80
+		}
+		SPR = {
+			set_country_flag = FRA_reparations
+			country_event = SPRIndia.2
+		}
+	}
+	
+	option = {
+		name = SPRIndia.1.b
+		ai_chance = {
+			factor = 20
+		}
+		SPR = {
+			declare_war_on = {
+				target = FRA
+				type = annex_everything
+			}
+			add_ideas = spr_idea_franco_spanish_war
+		}
+		FRA = {
+			complete_national_focus  = FRA_war_between_empires
+			add_ideas = spr_idea_franco_spanish_war
+		}
+		set_global_flag = FRA_SPR_India_war
+	}
+}
+country_event = { ## French Reparation
+	id = SPRIndia.2
+	title = SPRIndia.2.t
+	desc = SPRIndia.2.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRIndia.2.a
+	}
+}
+country_event = { ## After Spain strikes French India
+	id = SPRIndia.3
+	title = SPRIndia.3.t
+	desc = SPRIndia.3.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRIndia.3.a
+		ai_chance = {
+			factor = 75
+		}
+		SPR = {
+			add_ideas = spr_french_reparations
+		}
+		FRA = {
+			add_ideas = spr_french_reparations1
+			complete_national_focus  = FRA_spain_humility
+		}
+	}
+	
+	option = {
+		name = SPRIndia.3.b
+		ai_chance = {
+			factor = 25
+		}
+		SPR = {
+			declare_war_on = {
+				target = FRA
+				type = annex_everything
+			}
+			add_ideas = spr_idea_franco_spanish_war
+		}
+		FRA = {
+			complete_national_focus  = FRA_war_between_empires
+			add_ideas = spr_idea_franco_spanish_war
+		}
+		set_global_flag = FRA_SPR_India_war
+	}
+}
+country_event = { ## Francisco I
+	id = SPRIndia.4
+	title = SPRIndia.4.t
+	desc = SPRIndia.4.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRIndia.4.a
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Francisco I"
+			desc = "SPR_LEADER_DESC_FRANCISCO_I"
+			picture = "Portrait_SPR_Francisco_I.dds"
+			expire = "1965.1.1"
+			ideology = absolutist_radical
+			traits = {
+				#
+			}
+		}
+		SPN = {
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Francisco I"
+				desc = "SPR_LEADER_DESC_FRANCISCO_I"
+				picture = "Portrait_SPR_Francisco_I.dds"
+				expire = "1965.1.1"
+				ideology = despotist_moderate
+				traits = {
+					#
+				}
+			}
+		}
+	}
+}
+
+country_event = { ## Aquitaine
+	id = SPRIndia.5
+	title = SPRIndia.5.t
+	desc = SPRIndia.5.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	option = {
+		name = SPRIndia.5.a
+		hidden_effect = {
+			31 = {add_core_of = AQU }
+			922 = {add_core_of = AQU }
+			set_autonomy = {
+				target = AQU
+				autonomy_state =  autonomy_integrated_puppet
+			}
+			AQU = {
+				set_cosmetic_tag = AQU_SPR_FRA_war
+				if = { 
+					LIMIT = { 
+						NOT = { country_exists = AQU } 
+					}
+					SPR = { transfer_state = 922 }
+					transfer_state = 31
+					set_capital = 31
+				}
+				add_popularity = {
+					ideology = despotist
+					popularity = 0.95
+				}
+				set_politics = {
+					ruling_party = despotist
+					elections_allowed = no
+				}
+				retire_country_leader = yes
+				create_country_leader = {
+					name = "Francisco I"
+					desc = "SPR_LEADER_DESC_FRANCISCO_I"
+					picture = "Portrait_SPR_Francisco_I.dds"
+					expire = "1965.1.1"
+					ideology = despotist_moderate
+					traits = {
+						#
+					}
+				}
+				load_oob = "AQU_SPR_1886"
+			}
+		}
+	add_stability = 0.04
+	}
+}
+
+country_event = { ## A Fair Deal
+	id = SPRIndia.6
+	title = SPRIndia.6.t
+	desc = SPRIndia.6.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	option = {
+		name = SPRIndia.6.a
+		hidden_effect = {
+			clr_global_flag = FRA_SPR_India_war
+			19 = {add_core_of = AQU }
+			AQU = {
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = AQU_SPR
+				if = { 
+					LIMIT = { 
+						NOT = { owns_state = 19 }
+					}
+					transfer_state = 19
+					set_capital = 19
+				}
+			}
+			
+			SPN = {
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = SPN_FRA
+				retire_country_leader = yes
+				create_country_leader = {
+					name = "Charles XI"
+					desc = "FRA_LEADER_DESC_CHARLES_XI"   
+					picture = "Portrait_FRA_Charles_XI.dds"
+					expire = "1965.1.1"
+					ideology = despotist_moderate
+					traits = {
+						personal_trait_true_moderate
+					}
+				}
+			}
+			FRA = {
+				set_autonomy = {
+					target = SPN
+					autonomy_state =  autonomy_puppet
+				}
+				white_peace = SPR
+				940 = { add_core_of = FRA }
+				transfer_state = 940
+				set_variable = { scripted_war = 0  }
+				remove_ideas = spr_idea_franco_spanish_war
+			}
+			SPR = {
+				remove_ideas = spr_idea_franco_spanish_war
+				set_variable = { scripted_war = 0  }
+				transfer_state = 848
+			}
+		}
+	}
+}
+
+country_event = { ## French Victory
+	id = SPRIndia.7
+	title = SPRIndia.7.t
+	desc = SPRIndia.7.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	option = {
+		name = SPRIndia.7.a
+		white_peace = SPR
+		SPR = {
+			country_event = SPRIndia.8
+		}
+	}
+	option = {
+		name = SPRIndia.7.b
+		white_peace = SPR
+		SPR = {
+			country_event = SPRIndia.9
+		}
+	}
+}
+
+country_event = { ## French Victory
+	id = SPRIndia.8
+	title = SPRIndia.8.t
+	desc = SPRIndia.8.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	option = {
+		name = SPRIndia.8.a
+		complete_national_focus = SPR_the_new_order
+		add_stability = -0.10
+		hidden_effect = {
+			remove_ideas = spr_disastrous_campaign
+			clr_global_flag = FRA_SPR_India_war
+			IF = { 
+				LIMIT = { 
+					country_exists = AQU
+				}
+				FRA = { annex_country = { target = AQU } }
+			}
+			every_country = {
+				LIMIT = {
+					is_subject_of = SPR
+					NOT = {
+						tag = SPN
+					}
+				}
+				set_country_flag = formerColony
+			}
+			SPN = {
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = SPN_FRA
+				retire_country_leader = yes
+				create_country_leader = {
+					name = "Charles XI"
+					desc = "FRA_LEADER_DESC_CHARLES_XI"   
+					picture = "Portrait_FRA_Charles_XI.dds"
+					expire = "1965.1.1"
+					ideology = despotist_moderate
+					traits = {
+						personal_trait_true_moderate
+					}
+				}
+			}
+			IF = { 
+				LIMIT = { 
+					country_exists = IND
+				}
+				IND = { transfer_state = 847 }
+				else = {
+					FRA = { transfer_state = 847 }
+				}
+			}
+			FRA = {
+				set_autonomy = {
+					target = SPN
+					autonomy_state =  autonomy_puppet
+				}
+				set_autonomy = {
+					target = SPR
+					autonomy_state =  autonomy_supervised_state
+				}
+				793 = { add_core_of = FRA }
+				transfer_state = 793
+				940 = { add_core_of = FRA }
+				transfer_state = 940
+				if = {
+					LIMIT = { NOT = { owns_state = 922 } }
+					transfer_state = 922
+				}
+				#set_variable = { scripted_war = 0  }
+				remove_ideas = spr_idea_franco_spanish_war
+			}
+			SPR = {
+				remove_ideas = spr_idea_franco_spanish_war
+				add_ideas = spr_idea_ongoing_reconstruction
+				create_country_leader = {
+					name = "Alfonso XII"
+					desc = "FRA_LEADER_DESC_ALFONSO_I"   
+					picture = ""
+					expire = "1965.1.1"
+					ideology = despotist_moderate
+					traits = {
+					}
+				}
+				set_variable = { scripted_war = 0  }
+			}
+			every_country = {
+				LIMIT = {
+					has_country_flag = formerColony
+				}
+				SPR = {
+					set_autonomy = {
+						target = PREV
+						autonomy_state =  autonomy_colony
+					}
+				}
+				clr_country_flag = formerColony
+			}
+		}
+	}
+}
+
+country_event = { ## French Victory
+	id = SPRIndia.9
+	title = SPRIndia.9.t
+	desc = SPRIndia.9.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	option = {
+		name = SPRIndia.9.a
+		complete_national_focus = SPR_merciful_frenchmen
+		add_stability = -0.05
+		retire_country_leader = yes
+		hidden_effect = {
+			remove_ideas = spr_disastrous_campaign
+			clr_global_flag = FRA_SPR_India_war
+			IF = { 
+				LIMIT = { 
+					country_exists = AQU
+				}
+				FRA = { annex_country = { target = AQU } }
+			}
+			every_country = {
+				LIMIT = {
+					is_subject_of = SPR
+					NOT = {
+						tag = SPN
+					}
+				}
+				set_country_flag = formerColony
+			}
+			SPN = {
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = SPN_FRA
+				retire_country_leader = yes
+				create_country_leader = {
+					name = "Charles XI"
+					desc = "FRA_LEADER_DESC_CHARLES_XI"   
+					picture = "Portrait_FRA_Charles_XI.dds"
+					expire = "1965.1.1"
+					ideology = despotist_moderate
+					traits = {
+						personal_trait_true_moderate
+					}
+				}
+			}
+			IF = { 
+				LIMIT = { 
+					country_exists = IND
+				}
+				IND = { transfer_state = 847 }
+				else = {
+					FRA = { transfer_state = 847 }
+				}
+			}
+			FRA = {
+				set_autonomy = {
+					target = SPN
+					autonomy_state =  autonomy_puppet
+				}
+				set_autonomy = {
+					target = SPR
+					autonomy_state =  autonomy_supervised_state
+				}
+				set_variable = { scripted_war = 0  }
+				793 = { add_core_of = FRA }
+				transfer_state = 793
+				940 = { add_core_of = FRA }
+				transfer_state = 940
+				if = {
+					LIMIT = { NOT = { owns_state = 922 } }
+					transfer_state = 922
+				}
+				remove_ideas = spr_idea_franco_spanish_war
+			}
+			remove_ideas = spr_idea_franco_spanish_war
+			add_ideas = spr_idea_ongoing_reconstruction
+			set_variable = { scripted_war = 0  }
+			add_popularity = {
+				ideology = centrist
+				popularity = 0.45
+			}
+			set_politics = {
+				ruling_party = centrist
+				elections_allowed = no
+			}
+			retire_country_leader = yes 
+			create_country_leader = {
+				name = "Enrique II"
+				desc = "SPR_LEADER_DESC_ENRIQUE_II"
+				picture = "Portrait_SPR_Enrique_II.dds"
+				expire = "1965.1.1"
+				ideology = centrist_moderate
+				traits = {
+					#
+				}
+			}
+			every_country = {
+				LIMIT = {
+					has_country_flag = formerColony
+				}
+				SPR = {
+					set_autonomy = {
+						target = PREV
+						autonomy_state =  autonomy_colony
+					}
+				}
+				clr_country_flag = formerColony
+			}
+		}
+	}
+}
+
+country_event = { ## Spanish Early Victory
+	id = SPRIndia.10
+	title = SPRIndia.10.t
+	desc = SPRIndia.10.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	option = {
+		name = SPRIndia.10.a
+		hidden_effect = {
+			remove_ideas = spr_disastrous_campaign
+			clr_global_flag = FRA_SPR_India_war
+			if = {
+				LIMIT = {
+					NOT = {
+						has_completed_focus = SPR_set_up_occupation_toulouse
+					}
+				}
+				set_autonomy = {
+					target = AQU
+					autonomy_state =  autonomy_integrated_puppet
+				}
+				31 = {add_core_of = AQU }
+				922 = {add_core_of = AQU }
+				922 = { add_core_of = SPR }
+				AQU = {
+					if = { 
+						LIMIT = { 
+							NOT = { country_exists = AQU } 
+						}
+						SPR = { transfer_state = 922 }
+						transfer_state = 31
+						set_capital = 31
+					}
+					add_popularity = {
+						ideology = despotist
+						popularity = 0.95
+					}
+					set_politics = {
+						ruling_party = despotist
+						elections_allowed = no
+					}
+					retire_country_leader = yes
+					create_country_leader = {
+						name = "Francisco I"
+						desc = "SPR_LEADER_DESC_FRANCISCO_I"
+						picture = "Portrait_SPR_Francisco_I.dds"
+						expire = "1965.1.1"
+						ideology = despotist_moderate
+						traits = {
+							#
+						}
+					}
+					load_oob = "AQU_SPR_1886"
+				}
+				SPR = {
+					remove_ideas = spr_idea_franco_spanish_war
+				}
+				FRA = {
+					remove_ideas = spr_idea_franco_spanish_war
+				}
+			}
+			complete_national_focus = SPR_honourable_peace
+		}
+	}
+}
+
+country_event = { ## French Early Victory
+	id = SPRIndia.11
+	title = SPRIndia.11.t
+	desc = SPRIndia.11.d
+	
+	fire_only_once = yes
+	
+	hidden = yes
+		
+	trigger = {
+		tag = FRA
+		has_war_with = SPR
+		SPR = { surrender_progress > 0.60 }
+	}
+	
+	#picture = GFX_report_news_event_prague_01
+	option = {
+		name = SPRIndia.11.a
+		hidden_effect = {
+			FRA = { country_event = SPRIndia.7 }
+		}
+	}
+}
+
+country_event = { ## Spanish Early Victory
+	id = SPRIndia.12
+	title = SPRIndia.12.t
+	desc = SPRIndia.12.d
+	
+	fire_only_once = yes
+	
+	hidden = yes
+		
+	trigger = {
+		tag = SPR
+		has_war_with = FRA
+		FRA = {
+			surrender_progress > 0.20
+		}
+		has_global_flag = FRA_SPR_India_war
+		NOT = {
+			has_completed_focus = SPR_honourable_peace
+		}
+	}
+	
+	#picture = GFX_report_news_event_prague_01
+	option = {
+		name = SPRIndia.12.a
+		hidden_effect = {
+			SPR = { country_event = SPRIndia.10 }
+		}
+	}
+}
+
+country_event = {
+	id = SPRIndia.13  #Strike at France
+	title = SPRIndia.13.t
+	desc = SPRIndia.13.d
+	
+	fire_only_once = yes
+		
+	is_triggered_only = yes
+	
+	#picture = GFX_report_news_event_prague_01
+	
+	option = {
+		name = SPRIndia.13.a
+		add_war_support = 0.02
+	}
+}
+
+#Spanish Religious System
+country_event = {
+	id = SPRReligion.1
+	title = SPRReligion.1.t
+	desc = SPRReligion.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			check_variable = { spr_var_catholic_influence > 0.95 }
+			original_tag = SPR
+			has_idea = spr_idea_religious_fanaticism
+		}
+		
+		fire_only_once = no
+	
+	option = {
+		name = SPRReligion.1.a 
+		swap_ideas = {
+			add_idea = spr_idea_religious_xenophobia
+			remove_idea = spr_idea_religious_fanaticism
+		}
+	}
+}
+
+country_event = {
+	id = SPRReligion.2
+	title = SPRReligion.2.t
+	desc = SPRReligion.2.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			check_variable = { spr_var_catholic_influence < 0.95 }
+			original_tag = SPR
+			has_idea = spr_idea_religious_xenophobia
+		}
+		
+		fire_only_once = no
+	
+	option = {
+		name = SPRReligion.2.a 
+		swap_ideas = {
+			add_idea = spr_idea_religious_fanaticism
+			remove_idea = spr_idea_religious_xenophobia
+		}
+	}
+}
+
+country_event = {
+	id = SPRReligion.3
+	title = SPRReligion.3.t
+	desc = SPRReligion.3.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			check_variable = { spr_var_catholic_influence < 0.80 }
+			original_tag = SPR
+			has_idea = spr_idea_religious_fanaticism
+		}
+		
+		fire_only_once = no
+	
+	option = {
+		name = SPRReligion.3.a 
+		swap_ideas = {
+			add_idea = spr_idea_religious_zeal
+			remove_idea = spr_idea_religious_fanaticism
+		}
+	}
+}
+
+country_event = {
+	id = SPRReligion.4
+	title = SPRReligion.4.t
+	desc = SPRReligion.4.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			check_variable = { spr_var_catholic_influence > 0.80 }
+			original_tag = SPR
+			has_idea = spr_idea_religious_zeal
+		}
+		
+		fire_only_once = no
+	
+	option = {
+		name = SPRReligion.4.a 
+		swap_ideas = {
+			add_idea = spr_idea_religious_fanaticism
+			remove_idea = spr_idea_religious_zeal
+		}
+	}
+}
+
+country_event = {
+	id = SPRReligion.5
+	title = SPRReligion.5.t
+	desc = SPRReligion.5.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			check_variable = { spr_var_catholic_influence > 0.60 }
+			original_tag = SPR
+			has_idea = spr_idea_religious_endorsement
+		}
+		
+		fire_only_once = no
+	
+	option = {
+		name = SPRReligion.5.a 
+		swap_ideas = {
+			add_idea = spr_idea_religious_zeal
+			remove_idea = spr_idea_religious_endorsement
+		}
+	}
+}
+
+country_event = {
+	id = SPRReligion.6
+	title = SPRReligion.6.t
+	desc = SPRReligion.6.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			check_variable = { spr_var_catholic_influence < 0.60 }
+			original_tag = SPR
+			has_idea = spr_idea_religious_zeal
+		}
+		
+		fire_only_once = no
+	
+	option = {
+		name = SPRReligion.6.a 
+		swap_ideas = {
+			add_idea = spr_idea_religious_endorsement
+			remove_idea = spr_idea_religious_zeal
+		}
+	}
+}
+
+country_event = {
+	id = SPRReligion.7
+	title = SPRReligion.7.t
+	desc = SPRReligion.7.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			check_variable = { spr_var_catholic_influence < 0.40 }
+			original_tag = SPR
+			has_idea = spr_idea_religious_endorsement
+		}
+		
+		fire_only_once = no
+	
+	option = {
+		name = SPRReligion.7.a 
+		swap_ideas = {
+			add_idea = spr_idea_religious_observance
+			remove_idea = spr_idea_religious_endorsement
+		}
+	}
+}
+
+country_event = {
+	id = SPRReligion.8
+	title = SPRReligion.8.t
+	desc = SPRReligion.8.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			check_variable = { spr_var_catholic_influence > 0.40 }
+			original_tag = SPR
+			has_idea = spr_idea_religious_observance
+		}
+		
+		fire_only_once = no
+	
+	option = {
+		name = SPRReligion.8.a 
+		swap_ideas = {
+			add_idea = spr_idea_religious_endorsement
+			remove_idea = spr_idea_religious_observance
+		}
+	}
+}
+
+country_event = {
+	id = SPRReligion.9
+	title = SPRReligion.9.t
+	desc = SPRReligion.9.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			check_variable = { spr_var_catholic_influence > 0.20 }
+			original_tag = SPR
+			has_idea = spr_idea_religious_tolerance
+		}
+		
+		fire_only_once = no
+	
+	option = {
+		name = SPRReligion.9.a 
+		swap_ideas = {
+			add_idea = spr_idea_religious_observance
+			remove_idea = spr_idea_religious_tolerance
+		}
+	}
+}
+
+country_event = {
+	id = SPRReligion.10
+	title = SPRReligion.10.t
+	desc = SPRReligion.10.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			check_variable = { spr_var_catholic_influence < 0.20 }
+			original_tag = SPR
+			has_idea = spr_idea_religious_observance
+		}
+		
+		fire_only_once = no
+	
+	option = {
+		name = SPRReligion.10.a 
+		swap_ideas = {
+			add_idea = spr_idea_religious_tolerance
+			remove_idea = spr_idea_religious_observance
+		}
+	}
+}
+
+country_event = {
+	id = SPRReligion.11
+	title = SPRReligion.11.t
+	desc = SPRReligion.11.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			check_variable = { spr_var_catholic_influence < 0.05 }
+			original_tag = SPR
+			has_idea = spr_idea_religious_tolerance
+		}
+		
+		fire_only_once = no
+	
+	option = {
+		name = SPRReligion.11.a 
+		swap_ideas = {
+			add_idea = spr_idea_religious_xenophilia
+			remove_idea = spr_idea_religious_tolerance
+		}
+	}
+}
+
+country_event = {
+	id = SPRReligion.12
+	title = SPRReligion.12.t
+	desc = SPRReligion.12.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			check_variable = { spr_var_catholic_influence > 0.05 }
+			original_tag = SPR
+			has_idea = spr_idea_religious_xenophilia
+		}
+		
+		fire_only_once = no
+	
+	option = {
+		name = SPRReligion.12.a 
+		swap_ideas = {
+			add_idea = spr_idea_religious_tolerance
+			remove_idea = spr_idea_religious_xenophilia
+		}
+	}
+}
+
+country_event = {
+	id = SPRReligion.13
+	title = SPRReligion.13.t
+	desc = SPRReligion.13.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			check_variable = { spr_var_catholic_influence < 0.05 }
+			original_tag = SPR
+			has_stability < 0.16
+			has_country_flag = Ended_Spanish_Inquisition
+			has_war = no
+		}
+		fire_only_once = yes
+	
+	option = {
+		name = SPRReligion.13.a 
+		start_civil_war = {
+				ideology = theocratic
+				size = 0.5
+				capital = 173
+				states = { 118 171 173 175 938 168 }
+		}
+	}
+}
+
+
+country_event = { #Spain loses to Morocco
+	id = SPRReligion.14
+	title = SPRReligion.14.t
+	desc = SPRReligion.14.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRReligion.14.a 
+		add_political_power = -100
+		}
+}
+
+country_event = { #Bringing the steam engine to the Netherlands
+	id = SPRNetherlands.1
+	title = SPRNetherlands.1.t
+	desc = SPRNetherlands.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRNetherlands.1.a
+		add_political_power = 20
+		set_country_flag = engineisnorth
+		}
+}
+
+country_event = { #The first farms
+	id = SPRNetherlands.2
+	title = SPRNetherlands.2.t
+	desc = SPRNetherlands.2.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRNetherlands.2.a
+		add_political_power = 20
+		set_country_flag = firstfarms
+		}
+}
+
+country_event = { #Serf funded latifundia
+	id = SPRNetherlands.3
+	title = SPRNetherlands.3.t
+	desc = SPRNetherlands.3.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRNetherlands.3.a
+		add_political_power = 20
+		add_stability = 0.05
+		SPN = { add_ideas = spn_ongoing_industrialisation }
+		}
+}
+
+country_event = { #Noble economic priority
+	id = SPRNetherlands.4
+	title = SPRNetherlands.4.t
+	desc = SPRNetherlands.4.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRNetherlands.4.a
+		add_political_power = 20
+		SPN = { add_ideas = spn_ongoing_industrialisation }
+		}
+}
+
+country_event = { #Rich fund factories
+	id = SPRNetherlands.5
+	title = SPRNetherlands.5.t
+	desc = SPRNetherlands.5.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRNetherlands.5.a
+		add_political_power = 20
+		hidden_effect = {
+		SPR = { country_event = { days = 30 id = SPRNetherlands.6 }} #Opening of the Ghent mines
+			}
+		}
+	option = {
+		name = SPRNetherlands.5.b
+		add_political_power = -20
+		set_country_flag = richrevolttoo
+		}
+}
+
+country_event = { #Ghent Mines
+	id = SPRNetherlands.6
+	title = SPRNetherlands.6.t
+	desc = SPRNetherlands.6.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRNetherlands.6.a
+		add_political_power = 50
+		add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+		SPN = {
+		add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+		}
+		hidden_effect = {
+		SPR = { country_event = { days = 35 id = SPRNetherlands.7 }} #Burgeois economic malversation
+		SPR = { country_event = { days = 124 id = SPRNetherlands.8 }} #Patent sold to the Netherlands
+		}
+	}
+}
+
+country_event = { #Burgeois economic malversation
+	id = SPRNetherlands.7
+	title = SPRNetherlands.7.t
+	desc = SPRNetherlands.7.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRNetherlands.7.a
+		add_political_power = -100
+		
+		}
+}
+
+country_event = { #Dutch Patent
+	id = SPRNetherlands.8
+	title = SPRNetherlands.8.t
+	desc = SPRNetherlands.8.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRNetherlands.8.a
+		add_political_power = -100
+		HOL = { add_ideas = hol_ongoing_industrialisation }
+		}
+}
+
+country_event = { #Stop foreign Engine Imports
+	id = SPRNetherlands.9
+	title = SPRNetherlands.9.t
+	desc = SPRNetherlands.9.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRNetherlands.9.a
+		add_political_power = 75
+		add_stability = -0.02
+		SPR = {
+		add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+		}
+		}
+}
+country_event = { #Ask Liege for trespassing rights
+	id = SPRNetherlands.10
+	title = SPRNetherlands.10.t
+	desc = SPRNetherlands.10.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRNetherlands.10.a
+		LIE = { country_event = SPRNetherlands.11 }
+		}
+}
+country_event = { #Spain requests trespassing rights
+	id = SPRNetherlands.11
+	title = SPRNetherlands.11.t
+	desc = SPRNetherlands.11.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRNetherlands.11.a
+		give_military_access = SPR
+		give_military_access = SPN
+		SPR = { country_event = SPRNetherlands.12 }
+		}
+}
+country_event = { #Liege accepts
+	id = SPRNetherlands.12
+	title = SPRNetherlands.12.t
+	desc = SPRNetherlands.12.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRNetherlands.12.a
+		add_political_power = 50
+		set_country_flag = liegesaysyes
+		}
+}
+country_event = { #Bringing Liege into the fold
+	id = SPRNetherlands.13
+	title = SPRNetherlands.13.t
+	desc = SPRNetherlands.13.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRNetherlands.13.a
+		set_autonomy = {
+				target = LIE
+				autonomy_state =  autonomy_integrated_puppet
+			}
+		}
+	option = {
+		name = SPRNetherlands.13.b
+		SPN = { annex_country = { target = LIE }}
+		791 = { add_core_of = SPN }
+		set_country_flag = Liegewillrevolt
+		}
+}
+country_event = { #Attempt to end Medieval Corporationism
+	id = SPRNetherlands.14
+	title = SPRNetherlands.14.t
+	desc = SPRNetherlands.14.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRNetherlands.14.a
+		SPR = { country_event = { days = 130 id = SPRNetherlands.15 }}	
+		}
+}
+
+country_event = { #Rise of non-oligarchic corporationism
+	id = SPRNetherlands.15
+	title = SPRNetherlands.15.t
+	desc = SPRNetherlands.15.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRNetherlands.15.a
+		SPN = { add_stability = -0.1 }
+		add_political_power = -100
+		}
+}
+
+country_event = { #Noble banks
+	id = SPRNetherlands.16
+	title = SPRNetherlands.16.t
+	desc = SPRNetherlands.16.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRNetherlands.16.a
+		SPR = { add_ideas = spn_noble_banks }
+		}
+}
+
+country_event = { #Peasant revolution
+	id = SPRNetherlands.17
+	title = SPRNetherlands.17.t
+	desc = SPRNetherlands.17.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			tag = SPR
+			date > 1891.04.3
+			has_country_flag = peasantsofbrabant
+			NOT = { has_country_flag = noblesrevolttoo } 
+		}
+	
+	fire_only_once = yes
+
+	
+	option = {
+		name = SPRNetherlands.17.a
+		every_country = {
+	    	        news_event = { id = story_news_events.18 days = 0 }
+	    	}
+			6 = { add_core_of = BRB }
+			792 = { add_core_of = BRB }
+			791 = { add_core_of = BRB }
+			34 = { add_core_of = BRB }
+			8 = { add_core_of = BRB }
+			940 = { add_core_of = BRB }
+			set_global_flag = BRB_revolution
+			BRB = {	
+				set_politics = {
+					ruling_party = revolutionary
+					last_election = "1890.1.10"
+					election_frequency = 70
+					elections_allowed = yes
+				}
+				set_technology = {
+					muskets0 = 1
+					melee = 1
+				}
+				set_state_owner = 34
+				set_state_owner = 6
+				set_state_controller = 34
+				set_state_controller = 6
+				
+					}
+			BRB = {
+			declare_war_on = {
+				target = SPN
+				type = liberate_wargoal
+			}
+			load_oob = "BRB_1891_popular"
+			add_ideas = brb_idea_home_advantage
+					}
+		}
+}
+
+country_event = { #Liege joins the revolution
+	id = SPRNetherlands.18
+	title = SPRNetherlands.18.t
+	desc = SPRNetherlands.18.d
+	
+	#picture = GFX_report_news_event_rome_01
+	fire_only_once = yes
+	
+	trigger = {
+			tag = SPR
+			date > 1891.04.4
+			has_country_flag = Liegewillrevolt
+			has_country_flag = peasantsofbrabant
+		}
+	
+	option = {
+		name = SPRNetherlands.18.a
+		791 = { add_core_of = BRB }
+		BRB = {
+		set_state_owner = 791
+		set_state_controller = 791
+		load_oob = "BRB_Liege"
+			}
+		}
+}
+
+country_event = { #Noble revolt
+	id = SPRNetherlands.19
+	title = SPRNetherlands.19.t
+	desc = SPRNetherlands.19.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			tag = SPR
+			date > 1891.04.3
+			has_country_flag = noblesrevolttoo
+			NOT = { has_country_flag = peasantsofbrabant } 
+		}
+		
+	fire_only_once = yes
+	
+	
+	
+	option = {
+		name = SPRNetherlands.19.a
+		every_country = {
+	    	        news_event = { id = story_news_events.25 days = 0 }
+	    	}
+			6 = { add_core_of = BRB }
+			792 = { add_core_of = BRB }
+			791 = { add_core_of = BRB }
+			34 = { add_core_of = BRB }
+			8 = { add_core_of = BRB }
+			940 = { add_core_of = BRB }
+			set_global_flag = BRB_revolution
+			BRB = {	
+				set_politics = {
+					ruling_party = apolitical
+					elections_allowed = no
+				}
+				set_technology = {
+					muskets0 = 1
+					melee = 1
+				}
+				set_state_owner = 940
+				set_state_owner = 792
+				set_state_controller = 940
+				set_state_controller = 792
+				set_state_controller = 8
+				set_state_owner = 8
+				
+					}
+			BRB = {
+			declare_war_on = {
+				target = SPN
+				type = liberate_wargoal
+			}
+			load_oob = "BRB_1891_noble"
+			add_ideas = brb_idea_home_advantage
+					}
+		}
+}
+
+country_event = { #Rich men fund mercenaries
+	id = SPRNetherlands.20
+	title = SPRNetherlands.20.t
+	desc = SPRNetherlands.20.d
+	
+	#picture = GFX_report_news_event_rome_01
+	fire_only_once = yes
+	
+	trigger = {
+			tag = SPR
+			date > 1891.04.4
+			has_country_flag = noblesrevolttoo
+			has_country_flag = richrevolttoo
+		}
+	
+	option = {
+		name = SPRNetherlands.20.a
+		load_oob = "BRB_rich"
+		}
+}
+
+country_event = { #Loosing peace deal
+	id = SPRNetherlands.21
+	title = SPRNetherlands.21.t
+	desc = SPRNetherlands.21.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	fire_only_once = yes
+	
+	trigger = {
+			tag = SPR
+			date > 1891.04.4
+			has_country_flag = noblesrevolttoo
+			has_country_flag = richrevolttoo
+		}
+	
+	option = {
+		name = SPRNetherlands.21.a
+		add_political_power = -200
+		}
+}
+
+country_event = { #Reformation of the Government
+	id = SPRNetherlands.22
+	title = SPRNetherlands.22.t
+	desc = SPRNetherlands.22.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+			tag = SPN
+			date > 1892.04.4
+			
+		}
+	
+	option = {
+		name = SPRNetherlands.22.a
+		add_political_power = 200
+		}
+}
+
+country_event = { #The king's duty
+	id = SPRFrancisco.1
+	title = SPRFrancisco.1.t
+	desc = SPRFrancisco.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRFrancisco.1.a 
+		create_wargoal = {
+			type = annex_everything
+			target = MYS
+			expire = 0
+		}
+	}
+}
+
+country_event = { #Catholic Division
+	id = SPRFrancisco.2
+	title = SPRFrancisco.2.t
+	desc = SPRFrancisco.2.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRFrancisco.2.a 
+		add_political_power = 100
+		add_stability = -0.02
+	}
+}
+
+country_event = { #Francisco Proclaims the Union of Navarra
+	id = SPRFrancisco.3
+	title = SPRFrancisco.3.t
+	desc = SPRFrancisco.3.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRFrancisco.3.a 
+		add_political_power = 200
+		add_stability = 0.1
+		add_war_support = 0.1
+	}
+}
+
+country_event = { #Monarchic Continuism
+	id = SPRFrancisco.4
+	title = SPRFrancisco.4.t
+	desc = SPRFrancisco.4.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRFrancisco.4.a 
+		add_political_power = 200
+		add_stability = 0.1
+		add_war_support = 0.1
+	}
+}
+
+country_event = { #Insurrection in the Palace
+	id = SPRFrancisco.5
+	title = SPRFrancisco.5.t
+	desc = SPRFrancisco.5.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRFrancisco.5.a 
+		add_stability = -0.01
+	}
+}
+
+
+country_event = { #The king's duty
+	id = SPRAlfonso.1
+	title = SPRAlfonso.1.t
+	desc = SPRAlfonso.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SPRAlfonso.1.a 
+		ai_chance = {
+			factor = 25
+		}
+		hidden_effect = {
+			complete_national_focus = SPR_liberal_figurehead
+		}
+	}
+	option = {
+		name = SPRAlfonso.1.b
+		ai_chance = {
+			factor = 15
+		}
+		hidden_effect = {
+			complete_national_focus = SPR_appease_conservatives
+		}
+	}
+	option = {
+		name = SPRAlfonso.1.c
+		ai_chance = {
+			factor = 60
+		}
+		hidden_effect = {
+			complete_national_focus = SPR_appoint_afrancesado
+		}
+	}
+}
+

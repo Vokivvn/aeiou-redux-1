@@ -1,0 +1,74 @@
+﻿capital = 52
+
+set_oob = "BAV_1886"
+
+set_research_slots = 3
+
+set_stability = 0.6
+set_war_support = 0.4
+
+# Starting tech
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+	melee = 1
+	basic_cavalry = 1
+	melee_improvements = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+
+	gw_artillery = 1
+	interwar_antiair = 1
+	
+	trench_warfare = 1
+
+	
+	fleet_in_being = 1
+	electronic_mechanical_engineering = 1
+	radio = 1
+	radio_detection = 1
+	fuel_silos = 1
+	fuel_refining = 1
+}
+
+add_ideas = {
+	hre_idea_elector
+}
+	
+
+set_convoys = 800
+
+# DIPLOMACY
+
+set_politics = {
+	ruling_party = absolutist
+	elections_allowed = no
+}
+set_popularities = {
+	absolutist = 100
+}
+
+create_country_leader = {
+	name = "Otto I"
+	desc = "POLITICS_OTTO_I_DESC"
+	picture = "Portrait_BAV_Otto_I.dds"
+	expire = "1965.1.1"
+	ideology = absolutist_moderate
+	traits = {
+		#traits here need to also be added to events britain.9 and britain.10. Don't ask why.
+	}
+}
+create_country_leader = {
+	name = "Ludwig II"
+	desc = "BAV_LEADER_DESC_LUDWIG_II"
+	picture = "Portrait_BAV_Ludwig_II.dds"
+	expire = "1965.1.1"
+	ideology = absolutist_moderate
+	traits = {
+		#traits here need to also be added to events britain.9 and britain.10. Don't ask why.
+	}
+}
+
+add_to_array = { national_religion_array =  2 }
+set_variable = { hre_emperor_vote = AUS.id }

@@ -1,0 +1,29 @@
+
+state={
+	id=808
+	name="STATE_808"
+	manpower = 704285
+	resources={
+		wood = 2 
+		iron = 2
+		gunpowder = 1
+		horses = 1 
+	}
+	state_category = large_town
+
+	history={
+		owner = TRI
+		victory_points = { 9575 5 }
+		victory_points = { 11531 5 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1 
+			arms_factory = 1 
+		}
+		add_core_of = TRI
+	}
+
+	provinces={
+		11531 9575 3423 11470
+	}
+}

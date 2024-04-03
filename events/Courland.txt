@@ -1,0 +1,24 @@
+add_namespace = COUDiplomacy
+
+country_event = { #France wants to buy Fort Bayona from us.
+	
+	id = COUDiplomacy.1
+	title = COUDiplomacy.1.t
+	desc = COUDiplomacy.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = { #no
+		name = COUDiplomacy.1.a 
+		COU = {
+		country_event = FRAEconomy.5 }
+	}
+	option = { #yes
+		name = COUDiplomacy.1.b
+		FRA = { country_event = FRAEconomy.6 }
+	}
+}

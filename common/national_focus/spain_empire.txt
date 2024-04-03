@@ -1,0 +1,297 @@
+
+focus_tree = {
+	id = Spain_empire
+	
+	country = {
+		factor = 0
+		
+	}
+	default = no
+	continuous_focus_position = { x = 50 y = 2000 }
+
+
+	###########
+	#  Start  #
+	###########
+	
+	#Europe Awaits
+	focus = { 
+		id = SPR_europe_awaits
+		icon = GFX_SPR_safe_routes
+		cost = 35
+	
+		x = 4
+		y = 0
+		
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+		}
+	}
+	
+	#It's called an Empire
+	focus = { 
+		id = SPR_an_empire
+		icon = GFX_SPR_the_spanish_bull
+		cost = 50
+		
+		prerequisite = { focus = SPR_europe_awaits }
+		
+		x = 4
+		y = 1
+		
+		completion_reward = {
+			#event
+		}
+	}
+	
+	#Celebrate the Dia de la Victoria
+	focus = { 
+		id = SPR_dia_victoria
+		icon = GFX_SPR_rally_portuguese
+		cost = 25
+		
+		prerequisite = { focus = SPR_an_empire }
+		mutually_exclusive = { focus = SPR_parade_paris }
+		
+		x = 3
+		y = 2
+		
+		completion_reward = {
+			#event
+		}
+	}
+	
+	#Enforce a military parade in Paris
+	focus = { 
+		id = SPR_parade_paris
+		icon = GFX_focus_generic_little_entente
+		cost = 40
+		
+		prerequisite = { focus = SPR_an_empire }
+		mutually_exclusive = { focus = SPR_dia_victoria }
+		
+		x = 5
+		y = 2
+		
+		completion_reward = {
+			add_political_power = 100
+				FRA = {
+					add_opinion_modifier = {
+						target = SPR
+						modifier = medium_decrease
+					}
+					add_ideas = fra_military_parade
+				}
+		}
+	}
+	
+	#Everyone to their post
+	focus = { 
+		id = SPR_to_their_post
+		icon = GFX_focus_generic_military_mission
+		cost = 30
+		
+		prerequisite = { focus = SPR_dia_victoria OR = SPR_parade_paris }
+		
+		x = 4
+		y = 3
+		
+		completion_reward = {
+			#event
+		}
+	}
+	
+	#Rid Aquitaine of factories
+	focus = { 
+		id = SPR_aquitaine_factories
+		icon = GFX_goal_generic_political_pressure
+		cost = 50
+		
+		prerequisite = { focus = SPR_to_their_post }
+		
+		x = 2
+		y = 4
+		
+		completion_reward = {
+			19 = {
+				remove_building = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			random_owned_controlled_state = { 
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}			
+			}
+			
+		}
+	}
+	
+	#The Sun never set on the Spanish Empire
+	focus = { 
+		id = SPR_sun_never_set
+		icon = GFX_SPR_dawn_of_a_new_era
+		cost = 25
+		
+		prerequisite = { focus = SPR_to_their_post }
+		
+		x = 6
+		y = 4
+		
+		completion_reward = {
+			add_political_power = 100
+			add_ideas = spr_idea_sun_never_sets
+		}
+	}
+	
+	#Confiscate local machinery
+	focus = { 
+		id = SPR_confiscate_machinery
+		icon = GFX_focus_eng_concessions_to_the_trade_unions   
+		cost = 30
+		
+		prerequisite = { focus = SPR_aquitaine_factories }
+		
+		x = 1
+		y = 5
+		
+		completion_reward = {
+			add_ideas = spr_idea_local_machinery
+		}
+	}
+	
+	#Crack down on French loyalists
+	focus = { 
+		id = SPR_crack_down_frloyalist
+		icon = GFX_SPR_focus_on_the_enemy
+		cost = 30
+		
+		prerequisite = { focus = SPR_aquitaine_factories }
+		
+		x = 3
+		y = 5
+		
+		completion_reward = {
+			add_political_power = 50
+			AQU = {
+				add_stability = 0.1
+			}
+		}
+	}
+	
+	#From every town
+	focus = { 
+		id = SPR_from_every_town
+		icon = GFX_focus_generic_industry_1
+		cost = 25
+		
+		prerequisite = { focus = SPR_sun_never_set }
+		
+		x = 5
+		y = 5
+		
+		completion_reward = {
+			add_ideas = spr_from_every_town
+		}
+	}
+	
+	#From every city
+	focus = { 
+		id = SPR_from_every_city
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 25
+		
+		prerequisite = { focus = SPR_sun_never_set }
+		
+		x = 7
+		y = 5
+		
+		completion_reward = {
+			add_ideas = spr_from_every_city
+		}
+	}
+	
+	#Model Puppet
+	focus = { 
+		id = SPR_model_puppet
+		icon = GFX_focus_generic_military_academy
+		cost = 50
+		
+		prerequisite = { focus = SPR_confiscate_machinery }
+		prerequisite = { focus = SPR_crack_down_frloyalist }
+		
+		x = 2
+		y = 6
+		
+		completion_reward = {
+			add_political_power = 50
+			AQU = {
+				add_ideas = aqu_model_puppet
+			}
+		}
+	}
+	
+	#Commoners and nobles alike
+	focus = { 
+		id = SPR_commoners_nobles
+		icon = GFX_AUS_focus_Promises_People
+		cost = 25
+		
+		prerequisite = { focus = SPR_from_every_town OR = SPR_from_every_city }
+		
+		x = 6
+		y = 6
+		
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = {
+				ideology = absolutist 
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = despotist 
+				popularity = 0.05
+			}
+		}
+	}
+	
+	#Francisco's Age
+	focus = { 
+		id = SPR_francisco_age
+		icon = GFX_SPR_The_regency_shall_live_on
+		cost = 40
+		
+		prerequisite = { focus = SPR_model_puppet }
+		prerequisite = { focus = SPR_commoners_nobles }
+		x = 4
+		y = 7
+		
+		completion_reward = {
+			add_stability = 0.1
+			add_ideas = spr_francisco_age
+		}
+	}
+	
+	#Securing our future 
+	focus = { 
+		id = SPR_securing_our_future
+		icon = GFX_SPR_National_Salvation_Movement
+		cost = 60
+		
+		prerequisite = { focus = SPR_francisco_age }
+		
+		x = 4
+		y = 8
+		
+		completion_reward = {
+			add_stability = 0.1
+			country_event = SPRFrancisco.1
+		}
+	}
+
+#End
+}	

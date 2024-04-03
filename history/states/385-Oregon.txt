@@ -1,0 +1,28 @@
+
+state={
+	id=385
+	name="STATE_385"
+	manpower = 8212‬
+	
+	state_category = rural
+
+	resources={
+		wood=2
+	}
+
+	history={
+		owner = NEZ
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = NEZ
+		victory_points = {
+			3513 1 
+		}
+
+	}
+
+	provinces={
+    	1414 1690 1832 3513 4274 4328 4747 4826 7398 7721 7865 10327 12124 12183 12553 12673 10687 10693 
+	}
+}

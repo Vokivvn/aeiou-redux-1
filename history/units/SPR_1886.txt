@@ -1,0 +1,181 @@
+﻿division_template = {
+	name = "Royal Spanish Garrison Battalion"
+
+	division_names_group = SPR_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+		line_infantry = { x = 0 y = 4 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+		line_infantry = { x = 1 y = 2 }
+		line_infantry = { x = 1 y = 3 }
+		line_infantry = { x = 1 y = 4 }
+		line_infantry = { x = 2 y = 0 }
+		line_infantry = { x = 2 y = 1 }
+		line_infantry = { x = 2 y = 2 }
+		line_infantry = { x = 2 y = 3 }
+		line_infantry = { x = 2 y = 4 }
+		line_infantry = { x = 3 y = 0 }
+		line_infantry = { x = 3 y = 1 }
+		line_infantry = { x = 3 y = 2 }
+		line_infantry = { x = 3 y = 3 }
+		line_infantry = { x = 3 y = 4 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Spanish Colonial Garrison"
+
+	division_names_group = SPR_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+		line_infantry = { x = 0 y = 4 }
+	}
+	priority = 0
+}
+division_template = {
+	name = "Royal Spanish Cavalry Division"
+
+	division_names_group = SPR_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 0 y = 2 }
+		medium_cavalry = { x = 0 y = 3 }
+		medium_cavalry = { x = 0 y = 4 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+		medium_cavalry = { x = 1 y = 2 }
+		medium_cavalry = { x = 1 y = 3 }
+		medium_cavalry = { x = 1 y = 4 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Spanish Knight Brigade"
+
+	division_names_group = SPR_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+division_template = {
+	name = "Unorganized Spanish Crusader Group"
+
+	division_names_group = SPR_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 0 y = 2 }
+		melee_battalion = { x = 0 y = 3 }
+	}
+	priority = 0
+}
+
+units = {
+	division = {
+		name = "1st Royal Spanish Garrison Battalion"
+		location = 3938
+		division_template = "Royal Spanish Garrison Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Spanish Garrison Battalion"
+		location = 6906
+		division_template = "Royal Spanish Garrison Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3rd Royal Spanish Garrison Battalion"
+		location = 4135
+		division_template = "Royal Spanish Garrison Battalion"
+		start_experience_factor = 0.3
+	}
+		division = {
+		name = "4th Royal Spanish Garrison Battalion"
+		location = 758
+		division_template = "Royal Spanish Garrison Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "5th Royal Spanish Garrison Battalion"
+		location = 3938
+		division_template = "Royal Spanish Garrison Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "6th Royal Spanish Garrison Battalion"
+		location = 6906
+		division_template = "Royal Spanish Garrison Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "7th Royal Spanish Garrison Battalion"
+		location = 4135
+		division_template = "Royal Spanish Garrison Battalion"
+		start_experience_factor = 0.3
+	}
+		division = {
+		name = "8th Royal Spanish Garrison Battalion"
+		location = 758
+		division_template = "Royal Spanish Garrison Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "9th Royal Spanish Garrison Battalion"
+		location = 3938
+		division_template = "Royal Spanish Garrison Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Spanish Cavalry Division"
+		location = 11749
+		division_template = "Royal Spanish Cavalry Division"
+		start_experience_factor = 0.3
+	}
+		division = {
+		name = "2nd Royal Spanish Cavalry Division"
+		location = 4199
+		division_template = "Royal Spanish Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Spanish Colonial Garrison"
+		location = 7297
+		division_template = "Spanish Colonial Garrison"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "2nd Spanish Colonial Garrison"
+		location = 7402
+		division_template = "Spanish Colonial Garrison"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "3rd Spanish Colonial Garrison"
+		location = 9945
+		division_template = "Spanish Colonial Garrison"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "4th Spanish Colonial Garrison"
+		location = 1903
+		division_template = "Spanish Colonial Garrison"
+		start_experience_factor = 0.1
+	}
+}

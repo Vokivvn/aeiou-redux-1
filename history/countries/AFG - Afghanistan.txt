@@ -1,0 +1,40 @@
+﻿capital = 267
+
+oob = "AFG_1936"
+
+set_technology = {
+	muskets0 = 1
+}
+set_politics = {
+	ruling_party = absolutist
+	elections_allowed = no
+}
+
+set_popularities = {
+	absolutist = 100
+}
+
+add_to_array = { national_religion_array =  8 }
+
+# Mohammad Hashim Khan (Prime Minister) other potential candidate
+create_country_leader = {
+	name = "Abdur Rahman Khan"
+	desc = "POLITICS_ABDUR_RAHMAN_KHAN_DESC"
+	picture = "Portrait_Abdur_Rahman_Khan.dds"
+	expire = "1965.1.1"
+	ideology = absolutist_moderate
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "Sardar Shah Wali Khan"
+	portrait_path = "gfx/leaders/SAU/Portrait_Arabia_Generic_land_3.dds"
+	traits = { desert_fox }
+	skill = 4
+	attack_skill = 5
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}

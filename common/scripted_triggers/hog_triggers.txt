@@ -1,0 +1,93 @@
+combat_hog_influence_trigger = {
+	check_variable = { hog_surname > 0 }
+	if = {
+		LIMIT = {
+			OR = {
+				check_variable = { hog_party = 1 }
+			}
+		}
+		NOT = { has_government = totalitarian }	
+	}
+	if = {
+		LIMIT = {
+			OR = {
+				check_variable = { hog_party = 2 }
+			}
+		}
+		NOT = {
+			OR = {
+				has_government = theocratic 
+				has_government = absolutist
+				has_government = despotist
+			}	
+		}
+	}
+	if = {
+		LIMIT = {
+			OR = {
+				check_variable = { hog_party = 3 }
+			}
+		}
+		NOT = {
+			OR = {
+				has_government = apolitical 
+				has_government = conservative
+			}	
+		}	
+	}
+	if = {
+		LIMIT = {
+			OR = {
+				check_variable = { hog_party = 4 }
+			}
+		}
+		NOT = { has_government = liberal }
+	}
+	if = {
+		LIMIT = {
+			OR = {
+				check_variable = { hog_party = 5 }
+			}
+		}
+		NOT = {
+			OR = {
+				has_government = liberal 
+				has_government = socialist
+			}	
+		}
+	}
+	if = {
+		LIMIT = {
+			OR = {
+				check_variable = { hog_party = 6 }
+			}
+		}
+		NOT = { has_government = socialist }	
+	}
+	if = {
+		LIMIT = {
+			OR = {
+				check_variable = { hog_party = 7 }
+			}
+		}
+		NOT = {
+			OR = {
+				has_government = weitlingist 
+				has_government = communist
+			}	
+		}
+	}
+	if = {
+		LIMIT = {
+			OR = {
+				check_variable = { hog_party = 8 }
+			}
+		}
+		NOT = {
+			OR = {
+				has_government = revolutionary 
+				has_government = apolitical
+			}	
+		}
+	}
+}

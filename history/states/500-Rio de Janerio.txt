@@ -1,0 +1,34 @@
+
+state={
+	id=500
+	name="STATE_500"
+	manpower = 828260
+	
+	resources = {
+		steel = 3
+		gunpowder = 1
+	}
+
+	state_category = large_city
+	
+	history={
+		owner = POR
+		add_core_of = POR
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 2
+			dockyard = 1
+			10980 = {
+				naval_base = 4
+			}
+		}
+		victory_points = {
+			10980 10
+		}
+	}
+
+	provinces={
+		5172 8190 10980 12996 
+	}
+}

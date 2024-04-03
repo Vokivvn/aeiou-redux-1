@@ -1,0 +1,23 @@
+state={
+	id=868
+	name="STATE_868"
+	
+    
+	history={
+		owner = ALT
+		add_core_of = ALT
+		victory_points = {
+			13091 3 
+		}
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces={
+		1830 12661 7884 10679 13090 1135 4833 10694 13091
+	}
+	manpower = 23398
+	buildings_max_level_factor = 1.000
+	state_category = pastoral
+}

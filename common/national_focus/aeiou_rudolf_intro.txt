@@ -1,0 +1,501 @@
+################
+###INTRO TREE###
+################
+
+focus_tree = {
+    id = Austria_rudolf_intro
+
+    country = {
+        factor = 0
+        modifier = {
+            add = 13
+            tag = AUS
+        }
+    }
+    continuous_focus_position = { x = 50 y = 2000 }
+
+    focus = {
+        id = AUS_rudolfs_bane
+        icon = GFX_AUS_focus_Rudolfs_Bane
+        cost = 30
+
+        x = 5
+        y = 1
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus AUS_rudolfs_bane"
+            country_event = Ausrudolf.1 
+        }
+    }
+     
+    focus = {
+        id = AUS_promises_to_the_people
+        icon = GFX_AUS_focus_Promises_People
+        cost = 40
+
+        x = -6
+        y = 1
+        prerequisite = {
+            focus = AUS_rudolfs_bane
+        }
+        relative_position_id = AUS_rudolfs_bane
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus AUS_promises_to_the_people"
+            country_event = Ausrudolf.2 
+        }
+    }
+
+    focus = {
+        id = AUS_deal_with_the_nobility
+        icon = GFX_AUS_focus_Deal_Nobility
+        cost = 30
+
+        x = 0
+        y = 1
+        prerequisite = {
+            focus = AUS_rudolfs_bane
+        }
+        relative_position_id = AUS_rudolfs_bane
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus AUS_deal_with_the_nobility"
+            add_political_power = -75
+            add_stability = -0.01       
+        }
+    }
+
+    focus = {
+        id = AUS_a_visit_to_rome
+        icon = GFX_AUS_focus_Visit_Rome
+        cost = 40
+
+        x = 6
+        y = 1
+        prerequisite = {
+            focus = AUS_rudolfs_bane
+        }
+        relative_position_id = AUS_rudolfs_bane
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus AUS_a_visit_to_rome"
+            country_event = Ausrudolf.3 
+        }
+    }
+
+    focus = {
+        id = AUS_emancipation
+        icon = GFX_AUS_focus_Emancipation
+        cost = 70
+
+        x = -2
+        y = 1
+        prerequisite = {
+            focus = AUS_promises_to_the_people
+        }
+        relative_position_id = AUS_promises_to_the_people
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus AUS_emancipation"
+            add_timed_idea = { idea = aus_idea_emancipation days = 200 }
+            add_stability = 0.03
+        }
+    }
+
+    focus = {
+        id = AUS_equality
+        icon = GFX_AUS_focus_Equality
+        cost = 70
+
+        x = 0
+        y = 1
+        prerequisite = {
+            focus = AUS_promises_to_the_people
+        }
+        relative_position_id = AUS_promises_to_the_people
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus AUS_equality"
+            add_timed_idea = { idea = aus_idea_equality days = 200 }
+            add_stability = 0.03
+        }
+    }
+
+    focus = {
+        id = AUS_salvation
+        icon = GFX_focus_generic_diplomatic_treaty
+        cost = 50
+
+        x = 2
+        y = 1
+        prerequisite = {
+            focus = AUS_promises_to_the_people
+        }
+        relative_position_id = AUS_promises_to_the_people
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus AUS_salvation"
+            add_stability = 0.01 
+        }
+    }
+
+    focus = {
+        id = AUS_threats_and_action
+        icon = GFX_AUS_focus_Threats_Actions
+        cost = 40
+
+        x = -1
+        y = 1
+        prerequisite = {
+            focus = AUS_deal_with_the_nobility
+        }        
+        mutually_exclusive = {
+            focus = AUS_presents_and_cajoling
+        }
+        relative_position_id = AUS_deal_with_the_nobility
+        
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus AUS_threats_and_action"
+            country_event = Ausrudolf.4
+        }
+    }
+
+    focus = {
+        id = AUS_presents_and_cajoling
+        icon = GFX_AUS_focus_Presents_Cajoling
+        cost = 40
+
+        x = 1
+        y = 1
+        prerequisite = {
+            focus = AUS_deal_with_the_nobility
+        }
+        mutually_exclusive = {
+            focus = AUS_threats_and_action
+        }
+        relative_position_id = AUS_deal_with_the_nobility
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus AUS_presents_and_cajoling"
+            country_event = Ausrudolf.5
+        }
+    }
+
+    focus = {
+        id = AUS_to_koln
+        icon = GFX_AUS_focus_Visit_Koln
+        cost = 35
+
+        x = -1
+        y = 1
+        prerequisite = {
+            focus = AUS_a_visit_to_rome
+        }
+        relative_position_id = AUS_a_visit_to_rome
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus AUS_to_koln"
+            country_event = Ausrudolf.6
+        }
+    }
+
+    focus = {
+        id = AUS_and_to_konigsberg
+        icon = GFX_AUS_focus_Visit_Konigsberg
+        cost = 35
+
+        x = 1
+        y = 1
+        prerequisite = {
+            focus = AUS_a_visit_to_rome
+        }
+        relative_position_id = AUS_a_visit_to_rome
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus AUS_and_to_konigsberg"
+            country_event = Ausrudolf.7
+        }
+    }
+
+    focus = {
+        id = AUS_the_peoples_emperor
+        icon = GFX_AUS_focus_Peoples_Emperor
+        cost = 35
+
+        x = 2
+        y = 1
+        prerequisite = {
+            focus = AUS_emancipation
+        }
+        prerequisite = {
+            focus = AUS_equality
+        }
+        prerequisite = {
+            focus = AUS_salvation
+        }
+        relative_position_id = AUS_emancipation
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus AUS_the_peoples_emperor"
+            add_stability = 0.02
+            add_war_support = 0.04
+            add_political_power = -150
+        }
+    }
+
+    focus = {
+        id = AUS_call_for_council
+        icon = GFX_goal_tfv_strengthen_commonwealth_ties
+        cost = 30
+
+        x = 1
+        y = 1
+        prerequisite = {
+            focus = AUS_threats_and_action
+            focus = AUS_presents_and_cajoling
+        }
+        relative_position_id = AUS_threats_and_action
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus AUS_call_for_council"
+            country_event = Ausrudolf.8
+        }
+    }
+
+    focus = {
+        id = AUS_end_temporal_authority
+        icon = GFX_AUS_focus_End_Temporal_Authority
+        cost = 50
+
+        x = 1
+        y = 1
+        prerequisite = {
+            focus = AUS_to_koln
+        }
+        prerequisite = {
+            focus = AUS_and_to_konigsberg
+        }
+        relative_position_id = AUS_to_koln
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus AUS_end_temporal_authority"
+            country_event = Ausrudolf.10 
+        }
+    }
+
+    focus = {
+        id = AUS_inspiration_from_athens
+        icon = GFX_AUS_focus_Inspiration_Greece
+        cost = 35
+
+        x = -1
+        y = 1
+        prerequisite = {
+            focus = AUS_the_peoples_emperor
+        }
+        mutually_exclusive = { focus = AUS_or_rome }
+        relative_position_id = AUS_the_peoples_emperor
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus AUS_inspiration_from_athens"
+            add_timed_idea = { idea = aus_idea_inspiration_athens days = 255 }
+        }
+    }
+
+    focus = {
+        id = AUS_or_rome
+        icon = GFX_AUS_focus_Inspiration_Rome
+        cost = 35
+
+        x = 1
+        y = 1
+        prerequisite = {
+            focus = AUS_the_peoples_emperor
+        }
+        mutually_exclusive = { focus = AUS_inspiration_from_athens }
+        relative_position_id = AUS_the_peoples_emperor
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus AUS_or_rome"
+            add_timed_idea = { idea = aus_idea_inspiration_rome days = 255 }
+        }
+    }
+
+    focus = {
+        id = AUS_speak_with_the_family
+        icon = GFX_focus_ger_revive_kaiserreich
+        cost = 30
+
+        x = -2
+        y = 1
+        prerequisite = {
+            focus = AUS_call_for_council
+        }
+        relative_position_id = AUS_call_for_council
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus AUS_speak_with_the_family"
+            country_event = Ausrudolf.11 
+        }
+    }
+
+    focus = {
+        id = AUS_the_nobles_from_home
+        icon = GFX_focus_rom_royal_dictatorship
+        cost = 30
+
+        x = 0
+        y = 1
+        prerequisite = {
+            focus = AUS_call_for_council
+        }
+        relative_position_id = AUS_call_for_council
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus AUS_the_nobles_from_home"
+            country_event = Ausrudolf.12
+        }
+    }
+
+    focus = {
+        id = AUS_and_the_rest
+        icon = GFX_focus_generic_diplomatic_treaty
+        cost = 30
+
+        x = 2
+        y = 1
+        prerequisite = {
+            focus = AUS_call_for_council
+        }
+        relative_position_id = AUS_call_for_council
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus AUS_and_the_rest"
+            country_event = Ausrudolf.13 
+        }
+    }
+
+    focus = {
+        id = AUS_with_gifts
+        icon = GFX_focus_mex_privatisation
+        cost = 30
+
+        x = -1
+        y = 1  
+        prerequisite = {
+            focus = AUS_end_temporal_authority
+        }
+        mutually_exclusive = {
+            focus = AUS_with_nothing
+        }
+        relative_position_id = AUS_end_temporal_authority
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus AUS_with_gifts"
+            set_country_flag = AUS_flag_Peaceful_Secularization
+            add_political_power = -150
+            add_stability = -0.04
+        }
+    }
+
+    focus = {
+        id = AUS_with_nothing
+        icon = GFX_focus_mex_triumph_over_the_cristeros
+        cost = 30
+
+        x = 1
+        y = 1
+        prerequisite = {
+            focus = AUS_end_temporal_authority
+        }
+        mutually_exclusive = {
+            focus = AUS_with_gifts
+        }
+        relative_position_id = AUS_end_temporal_authority
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus AUS_with_nothing"
+            add_political_power = -50
+            add_stability = -0.08
+        }
+    }
+
+    focus = {
+        id = AUS_i_present_you_democracy
+        icon = GFX_AUS_focus_Present_Democracy
+        cost = 70
+
+        x = 1
+        y = 1
+        prerequisite = {
+            focus = AUS_inspiration_from_athens
+            focus = AUS_or_rome
+        }
+        relative_position_id = AUS_inspiration_from_athens
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus AUS_i_present_you_democracy"
+            add_timed_idea = { idea = aus_idea_rudolfian_democracy days = 400 }
+            add_war_support = 0.01
+            add_stability = 0.03
+        }
+    }
+
+    focus = {
+        id = AUS_miserere_nobis
+        icon = GFX_goal_generic_attack_allies
+        cost = 30
+
+        x = 1
+        y = 1
+        prerequisite = {
+            focus = AUS_with_gifts
+            focus = AUS_with_nothing
+        }
+        relative_position_id = AUS_with_gifts
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus AUS_miserere_nobis"
+            add_stability = -0.03       
+            add_war_support = -0.02
+            add_political_power = -25 
+        }
+    }
+
+    focus = {
+        id = AUS_the_peoples_freedom
+        icon = GFX_goal_support_democracy
+        cost = 30
+
+        x = 1
+        y = 2
+        prerequisite = { focus = AUS_i_present_you_democracy }
+        prerequisite = { focus = AUS_speak_with_the_family }
+        prerequisite = { focus = AUS_the_nobles_from_home }
+        prerequisite = { focus = AUS_and_the_rest }
+        relative_position_id = AUS_speak_with_the_family
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus AUS_the_peoples_freedom"
+            country_event = Ausrudolf.14
+            add_ideas = aus_idea_promise_end_serfdom
+        }
+    }
+
+    focus = {
+        id = AUS_the_clergys_fate
+        icon = GFX_AUS_focus_Clergy_Fate    
+        cost = 30
+
+        x = -1
+        y = 2
+        prerequisite = { focus = AUS_miserere_nobis }
+        prerequisite = { focus = AUS_speak_with_the_family }
+        prerequisite = { focus = AUS_the_nobles_from_home }
+        prerequisite = { focus = AUS_and_the_rest }
+        relative_position_id = AUS_and_the_rest
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus AUS_the_clergys_fate"
+            country_event = Ausrudolf.15
+            add_timed_idea = { idea = aus_idea_state_clergy days = 255 }
+        }
+    }
+
+    focus = {
+        id = AUS_neue_gesellschaft
+        icon = GFX_AUS_focus_New_Society   
+        cost = 30
+
+        x = 1
+        y = 1
+        prerequisite = {
+            focus = AUS_the_peoples_freedom
+        }
+        prerequisite = {
+            focus = AUS_the_clergys_fate
+        }
+        relative_position_id = AUS_the_peoples_freedom
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: Focus AUS_neue_gesellschaft"
+            country_event = Ausrudolf.16
+            load_focus_tree = Austria_rudolf_reforms
+        }
+    }
+}

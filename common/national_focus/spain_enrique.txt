@@ -1,0 +1,411 @@
+
+focus_tree = {
+	id = Spain_enrique
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 11
+			tag = SPP
+		}
+		
+	}
+	default = no
+	continuous_focus_position = { x = 50 y = 2000 }
+
+
+	###########
+	#  Start  #
+	###########
+	
+	focus = { 
+		id = SPP_under_one_banner
+		icon = GFX_SPR_the_spanish_bull
+		cost = 15
+	
+		x = 6
+		y = 0
+		
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = { 
+		id = SPP_under_one_motto
+		icon = GFX_focus_generic_military_academy
+		cost = 15
+	
+		x = 10
+		y = 0
+		
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = { 
+		id = SPP_peasants_of_spain
+		icon = GFX_AUS_focus_Promises_People
+		cost = 30
+	
+		prerequisite = { focus = SPP_under_one_banner }
+		prerequisite = { focus = SPP_under_one_motto }
+		relative_position_id = SPP_under_one_banner
+	
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			add_ideas = spr_idea_peasants_of_spain
+		}
+	}
+	focus = { 
+		id = SPP_for_king_and_freedom
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 15
+	
+		prerequisite = { focus = SPP_peasants_of_spain }
+		relative_position_id = SPP_peasants_of_spain
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.10
+			add_war_support = 0.10
+		}
+	}
+	focus = { 
+		id = SPP_crown_enrique_of_habsburg
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 30
+	
+		prerequisite = { focus = SPP_for_king_and_freedom }
+		relative_position_id = SPP_for_king_and_freedom
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			retire_country_leader = yes 
+			create_country_leader = {
+				name = "Enrique II"
+				desc = "SPR_LEADER_DESC_ENRIQUE_II"
+				picture = "Portrait_SPR_Enrique_II.dds"
+				expire = "1965.1.1"
+				ideology = centrist_moderate
+				traits = {
+			
+				}
+			}
+			hidden_effect = {
+				every_controlled_state = { 
+					create_unit = {
+						division = "division_template = \"Spanish Revolutionary Militia Division\" start_experience_factor = 0.2" 
+						owner = SPP
+					}
+				}
+			}
+		}
+	}
+	#Reorganization
+	focus = { 
+		id = SPP_reorganize_the_masses
+		icon = GFX_focus_generic_little_entente
+		cost = 30
+	
+		prerequisite = { focus = SPP_crown_enrique_of_habsburg }
+		relative_position_id = SPP_crown_enrique_of_habsburg
+	
+		x = -4
+		y = 1
+		
+		completion_reward = {
+			add_ideas = spr_idea_reorganize_masses
+		}
+	}
+	focus = { 
+		id = SPP_focus_traitor
+		icon = GFX_SPR_felipes_demise
+		cost = 25
+	
+		prerequisite = { focus = SPP_reorganize_the_masses }
+		mutually_exclusive = { focus = SPP_focus_central_government }
+		relative_position_id = SPP_reorganize_the_masses
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_ideas = spr_idea_focus_traitor
+		}
+	}
+	focus = { 
+		id = SPP_focus_central_government
+		icon = GFX_focus_generic_military_mission
+		cost = 25
+	
+		prerequisite = { focus = SPP_reorganize_the_masses }
+		mutually_exclusive = { focus = SPP_focus_traitor }
+		relative_position_id = SPP_reorganize_the_masses
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_ideas = spr_idea_focus_central_government
+		}
+	}
+	focus = { 
+		id = SPP_pass_me_beret
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 30
+	
+		prerequisite = { focus = SPP_focus_traitor focus = SPP_focus_central_government }
+		relative_position_id = SPP_focus_traitor
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			random_state = { 
+				limit = { 
+					is_controlled_by = ROOT 
+				}
+				create_unit = {
+					division = "division_template = \"Spanish Revolutionary Militia Division\" start_experience_factor = 0.2" 
+					owner = ROOT
+					count = 2
+				}
+			}
+			random_state = { 
+				limit = { 
+					is_controlled_by = ROOT 
+				}
+				create_unit = {
+					division = "division_template = \"Spanish Revolutionary Militia Division\" start_experience_factor = 0.2" 
+					owner = ROOT
+				}
+			}
+		}
+	}
+	#French Assistance
+	focus = { 
+		id = SPP_request_french_assistance
+		icon = GFX_goal_generic_major_alliance
+		cost = 30
+	
+		prerequisite = { focus = SPP_crown_enrique_of_habsburg }
+		relative_position_id = SPP_crown_enrique_of_habsburg
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			FRA = {
+				country_event = SPREnrique.1
+			}
+		}
+	}
+	focus = { 
+		id = SPP_with_them
+		icon = GFX_goal_generic_attack_allies
+		cost = 10
+		
+		available  = {
+			always = no
+		}
+	
+		prerequisite = { focus = SPP_request_french_assistance }
+		mutually_exclusive = { focus = SPP_without_them }
+		relative_position_id = SPP_request_french_assistance
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_opinion_modifier = {
+				target = FRA
+				modifier = SPR_with_FRA
+			}
+		}
+	}
+	focus = { 
+		id = SPP_without_them
+		icon = GFX_focus_eng_special_air_service
+		cost = 10
+		
+		available  = {
+			always = no
+		}
+	
+		prerequisite = { focus = SPP_request_french_assistance }
+		mutually_exclusive = { focus = SPP_with_them }
+		relative_position_id = SPP_request_french_assistance
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_opinion_modifier = {
+				target = FRA
+				modifier = SPR_without_FRA
+			}
+		}
+	}
+	focus = { 
+		id = SPP_defender_of_liberty
+		icon = GFX_goal_support_democracy
+		cost = 30
+	
+		prerequisite = { focus = SPP_with_them }
+		relative_position_id = SPP_with_them
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = spr_idea_defender_of_liberty
+		}
+	}
+	focus = { 
+		id = SPP_benevolent_globalism
+		icon = GFX_goal_generic_trade
+		cost = 30
+	
+		prerequisite = { focus = SPP_without_them }
+		relative_position_id = SPP_without_them
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_ideas = spr_idea_benevolent_globalism
+		}
+	}
+	#Constitution
+	focus = { 
+		id = SPP_promise_constitution
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 30
+	
+		prerequisite = { focus = SPP_crown_enrique_of_habsburg }
+		relative_position_id = SPP_crown_enrique_of_habsburg
+	
+		x = 4
+		y = 1
+		
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.10
+		}
+	}
+	focus = { 
+		id = SPP_equality_before_state
+		icon = GFX_AUS_focus_Equality
+		cost = 30
+	
+		prerequisite = { focus = SPP_promise_constitution }
+		relative_position_id = SPP_promise_constitution
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_political_power = 20
+			add_ideas = spr_idea_equality_before_state
+		}
+	}
+	focus = { 
+		id = SPP_cut_down_privileges
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 15
+	
+		prerequisite = { focus = SPP_equality_before_state }
+		relative_position_id = SPP_equality_before_state
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.05
+		}
+	}
+	focus = { 
+		id = SPP_economize_budget
+		icon = GFX_focus_mex_privatisation
+		cost = 15
+	
+		prerequisite = { focus = SPP_equality_before_state }
+		relative_position_id = SPP_equality_before_state
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = spr_idea_equality_before_state
+				add_idea = spr_idea_economized_budget
+			}
+		}
+	}
+	focus = { 
+		id = SPP_harsh_measures_harsh_times
+		icon = GFX_goal_generic_political_pressure
+		cost = 30
+	
+		prerequisite = { focus = SPP_cut_down_privileges }
+		prerequisite = { focus = SPP_economize_budget }
+		relative_position_id = SPP_cut_down_privileges
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_war_support = 0.10
+			add_tech_bonus = {
+				name = land_doctrine
+				bonus = 0.50
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = { 
+		id = SPP_king_of_people
+		icon = GFX_SPR_The_regency_shall_live_on
+		cost = 50
+	
+		prerequisite = { focus = SPP_pass_me_beret }
+		prerequisite = { focus = SPP_harsh_measures_harsh_times }
+		prerequisite = { focus = SPP_defender_of_liberty focus = SPP_benevolent_globalism }
+		relative_position_id = SPP_defender_of_liberty
+	
+		x = 1
+		y = 2
+		
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.15
+		}
+	}
+	focus = { 
+		id = SPP_people_for_king
+		icon = GFX_SPR_National_Salvation_Movement
+		cost = 50
+	
+		prerequisite = { focus = SPP_king_of_people }
+		relative_position_id = SPP_king_of_people
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = spr_idea_peasants_of_spain
+				add_idea = spr_idea_people_for_king
+			}
+		}
+	}
+}

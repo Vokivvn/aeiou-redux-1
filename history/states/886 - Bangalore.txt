@@ -1,0 +1,31 @@
+
+state={
+	id=886
+	name="STATE_886" 
+	manpower = 50000
+	resources={
+		
+	}
+	
+	state_category = town
+
+	resources={
+		horses=1
+	}
+
+	history={
+		owner = VIJ
+		add_core_of = VIJ
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			8011 3
+		}	
+	}
+
+	provinces={
+		8011 8100 12734
+	}
+}

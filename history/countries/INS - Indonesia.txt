@@ -1,0 +1,19 @@
+﻿capital = 335 #Jakarta
+
+#oob = "INS_1936"
+
+set_research_slots = 2
+
+# Starting tech
+# clone of Holland
+set_technology = {
+	muskets0 = 1
+}
+
+set_popularities = {
+	conservative = 100
+}
+set_politics = {
+	ruling_party = conservative 
+	elections_allowed = yes
+}

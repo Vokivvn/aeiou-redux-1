@@ -1,0 +1,27 @@
+﻿capital = 2
+
+#oob = "ITA_1936"
+
+set_research_slots = 4
+add_ideas = {
+	limited_exports
+	limited_conscription
+	partial_economic_mobilisation
+}
+
+
+# Starting tech
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+}
+
+set_politics = {
+	ruling_party = conservative
+	last_election = "1885.3.26"
+	election_frequency = 60
+	elections_allowed = no
+}
+set_popularities = {
+	conservative = 100
+}

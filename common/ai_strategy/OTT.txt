@@ -1,0 +1,109 @@
+OTT_area_priority = {
+	enable = {
+		original_tag = OTT
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = europe
+		value = 50 #more focus here
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = scandinavia
+		value = 10
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = north_america
+		value = 10
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = south_america
+		value = 10
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = asia
+		value = 40
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = middle_east
+		value = 110
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = africa
+		value = 60
+	}
+	ai_strategy = {
+        type = area_priority
+        id = suez
+        value = 50
+    }
+	
+	ai_strategy = {
+		type = area_priority
+		id = pacific
+		value = 10 #less focus here
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = oceania
+		value = 10
+	}
+}
+
+conflict_against_GRE = {
+	enable = {
+		tag = OTT
+		country_exists = GRE
+	}
+	abort = {
+		NOT = { country_exists = GRE }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "GRE"
+		value = 200
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = "GRE"
+		value = 200
+	}
+}
+
+conflict_against_GRE_2 = {
+	enable = {
+		tag = OTT
+		country_exists = GRE
+		threat > 50
+	}
+	abort = {
+		NOT = { country_exists = GRE }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "GRE"
+		value = 400
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = "GRE"
+		value = 400
+	}
+}

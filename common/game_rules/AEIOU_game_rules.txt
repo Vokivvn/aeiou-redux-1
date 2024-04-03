@@ -1,0 +1,97 @@
+#
+# List of options showing in the Game Rules screen
+#
+# format is:
+# rule_token = {
+#	name = "TEXT_KEY_FOR_NAME"
+#	required_dlc = "Name of the Required DLC"
+#	desc = "TEXT_KEY_FOR_LONG_DESC"
+#	group = "TEXT_KEY_FOR_GROUP"					# Used for filtering. A single rule can be in multiple groups 
+#	icon = gfx_option_token							# Optional icon
+#	option = {										# Unless other specified, the first option is the default option
+#		name = option_token
+#		text = "TEXT_KEY_FOR_OPTION_NAME"
+#		allow_achievements = no						# Achievements cannot be earned if one or more game rules are set to an option that has this property set to no.
+#													# If not specified, this is set to yes for default options and no for all other options.
+#	}
+#	default = {										# Specify an option with the "default" token to override the behavior of treating the first option as the default.
+#		name = option_token
+#		text = "TEXT_KEY_FOR_OPTION_NAME"
+#		...
+#	}
+# }
+
+centroamerica = {
+	name = "RULE_CENTROAMERICA"
+	group = "RULE_GROUP_COUNTRY_SPECIFIC"
+	default = {
+		name = default
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_CENTROAMERICA_DEFAULT_DESC"
+	}
+	option = {
+		name = survives
+		text = "RULE_OPTION_SURVIVES"
+		desc = "RULE_CENTROAMERICA_SURVIVES_DESC"
+	}
+	option = {
+		name = collapses
+		text = "RULE_OPTION_COLLAPSES"
+		desc = "RULE_CENTROAMERICA_COLLAPSES_DESC"
+	}
+	option = {
+		name = instant_collapse
+		text = "RULE_OPTION_INSTANT_COLLAPSES"
+		desc = "RULE_CENTROAMERICA_INSTANT_COLLAPSE_DESC"
+	}
+}
+
+france = {
+	name = "RULE_FRANCE"
+	group = "RULE_GROUP_COUNTRY_SPECIFIC"
+	default = {
+		name = default
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_FRANCE_DEFAULT_DESC"
+	}
+	option = {
+		name = instant_collapse
+		text = "RULE_OPTION_INSTANT_COLLAPSES"
+		desc = "RULE_FRANCE_INSTANT_COLLAPSE_DESC"
+	}
+}
+
+spain = {
+	name = "RULE_SPAIN"
+	group = "RULE_GROUP_COUNTRY_SPECIFIC"
+	default = {
+		name = default
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_SPAIN_DEFAULT_DESC"
+	}
+	option = {
+		name = felipe
+		text = "RULE_OPTION_FELIPE"
+		desc = "RULE_SPAIN_FELIPE_DESC"
+	}
+	option = {
+		name = regency
+		text = "RULE_OPTION_REGENCY"
+		desc = "RULE_SPAIN_REGENCY_DESC"
+	}
+}
+
+generic_focus_trees = {
+	name = "RULE_GENERIC_FOCUS_TREES"
+	group = "RULE_GROUP_GAMEPLAY"
+	default = {
+		name = default
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_FOCUS_TREE_DEFAULT_DESC"
+	}
+	option = {
+		name = yes
+		text = "RULE_OPTION_YES"
+		desc = "RULE_FOCUS_TREE_YES_DESC"
+	}
+}

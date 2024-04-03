@@ -1,0 +1,27 @@
+
+state={
+	id=807
+	name="STATE_807"
+	manpower = 557123
+	resources={
+		iron = 2
+		wood = 1 
+		gunpowder = 2
+	}
+	state_category = town
+
+	history={
+		owner = BAV
+		victory_points = {
+			3558 3 
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = BAV
+	}
+
+	provinces={
+		563 11547 3558
+	}
+}

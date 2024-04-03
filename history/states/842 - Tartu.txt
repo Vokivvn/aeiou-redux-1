@@ -1,0 +1,24 @@
+state={
+	id=842
+	name="STATE_842"
+	
+	resources = {
+	    wood = 4
+		horses = 1 
+	}
+
+	history={
+		owner = COU
+		add_core_of = COU
+		victory_points = {
+			9221 1 
+		}
+	}
+
+	provinces={
+		9221 6099 6178 6408 9485 592
+	}
+	manpower = 154025
+	buildings_max_level_factor = 1.000
+	state_category = rural
+}

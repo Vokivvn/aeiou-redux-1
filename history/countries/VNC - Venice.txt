@@ -1,0 +1,36 @@
+﻿capital = 160
+
+oob = "VNC_1886"
+
+set_research_slots = 2
+
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+	melee = 1
+	basic_cavalry = 1
+	melee_improvements = 1
+}
+
+set_convoys = 10
+
+set_politics = {
+	ruling_party = conservative
+	last_election = "1933.1.24"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	conservative = 100
+}
+
+create_country_leader = {
+	name = "Giorgio Manin"
+	desc = "VNC_LEADER_DESC_GIORGIO"
+	picture = "Portrait_VNC_Giorgio_Manin.dds"
+	expire = "1965.1.1"
+	ideology = conservative_moderate
+	traits = {
+		}
+}
+add_to_array = { national_religion_array =  2 }

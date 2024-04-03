@@ -1,0 +1,28 @@
+﻿capital = 699
+
+# Starting tech
+set_technology = {
+	muskets0 = 1
+}
+
+set_convoys = 20
+
+set_politics = {
+	ruling_party = absolutist
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	absolutist = 100
+}
+
+create_country_leader = {
+	name = "El-Ouali Mustapha Sayed"
+	desc = ""
+	picture = "gfx/leaders/SAU/Portrait_Arabia_Generic_1.dds"
+	ideology = absolutist_moderate
+	traits = {
+		#
+	}
+}

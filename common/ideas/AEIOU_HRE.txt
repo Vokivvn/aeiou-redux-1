@@ -1,0 +1,119 @@
+ideas = {
+    country = {
+        hre_idea_elector = {
+            picture = generic_HRE_elector
+
+            allowed = { always = no }
+
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {}
+        }
+
+        hre_idea_prince = {
+            picture = generic_HRE_prince
+            
+            allowed = { always = no }
+
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {}
+        }
+
+        hre_idea_free_city = {
+            picture = generic_HRE_free_city
+            
+            allowed = { always = no }
+
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {}
+        }
+
+        hre_idea_emperor = {
+            picture = generic_HRE_emperor
+            
+            allowed = { always = no }
+
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {}
+        }
+
+        hre_idea_conservative = {
+            picture = generic_HRE_prince
+            
+            allowed = { always = no }
+
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {}
+        }
+
+        hre_idea_republic = {
+            picture = generic_HRE_prince
+            
+            allowed = { always = no }
+
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {}
+        }
+		
+		hre_idea_pope_excommunicated = {
+            picture = AUS_winds_of_change
+            
+            allowed = { always = no }
+
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                political_power_gain = 0.10
+                drift_defence_factor = 0.20
+            }
+        }
+
+        hre_idea_ongoing_conversion = {
+            picture = AUS_winds_of_change
+
+            available = {
+                OR = {
+                    has_idea = hre_idea_conservative
+                    has_idea = hre_idea_republic
+                    has_idea = hre_idea_prince
+                    has_idea = hre_idea_elector
+                }
+                check_variable = { national_religion_array^0 = 3 }
+            }
+            
+            allowed = { always = no }
+
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+                weekly_stability = -0.001
+                political_power_gain = -0.1
+                army_speed_factor = -0.06
+                conscription_factor = -0.05
+                army_org_factor = -0.02
+                consumer_goods_factor = 0.02
+            }
+        }
+    }
+}

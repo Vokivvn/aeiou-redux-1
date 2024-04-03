@@ -1,0 +1,36 @@
+
+state={
+	id=66
+	name="STATE_66"
+	manpower = 2030200
+
+	resources={
+		steel = 2
+		iron = 5
+	}
+	
+	state_category = large_city
+
+	history={
+		owner = AUS
+		victory_points = {
+			9570 10 
+		}
+		#victory_points = {
+		#	552 1
+		#}
+		#victory_points = {
+		#	3545 1
+		#}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			
+		}
+		add_core_of = AUS
+	}
+
+	provinces={
+		552 3283 3438 3485 3510 3545 6462 6534 6595 9470 9570 11517 
+	}
+}

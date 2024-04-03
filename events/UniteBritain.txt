@@ -1,0 +1,32 @@
+﻿###########################
+# United Britain Events
+###########################
+
+# add_namespace = UBE
+
+# news_event = {
+	# id = UBE.1
+	# title = UBE.1.t
+	# desc = UBE.1.d
+	# picture = GFX_report_news_event_rome_01
+	
+	# trigger={
+	# tag = IRE
+    # IRE = { has_war_with = ENG }	
+	# }
+	
+	# option = {
+		# name = UBE.1.a
+		# ai_chance = { factor = 100 }
+	  # add_equipment_to_stockpile = {
+	  # type = musket_equipment_0
+      # amount = 800
+      # producer = IRE
+	   # }
+	   # add_manpower = 10000
+	# }
+# }
+
+# DO NOT ADD FUNCTIONAL EVENTS UNTIL AFTER THE PRE-RELEASE AND NEVER ADD EFFECTS ON NEWS EVENTS 
+
+

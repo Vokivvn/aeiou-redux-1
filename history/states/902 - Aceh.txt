@@ -1,0 +1,29 @@
+state= {
+	id=902
+	name="STATE_902"
+	manpower = 2126751
+	resources={
+		fabric=2
+		wood=2
+	}
+	
+	state_category = rural
+
+	history= {
+		owner = ACH
+		add_core_of = ACH
+		
+		victory_points = {
+			4652 3 
+		}
+		buildings = {
+			infrastructure = 2
+			4652 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces={
+	   7658 10509 12488 8360 12126 4446 10522 1428 1648 4652 7673 1460
+	}
+}

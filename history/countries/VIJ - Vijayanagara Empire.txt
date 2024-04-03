@@ -1,0 +1,33 @@
+﻿capital = 427
+
+oob = "VIJ_1886"
+
+set_research_slots = 2
+
+set_technology = {
+	muskets0 = 1
+}
+
+set_convoys = 10
+
+set_politics = {
+	ruling_party = absolutist
+	elections_allowed = no
+}
+
+set_popularities = {
+	absolutist = 100
+}
+add_to_array = { national_religion_array =  18 }
+
+
+create_country_leader = {
+	name = "Shiva R. Kumari"
+	desc = "VIJ_LEADER_DESC_FELIPE_VI"
+	picture = "Portrait_VIJ_Shiva_Raya_Kumari.dds"
+	expire = "1965.1.1"
+	ideology = absolutist_moderate
+	traits = {
+		#
+	}
+}

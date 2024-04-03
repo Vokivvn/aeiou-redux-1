@@ -1,0 +1,16 @@
+﻿capital = 670 #today Vientiane in 1945 Luang Prabang sel proclaimed indie Laos 
+
+#oob = "LAO_1936"
+
+set_research_slots = 3
+
+# Starting tech
+# clone of France
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+}
+
+set_popularities = {
+	conservative = 100
+}

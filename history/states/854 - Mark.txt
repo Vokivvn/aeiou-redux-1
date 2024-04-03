@@ -1,0 +1,30 @@
+
+state={
+	id=854
+	name="STATE_854"
+	manpower = 435014
+	state_category = town
+	
+	resources={
+		wood = 2 
+		horses = 1 
+	}
+
+ 
+	history={
+		owner = MRK
+		victory_points = {
+			9443 5 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1 
+		}
+		add_core_of = MRK
+	}
+	
+	
+	provinces={
+		3398 9443 9547
+	}
+}

@@ -1,0 +1,100 @@
+﻿division_template = {
+	name = "Royal Guard"
+
+	division_names_group = MUG_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Cavalry Division"
+
+	division_names_group = MUG_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Skirmishers"
+
+	division_names_group = MUG_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "Royal Mogul Division"
+		location = 2086
+		division_template = "Royal Guard"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Royal Mogul Division"
+		location = 2086
+		division_template = "Royal Guard"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Royal Mogul Division"
+		location = 2054
+		division_template = "Royal Guard"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Royal Mogul Division"
+		location = 12137
+		division_template = "Royal Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Royal Mogul medium_cavalry"
+		location = 4516
+		division_template = "Royal Cavalry Division"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "Royal Mogul medium_cavalry"
+		location = 3456
+		division_template = "Royal Cavalry Division"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "Mogul Skirmishers"
+		location = 10898
+		division_template = "Skirmishers"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Mogul Skirmishers"
+		location = 10332
+		division_template = "Skirmishers"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Mogul Skirmishers"
+		location = 12886
+		division_template = "Skirmishers"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Mogul Skirmishers"
+		location = 10878
+		division_template = "Skirmishers"
+		start_experience_factor = 0.2
+	}
+}

@@ -1,0 +1,30 @@
+state={
+	id=56
+	name="STATE_56"
+	manpower = 1243015
+	
+	state_category = city
+	
+	resources = {
+	    wood = 1 
+		gunpowder = 2 
+		horses = 4 
+	}
+
+	history={
+		owner = MUN
+		victory_points = {
+			6535 5
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1 
+		}
+		add_core_of = MUN
+	}
+
+	provinces={
+	 247 9281 9509 11233 11264 11388 6535 11346 11431 6622
+	}
+}

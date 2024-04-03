@@ -1,0 +1,60 @@
+﻿division_template = {
+	name = "Massachusite Infantry"
+
+	division_names_group = MAS_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Massachusite medium_cavalry Destacament"
+
+	division_names_group = MAS_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Massachusite Militia"
+
+	division_names_group = MAS_ARM_01
+
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Massachusite Infantry Regiment"
+		location = 6732
+		division_template = "Massachusite Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Massachusite Infantry Regiment"
+		location = 9832
+		division_template = "Massachusite Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Massachusite Militia"
+		location = 9774
+		division_template = "Massachusite Militia"
+		start_experience_factor = 0.3
+	}
+}

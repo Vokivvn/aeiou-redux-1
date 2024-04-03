@@ -1,0 +1,29 @@
+
+state={
+	id=836
+	name="STATE_836" 
+	manpower = 45871
+	resources={
+		horses = 1 
+	}
+	
+	state_category = town
+
+	history={
+		owner = KLE
+		add_core_of = KLE
+		buildings = {
+			infrastructure = 3
+			11360 = {
+			    naval_base = 1 
+			}
+		}
+		victory_points = {
+			11360 1
+		}		
+	}
+
+	provinces={
+		11360
+	}
+}

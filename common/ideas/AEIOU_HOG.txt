@@ -1,0 +1,53 @@
+ideas = {
+    country = {
+        hog_generic_divided_government = {
+            picture = generic_HRE_elector
+
+            allowed = { always = no }
+
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				political_power_gain = -0.10 
+				stability_factor = -0.05
+				war_support_factor = -0.05
+			}
+        }
+    }
+	country = {
+        hog_generic_questioned_experience = {
+            picture = generic_HRE_elector
+
+            allowed = { always = no }
+
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				political_power_gain = -0.25 
+				stability_factor = -0.15
+				war_support_factor = -0.10
+			}
+        }
+    }
+	country = {
+        hog_generic_all_for_the_ruler = {
+            picture = generic_HRE_elector
+
+            allowed = { always = no }
+
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {
+				political_power_gain = 0.10 
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+        }
+    }
+}

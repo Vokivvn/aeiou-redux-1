@@ -1,0 +1,22 @@
+﻿capital = 12
+
+#oob = "LAT_1936"
+
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+}
+
+set_research_slots = 3
+
+set_convoys = 10
+
+set_politics = {
+	ruling_party = absolutist
+	last_election = "1931.10.3"
+	election_frequency = 108
+	elections_allowed = no
+}
+set_popularities = {
+	absolutist = 100
+}

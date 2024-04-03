@@ -1,0 +1,376 @@
+
+focus_tree = {
+	id = Spain_tightrope
+	
+	country = {
+		factor = 0
+		
+	}
+	default = no
+	continuous_focus_position = { x = 50 y = 2000 }
+
+
+	###########
+	#  Start  #
+	###########
+	
+	#Crisis
+	focus = { 
+		id = SPR_absolutism_faces_crisis
+		icon = GFX_focus_rom_abdicate
+		cost = 50
+	
+		x = 5
+		y = 0
+		
+		completion_reward = {
+		}
+	}
+	
+	#Nuevo Absolutismo
+	focus = { 
+		id = SPR_nuevo_absolutism
+		icon = GFX_focus_generic_the_old_is_new_again
+		cost = 60
+		
+		prerequisite = { focus = SPR_absolutism_faces_crisis }
+		relative_position_id = SPR_absolutism_faces_crisis
+		mutually_exclusive = { focus = SPR_secure_stability }
+		
+		x = -2
+		y = 1
+		
+		completion_reward = {
+			#event
+		}
+	}
+	
+	focus = { 
+		id = SPR_confabulate_with_nobles
+		icon = GFX_generic_noble_support
+		cost = 25
+		
+		prerequisite = { focus = SPR_nuevo_absolutism }
+		relative_position_id = SPR_nuevo_absolutism
+		
+		x = -3
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.10
+		}
+	}
+	
+	focus = { 
+		id = SPR_appease_masses
+		icon = GFX_AUS_focus_Promises_People
+		cost = 25
+		
+		prerequisite = { focus = SPR_nuevo_absolutism }
+		relative_position_id = SPR_nuevo_absolutism
+		
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.10
+		}
+	}
+	
+	focus = { 
+		id = SPR_appease_church
+		icon = GFX_SPR_catholic_teaching
+		cost = 25
+		
+		prerequisite = { focus = SPR_nuevo_absolutism }
+		relative_position_id = SPR_nuevo_absolutism
+		
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.10
+		}
+	}
+	
+	focus = { 
+		id = SPR_christian_despotism
+		icon = GFX_SPR_National_Salvation_Movement
+		cost = 50
+		
+		prerequisite = { focus = SPR_confabulate_with_nobles }
+		prerequisite = { focus = SPR_appease_masses }
+		prerequisite = { focus = SPR_appease_church }
+		relative_position_id = SPR_appease_masses
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.10
+		}
+	}
+	
+	focus = { 
+		id = SPR_royal_decree_2a
+		icon = GFX_SPR_regency_legitimized_government
+		cost = 30
+		
+		prerequisite = { focus = SPR_christian_despotism }
+		relative_position_id = SPR_christian_despotism
+		
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = { 
+		id = SPR_international_economic_expansionism
+		icon = GFX_SPR_Old_colonies_new_colonies
+		cost = 60
+		
+		prerequisite = { focus = SPR_royal_decree_2a }
+		relative_position_id = SPR_royal_decree_2a
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			country_event = SPRFrancisco.1
+		}
+	}
+	
+	#puppet council
+	focus = { 
+		id = SPR_secure_stability
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 40
+		
+		prerequisite = { focus = SPR_absolutism_faces_crisis }
+		relative_position_id = SPR_absolutism_faces_crisis
+		mutually_exclusive = { focus = SPR_nuevo_absolutism }
+		
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.15
+		}
+	}
+	
+	focus = { 
+		id = SPR_form_puppet_council
+		icon = GFX_SPR_meeting_the_challengers
+		cost = 25
+		
+		prerequisite = { focus = SPR_secure_stability }
+		relative_position_id = SPR_secure_stability
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_timed_idea = {
+				idea = spr_idea_shared_powers
+				days = 730
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_give_bourgers_electoral_rights
+		icon = GFX_AUS_focus_Presents_Cajoling
+		cost = 40
+		
+		prerequisite = { focus = SPR_secure_stability }
+		relative_position_id = SPR_secure_stability
+		
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.10
+		}
+	}
+	
+	focus = { 
+		id = SPR_imperium_pudens
+		icon = GFX_goal_generic_political_pressure
+		cost = 40
+		
+		prerequisite = { focus = SPR_form_puppet_council }
+		prerequisite = { focus = SPR_give_bourgers_electoral_rights }
+		relative_position_id = SPR_form_puppet_council
+		
+		x = 1
+		y = 1
+		
+		completion_reward = {
+		}
+	}
+	
+	focus = { 
+		id = SPR_royal_decree_2c
+		icon = GFX_SPR_boost_noble_scholarships
+		cost = 40
+		
+		prerequisite = { focus = SPR_imperium_pudens }
+		relative_position_id = SPR_imperium_pudens
+		
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_ideas = spr_idea_compulsory_schooling
+		}
+	}
+	
+	focus = { 
+		id = SPR_fund_alphabetization_projects
+		icon = GFX_SPR_wealthy_universities
+		cost = 40
+		
+		prerequisite = { focus = SPR_royal_decree_2c }
+		relative_position_id = SPR_royal_decree_2c
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_political_power = 50
+			if = {
+				limit = { has_idea = spr_idea_compulsory_schooling1 }
+				swap_ideas = {
+					remove_idea = spr_idea_compulsory_schooling1
+					add_idea = spr_idea_compulsory_schooling2
+				}
+			} else = {
+				swap_ideas = {
+					remove_idea = spr_idea_compulsory_schooling
+					add_idea = spr_idea_compulsory_schooling1
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_fund_press_expansion
+		icon = GFX_SPR_toledo_manifesto
+		cost = 40
+		
+		prerequisite = { focus = SPR_royal_decree_2c }
+		relative_position_id = SPR_royal_decree_2c
+		
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.02
+			if = {
+				limit = { has_idea = spr_idea_compulsory_schooling1 }
+				swap_ideas = {
+					remove_idea = spr_idea_compulsory_schooling1
+					add_idea = spr_idea_compulsory_schooling2
+				}
+			} else = {
+				swap_ideas = {
+					remove_idea = spr_idea_compulsory_schooling
+					add_idea = spr_idea_compulsory_schooling1
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_may_serfs_write_my_name
+		icon = GFX_SPR_The_regency_shall_live_on
+		cost = 50
+		
+		prerequisite = { focus = SPR_fund_alphabetization_projects }
+		prerequisite = { focus = SPR_fund_press_expansion }
+		relative_position_id = SPR_fund_alphabetization_projects
+		
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = despotist
+				popularity = 0.20
+			}
+		}
+	}
+	
+	#economy
+	
+	focus = { 
+		id = SPR_royal_decree_2b
+		icon = GFX_SPR_Popular_laws
+		cost = 40
+		
+		prerequisite = { focus = SPR_christian_despotism focus = SPR_imperium_pudens }
+		relative_position_id = SPR_imperium_pudens
+		
+		x = -3
+		y = 1
+		
+		completion_reward = {
+			add_ideas = spr_idea_debased_currency
+		}
+	}
+	
+	focus = { 
+		id = SPR_mastery_in_arts_and_crafts
+		icon = GFX_generic_decentralized_economy
+		cost = 40
+		
+		prerequisite = { focus = SPR_royal_decree_2b }
+		relative_position_id = SPR_royal_decree_2b
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 0.50
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_tax_nobility
+		icon = GFX_AUS_bigger_taxes
+		cost = 40
+		
+		prerequisite = { focus = SPR_mastery_in_arts_and_crafts }
+		relative_position_id = SPR_mastery_in_arts_and_crafts
+		
+		x = -1
+		y = 1
+		
+		completion_reward = {
+		}
+	}
+	
+	focus = { 
+		id = SPR_obliterate_corporations
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 40
+		
+		prerequisite = { focus = SPR_mastery_in_arts_and_crafts }
+		relative_position_id = SPR_mastery_in_arts_and_crafts
+		
+		x = 1
+		y = 1
+		
+		completion_reward = {
+		}
+	}
+}	

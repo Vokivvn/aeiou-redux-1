@@ -1,0 +1,56 @@
+division_template = {
+	name = "Pirate Coaster Guard Battalion"
+
+	division_names_group = PIR_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+		line_infantry = { x = 0 y = 4 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Pirate Coaster Cavalry Division"
+
+	division_names_group = PIR_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Pirate Coaster Warrior Brigade"
+
+	division_names_group = PIR_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Pirate Coaster Guard Battalion"
+		location = 7960
+		division_template = "Pirate Coaster Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Pirate Coaster Cavalry Division"
+		location = 8108
+		division_template = "Pirate Coaster Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Pirate Coaster Warrior Brigade"
+		location = 8051
+		division_template = "Pirate Coaster Warrior Brigade"
+		start_experience_factor = 0.3
+	}
+}

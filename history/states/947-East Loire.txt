@@ -1,0 +1,26 @@
+
+state={
+	id=947
+	name="STATE_947"
+	manpower = 418892
+
+	state_category = town
+	
+	resources = {
+        horses = 1
+		wood = 1
+	}
+
+	history={
+		owner = FRA
+		
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = FRA
+	}
+
+	provinces={
+		3495 3509 3523 9478 11463 11613 13284 
+	}
+}

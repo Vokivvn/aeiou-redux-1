@@ -1,0 +1,499 @@
+SPR_area_priority = {
+	allowed = {
+		original_tag = SPR
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = europe
+		value = 110 #more focus here
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = scandinavia
+		value = 40
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = north_america
+		value = 50
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = south_america
+		value = 30
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = asia
+		value = 15
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = middle_east
+		value = 15
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = africa
+		value = 40
+	}
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = "YUC"
+		value = 1000
+	}
+	ai_strategy = {
+		type = garrison
+		id = europe
+		value = 1
+	}
+	ai_strategy = {
+        type = area_priority
+        id = suez
+        value = -50
+    }
+	
+	ai_strategy = {
+		type = area_priority
+		id = pacific
+		value = 10 #less focus here
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = oceania
+		value = 10
+	}
+	
+	ai_strategy = {
+		type = ignore
+		id = "AFR"
+		value = 5000
+	}
+	
+	
+}
+
+SPR_french_india_war = {
+	allowed = {
+		tag = SPR
+	}
+	enable = {
+		has_completed_focus = SPR_begin_operations
+		always = no
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "FRA"
+		value = 60
+	}
+	ai_strategy = {
+		type = invade
+		id = "FRA"
+		value = 60
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = "FRA"
+		value = 60
+	}
+	
+	ai_strategy = {
+		type = ignore
+		id = "POR"
+		value = 500
+	}
+	
+}
+
+SPR_yucatan_garrison_force = {
+	allowed = {
+		tag = SPR
+	}
+	enable = {
+		YUC = {
+			is_subject_of = SPR
+		}
+		NOT = {	has_war_with = FRA }
+		abort_when_not_enabled = yes
+		
+	}
+	
+	ai_strategy = {
+		type = put_unit_buffers
+		
+		order_id = 2
+		
+		states = { 
+			474
+			311
+		}
+		
+		ratio = 0.3
+		area = north_america
+		
+	}
+	
+	subtract_invasions_from_need = no
+	
+	ai_strategy = {
+		type = protect
+		id = "YUC"			
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "YUC"			
+		value = 25
+	}
+	
+}
+
+SPR_keep_yucatan_under_spanish_control = {
+	allowed = {
+		tag = SPR
+	}
+	enable = {
+		YUC = {
+			is_subject_of = SPR
+			has_war = yes
+		}
+		NOT = {	has_war_with = FRA }
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = put_unit_buffers
+		
+		order_id = 1
+		
+		ratio = 0.4
+		area = yucatan
+		
+		subtract_invasions_from_need = no
+	}
+	
+	ai_strategy = {
+		type = protect
+		id = "YUC"			
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = "YUC"			
+		value = 50
+	}
+}
+
+SPR_belgium_can_hold_itseld = {
+	allowed = {
+		tag = SPR
+	}
+	enable = {
+		SPN = {
+			is_subject_of = SPR
+		}
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = protect
+		id = "SPN"			
+		value = -400
+	}
+	
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "SPN"			
+		value = 1000
+	}
+	
+}
+
+SPR_west_garrison_force = {
+	allowed = {
+		tag = SPR
+	}
+	enable = {
+		SPW = {
+			is_subject_of = SPR
+		}
+		NOT = {	has_war_with = FRA }
+		
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = put_unit_buffers
+		
+		order_id = 2
+		
+		states = { 
+			315
+			318
+			319
+			686
+			689
+			690
+			693
+			923
+			924
+			930
+		}
+		
+		ratio = 0.05
+		area = north_america
+		
+	}
+	
+	subtract_invasions_from_need = no
+	
+	ai_strategy = {
+		type = protect
+		id = "SPW"			
+		value = 25
+	}
+	ai_strategy = {
+		type = support
+		id = "SPW"			
+		value = 10
+	}
+}
+
+SPR_east_garrison_force = {
+	allowed = {
+		tag = SPR
+	}
+	enable = {
+		SPE = {
+			is_subject_of = SPR
+		}
+		NOT = {	has_war_with = FRA }
+		
+		
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = put_unit_buffers
+		
+		order_id = 2
+		
+		states = { 
+			327
+			524
+			623
+			626
+			627
+			669
+			673
+			929
+		}
+		
+		ratio = 0.1
+		area = north_america
+		
+	}
+	
+	subtract_invasions_from_need = no
+	
+	ai_strategy = {
+		type = protect
+		id = "SPE"			
+		value = 25
+	}
+	ai_strategy = {
+		type = support
+		id = "SPE"			
+		value = 10
+	}
+}
+
+SPR_invasion_of_MOR = {
+	allowed = {
+		tag = SPR
+	}
+	enable = {
+		SPR = {
+			check_variable = { spr_var_catholic_influence > 0.9 }
+			OR = {
+				has_war = no
+				has_war_with = MOR
+			}
+		}
+		MOR = {
+			exists = yes
+		}
+		
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = antagonize
+		id = "MOR"
+		value = 80
+	}
+	ai_strategy = {
+		type = invade
+		id = "MOR"
+		value = 80
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = "MOR"
+		value = 80
+	}
+}
+
+SPR_invasion_of_SAH = {
+	allowed = {
+		tag = SPR
+	}
+	enable = {
+		SPR = {
+			check_variable = { spr_var_catholic_influence > 0.96 }
+			OR = {
+				has_war = no
+				has_war_with = SAH
+			}
+		}
+		SAH = {
+			exists = yes
+		}
+		
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = antagonize
+		id = "SAH"
+		value = 60
+	}
+	ai_strategy = {
+		type = invade
+		id = "SAH"
+		value = 60
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = "SAH"
+		value = 60
+	}
+}
+
+SPR_civil_war = {
+	allowed = {
+		tag = SPR
+	}
+	enable = {
+		has_global_flag = SPR_civil_war
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = antagonize
+		id = "SPF"
+		value = 100
+	}
+	ai_strategy = {
+		type = invade
+		id = "SPF"
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = "SPF"
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "SPR"
+		value = 100
+	}
+	ai_strategy = {
+		type = invade
+		id = "SPR"
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = "SPR"
+		value = 100
+	}
+}
+
+SPF_civil_war = {
+	allowed = {
+		tag = SPF
+	}
+	enable = {
+		has_global_flag = SPR_civil_war
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = antagonize
+		id = "SPF"
+		value = 100
+	}
+	ai_strategy = {
+		type = invade
+		id = "SPF"
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = "SPF"
+		value = 100
+	}
+}
+
+SPR_civil_war = {
+	allowed = {
+		tag = SPR
+	}
+	enable = {
+		has_global_flag = SPR_civil_war
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = antagonize
+		id = "SPF"
+		value = 100
+	}
+	ai_strategy = {
+		type = invade
+		id = "SPF"
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = "SPF"
+		value = 100
+	}
+}

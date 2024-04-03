@@ -1,0 +1,218 @@
+﻿division_template = {
+	name = "Infanterie Division"
+	division_names_group = AUS_INF_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+		line_infantry = { x = 0 y = 4 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+		line_infantry = { x = 1 y = 2 }
+		line_infantry = { x = 1 y = 3 }
+		line_infantry = { x = 1 y = 4 }
+		line_infantry = { x = 2 y = 0 }
+		line_infantry = { x = 2 y = 1 }
+		line_infantry = { x = 2 y = 2 }
+		line_infantry = { x = 2 y = 3 }
+		line_infantry = { x = 2 y = 4 }
+		line_infantry = { x = 3 y = 0 }
+		line_infantry = { x = 3 y = 1 }
+		line_infantry = { x = 3 y = 2 }
+		line_infantry = { x = 3 y = 3 }
+		line_infantry = { x = 3 y = 4 }
+	}
+	support = {
+		
+	}
+}
+
+division_template = {
+	name = "Schnelle Division"  		# Schnelle-Division (medium_cavalry)
+	division_names_group = AUS_CAV_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 0 y = 2 }
+		medium_cavalry = { x = 0 y = 3 }
+		medium_cavalry = { x = 0 y = 4 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+		medium_cavalry = { x = 1 y = 2 }
+		medium_cavalry = { x = 1 y = 3 }
+		medium_cavalry = { x = 1 y = 4 }
+	}
+	support = {
+		
+	}
+}
+
+division_template = {
+	name = "Ritter Division"  		# Knights
+	division_names_group = AUS_CAV_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 0 y = 2 }
+		melee_battalion = { x = 0 y = 3 }
+	}
+}
+
+units = {
+	##### Österreichisches Bundesheer #####
+
+	division= {	
+		name = "1. Schnelle Division"
+		location = 11666  # Vienna
+		division_template = "Schnelle Division"
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 11666  # Vienna
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+	}
+	
+	division= {		
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 11666  # Vienna
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+	}
+	
+	division= {				
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 732 # Salzburg
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+	}
+
+	division= {		
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 11542 # Prag
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "2. Schnelle Division"
+		location = 11542 # Prag
+		division_template = "Schnelle Division"
+		start_experience_factor = 0.3
+	}
+	
+	division= {		
+		division_name = {
+				is_name_ordered = yes
+				name_order = 5
+		}
+		location = 9570 # Breslau
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+	}
+	
+	division= {		
+		division_name = {
+				is_name_ordered = yes
+				name_order = 6
+		}
+		location = 11595 # Gorz
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+	}
+	
+	division= {		
+		division_name = {
+				is_name_ordered = yes
+				name_order = 7
+		}
+		location = 6983 # Banja Luka
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "3. Schnelle Division"
+		location = 11581  # Agram
+		division_template = "Schnelle Division"
+		start_experience_factor = 0.3
+	}
+	
+	
+	division= {		
+		division_name = {
+				is_name_ordered = yes
+				name_order = 8
+		}
+		location = 619 # Neusatz
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+	}
+	
+	division= {		
+		division_name = {
+				is_name_ordered = yes
+				name_order = 9
+		}
+		location = 9660 # Ofen-Pesth
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+	}
+	
+	division= {		
+		division_name = {
+				is_name_ordered = yes
+				name_order = 10
+		}
+		location = 690 # Kronstadt
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "4. Schnelle Division"
+		location = 6711  # Klausenburg
+		division_template = "Schnelle Division"
+		start_experience_factor = 0.3
+	}
+
+	division= {	
+		name = "5. Schnelle Division"
+		location = 9606  # Temeschwar
+		division_template = "Schnelle Division"
+		start_experience_factor = 0.3
+	}
+	
+
+}
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = musket_equipment_1
+			creator = "AUS"
+		}
+		requested_factories = 3
+		progress = 0.54
+		efficiency = 100
+	}
+}

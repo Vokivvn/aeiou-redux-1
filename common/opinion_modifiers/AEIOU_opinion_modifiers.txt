@@ -1,0 +1,250 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+
+	#general
+
+	accepted_the_deal = {
+		value = 10
+		months = 5
+		decay = 1
+	}
+
+	refused_the_deal = {
+		value = -20
+		months = 10
+		decay = -2
+	}
+
+	# France
+	
+	FRA_anti_english_sentiment = {
+		value = -50
+	}
+	
+	FRA_anti_french_sentiment = {
+		value = -50
+	}
+	
+	SCO_FRA_support = {
+		value = -20
+	}
+	
+	SCO_FRA_cherbourg_agreement = {
+		value = -30
+	}
+
+	# Spain
+
+	SPR_rally_portuguese = {
+		value = 10
+	}
+	
+	SPR_keep_them_out = {
+		value = -10
+	}
+
+	SPR_with_FRA = {
+		value = 10
+	}
+
+	SPR_without_FRA = {
+		value = -10
+	}
+	
+	SPR_side_FRA = {
+		value = 10
+	}
+
+	SPR_side_PIE = {
+		value = 10
+	}
+	
+	SPR_after_sardinia = {
+		value = -10
+	}
+
+	SPR_cooperate_with_north = {
+		value = 10
+	}
+
+
+	#Austria
+
+	AUS_threat_to_independence = {
+		value = -10
+	}
+
+	AUS_austrian_radical_traditionalism = {
+		value = -10
+		years = 2
+		decay = -5
+	}
+
+	AUS_criticized_fratricide = {
+		value = 15
+		months = 15
+		decay = 1
+	}
+
+	AUS_wants_to_subordinate_hre = {
+		value = -20
+		months = 20
+		decay = -1
+	}
+
+	AUS_propagated_cathocicism = {
+		value = 10
+		months = 20
+		decay = 0.5
+	}
+
+	AUS_opposed_protestantism = {
+		value = -20
+	}
+
+	AUS_intervienes_in_the_foreign_policy = {
+		value = -20
+		months = 20
+		decay = -1
+	}
+
+	AUS_claimed_our_throne = {
+		value = -30
+		years = 5
+		decay = -6
+	}
+
+	AUS_embargo = {
+		trade = yes
+		value = -100
+	}
+
+	AUS_kaiserliche_zusammenarbeit = {
+		value = 25
+		months = 25
+		decay = 1
+	}
+
+	AUS_catholicization_good = {
+		value = 10
+		months = 20
+		decay = 0.5
+	}
+
+	AUS_catholicization_bad = {
+		value = -20
+		months = 20
+		decay = -1
+	}
+
+	AUS_invited_us_to_award_ceremony = {
+		value = 15
+		months = 5
+		decay = 3
+	}
+
+	AUS_accepted_invitation = {
+		value = 15
+		months = 5
+		decay = 3
+	}
+
+	AUS_declined_invitation = {
+		value = -20
+		months = 10
+		decay = -2
+	}
+
+	AUS_distanced_from_rome = {
+		value = -50
+		months = 50
+		decay = -1
+	}
+
+	AUS_anti_protestant_propaganda = {
+		value = -15
+		months = 15
+		decay = -1
+	}
+
+	AUS_claimed_galicia = {
+		value = -30
+	}
+
+	AUS_condemned_the_orthodox_trade = {
+		value = -30
+		months = 30
+		decay = -1
+		trade = yes
+	}
+
+	AUS_condemned_the_orthodox = {
+		value = -50
+		months = 25
+		decay = -2
+	}
+
+	AUS_austro_russian_partnership_trade = {
+		value = 30
+		months = 30
+		decay = 1
+	}
+	AUS_austro_russian_partnership = {
+		value = 30
+		months = 30
+		decay = 1
+	}
+
+
+
+	AUS_recognised_popes_authority = {
+		value = 15
+		months = 15
+		decay = 1
+	}
+	AUS_supported_gallicanism = {
+		value = -50
+		months = 50
+		decay = -1
+	}
+
+	#HRE
+	HRE_lost_elector_status = {
+		value = -50
+		months = 50
+		decay = -1
+	}
+	
+	HRE_emperor_tour = {
+		value = 48
+		months = 24
+		decay = 2
+	}
+	
+	HRE_distance = {
+		value = -20
+		years = 4
+		decay = -5
+	}
+
+	HRE_disliked_reform = {
+		value = -36
+		months = 72
+		decay = -0.5
+	}
+
+	HRE_threatened_us = {
+		value = -15
+		months = 15
+		decay = -1		
+	}
+}	

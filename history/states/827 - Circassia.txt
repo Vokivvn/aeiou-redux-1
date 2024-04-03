@@ -1,0 +1,27 @@
+state={
+	id=827
+	name="STATE_827"
+
+	history={
+		owner = CIR
+		victory_points = {
+			3720 1 
+		}
+		victory_points = {
+			719 3
+		}
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = CIR
+
+	}
+
+	provinces={
+		11668 719 3760 9696 717 3720 3717 6738 11681 6736 9691 9694 735
+	}
+	manpower = 223336
+	buildings_max_level_factor = 1.000
+	state_category = town
+}

@@ -1,0 +1,32 @@
+capital = 867 #Geledi 
+
+#oob = "GEL_1886"
+
+set_research_slots = 3
+
+
+
+set_politics = {
+	ruling_party = absolutist
+	elections_allowed = no
+}
+
+set_popularities = {
+	absolutist = 100
+}
+
+add_to_array = { national_religion_array =  8 }
+
+create_country_leader = {
+	name = "Awash Azikiwe Elias"
+	picture = "gfx/leaders/Africa/Portrait_Generic_Africa4.dds"
+	
+	#desc = ""
+	ideology = absolutist_moderate 
+	expire = "1999.1.1"
+	traits = {
+		#
+	}
+}
+
+

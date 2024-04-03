@@ -1,0 +1,28 @@
+state={
+	id=834
+	name="STATE_834"
+
+	history={
+		owner = VNC
+		victory_points = {
+			9914 5
+		}
+		victory_points = {
+			11767 5
+		}
+		buildings = {
+			infrastructure = 3
+			11767 = {
+				naval_base = 4
+			}
+		}
+		add_core_of = VNC 
+
+	}
+     
+	provinces={
+		9780 9914 11767
+	}
+	manpower = 17092
+	state_category = town
+}

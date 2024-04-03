@@ -1,0 +1,24 @@
+state={
+	id=463
+	name="STATE_463"
+
+	history={
+		owner = IPQ
+		
+		buildings = {
+			infrastructure = 0
+
+		}
+		add_core_of = IPQ
+		victory_points = {
+			13090 1 
+		}
+	}
+
+	provinces={
+	   13069 7855 
+	}
+	manpower= 5849
+	buildings_max_level_factor=1
+	state_category=pastoral
+}

@@ -1,0 +1,1024 @@
+focus_tree = {
+	id = france_franco_spanish_war_focus
+	
+	country = {
+		factor = 0
+		
+	}
+	
+	default = no
+	continuous_focus_position = { x = 50 y = 2000 }
+
+
+	###########
+	#  Start  #
+	###########
+	
+	#Additional Preparation
+	
+	focus = { 
+		id = FRA_additional_preparation
+		icon = GFX_focus_generic_feudalisms_stand
+		cost = 35
+	
+		x = 10
+		y = 0
+		
+		completion_reward = {
+			army_experience = 10
+			
+		}
+	}
+	
+	focus = { 
+		id = FRA_northern_border
+		icon = GFX_focus_usa_focus_on_europe
+		cost = 15
+		
+		prerequisite = { focus = FRA_additional_preparation }
+		relative_position_id = FRA_additional_preparation
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			country_event = FRASpanishWar.1
+		}
+	}
+	
+	focus = { 
+		id = FRA_southern_border
+		icon = GFX_focus_spa_save_the_alcazar
+		cost = 15
+		
+		prerequisite = { focus = FRA_additional_preparation }
+		relative_position_id = FRA_additional_preparation
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			country_event = FRASpanishWar.2
+		}
+	}
+	
+	focus = { 
+		id = FRA_forts_of_calais
+		icon = GFX_FRA_Forts_Gascony
+		cost = 25
+		
+		prerequisite = { focus = FRA_northern_border }
+		relative_position_id = FRA_northern_border
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			29 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 11548
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 3536
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 11606
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = FRA_more_soldiers_to_fronts
+		icon = GFX_FRA_reform_armee
+		cost = 25
+		
+		prerequisite = { focus = FRA_northern_border focus = FRA_southern_border }
+		relative_position_id = FRA_northern_border
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_manpower = 10000
+		}
+	}
+	
+	focus = { 
+		id = FRA_garrison_pyrenees_passes
+		icon = GFX_focus_generic_little_entente
+		cost = 25
+		
+		prerequisite = { focus = FRA_southern_border }
+		relative_position_id = FRA_southern_border
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			31 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 11697
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 9884
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 9882
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 3915
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 6931
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = FRA_expand_iron_production
+		icon = GFX_FRA_Support_the_Peasantry
+		cost = 25
+		
+		prerequisite = { focus = FRA_forts_of_calais }
+		relative_position_id = FRA_forts_of_calais
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_resource = {
+				type = iron
+				amount = 6
+				state = 28
+			}
+		}
+	}
+	
+	focus = { 
+		id = FRA_build_southern_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 25
+		
+		prerequisite = { focus = FRA_garrison_pyrenees_passes }
+		relative_position_id = FRA_garrison_pyrenees_passes
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			31 = {
+				add_building_construction = {
+					type = infrastructure 
+					level = 1
+					instant_build = yes
+				}
+			}
+			19 = {
+				add_building_construction = {
+					type = infrastructure 
+					level = 1
+					instant_build = yes
+				}
+			}
+			23 = {
+				add_building_construction = {
+					type = infrastructure 
+					level = 1
+					instant_build = yes
+				}
+			}
+			25 = {
+				add_building_construction = {
+					type = infrastructure 
+					level = 1
+					instant_build = yes
+				}
+			}
+			33 = {
+				add_building_construction = {
+					type = infrastructure 
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = FRA_form_heavy_cavalry_division
+		icon = GFX_goal_generic_cavalry
+		cost = 25
+		
+		prerequisite = { focus = FRA_expand_iron_production }
+		prerequisite = { focus = FRA_more_soldiers_to_fronts }
+		relative_position_id = FRA_expand_iron_production
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			load_oob = FRA_heavy_cavalry
+		}
+	}
+	
+	focus = { 
+		id = FRA_prioritize_heavy_weapon_funding
+		icon = GFX_FRA_artillery_battalion
+		cost = 25
+		
+		prerequisite = { focus = FRA_build_southern_infrastructure }
+		prerequisite = { focus = FRA_more_soldiers_to_fronts }
+		relative_position_id = FRA_build_southern_infrastructure
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	
+	#War
+	focus = { 
+		id = FRA_vijayawada_in_flames
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 10
+		
+		available = {
+			always = no
+		}
+	
+		x = 5
+		y = 0
+		
+		completion_reward = {
+			country_event = SPRIndia.1
+		}
+	}
+	
+	#Spain backed down
+	
+	focus = { 
+		id = FRA_spain_humility
+		icon = GFX_FRA_The_Angry_neighbour
+		cost = 10
+		
+		available = {
+			always = no
+		}
+		
+		prerequisite = { focus = FRA_vijayawada_in_flames }
+		relative_position_id = FRA_vijayawada_in_flames
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			country_event = FRASpanishWar.3
+		}
+	}
+	
+	focus = { 
+		id = FRA_different_approach
+		icon = GFX_FRA_ocean_going_navy
+		cost = 25
+		
+		prerequisite = { focus = FRA_spain_humility }
+		relative_position_id = FRA_spain_humility
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			country_event = FRASpanishWar.4
+		}
+	}
+	
+	focus = { 
+		id = FRA_britain_of_the_south
+		icon = GFX_focus_generic_revolutionary_sentiment
+		cost = 25
+		
+		prerequisite = { focus = FRA_different_approach }
+		relative_position_id = FRA_different_approach
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			#new focus tree
+		}
+	}
+	
+	#War is going to happen
+	
+	focus = { 
+		id = FRA_war_between_empires
+		icon = GFX_focus_generic_monarchy_1
+		cost = 10
+		
+		available = {
+			always = no
+		}
+		
+		prerequisite = { focus = FRA_vijayawada_in_flames }
+		relative_position_id = FRA_vijayawada_in_flames
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			country_event = FRASpanishWar.5
+		}
+	}
+	
+	focus = { 
+		id = FRA_mobilize_nobles
+		icon = GFX_FRA_trust_nobility
+		cost = 25
+		
+		prerequisite = { focus = FRA_war_between_empires }
+		relative_position_id = FRA_war_between_empires
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			custom_effect_tooltip = FRA_MOBILIZE_NOBLES
+			set_country_flag = FRA_mobilize_nobles
+		}
+	}
+	
+	focus = { 
+		id = FRA_arm_surfs
+		icon = GFX_focus_focus_fra_maquis
+		cost = 25
+		
+		prerequisite = { focus = FRA_mobilize_nobles }
+		relative_position_id = FRA_mobilize_nobles
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			random_state = { 
+				limit = { 
+					is_owned_and_controlled_by = ROOT 
+					is_in_home_area = yes
+					check_variable = { ROOT.num_core_states > 0 }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = FRA_spain_downfall
+		icon = GFX_focus_rom_abdicate
+		cost = 15
+		
+		prerequisite = { focus = FRA_arm_surfs }
+		relative_position_id = FRA_arm_surfs
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			country_event = FRASpanishWar.6
+		}
+	}
+	
+	#Portuguese
+	
+	focus = { 
+		id = FRA_is_the_portuguese
+		icon = GFX_SPR_rally_portuguese
+		cost = 10
+		
+		available = {
+			always = no
+		}
+		
+		mutually_exclusive = { focus = FRA_is_dissent_from_within }
+		prerequisite = { focus = FRA_spain_downfall }
+		relative_position_id = FRA_spain_downfall
+		x = -2
+		y = 1
+		
+		completion_reward = {
+			custom_effect_tooltip = FRA_FRANCO_SPANISH_PORTUGAL
+		}
+	}
+	
+	focus = { 
+		id = FRA_funds_for_privateers
+		icon = GFX_focus_generic_cruiser2
+		cost = 35
+		
+		prerequisite = { focus = FRA_is_the_portuguese }
+		relative_position_id = FRA_is_the_portuguese
+		x = -3
+		y = 1
+		
+		completion_reward = {
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				load_oob = "FRA_naval_privateers_mtg"
+			} else {
+				load_oob = "FRA_naval_privateers_legacy"
+			}
+		}
+	}
+	
+	focus = { 
+		id = FRA_increasing_portuguese_armament
+		icon = GFX_focus_generic_combined_arms
+		cost = 15
+		
+		prerequisite = { focus = FRA_funds_for_privateers }
+		relative_position_id = FRA_funds_for_privateers
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			POR = {
+				random_state = { 
+					limit = { 
+						is_owned_and_controlled_by = POR 
+						check_variable = { POR.num_core_states > 0 }
+						is_core_of = POR
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = FRA_improving_colonial_defences
+		icon = GFX_focus_generic_coastal_fort
+		cost = 15
+		
+		prerequisite = { focus = FRA_funds_for_privateers }
+		relative_position_id = FRA_funds_for_privateers
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			send_equipment = {
+				equipment = infantry_equipment
+				amount = 500
+				target = FCN
+			}
+			468 = {
+				add_building_construction = {
+					type = bunker
+					province = 12149
+					level = 2
+					instant_build = yes
+				}
+			}
+			send_equipment = {
+				equipment = infantry_equipment
+				amount = 500
+				target = LOU
+			}
+			371 = {
+				add_building_construction = {
+					type = bunker
+					province = 7552
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = FRA_securing_galicia
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 25
+		
+		prerequisite = { focus = FRA_funds_for_privateers }
+		relative_position_id = FRA_funds_for_privateers
+		x = 0
+		y = 2
+		
+		completion_reward = {
+			171 = {
+				add_dynamic_modifier = {
+					modifier = FRA_galicia_campaign
+				}
+			}
+		}
+	}
+	
+	#Dissent
+	
+	focus = { 
+		id = FRA_is_dissent_from_within
+		icon = GFX_SPR_Peasant_Rebellion
+		cost = 10
+		
+		available = {
+			always = no
+		}
+		
+		mutually_exclusive = { focus = FRA_is_the_portuguese }
+		prerequisite = { focus = FRA_spain_downfall }
+		relative_position_id = FRA_spain_downfall
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			custom_effect_tooltip = FRA_FRANCO_SPANISH_DISSENT
+		}
+	}
+	
+	focus = { 
+		id = FRA_prepare_arms_shipments
+		icon = GFX_FRA_renovate_the_orleanian_harbour
+		cost = 35
+		
+		prerequisite = { focus = FRA_is_dissent_from_within }
+		relative_position_id = FRA_is_dissent_from_within
+		x = 3
+		y = 1
+		
+		completion_reward = {
+			country_event = FRASpanishWar.10
+		}
+	}
+	
+	focus = { 
+		id = FRA_guns_to_the_east
+		icon = GFX_focus_usa_focus_on_asia
+		cost = 15
+		
+		available = {
+			has_equipment = {
+				convoy > 5
+			}
+			has_equipment = {
+				infantry_equipment > 500
+			}
+			has_equipment = {
+				melee_equipment > 500
+			}
+			SPE = { exists = yes }
+		}
+		prerequisite = { focus = FRA_prepare_arms_shipments }
+		relative_position_id = FRA_prepare_arms_shipments
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			country_event = FRASpanishWar.11
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = -5
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+			add_equipment_to_stockpile = {
+				type = melee_equipment
+				amount = -500
+			}
+		}
+	}
+	
+	focus = { 
+		id = FRA_guns_to_the_west
+		icon = GFX_SPR_disaster_over_disaster
+		cost = 15
+		
+		available = {
+			has_equipment = {
+				convoy > 5
+			}
+			has_equipment = {
+				infantry_equipment > 500
+			}
+			has_equipment = {
+				melee_equipment > 500
+			}
+			SPW = { exists = yes }
+		}
+		prerequisite = { focus = FRA_prepare_arms_shipments }
+		relative_position_id = FRA_prepare_arms_shipments
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			country_event = FRASpanishWar.12
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = -5
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+			add_equipment_to_stockpile = {
+				type = melee_equipment
+				amount = -500
+			}
+		}
+	}
+	
+	focus = { 
+		id = FRA_yucatan_revolt
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 25
+		
+		available = {
+			has_equipment = {
+				convoy > 10
+			}
+			has_equipment = {
+				infantry_equipment > 1000
+			}
+			has_equipment = {
+				melee_equipment > 1000
+			}
+		}
+		bypass = {
+			YUC = { exists = no }
+		}
+		prerequisite = { focus = FRA_prepare_arms_shipments }
+		relative_position_id = FRA_prepare_arms_shipments
+		x = 0
+		y = 2
+		
+		completion_reward = {
+			country_event = FRASpanishWar.13
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = -10
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+			add_equipment_to_stockpile = {
+				type = melee_equipment
+				amount = -1000
+			}
+		}
+	}
+	
+	#Middle
+	
+	focus = { 
+		id = FRA_victoire_ou_mort
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 25
+		
+		prerequisite = { focus = FRA_is_the_portuguese focus = FRA_is_dissent_from_within }
+		relative_position_id = FRA_is_the_portuguese
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+	
+	focus = { 
+		id = FRA_securing_spanish_netherlands
+		icon = GFX_focus_focus_fra_border
+		cost = 20
+		
+		prerequisite = { focus = FRA_victoire_ou_mort }
+		relative_position_id = FRA_victoire_ou_mort
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_ideas = fra_netherland_front
+		}
+	}
+	
+	focus = { 
+		id = FRA_obtaining_local_support
+		icon = GFX_AUS_focus_Promises_People
+		cost = 20
+		
+		available = {
+			SPN = {
+				has_capitulated = yes
+			}
+		}
+		prerequisite = { focus = FRA_securing_spanish_netherlands }
+		relative_position_id = FRA_securing_spanish_netherlands
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			every_state = {
+				LIMIT = {
+					is_owned_by = SPN
+				}
+				add_compliance = 60
+			}
+		}
+	}
+	
+	focus = { 
+		id = FRA_northern_military_build_up
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 20
+		
+		available = {
+			6 = { is_controlled_by = FRA }
+		}
+		prerequisite = { focus = FRA_obtaining_local_support }
+		relative_position_id = FRA_obtaining_local_support
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			6 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = FRA_reallocate_northern_forces
+		icon = GFX_FRA_reform_armee
+		cost = 20
+		
+		prerequisite = { focus = FRA_northern_military_build_up }
+		relative_position_id = FRA_northern_military_build_up
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_manpower = 10000
+		}
+	}
+	
+	focus = { 
+		id = FRA_march_to_the_ebro
+		icon = GFX_focus_generic_little_entente
+		cost = 20
+		
+		prerequisite = { focus = FRA_victoire_ou_mort }
+		relative_position_id = FRA_victoire_ou_mort
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_ideas = fra_spr_war
+		}
+	}
+	
+	focus = { 
+		id = FRA_rebuild_spanish_forts
+		icon = GFX_goal_generic_military_sphere
+		cost = 20
+		
+		available = {
+			controls_state = 165
+			controls_state = 172
+			controls_state = 937
+		}
+		prerequisite = { focus = FRA_march_to_the_ebro }
+		relative_position_id = FRA_march_to_the_ebro
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			165 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 9764
+				}
+			}
+			172 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 740
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 3933
+				}
+			}
+			937 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 9840
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = FRA_southern_military_build_up
+		icon = GFX_goal_generic_build_tank
+		cost = 20
+		
+		available = {
+			31 = { is_controlled_by = FRA }
+		}
+		prerequisite = { focus = FRA_rebuild_spanish_forts }
+		relative_position_id = FRA_rebuild_spanish_forts
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			31 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = FRA_military_parade_in_barcelona
+		icon = GFX_focus_generic_military_mission
+		cost = 20
+		
+		prerequisite = { focus = FRA_southern_military_build_up }
+		relative_position_id = FRA_southern_military_build_up
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_war_support = 0.10
+		}
+	}
+	
+	focus = { 
+		id = FRA_le_bastion_francais
+		icon = GFX_FRA_Hexagon_Ready
+		cost = 30
+		
+		prerequisite = { focus = FRA_northern_military_build_up }
+		prerequisite = { focus = FRA_southern_military_build_up }
+		relative_position_id = FRA_northern_military_build_up
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = fra_spr_war1
+				remove_idea = fra_spr_war
+			}
+		}
+	}
+	
+	#End
+	
+	focus = { 
+		id = FRA_finishing_off_bull
+		icon = GFX_SPR_felipes_demise
+		cost = 30
+		
+		prerequisite = { focus = FRA_le_bastion_francais }
+		relative_position_id = FRA_le_bastion_francais
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = fra_spr_war2
+				remove_idea = fra_spr_war1
+			}
+		}
+	}
+	
+	focus = { 
+		id = FRA_with_overwhelming_firepower
+		icon = GFX_goal_generic_army_artillery2
+		cost = 30
+		
+		prerequisite = { focus = FRA_finishing_off_bull }
+		prerequisite = { focus = FRA_securing_galicia }
+		relative_position_id = FRA_finishing_off_bull
+		x = -3
+		y = 1
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = fra_spr_war3
+				remove_idea = fra_spr_war2
+			}
+		}
+	}
+	
+	focus = { 
+		id = FRA_with_their_own_people
+		icon = GFX_goal_generic_national_unity
+		cost = 30
+		
+		prerequisite = { focus = FRA_finishing_off_bull }
+		prerequisite = { focus = FRA_yucatan_revolt }
+		relative_position_id = FRA_finishing_off_bull
+		x = 3
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.05
+			SPR = {
+				add_war_support = -0.20
+				add_stability = -0.25
+				add_manpower = -50000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -2500
+				}
+				add_equipment_to_stockpile = {
+					type = melee_equipment
+					amount = -2500
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = FRA_we_are_victorious
+		icon = GFX_FRA_Maintain_the_yoke
+		cost = 10
+		
+		available = {
+			always = no
+		}
+		
+		mutually_exclusive = { focus = FRA_a_fair_peace }
+		prerequisite = { focus = FRA_with_overwhelming_firepower focus = FRA_with_their_own_people }
+		relative_position_id = FRA_with_overwhelming_firepower
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			#new focus tree
+		}
+	}
+	
+	focus = { 
+		id = FRA_a_fair_peace
+		icon = GFX_goal_generic_military_deal
+		cost = 10
+		
+		available = {
+			always = no
+		}
+		
+		mutually_exclusive = { focus = FRA_we_are_victorious }
+		relative_position_id = FRA_we_are_victorious
+		x = 2
+		y = 0
+		
+		completion_reward = {
+			#new focus tree
+			clr_country_flag = FRA_golden_age
+		}
+	}
+}

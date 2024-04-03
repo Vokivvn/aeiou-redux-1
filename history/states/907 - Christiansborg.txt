@@ -1,0 +1,21 @@
+state= {
+	id=907
+	name="STATE_907"
+	manpower = 7201
+	
+	state_category = rural
+
+	history= {
+		owner = DEN
+		add_core_of = DEN
+        victory_points = {
+			13238 1 
+		}
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces={
+	   13237 13238
+	}
+}

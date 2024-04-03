@@ -1,0 +1,29 @@
+
+state={
+	id=805
+	name="STATE_805"
+	manpower = 485237
+	resources={
+		iron= 3 # was: 30
+		steel= 6
+	}
+	
+	state_category = town
+
+	history={
+		owner = BRD
+		victory_points = {
+			589 5
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		add_core_of = BRD
+	}
+
+	provinces={
+		11560 589 3574
+	}
+}

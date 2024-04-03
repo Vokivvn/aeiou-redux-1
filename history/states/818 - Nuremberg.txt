@@ -1,0 +1,25 @@
+
+state={
+	id=818
+	name="STATE_818"
+	manpower = 220501
+	state_category = town
+
+	history={
+		owner = NUR
+		
+		victory_points = {
+			11544 5 
+		}
+      buildings = {
+			infrastructure = 4
+			industrial_complex = 1 
+		}
+
+		add_core_of = NUR
+	}
+
+	provinces={
+			11544
+	}
+}

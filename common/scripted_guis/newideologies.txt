@@ -1,0 +1,810 @@
+scripted_gui = {
+
+	ideology_list = {
+       window_name = "newideologyview"
+       parent_window_token = politics_tab
+	   
+       context_type = player_context
+  
+        visible = { 
+		}
+		
+ 		properties = {
+			new_ideologies_ruling = { 
+			    image = "[PREV.GetNewIdeologyPartyStatusIcon]"
+			} 
+			new_ideologies_icon1 = { 
+			    image = "[GetNewIdeologyPartyIcon1]"
+			} 
+		}
+		
+        effects = {
+        }
+		
+		dynamic_lists = {
+			show_grid = {
+				array = ideology_array
+				entry_container = show_entry_ideologies
+			} 
+		}
+		
+        triggers = {
+        }
+		
+		ai_enabled = {
+		    always = no 
+		}	
+	}
+	
+	ideology_ruling_diplo = {
+       window_name = "newideologydiploview"
+       parent_window_token = selected_country_view 
+	   
+       context_type = selected_country_context
+  
+        visible = { 
+		}
+		
+ 		properties = {
+			# new_ideologies_ruling = { 
+			    # image = "[GetNewIdeologyPartyStatusIcon]"
+			# } 
+			new_ideologies_icon = { 
+			    image = "[This.GetNewIdeologyPartyIcon]"
+			} 
+		}
+		
+        effects = {
+        }
+		
+		dynamic_lists = {
+		}
+		
+        triggers = {
+        }
+		
+		ai_enabled = {
+		    always = no 
+		}	
+	}
+	
+
+	head_of_government_button = {
+       window_name = "headofgovernmentbutton"
+       parent_window_token = politics_tab
+	   
+       context_type = player_context
+  
+        visible = { 
+		}
+		
+ 		properties = {
+		}
+		
+        effects = {
+		    headofgovernmentbutton1_click = {
+                set_temp_variable = { show = 1 }
+                subtract_from_temp_variable = { show = show_aeiou_hog }
+                set_variable = { show_aeiou_hog = show }	
+            }				
+        }
+		
+		dynamic_lists = {
+		}
+		
+        triggers = {
+        }
+		
+		ai_enabled = {
+		    always = yes
+		}	
+		
+		ai_test_interval = 24
+		ai_weights = {
+			headofgovernmentbutton1_click = {
+				ai_will_do = {
+					base  = -100
+					modifier = {
+						add = 500
+						OR = {
+							AND = {
+								NOT = { has_country_flag = has_hog }
+								has_political_power > 50
+								OR = {
+									has_stability < 0.50
+									has_government = liberal
+									has_government = centrist
+									has_government = conservative
+								}
+							}
+							AND = {
+								has_country_flag = has_hog
+								has_political_power > 100
+								combat_hog_influence_trigger = yes
+							}
+							AND = {
+								has_country_flag = has_hog
+								has_political_power > 150
+								check_variable = { hog_loyalty < 0.30 }
+							}
+							AND = {
+								has_country_flag = has_hog
+								has_political_power > 150
+								has_stability > 0.60
+								check_variable = { hog_loyalty < 0.40 }
+							}
+							AND = {
+								has_country_flag = has_hog
+								has_political_power > 200
+								check_variable = { hog_loyalty < 0.40 }
+							}
+							AND = {
+								has_country_flag = has_hog
+								has_political_power > 200
+								has_stability > 0.60
+								check_variable = { hog_loyalty < 0.50 }
+							}
+						}
+					}
+				}
+			}
+		}	
+	}
+	
+	head_of_government = {
+       window_name = "headofgovernment"
+       #parent_window_token = politics_tab
+	   
+       context_type = player_context
+  
+        visible = { 
+            check_variable = { show_aeiou_hog > 0 }		
+		}
+		
+ 		properties = {
+			hog_portrait = { 
+			    image = "[GetHOGPortraitLeader]"
+			} 
+		}
+		
+		properties = { 
+			hog_loyalty_chart = { 
+			    image = "[GetHOGLoyalty]"
+			}
+		}
+		
+        effects = { 
+		    hog_closebutton_click = {
+                set_temp_variable = { show = 1 }
+                subtract_from_temp_variable = { show = show_aeiou_hog }
+                set_variable = { show_aeiou_hog = show }				
+			}
+			hog_new_hog_click = {
+				custom_effect_tooltip = hog_new_hog_leader
+				fixed_random_seed = no
+                ROOT = {
+					add_political_power = -50
+					add_stability = 0.05
+					set_variable = { hog_loyalty = 0.5000 }
+					if = {
+						//Spanish Names
+						LIMIT = {
+							OR = {
+								tag = SPR
+								tag = SPP
+								tag = SPF
+								tag = SPW
+								tag = SPE
+								tag = YUC
+								tag = MEX
+								tag = GUA
+								tag = LOS
+								tag = ELS
+								tag = HON
+								tag = NIC
+								tag = COS
+								tag = CUB
+								tag = COL
+								tag = VEN
+								tag = ECU
+								tag = PRU
+								tag = BOL
+								tag = PAR
+								tag = TAC
+								tag = CHL
+								tag = ARG
+								has_cosmetic_tag = SPN_SPR
+								has_cosmetic_tag = AQU_SPR_FRA_war
+								has_cosmetic_tag = AQU_SPR
+							}
+						}
+						generate_hog_name_spanish = yes
+					}
+					else_if = {
+						//French Names
+						LIMIT = {
+							OR = {
+								tag = FRA
+								tag = AQU
+								tag = FCN
+								tag = LOU
+								has_cosmetic_tag = SPN_FRA
+							}
+						}
+						generate_hog_name_french = yes
+					}
+					else_if = {
+						//German Names
+						LIMIT = {
+							OR = {
+								tag = PRS
+								tag = BRD
+								tag = SAX
+								tag = THU
+								tag = MCK
+								tag = LBK
+								tag = SCH
+								tag = HAM
+								tag = HAN
+								tag = BRE
+								tag = OLD
+								tag = MUN
+								tag = KLE
+								tag = DOR
+								tag = MRK
+								tag = KSS
+								tag = NSS
+								tag = JUL
+								tag = KOL
+								tag = TRI
+								tag = FRK
+								tag = WRZ
+								tag = ANB
+								tag = NUR
+								tag = BAD
+								tag = WUR
+								tag = ULM
+								tag = BAV
+								tag = AUS
+							}
+						}
+						generate_hog_name_german = yes
+					}
+					
+					else_if = {
+						//Italian Names
+						LIMIT = {
+							OR = {
+								tag = GEN
+								tag = PIE
+								tag = MIL
+								tag = VNC
+								tag = TUS
+								tag = PAP
+								tag = NAP
+								tag = TGU
+							}
+						}
+						generate_hog_name_italian = yes
+					}	
+					else_if = {
+						//Portuguese Names
+						LIMIT = {
+							OR = {
+								tag = POR
+								tag = POI
+								tag = PSA
+							}
+						}
+						generate_hog_name_portuguese = yes
+					}
+					else_if = {
+						//English Names
+						LIMIT = {
+							OR = {
+								tag = ENG
+								tag = NEN
+							}
+						}
+						generate_hog_name_english = yes
+					}
+					else_if = {
+						//Swiss Names
+						LIMIT = {
+							OR = {
+								tag = SWI
+							}
+						}
+						random_list = {
+							1 = { generate_hog_name_german = yes }
+							1 = { generate_hog_name_french = yes }
+							1 = { generate_hog_name_italian = yes }
+						}
+					}
+					else_if = {
+						//Massachusetts Names
+						LIMIT = {
+							OR = {
+								tag = MAS
+							}
+						}
+						random_list = {
+							1 = { generate_hog_name_english = yes }
+							1 = { generate_hog_name_french = yes }
+						}
+					}
+					else = {
+						set_variable = { hog_name = 1}
+						set_variable = { hog_surname = 1}
+					}
+					random_list = {
+						10 = {add_to_variable = { hog_political_skill = 0.025 }}
+						10 = {add_to_variable = { hog_unity_skill = 0.025 }}
+						10 = {add_to_variable = { hog_industrial_skill = 0.025 }}
+						10 = {add_to_variable = { hog_military_skill = 0.025 }}
+					}
+					random_list = {
+						25 = {set_variable = { hog_desc = 1}}
+						25 = {set_variable = { hog_desc = 2}}
+						25 = {set_variable = { hog_desc = 3}}
+						25 = {set_variable = { hog_desc = 4}}
+						5 = {set_variable = { hog_desc = 5}}
+						1 = {set_variable = { hog_desc = 6}}
+					}
+					if = {
+						LIMIT = {
+							OR = {
+								any_owned_state = {
+									is_capital = yes
+									OR = {
+										is_on_continent = europe
+										AND = {
+											is_on_continent = south_america
+											NOT = {
+												OR = {
+													tag = NPG
+													tag = SPG
+												}
+											}
+										}
+									}
+								}
+								tag = SPW
+								tag = SPE
+								tag = YUC
+								tag = MEX
+								tag = GUA
+								tag = LOS
+								tag = ELS
+								tag = HON
+								tag = NIC
+								tag = COS
+								tag = CUB
+								tag = LOU
+								tag = FCN
+								tag = MAS
+								tag = NEN
+								tag = POI
+								tag = PSA
+							}
+							NOT = { tag = OTT }
+						}
+						random_list = {
+							5 = {set_variable = { hog_portrait = 101}}
+							5 = {set_variable = { hog_portrait = 102}}
+							5 = {set_variable = { hog_portrait = 103}}
+							5 = {set_variable = { hog_portrait = 104}}
+							5 = {set_variable = { hog_portrait = 105}}
+							5 = {set_variable = { hog_portrait = 106}}
+							5 = {set_variable = { hog_portrait = 107}}
+							5 = {set_variable = { hog_portrait = 108}}
+							5 = {set_variable = { hog_portrait = 109}}
+							5 = {set_variable = { hog_portrait = 110}}
+							5 = {set_variable = { hog_portrait = 111}}
+							5 = {set_variable = { hog_portrait = 112}}
+							5 = {set_variable = { hog_portrait = 113}}
+							5 = {set_variable = { hog_portrait = 114}}
+						}
+					}
+					else_if = {
+						LIMIT = {
+							any_owned_state = {
+								is_capital = yes
+								is_on_continent = middle_east
+							}
+						}
+						random_list = {
+							5 = {set_variable = { hog_portrait = 201}}
+							5 = {set_variable = { hog_portrait = 202}}
+							5 = {set_variable = { hog_portrait = 203}}
+							5 = {set_variable = { hog_portrait = 204}}
+							5 = {set_variable = { hog_portrait = 205}}
+						}
+					}
+					else_if = {
+						LIMIT = {
+							any_owned_state = {
+								is_capital = yes
+								is_on_continent = africa
+							}
+							NOT = { tag = OTT }
+						}
+						random_list = {
+							5 = {set_variable = { hog_portrait = 301}}
+							5 = {set_variable = { hog_portrait = 302}}
+							5 = {set_variable = { hog_portrait = 303}}
+							5 = {set_variable = { hog_portrait = 304}}
+							5 = {set_variable = { hog_portrait = 305}}
+							5 = {set_variable = { hog_portrait = 306}}
+						}
+					}
+					else_if = {
+						LIMIT = {
+							any_owned_state = {
+								is_capital = yes
+								is_on_continent = north_america
+							}
+						}
+						random_list = {
+							5 = {set_variable = { hog_portrait = 401}}
+							5 = {set_variable = { hog_portrait = 402}}
+							5 = {set_variable = { hog_portrait = 403}}
+							5 = {set_variable = { hog_portrait = 404}}
+							5 = {set_variable = { hog_portrait = 405}}
+						}
+					}
+					else = {
+						set_variable = { hog_portrait = 0}
+					}
+					random_list = {
+						0 = {
+							modifier = {
+								add = 95
+								has_government = totalitarian 
+							}
+							modifier = {
+								add = 5
+								has_government = conservative     
+							}
+							set_variable = { hog_party = 1 }
+						}
+						0 = {
+							modifier = {
+								add = 75
+								has_government = theocratic  
+							}
+							modifier = {
+								add = 85
+								has_government = absolutist   
+							}
+							modifier = {
+								add = 75
+								has_government = despotist    
+							}
+							modifier = {
+								add = 15
+								has_government = conservative     
+							}
+							modifier = {
+								add = 50
+								has_government = apolitical      
+							}
+							modifier = {
+								add = 20
+								has_government = revolutionary       
+							}
+							set_variable = { hog_party = 2 }
+						}
+						0 = {
+							modifier = {
+								add = 5
+								has_government = totalitarian 
+							}
+							modifier = {
+								add = 25
+								has_government = theocratic  
+							}
+							modifier = {
+								add = 15
+								has_government = absolutist   
+							}
+							modifier = {
+								add = 20
+								has_government = despotist    
+							}
+							modifier = {
+								add = 60
+								has_government = conservative     
+							}
+							modifier = {
+								add = 25
+								has_government = apolitical      
+							}
+							modifier = {
+								add = 50
+								has_government = centrist       
+							}
+							modifier = {
+								add = 25
+								has_government = liberal       
+							}
+							modifier = {
+								add = 20
+								has_government = revolutionary       
+							}
+							set_variable = { hog_party = 3 }
+						}
+						0 = {
+							modifier = {
+								add = 5
+								has_government = despotist    
+							}
+							modifier = {
+								add = 15
+								has_government = conservative     
+							}
+							modifier = {
+								add = 50
+								has_government = centrist       
+							}
+							modifier = {
+								add = 60
+								has_government = liberal       
+							}
+							modifier = {
+								add = 20
+								has_government = revolutionary       
+							}
+							set_variable = { hog_party = 4 }
+						}
+						0 = {
+							modifier = {
+								add = 5
+								has_government = conservative     
+							}
+							modifier = {
+								add = 15
+								has_government = liberal       
+							}
+							modifier = {
+								add = 20
+								has_government = revolutionary       
+							}
+							set_variable = { hog_party = 5 }
+						}
+						0 = {
+							modifier = {
+								add = 100
+								has_government = socialist       
+							}
+							set_variable = { hog_party = 6 }
+						}
+						0 = {
+							modifier = {
+								add = 100
+								has_government = communist       
+							}
+							modifier = {
+								add = 100
+								has_government = weitlingist        
+							}
+							set_variable = { hog_party = 7 }
+						}
+						0 = {
+							modifier = {
+								add = 25
+								has_government = apolitical      
+							}
+							modifier = {
+								add = 20
+								has_government = revolutionary       
+							}
+							set_variable = { hog_party = 8 }
+						}
+					}
+					set_country_flag = has_hog
+				}
+			}
+			hog_remove_hog_click = {
+				custom_effect_tooltip = hog_remove_hog_leader
+				ROOT = {
+					add_political_power = -100
+					add_stability = -0.10
+					remove_hog = yes
+				}
+			}
+			hog_bribe_hog_click = {
+				ROOT = {
+					add_political_power = -150
+					random_list = {
+						1 = { country_event = hogEvent.9 }
+						1 = { subtract_from_variable = { hog_loyalty = 0.01 } }
+						10 = { add_to_variable = { hog_loyalty = 0.001 } }
+						5 = { add_to_variable = { hog_loyalty = 0.002 } }
+						3 = { add_to_variable = { hog_loyalty = 0.003 } }
+						2 = { add_to_variable = { hog_loyalty = 0.005 } }
+					}
+				}
+			}
+        }
+		
+		dynamic_lists = {
+		}
+		
+        triggers = {
+			hog_new_hog_click_enabled = {
+				NOT = {
+					has_country_flag = has_hog
+				}
+				has_political_power > 49
+			}
+			hog_remove_hog_click_enabled = {
+				has_country_flag = has_hog
+				NOT = { check_variable = { hog_desc = 0 } }
+				has_political_power > 99
+				OR = {
+					has_government = revolutionary 
+					has_government = weitlingist  
+					has_government = communist  
+					has_government = totalitarian  
+					has_government = absolutist   
+				}
+			}
+			hog_bribe_hog_click_enabled = {
+				has_political_power > 149
+				has_country_flag = has_hog
+			}
+        }
+		
+		ai_enabled = {
+		    always = yes
+		}	
+		
+		ai_test_interval = 1
+		ai_weights = {
+			hog_new_hog_click = {
+				ai_will_do = {
+					base  = 0
+					modifier = {
+						add = 1
+						has_stability < 0.50
+					}
+					modifier = {
+						add = 1
+						has_stability < 0.40
+					}
+					modifier = {
+						add = 1
+						has_stability < 0.30
+					}
+					modifier = {
+						add = 1
+						has_stability < 0.20
+					}
+					modifier = {
+						add = 1
+						has_stability < 0.10
+					}
+					modifier = {
+						add = 1
+						has_political_power > 149
+					}
+					modifier = {
+						add = 1
+						has_political_power > 299
+					}
+					modifier = {
+						add = 2
+						OR = {
+							has_government = liberal
+							has_government = centrist
+							has_government = conservative
+						}
+					}
+				}
+				ignore_lower_weights = {
+					factor = 3
+				}
+			}
+			hog_remove_hog_click = {
+				ai_will_do = {
+					base  = 0
+					modifier = {
+						add = 1
+						combat_hog_influence_trigger = yes
+					}
+					modifier = {
+						add = 1
+						combat_hog_influence_trigger = yes
+						has_stability > 0.80
+					}
+					modifier = {
+						add = 1
+						combat_hog_influence_trigger = yes
+						has_political_power > 149
+					}
+				}
+				ignore_lower_weights = {
+					factor = 1
+				}
+			}
+			hog_bribe_hog_click = {
+				ai_will_do = {
+					base  = 0
+					modifier = {
+						add = 1
+						check_variable = { hog_loyalty < 0.30 }
+					}
+					modifier = {
+						add = 1
+						check_variable = { hog_loyalty < 0.40 }
+						has_stability < 0.60
+					}
+					modifier = {
+						add = 1
+						check_variable = { hog_loyalty < 0.40 }
+						has_political_power > 200
+					}
+					modifier = {
+						add = 1
+						check_variable = { hog_loyalty < 0.50 }
+						has_political_power > 200
+						has_stability < 0.60
+					}
+				}
+				ignore_lower_weights = {
+					factor = 1
+				}
+			}
+			hog_closebutton_click = {
+				ai_will_do = {
+					base  = 0
+					modifier = {
+						add = 10
+						NOT = {
+							OR = {
+								AND = {
+									NOT = { has_country_flag = has_hog }
+									has_political_power > 50
+									OR = {
+										has_stability < 0.50
+										has_government = liberal
+										has_government = centrist
+										has_government = conservative
+									}
+								}
+								AND = {
+									has_country_flag = has_hog
+									has_political_power > 100
+									combat_hog_influence_trigger = yes
+								}
+								AND = {
+									has_country_flag = has_hog
+									has_political_power > 150
+									check_variable = { hog_loyalty < 0.30 }
+								}
+								AND = {
+									has_country_flag = has_hog
+									has_political_power > 150
+									has_stability > 0.60
+									check_variable = { hog_loyalty < 0.40 }
+								}
+								AND = {
+									has_country_flag = has_hog
+									has_political_power > 200
+									check_variable = { hog_loyalty < 0.40 }
+								}
+								AND = {
+									has_country_flag = has_hog
+									has_political_power > 200
+									has_stability > 0.60
+									check_variable = { hog_loyalty < 0.50 }
+								}
+							}
+						}
+					}	
+				}
+			}
+		}
+	}
+}

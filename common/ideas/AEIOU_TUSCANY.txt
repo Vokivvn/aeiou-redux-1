@@ -1,0 +1,15 @@
+ideas = {
+    country = {
+        TUS_fortification_effort = {
+            picture = TUS_fortification_effort
+
+            allowed = { always = no }
+
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {}
+        }
+    }
+}

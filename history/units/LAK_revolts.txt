@@ -1,0 +1,132 @@
+division_template = {
+	name = "Lakota Trained Musketeers"
+
+	division_names_group = LAK_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+		line_infantry = { x = 0 y = 4 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+		line_infantry = { x = 1 y = 2 }
+		line_infantry = { x = 1 y = 3 }
+		line_infantry = { x = 1 y = 4 }
+	}
+	priority = 1
+}
+division_template = {
+	name = "Lakota Mounted Unit"
+
+	division_names_group = LAK_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+		medium_cavalry = { x = 2 y = 0 }
+		medium_cavalry = { x = 2 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Lakota Tribesmen"
+
+	division_names_group = MOR_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+		melee_battalion = { x = 2 y = 0 }
+		melee_battalion = { x = 2 y = 1 }
+		melee_battalion = { x = 0 y = 3 }
+		melee_battalion = { x = 0 y = 4 }
+	}
+	priority = 3
+}
+
+units = {
+	division = {
+		name = "1st Lakota Musketeers"
+		location = 7945
+		division_template = "Lakota Trained Musketeers"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "2nd Lakota Musketeers"
+		location = 1806
+		division_template = "Lakota Trained Musketeers"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "Nuage Rouge's Personal Army"
+		location = 1621
+		division_template = "Lakota Trained Musketeers"
+		start_experience_factor = 0.7
+	}
+	division = {
+		name = "Northern Smugglers"
+		location = 12357
+		division_template = "Lakota Trained Musketeers"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "1st Lakota Mounted Archers"
+		location = 7834
+		division_template = "Lakota Mounted Unit"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Lakota Cavalry"
+		location = 4740
+		division_template = "Lakota Mounted Unit"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Sioux Wandering Horsemen"
+		location = 7607
+		division_template = "Lakota Mounted Unit"
+		start_experience_factor = 0.7
+	}
+	division = {
+		name = "Lakota Tribesmen"
+		location = 12368
+		division_template = "Lakota Tribesmen"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "Lakota Tribesmen"
+		location = 4540
+		division_template = "Lakota Tribesmen"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "Lakota Tribesmen"
+		location = 12697
+		division_template = "Lakota Tribesmen"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "Neshnabek Tribesmen"
+		location = 10717
+		division_template = "Lakota Tribesmen"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "Neshnabek Tribesmen"
+		location = 1441
+		division_template = "Lakota Tribesmen"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "Shawnee Tribesmen"
+		location = 9822
+		division_template = "Lakota Tribesmen"
+		start_experience_factor = 0.5
+	}
+}

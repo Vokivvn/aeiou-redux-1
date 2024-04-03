@@ -1,0 +1,1624 @@
+focus_tree = {
+	id = france_decentralization_interventionist_focus
+	
+	country = {
+		factor = 0
+		
+	}
+	
+	shared_focus = FRA_india_plan
+	shared_focus = FRA_second_vijayanagar_war
+	default = no
+	continuous_focus_position = { x = 50 y = 2000 }
+
+	###########
+	#  Start  #
+	###########
+
+	focus = {
+		id = FRA_the_grand_empire
+		icon = GFX_FRA_Hexagon_Ready
+		cost = 30
+
+		allow_branch { always = yes }
+
+		x = 7
+		y = 0
+		
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	### British Isles
+
+	focus = {
+		id = FRA_anti_english_sentiment
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 30
+		
+		bypass = {
+			ENG = {
+				exists = no
+			}
+		}
+		
+		prerequisite = { focus = FRA_the_grand_empire }
+		relative_position_id = FRA_the_grand_empire
+		x = -4
+		y = 1
+		
+		completion_reward = {
+			country_event = FRADecentralizedInterventionist.13
+		}
+	}
+
+	focus = {
+		id = FRA_ally_on_the_isle
+		icon = GFX_focus_generic_feudalisms_stand
+		cost = 25
+		
+		bypass = {
+			SCO = {
+				exists = no
+			}
+		}
+		
+		prerequisite = { focus = FRA_anti_english_sentiment }
+		relative_position_id = FRA_anti_english_sentiment
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			country_event = FRADecentralizedInterventionist.14
+		}
+	}
+
+	focus = {
+		id = FRA_remembering_our_alliance
+		icon = GFX_focus_generic_the_old_is_new_again
+		cost = 25
+		
+		bypass = {
+			SCO = {
+				exists = no
+			}
+		}
+		
+		prerequisite = { focus = FRA_ally_on_the_isle }
+		relative_position_id = FRA_ally_on_the_isle
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			SCO = { country_event = FRADecentralizedInterventionist.15 }
+		}
+	}
+
+	focus = {
+		id = FRA_with_our_men
+		icon = GFX_focus_generic_little_entente
+		cost = 20
+		
+		prerequisite = { focus = FRA_remembering_our_alliance }
+		relative_position_id = FRA_remembering_our_alliance
+		
+		available = {
+			has_manpower > 10000
+		}
+		
+		x = -1
+		y = 1
+		
+		bypass = {
+			OR = {
+				SCO = {
+					exists = no
+				}
+				custom_trigger_tooltip = {
+					tooltip = FRA_SCO_DIPLOMACY_ENDED_TRIGGER
+					has_country_flag = FRA_SCO_diplomacy_ended
+				}
+			}
+		}
+		
+		completion_reward = {
+			add_manpower  = -10000
+			SCO = {
+				add_manpower  = 10000
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_and_our_guns
+		icon = GFX_focus_generic_combined_arms
+		cost = 20
+		
+		prerequisite = { focus = FRA_remembering_our_alliance }
+		relative_position_id = FRA_remembering_our_alliance
+		
+		available = {
+			has_equipment = {
+				infantry_equipment > 1000
+			}
+			has_equipment = {
+				melee_equipment > 1000
+			}
+		}
+		
+		x = 1
+		y = 1
+		
+		bypass = {
+			OR = {
+				SCO = {
+					exists = no
+				}
+				custom_trigger_tooltip = {
+					tooltip = FRA_SCO_DIPLOMACY_ENDED_TRIGGER
+					has_country_flag = FRA_SCO_diplomacy_ended
+				}
+			}
+		}
+		
+		completion_reward = {
+			send_equipment = {
+				equipment = infantry_equipment
+				amount = 1000
+				target = SCO
+			}
+			send_equipment = {
+				equipment = melee_equipment
+				amount = 1000
+				target = SCO
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_never_another_british_empire
+		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+		cost = 30
+		
+		prerequisite = { focus = FRA_with_our_men }
+		prerequisite = { focus = FRA_and_our_guns }
+		relative_position_id = FRA_with_our_men
+		x = 1
+		y = 1
+		
+		bypass = {
+			OR = {
+				SCO = {
+					exists = no
+				}
+				custom_trigger_tooltip = {
+					tooltip = FRA_SCO_DIPLOMACY_ENDED_TRIGGER
+					has_country_flag = FRA_SCO_diplomacy_ended
+				}
+			}
+		}
+		
+		completion_reward = {
+			diplomatic_relation = {
+				country = SCO
+				relation = guarantee
+				active = yes
+			}
+		}
+	}
+	
+	
+	### Scotland part 2 45 + 30 + 30 + 20 + 20
+	
+	focus = {
+		id = FRA_cherbourg_agreement
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 30
+		
+		prerequisite = { focus = FRA_never_another_british_empire }
+		prerequisite = { focus = FRA_neverending_golden_age }
+		relative_position_id = FRA_never_another_british_empire
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SPAIN_HAS_PICKED_A_SIDE
+				OR = {
+					has_global_flag = SPR_Regency
+					has_global_flag = SPR_Felipe
+				}
+			}
+		}
+		bypass = {
+			OR = {
+				SCO = {
+					exists = no
+				}
+				custom_trigger_tooltip = {
+					tooltip = FRA_SCO_DIPLOMACY_ENDED_TRIGGER
+					has_country_flag = FRA_SCO_diplomacy_ended
+				}
+			}
+		}
+		x = -1
+		y = 2
+		
+		completion_reward = {
+			SCO = { country_event = FRADecentralizedInterventionist.16 }
+		}
+	}
+	focus = {
+		id = FRA_review_scottish_economy
+		icon = GFX_FRA_expedition_inland
+		cost = 30
+		
+		prerequisite = { focus = FRA_cherbourg_agreement }
+		relative_position_id = FRA_cherbourg_agreement
+		
+		bypass = {
+			OR = {
+				SCO = {
+					exists = no
+				}
+				custom_trigger_tooltip = {
+					tooltip = FRA_SCO_DIPLOMACY_ENDED_TRIGGER
+					has_country_flag = FRA_SCO_diplomacy_ended
+				}
+			}
+		}
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			country_event = FRADecentralizedInterventionist.17
+		}
+	}
+	
+	focus = {
+		id = FRA_expand_scottish_iron_mining
+		icon = GFX_goal_generic_position_armies
+		cost = 20
+		
+		prerequisite = { focus = FRA_review_scottish_economy }
+		relative_position_id = FRA_review_scottish_economy
+		
+		bypass = {
+			OR = {
+				SCO = {
+					exists = no
+				}
+				custom_trigger_tooltip = {
+					tooltip = FRA_SCO_DIPLOMACY_ENDED_TRIGGER
+					has_country_flag = FRA_SCO_diplomacy_ended
+				}
+			}
+		}
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_resource = {
+				type = iron
+				amount = 4
+				state = 133
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_build_up_scottish_industry
+		icon = GFX_goal_generic_production2
+		cost = 20
+		
+		prerequisite = { focus = FRA_review_scottish_economy }
+		relative_position_id = FRA_review_scottish_economy
+		
+		bypass = {
+			OR = {
+				SCO = {
+					exists = no
+				}
+				custom_trigger_tooltip = {
+					tooltip = FRA_SCO_DIPLOMACY_ENDED_TRIGGER
+					has_country_flag = FRA_SCO_diplomacy_ended
+				}
+			}
+		}
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			121 = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_formalize_alliance
+		icon = GFX_goal_generic_major_alliance
+		cost = 45
+		
+		prerequisite = { focus = FRA_expand_scottish_iron_mining }
+		prerequisite = { focus = FRA_build_up_scottish_industry }
+		relative_position_id = FRA_expand_scottish_iron_mining
+		
+		bypass = {
+			OR = {
+				SCO = {
+					exists = no
+				}
+				custom_trigger_tooltip = {
+					tooltip = FRA_SCO_DIPLOMACY_ENDED_TRIGGER
+					has_country_flag = FRA_SCO_diplomacy_ended
+				}
+			}
+		}
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			if = { 
+				LIMIT = {
+					is_in_faction = no
+				}
+				create_faction = FRA_ENTENTE_ALLIANCE_FACTION
+			}
+			add_to_faction = SCO
+		}
+	}
+
+	### Economy ###
+
+	focus = {
+		id = FRA_economy_for_empire
+		icon = GFX_FRA_Support_the_Peasantry
+		cost = 30
+		
+		prerequisite = { focus = FRA_the_grand_empire }
+		relative_position_id = FRA_the_grand_empire
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			16 = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_resources_for_economy
+		icon = GFX_FRA_Canada_Wood
+		cost = 25
+		
+		prerequisite = { focus = FRA_economy_for_empire }
+		relative_position_id = FRA_economy_for_empire
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_resource = {
+				type = wood
+				amount = 2
+				state = 466
+			}
+			add_resource = {
+				type = iron
+				amount = 3
+				state = 468
+			}
+			add_resource = {
+				type = horses
+				amount = 2
+				state = 276
+			}
+			if = {
+				LIMIT = { 370 = { is_owned_by = LOU} }
+				add_resource = {
+					type = fabric
+					amount = 6
+					state = 370
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_a_strong_navy
+		icon = GFX_FRA_ocean_going_navy
+		cost = 20
+		
+		prerequisite = { focus = FRA_resources_for_economy }
+		relative_position_id = FRA_resources_for_economy
+		mutually_exclusive = { focus = FRA_a_strong_army }
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			23 = { 
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_rule_the_waves
+		icon = GFX_search_for_new_markets
+		cost = 20
+		
+		prerequisite = { focus = FRA_a_strong_navy }
+		relative_position_id = FRA_a_strong_navy
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			navy_experience = 5
+			add_ideas = fra_rule_the_waves
+		}
+	}
+
+	focus = {
+		id = FRA_a_strong_army
+		icon = GFX_FRA_artillery_battalion
+		cost = 20
+		
+		prerequisite = { focus = FRA_resources_for_economy }
+		relative_position_id = FRA_resources_for_economy
+		mutually_exclusive = { focus = FRA_a_strong_navy }
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			947 = { 
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				create_unit = {
+					division = "division_template = \"Royal French Garrison Battalion\" start_experience_factor = 0.3" 
+					owner = FRA
+					allow_spawning_on_enemy_provs = yes
+					count = 2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_that_does_not_stop
+		icon = GFX_FRA_Maintain_the_yoke
+		cost = 20
+		
+		prerequisite = { focus = FRA_a_strong_army }
+		relative_position_id = FRA_a_strong_army
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			army_experience = 5
+			add_ideas = fra_the_unstoppable_army
+			#army xp + idea
+		}
+	}
+
+	focus = {
+		id = FRA_wheels_continue_to_churn
+		icon = GFX_FRA_Economic_revival
+		cost = 30
+		
+		prerequisite = { focus = FRA_rule_the_waves focus = FRA_that_does_not_stop }
+		relative_position_id = FRA_rule_the_waves
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_ideas = fra_economic_improvements
+		}
+	}
+	
+	focus = {
+		id = FRA_neverending_golden_age
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 45
+		
+		available = {
+			has_completed_focus = FRA_never_another_british_empire
+			has_completed_focus = FRA_establish_cochinchine
+		}
+		prerequisite = { focus = FRA_wheels_continue_to_churn }
+		relative_position_id = FRA_wheels_continue_to_churn
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			country_event = FRADecentralizedInterventionist.18
+		}
+	}
+
+	### Cochinchina ###
+
+	focus = {
+		id = FRA_eyes_on_indochina
+		icon = GFX_focus_usa_focus_on_asia
+		cost = 30
+		
+		prerequisite = { focus = FRA_the_grand_empire }
+		relative_position_id = FRA_the_grand_empire
+		x = 4
+		y = 1
+		
+		completion_reward = {
+			country_event = FRADecentralizedInterventionist.4
+		}
+	}
+
+	focus = {
+		id = FRA_guns_for_cause
+		icon = GFX_focus_generic_revolutionary_sentiment
+		cost = 20
+		
+		prerequisite = { focus = FRA_eyes_on_indochina }
+		relative_position_id = FRA_eyes_on_indochina
+		
+		available = {
+			has_equipment = {
+				infantry_equipment > 2400
+			}
+		}
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -2400
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_men_for_the_war
+		icon = GFX_focus_generic_military_mission
+		cost = 20
+		
+		prerequisite = { focus = FRA_eyes_on_indochina }
+		relative_position_id = FRA_eyes_on_indochina
+		
+		available = {
+			has_manpower > 20000
+		}
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_manpower = -20000
+		}
+	}
+
+	focus = {
+		id = FRA_indochinese_logistics
+		icon = GFX_focus_prc_infiltration
+		cost = 40
+		
+		prerequisite = { focus = FRA_guns_for_cause }
+		prerequisite = { focus = FRA_men_for_the_war }
+		relative_position_id = FRA_guns_for_cause
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_ideas = fra_indochinese_logistics
+		}
+	}
+
+	focus = {
+		id = FRA_ignite_the_fuse
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 30
+		
+		prerequisite = { focus = FRA_indochinese_logistics }
+		relative_position_id = FRA_indochinese_logistics
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			FRA_indochina_war = yes
+		}
+	}
+
+	focus = {
+		id = FRA_establish_cochinchine
+		icon = GFX_FRA_Forts_Gascony
+		cost = 45
+		
+		prerequisite = { focus = FRA_ignite_the_fuse }
+		relative_position_id = FRA_ignite_the_fuse
+		
+		available = {
+			NOT = { has_war_with = SIA }
+			controls_state = 890
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = FRA_indochinese_war_lost_TRIGGER
+				has_country_flag = indochinese_war_lost
+			}
+		}
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			FRA_cochinchina = yes
+		}
+	}
+	
+	### Cochinchina Part II
+	
+	focus = {
+		id = FRA_calm_the_fire
+		icon = GFX_focus_generic_self_management
+		cost = 45
+		
+		prerequisite = { focus = FRA_establish_cochinchine }
+		prerequisite = { focus = FRA_neverending_golden_age }
+		relative_position_id = FRA_establish_cochinchine
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SPAIN_HAS_PICKED_A_SIDE
+				OR = {
+					has_global_flag = SPR_Regency
+					has_global_flag = SPR_Felipe
+				}
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = FRA_indochinese_war_lost_TRIGGER
+				has_country_flag = indochinese_war_lost
+			}
+		}
+		x = 1
+		y = 2
+		
+		completion_reward = {
+			COC = { add_stability = 0.10 }
+		}
+	}
+	focus = {
+		id = FRA_rebuild_phong_phu
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 30
+		
+		prerequisite = { focus = FRA_calm_the_fire }
+		relative_position_id = FRA_calm_the_fire
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = FRA_indochinese_war_lost_TRIGGER
+				has_country_flag = indochinese_war_lost
+			}
+		}
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			890 = { 
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_victory_points = { 
+				province = 12133
+				value = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_increase_fabric_production
+		icon = GFX_focus_generic_industry_2
+		cost = 20
+		
+		prerequisite = { focus = FRA_rebuild_phong_phu }
+		relative_position_id = FRA_rebuild_phong_phu
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = FRA_indochinese_war_lost_TRIGGER
+				has_country_flag = indochinese_war_lost
+			}
+		}
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_resource = {
+				type = fabric
+				amount = 6
+				state = 890
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_quinam_dockyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 20
+		
+		prerequisite = { focus = FRA_rebuild_phong_phu }
+		relative_position_id = FRA_rebuild_phong_phu
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = FRA_indochinese_war_lost_TRIGGER
+				has_country_flag = indochinese_war_lost
+			}
+		}
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			890 = { 
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_east_asia_ships
+		icon = GFX_focus_generic_destroyer
+		cost = 30
+		
+		prerequisite = { focus = FRA_increase_fabric_production }
+		prerequisite = { focus = FRA_quinam_dockyards }
+		relative_position_id = FRA_increase_fabric_production
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = FRA_indochinese_war_lost_TRIGGER
+				has_country_flag = indochinese_war_lost
+			}
+		}
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			890 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 4341
+				}
+			}
+			add_victory_points = { 
+				province = 4341
+				value = 1
+			}
+			COC = {
+				navy_experience = 10
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					custom_effect_tooltip = generic_navy_initial_designs_mtg_tt
+					hidden_effect = {
+						set_technology = {
+							early_ship_hull_light = 1
+							basic_battery = 1
+						}
+					}
+					create_equipment_variant = {
+						name = "Acadia Class"
+						type = ship_hull_light_1
+						parent_version = 0
+						modules = {
+							fixed_ship_battery_slot = ship_light_battery_1
+							fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+							fixed_ship_engine_slot = light_ship_engine_1
+						}
+					}
+				} else {
+					custom_effect_tooltip = generic_navy_initial_designs_tt
+					hidden_effect = {
+						set_technology = {
+							early_destroyer = 1
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	#Resellon Diplomacy
+	
+	focus = {
+		id = FRA_great_empire_of_the_west
+		icon = GFX_focus_focus_fra_orleans_restoration
+		cost = 30
+		
+		prerequisite = { focus = FRA_neverending_golden_age }
+		relative_position_id = FRA_neverending_golden_age
+		mutually_exclusive = { focus = FRA_absolutists_down_south }
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SPAIN_HAS_WENT_REGENCY
+				has_global_flag = SPR_Regency
+			}
+		}
+		x = -2
+		y = 2
+		
+		completion_reward = {
+			country_event = FRADecentralizedInterventionist.19
+		}
+	}
+	
+	focus = {
+		id = FRA_look_east
+		icon = GFX_focus_fra_le_deluge
+		cost = 30
+		
+		prerequisite = { focus = FRA_great_empire_of_the_west }
+		relative_position_id = FRA_great_empire_of_the_west
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			country_event = FRADecentralizedInterventionist.20
+		}
+	}
+	
+	focus = {
+		id = FRA_bavarian_state_of_pfalz
+		icon = GFX_AUS_focus_Protect_Fragmentation
+		cost = 25
+		
+		prerequisite = { focus = FRA_look_east }
+		relative_position_id = FRA_look_east
+		
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			country_event = FRADecentralizedInterventionist.21
+		}
+	}
+	
+	focus = {
+		id = FRA_island_of_sardinia
+		icon = GFX_SPR_circulo_economico_caribeno
+		cost = 25
+		
+		prerequisite = { focus = FRA_look_east }
+		relative_position_id = FRA_look_east
+		
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			country_event = FRADecentralizedInterventionist.22
+		}
+	}
+	
+	focus = {
+		id = FRA_prepare_for_diplomacy
+		icon = GFX_focus_generic_royal_wedding
+		cost = 30
+		
+		prerequisite = { focus = FRA_bavarian_state_of_pfalz }
+		prerequisite = { focus = FRA_island_of_sardinia }
+		relative_position_id = FRA_bavarian_state_of_pfalz
+		
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = FRA_or_for_war
+		icon = GFX_focus_hol_war_on_pacifism
+		cost = 30
+		
+		prerequisite = { focus = FRA_prepare_for_diplomacy }
+		relative_position_id = FRA_prepare_for_diplomacy
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			if = {
+				LIMIT = { 27 = { is_owned_by = FRA} }
+				27 = {
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				16 = {
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_rosellon_diplomacy
+		icon = GFX_goal_generic_military_deal
+		cost = 45
+		
+		prerequisite = { focus = FRA_or_for_war }
+		relative_position_id = FRA_or_for_war
+		
+		available = {
+			has_completed_focus = FRA_formalize_alliance
+			has_completed_focus = FRA_east_asia_ships
+			OR = {
+				has_completed_focus = FRA_march_to_bombay
+				has_completed_focus = FRA_regional_indian_development
+				has_completed_focus = FRA_grand_port_of_india
+				has_completed_focus = FRA_two_india_solution
+			}
+		}
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			random_country = {
+				LIMIT = { controls_state = 793}
+				country_event = FRADecentralizedInterventionist.23
+			}
+		}
+	}
+	
+	#War with Spain
+	
+	focus = {
+		id = FRA_absolutists_down_south
+		icon = GFX_SPR_felipes_demise
+		cost = 30
+		
+		prerequisite = { focus = FRA_neverending_golden_age }
+		relative_position_id = FRA_neverending_golden_age
+		mutually_exclusive = { focus = FRA_great_empire_of_the_west }
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SPAIN_FELIPE_SURVIVES
+				has_global_flag = SPR_Felipe
+			}
+		}
+		x = 2
+		y = 2
+		
+		completion_reward = {
+			country_event = FRADecentralizedInterventionist.24
+		}
+	}
+	
+	focus = {
+		id = FRA_storm_brews
+		icon = GFX_focus_generic_revolutionary_sentiment
+		cost = 25
+		
+		prerequisite = { focus = FRA_absolutists_down_south }
+		relative_position_id = FRA_absolutists_down_south
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			country_event = FRADecentralizedInterventionist.25
+		}
+	}
+	
+	focus = {
+		id = FRA_advocate_for_moderate_king
+		icon = GFX_focus_generic_redistribution_of_powers
+		cost = 25
+		
+		prerequisite = { focus = FRA_storm_brews }
+		relative_position_id = FRA_storm_brews
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.05
+			SPR = {
+				add_stability = -0.025
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_rally_people
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 20
+		
+		prerequisite = { focus = FRA_advocate_for_moderate_king }
+		relative_position_id = FRA_advocate_for_moderate_king
+		
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_manpower = 10000
+			add_war_support = 0.05
+		}
+	}
+	
+	focus = {
+		id = FRA_ready_french_arms
+		icon = GFX_focus_focus_fra_maquis
+		cost = 20
+		
+		prerequisite = { focus = FRA_advocate_for_moderate_king }
+		relative_position_id = FRA_advocate_for_moderate_king
+		
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2500
+			}
+			add_equipment_to_stockpile = {
+				type = melee_equipment
+				amount = 2500
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_just_like_1851
+		icon = GFX_SPR_safe_borders
+		cost = 30
+		
+		prerequisite = { focus = FRA_rally_people }
+		prerequisite = { focus = FRA_ready_french_arms }
+		relative_position_id = FRA_rally_people
+		
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_war_support = 0.05
+			country_event = FRADecentralizedInterventionist.26
+		}
+	}
+	
+	focus = {
+		id = FRA_our_award
+		icon = GFX_FRA_The_Angry_neighbour
+		cost = 45
+		
+		prerequisite = { focus = FRA_just_like_1851 }
+		relative_position_id = FRA_just_like_1851
+		
+		available = {
+			has_completed_focus = FRA_formalize_alliance
+			has_completed_focus = FRA_east_asia_ships
+			OR = {
+				has_completed_focus = FRA_march_to_bombay
+				has_completed_focus = FRA_regional_indian_development
+				has_completed_focus = FRA_grand_port_of_india
+				has_completed_focus = FRA_two_india_solution
+			}
+		}
+		
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			country_event = FRADecentralizedInterventionist.27
+			set_country_flag = franco_spanish_war_tree
+			load_focus_tree = france_franco_spanish_war_focus
+		}
+	}
+}
+
+### India ###
+
+shared_focus = {
+	id = FRA_india_plan
+	icon = GFX_Indian_Rivalry
+	cost = 30
+	
+	prerequisite = { focus = FRA_the_grand_empire }
+	relative_position_id = FRA_the_grand_empire
+	x = 8
+	y = 1
+	
+	allow_branch = {
+		IF = { 
+			LIMIT = {
+				OR = {
+					has_country_flag = india_plan
+					has_country_flag = second_vijayanagar_war
+				}
+			}
+			has_country_flag = india_plan
+		}
+		else = {
+			VIJ = {
+				exists = no
+			}
+		}
+		
+	}
+	
+	completion_reward = {
+		country_event = FRADecentralizedInterventionist.5
+		set_country_flag = india_plan
+	}
+}
+
+shared_focus = {
+	id = FRA_colony_of_caroline
+	icon = GFX_focus_focus_fra_third_empire
+	cost = 0
+	
+	available = {
+		always = no
+	}
+	mutually_exclusive = { focus = FRA_colony_of_raj }
+	prerequisite = { focus = FRA_india_plan }
+	relative_position_id = FRA_india_plan
+	x = -1
+	y = 1
+	
+	
+	completion_reward = {
+		FRA_IND_caroline = yes
+	}
+}
+
+shared_focus = {
+	id = FRA_colony_of_raj
+	icon = GFX_focus_RAJ_all_india_forward_bloc
+	cost = 0
+	
+	available = {
+		always = no
+	}
+	mutually_exclusive = { focus = FRA_colony_of_caroline }
+	prerequisite = { focus = FRA_india_plan }
+	relative_position_id = FRA_india_plan
+	x = 1
+	y = 1
+	
+	
+	completion_reward = {
+		FRA_IND = yes
+	}
+}
+
+shared_focus = {
+	id = FRA_purchase_portuguese_territory
+	icon = GFX_focus_usa_reestablish_the_gold_standard
+	cost = 25
+	
+	prerequisite = { focus = FRA_colony_of_caroline focus = FRA_colony_of_raj }
+	relative_position_id = FRA_colony_of_caroline
+	x = 1
+	y = 1
+	
+	
+	completion_reward = {
+		POR = { country_event = FRADecentralizedInterventionist.6 }
+	}
+}
+
+shared_focus = {
+	id = FRA_crush_mysore
+	icon = GFX_focus_eng_move_to_secure_the_dominions
+	cost = 30
+	
+	prerequisite = { focus = FRA_colony_of_caroline }
+	relative_position_id = FRA_colony_of_caroline
+	x = 0
+	y = 2
+	
+	will_lead_to_war_with = MYS
+	
+	completion_reward = {
+		declare_war_on = {
+			target = MYS
+			type = annex_everything
+		}
+		set_country_flag = FRA_MYS_WAR
+		IND = {
+			add_to_war = { 
+				targeted_alliance = FRA 
+				enemy = MYS
+				hostility_reason = asked_to_join
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = FRA_march_to_bombay
+	icon = GFX_focus_generic_manpower
+	cost = 30
+	
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = FRA_MYS_WAR_WON_TRIGGER
+			has_country_flag = FRA_MYS_WAR_WON
+		}
+	}
+	
+	bypass = {
+		custom_trigger_tooltip = {
+			tooltip = NOT_FRA_MAR_WAR_TRIGGER
+			NOT = { has_country_flag = FRA_MAR_WAR }
+		}
+		custom_trigger_tooltip = {
+			tooltip = NOT_FRA_MYS_WAR_WON_TRIGGER
+			NOT = { has_country_flag = FRA_MYS_WAR_WON }
+		}
+	}
+	
+	prerequisite = { focus = FRA_crush_mysore }
+	relative_position_id = FRA_crush_mysore
+	x = 0
+	y = 1
+	
+	will_lead_to_war_with = MAR
+	
+	completion_reward = {
+		declare_war_on = {
+			target = MAR
+			type = take_state_focus 
+			generator = { 429 }
+		}
+		set_country_flag = FRA_MAR_WAR
+		IND = {
+			add_to_war = { 
+				targeted_alliance = FRA 
+				enemy = MAR
+				hostility_reason = asked_to_join
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = FRA_negotiations_with_mysore
+	icon = GFX_goal_generic_intelligence_exchange
+	cost = 30
+	
+	prerequisite = { focus = FRA_colony_of_raj }
+	relative_position_id = FRA_colony_of_raj
+	x = 0
+	y = 2
+	
+	
+	completion_reward = {
+		MYS = { country_event = FRADecentralizedInterventionist.9 }
+	}
+}
+
+shared_focus = {
+	id = FRA_regional_indian_development
+	icon = GFX_goal_generic_construct_infrastructure
+	cost = 30
+	
+	prerequisite = { focus = FRA_negotiations_with_mysore }
+	relative_position_id = FRA_negotiations_with_mysore
+	x = 0
+	y = 1
+	
+	
+	completion_reward = {
+		848 = { 
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		427 = { 
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		IF = {
+			LIMIT = {
+				MYS = { is_subject_of = FRA }
+			}
+			425 = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+###India part 2###
+
+shared_focus = {
+	id = FRA_second_vijayanagar_war
+	icon = GFX_focus_generic_strike_at_democracy1
+	cost = 30
+	
+	prerequisite = { focus = FRA_the_grand_empire }
+	relative_position_id = FRA_the_grand_empire
+	x = 8
+	y = 1
+	
+	allow_branch = {
+		IF = { 
+			LIMIT = {
+				OR = {
+					has_country_flag = india_plan
+					has_country_flag = second_vijayanagar_war
+				}
+			}
+			has_country_flag = second_vijayanagar_war
+		}
+		else = {
+			VIJ = {
+				exists = yes
+			}
+		}
+		
+	}
+	
+	completion_reward = {
+		declare_war_on = {
+			target = VIJ
+			type = annex_everything
+		}
+		set_country_flag = FRA_VIJ_second_war
+		set_country_flag = second_vijayanagar_war
+	}
+}
+
+shared_focus = {
+	id = FRA_maintain_direct_control
+	icon = GFX_focus_RAJ_lions_of_the_great_war
+	cost = 25
+	
+	available = {
+		NOT = {
+			custom_trigger_tooltip = {
+				tooltip = NOT_FRA_VIJ_second_war_TRIGGER
+				NOT = { has_country_flag = FRA_VIJ_second_war }
+			}
+		}
+	}
+	
+	mutually_exclusive = { focus = FRA_colony_of_raj1 }
+	prerequisite = { focus = FRA_second_vijayanagar_war }
+	relative_position_id = FRA_second_vijayanagar_war
+	x = -1
+	y = 1
+	
+	
+	completion_reward = {
+		add_stability = -0.05
+	}
+}
+
+shared_focus = {
+	id = FRA_colony_of_raj1
+	icon = GFX_focus_RAJ_all_india_forward_bloc
+	cost = 15
+	
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = NOT_FRA_VIJ_second_war_TRIGGER
+			NOT = { has_country_flag = FRA_VIJ_second_war }
+		}
+	}
+	
+	mutually_exclusive = { focus = FRA_maintain_direct_control }
+	prerequisite = { focus = FRA_second_vijayanagar_war }
+	relative_position_id = FRA_second_vijayanagar_war
+	x = 1
+	y = 1
+	
+	
+	completion_reward = {
+		FRA_IND = yes
+	}
+}
+
+shared_focus = {
+	id = FRA_develop_vijayawada
+	icon = GFX_focus_generic_industry_1
+	cost = 25
+	
+	bypass = {
+		NOT = { controls_state = 427 }
+	}
+	
+	prerequisite = { focus = FRA_maintain_direct_control focus = FRA_colony_of_raj1 }
+	relative_position_id = FRA_maintain_direct_control
+	x = 1
+	y = 1
+	
+	
+	completion_reward = {
+		427 = { 
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = FRA_march_to_mangalore
+	icon = GFX_focus_generic_military_mission
+	cost = 20
+	
+	bypass = {
+		NOT = { controls_state = 427 }
+	}
+	
+	prerequisite = { focus = FRA_maintain_direct_control }
+	relative_position_id = FRA_maintain_direct_control
+	x = 0
+	y = 2
+	
+	will_lead_to_war_with = MYS
+	
+	completion_reward = {
+		declare_war_on = {
+			target = MYS
+			type = annex_everything
+		}
+		set_country_flag = FRA_MYS_WAR
+	}
+}
+
+shared_focus = {
+	id = FRA_grand_port_of_india
+	icon = GFX_FRA_Reemploy_Merchant_Shipping
+	cost = 15
+	
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = FRA_MYS_WAR_WON_TRIGGER
+			has_country_flag = FRA_MYS_WAR_WON
+		}
+	}
+	
+	bypass = {
+		custom_trigger_tooltip = {
+			tooltip = NOT_FRA_MAR_WAR_TRIGGER
+			NOT = { has_country_flag = FRA_MAR_WAR }
+		}
+		custom_trigger_tooltip = {
+			tooltip = NOT_FRA_MYS_WAR_WON_TRIGGER
+			NOT = { has_country_flag = FRA_MYS_WAR_WON }
+		}
+	}
+	
+	prerequisite = { focus = FRA_march_to_mangalore }
+	relative_position_id = FRA_march_to_mangalore
+	x = 0
+	y = 1
+	
+	completion_reward = {
+		425 = {
+			add_building_construction = {
+				type = naval_base
+				level = 3
+				instant_build = yes
+				province = 7244
+			}
+		}
+		add_victory_points = { 
+			province = 7244
+			value = 2
+		}
+	}
+}
+
+shared_focus = {
+	id = FRA_talks_with_portugal
+	icon = GFX_goal_molotov_ribbentrop_pact
+	cost = 20
+	
+	prerequisite = { focus = FRA_colony_of_raj1 }
+	relative_position_id = FRA_colony_of_raj1
+	x = 0
+	y = 2
+	
+	
+	completion_reward = {
+		country_event = FRADecentralizedInterventionist.12
+	}
+}
+
+shared_focus = {
+	id = FRA_two_india_solution
+	icon = GFX_focus_RAJ_two_nation_theory
+	cost = 25
+	
+	prerequisite = { focus = FRA_talks_with_portugal }
+	relative_position_id = FRA_talks_with_portugal
+	x = 0
+	y = 1
+	
+	
+	completion_reward = {
+		FRA_two_indias = yes
+	}
+}
+
+

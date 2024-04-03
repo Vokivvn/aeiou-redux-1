@@ -1,0 +1,17 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "AEIOU_Rudolf_OpMech_Display"
+		size = { width = 514 height = 600 }
+		position = { x = 0 y = 0 }
+
+		###Background
+		iconType = {
+			name = "OpMech_bg"
+			spriteType = "GFX_OpMech_bg"
+			orientation = upper_left
+			position = { x = 0 y = 0 }
+		}
+	}
+
+}

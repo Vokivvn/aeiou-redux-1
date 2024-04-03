@@ -1,0 +1,19 @@
+division_template = {
+	name = "Cree Tribesmen"
+
+	division_names_group = REE_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "Cree Tribesmen"
+		location = 4872
+		division_template = "Cree Tribesmen"
+		start_experience_factor = 0.5
+	}
+}

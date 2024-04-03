@@ -1,0 +1,29 @@
+state={
+	id=900
+	name="STATE_900" 
+	manpower = 59267
+	resources={
+		wood=1
+	}
+	
+	state_category = pastoral
+
+	history={
+		owner = BRU #H
+		victory_points = {
+			7371 1
+		}
+		add_core_of = BRU
+		buildings = {
+			infrastructure = 2
+			7371 = {
+				naval_base = 1
+			}
+		}
+		
+	}
+
+	provinces={
+	    10212 12171 1335 7371 10269 7387
+	}
+}

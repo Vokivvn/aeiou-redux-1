@@ -1,0 +1,27 @@
+
+state={
+	id=860
+	name="STATE_860" 
+	manpower = 50000
+	resources={
+		
+	}
+	
+	state_category = town
+
+	history={
+		owner = SIH
+		add_core_of = SIH
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			2076 1
+		}		
+	}
+
+	provinces={
+		1129 2002 2076 3989 5002 5157 7106 10021 10729 12708 
+	}
+}

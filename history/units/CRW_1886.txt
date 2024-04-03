@@ -1,0 +1,19 @@
+division_template = {
+	name = "Crow Tribesmen"
+
+	division_names_group = CRW_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "Crow Tribesmen"
+		location = 12651
+		division_template = "Crow Tribesmen"
+		start_experience_factor = 0.5
+	}
+}

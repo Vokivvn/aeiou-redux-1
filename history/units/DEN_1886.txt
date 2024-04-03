@@ -1,0 +1,90 @@
+division_template = {
+	name = "Royal Danish Guard Battalion"
+
+	division_names_group = DEN_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Danish Cavalry Division"
+
+	division_names_group = DEN_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Danish Knight Brigade"
+
+	division_names_group = DEN_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Royal Danish Guard Battalion"
+		location = 6287
+		division_template = "Royal Danish Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Danish Guard Battalion"
+		location = 3325
+		division_template = "Royal Danish Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3rd Royal Danish Guard Battalion"
+		location = 12674
+		division_template = "Royal Danish Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4th Royal Danish Guard Battalion"
+		location = 12512
+		division_template = "Royal Danish Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Danish Cavalry Division"
+		location = 9347
+		division_template = "Royal Danish Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Danish Knight Brigade"
+		location = 399
+		division_template = "Royal Danish Knight Brigade"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Danish Knight Brigade"
+		location = 394
+		division_template = "Royal Danish Knight Brigade"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3rd Royal Danish Knight Brigade"
+		location = 12689
+		division_template = "Royal Danish Knight Brigade"
+		start_experience_factor = 0.3
+	}
+}

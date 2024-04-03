@@ -1,0 +1,27 @@
+﻿l_english:
+  
+  #Decisions and faction
+  
+  native_diplomacy_category:0 "Native Diplomacy"
+  send_diplomats:0 "Send Diplomats"
+  native_alliance:0 "Native Coalition"
+  
+  #Events
+  LAKRevolt.1.t:0 "The natives revolt!"
+  LAKRevolt.1.d:0 "Horrible news arrive from the region of La Plaine, where the most anti-French tribes inhabit. One of the rulers of the Lakota, named Nuage Rouge, has revolted against our rule and has successfully managed to unite almost all of the tribes in the region and many more have risen up together in several others. Now they advance towards Caroline and New Orleans ravaging everything in their path and scorching the lands of the peaceful French colonists.\n\nIt is rumoured that Nuage Rouge has proclaimed some kind of Lakota Tribal state in an attempt to gather more stability and to unite their armies into one centralized group instead of sauvage raid parties. Regarding the armies, instead of what we expected of 'Unadvanced peasants with bows and spears', what our most advanced strongholds found were groups of heavily armed natives, full with the latest guns and armed with hand grenades. Using this 'armament surprise' as a base to strike our confused soldiers, tens of hundreds have already been slain. How they got that modern armament and training remains uncertain, but we suspect it was the Mexicans, with their intention of annexing Nouvelle-Alsace and this 'revolt' is merely a distraction. We must be wary at all costs!"
+  LAKRevolt.1.a:0 "These rebel scum will be crushed!"
+  LAKRevolt.1.b:0 "For Red Cloud!"
+  
+  LAKNewengland.1.t:0 "Opportunity on the horizon"
+  LAKNewengland.1.d:0 "A great opportunity has revealed itself in the current war to our West. The natives are now busy fighting the Louisianans and the French in a conflict that doesn't look like it's going to end well for any of them, so now that the Blue Enemy has its eyes turned away, perhaps we could do some expansion on our own.\n\nThe Cherokee have foolishly joined the coalition against the French, completely leaving our border unprotected, and their lands ready to be taken by a stronger foe. The Louisianans will not dare oppose us, and although maybe the Spanish or Swedish could complain, we're just really just colonizing some almost unpopulated native lands; right?"
+  LAKNewengland.1.a:0 "For the Glory of New England!"
+  LAKNewengland.1.b:0 "Better not risk an intervention"
+  
+  LAKNewengland.2.t:0 "Victory!"
+  LAKNewengland.2.d:0 "As expected, the Cherokee haven't even answered to our invasion, being too busy far away from their houses and wives, and now the land north of one of the many of the afluents of the Mississippi rivers is part of our Republic. With it comes the Native city of Tanasi, which could become a place where natives could organize raids against their new establishment. Of course, this is no colonial system, and they will be adequately assimilated sooner or later, but perhaps it would be better to keep an eye open, just in case any of them natives attempted anything against our troops stationed there or be sure to imprison any Nuage Rouge wannabes, we've got enough with one."
+  LAKNewengland.2.a:0 "President Bocock will be happy"
+   
+  #Ideas
+  
+  LAK_liberation_army:0 "Lakotan Liberation Army"
+  LAK_liberation_army_desc:0 "The Natives have suffered for centuries under the heel of the French, now the time to forcefully remove that neverending itch has arrived.\n\nNuage Rouge will guide the Lakotans to victory, or perish while attempting to do so."

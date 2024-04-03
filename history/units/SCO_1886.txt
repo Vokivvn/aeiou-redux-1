@@ -1,0 +1,90 @@
+﻿division_template = {
+	name = "Royal Scottish Guard Group"
+
+	division_names_group = SCO_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+		line_infantry = { x = 0 y = 4 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+		line_infantry = { x = 1 y = 2 }
+		line_infantry = { x = 1 y = 3 }
+		line_infantry = { x = 1 y = 4 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Scottish Cavalry Division"
+
+	division_names_group = SCO_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 0 y = 2 }
+		medium_cavalry = { x = 0 y = 3 }
+		medium_cavalry = { x = 0 y = 4 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+		medium_cavalry = { x = 1 y = 2 }
+		medium_cavalry = { x = 1 y = 3 }
+		medium_cavalry = { x = 1 y = 4 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Scottish Knight Battalion"
+
+	division_names_group = SCO_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Royal Scottish Guard Group"
+		location = 3379
+		division_template = "Royal Scottish Guard Group"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Scottish Guard Group"
+		location = 3273
+		division_template = "Royal Scottish Guard Group"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3rd Royal Scottish Guard Group"
+		location = 9392
+		division_template = "Royal Scottish Guard Group"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Scottish Cavalry Division"
+		location = 11257
+		division_template = "Royal Scottish Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Scottish Knight Battalion"
+		location = 385
+		division_template = "Royal Scottish Knight Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Scottish Knight Battalion"
+		location = 11293
+		division_template = "Royal Scottish Knight Battalion"
+		start_experience_factor = 0.3
+	}
+}

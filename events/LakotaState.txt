@@ -1,0 +1,546 @@
+###########################
+# Native American Events
+###########################
+
+add_namespace = LAKRevolt
+add_namespace = LAKInvites
+add_namespace = LAKNewengland
+
+country_event = { #Native revolt tiem
+	id = LAKRevolt.1
+	title = LAKRevolt.1.t
+	desc = LAKRevolt.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	fire_only_once = yes
+	trigger = {
+		tag = LOU
+		date > 1886.03.13
+	}
+	immediate = {
+		hidden_effect = {
+			384 = { add_core_of = LAK }
+			
+			392 = { add_core_of = LAK }
+			373 = { add_core_of = LAK }
+			383 = { add_core_of = LAK }
+			374 = { add_core_of = LAK }
+			394 = { add_core_of = LAK }
+			FRA = { set_country_flag = FRA_nativefireworks }
+			set_global_flag = FRA_Lak_war
+			LAK = {
+				set_technology = {
+					muskets0 = 1
+					melee = 1
+				}
+				set_politics = {
+					ruling_party = apolitical
+					elections_allowed = no
+				}
+				add_to_array = { national_religion_array =  22 }
+		
+			LAK = {
+				set_state_owner = 384
+				set_state_controller = 384
+				set_state_owner = 392
+				set_state_controller = 392
+				set_state_owner = 373
+				set_state_controller = 373
+				set_state_owner = 383
+				set_state_controller = 383
+				set_state_owner = 374
+				set_state_controller = 374
+			}
+		}
+		}
+	}
+	
+	option = {
+		name = LAKRevolt.1.a 
+		ai_chance = {
+			factor = 100
+		}
+		LAK = {
+		load_oob = LAK_revolts
+		declare_war_on = {
+				target = LOU
+				type = liberate_wargoal
+			}
+		}		
+		LAK = { add_ideas = LAK_liberation_army }
+		add_to_war = { 
+			targeted_alliance = FCN 
+			enemy = LAK
+			hostility_reason = asked_to_join
+		}
+		add_political_power = -100
+	}
+	option = {
+		name = LAKRevolt.1.b 
+		add_stability = -0.1
+		add_political_power = -50
+		
+		LAK = {
+			declare_war_on = {
+				target = LOU
+				type = liberate_wargoal
+			}
+			load_oob = LAK_revolts
+		}
+		LAK = { add_ideas = LAK_liberation_army }
+		add_to_war = { 
+			targeted_alliance = FCN 
+			enemy = LAK
+			hostility_reason = asked_to_join
+		}
+		LAK = { change_tag_from = ROOT }
+	}
+}
+
+country_event = {
+	id = LAKInvites.1  #Pawnee receive invitation to join alliance
+	title = LAKInvites.1.t
+	desc = LAKInvites.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LAKInvites.1.a #Yes
+		ai_chance = {
+			factor = 100 }
+		LAK = { country_event = LAKInvites.2 }
+		LAK = { create_faction = NATIVE_ALLIANCE }
+		
+	}
+	option = {
+		name = LAKInvites.1.b #No
+		ai_chance = {
+			factor = 0 }
+		add_stability = 0.1
+	}
+}
+
+country_event = {
+	id = LAKInvites.2  #Pawnee say yes
+	title = LAKInvites.2.t
+	desc = LAKInvites.2.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LAKInvites.2.a #Yes
+		add_political_power = 5
+		add_to_faction = PWN
+		PWN = {
+			add_to_war = { 
+				targeted_alliance = ROOT 
+				enemy = LOU
+				hostility_reason = asked_to_join
+			}
+		}
+	}
+}
+
+country_event = {
+	id = LAKInvites.3  #Comanche receive invitation to join alliance
+	title = LAKInvites.3.t
+	desc = LAKInvites.3.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LAKInvites.3.a #Yes
+		ai_chance = {
+			factor = 100 }
+		LAK = { country_event = LAKInvites.4 }
+		
+	}
+	option = {
+		name = LAKInvites.3.b #No
+		ai_chance = {
+			factor = 0 }
+		add_stability = 0.1
+	}
+}
+
+country_event = {
+	id = LAKInvites.4  #Comanche say yes
+	title = LAKInvites.4.t
+	desc = LAKInvites.4.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LAKInvites.4.a #Yes
+		add_political_power = 5
+		add_to_faction = CCH
+		CCH = {
+			add_to_war = { 
+				targeted_alliance = ROOT 
+				enemy = LOU
+				hostility_reason = asked_to_join
+			}
+		}
+	}
+}
+	
+	
+country_event = {
+	id = LAKInvites.5  #Osage receive invitation to join alliance
+	title = LAKInvites.5.t
+	desc = LAKInvites.5.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LAKInvites.5.a #Yes
+		ai_chance = {
+			factor = 100 }
+		LAK = { country_event = LAKInvites.4 }
+		
+	}
+	option = {
+		name = LAKInvites.5.b #No
+		ai_chance = {
+			factor = 0 }
+		add_stability = 0.1
+	}
+}
+
+country_event = {
+	id = LAKInvites.6  #Osage say yes
+	title = LAKInvites.6.t
+	desc = LAKInvites.6.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LAKInvites.6.a #Yes
+		add_political_power = 5
+		add_to_faction = OSG
+		OSG = {
+			add_to_war = { 
+				targeted_alliance = ROOT 
+				enemy = LOU
+				hostility_reason = asked_to_join
+			}
+		}
+	}
+}
+
+country_event = {
+	id = LAKInvites.7  #Cherokee receive invitation to join alliance
+	title = LAKInvites.7.t
+	desc = LAKInvites.7.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LAKInvites.7.a #Yes
+		ai_chance = {
+			factor = 100 }
+		LAK = { country_event = LAKInvites.8 }
+		
+	}
+	option = {
+		name = LAKInvites.7.b #No
+		ai_chance = {
+			factor = 0 }
+		add_stability = 0.1
+	}
+}
+
+country_event = {
+	id = LAKInvites.8  #Cherokee say yes
+	title = LAKInvites.8.t
+	desc = LAKInvites.8.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LAKInvites.8.a #Yes
+		add_political_power = 5
+		add_to_faction = CHR
+		CHR = {
+			add_to_war = { 
+				targeted_alliance = ROOT 
+				enemy = LOU
+				hostility_reason = asked_to_join
+			}
+		}
+	}
+}
+
+country_event = {
+	id = LAKInvites.9  #Shawnee	receive invitation to join alliance
+	title = LAKInvites.9.t
+	desc = LAKInvites.9.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LAKInvites.9.a #Yes
+		ai_chance = {
+			factor = 100 }
+		LAK = { country_event = LAKInvites.10 }
+		
+	}
+	option = {
+		name = LAKInvites.9.b #No
+		ai_chance = {
+			factor = 0 }
+		add_stability = 0.1
+	}
+}
+
+country_event = {
+	id = LAKInvites.10  #Shawnee say yes
+	title = LAKInvites.10.t
+	desc = LAKInvites.10.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LAKInvites.10.a #Yes
+		add_political_power = 5
+		add_to_faction = SHW
+		SHW = {
+			add_to_war = { 
+				targeted_alliance = ROOT 
+				enemy = LOU
+				hostility_reason = asked_to_join
+			}
+		}
+	}
+}
+
+country_event = {
+	id = LAKInvites.11 #Cheyenne	receive invitation to join alliance
+	title = LAKInvites.11.t
+	desc = LAKInvites.11.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LAKInvites.11.a #Yes
+		ai_chance = {
+			factor = 100 }
+		LAK = { country_event = LAKInvites.12 }
+		
+	}
+	option = {
+		name = LAKInvites.11.b #No
+		ai_chance = {
+			factor = 0 }
+		add_stability = 0.1
+	}
+}
+
+country_event = {
+	id = LAKInvites.12  #Cheyenne say yes
+	title = LAKInvites.12.t
+	desc = LAKInvites.12.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LAKInvites.12.a #Yes
+		add_political_power = 5
+		add_to_faction = CHY
+		CHY = {
+			add_to_war = { 
+				targeted_alliance = ROOT 
+				enemy = LOU
+				hostility_reason = asked_to_join
+			}
+		}
+	}
+}
+
+country_event = {
+	id = LAKInvites.13 #Crow receive invitation to join alliance
+	title = LAKInvites.13.t
+	desc = LAKInvites.13.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LAKInvites.13.a #Yes
+		ai_chance = {
+			factor = 100 }
+		LAK = { country_event = LAKInvites.14 }
+		
+	}
+	option = {
+		name = LAKInvites.13.b #No
+		ai_chance = {
+			factor = 0 }
+		add_stability = 0.1
+	}
+}
+
+country_event = {
+	id = LAKInvites.14  #Crow say yes
+	title = LAKInvites.14.t
+	desc = LAKInvites.14.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LAKInvites.14.a #Yes
+		add_political_power = 5
+		add_to_faction = CRW
+		CRW = {
+			add_to_war = { 
+				targeted_alliance = ROOT 
+				enemy = LOU
+				hostility_reason = asked_to_join
+			}
+		}
+	}
+}
+
+country_event = {
+	id = LAKInvites.15 #Cree receive invitation to join alliance
+	title = LAKInvites.15.t
+	desc = LAKInvites.15.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LAKInvites.15.a #Yes
+		ai_chance = {
+			factor = 100 }
+		LAK = { country_event = LAKInvites.16 }
+		
+	}
+	option = {
+		name = LAKInvites.15.b #No
+		ai_chance = {
+			factor = 0 }
+		add_stability = 0.1
+	}
+}
+
+country_event = {
+	id = LAKInvites.16  #Cree say yes
+	title = LAKInvites.16.t
+	desc = LAKInvites.16.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LAKInvites.14.a #Yes
+		add_political_power = 5
+		add_to_faction = REE
+		REE = {
+			add_to_war = { 
+				targeted_alliance = ROOT 
+				enemy = LOU
+				hostility_reason = asked_to_join
+			}
+		}
+	}
+}
+
+country_event = { #New England Takes advantage of the War situation
+	id = LAKNewengland.1 
+	title = LAKNewengland.1.t
+	desc = LAKNewengland.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+		tag = NEN
+		CHR = {
+			has_war_with = LOU
+		}
+	}
+		
+	fire_only_once = yes
+	
+	option = {
+		name = LAKNewengland.1.a #Yes
+		declare_war_on = {
+				target = CHR
+				type = liberate_wargoal
+			}
+		FRA = {
+			country_event = FRALouisiana.13 }
+		FRA = { complete_national_focus = FRA_newenglish_reinforcements }
+	}
+	option = {
+		name = LAKNewengland.1.b #No
+		add_stability = 0.1
+		add_political_power = 200
+		FRA = { complete_national_focus = FRA_stand_alone }
+	}
+}
+
+country_event = { #New England peace with Cherokee
+	id = LAKNewengland.2
+	title = LAKNewengland.2.t
+	desc = LAKNewengland.2.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+		tag = NEN
+		NEN = {
+			has_war_with = CHR
+		}
+		NEN = { controls_state = 368 }
+		has_global_flag = FRA_Lak_war
+	}
+		
+	fire_only_once = yes
+	
+	option = {
+		name = LAKNewengland.2.a #Good job lads
+		add_political_power = 100
+		add_stability = 0.05
+		add_war_support = 0.09
+		white_peace = CHR
+		white_peace = LAK
+		white_peace = REE
+		white_peace = CRW
+		white_peace = CHY
+		white_peace = SHW
+		white_peace = OSG
+		white_peace = CCH
+		white_peace = PWN
+		NEN = { transfer_state = 368}
+	}
+}

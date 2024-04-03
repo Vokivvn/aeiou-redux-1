@@ -1,0 +1,745 @@
+focus_tree = {
+	id = austria_eugen_lose_1
+
+	country = {
+		factor = 0
+	}
+
+	
+	continuous_focus_position = { x = 50 y = 2000 }
+
+
+
+
+
+
+
+	focus = { 
+		id = AUS_continue_proaustrian_propaganda
+		icon = GFX_
+		cost = 35
+	
+		x = 1
+		y = 1
+
+		completion_reward = {
+			country_event = Auseugen.157
+		}
+	}
+
+	focus = { 
+		id = AUS_death_to_spies
+		icon = GFX_
+		cost = 35
+	
+		x = 1
+		y = 1
+
+		relative_position_id = AUS_continue_proaustrian_propaganda
+		
+		prerequisite = {
+			focus = AUS_continue_proaustrian_propaganda
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = aus_idea_special_secret_forces
+				days = 360
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_bigger_the_better
+		icon = GFX_
+		cost = 35
+	
+		x = 1
+		y = 1
+
+		relative_position_id = AUS_death_to_spies
+		
+		prerequisite = {
+			focus = AUS_death_to_spies
+		}
+
+		completion_reward = {
+			add_ideas = { aus_idea_new_army_reforms }
+		}
+	}
+
+	focus = { 
+		id = AUS_pass_the_vereinigungsgesetz  # "act of unification", german and austrians shall be unified under one country
+		icon = GFX_
+		cost = 35
+	
+		x = 2
+		y = 1
+
+		relative_position_id = AUS_bigger_the_better
+		
+		prerequisite = {
+			focus = AUS_bigger_the_better
+		}
+		prerequisite = {
+			focus = AUS_focus_on_restoring_the_power
+		}
+
+		completion_reward = {
+			country_event = Auseugen.158
+		}
+	}
+
+
+
+
+
+	focus = { 
+		id = AUS_incompetence_of_the_commanders
+		icon = GFX_
+		cost = 35
+	
+		x = 4
+		y = 0
+
+		mutually_exclusive = {
+			focus = AUS_admission_of_guilt
+			focus = AUS_armys_fault
+		}
+
+		completion_reward = {
+			country_event = Auseugen.159
+			add_timed_idea = {
+				idea = aus_idea_enraged_generals_1
+				days = 200
+			}
+			swap_ideas = {
+			    remove_idea = aus_idea_fail_in_imperial_war_1
+			    add_idea = aus_idea_fail_in_imperial_war_2
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_limit_generals_privileges
+		icon = GFX_
+		cost = 35
+	
+		x = -1
+		y = 1
+
+		relative_position_id = AUS_incompetence_of_the_commanders
+		
+		prerequisite = {
+			focus = AUS_incompetence_of_the_commanders
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = aus_idea_limited_generals_privileges
+				days = 100
+			}
+			IF = {
+				LIMIT = { has_idea = aus_idea_fail_in_imperial_war_3 }
+				swap_ideas = {
+					remove_idea = aus_idea_fail_in_imperial_war_3
+					add_idea = aus_idea_fail_in_imperial_war_4
+				}
+			}
+			ELSE = {
+				swap_ideas = {
+					remove_idea = aus_idea_fail_in_imperial_war_2
+					add_idea = aus_idea_fail_in_imperial_war_3
+				}
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_decentralize_army_leadership
+		icon = GFX_
+		cost = 35
+	
+		x = 1
+		y = 1
+
+		relative_position_id = AUS_incompetence_of_the_commanders
+		
+		prerequisite = {
+			focus = AUS_incompetence_of_the_commanders
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = aus_idea_decentralized_army_leadership
+				days = 100
+			}
+			IF = {
+				LIMIT = { has_idea = aus_idea_fail_in_imperial_war_3 }
+				swap_ideas = {
+					remove_idea = aus_idea_fail_in_imperial_war_3
+					add_idea = aus_idea_fail_in_imperial_war_4
+				}
+			}
+			ELSE = {
+				swap_ideas = {
+					remove_idea = aus_idea_fail_in_imperial_war_2
+					add_idea = aus_idea_fail_in_imperial_war_3
+				}
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_absolve_the_guilty
+		icon = GFX_
+		cost = 35
+	
+		x = 1
+		y = 1
+
+		relative_position_id = AUS_limit_generals_privileges
+		
+		prerequisite = {
+			focus = AUS_limit_generals_privileges
+		}
+		prerequisite = {
+			focus = AUS_decentralize_army_leadership
+		}
+
+		completion_reward = {
+		country_event = Auseugen.162
+			swap_ideas = {
+				remove_idea = aus_idea_enraged_generals_1
+				add_idea = aus_idea_enraged_generals_2
+			}
+			swap_ideas = {
+				remove_idea = aus_idea_fail_in_imperial_war_4
+				add_idea = aus_idea_fail_in_imperial_war_5
+			}
+		}
+	}
+
+
+
+
+
+
+	focus = { 
+		id = AUS_admission_of_guilt
+		icon = GFX_
+		cost = 35
+	
+		x = 7
+		y = 0
+
+		mutually_exclusive = {
+			focus = AUS_incompetence_of_the_commanders
+			focus = AUS_armys_fault
+		}
+		completion_reward = {
+			country_event = Auseugen.160
+			add_timed_idea = {
+				idea = aus_idea_reduced_emperors_power_1
+				days = 200
+			}
+			swap_ideas = {
+				remove_idea = aus_idea_fail_in_imperial_war_1
+				add_idea = aus_idea_fail_in_imperial_war_2
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_forgive_me_father
+		icon = GFX_
+		cost = 35
+	
+		x = 0
+		y = 1
+
+		relative_position_id = AUS_admission_of_guilt
+		
+		prerequisite = {
+			focus = AUS_admission_of_guilt
+		}
+
+		completion_reward = {
+			country_event = Auseugen.163
+			swap_ideas = {
+				remove_idea = aus_idea_reduced_emperors_power_1
+				add_idea = aus_idea_reduced_emperors_power_2
+			}
+			swap_ideas = {
+				remove_idea = aus_idea_fail_in_imperial_war_2
+				add_idea = aus_idea_fail_in_imperial_war_3
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_privileges_as_a_recompense
+		icon = GFX_
+		cost = 35
+	
+		x = -1
+		y = 1
+
+		relative_position_id = AUS_forgive_me_father
+		
+		prerequisite = {
+			focus = AUS_forgive_me_father
+		}
+
+		completion_reward = {
+			add_stability = 0.02
+			add_political_power = -60
+			IF = {
+				LIMIT = {
+					has_idea = aus_idea_fail_in_imperial_war_4
+				}
+				swap_ideas = {
+					remove_idea = aus_idea_fail_in_imperial_war_4
+					add_idea = aus_idea_fail_in_imperial_war_5
+				}
+			}
+			ELSE = {	
+				swap_ideas = {
+					remove_idea = aus_idea_fail_in_imperial_war_3
+					add_idea = aus_idea_fail_in_imperial_war_4
+				}
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_better_army_conditions
+		icon = GFX_
+		cost = 35
+	
+		x = 1
+		y = 1
+
+		relative_position_id = AUS_forgive_me_father
+		
+		prerequisite = {
+			focus = AUS_forgive_me_father
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = aus_idea_better_army_condtions
+				days = 100
+			}
+			IF = {
+				LIMIT = {
+					has_idea = aus_idea_fail_in_imperial_war_4
+				}
+				swap_ideas = {
+					remove_idea = aus_idea_fail_in_imperial_war_4
+					add_idea = aus_idea_fail_in_imperial_war_5
+				}
+			}
+			ELSE = {	
+				swap_ideas = {
+					remove_idea = aus_idea_fail_in_imperial_war_3
+					add_idea = aus_idea_fail_in_imperial_war_4
+				}
+			}
+		}
+	}
+
+
+
+
+
+
+	focus = { 
+		id = AUS_armys_fault
+		icon = GFX_
+		cost = 35
+	
+		x = 10
+		y = 0
+
+		mutually_exclusive = {
+			focus = AUS_incompetence_of_the_commanders
+			focus = AUS_admission_of_guilt
+		}
+
+		completion_reward = {
+			country_event = Auseugen.161
+			add_timed_idea = {
+				idea = aus_idea_frequent_desertions
+				days = 200
+			}
+			swap_ideas = {
+				remove_idea = aus_idea_fail_in_imperial_war_1
+				add_idea = aus_idea_fail_in_imperial_war_2
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_greater_training_difficulty
+		icon = GFX_
+		cost = 35
+	
+		x = -1
+		y = 1
+
+		relative_position_id = AUS_armys_fault
+		
+		prerequisite = {
+			focus = AUS_armys_fault
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = aus_idea_greater_training_difficulty
+				days = 100
+			}
+			IF = {
+				LIMIT = { has_idea = aus_idea_fail_in_imperial_war_3 }
+				swap_ideas = {
+					remove_idea = aus_idea_fail_in_imperial_war_3
+					add_idea = aus_idea_fail_in_imperial_war_4
+				}
+			}
+			ELSE = {
+				swap_ideas = {
+					remove_idea = aus_idea_fail_in_imperial_war_2
+					add_idea = aus_idea_fail_in_imperial_war_3
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_control_armys_loyalty
+		icon = GFX_
+		cost = 35
+	
+		x = 1
+		y = 1
+
+		relative_position_id = AUS_armys_fault
+		
+		prerequisite = {
+			focus = AUS_armys_fault
+		}
+
+		completion_reward = {
+			country_event = Auseugen.164
+			swap_ideas = {
+				remove_idea = aus_idea_frequent_desertions
+				add_idea = aus_idea_violent_mutinies_in_army
+			}
+			IF = {
+				LIMIT = { has_idea = aus_idea_fail_in_imperial_war_3 }
+				swap_ideas = {
+					remove_idea = aus_idea_fail_in_imperial_war_3
+					add_idea = aus_idea_fail_in_imperial_war_4
+				}
+			}
+			ELSE = {
+				swap_ideas = {
+					remove_idea = aus_idea_fail_in_imperial_war_2
+					add_idea = aus_idea_fail_in_imperial_war_3
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_rifles_from_reserves
+		icon = GFX_
+		cost = 35
+	
+		x = 1
+		y = 1
+
+		relative_position_id = AUS_greater_training_difficulty
+		
+		prerequisite = {
+			focus = AUS_greater_training_difficulty
+		}
+		prerequisite = {
+			focus = AUS_control_armys_loyalty
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = musket_equipment_1
+				amount = 1400
+				producer = AUS
+			}
+			add_equipment_to_stockpile = {
+				type = melee_equipment_1
+				amount = 900
+				producer = AUS
+			}
+			swap_ideas = {
+				remove_idea = aus_idea_fail_in_imperial_war_4
+				add_idea = aus_idea_fail_in_imperial_war_5
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+	focus = { 
+		id = AUS_focus_on_restoring_the_power
+		icon = GFX_
+		cost = 35
+	
+		x = 1
+		y = 1
+
+		relative_position_id = AUS_privileges_as_a_recompense
+
+		prerequisite = {
+			focus = AUS_absolve_the_guilty
+			focus = AUS_privileges_as_a_recompense
+			focus = AUS_better_army_conditions
+			focus = AUS_rifles_from_reserves
+		}
+
+		available = {
+			OR = {
+				has_completed_focus = AUS_absolve_the_guilty
+				AND = {
+					has_completed_focus = AUS_privileges_as_a_recompense
+					has_completed_focus = AUS_better_army_conditions
+				}
+				has_completed_focus = AUS_rifles_from_reserves
+			}
+		}
+
+		completion_reward = {
+			country_event = Auseugen.165
+		}
+	}
+
+
+
+
+
+
+
+
+
+	focus = { 
+		id = AUS_listen_to_new_architects
+		icon = GFX_
+		cost = 35
+	
+		x = 13
+		y = 1
+
+		completion_reward = {
+			add_tech_bonus = {
+			    bonus = 0.5
+			    uses = 1
+			    category = industry
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_rebuild_the_villages_from_the_ashes
+		icon = GFX_
+		cost = 35
+	
+		x = -1
+		y = 1
+
+		relative_position_id = AUS_listen_to_new_architects
+		
+		prerequisite = {
+			focus = AUS_listen_to_new_architects
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				LIMIT = {
+					OR = {
+						state = 931
+						state = 153
+						state = 932
+						state = 935
+						state = 152
+						state = 69
+						state = 9
+						state = 66
+					}
+					infrastructure < 8
+				}
+				add_building_construction = {
+				    type = infrastructure
+				    level = 1
+				    instant_build = yes
+				}
+			}
+			random_owned_state = {
+				LIMIT = {
+					OR = {
+						state = 931
+						state = 153
+						state = 932
+						state = 935
+						state = 152
+						state = 69
+						state = 9
+						state = 66
+					}
+					infrastructure < 8					
+				}
+				add_building_construction = {
+				    type = infrastructure
+				    level = 1
+				    instant_build = yes
+				}
+			}
+			random_owned_state = {
+				LIMIT = {
+					OR = {
+						state = 931
+						state = 153
+						state = 932
+						state = 935
+						state = 152
+						state = 69
+						state = 9
+						state = 66
+					}
+					infrastructure < 8					
+				}
+				add_building_construction = {
+				    type = infrastructure
+				    level = 1
+				    instant_build = yes
+				}
+			}
+			random_owned_state = {
+				LIMIT = {
+					OR = {
+						state = 931
+						state = 153
+						state = 932
+						state = 935
+						state = 152
+						state = 69
+						state = 9
+						state = 66
+					}
+					infrastructure < 8					
+				}
+				add_building_construction = {
+				    type = infrastructure
+				    level = 1
+				    instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_austria_above_all
+		icon = GFX_
+		cost = 35
+	
+		x = -1
+		y = 1
+
+		relative_position_id = AUS_rebuild_the_villages_from_the_ashes
+		
+		prerequisite = {
+			focus = AUS_rebuild_the_villages_from_the_ashes
+		}
+
+		completion_reward = {
+			add_ideas = {
+				aus_idea_osterreich_uber_alles
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_military_fanaticism
+		icon = GFX_
+		cost = 35
+	
+		x = -2
+		y = 1
+
+		relative_position_id = AUS_austria_above_all
+		
+		prerequisite = {
+			focus = AUS_focus_on_restoring_the_power
+		}
+		prerequisite = {
+			focus = AUS_austria_above_all
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = aus_idea_osterreich_uber_alles
+				add_idea = aus_idea_military_fanaticism
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	focus = { 
+		id = AUS_back_to_normal
+		icon = GFX_
+		cost = 35
+	
+		x = 2
+		y = 1
+
+		relative_position_id = AUS_pass_the_vereinigungsgesetz
+		
+		prerequisite = {
+			focus = AUS_pass_the_vereinigungsgesetz
+		}
+		prerequisite = {
+			focus = AUS_military_fanaticism
+		}
+
+		completion_reward = {
+			country_event = Auseugen.166
+			remove_ideas = { aus_idea_fail_in_imperial_war_5 }
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+}

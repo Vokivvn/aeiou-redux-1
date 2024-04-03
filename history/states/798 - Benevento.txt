@@ -1,0 +1,27 @@
+
+state={
+	id=798
+	name="STATE_798" 
+	manpower = 1022400
+	
+	state_category = large_town
+	resources={
+		wood=3
+	}
+
+	history={
+		owner = NAP
+		buildings = {
+			6831 = {
+				naval_base = 1
+			}
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = NAP 
+	}
+
+	provinces={
+		3966 3923 6831 963 11882 3910 
+	}
+}

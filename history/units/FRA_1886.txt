@@ -1,0 +1,203 @@
+﻿division_template = {
+	name = "Royal French Garrison Battalion"
+
+	division_names_group = FRA_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+		line_infantry = { x = 0 y = 4 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+		line_infantry = { x = 1 y = 2 }
+		line_infantry = { x = 1 y = 3 }
+		line_infantry = { x = 1 y = 4 }
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "French Colonial Garrison"
+
+	division_names_group = FRA_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+		line_infantry = { x = 0 y = 4 }
+	}
+	priority = 0
+}
+
+division_template = {
+	name = "Royal French Cavalry Division"
+
+	division_names_group = FRA_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 0 y = 2 }
+		medium_cavalry = { x = 0 y = 3 }
+		medium_cavalry = { x = 0 y = 4 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+		medium_cavalry = { x = 1 y = 2 }
+		medium_cavalry = { x = 1 y = 3 }
+		medium_cavalry = { x = 1 y = 4 }
+	}
+	priority = 1
+}
+division_template = {
+	name = "Royal French Knight Brigade"
+
+	division_names_group = FRA_ARM_01
+
+	regiments = {
+        line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }  
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+division_template = {
+	name = "Unorganized French Crusader Group"
+
+	division_names_group = FRA_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 0 y = 2 }
+		melee_battalion = { x = 0 y = 3 }
+	}
+	priority = 0
+}
+
+units = {
+	division = {
+		name = "1st Royal French Garrison Battalion"
+		location = 11506
+		division_template = "Royal French Garrison Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal French Garrison Battalion"
+		location = 3552
+		division_template = "Royal French Garrison Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3rd Royal French Garrison Battalion"
+		location = 9737
+		division_template = "Royal French Garrison Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4th Royal French Garrison Battalion"
+		location = 11697
+		division_template = "Royal French Garrison Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "5th Royal French Garrison Battalion"
+		location = 6766
+		division_template = "Royal French Garrison Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "6th Royal French Garrison Battalion"
+		location = 9898
+		division_template = "Royal French Garrison Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "7th Royal French Garrison Battalion"
+		location = 9898
+		division_template = "Royal French Garrison Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "8th Royal French Garrison Battalion"
+		location = 9898
+		division_template = "Royal French Garrison Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "9th Royal French Garrison Battalion"
+		location = 9898
+		division_template = "Royal French Garrison Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "10th Royal French Garrison Battalion"
+		location = 9898
+		division_template = "Royal French Garrison Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "11th Royal French Garrison Battalion"
+		location = 9898
+		division_template = "Royal French Garrison Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal French Cavalry Division"
+		location = 11732
+		division_template = "Royal French Cavalry Division"
+		start_experience_factor = 0.3
+	}
+		division = {
+		name = "2nd Royal French Cavalry Division"
+		location = 11463
+		division_template = "Royal French Cavalry Division"
+		start_experience_factor = 0.3
+	}
+		division = {
+		name = "3rd Royal French Cavalry Division"
+		location = 655
+		division_template = "Royal French Cavalry Division"
+		start_experience_factor = 0.3
+	}
+		division = {
+		name = "4th Royal French Cavalry Division"
+		location = 752
+		division_template = "Royal French Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st French Colonial Garrison"
+		location = 7340
+		division_template = "French Colonial Garrison"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd French Colonial Garrison"
+		location = 4245
+		division_template = "French Colonial Garrison"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3rd French Colonial Garrison"
+		location = 10116
+		division_template = "French Colonial Garrison"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4th French Colonial Garrison"
+		location = 7081
+		division_template = "French Colonial Garrison"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "5th French Colonial Garrison"
+		location = 1145
+		division_template = "French Colonial Garrison"
+		start_experience_factor = 0.3
+	}
+}

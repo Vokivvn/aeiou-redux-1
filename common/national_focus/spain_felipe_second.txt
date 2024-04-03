@@ -1,0 +1,212 @@
+
+focus_tree = {
+	id = Spain_felipe_second
+	
+	country = {
+		factor = 0
+	}
+	default = no
+	continuous_focus_position = { x = 50 y = 2000 }
+
+
+	###########
+	#  Start  #
+	###########
+	
+	focus = { 
+		id = SPR_patria_et_christus
+		icon = GFX_SPR_catholic_teaching
+		cost = 50
+	
+		x = 7
+		y = 0
+		
+		completion_reward = {
+			add_political_power = 100
+			set_temp_variable = { catholic_increase = 0.03 }
+			custom_effect_tooltip = SPR_CATHOLIC_INCREASE_TOOLTIP
+			add_to_variable = { spr_var_catholic_influence = catholic_increase }
+			country_event = SPREarlyfelipe.12
+			hidden_effect = {
+				remove_ideas = spr_idea_foreign_personel
+			}
+		}
+	}
+	focus = { 
+		id = SPR_reversed_expectations
+		icon = GFX_SPR_reversed_economy
+		cost = 35
+	
+		prerequisite = { focus = SPR_patria_et_christus }
+		relative_position_id = SPR_patria_et_christus
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_ideas = spr_idea_religious_tension
+		}
+	}
+	focus = { 
+		id = SPR_assure_the_clericy
+		icon = GFX_SPR_assure_the_clericy
+		cost = 35
+	
+		prerequisite = { focus = SPR_patria_et_christus }
+		relative_position_id = SPR_patria_et_christus
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			set_temp_variable = { catholic_increase = 0.02 }
+			custom_effect_tooltip = SPR_CATHOLIC_INCREASE_TOOLTIP
+			add_to_variable = { spr_var_catholic_influence = catholic_increase }
+			country_event = SPREarlyfelipe.13
+		}
+	}
+	focus = { 
+		id = SPR_meeting_the_challengers
+		icon = GFX_SPR_meeting_the_challengers
+		cost = 40
+	
+		prerequisite = { focus = SPR_reversed_expectations }
+		prerequisite = { focus = SPR_assure_the_clericy }
+		relative_position_id = SPR_reversed_expectations
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			country_event = SPREarlyfelipe.16
+		}
+	}
+	focus = { 
+		id = SPR_isolated_from_nobles
+		icon = GFX_focus_rom_abdicate
+		cost = 20
+	
+		prerequisite = { focus = SPR_meeting_the_challengers }
+		relative_position_id = SPR_meeting_the_challengers
+	
+		x = -2
+		y = 1
+		
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = -10
+		}
+	}
+	focus = { 
+		id = SPR_treacherous_waters
+		icon = GFX_SPR_treacherous_waters
+		cost = 40
+	
+		prerequisite = { focus = SPR_isolated_from_nobles }
+		prerequisite = { focus = SPR_alienated_peasants focus = SPR_silent_court }
+		relative_position_id = SPR_isolated_from_nobles
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = spr_idea_religious_tension1
+				remove_idea = spr_idea_religious_tension
+			}
+		}
+	}
+	focus = { 
+		id = SPR_silent_court
+		icon = GFX_SPR_silent_court
+		cost = 20
+	
+		prerequisite = { focus = SPR_meeting_the_challengers }
+		relative_position_id = SPR_meeting_the_challengers
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = -10
+		}
+	}
+	focus = { 
+		id = SPR_alienated_peasants
+		icon = GFX_SPR_alienated_peasants
+		cost = 20
+	
+		prerequisite = { focus = SPR_meeting_the_challengers }
+		relative_position_id = SPR_meeting_the_challengers
+	
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = -10
+		}
+	}
+	focus = { 
+		id = SPR_popular_outcry
+		icon = GFX_SPR_Peasant_Rebellion
+		cost = 20
+	
+		prerequisite = { focus = SPR_alienated_peasants }
+		prerequisite = { focus = SPR_silent_court focus = SPR_isolated_from_nobles }
+		relative_position_id = SPR_alienated_peasants
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_war_support = -0.05
+			add_political_power = -10
+		}
+	}
+	focus = { 
+		id = SPR_anti_clerical_terrorism
+		icon = GFX_SPR_anticlerical_terrorism
+		cost = 40
+	
+		prerequisite = { focus =  SPR_silent_court }
+		prerequisite = { focus =  SPR_popular_outcry }
+		prerequisite = { focus =  SPR_treacherous_waters }
+		relative_position_id = SPR_silent_court
+	
+		x = 0
+		y = 2
+		
+		completion_reward = {
+		 country_event = SPREarlyfelipe.14
+			swap_ideas = {
+				add_idea = spr_idea_anti_clerical_terrorism
+				remove_idea = spr_idea_religious_tension1
+			}
+			set_temp_variable = { catholic_increase = -0.10 }
+			custom_effect_tooltip = SPR_CATHOLIC_INCREASE_TOOLTIP
+			add_to_variable = { spr_var_catholic_influence = catholic_increase }
+		}
+	}
+	focus = { 
+		id = SPR_felipe_demise
+		icon = GFX_SPR_felipes_demise
+		cost = 45
+	
+		prerequisite = { focus =  SPR_anti_clerical_terrorism }
+		relative_position_id = SPR_anti_clerical_terrorism
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			custom_effect_tooltip = SPR_MYSTERY_FOCUS_TOOLTIP
+			set_temp_variable = { catholic_increase = -0.03 }
+			custom_effect_tooltip = SPR_CATHOLIC_INCREASE_TOOLTIP
+			add_to_variable = { spr_var_catholic_influence = catholic_increase }
+			country_event = SPREarlyfelipe.15
+		}
+	}
+	
+}

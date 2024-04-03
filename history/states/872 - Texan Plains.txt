@@ -1,0 +1,24 @@
+state={
+	id=872
+	name="STATE_872"
+	
+	resources={
+		fabric=1
+		horses=3
+	}
+    
+	history={
+		owner = CCH
+		add_core_of = CCH
+		buildings = {
+			infrastructure = 3
+		}
+	}
+
+	provinces={
+       9773 12301 1915 12875 1998 12720
+	}
+	manpower = 8913
+	buildings_max_level_factor = 1.000
+	state_category = pastoral
+}

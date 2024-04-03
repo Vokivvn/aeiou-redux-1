@@ -1,0 +1,864 @@
+
+
+
+ ###   #   #   ####      #   #  #####   ####  #   #
+#   #  #   #  #          ## ##  #      #      #   #
+#####  #   #   ###       # # #  ###    #      #####
+#   #  #   #      #      #   #  #      #      #   #
+#   #   ###   ####       #   #  #####   ####  #   #
+
+
+
+
+
+##################################
+##### Rudolf's Opinion Mechs #####
+##################################
+
+
+
+AUS_nobles_add = {
+	randomize_temp_variable = {
+		var = temp_nob_rand
+		distribution = binomial
+		min = 0.020
+		max = 0.040
+	}
+
+	add_to_variable = { aus_var_habsburg_nobility = temp_nob_rand }
+
+	clamp_variable = {
+	    var = aus_var_habsburg_nobility
+	    min = 0
+	    max = 1
+	}	
+
+	randomize_temp_variable = {
+		var = temp_nob_rand
+		distribution = binomial
+		min = 0.020
+		max = 0.040
+	}
+
+	add_to_variable = { aus_var_major_nobility = temp_nob_rand }
+
+	clamp_variable = {
+	    var = aus_var_major_nobility
+	    min = 0
+	    max = 1
+	}	
+
+	randomize_temp_variable = {
+		var = temp_nob_rand
+		distribution = binomial
+		min = 0.020
+		max = 0.040
+	}
+
+	add_to_variable = { aus_var_minor_nobility = temp_nob_rand }
+
+	clamp_variable = {
+	    var = aus_var_minor_nobility
+	    min = 0
+	    max = 1
+	}	
+
+	custom_effect_tooltip = aus_nobles_add_tt
+}
+
+
+AUS_nobles_remove = {
+	randomize_temp_variable = {
+		var = temp_nob_rand
+		distribution = binomial
+		min = -0.060
+		max = -0.040
+	}
+
+	add_to_variable = { aus_var_habsburg_nobility = temp_nob_rand }
+
+	clamp_variable = {
+	    var = aus_var_habsburg_nobility
+	    min = 0
+	    max = 1
+	}	
+
+	randomize_temp_variable = {
+		var = temp_nob_rand
+		distribution = binomial
+		min = -0.060
+		max = -0.040
+	}
+
+	add_to_variable = { aus_var_major_nobility = temp_nob_rand }
+
+	clamp_variable = {
+	    var = aus_var_major_nobility
+	    min = 0
+	    max = 1
+	}	
+
+	randomize_temp_variable = {
+		var = temp_nob_rand
+		distribution = binomial
+		min = -0.060
+		max = -0.040
+	}
+
+	add_to_variable = { aus_var_minor_nobility = temp_nob_rand }
+
+	clamp_variable = {
+	    var = aus_var_minor_nobility
+	    min = 0
+	    max = 1
+	}	
+
+	custom_effect_tooltip = aus_nobles_remove_tt
+}
+
+
+
+AUS_nobles_hab_add = {
+	randomize_temp_variable = {
+		var = temp_hab_nob_rand
+		distribution = binomial
+		min = 0.040
+		max = 0.070
+	}
+
+	add_to_variable = { aus_var_habsburg_nobility = temp_hab_nob_rand }
+
+	clamp_variable = {
+	    var = aus_var_habsburg_nobility
+	    min = 0
+	    max = 1
+	}	
+
+	custom_effect_tooltip = aus_nobles_hab_add_tt
+}
+AUS_nobles_hab_remove = {
+	randomize_temp_variable = {
+		var = temp_hab_nob_rand
+		distribution = binomial
+		min = -0.080
+		max = -0.050
+	}
+
+	add_to_variable = { aus_var_habsburg_nobility = temp_hab_nob_rand }
+
+	clamp_variable = {
+	    var = aus_var_habsburg_nobility
+	    min = 0
+	    max = 1
+	}	
+
+	custom_effect_tooltip = aus_nobles_hab_remove_tt
+}
+
+
+
+
+AUS_nobles_maj_add = {
+	randomize_temp_variable = {
+		var = temp_maj_nob_rand
+		distribution = binomial
+		min = 0.040
+		max = 0.070
+	}
+
+	add_to_variable = { aus_var_major_nobility = temp_maj_nob_rand }
+
+	clamp_variable = {
+	    var = aus_var_major_nobility
+	    min = 0
+	    max = 1
+	}	
+
+	custom_effect_tooltip = aus_nobles_maj_add_tt
+}
+AUS_nobles_maj_remove = {
+	randomize_temp_variable = {
+		var = temp_maj_nob_rand
+		distribution = binomial
+		min = -0.080
+		max = -0.050
+	}
+
+	add_to_variable = { aus_var_major_nobility = temp_maj_nob_rand }
+
+	clamp_variable = {
+	    var = aus_var_major_nobility
+	    min = 0
+	    max = 1
+	}	
+
+	custom_effect_tooltip = aus_nobles_maj_remove_tt
+}
+
+
+
+
+AUS_nobles_min_add = {
+	randomize_temp_variable = {
+		var = temp_min_nob_rand
+		distribution = binomial
+		min = 0.040
+		max = 0.070
+	}
+
+	add_to_variable = { aus_var_minor_nobility = temp_min_nob_rand }
+
+	clamp_variable = {
+	    var = aus_var_minor_nobility
+	    min = 0
+	    max = 1
+	}	
+
+	custom_effect_tooltip = aus_nobles_min_add_tt
+}
+AUS_nobles_min_remove = {
+	randomize_temp_variable = {
+		var = temp_min_nob_rand
+		distribution = binomial
+		min = -0.080
+		max = -0.050
+	}
+
+	add_to_variable = { aus_var_minor_nobility = temp_min_nob_rand }
+
+	clamp_variable = {
+	    var = aus_var_minor_nobility
+	    min = 0
+	    max = 1
+	}	
+
+	custom_effect_tooltip = aus_nobles_min_remove_tt
+}
+
+
+
+
+
+
+
+
+AUS_clergy_add = {
+	randomize_temp_variable = {
+		var = temp_clergy_rand
+		distribution = binomial
+		min = 0.040
+		max = 0.070
+	}
+
+	add_to_variable = { aus_var_clergy = temp_clergy_rand }
+
+	clamp_variable = {
+	    var = aus_var_clergy
+	    min = 0
+	    max = 1
+	}	
+
+	custom_effect_tooltip = aus_clergy_add_tt
+}
+AUS_clergy_remove = {
+	randomize_temp_variable = {
+		var = temp_clergy_rand
+		distribution = binomial
+		min = -0.080
+		max = -0.050
+	}
+
+	add_to_variable = { aus_var_clergy = temp_clergy_rand }
+
+	clamp_variable = {
+	    var = aus_var_clergy
+	    min = 0
+	    max = 1
+	}	
+
+	custom_effect_tooltip = aus_clergy_remove_tt
+}
+
+
+
+
+
+
+
+
+AUS_people_add = {
+	randomize_temp_variable = {
+		var = temp_people_rand
+		distribution = binomial
+		min = 0.040
+		max = 0.070
+	}
+
+	add_to_variable = { aus_var_people = temp_people_rand }
+
+	clamp_variable = {
+	    var = aus_var_people
+	    min = 0
+	    max = 1
+	}	
+
+	custom_effect_tooltip = aus_people_add_tt
+}
+AUS_people_remove = {
+	randomize_temp_variable = {
+		var = temp_people_rand
+		distribution = binomial
+		min = -0.080
+		max = -0.050
+	}
+
+	add_to_variable = { aus_var_people = temp_people_rand }
+
+	clamp_variable = {
+	    var = aus_var_people
+	    min = 0
+	    max = 1
+	}	
+
+	custom_effect_tooltip = aus_people_remove_tt
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###########################
+##### Eugen Army Mech #####
+###########################
+
+
+
+
+
+
+
+
+
+
+AUS_sol_slightly_displease_se = {
+	randomize_temp_variable = {
+		var = temp_sol_rand
+		distribution = uniform
+		min = -0.020
+		max = 0
+	}
+
+	add_to_variable = { aus_var_soldiers_support = temp_sol_rand }
+	set_temp_variable = { temp_sol_rand = 0 }
+
+	clamp_variable = {
+	    var = aus_var_soldiers_support
+	    min = 0
+	    max = 1
+	}	
+
+	custom_effect_tooltip = aus_sol_slightly_displease
+}
+
+AUS_sol_moderately_displease_se = {
+	randomize_temp_variable = {
+		var = temp_sol_rand
+		distribution = uniform
+		min = -0.040
+		max = -0.020
+	}
+
+	add_to_variable = { aus_var_soldiers_support = temp_sol_rand }
+	set_temp_variable = { temp_sol_rand = 0 }
+
+	clamp_variable = {
+	    var = aus_var_soldiers_support
+	    min = 0
+	    max = 1
+	}	
+
+	custom_effect_tooltip = aus_sol_moderately_displease
+}
+
+AUS_sol_highly_displease_se = {
+	randomize_temp_variable = {
+		var = temp_sol_rand
+		distribution = uniform
+		min = -0.08
+		max = -0.05
+	}
+
+	add_to_variable = { aus_var_soldiers_support = temp_sol_rand }
+	set_temp_variable = { temp_sol_rand = 0 }
+
+	clamp_variable = {
+	    var = aus_var_soldiers_support
+	    min = 0
+	    max = 1
+	}	
+
+	custom_effect_tooltip = aus_sol_highly_displease
+}
+
+# # # # #
+
+AUS_sol_slightly_appease_se = {
+	randomize_temp_variable = {
+		var = temp_sol_rand
+		distribution = uniform
+		min = 0
+		max = 0.020
+	}
+
+	add_to_variable = { aus_var_soldiers_support = temp_sol_rand }
+	set_temp_variable = { temp_sol_rand = 0 }
+
+	clamp_variable = {
+	    var = aus_var_soldiers_support
+	    min = 0
+	    max = 1
+	}	
+
+	custom_effect_tooltip = aus_sol_slightly_appease
+}
+
+AUS_sol_moderately_appease_se = {
+	randomize_temp_variable = {
+		var = temp_sol_rand
+		distribution = uniform
+		min = 0.040
+		max = 0.070
+	}
+
+	add_to_variable = { aus_var_soldiers_support = temp_sol_rand }
+	set_temp_variable = { temp_sol_rand = 0 }
+
+	clamp_variable = {
+	    var = aus_var_soldiers_support
+	    min = 0
+	    max = 1
+	}	
+
+	custom_effect_tooltip = aus_sol_moderately_appease
+}
+
+AUS_sol_highly_appease_se = {
+	randomize_temp_variable = {
+		var = temp_sol_rand
+		distribution = uniform
+		min = 0.05
+		max = 0.08
+	}
+
+	add_to_variable = { aus_var_soldiers_support = temp_sol_rand }
+	set_temp_variable = { temp_sol_rand = 0 }
+
+	clamp_variable = {
+	    var = aus_var_soldiers_support
+	    min = 0
+	    max = 1
+	}	
+
+	custom_effect_tooltip = aus_sol_highly_appease
+}
+
+
+# # # # # # # # # # # # #
+ # # # # # # # # # # # #
+# # # # # # # # # # # # #
+
+
+AUS_gen_slightly_displease_se = {
+	randomize_temp_variable = {
+		var = temp_gen_rand
+		distribution = uniform
+		min = -0.020
+		max = 0
+	}
+
+	add_to_variable = { aus_var_loyalty_of_generals = temp_gen_rand }
+	set_temp_variable = { temp_gen_rand = 0 }
+
+	clamp_variable = {
+	    var = aus_var_loyalty_of_generals
+	    min = 0
+	    max = 1
+	}	
+
+	custom_effect_tooltip = aus_gen_slightly_displease
+}
+
+AUS_gen_moderately_displease_se = {
+	randomize_temp_variable = {
+		var = temp_gen_rand
+		distribution = uniform
+		min = -0.040
+		max = -0.020
+	}
+
+	add_to_variable = { aus_var_loyalty_of_generals = temp_gen_rand }
+	set_temp_variable = { temp_gen_rand = 0 }
+
+	clamp_variable = {
+	    var = aus_var_loyalty_of_generals
+	    min = 0
+	    max = 1
+	}	
+
+	custom_effect_tooltip = aus_gen_moderately_displease
+}
+
+AUS_gen_highly_displease_se = {
+	randomize_temp_variable = {
+		var = temp_gen_rand
+		distribution = uniform
+		min = -0.08
+		max = -0.05
+	}
+
+	add_to_variable = { aus_var_loyalty_of_generals = temp_gen_rand }
+	set_temp_variable = { temp_gen_rand = 0 }
+
+	clamp_variable = {
+	    var = aus_var_loyalty_of_generals
+	    min = 0
+	    max = 1
+	}	
+
+	custom_effect_tooltip = aus_gen_highly_displease
+}
+
+# # # # #
+
+AUS_gen_slightly_appease_se = {
+	randomize_temp_variable = {
+		var = temp_gen_rand
+		distribution = uniform
+		min = 0
+		max = 0.020
+	}
+
+	add_to_variable = { aus_var_loyalty_of_generals = temp_gen_rand }
+	set_temp_variable = { temp_gen_rand = 0 }
+
+	clamp_variable = {
+	    var = aus_var_loyalty_of_generals
+	    min = 0
+	    max = 1
+	}	
+
+	custom_effect_tooltip = aus_gen_slightly_appease
+}
+
+AUS_gen_moderately_appease_se = {
+	randomize_temp_variable = {
+		var = temp_gen_rand
+		distribution = uniform
+		min = 0.040
+		max = 0.070
+	}
+
+	add_to_variable = { aus_var_loyalty_of_generals = temp_gen_rand }
+	set_temp_variable = { temp_gen_rand = 0 }
+
+	clamp_variable = {
+	    var = aus_var_loyalty_of_generals
+	    min = 0
+	    max = 1
+	}	
+
+	custom_effect_tooltip = aus_gen_moderately_appease
+}
+
+AUS_gen_highly_appease_se = {
+	randomize_temp_variable = {
+		var = temp_gen_rand
+		distribution = uniform
+		min = 0.05
+		max = 0.08
+	}
+
+	add_to_variable = { aus_var_loyalty_of_generals = temp_gen_rand }
+	set_temp_variable = { temp_gen_rand = 0 }
+
+	clamp_variable = {
+	    var = aus_var_loyalty_of_generals
+	    min = 0
+	    max = 1
+	}	
+
+	custom_effect_tooltip = aus_gen_highly_appease
+}
+
+
+
+
+
+###########################################################################################
+###########################################################################################
+###########################################################################################
+###########################################################################################
+###########################################################################################
+###########################################################################################
+###########################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###################### HRE WARS ######################
+
+
+AUS_hre_reports = {
+	random_country = {
+		set_country_flag = hre_reported
+		LIMIT = {
+			is_puppet = no
+			NOT = {
+				tag = AUS
+			}
+			OR = {
+				has_idea = hre_idea_prince
+				has_idea = hre_idea_elector
+				has_idea = hre_idea_conservative
+				has_idea = hre_idea_republic
+			}
+		}
+		country_event = {
+			id = Auseugen.172
+			days = 5
+			random = 240
+		}
+	}
+	random_country = {
+		set_country_flag = hre_reported
+		LIMIT = {
+			is_puppet = no
+			NOT = {
+				has_country_flag = hre_reported
+				tag = AUS
+			}
+			OR = {
+				has_idea = hre_idea_prince
+				has_idea = hre_idea_elector
+				has_idea = hre_idea_conservative
+				has_idea = hre_idea_republic
+			}
+		}
+		country_event = {
+			id = Auseugen.172
+			days = 5
+			random = 240
+		}
+	}
+	random_country = {
+		set_country_flag = hre_reported
+		LIMIT = {
+			is_puppet = no
+			NOT = {
+				has_country_flag = hre_reported
+				tag = AUS
+			}
+			OR = {
+				has_idea = hre_idea_prince
+				has_idea = hre_idea_elector
+				has_idea = hre_idea_conservative
+				has_idea = hre_idea_republic
+			}
+		}
+		country_event = {
+			id = Auseugen.172
+			days = 5
+			random = 240
+		}
+	}
+	random_country = {
+		set_country_flag = hre_reported
+		LIMIT = {
+			is_puppet = no
+			NOT = {
+				has_country_flag = hre_reported
+				tag = AUS
+			}
+			OR = {
+				has_idea = hre_idea_prince
+				has_idea = hre_idea_elector
+				has_idea = hre_idea_conservative
+				has_idea = hre_idea_republic
+			}
+		}
+		country_event = {
+			id = Auseugen.172
+			days = 5
+			random = 240
+		}
+	}
+	random_country = {
+		set_country_flag = hre_reported
+		LIMIT = {
+			is_puppet = no
+			NOT = {
+				has_country_flag = hre_reported
+				tag = AUS
+			}
+			OR = {
+				has_idea = hre_idea_prince
+				has_idea = hre_idea_elector
+				has_idea = hre_idea_conservative
+				has_idea = hre_idea_republic
+			}
+		}
+		country_event = {
+			id = Auseugen.172
+			days = 5
+			random = 240
+		}
+	}
+	random_country = {
+		set_country_flag = hre_reported
+		LIMIT = {
+			is_puppet = no
+			NOT = {
+				has_country_flag = hre_reported
+				tag = AUS
+			}
+			OR = {
+				has_idea = hre_idea_prince
+				has_idea = hre_idea_elector
+				has_idea = hre_idea_conservative
+				has_idea = hre_idea_republic
+			}
+		}
+		country_event = {
+			id = Auseugen.172
+			days = 5
+			random = 240
+		}
+	}
+	random_country = {
+		set_country_flag = hre_reported
+		LIMIT = {
+			is_puppet = no
+			NOT = {
+				has_country_flag = hre_reported
+				tag = AUS
+			}
+			OR = {
+				has_idea = hre_idea_prince
+				has_idea = hre_idea_elector
+				has_idea = hre_idea_conservative
+				has_idea = hre_idea_republic
+			}
+		}
+		country_event = {
+			id = Auseugen.172
+			days = 5
+			random = 240
+		}
+	}
+	random_country = {
+		set_country_flag = hre_reported
+		LIMIT = {
+			is_puppet = no
+			NOT = {
+				has_country_flag = hre_reported
+				tag = AUS
+			}
+			OR = {
+				has_idea = hre_idea_prince
+				has_idea = hre_idea_elector
+				has_idea = hre_idea_conservative
+				has_idea = hre_idea_republic
+			}
+		}
+		country_event = {
+			id = Auseugen.172
+			days = 5
+			random = 240
+		}
+	}
+	random_country = {
+		set_country_flag = hre_reported
+		LIMIT = {
+			is_puppet = no
+			NOT = {
+				has_country_flag = hre_reported
+				tag = AUS
+			}
+			OR = {
+				has_idea = hre_idea_prince
+				has_idea = hre_idea_elector
+				has_idea = hre_idea_conservative
+				has_idea = hre_idea_republic
+			}
+		}
+		country_event = {
+			id = Auseugen.172
+			days = 5
+			random = 240
+		}
+	}
+	random_country = {
+		set_country_flag = hre_reported
+		LIMIT = {
+			is_puppet = no
+			NOT = {
+				has_country_flag = hre_reported
+				tag = AUS
+			}
+			OR = {
+				has_idea = hre_idea_prince
+				has_idea = hre_idea_elector
+				has_idea = hre_idea_conservative
+				has_idea = hre_idea_republic
+			}
+		}
+		country_event = {
+			id = Auseugen.172
+			days = 5
+			random = 240
+		}
+	}
+}

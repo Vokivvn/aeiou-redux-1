@@ -1,0 +1,26 @@
+
+state={
+	id=849
+	name="STATE_849" 
+	manpower = 107291
+	resources={
+		
+	}
+	
+	state_category = town
+
+	history={
+		owner = FRK
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			6488 1
+		}
+        add_core_of = FRK		
+	}
+
+	provinces={
+		6488
+	}
+}

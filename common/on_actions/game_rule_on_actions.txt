@@ -1,0 +1,228 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = generic_focus_trees
+						option = yes
+					}
+				}
+				every_country = {
+					load_focus_tree = generic
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = centroamerica
+						option = survives
+					}
+				}
+				GUA = {
+					set_country_flag = gamerule_survives
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = centroamerica
+						option = collapses
+					}
+				}
+				GUA = {
+					set_country_flag = gamerule_collapses
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = centroamerica
+						option = instant_collapse
+					}
+				}
+				GUA = {
+					#set_global_flag = gamerule_instant_collapse
+					retire_country_leader = yes
+					remove_unit_leader = 111111
+					create_country_leader = {
+						name = "Juan Martín Barrundia"
+						desc = "GUA_LEADER_DESC_JUAN_BARRUNDIA"
+						picture = "Portrait_GUA_Juan_Barrundia.dds"
+						expire = "1965.1.1"
+						ideology = conservative_radical
+						traits = {
+						}
+					}
+					clr_country_flag = GUA_flag_hog_juan_barrundia
+					SPR = { set_country_flag = SPR_flag_Calixto_Dead }
+					drop_cosmetic_tag = yes
+				}
+				317 = { remove_core_of = GUA }
+				919 = { remove_core_of = GUA }
+				317 = { add_core_of = NIC }
+				919 = { add_core_of = NIC }
+				NIC = {
+					transfer_state = 317
+					transfer_state = 919
+					inherit_technology = GUA
+					load_oob = "NIC_1886"
+				}
+				316 = { remove_core_of = GUA }
+				316 = { add_core_of = COS }
+				COS = {
+					transfer_state = 316
+					inherit_technology = GUA
+					load_oob = "COS_1886"
+				}
+				917 = { remove_core_of = GUA }
+				475 = { add_core_of = LOS }
+				917 = { add_core_of = LOS }
+				LOS = {
+					transfer_state = 917
+					inherit_technology = GUA
+					load_oob = "LOS_1886"
+				}
+				312 = { remove_core_of = GUA }
+				312 = { add_core_of = HON }
+				921 = { remove_core_of = GUA }
+				921 = { add_core_of = HON }
+				HON = {
+					transfer_state = 312
+					transfer_state = 921
+					inherit_technology = GUA
+					load_oob = "HON_1886"
+				}
+				314 = { remove_core_of = GUA }
+				314 = { add_core_of = ELS }
+				ELS = {
+					transfer_state = 314
+					inherit_technology = GUA
+					load_oob = "ELS_1886"
+				}
+				475 = { remove_core_of = GUA }
+				MEX = {
+					transfer_state = 475
+					transfer_state = 918
+				}
+				920 = { add_core_of = YUC }
+				YUC = {
+					transfer_state = 920
+				}
+				every_country = {
+					limit = {
+						is_ai = no
+					}
+					activate_mission = switch_to_LOS
+					activate_mission = switch_to_COS
+					activate_mission = switch_to_GUA
+					activate_mission = switch_to_HON
+					activate_mission = switch_to_ELS
+					activate_mission = switch_to_NIC
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = france
+						option = instant_collapse
+					}
+				}
+				19 = {add_core_of = AQU }
+				31 = {add_core_of = AQU }
+				922 = {add_core_of = AQU }
+				AQU = {
+					transfer_state = 19
+					transfer_state = 31
+					transfer_state = 922
+					inherit_technology = FRA
+					load_oob = "AQU_1886"
+				}
+				28 = {add_core_of = VOS }
+				945 = {add_core_of = VOS }
+				VOS = {
+					transfer_state = 28
+					transfer_state = 945
+					inherit_technology = FRA
+					load_oob = "VOS_1886"
+				}
+				943 = {add_core_of = LOR }
+				944 = {add_core_of = LOR }
+				LOR = {
+					transfer_state = 943
+					transfer_state = 944
+					inherit_technology = FRA
+					load_oob = "LOR_1886"
+				}
+				14 = {add_core_of = BRI }
+				30 = {add_core_of = BRI }
+				BRI = {
+					transfer_state = 14
+					transfer_state = 30
+					inherit_technology = FRA
+					load_oob = "BRI_1886"
+				}
+				21 = {add_core_of = PRO }
+				32 = {add_core_of = PRO }
+				PRO = {
+					transfer_state = 21
+					transfer_state = 32
+					inherit_technology = FRA
+					load_oob = "PRO_1886"
+				}
+				15 = {add_core_of = NRM }
+				NRM = {
+					transfer_state = 15
+					inherit_technology = FRA
+					load_oob = "NRM_1886"
+				}
+				17 = {add_core_of = BUR }
+				27 = {add_core_of = BUR }
+				BUR = {
+					transfer_state = 17
+					transfer_state = 27
+					inherit_technology = FRA
+					load_oob = "BUR_1886"
+				}
+				every_country = {
+					limit = {
+						is_ai = no
+					}
+					activate_mission = switch_to_AQU
+					activate_mission = switch_to_PRO
+					activate_mission = switch_to_BUR
+					activate_mission = switch_to_VOS
+					activate_mission = switch_to_LOR
+					activate_mission = switch_to_NRM
+					activate_mission = switch_to_BRI
+				}
+				FRA = {
+					set_temp_variable = { noble_support_temp = 0.35 }
+					FRA_noble_support = yes
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = spain
+						option = felipe
+					}
+				}
+				SPR = {
+					set_country_flag = gamerule_felipe
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = spain
+						option = regency
+					}
+				}
+				SPR = {
+					set_country_flag = gamerule_regency
+				}
+			}
+		}
+	}
+}

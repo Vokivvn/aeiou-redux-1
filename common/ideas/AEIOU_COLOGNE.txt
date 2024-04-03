@@ -1,0 +1,39 @@
+ideas = {
+    country = {
+        kol_idea_teutonic_influence = {
+            picture = generic_HRE_elector
+
+            allowed = { always = no }
+
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {}
+        }
+
+        kol_idea_affluent_diocese = {
+            picture = generic_HRE_elector
+            
+            allowed = { always = no }
+
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {}
+        }
+
+        kol_idea_rote_funken = {
+            picture = generic_HRE_elector
+            
+            allowed = { always = no }
+
+            allowed_civil_war = { always = no }
+
+            removal_cost = -1
+
+            modifier = {}
+        }
+    }
+}

@@ -1,0 +1,20 @@
+state={
+	id=830
+	name="STATE_830"
+
+	history={
+		owner = KAK
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = KAK
+
+	}
+
+	provinces={
+		11708 1599 1539 1467 1610 11674
+	}
+	manpower = 480174
+	buildings_max_level_factor = 1.000
+	state_category = town
+}

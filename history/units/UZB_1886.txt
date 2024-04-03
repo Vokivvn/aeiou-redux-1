@@ -1,0 +1,25 @@
+﻿division_template = {
+	name = "Khan Guard"
+
+	division_names_group = KHAN_CAV_02
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1632
+		division_template = "Khan Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.2
+	}
+}

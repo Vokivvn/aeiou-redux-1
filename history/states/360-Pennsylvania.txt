@@ -1,0 +1,28 @@
+
+state={
+	id=360
+	name="STATE_360"
+	manpower = 68526
+	
+	state_category = rural
+	
+	resources={
+		wood=4
+	}
+
+
+	history={
+		owner = SSQ
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SSQ
+		victory_points = {
+			11800 15
+		}
+	}
+
+	provinces={
+		702 847 862 880 6707 3802 3847 3687 3850 9923 3880 6705 6872 6885 6899 9662 9789 9804 9836 11648 6850 11769 11789 11800 11817 12405 6929 11758 6823
+	}
+}

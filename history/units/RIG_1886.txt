@@ -1,0 +1,48 @@
+division_template = {
+	name = "Holy Rigan Guard Battalion"
+
+	division_names_group = RIG_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Holy Rigan Cavalry Division"
+
+	division_names_group = RIG_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Holy Rigan Knight Brigade"
+
+	division_names_group = RIG_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Holy Rigan Knight Brigade"
+		location = 9340
+		division_template = "Holy Rigan Knight Brigade"
+		start_experience_factor = 0.3
+	}
+}

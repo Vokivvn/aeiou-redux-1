@@ -1,0 +1,28 @@
+
+state={
+	id=847
+	name="STATE_847" 
+	manpower = 10000
+	resources={
+		
+	}
+	
+	state_category = pastoral
+
+	history={
+		owner = SPR
+		buildings = {
+			7297 = {
+				naval_base = 1
+			}
+			infrastructure = 1
+		}
+		victory_points = {
+			7297 1
+		}		
+	}
+
+	provinces={
+		7297
+	}
+}

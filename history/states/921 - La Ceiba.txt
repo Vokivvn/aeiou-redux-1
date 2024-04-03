@@ -1,0 +1,26 @@
+state=
+{
+	id=921
+	name="STATE_921"
+	manpower=74893
+	resources={
+		wood=4 # was: 1
+	}
+	
+	state_category = town
+	history=
+	{
+		owner = GUA
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = GUA
+		victory_points = {
+			2031 1
+		}
+
+	}
+	provinces={
+		2031 13244 13243
+	}
+}

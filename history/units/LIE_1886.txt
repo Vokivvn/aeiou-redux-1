@@ -1,0 +1,35 @@
+﻿division_template = {
+	name = "Holy Liegeois Guard Battalion"
+
+	division_names_group = LIE_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Holy Liegeois Knight Brigade"
+
+	division_names_group = LIE_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Holy Liegeois Guard Battalion"
+		location = 11519
+		division_template = "Holy Liegeois Guard Battalion"
+		start_experience_factor = 0.3
+	}
+}

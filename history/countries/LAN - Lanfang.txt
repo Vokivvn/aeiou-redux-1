@@ -1,0 +1,33 @@
+﻿capital = 822
+
+oob = "LAN_1886"
+
+set_research_slots = 2
+
+set_technology = {
+	muskets0 = 1
+	melee = 1
+	basic_cavalry = 1
+	bayonet = 1
+	fuel_silos = 1
+}
+
+set_convoys = 400
+
+set_politics = {
+	ruling_party = conservative
+	elections_allowed = no 
+}
+set_popularities = {
+	conservative = 100
+}
+add_to_array = { national_religion_array =  14 }
+add_to_array = { national_religion_array =  16 }
+
+create_country_leader = {
+	name = "Liu Liangguan"
+	desc = "POLITICS_LIU_LIANGGUAN_DESC"
+	picture = "Portrait_Liu_Liangguan.dds"
+	expire = "1965.1.1"
+	ideology = conservative_moderate
+}

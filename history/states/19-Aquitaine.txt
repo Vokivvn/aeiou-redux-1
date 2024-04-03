@@ -1,0 +1,36 @@
+
+state={
+	id=19
+	name="STATE_19"
+	manpower = 1110160
+	resources={
+		wood=12 # was: 18
+		horses = 7
+	}
+	
+	state_category = large_town
+
+	history={
+		owner = FRA
+		victory_points = {
+			9737 15
+		}
+		victory_points = {
+			743 1
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			dockyard = 1
+			9737 = {
+				naval_base = 2
+				coastal_bunker = 1
+			}
+		}
+		add_core_of = FRA
+	}
+
+	provinces={
+		743 6621 6762 6777 9710 9737 
+	}
+}

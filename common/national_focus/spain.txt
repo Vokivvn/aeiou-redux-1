@@ -1,0 +1,751 @@
+
+focus_tree = {
+	id = Spain_intro
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 11
+			tag = SPR
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 50 y = 2000 }
+
+
+	###########
+	#  Start  #
+	###########
+	
+	focus = { 
+		id = SPR_the_kings_duty
+		icon = GFX_SPR_focus_kings_duty
+		
+	
+		x = 10
+		y = 0
+		cost = 30
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_the_kings_duty"
+			add_political_power = 100
+			country_event = SPREarlyfelipe.1
+		}
+	}
+	
+	###################
+	#  Centroamerica  #
+	###################
+	
+	focus = { 
+		id = SPR_publish_the_toledo_manifesto
+		icon = GFX_SPR_toledo_manifesto
+		cost = 40
+		
+		prerequisite = { focus = SPR_the_kings_duty }
+		relative_position_id = SPR_the_kings_duty
+	
+		x = -7
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_publish_the_toledo_manifesto"
+			country_event = SPREarlyfelipe.2
+		}
+	}
+	
+	### Centroamerica collapses
+	
+	focus = { 
+		id = SPR_the_centroamerican_cake
+		icon = GFX_SPR_Centro-American_cake
+		cost = 20
+
+		available = {
+			has_country_flag = SPR_flag_Calixto_Dead
+		}
+		prerequisite = { focus = SPR_publish_the_toledo_manifesto }
+		relative_position_id = SPR_publish_the_toledo_manifesto
+		mutually_exclusive = { focus = SPR_old_colonies_new_colonies }
+	
+		x = -2
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_the_centroamerican_cake"
+			country_event = SPREarlyfelipe.9
+		}
+	}
+	
+	focus = { 
+		id = SPR_circuito_economico_caribeno
+		icon = GFX_SPR_circulo_economico_caribeno
+		cost = 50
+		
+		prerequisite = { focus = SPR_the_centroamerican_cake }
+		relative_position_id = SPR_the_centroamerican_cake
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_circuito_economico_caribeno"
+			add_ideas = spr_idea_circuito_economico_caribeno
+			YUC = {
+			  add_ideas = spr_idea_circuito_economico_caribeno
+			}
+			SPW = {
+			  add_ideas = spr_idea_circuito_economico_caribeno
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_safe_routes
+		icon = GFX_SPR_safe_routes
+		cost = 25
+		
+		prerequisite = { focus = SPR_circuito_economico_caribeno }
+		relative_position_id = SPR_circuito_economico_caribeno
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_safe_routes"
+			swap_ideas = {
+				remove_idea = spr_idea_circuito_economico_caribeno
+				add_idea = spr_idea_circuito_economico_caribeno1
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_safe_borders
+		icon = GFX_SPR_safe_borders
+		cost = 25
+		
+		prerequisite = { focus = SPR_circuito_economico_caribeno }
+		relative_position_id = SPR_circuito_economico_caribeno
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_safe_borders"
+			add_war_support = 0.05
+		}
+	}
+	
+	focus = { 
+		id = SPR_the_other_spice_route
+		icon = GFX_goal_generic_trade
+		cost = 20
+		
+		prerequisite = { focus = SPR_circuito_economico_caribeno }
+		relative_position_id = SPR_circuito_economico_caribeno
+	
+		x = 0
+		y = 2
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_the_other_spice_route"
+			add_timed_idea = {
+				idea = spr_idea_spice_route
+				days = 365
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_resurgent_national_pride
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 40
+		
+		prerequisite = { focus = SPR_the_other_spice_route }
+		relative_position_id = SPR_the_other_spice_route
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_resurgent_national_pride"
+			add_political_power = 100
+			add_stability = 0.05
+			country_event = SPREarlyfelipe.11
+		}
+	}
+	
+	### Centroamerica holds
+	
+	focus = { 
+		id = SPR_old_colonies_new_colonies
+		icon = GFX_SPR_Old_colonies_new_colonies
+		cost = 20
+		
+		available = {
+			has_country_flag = SPR_flag_Calixto_NotDead
+		}
+		prerequisite = { focus = SPR_publish_the_toledo_manifesto }
+		relative_position_id = SPR_publish_the_toledo_manifesto
+		mutually_exclusive = { focus = SPR_the_centroamerican_cake }
+	
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_old_colonies_new_colonies"
+			country_event = SPREarlyfelipe.10
+		}
+	}
+	
+	focus = { 
+		id = SPR_focus_on_the_true_enemy
+		icon = GFX_SPR_focus_on_the_enemy
+		cost = 40
+		
+		prerequisite = { focus = SPR_old_colonies_new_colonies }
+		relative_position_id = SPR_old_colonies_new_colonies
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_focus_on_the_true_enemy"
+			add_political_power = 100
+			add_stability = 0.03
+		}
+	}
+	
+	focus = { 
+		id = SPR_ready_our_troops
+		icon = GFX_focus_chi_army_reform
+		cost = 25
+		
+		prerequisite = { focus = SPR_focus_on_the_true_enemy }
+		relative_position_id = SPR_focus_on_the_true_enemy
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_ready_our_troops"
+			add_ideas = spr_idea_readied_troops
+		}
+	}
+	
+	focus = { 
+		id = SPR_fortify_our_position
+		icon = GFX_goal_generic_construct_military
+		cost = 30
+		
+		prerequisite = { focus = SPR_focus_on_the_true_enemy }
+		relative_position_id = SPR_focus_on_the_true_enemy
+		bypass = { NOT = {
+				846 = { is_owned_and_controlled_by = ROOT }
+				847 = { is_owned_and_controlled_by = ROOT }
+			}
+		}
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_fortify_our_position"
+			if = {
+				limit = {846 = {is_owned_and_controlled_by = ROOT}}
+				846 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = {847 = {is_owned_and_controlled_by = ROOT}}
+				847 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_rally_the_portguese
+		icon = GFX_SPR_rally_portuguese
+		cost = 25
+		
+		prerequisite = { focus = SPR_ready_our_troops }
+		prerequisite = { focus = SPR_fortify_our_position }
+		relative_position_id = SPR_ready_our_troops
+		mutually_exclusive = { focus = SPR_keep_them_out }
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_rally_the_portguese"
+			add_opinion_modifier = {
+				target = POR
+				modifier = SPR_rally_portuguese
+			}
+			#country_event = to write
+		}
+	}
+	
+	focus = { 
+		id = SPR_keep_them_out
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		cost = 25
+		
+		prerequisite = { focus = SPR_ready_our_troops }
+		prerequisite = { focus = SPR_fortify_our_position }
+		relative_position_id = SPR_fortify_our_position
+		mutually_exclusive = { focus = SPR_rally_the_portguese }
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_keep_them_out"
+			add_opinion_modifier = {
+				target = POR
+				modifier = SPR_keep_them_out
+			}
+			#country_event = to write
+		}
+	}
+	
+	focus = { 
+		id = SPR_may_our_enemies_tremble
+		icon = GFX_goal_continuous_suppression
+		cost = 45
+		
+		prerequisite = { 
+			focus = SPR_resurgent_national_pride 
+			focus = SPR_rally_the_portguese 
+			focus = SPR_keep_them_out 
+		}
+		relative_position_id = SPR_publish_the_toledo_manifesto
+	
+		x = 0
+		y = 6
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_may_our_enemies_tremble"
+			add_ideas = spr_idea_trembling_enemies
+		}
+	}
+	
+	########################
+	#  National Salvation  #
+	########################
+	
+	focus = { 
+		id = SPR_national_salvation_movement
+		icon = GFX_SPR_National_Salvation_Movement
+		cost = 40
+		
+		prerequisite = { focus = SPR_the_kings_duty }
+		relative_position_id = SPR_the_kings_duty
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_national_salvation_movement"
+			country_event = SPREarlyfelipe.3
+			add_stability = -0.05
+			set_temp_variable = { catholic_increase = 0.03 }
+			custom_effect_tooltip = SPR_CATHOLIC_INCREASE_TOOLTIP
+			add_to_variable = { spr_var_catholic_influence = catholic_increase }
+		}
+	}
+	
+	focus = { 
+		id = SPR_coerce_the_nobility
+		icon = GFX_AUS_focus_Threats_Actions
+		cost = 30
+		
+		prerequisite = { focus = SPR_national_salvation_movement }
+		relative_position_id = SPR_national_salvation_movement
+	
+		x = -2
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_coerce_the_nobility"
+			add_stability = -0.05
+		}
+	}
+	
+	focus = { 
+		id = SPR_benefit_religious_teachings
+		icon = GFX_SPR_catholic_teaching
+		cost = 30
+		
+		prerequisite = { focus = SPR_national_salvation_movement }
+		relative_position_id = SPR_national_salvation_movement
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_benefit_religious_teachings"
+			set_temp_variable = { catholic_increase = 0.05 }
+			custom_effect_tooltip = SPR_CATHOLIC_INCREASE_TOOLTIP
+			add_to_variable = { spr_var_catholic_influence = catholic_increase }
+			add_political_power = 100
+		}
+	}
+	
+	focus = { 
+		id = SPR_popular_laws_of_1886
+		icon = GFX_SPR_Popular_laws
+		cost = 35
+		
+		prerequisite = { focus = SPR_national_salvation_movement }
+		relative_position_id = SPR_national_salvation_movement
+	
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_popular_laws_of_1886"
+			country_event = SPREarlyfelipe.4
+			add_stability = -0.05
+		}
+	}
+	
+	focus = { 
+		id = SPR_crush_rebellious_moderates
+		icon = GFX_goal_generic_attack_allies
+		cost = 30
+		
+		prerequisite = { focus = SPR_coerce_the_nobility }
+		prerequisite = { focus = SPR_benefit_religious_teachings }
+		prerequisite = { focus = SPR_popular_laws_of_1886 }
+		relative_position_id = SPR_national_salvation_movement
+	
+		x = -1
+		y = 2
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_crush_rebellious_moderates"
+			add_political_power = -70
+			#country_event = to write
+			set_temp_variable = { catholic_increase = 0.03 }
+			custom_effect_tooltip = SPR_CATHOLIC_INCREASE_TOOLTIP
+			add_to_variable = { spr_var_catholic_influence = catholic_increase }
+		}
+	}
+	
+	focus = { 
+		id = SPR_dissident_peasantry
+		icon = GFX_SPR_Peasant_Rebellion
+		cost = 25
+		
+		prerequisite = { focus = SPR_coerce_the_nobility }
+		prerequisite = { focus = SPR_benefit_religious_teachings }
+		prerequisite = { focus = SPR_popular_laws_of_1886 }
+		relative_position_id = SPR_national_salvation_movement
+	
+		x = 1
+		y = 2
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_dissident_peasantry"
+			add_stability = -0.05
+		}
+	}
+	
+	focus = { 
+		id = SPR_threat_to_the_establishment
+		icon = GFX_goal_generic_secret_weapon
+		cost = 45
+		
+		prerequisite = { focus = SPR_crush_rebellious_moderates }
+		prerequisite = { focus = SPR_dissident_peasantry }
+		relative_position_id = SPR_national_salvation_movement
+	
+		x = 0
+		y = 3
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_threat_to_the_establishment"
+			country_event = SPREarlyfelipe.5
+		}
+	}
+	
+	focus = { 
+		id = SPR_proclaim_the_lex_christi
+		icon = GFX_SPR_lex_christi
+		cost = 35
+		
+		prerequisite = { focus = SPR_threat_to_the_establishment }
+		relative_position_id = SPR_threat_to_the_establishment
+		mutually_exclusive = { focus = SPR_enact_the_lex_expiatoria }
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_proclaim_the_lex_christi"
+			country_event = SPREarlyfelipe.6
+			set_temp_variable = { catholic_increase = -0.05 }
+			custom_effect_tooltip = SPR_CATHOLIC_INCREASE_TOOLTIP
+			add_to_variable = { spr_var_catholic_influence = catholic_increase }
+		}
+	}
+	
+	focus = { 
+		id = SPR_enact_the_lex_expiatoria
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 35
+		
+		prerequisite = { focus = SPR_threat_to_the_establishment }
+		relative_position_id = SPR_threat_to_the_establishment
+		mutually_exclusive = { focus = SPR_proclaim_the_lex_christi }
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_enact_the_lex_expiatoria"
+			country_event = SPREarlyfelipe.7
+			set_temp_variable = { catholic_increase = -0.03 }
+			custom_effect_tooltip = SPR_CATHOLIC_INCREASE_TOOLTIP
+			add_to_variable = { spr_var_catholic_influence = catholic_increase }
+		}
+	}
+	
+	focus = { 
+		id = SPR_publicly_claim_the_catholic_kingdom_of_spain
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 50
+		
+		prerequisite = { 
+			focus = SPR_proclaim_the_lex_christi 
+			focus = SPR_enact_the_lex_expiatoria 
+			}
+		relative_position_id = SPR_threat_to_the_establishment
+	
+		x = 0
+		y = 2
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_publicly_claim_the_catholic_kingdom_of_spain"
+			country_event = SPREarlyfelipe.8
+			set_temp_variable = { catholic_increase = 0.05 }
+			custom_effect_tooltip = SPR_CATHOLIC_INCREASE_TOOLTIP
+			add_to_variable = { spr_var_catholic_influence = catholic_increase }
+		}
+	}
+	
+	#######################
+	#  The Economy Fools  #
+	#######################
+	
+	focus = { 
+		id = SPR_reversed_economy
+		icon = GFX_SPR_reversed_economy
+		cost = 40
+		
+		prerequisite = { focus = SPR_the_kings_duty }
+		relative_position_id = SPR_the_kings_duty
+	
+		x = 6
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_reversed_economy"
+			add_political_power = -50
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+	}
+	
+	focus = { 
+		id = SPR_wealthy_bourgeois_universities
+		icon = GFX_SPR_wealthy_universities
+		cost = 30
+		
+		prerequisite = { focus = SPR_reversed_economy }
+		relative_position_id = SPR_reversed_economy
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_wealthy_bourgeois_universities"
+			if = {
+				limit = { has_idea = spr_idea_backwards_economy }
+				swap_ideas = {
+					remove_idea = spr_idea_backwards_economy
+					add_idea = spr_idea_backwards_economy10
+				}
+			} else = {
+				swap_ideas = {
+					remove_idea = spr_idea_backwards_economy01
+					add_idea = spr_idea_backwards_economy11
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_boost_noble_scholarships
+		icon = GFX_SPR_boost_noble_scholarships
+		cost = 30
+		
+		prerequisite = { focus = SPR_reversed_economy }
+		relative_position_id = SPR_reversed_economy
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_boost_noble_scholarships"
+			if = {
+				limit = { has_idea = spr_idea_backwards_economy }
+				swap_ideas = {
+					remove_idea = spr_idea_backwards_economy
+					add_idea = spr_idea_backwards_economy01
+				}
+			} else = {
+				swap_ideas = {
+					remove_idea = spr_idea_backwards_economy10
+					add_idea = spr_idea_backwards_economy11
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_let_us_enjoy_the_payoff
+		icon = GFX_goal_generic_improve_relations
+		cost = 45
+		
+		prerequisite = { focus = SPR_wealthy_bourgeois_universities } 
+		prerequisite = { focus = SPR_boost_noble_scholarships }
+		relative_position_id = SPR_reversed_economy
+	
+		x = 0
+		y = 3
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_let_us_enjoy_the_payoff"
+			add_political_power = 100
+			remove_ideas = spr_idea_backwards_economy11
+		}
+	}
+	
+	focus = { 
+		id = SPR_attract_foreign_personnel
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 30
+		
+		prerequisite = { focus = SPR_let_us_enjoy_the_payoff }
+		relative_position_id = SPR_let_us_enjoy_the_payoff
+	
+		x = -2
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_attract_foreign_personnel"
+			add_ideas = spr_idea_foreign_personel
+		}
+	}
+	
+	focus = { 
+		id = SPR_improved_quality_of_life
+		icon = GFX_goal_generic_consumer_goods
+		cost = 30
+		
+		prerequisite = { focus = SPR_let_us_enjoy_the_payoff }
+		relative_position_id = SPR_let_us_enjoy_the_payoff
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_improved_quality_of_life"
+			add_stability = 0.05
+		}
+	}
+	
+	focus = { 
+		id = SPR_no_more_stagnation
+		icon = GFX_goal_continuous_non_factory_construct
+		cost = 30
+		
+		prerequisite = { focus = SPR_let_us_enjoy_the_payoff }
+		relative_position_id = SPR_let_us_enjoy_the_payoff
+	
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_no_more_stagnation"
+			add_ideas = spr_idea_no_more_stagnation
+		}
+	}
+	
+	focus = { 
+		id = SPR_en_marcha
+		icon = GFX_focus_generic_industry_3
+		cost = 50
+		
+		prerequisite = { focus = SPR_attract_foreign_personnel }
+		prerequisite = { focus = SPR_improved_quality_of_life }
+		prerequisite = { focus = SPR_no_more_stagnation }
+		relative_position_id = SPR_let_us_enjoy_the_payoff
+	
+		x = 0
+		y = 2
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_en_marcha"
+			add_political_power = 100
+			add_war_support = 0.1
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 5000
+				producer = SPR
+			}
+		}
+	}
+	
+	focus = { 
+		id = SPR_dawn_of_a_new_era
+		icon = GFX_SPR_dawn_of_a_new_era
+		cost = 50
+		
+		prerequisite = { focus = SPR_may_our_enemies_tremble }
+		prerequisite = { focus = SPR_publicly_claim_the_catholic_kingdom_of_spain }
+		prerequisite = { focus = SPR_en_marcha }
+		relative_position_id = SPR_the_kings_duty
+	
+		x = 0
+		y = 8
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SPR_dawn_of_a_new_era"
+			#country_event = to write
+			load_focus_tree = Spain_felipe_second
+		}
+	}
+}

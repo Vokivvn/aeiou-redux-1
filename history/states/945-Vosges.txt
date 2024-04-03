@@ -1,0 +1,29 @@
+
+state={
+	id=945
+	name="STATE_945" 
+	manpower = 195796
+	
+	state_category = rural
+	
+	resources={
+		wood=2
+		iron = 4
+		gunpowder=1
+	}	
+	resources={
+	}
+
+	history={
+		owner = FRA
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+		add_core_of = FRA
+	}
+
+	provinces={
+		521 698 6698 11488 11642 
+	}
+}

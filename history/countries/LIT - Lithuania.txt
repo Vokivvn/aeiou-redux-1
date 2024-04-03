@@ -1,0 +1,22 @@
+﻿capital = 11
+
+#oob = "LIT_1936"
+
+add_ideas = {
+	limited_conscription
+}
+
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+}
+
+set_politics = {
+	ruling_party = absolutist
+	last_election = "1885.5.8"
+	election_frequency = 120
+	elections_allowed = no
+}
+set_popularities = {
+	absolutist = 100
+}

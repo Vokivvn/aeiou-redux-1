@@ -1,0 +1,67 @@
+###########################
+# Army Improvement Events
+###########################
+
+add_namespace = armyimprovements
+
+country_event = {
+	id = armyimprovements.1
+	title = armyimprovements.1.t
+	desc = armyimprovements.1.d
+	
+	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	picture = GFX_country_event_borneo_01.dds
+	
+	option = {
+		name = armyimprovements.1.a
+		hidden_effect = {
+			set_country_flag = army_improvements
+			delete_unit_template_and_units = { division_template = "Line Infantry Mercenaries" }
+			delete_unit_template_and_units = { division_template = "Melee Mercenaries" }
+			delete_unit_template_and_units = { division_template = "Light Cavalry Mercenaries" }
+			delete_unit_template_and_units = { division_template = "Medium Cavalry Mercenaries" }
+			delete_unit_template_and_units = { division_template = "Heavy Cavalry Mercenaries" }
+			country_lock_all_division_template = no	
+		}
+		set_temp_variable = { tech_score_temp = 10 }
+		add_tech_score = yes
+	}
+}
+
+country_event = {
+	id = armyimprovements.2
+	title = armyimprovements.2.t
+	desc = armyimprovements.2.d
+	
+	fire_only_once = no
+	
+	trigger = {
+		has_war = no
+		has_country_flag = country_mobilized
+	}
+	
+	picture = GFX_country_event_borneo_01.dds
+	
+	option = {
+		name = armyimprovements.2.a
+		hidden_effect = {
+			delete_units = {
+				division_template = "Large Militia"
+				disband = yes
+			}
+			delete_units = {
+				division_template = "Medium Militia"
+				disband = yes
+			}
+			delete_units = {
+				division_template = "Small Militia"
+				disband = yes
+			}
+		}
+		add_threat = -2
+		clr_country_flag = country_mobilized
+	}
+}

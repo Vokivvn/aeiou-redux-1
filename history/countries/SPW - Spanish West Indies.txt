@@ -1,0 +1,38 @@
+﻿capital = 923
+
+oob = "SPW_1886"
+
+set_research_slots = 3
+
+set_technology = {
+	muskets0 = 1
+	melee = 1
+	basic_cavalry = 1
+	bayonet = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	grenade = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+}
+
+set_politics = {
+	ruling_party = despotist
+	elections_allowed = no
+}
+set_popularities = {
+	despotist = 100
+}
+
+set_convoys = 150
+set_stability = 0.5
+
+create_country_leader = {
+	name = "Ignacio María del Castillo"
+	desc = "POLITICS_MANUEL_AZANA_DESC"
+	picture = "Portrait_SPW_Ignacio_Maria_del_Castillo.dds"
+	expire = "1965.1.1"
+	ideology = despotist_moderate
+}
+add_to_array = { national_religion_array =  2 }

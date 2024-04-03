@@ -1,0 +1,933 @@
+focus_tree = {
+	id = austria_eugen_3
+
+	country = {
+		factor = 0
+	}
+
+
+
+	focus = { 
+		id = AUS_help_for_bavaria
+		icon = GFX_AUS_focus_Peoples_Emperor
+		cost = 35
+	
+		x = 5
+		y = 0
+		
+		bypass = {
+	    	BAV = {
+	    		NOT = { is_puppet_of = AUS }
+	    	}
+	    	AUS = {
+	    		NOT = {
+	    			has_war_with = BAV
+	    		}
+	    		NOt = {
+	    			has_wargoal_against = BAV
+	    		}
+	    	}
+	    }
+
+		available = {
+	    	BAV = { is_puppet_of = AUS } 
+	    }
+
+		completion_reward = {
+			add_ideas = { aus_idea_help_for_bavaria }
+			BAV = {
+				add_ideas = { aus_idea_help_from_austria }
+				random_owned_state = {
+					LIMIT = {
+						is_controlled_by = BAV
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = arms_factory
+					    level = 1
+					    instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = AUS_imperial_alliance
+		icon = GFX_AUS_focus_Peoples_Emperor
+		cost = 35
+	
+		x = 7
+		y = 0
+		
+		available = {
+			NOT = {
+				has_war_with = BAV
+			}
+		}
+
+		completion_reward = {
+			create_faction = "Kaiserliche Allianz"
+			every_other_country = {
+				LIMIT = {
+					OR = {
+						has_idea = aus_idea_alliance_with_austria
+						is_puppet_of = AUS
+					}
+				}
+				country_event = Auseugen.90
+			}
+		}
+	}
+	
+	focus = { 
+		id = AUS_eager_for_war
+		icon = GFX_AUS_focus_Peoples_Emperor
+		cost = 35
+	
+		x = 9
+		y = 0
+		
+		completion_reward = {
+			add_timed_idea = {
+			    idea = aus_idea_eager_for_war
+			    days = 180
+			}
+		}
+	}
+	
+
+
+	focus = { 
+		id = AUS_the_great_gathering
+		icon = GFX_AUS_focus_Peoples_Emperor
+		cost = 35
+	
+		x = 0
+		y = 1
+
+		relative_position_id = AUS_imperial_alliance
+		
+		prerequisite = {
+			focus = AUS_help_for_bavaria
+		}
+		prerequisite = {
+			focus = AUS_imperial_alliance
+		}
+		prerequisite = {
+			focus = AUS_eager_for_war
+		}
+
+		completion_reward = {
+			country_event = Auseugen.94
+			every_other_country = {
+				LIMIT = {
+					OR = {
+						has_idea = hre_idea_elector
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_conservative
+						has_idea = hre_idea_republic
+					}
+					is_puppet = no
+					NOT = {
+						is_in_faction_with = AUS
+						tag = BRD
+					}
+				}
+				country_event = {
+					id = Auseugen.91
+					days = 0
+					random = 0
+				}
+			}
+			hidden_effect = {
+				BRD = {
+					country_event = {
+						id = Auseugen.96
+						days = 25
+						random = 120
+					}
+				}
+			}
+		}	}
+
+	
+	focus = { 
+		id = AUS_balkan_development
+		icon = GFX_AUS_focus_Peoples_Emperor
+		cost = 35
+	
+		x = -2
+		y = 1
+
+		bypass = {
+			NOT = {
+				controls_state = 102
+			}
+			NOT = {
+				controls_state = 942
+			}
+			NOT = {
+				controls_state = 109
+			}
+			NOT = {
+				controls_state = 824
+			}
+			NOT = {
+				controls_state = 104
+			}
+		}
+
+	 	prerequisite = {
+	        focus = AUS_the_great_gathering
+	    }
+
+		relative_position_id = AUS_the_great_gathering
+		
+		completion_reward = {
+			if = {
+				limit = {
+					AUS = {
+						controls_state = 102
+					}
+				}
+				102 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = infrastructure
+					    level = 2
+					    instant_build = yes
+					}
+					add_building_construction = {
+					    type = arms_factory
+					    level = 1
+					    instant_build = yes
+					}	
+				}
+			}
+
+			if = {
+				limit = {
+					AUS = {
+						controls_state = 942
+					}
+				}
+				942 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = infrastructure
+					    level = 2
+					    instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					AUS = {
+						controls_state = 109
+					}
+				}
+				109 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 1
+					    instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					AUS = {
+						controls_state = 824
+					}
+				}
+				824 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 1
+					    instant_build = yes
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					AUS = {
+						controls_state = 104
+					}
+				}
+				104 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 1
+					    instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = AUS_accelerated_trade
+		icon = GFX_AUS_focus_Peoples_Emperor
+		cost = 35
+	
+		x = 0
+		y = 1
+
+	 	prerequisite = {
+	        focus = AUS_balkan_development
+	    }
+
+		relative_position_id = AUS_balkan_development
+		
+		completion_reward = {
+			add_ideas = { aus_idea_accelerated_trade }
+		}
+	}
+	
+	focus = { 
+		id = AUS_cooperation_with_serbia
+		icon = GFX_AUS_focus_Peoples_Emperor
+		cost = 35
+	
+		x = 0
+		y = 1
+
+	 	prerequisite = {
+	        focus = AUS_accelerated_trade
+	    }
+
+		relative_position_id = AUS_accelerated_trade
+		
+		completion_reward = {
+			SER = {
+				country_event = Auseugen.117
+			}
+		}
+	}
+	
+	focus = { 
+		id = AUS_warm_up_relations_with_ottomans
+		icon = GFX_AUS_focus_Peoples_Emperor
+		cost = 35
+	
+		x = 0
+		y = 1
+
+	 	prerequisite = {
+	        focus = AUS_cooperation_with_serbia
+	    }
+
+		relative_position_id = AUS_cooperation_with_serbia
+		
+		completion_reward = {
+			OTT = {
+				country_event = Auseugen.120
+			}
+		}
+	}
+	
+
+	focus = { 
+		id = AUS_increased_influence_of_the_upper_class
+		icon = GFX_AUS_focus_Peoples_Emperor
+		cost = 35
+	
+		x = 2
+		y = 1
+
+	 	prerequisite = {
+	        focus = AUS_the_great_gathering
+	    }
+
+		relative_position_id = AUS_the_great_gathering
+		
+		completion_reward = {
+			add_timed_idea = { 
+				idea = aus_idea_noble_tyranny
+				days = 240
+			}
+		}
+	}
+	
+	focus = { 
+		id = AUS_support_for_feudal_system
+		icon = GFX_AUS_focus_Peoples_Emperor
+		cost = 35
+	
+		x = 0
+		y = 1
+
+	 	prerequisite = {
+	        focus = AUS_increased_influence_of_the_upper_class
+	    }
+
+		relative_position_id = AUS_increased_influence_of_the_upper_class
+		
+		completion_reward = {
+			country_event = Auseugen.123
+		}
+	}
+	
+	focus = { 
+		id = AUS_blind_worship
+		icon = GFX_AUS_focus_Peoples_Emperor
+		cost = 35
+	
+		x = 0
+		y = 1
+
+	 	prerequisite = {
+	        focus = AUS_support_for_feudal_system
+	    }
+
+		relative_position_id = AUS_support_for_feudal_system
+		
+		completion_reward = {
+			add_political_power = 80
+			add_stability = -0.04
+		}
+	}
+	
+	focus = { 
+		id = AUS_glorify_aristocrats
+		icon = GFX_AUS_focus_Peoples_Emperor
+		cost = 35
+	
+		x = 0
+		y = 1
+
+	 	prerequisite = {
+	        focus = AUS_blind_worship
+	    }
+
+
+		relative_position_id = AUS_blind_worship
+		
+		completion_reward = {
+			add_political_power = -60
+			add_stability = -0.03
+			hidden_effect = {
+				random_list = {
+				    80 = {
+				    	country_event = {
+						    id = Auseugen.124			# Aristocrats pleased and loyal
+						    days = 20
+						    random = 480
+						}
+				    }
+				    20 = {
+				        country_event = {
+						    id = Auseugen.125			# Noble tyranny continues
+						    days = 20
+						    random = 480
+						}
+				    }
+				}
+			}
+			
+		}
+	}
+	
+
+
+
+	focus = { 
+		id = AUS_play_vabanque
+		icon = GFX_AUS_focus_Peoples_Emperor
+		cost = 35
+	
+		x = 2
+		y = 1
+
+	 	prerequisite = {
+	        focus = AUS_warm_up_relations_with_ottomans
+	    }
+	 	prerequisite = {
+	        focus = AUS_glorify_aristocrats
+	    }
+
+		relative_position_id = AUS_warm_up_relations_with_ottomans
+		
+		completion_reward = {
+			add_political_power = -70
+			add_stability = -0.05
+			add_war_support = 0.04
+		}
+	}
+	
+	focus = { 
+		id = AUS_pathetic_fail
+		icon = GFX_AUS_focus_Peoples_Emperor
+		cost = 35
+	
+		x = -2
+		y = 1
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = aus_ggwar_ended_tt
+				has_global_flag = aus_ggwar_ended
+			}
+			custom_trigger_tooltip = {
+				tooltip = aus_ggwar_austria_defeated_tt
+				has_global_flag = aus_ggwar_lost
+			}
+		}
+
+	 	prerequisite = {
+	        focus = AUS_play_vabanque
+	    }
+
+	    mutually_exclusive = {
+	        focus = AUS_heroic_victory
+	    }
+
+		relative_position_id = AUS_play_vabanque
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = { 
+		id = AUS_heroic_victory
+		icon = GFX_AUS_focus_Peoples_Emperor
+		cost = 35
+	
+		x = 2
+		y = 1
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = aus_ggwar_ended_tt
+				has_global_flag = aus_ggwar_ended
+			}
+			custom_trigger_tooltip = {
+				tooltip = aus_ggwar_austria_victorious_tt
+				has_global_flag = aus_ggwar_won
+			}
+		}
+
+	 	prerequisite = {
+	        focus = AUS_play_vabanque
+	    }
+
+	    mutually_exclusive = {
+	        focus = AUS_pathetic_fail
+	    }
+
+		relative_position_id = AUS_play_vabanque
+		
+		completion_reward = {
+			
+		}
+	}
+
+
+
+
+
+
+
+
+	focus = { 
+		id = AUS_emergency_defensive_line
+		icon = GFX_AUS_focus_Peoples_Emperor
+		cost = 35
+	
+		x = -5
+		y = 1
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = aus_ggwar_started_tt
+				has_war_with = BRD
+				has_completed_focus = AUS_the_great_gathering
+			}
+			has_war = yes
+			surrender_progress > 0.1
+		}
+
+		relative_position_id = AUS_the_great_gathering
+		
+		completion_reward = {
+			IF = {
+				LIMIT = { has_full_control_of_state = 72 }
+				72 = {
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 9551
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 9412
+					}
+				}
+			}
+			IF = {
+				LIMIT = { has_full_control_of_state = 70 }
+				70 = {
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 9539
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 3484
+					}
+				}
+			}
+			IF = {
+				LIMIT = { has_full_control_of_state = 4 }
+				4 = {
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 704
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 9527
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 3718
+					}
+				}
+			}
+			IF = {
+				LIMIT = { has_full_control_of_state = 935 }
+				935 = {
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 6687
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 9679
+					}
+				}
+			}
+			IF = {
+				LIMIT = { has_full_control_of_state = 933 }
+				933 = {
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 6673
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 3674
+					}
+				}
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_instant_aid_for_infantry
+		icon = GFX_AUS_focus_Peoples_Emperor
+		cost = 35
+	
+		x = 0
+		y = 1
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = aus_ggwar_started_tt
+				has_war_with = BRD
+				has_completed_focus = AUS_the_great_gathering
+			}
+			has_war = yes
+			surrender_progress > 0.15
+		}
+
+	 	prerequisite = {
+	        focus = AUS_emergency_defensive_line
+	    }
+
+		relative_position_id = AUS_emergency_defensive_line
+		
+		completion_reward = {
+			add_manpower = 12500
+
+			add_equipment_to_stockpile = {
+			    type = musket_equipment_1
+			    amount = 3000
+			    producer = AUS
+			}
+			add_equipment_to_stockpile = {
+			    type = melee_equipment_1
+			    amount = 4000
+			    producer = AUS
+			}
+
+			add_stability = -0.1
+		}
+	}
+
+	focus = { 
+		id = AUS_the_last_standing_bastion
+		icon = GFX_AUS_focus_Peoples_Emperor
+		cost = 35
+	
+		x = 0
+		y = 1
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = aus_ggwar_started_tt
+				has_war_with = BRD
+				has_completed_focus = AUS_the_great_gathering
+			}
+			has_war = yes
+			surrender_progress > 0.2
+		}
+
+	 	prerequisite = {
+	        focus = AUS_instant_aid_for_infantry
+	    }
+
+		relative_position_id = AUS_instant_aid_for_infantry
+		
+		completion_reward = {
+			IF = {
+				LIMIT = { has_full_control_of_state = 4 }
+				4 = {
+					add_building_construction = {
+					    type = bunker
+					    level = 3
+					    instant_build = yes
+					    province = 9527
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 3
+					    instant_build = yes
+					    province = 6739
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 3
+					    instant_build = yes
+					    province = 3700
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 3
+					    instant_build = yes
+					    province = 704
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 3
+					    instant_build = yes
+					    province = 13277
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 4
+					    instant_build = yes
+					    province = 11666
+					}
+				}
+			}
+			IF = {
+				LIMIT = { has_full_control_of_state = 934 }
+				934 = {
+					add_building_construction = {
+					    type = bunker
+					    level = 3
+					    instant_build = yes
+					    province = 13279
+					}
+				}
+			}
+		}
+	}
+
+
+
+
+
+
+	focus = { 
+		id = AUS_national_propaganda
+		icon = GFX_AUS_focus_Peoples_Emperor
+		cost = 35
+	
+		x = 5
+		y = 1
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = aus_ggwar_started_tt
+				has_war_with = BRD
+				has_completed_focus = AUS_the_great_gathering
+			}
+			has_war = yes
+		}
+
+		relative_position_id = AUS_the_great_gathering
+		
+		completion_reward = {
+			add_timed_idea = { 
+				idea = aus_idea_national_propaganda
+				days = 120
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_reduced_army_qualifications
+		icon = GFX_AUS_focus_Peoples_Emperor
+		cost = 35
+	
+		x = 0
+		y = 1
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = aus_ggwar_started_tt
+				has_war_with = BRD
+				has_completed_focus = AUS_the_great_gathering
+			}
+			has_war = yes
+		}
+
+	 	prerequisite = {
+	        focus = AUS_national_propaganda
+	    }
+
+		relative_position_id = AUS_national_propaganda
+		
+		completion_reward = {
+			add_timed_idea = {
+				idea = aus_idea_reduced_army_qualifications
+				days = 120
+			}
+		}
+	}
+
+	focus = { 
+		id = AUS_new_supply_lines
+		icon = GFX_AUS_focus_Peoples_Emperor
+		cost = 35
+	
+		x = 0
+		y = 1
+
+		available = {
+			controls_state = 152
+			controls_state = 935
+
+			count_triggers = {
+			    amount = 3
+
+				controls_state = 69
+				controls_state = 66
+				controls_state = 932
+				controls_state = 153
+				controls_state = 9
+			}
+		}
+
+	 	prerequisite = {
+	        focus = AUS_reduced_army_qualifications
+	    }
+
+		relative_position_id = AUS_reduced_army_qualifications
+		
+		completion_reward = {
+			152 = {
+				add_building_construction = {
+				    type = infrastructure
+				    level = 1
+				    instant_build = yes
+				}
+			}
+			935 = {
+				add_building_construction = {
+				    type = infrastructure
+				    level = 1
+				    instant_build = yes
+				}
+			}
+			IF = {
+				LIMIT = { controls_state = 69 }
+				69 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 1
+					    instant_build = yes
+					}
+				}
+			}
+			IF = {
+				LIMIT = { controls_state = 66 }
+				66 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 1
+					    instant_build = yes
+					}
+				}
+			}
+			IF = {
+				LIMIT = { controls_state = 932 }
+				932 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 1
+					    instant_build = yes
+					}
+				}
+			}
+			IF = {
+				LIMIT = { controls_state = 153 }
+				153 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 1
+					    instant_build = yes
+					}
+				}
+			}
+			IF = {
+				LIMIT = { controls_state = 9 }
+				9 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 1
+					    instant_build = yes
+					}
+				}
+			}
+		}
+	}
+}

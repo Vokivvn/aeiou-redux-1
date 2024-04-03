@@ -1,0 +1,396 @@
+hog_actions = {
+	combat_hog_influence = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_political_power > 75
+		}
+
+		visible = {
+			check_variable = { hog_loyalty > 0 }
+			has_country_flag = has_hog
+			combat_hog_influence_trigger = yes
+			
+		}
+
+		fire_only_once = no
+
+		days_remove = 30
+		days_re_enable = 180
+
+		cost = 75
+
+		modifier = {
+			political_power_gain = -0.05
+		}
+
+		remove_effect = {
+			subtract_from_variable = { hog_loyalty = 0.015 }
+			set_temp_variable = { hog_political_influence = -0.025 }
+			add_hog_politics = yes
+			add_stability = 0.01
+		}
+
+		ai_will_do = {
+			base = 5
+		}
+	}
+	invest_army = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_political_power > 25
+			has_war_support > 0.5
+		}
+
+		visible = {
+			check_variable = { 
+				var = ROOT.hog_military_skill
+				value = 0.025		
+				compare = greater_than_or_equals 
+			}
+			check_variable = { hog_loyalty > 0 }
+			has_country_flag = has_hog
+		}
+
+		fire_only_once = no
+
+		days_remove = 60
+		days_re_enable = 180
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.05
+			consumer_goods_factor = 0.03
+		}
+
+		remove_effect = {
+			army_experience = 5
+			set_temp_variable = { hog_political_influence = 0.001 }
+			add_hog_politics = yes
+			set_temp_variable = { add_xp = 0.5 }
+			level_up_hog = yes
+			add_to_variable = { hog_loyalty = 0.0025 }
+		}
+
+		ai_will_do = {
+			base = 5
+		}
+	}
+	invest_navy = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_political_power > 25
+			has_war_support > 0.5
+		}
+
+		visible = {
+			check_variable = { 
+				var = ROOT.hog_military_skill
+				value = 0.025		
+				compare = greater_than_or_equals 
+			}
+			check_variable = { 
+				var = ROOT.hog_political_skill
+				value = 0.025		
+				compare = greater_than_or_equals 
+			}
+			check_variable = { hog_loyalty > 0 }
+			has_country_flag = has_hog
+		}
+
+		fire_only_once = no
+
+		days_remove = 90
+		days_re_enable = 365
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.05
+			consumer_goods_factor = 0.03
+		}
+
+		remove_effect = {
+			navy_experience = 10
+			set_temp_variable = { hog_political_influence = 0.001 }
+			add_hog_politics = yes
+			set_temp_variable = { add_xp = 1 }
+			level_up_hog = yes
+			add_to_variable = { hog_loyalty = 0.003 }
+		}
+
+		ai_will_do = {
+			base = 5
+		}
+	}
+	military_parade_hog = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_political_power > 49
+		}
+
+		visible = {
+			check_variable = { 
+				var = ROOT.hog_military_skill
+				value = 0.075		
+				compare = greater_than_or_equals 
+			}
+			check_variable = { hog_loyalty > 0.15 }
+			has_country_flag = has_hog
+		}
+
+		fire_only_once = no
+
+		days_remove = 30
+		days_re_enable = 730
+
+		cost = 50
+
+		modifier = {
+			war_support_weekly = 0.001
+			political_power_gain = -0.02
+			consumer_goods_factor = 0.03
+			offence = -0.05
+			
+		}
+		
+		remove_effect = {
+			set_temp_variable = { hog_political_influence = 0.003 }
+			add_hog_politics = yes
+			set_temp_variable = { add_xp = 2 }
+			level_up_hog = yes
+			add_to_variable = { hog_loyalty = 0.005 }
+		}
+
+		ai_will_do = {
+			base = 5
+		}
+	}
+	goods_to_the_people = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_political_power > 50
+		}
+
+		visible = {
+			check_variable = { 
+				var = ROOT.hog_political_skill
+				value = 0.075		
+				compare = greater_than_or_equals 
+			}
+			check_variable = { hog_loyalty > 0.15 }
+			has_country_flag = has_hog
+		}
+
+		fire_only_once = no
+
+		days_remove = 180
+		days_re_enable = 730
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = 0.05
+			consumer_goods_factor = 0.02
+		}
+		
+		remove_effect = {
+			set_temp_variable = { hog_political_influence = 0.003 }
+			add_hog_politics = yes
+			set_temp_variable = { add_xp = 2 }
+			level_up_hog = yes
+			add_to_variable = { hog_loyalty = 0.005 }
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 5
+		}
+	}
+	unite_government_on_common_issues = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_political_power > 25
+		}
+
+		visible = {
+			check_variable = { 
+				var = ROOT.hog_political_skill
+				value = 0.125		
+				compare = greater_than_or_equals 
+			}
+			check_variable = { hog_loyalty > 0.35 }
+			has_country_flag = has_hog
+		}
+
+		fire_only_once = no
+
+		days_remove = 180
+		days_re_enable = 730
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = 0.30
+			offence = -0.01
+			defence = -0.01
+			production_speed_industrial_complex_factor = -0.01
+			production_speed_arms_factory_factor = -0.01
+			production_speed_dockyard_factor = -0.01
+			research_speed_factor = -0.01
+		}
+		
+		remove_effect = {
+			set_temp_variable = { hog_political_influence = 0.008 }
+			add_hog_politics = yes
+			set_temp_variable = { add_xp = 4 }
+			level_up_hog = yes
+			add_to_variable = { hog_loyalty = 0.010 }
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 5
+		}
+	}
+	goods_for_loyalty = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_political_power > 50
+		}
+
+		visible = {
+			check_variable = { 
+				var = ROOT.hog_unity_skill
+				value = 0.075		
+				compare = greater_than_or_equals 
+			}
+			check_variable = { hog_loyalty > 0.15 }
+			has_country_flag = has_hog
+		}
+
+		fire_only_once = no
+
+		days_remove = 35
+		days_re_enable = 365
+
+		cost = 50
+
+		modifier = {
+			stability_weekly = 0.001
+			consumer_goods_factor = 0.03
+		}
+		
+		remove_effect = {
+			set_temp_variable = { hog_political_influence = 0.003 }
+			add_hog_politics = yes
+			set_temp_variable = { add_xp = 2 }
+			level_up_hog = yes
+			add_to_variable = { hog_loyalty = 0.005 }
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 5
+		}
+	}
+	promote_industrial_growth = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_political_power > 25
+		}
+
+		visible = {
+			check_variable = { 
+				var = ROOT.hog_industrial_skill
+				value = 0.025		
+				compare = greater_than_or_equals 
+			}
+			check_variable = { hog_loyalty > 0 }
+			has_country_flag = has_hog
+		}
+
+		fire_only_once = no
+
+		days_remove = 365
+		days_re_enable = 730
+
+		cost = 25
+
+		modifier = {
+			political_power_gain = -0.02
+			production_speed_industrial_complex_factor = 0.10
+		}
+		
+		remove_effect = {
+			set_temp_variable = { hog_political_influence = 0.001 }
+			add_hog_politics = yes
+			set_temp_variable = { add_xp = 0.5 }
+			level_up_hog = yes
+			add_to_variable = { hog_loyalty = 0.0025 }
+		}
+
+		ai_will_do = {
+			base = 5
+		}
+	}
+	more_goods_for_the_state = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_political_power > 50
+		}
+
+		visible = {
+			check_variable = { 
+				var = ROOT.hog_industrial_skill
+				value = 0.075		
+				compare = greater_than_or_equals 
+			}
+			check_variable = { hog_loyalty > 0.15 }
+			has_country_flag = has_hog
+		}
+
+		fire_only_once = no
+
+		days_remove = 365
+		days_re_enable = 730
+
+		cost = 50
+
+		modifier = {
+			consumer_goods_factor = -0.05
+			research_speed_factor = 0.02
+		}
+		
+		remove_effect = {
+			add_stability = -0.03
+			set_temp_variable = { hog_political_influence = 0.003 }
+			add_hog_politics = yes
+			set_temp_variable = { add_xp = 2 }
+			level_up_hog = yes
+			add_to_variable = { hog_loyalty = 0.005 }
+		}
+
+		ai_will_do = {
+			base = 5
+		}
+	}
+}

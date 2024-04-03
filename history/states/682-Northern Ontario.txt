@@ -1,0 +1,28 @@
+state={
+	id=682
+	name="STATE_682"
+	
+	state_category = rural
+	
+	resources={
+		steel=3
+		wood=5
+		horses=2
+	}
+
+	history={
+		owner = FCN
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = FCN
+
+	}
+
+	provinces={
+		602 777 1299 1782 4784 4869 6510 7366 9467 9480 9740 10621 10718 12278 12582 12701 13159 
+	}
+	manpower=13521
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,18 @@
+state= {
+	id=912
+	name="STATE_912"
+	manpower = 1956
+	
+	state_category = pastoral
+
+	history= {
+		owner = INV
+		add_core_of = INV
+		buildings = {
+			infrastructure = 0
+		}
+	}
+	provinces={
+	   3606 7891 10703 7696
+	}
+}

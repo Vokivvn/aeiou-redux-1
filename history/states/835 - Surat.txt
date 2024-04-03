@@ -1,0 +1,31 @@
+
+state={
+	id=835
+	name="STATE_835" 
+	manpower = 50000
+	resources={
+		
+	}
+	
+	state_category = town
+
+	history={
+		owner = POI
+		add_core_of = POI
+		buildings = {
+			4187 = {
+				naval_base = 2
+			}
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			4187 1
+		}		
+		add_extra_state_shared_building_slots = 1
+	}
+
+	provinces={
+		4187 7150
+	}
+}

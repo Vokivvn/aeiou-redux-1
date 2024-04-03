@@ -1,0 +1,42 @@
+﻿###########################
+#
+# Alba gù brath 
+#
+###########################
+
+add_namespace = SCOwallacemoment
+
+country_event = { #A chance arises           
+	id = SCOwallacemoment.1
+	title = SCOwallacemoment.1.t
+	desc = SCOwallacemoment.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	trigger = {
+		tag = SCO
+		date > 1889.01.5
+		is_ai = yes
+	}
+    fire_only_once = yes
+
+	option = {
+		name = SCOwallacemoment.1.a  #Let's go bois
+		declare_war_on = {
+				target = ENG
+				type = annex_everything
+			}
+		ENG = {
+			country_event = ENGScotland.1
+		}
+		every_country = {
+					country_event = { days = 5 id = story_news_events.26 }
+		}
+	}
+	option = {
+		name = SCOwallacemoment.1.b  #You let The Bruce down
+		add_political_power = -200
+		add_stability = -0.1
+		add_war_support = -0.1
+	}
+}

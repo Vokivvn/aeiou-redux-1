@@ -1,0 +1,30 @@
+state=
+{
+	id=333
+	name="STATE_333"
+	manpower = 202366
+	resources={
+		wood=2
+	}
+	
+	state_category = rural
+
+	history=
+	{
+		owner = BRU
+		victory_points = {
+			1208 1
+		}
+		buildings = {
+			infrastructure = 3
+			1208 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = BRU
+	}
+
+	provinces={
+		1208 2117 4216 4396 7443 8091 10285 12283 12905
+	}
+}

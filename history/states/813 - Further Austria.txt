@@ -1,0 +1,27 @@
+state={
+	id=813
+	name="STATE_813"
+	manpower = 461951
+	resources={ 
+	    wood = 1
+	}
+	state_category = rural
+
+	history={
+		owner = AUS
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			11640 1
+		}
+		victory_points = {
+			6712 2 
+		}
+		add_core_of = AUS
+	}
+
+	provinces={
+		6712 3692 11640
+	}
+}

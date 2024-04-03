@@ -1,0 +1,10 @@
+austria_uprising_status = {
+
+	AUS_public_speech = {
+		icon = border_war
+
+		available = {
+			AUS = { has_war = no }
+		}
+	}
+}

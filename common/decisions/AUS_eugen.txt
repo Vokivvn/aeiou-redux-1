@@ -1,0 +1,8702 @@
+political_actions = {
+	call_venice_to_war = {
+
+	   icon = generic_prepare_civil_war
+
+	   available = { 
+	   		any_other_country = {
+	    		has_war_with = ROOT
+	    		NOT = { has_idea = aus_idea_alliance_with_venice }
+	    		NOT = { has_war_with = VNC }   
+   			}
+	     	has_idea = aus_idea_alliance_with_venice
+	     }
+	      
+
+		visible = {
+			has_idea = aus_idea_alliance_with_venice
+			has_war = yes
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 10
+
+		days_remove = 20
+
+		complete_effect = {
+			VNC = {
+				country_event = Auseugen.32
+			}
+			FROM = {
+					set_country_flag = aus_enemy_of_austria
+				}
+			
+		}
+		remove_effect = {
+				    VNC = {
+				    	add_to_war = {
+				    		targeted_alliance = ROOT
+				    		enemy = FROM    			 
+				    		hostility_reason = asked_to_join
+				    	}
+				    	country_event = Auseugen.33
+				    }
+				    FROM = {
+				    	clr_country_flag = aus_enemy_of_austria
+				    }
+			}
+		target_trigger = {
+			FROM = {
+				NOT = { has_idea = aus_idea_alliance_with_venice }
+				NOT = { has_war_with = VNC }
+				has_war_with = ROOT
+			}
+		}
+	}
+
+	call_austria_to_war = {
+
+	   icon = generic_prepare_civil_war
+
+	   available = {
+	   		any_other_country = {
+	    		has_war_with = ROOT
+	    		NOT = { has_idea = aus_idea_alliance_with_venice }
+	    		NOT = { has_war_with = AUS }   
+   			}
+	     	has_idea = aus_idea_alliance_with_austria
+	     }
+	      
+
+		visible = {
+			has_idea = aus_idea_alliance_with_austria
+			has_war = yes
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 10
+
+		days_remove = 20
+
+		complete_effect = {
+			AUS = {
+				country_event = Auseugen.34
+				activate_decision = venice_calls_to_war
+			}
+			FROM = {
+					set_country_flag = aus_enemy_of_venice
+				}
+		}
+
+		remove_effect = {
+			    
+				    AUS = {
+				    	add_to_war = {
+				    		targeted_alliance = ROOT
+				    		enemy = FROM    			 
+				    		hostility_reason = asked_to_join
+				    	}
+				    	country_event = Auseugen.35
+				    }
+			    FROM = {
+			    	clr_country_flag = aus_enemy_of_venice
+			    }
+			}
+		target_trigger = {
+			FROM = {
+				NOT = { has_idea = aus_idea_alliance_with_austria }
+				NOT = { has_war_with = AUS }
+				has_war_with = ROOT
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+	austria_calls_to_war = {
+
+	   icon = generic_prepare_civil_war
+
+	   allowed = { tag = VNC }
+
+	   available = {
+	   		hidden_trigger = {
+	   			OR = {
+		   			NOT = {
+			   			has_idea = aus_idea_alliance_with_austria
+			   		}
+			   		FROM = {
+						NOT = { has_country_flag = aus_enemy_of_austria }
+					}
+		   		}
+	   		}
+		}
+
+		activation = {
+   			AND = {
+	   			has_idea = aus_idea_alliance_with_austria
+				FROM = {
+					has_country_flag = aus_enemy_of_austria
+				}
+   			}
+		}
+
+		fire_only_once = yes
+
+
+		days_mission_timeout = 19
+
+		timeout_effect = {
+			custom_effect_tooltip = aus_join_austrian_war
+		}
+
+		target_trigger = {
+			FROM = {
+				has_country_flag = aus_enemy_of_austria
+			}
+		}
+	}
+
+	venice_calls_to_war = {
+
+	   icon = generic_prepare_civil_war
+
+	   allowed = { tag = AUS}
+
+	   available = {
+	   		hidden_trigger = {
+	   			OR = {
+		   			NOT = {
+			   			has_idea = aus_idea_alliance_with_venice
+			   		}
+			   		FROM = {
+						NOT = { has_country_flag = aus_enemy_of_venice }
+					}
+		   		}
+	   		}
+	   }
+
+		activation = {
+   			AND = {
+   				has_idea = aus_idea_alliance_with_venice
+				FROM = {
+					has_country_flag = aus_enemy_of_venice
+				}
+   			}
+		}
+
+		fire_only_once = yes
+
+		days_mission_timeout = 19
+
+		timeout_effect = {
+			custom_effect_tooltip = aus_join_venetian_war
+		}
+
+		target_trigger = {
+			FROM = {
+				has_country_flag = aus_enemy_of_venice
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+austria_industrialization_effort = {
+	improve_industrialization_1 = {
+
+	    icon = generic_construction
+
+		available = { 
+			has_global_flag = aus_industrial_campaign_started
+		}
+	      
+
+		visible = {
+			has_global_flag = aus_industrial_campaign_started
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+				factor = 3
+			}
+
+		cost = 100
+
+		days_remove = 120
+
+		remove_effect = {
+				swap_ideas = {
+				    remove_idea = aus_idea_industrial_campaign_1
+				    add_idea = aus_idea_industrial_campaign_2
+				}
+			}
+		}
+	improve_industrialization_2 = {
+
+	    icon = generic_construction
+
+		available = { 
+			has_idea = aus_idea_industrial_campaign_2
+		}
+	      
+
+		visible = {
+			has_idea = aus_idea_industrial_campaign_2
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+				factor = 3
+			}
+
+		cost = 100
+
+		days_remove = 120
+
+		remove_effect = {
+				swap_ideas = {
+				    remove_idea = aus_idea_industrial_campaign_2
+				    add_idea = aus_idea_industrial_campaign_3
+				}
+			}
+		}
+	improve_industrialization_3 = {
+
+	    icon = generic_construction
+
+		available = { 
+			has_idea = aus_idea_industrial_campaign_3
+			NOT = { has_decision = improve_industrialization_4 }
+		}
+	      
+
+		visible = {
+			has_idea = aus_idea_industrial_campaign_3
+			NOT = { has_decision = improve_industrialization_4 }
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+				factor = 3
+			}
+
+		cost = 100
+
+		days_remove = 120
+
+		remove_effect = {
+				swap_ideas = {
+				    remove_idea = aus_idea_industrial_campaign_3
+				    add_idea = aus_idea_industrial_campaign_4
+				}
+				
+			}
+		}
+	improve_industrialization_4 = {
+
+	    icon = generic_construction
+
+		available = { 
+			has_idea = aus_idea_industrial_campaign_3
+			NOT = { has_decision = improve_industrialization_3 }
+		}
+	      
+
+		visible = {
+			has_idea = aus_idea_industrial_campaign_3
+			NOT = { has_decision = improve_industrialization_3 }
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+				factor = 3
+			}
+
+		cost = 100
+
+		days_remove = 120
+
+		remove_effect = {
+				swap_ideas = {
+				    remove_idea = aus_idea_industrial_campaign_3
+				    add_idea = aus_idea_industrial_campaign_5
+				}
+					    
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	build_better_roads_1 = {
+
+	    icon = generic_operation
+
+		available = { 
+			has_manpower > 1500
+			custom_trigger_tooltip = {
+			    tooltip = aus_at_least_1_level_industrialization	
+			    OR = {
+					has_idea = aus_idea_industrial_campaign_1
+					has_idea = aus_idea_industrial_campaign_2
+					has_idea = aus_idea_industrial_campaign_3
+					has_idea = aus_idea_industrial_campaign_4
+					has_idea = aus_idea_industrial_campaign_5
+				}
+			}
+		}
+	      
+
+		visible = {
+			has_global_flag = wien_ofen_pesth_plan_completed
+			    OR = {
+					has_idea = aus_idea_industrial_campaign_1
+					has_idea = aus_idea_industrial_campaign_2
+					has_idea = aus_idea_industrial_campaign_3
+					has_idea = aus_idea_industrial_campaign_4
+					has_idea = aus_idea_industrial_campaign_5
+				}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+				factor = 5
+			}
+
+		cost = 50
+
+		days_remove = 100
+
+
+		complete_effect = {
+			add_manpower = -1500
+		}
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+				set_global_flag = aus_first_roads_built
+				4 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 2
+					    instant_build = yes
+					}
+				}
+				934 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 1
+					    instant_build = yes
+					}
+				}
+				155 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 1
+					    instant_build = yes
+					}
+				}
+				43 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 2
+					    instant_build = yes
+					}  
+				}
+				add_manpower = 1500
+			}
+		}
+
+
+
+	wien_civilian_factories_1 = {
+
+	    icon = border_war
+
+		available = { 
+			has_manpower > 1500
+			custom_trigger_tooltip = {
+				tooltip = aus_first_roads_built
+				has_global_flag = aus_first_roads_built
+			}
+			custom_trigger_tooltip = {
+			    tooltip = aus_at_least_1_level_industrialization	
+			    OR = {
+					has_idea = aus_idea_industrial_campaign_1
+					has_idea = aus_idea_industrial_campaign_2
+					has_idea = aus_idea_industrial_campaign_3
+					has_idea = aus_idea_industrial_campaign_4
+					has_idea = aus_idea_industrial_campaign_5
+				}
+			}
+		}
+	      
+
+		visible = {
+				has_global_flag = wien_ofen_pesth_plan_completed
+			    OR = {
+					has_idea = aus_idea_industrial_campaign_1
+					has_idea = aus_idea_industrial_campaign_2
+					has_idea = aus_idea_industrial_campaign_3
+					has_idea = aus_idea_industrial_campaign_4
+					has_idea = aus_idea_industrial_campaign_5
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+				factor = 5
+			}
+
+		cost = 50
+
+		days_remove = 100
+
+
+		complete_effect = {
+			add_manpower = -1500
+		}
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		remove_effect = {
+				4 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = industrial_complex
+					    level = 1
+					    instant_build = yes
+					}
+				}
+				add_manpower = 1500
+			}
+		}
+	wien_military_factories_1 = {
+
+	    icon = border_war
+
+		available = { 
+			has_manpower > 1500
+			custom_trigger_tooltip = {
+				tooltip = aus_first_roads_built
+				has_global_flag = aus_first_roads_built
+			}
+			custom_trigger_tooltip = {
+			    tooltip = aus_at_least_1_level_industrialization	
+			    OR = {
+					has_idea = aus_idea_industrial_campaign_1
+					has_idea = aus_idea_industrial_campaign_2
+					has_idea = aus_idea_industrial_campaign_3
+					has_idea = aus_idea_industrial_campaign_4
+					has_idea = aus_idea_industrial_campaign_5
+				}
+			}
+		}
+	      
+
+		visible = {
+				has_global_flag = wien_ofen_pesth_plan_completed
+			    OR = {
+					has_idea = aus_idea_industrial_campaign_1
+					has_idea = aus_idea_industrial_campaign_2
+					has_idea = aus_idea_industrial_campaign_3
+					has_idea = aus_idea_industrial_campaign_4
+					has_idea = aus_idea_industrial_campaign_5
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+				factor = 5
+			}
+
+		cost = 50
+
+		days_remove = 100
+
+
+		complete_effect = {
+			add_manpower = -1500
+		}
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		remove_effect = {
+				4 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = arms_factory
+					    level = 1
+					    instant_build = yes
+					}
+				}
+				add_manpower = 1500
+			}
+		}
+
+
+
+
+
+
+
+
+
+	build_better_roads_2 = {
+
+	    icon = generic_operation
+
+		available = { 
+			has_manpower > 1500
+			custom_trigger_tooltip = {
+			    tooltip = aus_at_least_2_level_industrialization	
+			    OR = {
+					has_idea = aus_idea_industrial_campaign_2
+					has_idea = aus_idea_industrial_campaign_3
+					has_idea = aus_idea_industrial_campaign_4
+					has_idea = aus_idea_industrial_campaign_5
+				}
+			}
+		}
+	      
+
+		visible = {
+			has_global_flag = wien_ofen_pesth_plan_completed
+			    OR = {
+					has_idea = aus_idea_industrial_campaign_1
+					has_idea = aus_idea_industrial_campaign_2
+					has_idea = aus_idea_industrial_campaign_3
+					has_idea = aus_idea_industrial_campaign_4
+					has_idea = aus_idea_industrial_campaign_5
+				}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+				factor = 3
+			}
+
+		cost = 50
+
+		days_remove = 90
+
+
+		complete_effect = {
+			add_manpower = -1500
+		}
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+				set_global_flag = aus_second_roads_built
+				4 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 1
+					    instant_build = yes
+					}
+				}
+				934 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 1
+					    instant_build = yes
+					}
+				}
+				155 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 1
+					    instant_build = yes
+					}
+				}
+				43 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 1
+					    instant_build = yes
+					}  
+				}
+				935 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 1
+					    instant_build = yes
+					}  
+				}
+				154 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 1
+					    instant_build = yes
+					}  
+				}
+
+				add_manpower = 1500
+			}
+		}
+
+
+
+	wien_civilian_factories_2 = {
+
+	    icon = border_war
+
+		available = { 
+			has_manpower > 2000
+			custom_trigger_tooltip = {
+				tooltip = aus_second_roads_built
+				has_global_flag = aus_second_roads_built
+			}
+			custom_trigger_tooltip = {
+			    tooltip = aus_at_least_2_level_industrialization	
+			    OR = {
+					has_idea = aus_idea_industrial_campaign_2
+					has_idea = aus_idea_industrial_campaign_3
+					has_idea = aus_idea_industrial_campaign_4
+					has_idea = aus_idea_industrial_campaign_5
+				}
+			}
+		}
+	      
+
+		visible = {
+				has_global_flag = wien_ofen_pesth_plan_completed
+			    OR = {
+					has_idea = aus_idea_industrial_campaign_1
+					has_idea = aus_idea_industrial_campaign_2
+					has_idea = aus_idea_industrial_campaign_3
+					has_idea = aus_idea_industrial_campaign_4
+					has_idea = aus_idea_industrial_campaign_5
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+				factor = 5
+			}
+
+		cost = 50
+
+		days_remove = 100
+
+
+		complete_effect = {
+			add_manpower = -2000
+		}
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+				4 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = industrial_complex
+					    level = 1
+					    instant_build = yes
+					}
+				}
+				43 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+					    type = industrial_complex
+					    level = 2
+					    instant_build = yes
+					}
+				}
+				add_manpower = 2000
+			}
+		}
+	wien_military_factories_2 = {
+
+	    icon = border_war
+
+		available = { 
+			has_manpower > 2000
+			custom_trigger_tooltip = {
+				tooltip = aus_second_roads_built
+				has_global_flag = aus_second_roads_built
+			}
+			custom_trigger_tooltip = {
+			    tooltip = aus_at_least_2_level_industrialization	
+			    OR = {
+					has_idea = aus_idea_industrial_campaign_2
+					has_idea = aus_idea_industrial_campaign_3
+					has_idea = aus_idea_industrial_campaign_4
+					has_idea = aus_idea_industrial_campaign_5
+				}
+			}
+		}
+	      
+
+		visible = {
+				has_global_flag = wien_ofen_pesth_plan_completed
+			    OR = {
+					has_idea = aus_idea_industrial_campaign_1
+					has_idea = aus_idea_industrial_campaign_2
+					has_idea = aus_idea_industrial_campaign_3
+					has_idea = aus_idea_industrial_campaign_4
+					has_idea = aus_idea_industrial_campaign_5
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+				factor = 5
+			}
+
+		cost = 50
+
+		days_remove = 100
+
+
+		complete_effect = {
+			add_manpower = -2000
+		}
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+				4 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = arms_factory
+					    level = 1
+					    instant_build = yes
+					}
+				}
+				43 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = arms_factory
+					    level = 1
+					    instant_build = yes
+					}
+				}
+				add_manpower = 2000
+			}
+		}
+
+
+		build_better_roads_3 = {
+
+	    icon = generic_operation
+
+		available = { 
+			has_manpower > 2000
+			custom_trigger_tooltip = {
+			    tooltip = aus_at_least_3_level_industrialization	
+			    OR = {
+					has_idea = aus_idea_industrial_campaign_3
+					has_idea = aus_idea_industrial_campaign_4
+					has_idea = aus_idea_industrial_campaign_5
+				}
+			}
+		}
+	      
+
+		visible = {
+			has_global_flag = wien_ofen_pesth_plan_completed
+			    OR = {
+					has_idea = aus_idea_industrial_campaign_2
+					has_idea = aus_idea_industrial_campaign_3
+					has_idea = aus_idea_industrial_campaign_4
+					has_idea = aus_idea_industrial_campaign_5
+				}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+				factor = 3
+			}
+
+		cost = 50
+
+		days_remove = 90
+
+
+		complete_effect = {
+			add_manpower = -2000
+		}
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+				set_global_flag = aus_third_roads_built
+				4 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = infrastructure
+					    level = 1
+					    instant_build = yes
+					}
+				}
+				934 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = infrastructure
+					    level = 1
+					    instant_build = yes
+					}
+				}
+				155 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 1
+					    instant_build = yes
+					}
+				}
+				43 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 1
+					    instant_build = yes
+					}  
+				}
+				935 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 1
+					    instant_build = yes
+					}  
+				}
+				154 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 1
+					    instant_build = yes
+					}  
+				}
+				152 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 1
+					    instant_build = yes
+					}  
+				}
+				70 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 1
+					    instant_build = yes
+					}  
+				}
+
+
+				add_manpower = 2000
+			}
+		}
+
+
+
+	wien_civilian_factories_3 = {
+
+	    icon = border_war
+
+		available = { 
+			has_manpower > 3000
+			custom_trigger_tooltip = {
+				tooltip = aus_third_roads_built
+				has_global_flag = aus_third_roads_built
+			}
+			custom_trigger_tooltip = {
+			    tooltip = aus_at_least_3_level_industrialization	
+			    OR = {
+					has_idea = aus_idea_industrial_campaign_3
+					has_idea = aus_idea_industrial_campaign_4
+					has_idea = aus_idea_industrial_campaign_5
+				}
+			}
+		}
+	      
+
+		visible = {
+				has_global_flag = wien_ofen_pesth_plan_completed
+			    OR = {
+					has_idea = aus_idea_industrial_campaign_2
+					has_idea = aus_idea_industrial_campaign_3
+					has_idea = aus_idea_industrial_campaign_4
+					has_idea = aus_idea_industrial_campaign_5
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+				factor = 5
+			}
+
+		cost = 50
+
+		days_remove = 120
+
+
+		complete_effect = {
+			add_manpower = -3000
+		}
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		remove_effect = {
+				152 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = industrial_complex
+					    level = 1
+					    instant_build = yes
+					}
+				}
+				935 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = industrial_complex
+					    level = 1
+					    instant_build = yes
+					}
+				}
+				154 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = industrial_complex
+					    level = 1
+					    instant_build = yes
+					}
+				}
+				155 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = industrial_complex
+					    level = 1
+					    instant_build = yes
+					}
+				}
+				add_manpower = 3000
+			}
+		}
+
+
+
+	wien_military_factories_3 = {
+
+	    icon = border_war
+
+		available = { 
+			has_manpower > 3000
+			custom_trigger_tooltip = {
+				tooltip = aus_third_roads_built
+				has_global_flag = aus_third_roads_built
+			}
+			custom_trigger_tooltip = {
+			    tooltip = aus_at_least_3_level_industrialization	
+			    OR = {
+					has_idea = aus_idea_industrial_campaign_3
+					has_idea = aus_idea_industrial_campaign_4
+					has_idea = aus_idea_industrial_campaign_5
+				}
+			}
+		}
+	      
+
+		visible = {
+				has_global_flag = wien_ofen_pesth_plan_completed
+			    OR = {
+					has_idea = aus_idea_industrial_campaign_2
+					has_idea = aus_idea_industrial_campaign_3
+					has_idea = aus_idea_industrial_campaign_4
+					has_idea = aus_idea_industrial_campaign_5
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+				factor = 5
+			}
+
+		cost = 50
+
+		days_remove = 120
+
+
+		complete_effect = {
+			add_manpower = -3000
+		}
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		remove_effect = {
+				152 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = arms_factory
+					    level = 1
+					    instant_build = yes
+					}
+				}
+				935 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = arms_factory
+					    level = 1
+					    instant_build = yes
+					}
+				}
+				155 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = arms_factory
+					    level = 1
+					    instant_build = yes
+					}
+				}
+				add_manpower = 3000
+			}
+		}
+
+
+		build_better_roads_4 = {
+
+	    icon = generic_operation
+
+		available = { 
+			has_manpower > 2000
+			custom_trigger_tooltip = {
+			    tooltip = aus_at_least_4_level_industrialization	
+			    OR = {
+					has_idea = aus_idea_industrial_campaign_4
+					has_idea = aus_idea_industrial_campaign_5
+				}
+			}
+		}
+	      
+
+		visible = {
+			has_global_flag = wien_ofen_pesth_plan_completed
+			    OR = {
+					has_idea = aus_idea_industrial_campaign_3
+					has_idea = aus_idea_industrial_campaign_4
+					has_idea = aus_idea_industrial_campaign_5
+				}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+				factor = 3
+			}
+
+		cost = 50
+
+		days_remove = 80
+
+
+		complete_effect = {
+			add_manpower = -2000
+		}
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+				set_global_flag = aus_fourth_roads_built
+				4 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 2
+					    instant_build = yes
+					}
+				}
+				934 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 2
+					    instant_build = yes
+					}
+				}
+				155 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 2
+					    instant_build = yes
+					}
+				}
+				43 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 2
+					    instant_build = yes
+					}  
+				}
+				935 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 2
+					    instant_build = yes
+					}  
+				}
+				154 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 2
+					    instant_build = yes
+					}  
+				}
+				152 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 2
+					    instant_build = yes
+					}  
+				}
+				70 = {
+					add_building_construction = {
+					    type = infrastructure
+					    level = 2
+					    instant_build = yes
+					}  
+				}
+
+
+				add_manpower = 2000
+			}
+		}
+
+
+
+	wien_civilian_factories_4 = {
+
+	    icon = border_war
+
+		available = { 
+			has_manpower > 3000
+			custom_trigger_tooltip = {
+				tooltip = aus_fourth_roads_built
+				has_global_flag = aus_fourth_roads_built
+			}
+			custom_trigger_tooltip = {
+			    tooltip = aus_at_least_4_level_industrialization	
+			    OR = {
+					has_idea = aus_idea_industrial_campaign_4
+					has_idea = aus_idea_industrial_campaign_5
+				}
+			}
+		}
+	      
+
+		visible = {
+				has_global_flag = wien_ofen_pesth_plan_completed
+			    OR = {
+					has_idea = aus_idea_industrial_campaign_3
+					has_idea = aus_idea_industrial_campaign_4
+					has_idea = aus_idea_industrial_campaign_5
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+				factor = 5
+			}
+
+		cost = 50
+
+		days_remove = 120
+
+
+		complete_effect = {
+			add_manpower = -3000
+		}
+
+		modifier = {
+			civilian_factory_use = 6
+		}
+
+		remove_effect = {
+				4 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+					    type = industrial_complex
+					    level = 2
+					    instant_build = yes
+					}
+				}
+				43 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+					    type = industrial_complex
+					    level = 2
+					    instant_build = yes
+					}
+				}
+				935 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = industrial_complex
+					    level = 1
+					    instant_build = yes
+					}
+				}
+				155 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = industrial_complex
+					    level = 1
+					    instant_build = yes
+					}
+				}
+				add_manpower = 3000
+			}
+		}
+
+
+
+	wien_military_factories_4 = {
+
+	    icon = border_war
+
+		available = { 
+			has_manpower > 3000
+			custom_trigger_tooltip = {
+				tooltip = aus_fourth_roads_built
+				has_global_flag = aus_fourth_roads_built
+			}
+			custom_trigger_tooltip = {
+			    tooltip = aus_at_least_4_level_industrialization	
+			    OR = {
+					has_idea = aus_idea_industrial_campaign_4
+					has_idea = aus_idea_industrial_campaign_5
+				}
+			}
+		}
+	      
+
+		visible = {
+				has_global_flag = wien_ofen_pesth_plan_completed
+			    OR = {
+					has_idea = aus_idea_industrial_campaign_3
+					has_idea = aus_idea_industrial_campaign_4
+					has_idea = aus_idea_industrial_campaign_5
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+				factor = 5
+			}
+
+		cost = 50
+
+		days_remove = 120
+
+
+		complete_effect = {
+			add_manpower = -3000
+		}
+
+		modifier = {
+			civilian_factory_use = 6
+		}
+
+		remove_effect = {
+				70 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = arms_factory
+					    level = 1
+					    instant_build = yes
+					}
+				}
+				934 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = arms_factory
+					    level = 1
+					    instant_build = yes
+					}
+				}
+				664 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = arms_factory
+					    level = 1
+					    instant_build = yes
+					}
+				}
+				154 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = arms_factory
+					    level = 1
+					    instant_build = yes
+					}
+				}
+				add_manpower = 3000
+			}
+		}
+
+
+
+
+
+
+
+
+	cut_down_forests_in_slovakia = {
+
+	    icon = border_war
+
+		available = {
+			controls_state = 70
+			controls_state = 71
+			controls_state = 664
+			has_manpower > 1000
+		}
+	      
+
+		visible = {
+			tag = AUS
+			has_global_flag = aus_cut_down_slovakian_forests
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cost = 25
+
+		days_remove = 90
+
+		highlight_state_targets = {
+			state = 70
+			state = 71
+			state = 664
+		}
+
+		complete_effect = {
+			add_manpower = -1000
+		}
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+
+		remove_effect = {
+			IF = {
+				LIMIT = {
+					controls_state = 70
+				}
+				add_resource = {
+					type = wood
+					amount = -2
+					state = 70
+				}
+				70 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = infrastructure
+					    level = 1
+					    instant_build = yes
+					}
+					add_building_construction = {
+					    type = arms_factory
+					    level = 1
+					    instant_build = yes
+					}
+				}
+			}
+			IF = {
+				LIMIT = {
+					controls_state = 71
+				}
+				add_resource = {
+					type = wood
+					amount = -1
+					state = 71
+				}
+				71 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = infrastructure
+					    level = 1
+					    instant_build = yes
+					}
+				}
+			}
+			IF = {
+				LIMIT = {
+					controls_state = 664
+				}
+				add_resource = {
+					type = wood
+					amount = -3
+					state = 664
+				}
+				664 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					    type = infrastructure
+					    level = 1
+					    instant_build = yes
+					}
+					add_building_construction = {
+					    type = industrial_complex
+					    level = 1
+					    instant_build = yes
+					}
+				}
+			}
+			capital_scope = {
+				add_resource = {
+					type = wood
+					amount = 3
+					state = THIS
+				}
+			}
+		}
+	}
+
+
+
+
+	steam_engine_in_ironworks = {
+
+	    icon = border_war
+
+		available = {
+			has_manpower > 1000
+		}
+	      
+
+		visible = {
+			tag = AUS
+			has_global_flag = aus_cut_down_slovakian_forests
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cost = 20
+
+		days_remove = 90
+
+
+		complete_effect = {
+			add_manpower = -1000
+		}
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+
+		remove_effect = {
+			IF = {
+				LIMIT = {
+					controls_state = 932
+				}
+				932 = {
+					remove_building = {
+					    type = infrastructure
+					    level = 1
+					}
+					add_resource = {
+					    type = iron
+					    amount = 3
+					}
+				}
+			}
+
+			IF = {
+				LIMIT = {
+					controls_state = 155
+				}
+				155 = {
+					remove_building = {
+					    type = infrastructure
+					    level = 1
+					}
+					add_resource = {
+					    type = iron
+					    amount = 5
+					}
+				}
+			}
+			random_state = {
+				limit = {
+					has_resources_amount = {
+					    resource = iron
+					    amount > 1
+					}
+					is_owned_and_controlled_by = AUS
+				}
+				add_resource = {
+				    type = iron
+				    amount = 2
+				}
+			}
+			random_state = {
+				limit = {
+					has_resources_amount = {
+					    resource = iron
+					    amount > 1
+					}
+					is_owned_and_controlled_by = AUS
+				}
+				add_resource = {
+				    type = iron
+				    amount = 2
+				}
+			}
+			random_state = {
+				limit = {
+					has_resources_amount = {
+					    resource = iron
+					    amount > 1
+					}
+					is_owned_and_controlled_by = AUS
+				}
+				add_resource = {
+				    type = iron
+				    amount = 1
+				}
+			}
+			random_state = {
+				limit = {
+					has_resources_amount = {
+					    resource = iron
+					    amount > 1
+					}
+					is_owned_and_controlled_by = AUS
+				}
+				add_resource = {
+				    type = iron
+				    amount = 1
+				}
+			}
+		}
+	}
+
+
+
+
+
+	steel_mills_automation = {
+
+	    icon = border_war
+
+		available = {
+			has_manpower > 1000
+			controls_state = 935
+			controls_state = 152
+			controls_state = 4
+		}
+	      
+
+		visible = {
+			tag = AUS
+			has_global_flag = aus_cut_down_slovakian_forests
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cost = 30
+
+		days_remove = 90
+
+		highlight_state_targets = {
+			state = 935
+			state = 152
+			state = 4
+		}
+
+		complete_effect = {
+			add_manpower = -1000
+		}
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+
+		remove_effect = {
+			935 = {
+				add_resource = {
+				    type = steel
+				    amount = 2
+				}
+			}
+			152 = {
+				add_resource = {
+				    type = steel
+				    amount = 2
+				}
+			}
+			4 = {
+				add_resource = {
+				    type = steel
+				    amount = 1
+				}
+			}
+			IF = {
+				LIMIT = {
+					controls_state = 43
+				}
+				43 = {
+					add_resource = {
+					    type = steel
+					    amount = 5
+					}
+				}
+			}
+		}
+	}
+
+
+
+	modernized_powder_mills = {
+
+	    icon = border_war
+
+		available = {
+			has_manpower > 1000
+		}
+	      
+
+		visible = {
+			tag = AUS
+			has_global_flag = aus_cut_down_slovakian_forests
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cost = 30
+
+		days_remove = 90
+
+
+		complete_effect = {
+			add_manpower = -1000
+		}
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+
+		remove_effect = {
+			random_state = {
+				limit = {
+					has_resources_amount = {
+					    resource = gunpowder
+					    amount > 2
+					}
+					is_owned_and_controlled_by = AUS
+				}
+				add_resource = {
+				    type = gunpowder
+				    amount = 5
+				}
+			}
+			random_state = {
+				limit = {
+					has_resources_amount = {
+					    resource = gunpowder
+					    amount > 2
+					}
+					is_owned_and_controlled_by = AUS
+				}
+				add_resource = {
+				    type = gunpowder
+				    amount = 3
+				}
+			}
+			random_state = {
+				limit = {
+					has_resources_amount = {
+					    resource = gunpowder
+					    amount > 2
+					}
+					is_owned_and_controlled_by = AUS
+				}
+				add_resource = {
+				    type = gunpowder
+				    amount = 2
+				}
+			}
+		}
+	}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##   ##  ######    #######
+##   ##  ##   ##   ######
+##   ##  ##   ##   ##
+#######  ##   ##   ####
+#######  ######    ####
+##   ##  ##  ##    ##
+##   ##  ##   ##   ######
+##   ##  ##    ##  #######
+
+
+austria_hre_loyalty = {
+
+
+
+	send_mission_to_BAV = {
+		icon = border_war
+
+	   	available = { 
+	   		
+	   		check_variable = { var = BAV.loyalty value = 0.81 compare = less_than }
+	    }
+	      
+
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			BAV = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			check_variable = { var = BAV.loyalty value = 0.81 compare = less_than }
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 30
+
+		days_remove = 15
+
+		remove_effect = {
+				BAV = { custom_effect_tooltip = hre_loyalty_add_5 }
+
+			    add_to_variable = { BAV.loyalty = 0.05 }
+			    
+			    clamp_variable = {
+				    var = BAV.loyalty
+				    min = 0
+				    max = 1
+				}	
+
+			    			}
+	}
+	send_mission_to_HAN = {
+		icon = border_war
+
+	   	available = { 
+	   		
+	   		check_variable = { var = HAN.loyalty value = 0.81 compare = less_than }
+	    }
+	      
+
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			HAN = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			check_variable = { var = HAN.loyalty value = 0.81 compare = less_than }
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 30
+
+		days_remove = 15
+
+		remove_effect = {
+				HAN = { custom_effect_tooltip = hre_loyalty_add_5 }
+
+			    add_to_variable = { HAN.loyalty = 0.05 }
+			    
+			    clamp_variable = {
+				    var = HAN.loyalty
+				    min = 0
+				    max = 1
+				}	
+
+			    			}
+	}
+
+	send_mission_to_SAX = {
+		icon = border_war
+
+	   	available = { 
+	   		
+	   		check_variable = { var = SAX.loyalty value = 0.81 compare = less_than }
+	    }
+	      
+
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			SAX = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			check_variable = { var = SAX.loyalty value = 0.81 compare = less_than }
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 30
+
+		days_remove = 15
+
+		remove_effect = {
+				SAX = { custom_effect_tooltip = hre_loyalty_add_5 }
+
+			    add_to_variable = { SAX.loyalty = 0.05 }
+			    
+			    clamp_variable = {
+				    var = SAX.loyalty
+				    min = 0
+				    max = 1
+				}	
+
+			    			}
+	}
+
+	send_mission_to_MUN = {
+		icon = border_war
+
+	   	available = { 
+	   		
+	   		check_variable = { var = MUN.loyalty value = 0.81 compare = less_than }
+	    }
+	      
+
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			MUN = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			check_variable = { var = MUN.loyalty value = 0.81 compare = less_than }
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 30
+
+		days_remove = 15
+
+		remove_effect = {
+				MUN = { custom_effect_tooltip = hre_loyalty_add_5 }
+
+			    add_to_variable = { MUN.loyalty = 0.05 }
+			    
+			    clamp_variable = {
+				    var = MUN.loyalty
+				    min = 0
+				    max = 1
+				}	
+
+			    			}
+	}
+
+	send_mission_to_WRZ = {
+		icon = border_war
+
+	   	available = { 
+	   		
+	   		check_variable = { var = WRZ.loyalty value = 0.81 compare = less_than }
+	    }
+	      
+
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			WRZ = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			check_variable = { var = WRZ.loyalty value = 0.81 compare = less_than }
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 30
+
+		days_remove = 15
+
+		remove_effect = {
+				WRZ = { custom_effect_tooltip = hre_loyalty_add_5 }
+
+			    add_to_variable = { WRZ.loyalty = 0.05 }
+			    
+			    clamp_variable = {
+				    var = WRZ.loyalty
+				    min = 0
+				    max = 1
+				}	
+
+			    			}
+	}
+
+	send_mission_to_WUR = {
+		icon = border_war
+
+	   	available = { 
+	   		
+	   		check_variable = { var = WUR.loyalty value = 0.81 compare = less_than }
+	    }
+	      
+
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			WUR = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			check_variable = { var = WUR.loyalty value = 0.81 compare = less_than }
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 30
+
+		days_remove = 15
+
+		remove_effect = {
+				WUR = { custom_effect_tooltip = hre_loyalty_add_5 }
+
+			    add_to_variable = { WUR.loyalty = 0.05 }
+			    
+			    clamp_variable = {
+				    var = WUR.loyalty
+				    min = 0
+				    max = 1
+				}	
+
+			    			}
+	}
+
+	send_mission_to_MCK = {
+		icon = border_war
+
+	   	available = { 
+	   		
+	   		check_variable = { var = MCK.loyalty value = 0.81 compare = less_than }
+	    }
+	      
+
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			MCK = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			check_variable = { var = MCK.loyalty value = 0.81 compare = less_than }
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 30
+
+		days_remove = 15
+
+		remove_effect = {
+				MCK = { custom_effect_tooltip = hre_loyalty_add_5 }
+
+			    add_to_variable = { MCK.loyalty = 0.05 }
+			    
+			    clamp_variable = {
+				    var = MCK.loyalty
+				    min = 0
+				    max = 1
+				}	
+
+			    			}
+	}
+
+	send_mission_to_THU = {
+		icon = border_war
+
+	   	available = { 
+	   		
+	   		check_variable = { var = THU.loyalty value = 0.81 compare = less_than }
+	    }
+	      
+
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			THU = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			check_variable = { var = THU.loyalty value = 0.81 compare = less_than }
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 30
+
+		days_remove = 15
+
+		remove_effect = {
+				THU = { custom_effect_tooltip = hre_loyalty_add_5 }
+
+			    add_to_variable = { THU.loyalty = 0.05 }
+			    
+			    clamp_variable = {
+				    var = THU.loyalty
+				    min = 0
+				    max = 1
+				}	
+
+			    			}
+	}
+
+	send_mission_to_KSS = {
+		icon = border_war
+
+	   	available = { 
+	   		
+	   		check_variable = { var = KSS.loyalty value = 0.81 compare = less_than }
+	    }
+	      
+
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			KSS = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			check_variable = { var = KSS.loyalty value = 0.81 compare = less_than }
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 30
+
+		days_remove = 15
+
+		remove_effect = {
+				KSS = { custom_effect_tooltip = hre_loyalty_add_5 }
+
+			    add_to_variable = { KSS.loyalty = 0.05 }
+			    
+			    clamp_variable = {
+				    var = KSS.loyalty
+				    min = 0
+				    max = 1
+				}	
+
+			    			}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	send_gifts_to_BAV = {
+		icon = border_war
+
+	   	available = { 
+	   		
+	   		check_variable = { var = BAV.loyalty value = 1 compare = less_than_or_equals }
+	    }
+	      
+
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			BAV = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			check_variable = { var = BAV.loyalty value = 1 compare = less_than_or_equals }
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 100
+
+		days_remove = 15
+
+		remove_effect = {
+			    BAV = { 
+			    	add_political_power = 75
+			    	custom_effect_tooltip = hre_loyalty_add_15
+			   		}
+			   	add_to_variable = { BAV.loyalty = 0.15 }
+			   	clamp_variable = {
+				    var = BAV.loyalty
+				    min = 0
+				    max = 1
+				}	
+			}
+	}
+
+	send_gifts_to_HAN = {
+		icon = border_war
+
+	   	available = { 
+	   		
+	   		check_variable = { var = HAN.loyalty value = 1 compare = less_than_or_equals }
+	    }
+	      
+
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			HAN = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			check_variable = { var = HAN.loyalty value = 1 compare = less_than_or_equals }
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 100
+
+		days_remove = 15
+
+		remove_effect = {
+			    HAN = { 
+			    	add_political_power = 75
+			    	custom_effect_tooltip = hre_loyalty_add_15
+			   		}
+			   	add_to_variable = { HAN.loyalty = 0.15 }
+			   	clamp_variable = {
+				    var = HAN.loyalty
+				    min = 0
+				    max = 1
+				}	
+			}
+	}
+
+	
+
+	send_gifts_to_SAX = {
+		icon = border_war
+
+	   	available = { 
+	   		
+	   		check_variable = { var = SAX.loyalty value = 1 compare = less_than_or_equals }
+	    }
+	      
+
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			SAX = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			check_variable = { var = SAX.loyalty value = 1 compare = less_than_or_equals }
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 100
+
+		days_remove = 15
+
+		remove_effect = {
+			    SAX = { 
+			    	add_political_power = 75
+			    	custom_effect_tooltip = hre_loyalty_add_15
+			   		}
+			   	add_to_variable = { SAX.loyalty = 0.15 }
+			   	clamp_variable = {
+				    var = SAX.loyalty
+				    min = 0
+				    max = 1
+				}	
+			}
+	}
+
+	send_gifts_to_WRZ = {
+		icon = border_war
+
+	   	available = { 
+	   		
+	   		check_variable = { var = WRZ.loyalty value = 1 compare = less_than_or_equals }
+	    }
+	      
+
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			WRZ = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			check_variable = { var = WRZ.loyalty value = 1 compare = less_than_or_equals }
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 100
+
+		days_remove = 15
+
+		remove_effect = {
+			    WRZ = { 
+			    	add_political_power = 75
+			    	custom_effect_tooltip = hre_loyalty_add_15
+			   		}
+			   	add_to_variable = { WRZ.loyalty = 0.15 }
+			   	clamp_variable = {
+				    var = WRZ.loyalty
+				    min = 0
+				    max = 1
+				}	
+			}
+	}
+
+	send_gifts_to_WUR = {
+		icon = border_war
+
+	   	available = { 
+	   		
+	   		check_variable = { var = WUR.loyalty value = 1 compare = less_than_or_equals }
+	    }
+	      
+
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			WUR = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			check_variable = { var = WUR.loyalty value = 1 compare = less_than_or_equals }
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 100
+
+		days_remove = 15
+
+		remove_effect = {
+			    WUR = { 
+			    	add_political_power = 75
+			    	custom_effect_tooltip = hre_loyalty_add_15
+			   		}
+			   	add_to_variable = { WUR.loyalty = 0.15 }
+			   	clamp_variable = {
+				    var = WUR.loyalty
+				    min = 0
+				    max = 1
+				}	
+			}
+	}
+
+	send_gifts_to_MCK = {
+		icon = border_war
+
+	   	available = { 
+	   		
+	   		check_variable = { var = MCK.loyalty value = 1 compare = less_than_or_equals }
+	    }
+	      
+
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			MCK = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			check_variable = { var = MCK.loyalty value = 1 compare = less_than_or_equals }
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 100
+
+		days_remove = 15
+
+		remove_effect = {
+			    MCK = { 
+			    	add_political_power = 75
+			    	custom_effect_tooltip = hre_loyalty_add_15
+			   		}
+			   	add_to_variable = { MCK.loyalty = 0.15 }
+			   	clamp_variable = {
+				    var = MCK.loyalty
+				    min = 0
+				    max = 1
+				}	
+			}
+	}
+
+	send_gifts_to_THU = {
+		icon = border_war
+
+	   	available = { 
+	   		
+	   		check_variable = { var = THU.loyalty value = 1 compare = less_than_or_equals }
+	    }
+	      
+
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			THU = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			check_variable = { var = THU.loyalty value = 1 compare = less_than_or_equals }
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 100
+
+		days_remove = 15
+
+		remove_effect = {
+			    THU = { 
+			    	add_political_power = 75
+			    	custom_effect_tooltip = hre_loyalty_add_15
+			   		}
+			   	add_to_variable = { THU.loyalty = 0.15 }
+			   	clamp_variable = {
+				    var = THU.loyalty
+				    min = 0
+				    max = 1
+				}	
+			}
+	}
+
+	send_gifts_to_KSS = {
+		icon = border_war
+
+	   	available = { 
+	   		
+	   		check_variable = { var = KSS.loyalty value = 1 compare = less_than_or_equals }
+	    }
+	      
+
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			KSS = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			check_variable = { var = KSS.loyalty value = 1 compare = less_than_or_equals }
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 100
+
+		days_remove = 15
+
+		remove_effect = {
+			    KSS = { 
+			    	add_political_power = 75
+			    	custom_effect_tooltip = hre_loyalty_add_15
+			   		}
+			   	add_to_variable = { KSS.loyalty = 0.15 }
+			   	clamp_variable = {
+				    var = KSS.loyalty
+				    min = 0
+				    max = 1
+				}	
+			}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	recruitment_in_BAV = {
+		icon = border_war
+
+	   	available = { 
+	   		
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_80_BAV		
+			    check_variable = { BAV.loyalty > 0.79  }
+			}
+			custom_trigger_tooltip = {
+			    tooltip = hre_min_60
+	   			check_variable = { HRE_loyalty > 0.59  }
+			}
+	   		BAV = {
+	   			has_manpower > 15000
+	   		}
+	    }
+	      
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			BAV = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			check_variable = { BAV.loyalty > 0.49  }
+	   		check_variable = { HRE_loyalty > 0.49  }
+			has_global_flag = hre_majors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 25
+
+		days_remove = 25
+
+		remove_effect = {
+				AUS = {
+					add_manpower = 15000
+				}
+				BAV = {
+					add_manpower = -15000
+					custom_effect_tooltip = hre_loyalty_add_-15
+				}
+
+			    add_to_variable = { BAV.loyalty = -0.15 }
+
+			    clamp_variable = {
+				    var = BAV.loyalty
+				    min = 0
+				    max = 1
+				}	
+
+			    			}
+	}
+
+	recruitment_in_HAN = {
+		icon = border_war
+
+	   	available = { 
+	   		
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_80_HAN		
+			    check_variable = { HAN.loyalty > 0.79  }
+			}
+			custom_trigger_tooltip = {
+			    tooltip = hre_min_60
+	   			check_variable = { HRE_loyalty > 0.59  }
+			}
+	   		HAN = {
+	   			has_manpower > 15000
+	   		}
+	    }
+	      
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			HAN = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			check_variable = { HAN.loyalty > 0.49  }
+	   		check_variable = { HRE_loyalty > 0.49  }
+			has_global_flag = hre_majors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 25
+
+		days_remove = 25
+
+		remove_effect = {
+				AUS = {
+					add_manpower = 15000
+				}
+				HAN = {
+					add_manpower = -15000
+					custom_effect_tooltip = hre_loyalty_add_-15
+				}
+
+			    add_to_variable = { HAN.loyalty = -0.15 }
+
+			    clamp_variable = {
+				    var = HAN.loyalty
+				    min = 0
+				    max = 1
+				}	
+
+			    			}
+	}
+
+	recruitment_in_SAX = {
+		icon = border_war
+
+	   	available = { 
+	   		
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_80_SAX		
+			    check_variable = { SAX.loyalty > 0.79  }
+			}
+			custom_trigger_tooltip = {
+			    tooltip = hre_min_60
+	   			check_variable = { HRE_loyalty > 0.59  }
+			}
+	   		SAX = {
+	   			has_manpower > 15000
+	   		}
+	    }
+	      
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			SAX = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			check_variable = { SAX.loyalty > 0.49  }
+	   		check_variable = { HRE_loyalty > 0.49  }
+			has_global_flag = hre_majors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 25
+
+		days_remove = 25
+
+		remove_effect = {
+				AUS = {
+					add_manpower = 15000
+				}
+				SAX = {
+					add_manpower = -15000
+					custom_effect_tooltip = hre_loyalty_add_-15
+				}
+
+			    add_to_variable = { SAX.loyalty = -0.15 }
+
+			    clamp_variable = {
+				    var = SAX.loyalty
+				    min = 0
+				    max = 1
+				}	
+
+			    			}
+	}
+	recruitment_in_MUN = {
+		icon = border_war
+
+	   	available = { 
+	   		
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_80_MUN		
+			    check_variable = { MUN.loyalty > 0.79  }
+			}
+			custom_trigger_tooltip = {
+			    tooltip = hre_min_60
+	   			check_variable = { HRE_loyalty > 0.59  }
+			}
+	   		MUN = {
+	   			has_manpower > 15000
+	   		}
+	    }
+	      
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			MUN = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			check_variable = { MUN.loyalty > 0.49  }
+	   		check_variable = { HRE_loyalty > 0.49  }
+			has_global_flag = hre_majors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 25
+
+		days_remove = 25
+
+		remove_effect = {
+				AUS = {
+					add_manpower = 15000
+				}
+				MUN = {
+					add_manpower = -15000
+					custom_effect_tooltip = hre_loyalty_add_-15
+				}
+
+			    add_to_variable = { MUN.loyalty = -0.15 }
+
+			    clamp_variable = {
+				    var = MUN.loyalty
+				    min = 0
+				    max = 1
+				}	
+
+			    			}
+	}
+
+
+	recruitment_in_WRZ = {
+		icon = border_war
+
+	   	available = { 
+	   		
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_80_WRZ		
+			    check_variable = { WRZ.loyalty > 0.79  }
+			}
+			custom_trigger_tooltip = {
+			    tooltip = hre_min_60
+	   			check_variable = { HRE_loyalty > 0.59  }
+			}
+	   		WRZ = {
+	   			has_manpower > 15000
+	   		}
+	    }
+	      
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			WRZ = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			check_variable = { WRZ.loyalty > 0.49  }
+	   		check_variable = { HRE_loyalty > 0.49  }
+			has_global_flag = hre_majors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 25
+
+		days_remove = 25
+
+		remove_effect = {
+				AUS = {
+					add_manpower = 15000
+				}
+				WRZ = {
+					add_manpower = -15000
+					custom_effect_tooltip = hre_loyalty_add_-15
+				}
+
+			    add_to_variable = { WRZ.loyalty = -0.15 }
+
+			    clamp_variable = {
+				    var = WRZ.loyalty
+				    min = 0
+				    max = 1
+				}	
+
+			    			}
+	}
+
+	recruitment_in_WUR = {
+		icon = border_war
+
+	   	available = { 
+	   		
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_80_WUR		
+			    check_variable = { WUR.loyalty > 0.79  }
+			}
+			custom_trigger_tooltip = {
+			    tooltip = hre_min_60
+	   			check_variable = { HRE_loyalty > 0.59  }
+			}
+	   		WUR = {
+	   			has_manpower > 15000
+	   		}
+	    }
+	      
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			WUR = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			check_variable = { WUR.loyalty > 0.49  }
+	   		check_variable = { HRE_loyalty > 0.49  }
+			has_global_flag = hre_majors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 25
+
+		days_remove = 25
+
+		remove_effect = {
+				AUS = {
+					add_manpower = 15000
+				}
+				WUR = {
+					add_manpower = -15000
+					custom_effect_tooltip = hre_loyalty_add_-15
+				}
+
+			    add_to_variable = { WUR.loyalty = -0.15 }
+
+			    clamp_variable = {
+				    var = WUR.loyalty
+				    min = 0
+				    max = 1
+				}	
+
+			    			}
+	}
+
+	recruitment_in_MCK = {
+		icon = border_war
+
+	   	available = { 
+	   		
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_80_MCK		
+			    check_variable = { MCK.loyalty > 0.79  }
+			}
+			custom_trigger_tooltip = {
+			    tooltip = hre_min_60	
+			    check_variable = { MCK.loyalty > 0.79  }
+	   			check_variable = { HRE_loyalty > 0.59  }
+			}
+	   		MCK = {
+	   			has_manpower > 15000
+	   		}
+	    }
+	      
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			MCK = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			check_variable = { MCK.loyalty > 0.49  }
+	   		check_variable = { HRE_loyalty > 0.49  }
+			has_global_flag = hre_majors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 25
+
+		days_remove = 25
+
+		remove_effect = {
+				AUS = {
+					add_manpower = 15000
+				}
+				MCK = {
+					add_manpower = -15000
+					custom_effect_tooltip = hre_loyalty_add_-15
+				}
+
+			    add_to_variable = { MCK.loyalty = -0.15 }
+
+			    clamp_variable = {
+				    var = MCK.loyalty
+				    min = 0
+				    max = 1
+				}	
+
+			    			}
+	}
+
+	recruitment_in_THU = {
+		icon = border_war
+
+	   	available = { 
+	   		
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_80_THU		
+			    check_variable = { THU.loyalty > 0.79  }
+			}
+			custom_trigger_tooltip = {
+			    tooltip = hre_min_60	
+			    check_variable = { THU.loyalty > 0.79  }
+	   			check_variable = { HRE_loyalty > 0.59  }
+			}
+	   		THU = {
+	   			has_manpower > 15000
+	   		}
+	    }
+	      
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			THU = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			check_variable = { THU.loyalty > 0.49  }
+	   		check_variable = { HRE_loyalty > 0.49  }
+			has_global_flag = hre_majors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 25
+
+		days_remove = 25
+
+		remove_effect = {
+				AUS = {
+					add_manpower = 15000
+				}
+				THU = {
+					add_manpower = -15000
+					custom_effect_tooltip = hre_loyalty_add_-15
+				}
+
+			    add_to_variable = { THU.loyalty = -0.15 }
+
+			    clamp_variable = {
+				    var = THU.loyalty
+				    min = 0
+				    max = 1
+				}	
+
+			    			}
+	}
+
+	recruitment_in_KSS = {
+		icon = border_war
+
+	   	available = { 
+	   		
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_80_KSS		
+			    check_variable = { KSS.loyalty > 0.79  }
+			}
+			custom_trigger_tooltip = {
+			    tooltip = hre_min_60	
+			    check_variable = { KSS.loyalty > 0.79  }
+	   			check_variable = { HRE_loyalty > 0.59  }
+			}
+	   		KSS = {
+	   			has_manpower > 15000
+	   		}
+	    }
+	      
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			KSS = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			check_variable = { KSS.loyalty > 0.49  }
+	   		check_variable = { HRE_loyalty > 0.49  }
+			has_global_flag = hre_majors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 25
+
+		days_remove = 25
+
+		remove_effect = {
+				AUS = {
+					add_manpower = 15000
+				}
+				KSS = {
+					add_manpower = -15000
+					custom_effect_tooltip = hre_loyalty_add_-15
+				}
+
+			    add_to_variable = { KSS.loyalty = -0.15 }
+
+			    clamp_variable = {
+				    var = KSS.loyalty
+				    min = 0
+				    max = 1
+				}	
+
+			    			}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	weapons_from_BAV = {
+		icon = border_war
+
+	    available = { 
+	   		
+	   		BAV = { has_equipment = { infantry_equipment > 1500 } 
+	   			  	has_equipment = { melee_equipment > 2000 } }
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_80_BAV	
+			    check_variable = { BAV.loyalty > 0.79  }
+			}
+			custom_trigger_tooltip = {
+			    tooltip = hre_min_60
+	   			check_variable = { HRE_loyalty > 0.59  }
+			} 
+	    }	
+	    	
+	      
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			check_variable = { BAV.loyalty > 0.49  }
+	   		check_variable = { HRE_loyalty > 0.49  }
+			BAV = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_majors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 25
+
+		days_remove = 25
+
+		remove_effect = {
+				BAV = {
+					send_equipment = {
+					    equipment = infantry_equipment
+					    amount = 1500
+					    target = AUS
+					}
+					send_equipment = {
+					    equipment = melee_equipment
+					    amount = 2000
+					    target = AUS
+					}
+					custom_effect_tooltip = hre_loyalty_add_-25
+
+				}
+				
+			    add_to_variable = { BAV.loyalty = -0.25 }
+			    clamp_variable = {
+				    var = BAV.loyalty
+				    min = 0
+				    max = 1
+				}	
+			    			}
+	}
+
+	weapons_from_HAN = {
+		icon = border_war
+
+	    available = { 
+	   		
+	   		HAN = { has_equipment = { infantry_equipment > 1500 } 
+	   			  	has_equipment = { melee_equipment > 2000 } }
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_80_HAN	
+			    check_variable = { HAN.loyalty > 0.79  }
+			}
+			custom_trigger_tooltip = {
+			    tooltip = hre_min_60
+	   			check_variable = { HRE_loyalty > 0.59  }
+			} 
+	    }	
+	    	
+	      
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			check_variable = { HAN.loyalty > 0.49  }
+	   		check_variable = { HRE_loyalty > 0.49  }
+			HAN = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_majors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 25
+
+		days_remove = 25
+
+		remove_effect = {
+				HAN = {
+					send_equipment = {
+					    equipment = infantry_equipment
+					    amount = 1500
+					    target = AUS
+					}
+					send_equipment = {
+					    equipment = melee_equipment
+					    amount = 2000
+					    target = AUS
+					}
+					custom_effect_tooltip = hre_loyalty_add_-25
+
+				}
+				
+			    add_to_variable = { HAN.loyalty = -0.25 }
+			    clamp_variable = {
+				    var = HAN.loyalty
+				    min = 0
+				    max = 1
+				}	
+			    			}
+	}
+
+	weapons_from_SAX = {
+		icon = border_war
+
+	    available = { 
+	   		
+	   		SAX = { has_equipment = { infantry_equipment > 1500 } 
+	   			  	has_equipment = { melee_equipment > 2000 } }
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_80_SAX	
+			    check_variable = { SAX.loyalty > 0.79  }
+			}
+			custom_trigger_tooltip = {
+			    tooltip = hre_min_60
+	   			check_variable = { HRE_loyalty > 0.59  }
+			} 
+	    }	
+	    	
+	      
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			check_variable = { SAX.loyalty > 0.49  }
+	   		check_variable = { HRE_loyalty > 0.49  }
+			SAX = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_majors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 25
+
+		days_remove = 25
+
+		remove_effect = {
+				SAX = {
+					send_equipment = {
+					    equipment = infantry_equipment
+					    amount = 1500
+					    target = AUS
+					}
+					send_equipment = {
+					    equipment = melee_equipment
+					    amount = 2000
+					    target = AUS
+					}
+					custom_effect_tooltip = hre_loyalty_add_-25
+
+				}
+				
+			    add_to_variable = { SAX.loyalty = -0.25 }
+			    clamp_variable = {
+				    var = SAX.loyalty
+				    min = 0
+				    max = 1
+				}	
+			    			}
+	}
+
+	weapons_from_MUN = {
+		icon = border_war
+
+	    available = { 
+	   		
+	   		MUN = { has_equipment = { infantry_equipment > 1500 } 
+	   			  	has_equipment = { melee_equipment > 2000 } }
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_80_MUN	
+			    check_variable = { MUN.loyalty > 0.79  }
+			}
+			custom_trigger_tooltip = {
+			    tooltip = hre_min_60
+	   			check_variable = { HRE_loyalty > 0.59  }
+			} 
+	    }	
+	    	
+	      
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			check_variable = { MUN.loyalty > 0.49  }
+	   		check_variable = { HRE_loyalty > 0.49  }
+			MUN = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_majors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 25
+
+		days_remove = 25
+
+		remove_effect = {
+				MUN = {
+					send_equipment = {
+					    equipment = infantry_equipment
+					    amount = 1500
+					    target = AUS
+					}
+					send_equipment = {
+					    equipment = melee_equipment
+					    amount = 2000
+					    target = AUS
+					}
+					custom_effect_tooltip = hre_loyalty_add_-25
+
+				}
+				
+			    add_to_variable = { MUN.loyalty = -0.25 }
+			    clamp_variable = {
+				    var = MUN.loyalty
+				    min = 0
+				    max = 1
+				}	
+			    			}
+	}
+
+	weapons_from_WRZ = {
+		icon = border_war
+
+	    available = { 
+	   		
+	   		WRZ = { has_equipment = { infantry_equipment > 1500 } 
+	   			  	has_equipment = { melee_equipment > 2000 } }
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_80_WRZ	
+			    check_variable = { WRZ.loyalty > 0.79  }
+			}
+			custom_trigger_tooltip = {
+			    tooltip = hre_min_60
+	   			check_variable = { HRE_loyalty > 0.59  }
+			} 
+	    }	
+	    	
+	      
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			check_variable = { WRZ.loyalty > 0.49  }
+	   		check_variable = { HRE_loyalty > 0.49  }
+			WRZ = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_majors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 25
+
+		days_remove = 25
+
+		remove_effect = {
+				WRZ = {
+					send_equipment = {
+					    equipment = infantry_equipment
+					    amount = 1500
+					    target = AUS
+					}
+					send_equipment = {
+					    equipment = melee_equipment
+					    amount = 2000
+					    target = AUS
+					}
+					custom_effect_tooltip = hre_loyalty_add_-25
+
+				}
+				
+			    add_to_variable = { WRZ.loyalty = -0.25 }
+			    clamp_variable = {
+				    var = WRZ.loyalty
+				    min = 0
+				    max = 1
+				}	
+			    			}
+	}
+
+	weapons_from_WUR = {
+		icon = border_war
+
+	    available = { 
+	   		
+	   		WUR = { has_equipment = { infantry_equipment > 1500 } 
+	   			  	has_equipment = { melee_equipment > 2000 } }
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_80_WUR	
+			    check_variable = { WUR.loyalty > 0.79  }
+			}
+			custom_trigger_tooltip = {
+			    tooltip = hre_min_60
+	   			check_variable = { HRE_loyalty > 0.59  }
+			} 
+	    }	
+	    	
+	      
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			check_variable = { WUR.loyalty > 0.49  }
+	   		check_variable = { HRE_loyalty > 0.49  }
+			WUR = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_majors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 25
+
+		days_remove = 25
+
+		remove_effect = {
+				WUR = {
+					send_equipment = {
+					    equipment = infantry_equipment
+					    amount = 1500
+					    target = AUS
+					}
+					send_equipment = {
+					    equipment = melee_equipment
+					    amount = 2000
+					    target = AUS
+					}
+					custom_effect_tooltip = hre_loyalty_add_-25
+
+				}
+				
+			    add_to_variable = { WUR.loyalty = -0.25 }
+			    clamp_variable = {
+				    var = WUR.loyalty
+				    min = 0
+				    max = 1
+				}	
+			    			}
+	}
+
+	weapons_from_MCK = {
+		icon = border_war
+
+	    available = { 
+	   		
+	   		MCK = { has_equipment = { infantry_equipment > 1500 } 
+	   			  	has_equipment = { melee_equipment > 2000 } }
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_80_MCK	
+			    check_variable = { MCK.loyalty > 0.79  }
+			}
+			custom_trigger_tooltip = {
+			    tooltip = hre_min_60
+	   			check_variable = { HRE_loyalty > 0.59  }
+			} 
+	    }	
+	    	
+	      
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			check_variable = { MCK.loyalty > 0.49  }
+	   		check_variable = { HRE_loyalty > 0.49  }
+			MCK = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_majors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 25
+
+		days_remove = 25
+
+		remove_effect = {
+				MCK = {
+					send_equipment = {
+					    equipment = infantry_equipment
+					    amount = 1500
+					    target = AUS
+					}
+					send_equipment = {
+					    equipment = melee_equipment
+					    amount = 2000
+					    target = AUS
+					}
+					custom_effect_tooltip = hre_loyalty_add_-25
+
+				}
+				
+			    add_to_variable = { MCK.loyalty = -0.25 }
+			    clamp_variable = {
+				    var = MCK.loyalty
+				    min = 0
+				    max = 1
+				}	
+			    			}
+	}
+
+	weapons_from_THU = {
+		icon = border_war
+
+	    available = { 
+	   		
+	   		THU = { has_equipment = { infantry_equipment > 1500 } 
+	   			  	has_equipment = { melee_equipment > 2000 } }
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_80_THU	
+			    check_variable = { THU.loyalty > 0.79  }
+			}
+			custom_trigger_tooltip = {
+			    tooltip = hre_min_60
+	   			check_variable = { HRE_loyalty > 0.59  }
+			} 
+	    }	
+	    	
+	      
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			check_variable = { THU.loyalty > 0.49  }
+	   		check_variable = { HRE_loyalty > 0.49  }
+			THU = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_majors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 25
+
+		days_remove = 25
+
+		remove_effect = {
+				THU = {
+					send_equipment = {
+					    equipment = infantry_equipment
+					    amount = 1500
+					    target = AUS
+					}
+					send_equipment = {
+					    equipment = melee_equipment
+					    amount = 2000
+					    target = AUS
+					}
+					custom_effect_tooltip = hre_loyalty_add_-25
+
+				}
+				
+			    add_to_variable = { THU.loyalty = -0.25 }
+			    clamp_variable = {
+				    var = THU.loyalty
+				    min = 0
+				    max = 1
+				}	
+			    			}
+	}
+
+	weapons_from_KSS = {
+		icon = border_war
+
+	    available = { 
+	   		
+	   		KSS = { has_equipment = { infantry_equipment > 1500 } 
+	   			  	has_equipment = { melee_equipment > 2000 } }
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_80_KSS	
+			    check_variable = { KSS.loyalty > 0.79  }
+			}
+			custom_trigger_tooltip = {
+			    tooltip = hre_min_60
+	   			check_variable = { HRE_loyalty > 0.59  }
+			} 
+	    }	
+	    	
+	      
+		visible = {
+			
+			has_global_flag = hre_missions_sent
+			check_variable = { KSS.loyalty > 0.49  }
+	   		check_variable = { HRE_loyalty > 0.49  }
+			KSS = {
+				exists = yes
+				has_capitulated = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_majors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 25
+
+		days_remove = 25
+
+		remove_effect = {
+				KSS = {
+					send_equipment = {
+					    equipment = infantry_equipment
+					    amount = 1500
+					    target = AUS
+					}
+					send_equipment = {
+					    equipment = melee_equipment
+					    amount = 2000
+					    target = AUS
+					}
+					custom_effect_tooltip = hre_loyalty_add_-25
+
+				}
+				
+			    add_to_variable = { KSS.loyalty = -0.25 }
+			    clamp_variable = {
+				    var = KSS.loyalty
+				    min = 0
+				    max = 1
+				}	
+			    			}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	vassalize_BAV = {
+		icon = border_war
+
+	    available = { 
+	   		BAV = {
+	   			has_stability < 0.75
+	   		}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_100_BAV	
+			    check_variable = { BAV.loyalty > 0.99  }
+			}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_70
+	   			check_variable = { HRE_loyalty > 0.69  }
+	   		} 
+	    }	
+	    	
+		visible = {
+			
+			check_variable = { BAV.loyalty > 0.8  }
+	   		check_variable = { HRE_loyalty > 0.49  }
+			BAV = {
+				exists = yes
+				has_capitulated = no
+				is_puppet = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_majors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 200
+
+		days_remove = 25
+		fixed_random_seed = yes
+		remove_effect = {
+				random_list = {
+					10 = {
+							puppet = BAV
+							set_autonomy = {
+							    target = BAV
+							    autonomy_state = autonomy_protected_hre_state
+							}
+						}
+					90 = {
+						add_to_variable = { BAV.loyalty = -1 }
+						add_stability = -0.05
+						BAV = { custom_effect_tooltip = hre_loyalty_add_-100 }
+
+					}
+					
+				}
+			}
+		fixed_random_seed = no
+	}
+
+	vassalize_HAN = {
+		icon = border_war
+
+	    available = { 
+	   		HAN = {
+	   			has_stability < 0.75
+	   		}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_100_HAN	
+			    check_variable = { HAN.loyalty > 0.99  }
+			}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_70
+	   			check_variable = { HRE_loyalty > 0.69  }
+	   		} 
+	    }	
+	    	
+		visible = {
+			
+			check_variable = { HAN.loyalty > 0.8  }
+	   		check_variable = { HRE_loyalty > 0.49  }
+			HAN = {
+				exists = yes
+				has_capitulated = no
+				is_puppet = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_majors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 200
+
+		days_remove = 25
+		fixed_random_seed = yes
+		remove_effect = {
+				random_list = {
+					10 = {
+							puppet = HAN
+							set_autonomy = {
+							    target = HAN
+							    autonomy_state = autonomy_protected_hre_state
+							}
+						}
+					90 = {
+						add_to_variable = { HAN.loyalty = -1 }
+						add_stability = -0.05
+						HAN = { custom_effect_tooltip = hre_loyalty_add_-100 }
+
+					}
+					
+				}
+			}
+		fixed_random_seed = no
+	}
+
+	vassalize_SAX = {
+		icon = border_war
+
+	    available = { 
+	   		SAX = {
+	   			has_stability < 0.75
+	   		}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_100_SAX	
+			    check_variable = { SAX.loyalty > 0.99  }
+			}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_70
+	   			check_variable = { HRE_loyalty > 0.69  }
+	   		} 
+	    }	
+	    	
+		visible = {
+			
+			check_variable = { SAX.loyalty > 0.8  }
+	   		check_variable = { HRE_loyalty > 0.49  }
+			SAX = {
+				exists = yes
+				has_capitulated = no
+				is_puppet = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_majors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 200
+
+		days_remove = 25
+		fixed_random_seed = yes
+		remove_effect = {
+				random_list = {
+					10 = {
+							puppet = SAX
+							set_autonomy = {
+							    target = SAX
+							    autonomy_state = autonomy_protected_hre_state
+							}
+						}
+					90 = {
+						add_to_variable = { SAX.loyalty = -1 }
+						add_stability = -0.05
+						SAX = { custom_effect_tooltip = hre_loyalty_add_-100 }
+
+					}
+					
+				}
+			}
+		fixed_random_seed = no
+	}
+
+
+	vassalize_MUN = {
+		icon = border_war
+
+	    available = { 
+	   		MUN = {
+	   			has_stability < 0.75
+	   		}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_100_MUN	
+			    check_variable = { MUN.loyalty > 0.99  }
+			}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_70
+	   			check_variable = { HRE_loyalty > 0.69  }
+	   		} 
+	    }	
+	    	
+		visible = {
+			
+			check_variable = { MUN.loyalty > 0.8  }
+	   		check_variable = { HRE_loyalty > 0.49  }
+			MUN = {
+				exists = yes
+				has_capitulated = no
+				is_puppet = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_majors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 10
+
+		days_remove = 25
+		fixed_random_seed = yes
+		remove_effect = {
+				random_list = {
+					20 = {
+							puppet = MUN
+							set_autonomy = {
+							    target = MUN
+							    autonomy_state = autonomy_protected_hre_state
+							}
+						}
+					80 = {
+						add_to_variable = { MUN.loyalty = -1 }
+						add_stability = -0.05
+						MUN = { custom_effect_tooltip = hre_loyalty_add_-100 }
+
+					}
+					
+				}
+			}
+		fixed_random_seed = no
+	}
+
+	vassalize_WRZ = {
+		icon = border_war
+
+	    available = { 
+	   		WRZ = {
+	   			has_stability < 0.75
+	   		}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_100_WRZ	
+			    check_variable = { WRZ.loyalty > 0.99  }
+			}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_70
+	   			check_variable = { HRE_loyalty > 0.69  }
+	   		} 
+	    }	
+	    	
+		visible = {
+			
+			check_variable = { WRZ.loyalty > 0.8  }
+	   		check_variable = { HRE_loyalty > 0.49  }
+			WRZ = {
+				exists = yes
+				has_capitulated = no
+				is_puppet = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_majors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 10
+
+		days_remove = 25
+		fixed_random_seed = yes
+		remove_effect = {
+				random_list = {
+					20 = {
+							puppet = WRZ
+							set_autonomy = {
+							    target = WRZ
+							    autonomy_state = autonomy_protected_hre_state
+							}
+						}
+					80 = {
+						add_to_variable = { WRZ.loyalty = -1 }
+						add_stability = -0.05
+						WRZ = { custom_effect_tooltip = hre_loyalty_add_-100 }
+
+					}
+					
+				}
+			}
+		fixed_random_seed = no
+	}
+
+	vassalize_WUR = {
+		icon = border_war
+
+	    available = { 
+	   		WUR = {
+	   			has_stability < 0.75
+	   		}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_100_WUR	
+			    check_variable = { WUR.loyalty > 0.99  }
+			}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_70
+	   			check_variable = { HRE_loyalty > 0.69  }
+	   		} 
+	    }	
+	    	
+		visible = {
+			
+			check_variable = { WUR.loyalty > 0.8  }
+	   		check_variable = { HRE_loyalty > 0.49  }
+			WUR = {
+				exists = yes
+				has_capitulated = no
+				is_puppet = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_majors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 10
+
+		days_remove = 25
+		fixed_random_seed = yes
+		remove_effect = {
+				random_list = {
+					20 = {
+							puppet = WUR
+							set_autonomy = {
+							    target = WUR
+							    autonomy_state = autonomy_protected_hre_state
+							}
+						}
+					80 = {
+						add_to_variable = { WUR.loyalty = -1 }
+						add_stability = -0.05
+						WUR = { custom_effect_tooltip = hre_loyalty_add_-100 }
+
+					}
+					
+				}
+			}
+		fixed_random_seed = no
+	}
+
+	vassalize_MCK = {
+		icon = border_war
+
+	    available = { 
+	   		MCK = {
+	   			has_stability < 0.75
+	   		}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_100_MCK	
+			    check_variable = { MCK.loyalty > 0.99  }
+			}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_70
+	   			check_variable = { HRE_loyalty > 0.69  }
+	   		} 
+	    }	
+	    	
+		visible = {
+			
+			check_variable = { MCK.loyalty > 0.8  }
+	   		check_variable = { HRE_loyalty > 0.49  }
+			MCK = {
+				exists = yes
+				has_capitulated = no
+				is_puppet = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_majors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 10
+
+		days_remove = 25
+		fixed_random_seed = yes
+		remove_effect = {
+				random_list = {
+					20 = {
+							puppet = MCK
+							set_autonomy = {
+							    target = MCK
+							    autonomy_state = autonomy_protected_hre_state
+							}
+						}
+					80 = {
+						add_to_variable = { MCK.loyalty = -1 }
+						add_stability = -0.05
+						MCK = { custom_effect_tooltip = hre_loyalty_add_-100 }
+
+					}
+					
+				}
+			}
+		fixed_random_seed = no
+	}
+
+	vassalize_THU = {
+		icon = border_war
+
+	    available = { 
+	   		THU = {
+	   			has_stability < 0.75
+	   		}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_100_THU	
+			    check_variable = { THU.loyalty > 0.99  }
+			}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_70
+	   			check_variable = { HRE_loyalty > 0.69  }
+	   		} 
+	    }	
+	    	
+		visible = {
+			
+			check_variable = { THU.loyalty > 0.8  }
+	   		check_variable = { HRE_loyalty > 0.49  }
+			THU = {
+				exists = yes
+				has_capitulated = no
+				is_puppet = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_majors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 10
+
+		days_remove = 25
+		fixed_random_seed = yes
+		remove_effect = {
+				random_list = {
+					20 = {
+							puppet = THU
+							set_autonomy = {
+							    target = THU
+							    autonomy_state = autonomy_protected_hre_state
+							}
+						}
+					80 = {
+						add_to_variable = { THU.loyalty = -1 }
+						add_stability = -0.05
+						THU = { custom_effect_tooltip = hre_loyalty_add_-100 }
+
+					}
+					
+				}
+			}
+		fixed_random_seed = no
+	}
+
+	vassalize_KSS = {
+		icon = border_war
+
+	    available = { 
+	   		KSS = {
+	   			has_stability < 0.75
+	   		}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_100_KSS	
+			    check_variable = { KSS.loyalty > 0.99  }
+			}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_70
+	   			check_variable = { HRE_loyalty > 0.69  }
+	   		} 
+	    }	
+	    	
+		visible = {
+			
+			check_variable = { KSS.loyalty > 0.8  }
+	   		check_variable = { HRE_loyalty > 0.49  }
+			KSS = {
+				exists = yes
+				has_capitulated = no
+				is_puppet = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_majors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 10
+
+		days_remove = 25
+		fixed_random_seed = yes
+		remove_effect = {
+				random_list = {
+					20 = {
+							puppet = KSS
+							set_autonomy = {
+							    target = KSS
+							    autonomy_state = autonomy_protected_hre_state
+							}
+						}
+					80 = {
+						add_to_variable = { KSS.loyalty = -1 }
+						add_stability = -0.05
+						KSS = { custom_effect_tooltip = hre_loyalty_add_-100 }
+
+					}
+					
+				}
+			}
+		fixed_random_seed = no
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  send_mission_to_MRK = {
+    icon = border_war
+
+      available = { 
+        custom_trigger_tooltip = {
+          check_variable = { MRK.loyalty < 1 }
+        } 
+      }
+        
+
+    visible = {
+      
+      has_global_flag = hre_missions_sent
+      MRK = {
+        exists = yes
+        has_capitulated = no
+        NOT = { has_war_with = AUS }
+      }
+      check_variable = { var = MRK.loyalty value = 1 compare = less_than_or_equals }
+    }
+
+    fire_only_once = no
+
+    ai_will_do = {
+        factor = 1
+      }
+
+    cost = 30
+
+    days_remove = 20
+
+    remove_effect = {
+        MRK = { custom_effect_tooltip = hre_loyalty_add_10 }
+
+          add_to_variable = { MRK.loyalty = 0.1 }
+          
+          clamp_variable = {
+            var = MRK.loyalty
+            min = 0
+            max = 1
+        } 
+
+                }
+  }
+
+  send_mission_to_NSS = {
+    icon = border_war
+
+      available = { 
+        custom_trigger_tooltip = {
+          check_variable = { NSS.loyalty < 1 }
+        } 
+      }
+        
+
+    visible = {
+      
+      has_global_flag = hre_missions_sent
+      NSS = {
+        exists = yes
+        has_capitulated = no
+        NOT = { has_war_with = AUS }
+      }
+      check_variable = { var = NSS.loyalty value = 1 compare = less_than_or_equals }
+    }
+
+    fire_only_once = no
+
+    ai_will_do = {
+        factor = 1
+      }
+
+    cost = 30
+
+    days_remove = 20
+
+    remove_effect = {
+        NSS = { custom_effect_tooltip = hre_loyalty_add_10 }
+
+          add_to_variable = { NSS.loyalty = 0.1 }
+          
+          clamp_variable = {
+            var = NSS.loyalty
+            min = 0
+            max = 1
+        } 
+
+                }
+  }
+
+  send_mission_to_SCH = {
+    icon = border_war
+
+      available = { 
+        custom_trigger_tooltip = {
+          check_variable = { SCH.loyalty < 1 }
+        } 
+      }
+        
+
+    visible = {
+      
+      has_global_flag = hre_missions_sent
+      SCH = {
+        exists = yes
+        has_capitulated = no
+        NOT = { has_war_with = AUS }
+      }
+      check_variable = { var = SCH.loyalty value = 1 compare = less_than_or_equals }
+    }
+
+    fire_only_once = no
+
+    ai_will_do = {
+        factor = 1
+      }
+
+    cost = 30
+
+    days_remove = 20
+
+    remove_effect = {
+        SCH = { custom_effect_tooltip = hre_loyalty_add_10 }
+
+          add_to_variable = { SCH.loyalty = 0.1 }
+          
+          clamp_variable = {
+            var = SCH.loyalty
+            min = 0
+            max = 1
+        } 
+
+                }
+  }
+
+  send_mission_to_OLD = {
+    icon = border_war
+
+      available = { 
+        custom_trigger_tooltip = {
+          check_variable = { OLD.loyalty < 1 }
+        } 
+      }
+        
+
+    visible = {
+      
+      has_global_flag = hre_missions_sent
+      OLD = {
+        exists = yes
+        has_capitulated = no
+        NOT = { has_war_with = AUS }
+      }
+      check_variable = { var = OLD.loyalty value = 1 compare = less_than }
+    }
+
+    fire_only_once = no
+
+    ai_will_do = {
+        factor = 1
+      }
+
+    cost = 30
+
+    days_remove = 20
+
+    remove_effect = {
+        OLD = { custom_effect_tooltip = hre_loyalty_add_10 }
+
+          add_to_variable = { OLD.loyalty = 0.1 }
+          
+          clamp_variable = {
+            var = OLD.loyalty
+            min = 0
+            max = 1
+        } 
+
+                }
+  }
+
+  send_mission_to_KLE = {
+    icon = border_war
+
+      available = { 
+        custom_trigger_tooltip = {
+          check_variable = { KLE.loyalty < 1 }
+        } 
+      }
+        
+
+    visible = {
+      
+      has_global_flag = hre_missions_sent
+      KLE = {
+        exists = yes
+        has_capitulated = no
+        NOT = { has_war_with = AUS }
+      }
+      check_variable = { var = KLE.loyalty value = 1 compare = less_than }
+    }
+
+    fire_only_once = no
+
+    ai_will_do = {
+        factor = 1
+      }
+
+    cost = 30
+
+    days_remove = 20
+
+    remove_effect = {
+        KLE = { custom_effect_tooltip = hre_loyalty_add_10 }
+
+          add_to_variable = { KLE.loyalty = 0.1 }
+          
+          clamp_variable = {
+            var = KLE.loyalty
+            min = 0
+            max = 1
+        } 
+
+                }
+  }
+
+  send_mission_to_KOL = {
+    icon = border_war
+
+      available = { 
+        custom_trigger_tooltip = {
+          check_variable = { KOL.loyalty < 1 }
+        } 
+      }
+        
+
+    visible = {
+      
+      has_global_flag = hre_missions_sent
+      KOL = {
+        exists = yes
+        has_capitulated = no
+        NOT = { has_war_with = AUS }
+      }
+      check_variable = { var = KOL.loyalty value = 1 compare = less_than }
+    }
+
+    fire_only_once = no
+
+    ai_will_do = {
+        factor = 1
+      }
+
+    cost = 30
+
+    days_remove = 20
+
+    remove_effect = {
+        KOL = { custom_effect_tooltip = hre_loyalty_add_10 }
+
+          add_to_variable = { KOL.loyalty = 0.1 }
+          
+          clamp_variable = {
+            var = KOL.loyalty
+            min = 0
+            max = 1
+        } 
+
+                }
+  }
+
+  send_mission_to_TRI = {
+    icon = border_war
+
+      available = { 
+        custom_trigger_tooltip = {
+          check_variable = { TRI.loyalty < 1 }
+        } 
+      }
+        
+
+    visible = {
+      
+      has_global_flag = hre_missions_sent
+      TRI = {
+        exists = yes
+        has_capitulated = no
+        NOT = { has_war_with = AUS }
+      }
+      check_variable = { var = TRI.loyalty value = 1 compare = less_than }
+    }
+
+    fire_only_once = no
+
+    ai_will_do = {
+        factor = 1
+      }
+
+    cost = 30
+
+    days_remove = 20
+
+    remove_effect = {
+        TRI = { custom_effect_tooltip = hre_loyalty_add_10 }
+
+          add_to_variable = { TRI.loyalty = 0.1 }
+          
+          clamp_variable = {
+            var = TRI.loyalty
+            min = 0
+            max = 1
+        } 
+
+                }
+  }
+
+  send_mission_to_JUL = {
+    icon = border_war
+
+      available = { 
+        custom_trigger_tooltip = {
+          check_variable = { JUL.loyalty < 1 }
+        } 
+      }
+        
+
+    visible = {
+      
+      has_global_flag = hre_missions_sent
+      JUL = {
+        exists = yes
+        has_capitulated = no
+        NOT = { has_war_with = AUS }
+      }
+      check_variable = { var = JUL.loyalty value = 1 compare = less_than }
+    }
+
+    fire_only_once = no
+
+    ai_will_do = {
+        factor = 1
+      }
+
+    cost = 30
+
+    days_remove = 20
+
+    remove_effect = {
+        JUL = { custom_effect_tooltip = hre_loyalty_add_10 }
+
+          add_to_variable = { JUL.loyalty = 0.1 }
+          
+          clamp_variable = {
+            var = JUL.loyalty
+            min = 0
+            max = 1
+        } 
+
+                }
+  }
+
+  send_mission_to_ANB = {
+    icon = border_war
+
+      available = { 
+        custom_trigger_tooltip = {
+          check_variable = { ANB.loyalty < 1 }
+        } 
+      }
+        
+
+    visible = {
+      
+      has_global_flag = hre_missions_sent
+      ANB = {
+        exists = yes
+        has_capitulated = no
+        NOT = { has_war_with = AUS }
+      }
+      check_variable = { var = ANB.loyalty value = 1 compare = less_than }
+    }
+
+    fire_only_once = no
+
+    ai_will_do = {
+        factor = 1
+      }
+
+    cost = 30
+
+    days_remove = 20
+
+    remove_effect = {
+        ANB = { custom_effect_tooltip = hre_loyalty_add_10 }
+
+          add_to_variable = { ANB.loyalty = 0.1 }
+          
+          clamp_variable = {
+            var = ANB.loyalty
+            min = 0
+            max = 1
+        } 
+
+                }
+  }
+
+  send_mission_to_BAD = {
+    icon = border_war
+
+      available = { 
+        custom_trigger_tooltip = {
+          check_variable = { BAD.loyalty < 1 }
+        } 
+      }
+        
+
+    visible = {
+      
+      has_global_flag = hre_missions_sent
+      BAD = {
+        exists = yes
+        has_capitulated = no
+        NOT = { has_war_with = AUS }
+      }
+      check_variable = { var = BAD.loyalty value = 1 compare = less_than }
+    }
+
+    fire_only_once = no
+
+    ai_will_do = {
+        factor = 1
+      }
+
+    cost = 30
+
+    days_remove = 20
+
+    remove_effect = {
+        BAD = { custom_effect_tooltip = hre_loyalty_add_10 }
+
+          add_to_variable = { BAD.loyalty = 0.1 }
+          
+          clamp_variable = {
+            var = BAD.loyalty
+            min = 0
+            max = 1
+        } 
+
+                }
+  }
+
+  send_mission_to_NUR = {
+    icon = border_war
+
+      available = { 
+        custom_trigger_tooltip = {
+          check_variable = { NUR.loyalty < 1 }
+        } 
+      }
+        
+
+    visible = {
+      
+      has_global_flag = hre_missions_sent
+      NUR = {
+        exists = yes
+        has_capitulated = no
+        NOT = { has_war_with = AUS }
+      }
+      check_variable = { var = NUR.loyalty value = 1 compare = less_than }
+    }
+
+    fire_only_once = no
+
+    ai_will_do = {
+        factor = 1
+      }
+
+    cost = 30
+
+    days_remove = 20
+
+    remove_effect = {
+        NUR = { custom_effect_tooltip = hre_loyalty_add_10 }
+
+          add_to_variable = { NUR.loyalty = 0.1 }
+          
+          clamp_variable = {
+            var = NUR.loyalty
+            min = 0
+            max = 1
+        } 
+
+                }
+  }
+
+  send_mission_to_ULM = {
+    icon = border_war
+
+      available = { 
+        custom_trigger_tooltip = {
+          check_variable = { ULM.loyalty < 1  }
+        } 
+      }
+        
+
+    visible = {
+      
+      has_global_flag = hre_minors_missions_sent
+      ULM = {
+        exists = yes
+        has_capitulated = no
+        NOT = { has_war_with = AUS }
+      }
+      check_variable = { var = ULM.loyalty value = 1 compare = less_than }
+    }
+
+    fire_only_once = no
+
+    ai_will_do = {
+        factor = 1
+      }
+
+    cost = 30
+
+    days_remove = 20
+
+    remove_effect = {
+        ULM = { custom_effect_tooltip = hre_loyalty_add_10 }
+
+          add_to_variable = { ULM.loyalty = 0.1 }
+          
+          clamp_variable = {
+            var = ULM.loyalty
+            min = 0
+            max = 1
+        } 
+
+                }
+  }
+
+
+
+
+
+
+
+
+
+	vassalize_MRK = {
+		icon = border_war
+
+	    available = { 
+	   		MRK = {
+	   			has_stability < 0.75
+	   		}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_100_MRK	
+			    check_variable = { MRK.loyalty > 0.99  }
+			}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_70
+	   			check_variable = { HRE_loyalty > 0.69  }
+	   		} 
+	    }	
+	    	
+		visible = {
+			
+			check_variable = { MRK.loyalty > 0.8  }
+			MRK = {
+				exists = yes
+				has_capitulated = no
+				is_puppet = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_minors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 10
+
+		days_remove = 25
+		fixed_random_seed = yes
+		remove_effect = {
+				random_list = {
+					40 = {
+							puppet = MRK
+							set_autonomy = {
+							    target = MRK
+							    autonomy_state = autonomy_stabilized_vassal_state_of_hre
+							}
+						}
+					60 = {
+						add_to_variable = { MRK.loyalty = -1 }
+						add_stability = -0.05
+						MRK = { custom_effect_tooltip = hre_loyalty_add_-100 }
+
+					}
+					
+				}
+			}
+		fixed_random_seed = no
+	}
+
+	vassalize_NSS = {
+		icon = border_war
+
+	    available = { 
+	   		NSS = {
+	   			has_stability < 0.75
+	   		}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_100_NSS	
+			    check_variable = { NSS.loyalty > 0.99  }
+			}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_70
+	   			check_variable = { HRE_loyalty > 0.69  }
+	   		} 
+	    }	
+	    	
+		visible = {
+			
+			check_variable = { NSS.loyalty > 0.8  }
+			NSS = {
+				exists = yes
+				has_capitulated = no
+				is_puppet = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_minors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 10
+
+		days_remove = 25
+		fixed_random_seed = yes
+		remove_effect = {
+				random_list = {
+					40 = {
+							puppet = NSS
+							set_autonomy = {
+							    target = NSS
+							    autonomy_state = autonomy_stabilized_vassal_state_of_hre
+							}
+						}
+					60 = {
+						add_to_variable = { NSS.loyalty = -1 }
+						add_stability = -0.05
+						NSS = { custom_effect_tooltip = hre_loyalty_add_-100 }
+
+					}
+					
+				}
+			}
+		fixed_random_seed = no
+	}
+
+	vassalize_SCH = {
+		icon = border_war
+
+	    available = { 
+	   		SCH = {
+	   			has_stability < 0.75
+	   		}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_100_SCH	
+			    check_variable = { SCH.loyalty > 0.99  }
+			}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_70
+	   			check_variable = { HRE_loyalty > 0.69  }
+	   		} 
+	    }	
+	    	
+		visible = {
+			
+			check_variable = { SCH.loyalty > 0.8  }
+			SCH = {
+				exists = yes
+				has_capitulated = no
+				is_puppet = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_minors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 10
+
+		days_remove = 25
+		fixed_random_seed = yes
+		remove_effect = {
+				random_list = {
+					40 = {
+							puppet = SCH
+							set_autonomy = {
+							    target = SCH
+							    autonomy_state = autonomy_stabilized_vassal_state_of_hre
+							}
+						}
+					60 = {
+						add_to_variable = { SCH.loyalty = -1 }
+						add_stability = -0.05
+						SCH = { custom_effect_tooltip = hre_loyalty_add_-100 }
+
+					}
+					
+				}
+			}
+		fixed_random_seed = no
+	}
+
+	vassalize_OLD = {
+		icon = border_war
+
+	    available = { 
+	   		OLD = {
+	   			has_stability < 0.75
+	   		}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_100_OLD	
+			    check_variable = { OLD.loyalty > 0.99  }
+			}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_70
+	   			check_variable = { HRE_loyalty > 0.69  }
+	   		} 
+	    }	
+	    	
+		visible = {
+			
+			check_variable = { OLD.loyalty > 0.8  }
+			OLD = {
+				exists = yes
+				has_capitulated = no
+				is_puppet = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_minors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 10
+
+		days_remove = 25
+		fixed_random_seed = yes
+		remove_effect = {
+				random_list = {
+					40 = {
+							puppet = OLD
+							set_autonomy = {
+							    target = OLD
+							    autonomy_state = autonomy_stabilized_vassal_state_of_hre
+							}
+						}
+					60 = {
+						add_to_variable = { OLD.loyalty = -1 }
+						add_stability = -0.05
+						OLD = { custom_effect_tooltip = hre_loyalty_add_-100 }
+
+					}
+					
+				}
+			}
+		fixed_random_seed = no
+	}
+
+	vassalize_KLE = {
+		icon = border_war
+
+	    available = { 
+	   		KLE = {
+	   			has_stability < 0.75
+	   		}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_100_KLE	
+			    check_variable = { KLE.loyalty > 0.99  }
+			}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_70
+	   			check_variable = { HRE_loyalty > 0.69  }
+	   		} 
+	    }	
+	    	
+		visible = {
+			
+			check_variable = { KLE.loyalty > 0.8  }
+			KLE = {
+				exists = yes
+				has_capitulated = no
+				is_puppet = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_minors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 10
+
+		days_remove = 25
+		fixed_random_seed = yes
+		remove_effect = {
+				random_list = {
+					40 = {
+							puppet = KLE
+							set_autonomy = {
+							    target = KLE
+							    autonomy_state = autonomy_stabilized_vassal_state_of_hre
+							}
+						}
+					60 = {
+						add_to_variable = { KLE.loyalty = -1 }
+						add_stability = -0.05
+						KLE = { custom_effect_tooltip = hre_loyalty_add_-100 }
+
+					}
+					
+				}
+			}
+		fixed_random_seed = no
+	}
+
+	vassalize_KOL = {
+		icon = border_war
+
+	    available = { 
+	   		KOL = {
+	   			has_stability < 0.75
+	   		}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_100_KOL	
+			    check_variable = { KOL.loyalty > 0.99  }
+			}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_70
+	   			check_variable = { HRE_loyalty > 0.69  }
+	   		} 
+	    }	
+	    	
+		visible = {
+			
+			check_variable = { KOL.loyalty > 0.8  }
+			KOL = {
+				exists = yes
+				has_capitulated = no
+				is_puppet = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_minors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 10
+
+		days_remove = 25
+		fixed_random_seed = yes
+		remove_effect = {
+				random_list = {
+					40 = {
+							puppet = KOL
+							set_autonomy = {
+							    target = KOL
+							    autonomy_state = autonomy_stabilized_vassal_state_of_hre
+							}
+						}
+					60 = {
+						add_to_variable = { KOL.loyalty = -1 }
+						add_stability = -0.05
+						KOL = { custom_effect_tooltip = hre_loyalty_add_-100 }
+
+					}
+					
+				}
+			}
+		fixed_random_seed = no
+	}
+
+	vassalize_TRI = {
+		icon = border_war
+
+	    available = { 
+	   		TRI = {
+	   			has_stability < 0.75
+	   		}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_100_TRI	
+			    check_variable = { TRI.loyalty > 0.99  }
+			}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_70
+	   			check_variable = { HRE_loyalty > 0.69  }
+	   		} 
+	    }	
+	    	
+		visible = {
+			
+			check_variable = { TRI.loyalty > 0.8  }
+			TRI = {
+				exists = yes
+				has_capitulated = no
+				is_puppet = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_minors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 10
+
+		days_remove = 25
+		fixed_random_seed = yes
+		remove_effect = {
+				random_list = {
+					40 = {
+							puppet = TRI
+							set_autonomy = {
+							    target = TRI
+							    autonomy_state = autonomy_stabilized_vassal_state_of_hre
+							}
+						}
+					60 = {
+						add_to_variable = { TRI.loyalty = -1 }
+						add_stability = -0.05
+						TRI = { custom_effect_tooltip = hre_loyalty_add_-100 }
+
+					}
+					
+				}
+			}
+		fixed_random_seed = no
+	}
+
+	vassalize_JUL = {
+		icon = border_war
+
+	    available = { 
+	   		JUL = {
+	   			has_stability < 0.75
+	   		}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_100_JUL	
+			    check_variable = { JUL.loyalty > 0.99  }
+			}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_70
+	   			check_variable = { HRE_loyalty > 0.69  }
+	   		} 
+	    }	
+	    	
+		visible = {
+			
+			check_variable = { JUL.loyalty > 0.8  }
+			JUL = {
+				exists = yes
+				has_capitulated = no
+				is_puppet = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_minors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 10
+
+		days_remove = 25
+		fixed_random_seed = yes
+		remove_effect = {
+				random_list = {
+					40 = {
+							puppet = JUL
+							set_autonomy = {
+							    target = JUL
+							    autonomy_state = autonomy_stabilized_vassal_state_of_hre
+							}
+						}
+					60 = {
+						add_to_variable = { JUL.loyalty = -1 }
+						add_stability = -0.05
+						JUL = { custom_effect_tooltip = hre_loyalty_add_-100 }
+
+					}
+					
+				}
+			}
+		fixed_random_seed = no
+	}
+
+	vassalize_ANB = {
+		icon = border_war
+
+	    available = { 
+	   		ANB = {
+	   			has_stability < 0.75
+	   		}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_100_ANB	
+			    check_variable = { ANB.loyalty > 0.99  }
+			}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_70
+	   			check_variable = { HRE_loyalty > 0.69  }
+	   		} 
+	    }	
+	    	
+		visible = {
+			
+			check_variable = { ANB.loyalty > 0.8  }
+			ANB = {
+				exists = yes
+				has_capitulated = no
+				is_puppet = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_minors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 10
+
+		days_remove = 25
+		fixed_random_seed = yes
+		remove_effect = {
+				random_list = {
+					40 = {
+							puppet = ANB
+							set_autonomy = {
+							    target = ANB
+							    autonomy_state = autonomy_stabilized_vassal_state_of_hre
+							}
+						}
+					60 = {
+						add_to_variable = { ANB.loyalty = -1 }
+						add_stability = -0.05
+						ANB = { custom_effect_tooltip = hre_loyalty_add_-100 }
+
+					}
+					
+				}
+			}
+		fixed_random_seed = no
+	}
+
+	vassalize_BAD = {
+		icon = border_war
+
+	    available = { 
+	   		BAD = {
+	   			has_stability < 0.75
+	   		}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_100_BAD	
+			    check_variable = { BAD.loyalty > 0.99  }
+			}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_70
+	   			check_variable = { HRE_loyalty > 0.69  }
+	   		} 
+	    }	
+	    	
+		visible = {
+			
+			check_variable = { BAD.loyalty > 0.8  }
+			BAD = {
+				exists = yes
+				has_capitulated = no
+				is_puppet = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_minors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 10
+
+		days_remove = 25
+		fixed_random_seed = yes
+		remove_effect = {
+				random_list = {
+					40 = {
+							puppet = BAD
+							set_autonomy = {
+							    target = BAD
+							    autonomy_state = autonomy_stabilized_vassal_state_of_hre
+							}
+						}
+					60 = {
+						add_to_variable = { BAD.loyalty = -1 }
+						add_stability = -0.05
+						BAD = { custom_effect_tooltip = hre_loyalty_add_-100 }
+
+					}
+					
+				}
+			}
+		fixed_random_seed = no
+	}
+
+	vassalize_NUR = {
+		icon = border_war
+
+	    available = { 
+	   		NUR = {
+	   			has_stability < 0.75
+	   		}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_100_NUR	
+			    check_variable = { NUR.loyalty > 0.99  }
+			}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_70
+	   			check_variable = { HRE_loyalty > 0.69  }
+	   		} 
+	    }	
+	    	
+		visible = {
+			
+			check_variable = { NUR.loyalty > 0.8  }
+			NUR = {
+				exists = yes
+				has_capitulated = no
+				is_puppet = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_minors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 10
+
+		days_remove = 25
+		fixed_random_seed = yes
+		remove_effect = {
+				random_list = {
+					40 = {
+							puppet = NUR
+							set_autonomy = {
+							    target = NUR
+							    autonomy_state = autonomy_stabilized_vassal_state_of_hre
+							}
+						}
+					60 = {
+						add_to_variable = { NUR.loyalty = -1 }
+						add_stability = -0.05
+						NUR = { custom_effect_tooltip = hre_loyalty_add_-100 }
+
+					}
+					
+				}
+			}
+		fixed_random_seed = no
+	}
+
+	vassalize_ULM = {
+		icon = border_war
+
+	    available = { 
+	   		ULM = {
+	   			has_stability < 0.75
+	   		}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_100_ULM	
+			    check_variable = { ULM.loyalty > 0.99  }
+			}
+	   		custom_trigger_tooltip = {
+			    tooltip = hre_min_70
+	   			check_variable = { HRE_loyalty > 0.69  }
+	   		} 
+	    }	
+	    	
+		visible = {
+			
+			check_variable = { ULM.loyalty > 0.8  }
+			ULM = {
+				exists = yes
+				has_capitulated = no
+				is_puppet = no
+				NOT = { has_war_with = AUS }
+			}
+			has_global_flag = hre_minors_missions_sent
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+				factor = 1
+			}
+
+		cost = 10
+
+		days_remove = 25
+		fixed_random_seed = yes
+		remove_effect = {
+				random_list = {
+					40 = {
+							puppet = ULM
+							set_autonomy = {
+							    target = ULM
+							    autonomy_state = autonomy_stabilized_vassal_state_of_hre
+							}
+						}
+					60 = {
+						add_to_variable = { ULM.loyalty = -1 }
+						add_stability = -0.05
+						ULM = { custom_effect_tooltip = hre_loyalty_add_-100 }
+
+					}
+					
+				}
+			}
+		fixed_random_seed = no
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+austria_army_effort = {
+
+
+
+
+
+
+
+
+
+	complete_10_divisions_plan = {
+		icon = border_war
+
+		allowed = {
+			tag = AUS
+		}
+
+	    available = {
+	    	custom_trigger_tooltip = {
+	    		tooltip = 10_divisions_plan1_tt
+	    		has_global_flag = aus_army_effort_1 #muskets 
+	    	}
+	    	custom_trigger_tooltip = {
+	    		tooltip = 10_divisions_plan3_tt
+	    		has_global_flag = aus_army_effort_2 #melee equipment 
+	    	}
+	    	custom_trigger_tooltip = {
+	    		tooltip = 10_divisions_plan3_tt
+	    		has_global_flag = aus_army_effort_3 #support eq
+	    	}
+	    	custom_trigger_tooltip = {
+	    		tooltip = 10_divisions_plan4_tt
+	    		has_global_flag = aus_army_effort_4  #light cav eq
+	    	}
+	    	custom_trigger_tooltip = {
+	    		tooltip = 10_divisions_plan5_tt
+	    		has_global_flag = aus_army_effort_5  #artillery eq
+	    	}
+	    }	
+
+		activation = { 
+			has_global_flag = ten_divisions_plan
+		}
+
+		is_good = no
+
+		fire_only_once = yes
+
+		war_with_target_on_timeout = yes
+		
+		ai_will_do = {
+				factor = 10
+			}
+
+		days_mission_timeout = 100
+
+		timeout_effect = {
+			add_political_power = -100
+			add_stability = -0.1
+			add_war_support = -0.15 
+		}
+
+		complete_effect = {
+			add_political_power = 25
+			add_war_support = 0.1
+			custom_effect_tooltip = 10_divisions_plan_effect_tt
+
+			hidden_effect = { 
+				clr_global_flag = ten_divisions_plan
+				
+				load_oob = "AUS_royal_army"
+				
+				set_division_template_lock = {
+				    division_template = "Kaiserlich Königliche Infanterie Division"
+				    is_locked = yes
+				}
+				set_division_template_lock = {
+				    division_template = "Königlich Ungarische Infanterie Division"
+				    is_locked = yes
+				}
+				set_division_template_lock = {
+				    division_template = "Kaiserlich Königliche Reitende Division"
+				    is_locked = yes
+				}
+			}
+		}
+	}
+
+
+
+	accumulate_muskets = {
+		icon = border_war
+
+	    available = {
+	    	has_equipment = {
+			    infantry_equipment > 13999
+			}
+	    }	
+	    	
+		visible = {
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 0
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -14000
+			    producer = AUS
+			}
+			hidden_effect = {
+				set_global_flag = aus_army_effort_1
+			}
+		}
+	}
+
+
+
+	accumulate_melee_equipment = {
+		icon = border_war 
+
+	    available = {
+	    	has_equipment = {
+			    melee_equipment > 6999
+			}
+	    }	
+	    	
+		visible = {
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 0
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+			    type = melee_equipment
+			    amount = -7000
+			    producer = AUS
+			}
+			hidden_effect = {
+				set_global_flag = aus_army_effort_2
+			}
+		}
+	}
+
+
+
+	accumulate_support_equipment = {
+		icon = border_war
+
+	    available = {
+	    	has_equipment = {
+			    support_equipment > 599
+			}
+	    }	
+	    	
+		visible = {
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 0
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+			    type = support_equipment
+			    amount = -600
+			    producer = AUS
+			}
+			hidden_effect = {
+				set_global_flag = aus_army_effort_3
+			}
+		}
+	}
+
+
+
+	accumulate_light_cavalry_equipment = {
+		icon = border_war
+
+	    available = {
+	    	has_equipment = {
+			    light_cavalry_equipment > 3999
+			}
+	    }	
+	    	
+		visible = {
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 0
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+			    type = light_cavalry_equipment
+			    amount = -4000
+			    producer = AUS
+			}
+			hidden_effect = {
+				set_global_flag = aus_army_effort_4
+			}
+		}
+	}
+
+
+
+	accumulate_artillery = {
+		icon = border_war
+
+	    available = {
+	    	has_equipment = {
+			    artillery_equipment > 99
+			}
+	    }	
+	    	
+		visible = {
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+				factor = 10
+			}
+
+		cost = 0
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+			    type = artillery_equipment
+			    amount = -100
+			    producer = AUS
+			}
+			hidden_effect = {
+				set_global_flag = aus_army_effort_5
+			}
+		}
+	}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+operations = {
+
+	prepare_revolts_in_lorraine = {
+		icon = border_war
+
+	    available = {
+	    	has_equipment = {
+			    melee_equipment > 2879
+			}
+			has_equipment = {
+			    infantry_equipment > 1919
+			}
+	    }	
+	    	
+		visible = {
+			has_global_flag = AUS_imperial_revolts
+			NOT = {
+				has_global_flag = aus_revolts_in_lorraine_prepared
+			}
+			tag = AUS
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cost = 0
+
+		days_remove = 20
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+			    type = melee_equipment
+			    amount = -2880
+			    producer = AUS
+			}
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1920
+			    producer = AUS
+			}
+		}
+
+		remove_effect = {
+			
+			hidden_effect = {
+				set_global_flag = aus_revolts_in_lorraine_prepared
+			}
+		}
+	}
+
+	prepare_revolts_in_alsace = {
+		icon = border_war
+
+	    available = {
+	    	has_equipment = {
+			    melee_equipment > 3299
+			}
+			has_equipment = {
+			    infantry_equipment > 1199
+			}
+	    }	
+	    	
+		visible = {
+			has_global_flag = AUS_imperial_revolts
+			NOT = {
+				has_global_flag = aus_revolts_in_alsace_prepared
+			}
+			tag = AUS
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cost = 0
+
+		days_remove = 20
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+			    type = melee_equipment
+			    amount = -3300
+			    producer = AUS
+			}
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1200
+			    producer = AUS
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				set_global_flag = aus_revolts_in_alsace_prepared
+			}
+		}
+	}
+
+
+
+
+
+
+	fire_revolts_in_lorraine = {
+		icon = border_war
+
+	    available = {
+	   		custom_trigger_tooltip = {
+	    		tooltip = aus_has_prepared_revolts_in_lorraine_tt
+	    		has_global_flag = aus_revolts_in_lorraine_prepared
+	    	}
+	    	has_war_with = FRA
+	   	}	
+	    	
+		visible = {
+			has_global_flag = aus_revolts_in_lorraine_prepared
+			tag = AUS
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cost = 0
+
+		complete_effect = {
+			custom_effect_tooltip = aus_starts_revolts_in_lorraine_tt
+			hidden_effect = {
+				load_oob = "AUS_pro_austrian_rebels_lorraine"
+			}
+			clr_global_flag = aus_revolts_in_lorraine_prepared
+		}
+	}
+
+	fire_revolts_in_alsace = {
+		icon = border_war
+
+	    available = {
+	    	custom_trigger_tooltip = {
+	    		tooltip = aus_has_prepared_revolts_in_alsace_tt
+	    		has_global_flag = aus_revolts_in_alsace_prepared
+	    	}
+	    	has_war_with = FRA
+	    }	
+	    	
+		visible = {
+			has_global_flag = aus_revolts_in_alsace_prepared
+			tag = AUS
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cost = 0
+
+		complete_effect = {
+			custom_effect_tooltip = aus_starts_revolts_in_alsace_tt
+			hidden_effect = {
+				load_oob = "AUS_pro_austrian_rebels_alsace"
+			}
+			clr_global_flag = aus_revolts_in_alsace_prepared
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+austria_territorial_actions = {
+
+
+	aus_integrate_alsace = {
+		icon = border_war
+
+	    available = {
+	    	owns_state = 28
+	    	controls_state = 28
+	    }	
+	    	
+		visible = {
+			has_global_flag = auseugen_reconquista_int_als
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cost = 50
+
+		days_remove = 60
+
+
+		remove_effect = {
+			IF = {
+				LIMIT = {
+					AUS = {
+						controls_state = 28
+					}
+				}
+				add_state_core = 28
+				clr_global_flag = auseugen_reconquista_int_als
+			}
+		}
+	}
+
+	aus_integrate_lorraine = {
+		icon = border_war
+
+	    available = {
+	    	owns_state = 943
+	    	controls_state = 943
+	    }	
+	    	
+		visible = {
+			has_global_flag = auseugen_reconquista_int_lor
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cost = 50
+
+		days_remove = 60
+
+
+		remove_effect = {
+			IF = {
+				LIMIT = {
+					AUS = {
+						controls_state = 943
+					}
+				}
+				add_state_core = 943
+				clr_global_flag = auseugen_reconquista_int_lor
+			}
+		}
+	}
+
+
+	aus_integrate_luxembourg = {
+		icon = border_war
+
+	    available = {
+	    	owns_state = 8
+	    	controls_state = 8
+	    }	
+	    	
+		visible = {
+			has_global_flag = auseugen_reconquista_int_lux
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 8
+		}
+
+		cost = 50
+
+		days_remove = 60
+
+		remove_effect = {
+			IF = {
+				LIMIT = {
+					AUS = {
+						controls_state = 8
+					}
+				}
+				add_state_core = 8
+				clr_global_flag = auseugen_reconquista_int_lux
+			}
+		}
+	}
+
+
+	aus_integrate_posen = {
+		icon = border_war
+
+	    available = {
+	    	owns_state = 86
+	    	controls_state = 86
+	    }	
+	    	
+		visible = {
+			has_global_flag = auseugen_reconquista2_int_pos
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 8
+		}
+
+		cost = 50
+
+		days_remove = 60
+
+		remove_effect = {
+			IF = {
+				LIMIT = {
+					AUS = {
+						controls_state = 86
+					}
+				}
+				add_state_core = 86
+				clr_global_flag = auseugen_reconquista2_int_pos
+			}
+		}
+	}
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	aus_cede_posen_to_brd = {
+		icon = border_war
+
+	    available = {
+	    	owns_state = 86
+	    	controls_state = 86
+	    }	
+	    	
+		visible = {
+			has_global_flag = auseugen_reconquista2_posen_to_brd
+	    	BRD = {
+	    		exists = yes
+	    		is_puppet_of = AUS
+	    	}  
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 8
+		}
+
+		cost = 50
+
+		days_remove = 60
+
+		remove_effect = {
+			IF = {
+				LIMIT = {
+					AUS = {
+						controls_state = 86
+					}
+			    	BRD = {
+			    		exists = yes
+			    		is_puppet_of = AUS
+			    	}
+				}
+				BRD = {
+					set_state_owner = 86
+					add_state_core = 86
+				}
+				clr_global_flag = auseugen_reconquista2_posen_to_brd
+			}
+		}
+	}
+
+	aus_cede_holstein_to_sch = {
+		icon = border_war
+
+	    available = {
+	    	owns_state = 806
+	    	controls_state = 806
+	    }	
+	    	
+		visible = {
+			has_global_flag = auseugen_reconquista2_hol_to_sch
+	    	SCH = {
+	    		exists = yes
+	    		is_puppet_of = AUS
+	    	}  
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 8
+		}
+
+		cost = 50
+
+		days_remove = 60
+
+		remove_effect = {
+			IF = {
+				LIMIT = {
+					AUS = {
+						controls_state = 806
+					}
+			    	SCH = {
+			    		exists = yes
+			    		is_puppet_of = AUS
+			    	}
+				}
+				SCH = {
+					set_state_owner = 806
+					add_state_core = 806
+				}
+				clr_global_flag = auseugen_reconquista2_hol_to_sch
+			}
+		}
+	}
+
+	aus_cede_franche_comte_to_vos = {
+		icon = border_war
+
+	    available = {
+	    	owns_state = 17
+	    	controls_state = 17
+	    }	
+	    	
+		visible = {
+			has_global_flag = auseugen_reconquista_2
+			has_global_flag = auseugen_reconquista_vos_b
+	    	VOS = {
+	    		exists = yes
+	    		is_puppet_of = AUS
+	    	}  
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 8
+		}
+
+		cost = 50
+
+		days_remove = 60
+
+		remove_effect = {
+			IF = {
+				LIMIT = {
+					AUS = {
+						controls_state = 17
+					}
+			    	VOS = {
+			    		exists = yes
+			    		is_puppet_of = AUS
+			    	}
+				}
+				VOS = {
+					set_state_owner = 17
+					add_state_core = 17
+				}
+				clr_global_flag = auseugen_reconquista_vos_b
+			}
+		}
+	}
+
+	aus_cede_nord_pas_to_bel = {
+		icon = border_war
+
+	    available = {
+	    	owns_state = 29
+	    	controls_state = 29
+	    }	
+	    	
+		visible = {
+			has_global_flag = auseugen_reconquista_2
+			has_global_flag = auseugen_reconquista_bel_b
+	    	BEL = {
+	    		exists = yes
+	    		is_puppet_of = AUS
+	    	}  
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 8
+		}
+
+		cost = 50
+
+		days_remove = 60
+
+		remove_effect = {
+			IF = {
+				LIMIT = {
+					AUS = {
+						controls_state = 29
+					}
+			    	BEL = {
+			    		exists = yes
+			    		is_puppet_of = AUS
+			    	}
+				}
+				BEL = {
+					set_state_owner = 29
+					add_state_core = 29
+				}
+				clr_global_flag = auseugen_reconquista_bel_b
+			}
+		}
+	}
+
+	aus_cede_nord_pas_to_fla = {
+		icon = border_war
+
+	    available = {
+	    	owns_state = 29
+	    	controls_state = 29
+	    }	
+	    	
+		visible = {
+			has_global_flag = auseugen_reconquista_2
+			has_global_flag = auseugen_reconquista_fla_b
+	    	FLA = {
+	    		exists = yes
+	    		is_puppet_of = AUS
+	    	}  
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 8
+		}
+
+		cost = 50
+
+		days_remove = 60
+
+		remove_effect = {
+			IF = {
+				LIMIT = {
+					AUS = {
+						controls_state = 29
+					}
+			    	FLA = {
+			    		exists = yes
+			    		is_puppet_of = AUS
+			    	}
+				}
+				FLA = {
+					set_state_owner = 29
+					add_state_core = 29
+				}
+				clr_global_flag = auseugen_reconquista_fla_b
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	aus_create_bel1 = {
+		icon = border_war
+
+	    available = {
+			owns_state = 940
+			controls_state = 940
+			owns_state = 6
+			controls_state = 6
+			owns_state = 792
+			controls_state = 792
+			owns_state = 791
+			controls_state = 791
+			owns_state = 34
+			controls_state = 34
+			BEL = {
+				exists = no
+			}
+	    }
+	    	
+		visible = {
+			has_global_flag = auseugen_reconquista_bel
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cost = 20
+
+		days_remove = 30
+
+		remove_effect = {
+			IF = {
+				LIMIT = {
+					AUS = {
+						owns_state = 940
+						controls_state = 940
+						owns_state = 6
+						controls_state = 6
+						owns_state = 792
+						controls_state = 792
+						owns_state = 791
+						controls_state = 791
+						owns_state = 34
+						controls_state = 34
+					}
+					BEL = {
+						exists = no
+					}
+				}
+				BEL = {
+					add_state_core = 940
+					set_state_owner = 940
+					add_state_core = 6
+					set_state_owner = 6
+					add_state_core = 792
+					set_state_owner = 792
+					add_state_core = 791
+					set_state_owner = 791
+					add_state_core = 34
+					set_state_owner = 34
+				}
+				puppet = BEL
+				clr_global_flag = auseugen_reconquista_bel
+				set_global_flag = auseugen_reconquista_bel_b
+			}
+		}		
+	}
+
+	aus_create_bel2 = {
+		icon = border_war
+
+	    available = {
+			owns_state = 940
+			controls_state = 940
+			owns_state = 6
+			controls_state = 6
+			owns_state = 792
+			controls_state = 792
+			owns_state = 791
+			controls_state = 791
+			owns_state = 34
+			controls_state = 34
+			owns_state = 8
+			controls_state = 8
+			BEL = {
+				exists = no
+			}
+	    }
+	    	
+		visible = {
+			has_global_flag = auseugen_reconquista_bel2
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cost = 20
+
+		days_remove = 30
+
+		remove_effect = {
+			IF = {
+				LIMIT = {
+					AUS = {
+						owns_state = 940
+						controls_state = 940
+						owns_state = 6
+						controls_state = 6
+						owns_state = 792
+						controls_state = 792
+						owns_state = 791
+						controls_state = 791
+						owns_state = 34
+						controls_state = 34
+						owns_state = 8
+						controls_state = 8
+					}
+					BEL = {
+						exists = no
+					}
+				}
+				BEL = {
+					add_state_core = 940
+					set_state_owner = 940
+					add_state_core = 6
+					set_state_owner = 6
+					add_state_core = 792
+					set_state_owner = 792
+					add_state_core = 791
+					set_state_owner = 791
+					add_state_core = 34
+					set_state_owner = 34
+					add_state_core = 8
+					set_state_owner = 8
+				}
+				puppet = BEL
+				clr_global_flag = auseugen_reconquista_bel2
+				set_global_flag = auseugen_reconquista_bel_b
+			}
+		}		
+	}
+
+
+
+
+	aus_create_fla = {
+		icon = border_war
+
+	    available = {
+			owns_state = 940
+			controls_state = 940
+			owns_state = 6
+			controls_state = 6
+			owns_state = 792
+			controls_state = 792
+			FLA = {
+				exists = no
+			}
+	    }
+	    	
+		visible = {
+			has_global_flag = auseugen_reconquista_fla
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		cost = 20
+
+		days_remove = 30
+
+		remove_effect = {
+			IF = {
+				LIMIT = {
+					AUS = {
+						owns_state = 940
+						controls_state = 940
+						owns_state = 6
+						controls_state = 6
+						owns_state = 792
+						controls_state = 792
+					}
+					FLA = {
+						exists = no
+					}
+				}
+				FLA = {
+					add_state_core = 940
+					set_state_owner = 940
+					add_state_core = 6
+					set_state_owner = 6
+					add_state_core = 792
+					set_state_owner = 792
+				}
+				puppet = FLA
+				clr_global_flag = auseugen_reconquista_fla
+				set_global_flag = auseugen_reconquista_fla_b
+			}
+		}		
+	}
+
+	aus_create_lie = {
+		icon = border_war
+
+	    available = {
+			owns_state = 791
+			controls_state = 791
+			LIE = {
+				exists = no
+			}
+	    }
+	    	
+		visible = {
+			has_global_flag = auseugen_reconquista_lie
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		cost = 20
+
+		days_remove = 30
+
+		remove_effect = {
+			IF = {
+				LIMIT = {
+					AUS = {
+						owns_state = 791
+						controls_state = 791
+					}
+					LIE = {
+						exists = no
+					}
+				}
+				LIE = {
+					add_state_core = 791
+					set_state_owner = 791
+				}
+				puppet = LIE
+				clr_global_flag = auseugen_reconquista_lie
+			}
+		}		
+	}
+
+	aus_create_wal = {
+		icon = border_war
+
+	    available = {
+			owns_state = 34
+			controls_state = 34
+			WAL = {
+				exists = no
+			}
+	    }
+	    	
+		visible = {
+			has_global_flag = auseugen_reconquista_wal
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		cost = 20
+
+		days_remove = 30
+
+		remove_effect = {
+			IF = {
+				LIMIT = {
+					AUS = {
+						owns_state = 34
+						controls_state = 34
+					}
+					WAL = {
+						exists = no
+					}
+				}
+				WAL = {
+					add_state_core = 34
+					set_state_owner = 34
+				}
+				puppet = WAL
+				clr_global_flag = auseugen_reconquista_wal
+			}
+		}		
+	}
+
+	aus_create_lux = {
+		icon = border_war
+
+	    available = {
+			owns_state = 8
+			controls_state = 8
+			LUX = {
+				exists = no
+			}
+	    }
+	    	
+		visible = {
+			has_global_flag = auseugen_reconquista_lux
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 20
+
+		days_remove = 30
+
+		remove_effect = {
+			IF = {
+				LIMIT = {
+					AUS = {
+						owns_state = 8
+						controls_state = 8
+					}
+					LUX = {
+						exists = no
+					}
+				}
+				LUX = {
+					add_state_core = 8
+					set_state_owner = 8
+				}
+				puppet = LUX
+				clr_global_flag = auseugen_reconquista_lux
+			}
+		}		
+	}
+
+
+
+
+
+
+
+	aus_create_lor = {
+		icon = border_war
+
+	    available = {
+			owns_state = 943
+			controls_state = 943
+			owns_state = 944
+			controls_state = 944
+	    	LOR = {
+	    		exists = no
+	    	}
+	    }
+	    	
+		visible = {
+			has_global_flag = auseugen_reconquista_lor
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		cost = 20
+
+		days_remove = 30
+
+		remove_effect = {
+			IF = {
+				LIMIT = {
+					AUS = {
+						owns_state = 943
+						controls_state = 943
+						owns_state = 944
+						controls_state = 944
+					}
+			    	LOR = {
+			    		exists = no
+			    	}
+				}
+				LOR = {
+					add_state_core = 943
+					set_state_owner = 943
+					add_state_core = 944
+					set_state_owner = 944
+				}
+				puppet = LOR
+				clr_global_flag = auseugen_reconquista_lor
+			}
+		}		
+	}
+
+
+	aus_create_vos1 = {
+		icon = border_war
+
+	    available = {
+			owns_state = 945
+			controls_state = 945
+			owns_state = 28
+			controls_state = 28
+	    	VOS = {
+	    		exists = no
+	    	}
+	    }
+	    	
+		visible = {
+			has_global_flag = auseugen_reconquista_vos
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		cost = 20
+
+		days_remove = 30
+
+
+		remove_effect = {
+			IF = {
+				LIMIT = {
+					AUS = {
+						owns_state = 945
+						controls_state = 945
+						owns_state = 28
+						controls_state = 28						
+					}
+			    	VOS = {
+			    		exists = no
+			    	}
+				}
+				VOS = {
+					add_state_core = 945
+					set_state_owner = 945
+					add_state_core = 28
+					set_state_owner = 28
+				}
+				puppet = VOS
+				clr_global_flag = auseugen_reconquista_vos
+				set_global_flag = auseugen_reconquista_vos_b
+			}
+		}		
+	}
+
+	aus_create_vos2 = {
+		icon = border_war
+
+	    available = {
+			owns_state = 945
+			controls_state = 945
+	    	VOS = {
+	    		exists = no
+	    	}
+	    }
+	    	
+		visible = {
+			has_global_flag = auseugen_reconquista_vos2
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		cost = 20
+
+		days_remove = 30
+
+
+		remove_effect = {
+			IF = {
+				LIMIT = {
+					AUS = {
+						owns_state = 945
+						controls_state = 945				
+					}
+			    	VOS = {
+			    		exists = no
+			    	}
+				}
+				VOS = {
+					add_state_core = 945
+					set_state_owner = 945
+				}
+				puppet = VOS
+				clr_global_flag = auseugen_reconquista_vos2
+			}
+		}		
+	}
+
+
+
+
+
+
+
+
+	aus_create_prussia = {
+		icon = border_war
+
+	    available = {
+	    	86 = {
+	    		owner = {
+	    			OR = {
+	    				tag = AUS
+	    				is_puppet_of = AUS
+	    			}
+	    		}
+	    		controller = {
+	    			OR = {
+	    				tag = AUS
+	    				is_puppet_of = AUS
+	    			}
+	    		}
+	    	}
+	    	85 = {
+	    		owner = {
+	    			OR = {
+	    				tag = AUS
+	    				is_puppet_of = AUS
+	    			}
+	    		}
+	    		controller = {
+	    			OR = {
+	    				tag = AUS
+	    				is_puppet_of = AUS
+	    			}
+	    		}
+	    	}
+	    	788 = {
+	    		owner = {
+	    			OR = {
+	    				tag = AUS
+	    				is_puppet_of = AUS
+	    			}
+	    		}
+	    		controller = {
+	    			OR = {
+	    				tag = AUS
+	    				is_puppet_of = AUS
+	    			}
+	    		}
+	    	}
+	    	188 = {
+	    		owner = {
+	    			OR = {
+	    				tag = AUS
+	    				is_puppet_of = AUS
+	    			}
+	    		}
+	    		controller = {
+	    			OR = {
+	    				tag = AUS
+	    				is_puppet_of = AUS
+	    			}
+	    		}
+	    	}
+	    	5 = {
+	    		owner = {
+	    			OR = {
+	    				tag = AUS
+	    				is_puppet_of = AUS
+	    			}
+	    		}
+	    		controller = {
+	    			OR = {
+	    				tag = AUS
+	    				is_puppet_of = AUS
+	    			}
+	    		}
+	    	}
+	    	763 = {
+	    		owner = {
+	    			OR = {
+	    				tag = AUS
+	    				is_puppet_of = AUS
+	    			}
+	    		}
+	    		controller = {
+	    			OR = {
+	    				tag = AUS
+	    				is_puppet_of = AUS
+	    			}
+	    		}
+	    	}
+	    	PRS = {
+	    		OR = {
+	    			exists = no
+	    			is_puppet_of = AUS
+	    		}
+	    	}
+	    }
+	    	
+		visible = {
+			has_global_flag = auseugen_reconquista2_prussia
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		cost = 20
+
+		days_remove = 30
+
+
+		remove_effect = {
+			IF = {
+				LIMIT = {
+					86 = {
+			    		owner = {
+			    			OR = {
+			    				tag = AUS
+			    				is_puppet_of = AUS
+			    			}
+			    		}
+			    		controller = {
+			    			OR = {
+			    				tag = AUS
+			    				is_puppet_of = AUS
+			    			}
+			    		}
+			    	}
+			    	85 = {
+			    		owner = {
+			    			OR = {
+			    				tag = AUS
+			    				is_puppet_of = AUS
+			    			}
+			    		}
+			    		controller = {
+			    			OR = {
+			    				tag = AUS
+			    				is_puppet_of = AUS
+			    			}
+			    		}
+			    	}
+			    	788 = {
+			    		owner = {
+			    			OR = {
+			    				tag = AUS
+			    				is_puppet_of = AUS
+			    			}
+			    		}
+			    		controller = {
+			    			OR = {
+			    				tag = AUS
+			    				is_puppet_of = AUS
+			    			}
+			    		}
+			    	}
+			    	188 = {
+			    		owner = {
+			    			OR = {
+			    				tag = AUS
+			    				is_puppet_of = AUS
+			    			}
+			    		}
+			    		controller = {
+			    			OR = {
+			    				tag = AUS
+			    				is_puppet_of = AUS
+			    			}
+			    		}
+			    	}
+			    	5 = {
+			    		owner = {
+			    			OR = {
+			    				tag = AUS
+			    				is_puppet_of = AUS
+			    			}
+			    		}
+			    		controller = {
+			    			OR = {
+			    				tag = AUS
+			    				is_puppet_of = AUS
+			    			}
+			    		}
+			    	}
+			    	763 = {
+			    		owner = {
+			    			OR = {
+			    				tag = AUS
+			    				is_puppet_of = AUS
+			    			}
+			    		}
+			    		controller = {
+			    			OR = {
+			    				tag = AUS
+			    				is_puppet_of = AUS
+			    			}
+			    		}
+			    	}
+			    	PRS = {
+			    		OR = {
+			    			exists = no
+			    			is_puppet_of = AUS
+			    		}
+			    	}
+				}
+				PRS = {
+					add_state_core = 86
+					set_state_owner = 86
+					set_state_controller = 86
+					add_state_core = 85
+					set_state_owner = 85
+					set_state_controller = 85
+					add_state_core = 788
+					set_state_owner = 788
+					set_state_controller = 788
+					add_state_core = 188
+					set_state_owner = 188
+					set_state_controller = 188
+					add_state_core = 5
+					set_state_owner = 5
+					set_state_controller = 5
+					add_state_core = 763
+					set_state_owner = 763
+					set_state_controller = 763
+				}
+				puppet = PRS
+				clr_global_flag = auseugen_reconquista2_prussia
+			}
+		}		
+	}
+
+	aus_create_teu = {
+		icon = border_war
+
+	    available = {
+			any_owned_state = {
+				OR = {
+					is_core_of = PRS
+					state = 5
+				}
+			}
+	    }
+	    	
+		visible = {
+			has_global_flag = auseugen_reconquista2_teutons
+			PRS = {
+				exists = no
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		cost = 40
+
+		days_remove = 15
+
+		remove_effect = {
+			every_owned_state = {
+				LIMIT = {
+					is_core_of = PRS
+				}
+				PRS = {
+					set_state_owner = PREV
+				}
+			}
+			puppet = PRS
+		}		
+	}
+
+
+	add_state_to_teu = {
+		icon = border_war
+
+		state_target = yes
+	    
+	    available = {
+			FROM = {
+				is_owned_and_controlled_by = AUS
+			}
+	    }
+	    	
+		visible = {
+			has_global_flag = auseugen_reconquista2_teutons
+			FROM = {
+				is_owned_by = AUS
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		cost = 15
+
+		days_remove = 10
+
+		remove_effect = {
+			IF = {
+				LIMIT = {
+					FROM = {
+						is_owned_and_controlled_by = AUS
+					}
+				}
+				PRS = { set_state_owner = FROM }
+				IF = {
+					LIMIT = {
+						NOT = {
+							FROM = { is_core_of = PRS }
+						}
+					}
+					PRS = {
+						add_state_core = FROM
+					}
+				}
+			}
+		}
+
+		target_trigger = {
+			OR = {
+				FROM = {
+					OR = {
+						state = 5
+						state = 188
+						state = 788
+						state = 763
+					}
+					owner = {
+						NOT = {
+							tag = PRS
+						}
+					}
+				}
+				AND = {
+					FROM = {
+						state = 85
+					}
+					has_global_flag = auseugen_reconquista2_teutons2
+				}
+			}
+			
+		}
+	}
+
+
+	aus_create_dan = {
+		icon = border_war
+
+	    available = {
+			owns_state = 85
+			controls_state = 85
+			DAN = {
+				exists = no
+			}
+	    }
+	    	
+		visible = {
+			has_global_flag = auseugen_reconquista2_danzig
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 20
+
+		days_remove = 30
+
+		remove_effect = {
+			IF = {
+				LIMIT = {
+					AUS = {
+						owns_state = 85
+						controls_state = 85
+					}
+					DAN = {
+						exists = no
+					}
+				}
+				DAN = {
+					add_state_core = 85
+					set_state_owner = 85
+				}
+				puppet = DAN
+				clr_global_flag = auseugen_reconquista2_danzig
+			}
+		}		
+	}
+
+	aus_create_pos = {
+		icon = border_war
+
+	    available = {
+			owns_state = 86
+			controls_state = 86
+			POS = {
+				exists = no
+			}
+	    }
+	    	
+		visible = {
+			has_global_flag = auseugen_reconquista2_posen
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 20
+
+		days_remove = 30
+
+		remove_effect = {
+			IF = {
+				LIMIT = {
+					AUS = {
+						owns_state = 86
+						controls_state = 86
+					}
+					POS = {
+						exists = no
+					}
+				}
+				POS = {
+					add_state_core = 86
+					set_state_owner = 86
+				}
+				puppet = POS
+				clr_global_flag = auseugen_reconquista2_posen
+			}
+		}		
+	}
+
+	aus_create_scl = {
+		icon = border_war
+
+	    available = {
+			owns_state = 806
+			controls_state = 806
+			SCL = {
+				exists = no
+			}
+	    }
+	    	
+		visible = {
+			has_global_flag = auseugen_reconquista2_schleswig
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 20
+
+		days_remove = 30
+
+		remove_effect = {
+			IF = {
+				LIMIT = {
+					AUS = {
+						owns_state = 806
+						controls_state = 806
+					}
+					SCL = {
+						exists = no
+					}
+				}
+				SCL = {
+					add_state_core = 806
+					set_state_owner = 806
+				}
+				puppet = SCL
+				clr_global_flag = auseugen_reconquista2_schleswig
+			}
+		}		
+	}
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+austria_hre_actions = {
+
+	aus_hre_demand_release = {
+		icon = border_war
+
+	    available = {
+	    }	
+	    	
+		visible = {
+			FROM = {
+				is_puppet = yes
+			}
+			has_global_flag = aus_abolish_outer_influences
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cost = 80
+
+		complete_effect = {
+			FROM = {
+				OVERLORD = {
+					country_event = {
+					    id = Auseugen.134
+					    days = 3
+					    random = 48 
+					}
+				}
+				set_country_flag = hre_release_this
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					has_idea = hre_idea_conservative
+					has_idea = hre_idea_republic
+					has_idea = hre_idea_prince
+					has_idea = hre_idea_elector
+				}
+				is_puppet = yes
+				OVERLORD = {
+					NOT = {
+						TAG = AUS
+					}
+				}
+			}
+		}
+	}
+
+
+
+
+
+
+
+	aus_hre_catholicization = {
+		icon = border_war
+
+	    available = {
+	    }	
+	    	
+		visible = {
+			has_global_flag = aus_spread_catholicism_to_the_north
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cost = 100
+
+		days_remove = 540
+
+		complete_effect = {
+			custom_effect_tooltip = subs_4_imp_stab_tt
+			add_to_variable = { global.imperial_stability = -0.04 }
+
+			FROM = {
+				activate_mission = imperial_conversion
+				add_timed_idea = {
+					idea = hre_idea_ongoing_conversion
+					days = 540
+				}
+			}
+		}
+
+		modifier = {
+			weekly_manpower = -15
+			political_power_gain = -0.05
+			encryption_factor = -0.002
+		}
+
+		remove_effect = {
+			IF = {
+				LIMIT = {
+					FROM = { 
+						exists = yes
+						OR = {
+							has_idea = hre_idea_conservative
+							has_idea = hre_idea_republic
+							has_idea = hre_idea_prince
+							has_idea = hre_idea_elector
+						}
+						check_variable = { national_religion_array^0 = 3 }
+					}
+				}
+				custom_effect_tooltip = aus_hre_catholicization_tt
+				FROM = {
+					clear_array = national_religion_array
+					add_to_array = { national_religion_array = 2 }
+					add_to_array = { national_religion_array = 3 }
+					IF = {
+						LIMIT = {
+							has_opinion_modifier = AUS_opposed_protestantism
+						}
+						remove_opinion_modifier = { 
+							target = AUS
+							modifier = AUS_opposed_protestantism
+						}
+					}
+				}
+			}
+			
+			add_political_power = 170
+			
+			custom_effect_tooltip = add_25_imp_auth_tt
+			add_to_variable = { global.imperial_authority = 25 }
+			
+			custom_effect_tooltip = add_2_imp_centr_tt
+			add_to_variable = { global.imperial_centralization = 0.02 }
+			
+			custom_effect_tooltip = add_4_imp_stab_tt
+			add_to_variable = { global.imperial_stability = 0.04 }
+
+			every_country = {
+				LIMIT = {
+					check_variable = { national_religion_array^0 = 2 }
+				}
+				add_opinion_modifier = {
+					target = AUS
+					modifier = AUS_catholicization_good
+				}
+			}
+			every_country = {
+				LIMIT = {
+					check_variable = { national_religion_array^0 = 3 }
+				}
+				add_opinion_modifier = {
+					target = AUS
+					modifier = AUS_catholicization_bad
+				}
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				check_variable = { national_religion_array^0 = 3 }
+				OR = {
+					has_idea = hre_idea_conservative
+					has_idea = hre_idea_republic
+					has_idea = hre_idea_prince
+					has_idea = hre_idea_elector
+				}
+			}
+		}
+	}
+
+
+	aus_hre_execute_imperial_conscription = {
+		icon = border_war
+
+	    available = {
+			custom_trigger_tooltip = {
+			    tooltip = aus_imperial_consc_trig_tt
+			    check_variable = { global.imperial_consc_date < global.date }
+			}
+			custom_trigger_tooltip = {
+				tooltip = aus_imperial_consc_trig2_tt
+				NOT = {
+		    		has_decision = aus_hre_execute_imperial_conscription
+		    		has_decision = aus_hre_send_inspectors_to_the_members
+		    		has_decision = aus_hre_arrange_meetings_with_german_nobles
+		    		has_decision = aus_hre_threaten_country_leaders
+		    		has_decision = aus_hre_use_our_authority
+		    	}
+			}
+			has_war = yes
+	    	
+	    }	
+	    	
+		visible = {
+			has_global_flag = aus_imperial_conscription_unlocked
+		}
+
+		fire_only_once = no
+
+		days_remove = 60
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cost = 100
+
+		complete_effect = {
+			set_variable = { global.imperial_consc_date = global.date }
+			add_to_variable = { global.imperial_consc_date = 2.88 }
+		}
+
+		modifier = {
+		}
+
+		remove_effect = {
+			set_variable = { global.imperial_consc_final = 0 }
+			every_country = {
+				LIMIT = {
+					OR = {
+						has_idea = hre_idea_conservative
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_elector
+					}
+				}
+				set_variable = { imperial_consc_coun = manpower_k }
+				multiply_variable = { imperial_consc_coun = global.imperial_consc_perc }
+				multiply_variable = { imperial_consc_coun = 1000 }
+				add_to_variable = { global.imperial_consc_final = imperial_consc_coun }
+				multiply_variable = { imperial_consc_coun = -1 }
+				country_event = {
+					id = Auseugen.135
+					days = 3
+				}
+			}
+			AUS = {
+				country_event = { 
+					id = Auseugen.136
+					days = 3
+				}
+			}
+
+			randomize_temp_variable = {
+				var = temp_rand_consc_num
+				distribution = uniform
+				min = 0.005
+				max = 0.013
+			}
+
+			multiply_temp_variable = { temp_rand_consc_num = -10 }
+
+			add_to_variable = { global.imperial_consc_perc = temp_rand_consc_num }
+		}
+	}
+
+
+
+	aus_hre_send_inspectors_to_the_members = {   # 1-3
+		icon = border_war
+
+	    available = {
+	    	custom_trigger_tooltip = {
+	    		tooltip = aus_below_max_conscription_effectiveness_tt
+	    		check_variable = { global.imperial_consc_perc < 0.15 }
+	    	}
+			custom_trigger_tooltip = {
+				tooltip = aus_imperial_consc_trig2_tt
+				NOT = {
+		    		has_decision = aus_hre_execute_imperial_conscription
+		    		has_decision = aus_hre_send_inspectors_to_the_members
+		    		has_decision = aus_hre_arrange_meetings_with_german_nobles
+		    		has_decision = aus_hre_threaten_country_leaders
+		    		has_decision = aus_hre_use_our_authority
+		    	}
+			}
+	    }	
+	    	
+		visible = {
+			has_global_flag = aus_imperial_conscription_unlocked
+		}
+
+		fire_only_once = no
+
+		days_remove = 40
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		cost = 150
+
+		complete_effect = {
+		}
+
+		modifier = {
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = aus_imperial_consc_effect_3_perc
+			randomize_temp_variable = {
+				var = temp_rand_consc_num
+				distribution = uniform
+				min = 0.001
+				max = 0.004
+			}
+			multiply_temp_variable = { temp_rand_consc_num = 10 }
+			add_to_variable = { global.imperial_consc_perc = temp_rand_consc_num }
+			clamp_variable = {
+				var = global.imperial_consc_perc
+				min = 0.01
+				max = 0.15
+			}
+		}
+	}
+
+
+	aus_hre_arrange_meetings_with_german_nobles = {   # 1-4
+		icon = border_war
+
+	    available = {
+	    	custom_trigger_tooltip = {
+	    		tooltip = aus_below_max_conscription_effectiveness_tt
+	    		check_variable = { global.imperial_consc_perc < 0.15 }
+	    	}
+			custom_trigger_tooltip = {
+				tooltip = aus_imperial_consc_trig2_tt
+				NOT = {
+		    		has_decision = aus_hre_execute_imperial_conscription
+		    		has_decision = aus_hre_send_inspectors_to_the_members
+		    		has_decision = aus_hre_arrange_meetings_with_german_nobles
+		    		has_decision = aus_hre_threaten_country_leaders
+		    		has_decision = aus_hre_use_our_authority
+		    	}
+			}
+	    }	
+	    	
+		visible = {
+			has_global_flag = aus_imperial_conscription_unlocked
+		}
+
+		fire_only_once = no
+
+		days_remove = 40
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		cost = 60
+
+		complete_effect = {
+			add_stability = -0.08
+		}
+
+		modifier = {
+			stability_weekly = -0.005
+			army_org_factor = -0.03
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = aus_imperial_consc_effect_4_perc
+			randomize_temp_variable = {
+				var = temp_rand_consc_num
+				distribution = uniform
+				min = 0.001
+				max = 0.005
+			}
+			multiply_temp_variable = { temp_rand_consc_num = 10 }
+			add_to_variable = { global.imperial_consc_perc = temp_rand_consc_num }
+			clamp_variable = {
+				var = global.imperial_consc_perc
+				min = 0.01
+				max = 0.15
+			}
+		}
+	}
+
+
+	aus_hre_threaten_country_leaders = {   # 1-5
+		icon = border_war
+
+	    available = {
+	    	custom_trigger_tooltip = {
+	    		tooltip = aus_below_max_conscription_effectiveness_tt
+	    		check_variable = { global.imperial_consc_perc < 0.15 }
+	    	}
+			custom_trigger_tooltip = {
+				tooltip = aus_imperial_consc_trig2_tt
+				NOT = {
+		    		has_decision = aus_hre_execute_imperial_conscription
+		    		has_decision = aus_hre_send_inspectors_to_the_members
+		    		has_decision = aus_hre_arrange_meetings_with_german_nobles
+		    		has_decision = aus_hre_threaten_country_leaders
+		    		has_decision = aus_hre_use_our_authority
+		    	}
+			}
+	    	command_power > 15
+	    	has_army_experience > 5
+	    }	
+	    	
+		visible = {
+			has_global_flag = aus_imperial_conscription_unlocked
+		}
+
+		fire_only_once = no
+
+		days_remove = 40
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		cost = 15
+
+		complete_effect = {
+			add_stability = -0.02
+			add_command_power = -15
+			army_experience = -5
+		}
+
+		modifier = {
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = aus_imperial_consc_effect_5_perc
+			add_war_support = 0.015
+			every_country = {
+				limit = {
+					OR = {
+						has_idea = hre_idea_conservative
+						has_idea = hre_idea_republic
+						has_idea = hre_idea_prince
+						has_idea = hre_idea_elector
+					}					
+				}
+				add_opinion_modifier = {
+					target = AUS
+					modifier = HRE_threatened_us
+				}
+			}
+			randomize_temp_variable = {
+				var = temp_rand_consc_num
+				distribution = uniform
+				min = 0.001
+				max = 0.006
+			}
+			multiply_temp_variable = { temp_rand_consc_num = 10 }
+			add_to_variable = { global.imperial_consc_perc = temp_rand_consc_num }
+			clamp_variable = {
+				var = global.imperial_consc_perc
+				min = 0.01
+				max = 0.15
+			}
+		}
+	}
+
+
+	aus_hre_use_our_authority = {   # 1-6
+		icon = border_war
+
+	    available = {
+	    	custom_trigger_tooltip = {
+	    		tooltip = aus_below_max_conscription_effectiveness_tt
+	    		check_variable = { global.imperial_consc_perc < 0.15 }
+	    	}
+			custom_trigger_tooltip = {
+				tooltip = aus_imperial_consc_trig2_tt
+				NOT = {
+		    		has_decision = aus_hre_execute_imperial_conscription
+		    		has_decision = aus_hre_send_inspectors_to_the_members
+		    		has_decision = aus_hre_arrange_meetings_with_german_nobles
+		    		has_decision = aus_hre_threaten_country_leaders
+		    		has_decision = aus_hre_use_our_authority
+		    	}
+			}
+	    	custom_trigger_tooltip = {
+	    		tooltip = more_than_20_imp_auth_tt
+	    		check_variable = { global.imperial_authority > 20 }
+	    	}
+	    }	
+	    	
+		visible = {
+			has_global_flag = aus_imperial_conscription_unlocked
+		}
+
+		fire_only_once = no
+
+		days_remove = 40
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		cost = 60
+
+		complete_effect = {
+			custom_effect_tooltip = subs_20_imp_auth_tt
+			add_to_variable = { global.imperial_authority = -20 }
+		}
+
+		modifier = {
+			political_power_cost = 0.5
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = aus_imperial_consc_effect_6_perc
+			add_stability = 0.02
+
+			randomize_temp_variable = {
+				var = temp_rand_consc_num
+				distribution = uniform
+				min = 0.001
+				max = 0.007
+			}
+			multiply_temp_variable = { temp_rand_consc_num = 10 }
+			add_to_variable = { global.imperial_consc_perc = temp_rand_consc_num }
+			clamp_variable = {
+				var = global.imperial_consc_perc
+				min = 0.01
+				max = 0.15
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# aus_var_loyalty_of_generals
+# aus_var_soldiers_support
+
+
+austria_state_of_army = {
+
+	aus_revive_conservative_spirit = {
+		icon = border_war
+
+	    available = {
+	    }	
+	    	
+		visible = {
+		}
+
+		fire_only_once = no
+
+		days_remove = 60
+		days_re_enable = 200
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 40
+
+		complete_effect = {
+			custom_effect_tooltip = aus_sol_sup_neg_8_tt
+			add_to_variable = { aus_var_soldiers_support = -0.008 }
+		}
+
+		modifier = {
+			stability_weekly = -0.001
+			political_power_cost = 0.3
+			research_speed_factor = -0.03
+		}
+
+		remove_effect = {
+			random_list = {
+			    5 = {
+			        add_to_variable = { aus_var_loyalty_of_generals = -0.01 }
+			        add_to_variable = { aus_var_soldiers_support = -0.002 }
+			        custom_effect_tooltip = aus_gen_loy_neg_10_tt
+			        custom_effect_tooltip = aus_sol_sup_neg_2_tt
+			    }
+			    75 = {
+			    	# 2-4 %
+
+			        randomize_temp_variable = {
+						var = temp_gen_rand
+						distribution = uniform
+						min = 0.020
+						max = 0.040
+					}
+
+					add_to_variable = { aus_var_loyalty_of_generals = temp_gen_rand }
+					set_temp_variable = { temp_gen_rand = 0 }
+
+					custom_effect_tooltip = aus_gen_loy_pos_20_to_40_tt
+			    }
+			    20 = {
+			    	# 5-6%
+			        
+			        randomize_temp_variable = {
+						var = temp_gen_rand
+						distribution = uniform
+						min = 0.040
+						max = 0.060
+					}
+
+					add_to_variable = { aus_var_loyalty_of_generals = temp_gen_rand }
+					set_temp_variable = { temp_gen_rand = 0 }
+
+
+					add_to_variable = { aus_var_soldiers_support = 0.002 }
+
+					custom_effect_tooltip = aus_gen_loy_pos_40_to_60_tt
+					custom_effect_tooltip = aus_sol_sup_pos_2_tt
+			    }
+			}
+			aus_clamp_soldiers_support = yes
+			aus_clamp_loyalty_of_generals = yes
+		}
+	}
+
+
+
+
+
+	aus_decentralize_armies = {
+		icon = border_war
+
+	    available = {
+	    }	
+	    	
+		visible = {
+		}
+
+		fire_only_once = no
+
+		days_remove = 30
+		days_re_enable = 180
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 40
+
+		complete_effect = {
+		}
+
+		modifier = {
+			stability_weekly = -0.01
+			political_power_cost = 0.1
+			army_org_factor = -0.05
+		}
+
+		remove_effect = {
+			# 1-3 %
+
+			randomize_temp_variable = {
+				var = temp_gen_rand
+				distribution = uniform
+				min = 0.010
+				max = 0.030
+			}
+
+			add_to_variable = { aus_var_loyalty_of_generals = temp_gen_rand }
+			set_temp_variable = { temp_gen_rand = 0 }
+
+			custom_effect_tooltip = aus_gen_loy_pos_10_to_30_tt
+
+			aus_clamp_loyalty_of_generals = yes
+		}
+	}
+
+
+
+
+
+	aus_give_away_orders = {
+		icon = border_war
+
+	    available = {
+	    }
+	    	
+		visible = {
+		}
+
+		fire_only_once = no
+
+		days_remove = 20
+		days_re_enable = 80
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 40
+
+		complete_effect = {
+			# 0.5-1.5 %
+
+			randomize_temp_variable = {
+				var = temp_sold_rand
+				distribution = uniform
+				min = 0.005
+				max = 0.015
+			}
+
+			add_to_variable = { aus_var_soldiers_support = temp_sold_rand }
+			set_temp_variable = { temp_sold_rand = 0 }
+
+			add_stability = -0.01
+			custom_effect_tooltip = aus_sol_sup_pos_5_to_15_tt
+		}
+
+		modifier = {
+			political_power_factor = -0.25
+		}
+
+		remove_effect = {
+			add_stability = -0.005
+			aus_clamp_soldiers_support = yes
+		}
+	}
+
+
+
+
+
+	aus_increase_war_taxes = {
+		icon = border_war
+
+	    available = {
+	    	has_war = yes
+	    }
+	    	
+		visible = {
+			has_war = yes
+		}
+
+		fire_only_once = no
+
+		days_remove = 30
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 40
+
+		complete_effect = {
+			add_stability = -0.005
+		}
+
+		modifier = {
+			war_support_weekly = 0.001
+			political_power_factor = -0.2
+			army_morale_factor = 0.005
+			production_speed_buildings_factor = -0.08
+		}
+
+		remove_effect = {
+			# 0.5-1.5 %
+
+			randomize_temp_variable = {
+				var = temp_sold_rand
+				distribution = uniform
+				min = 0.005
+				max = 0.015
+			}
+
+			add_to_variable = { aus_var_soldiers_support = temp_sold_rand }
+			set_temp_variable = { temp_sold_rand = 0 }
+
+			custom_effect_tooltip = aus_sol_sup_pos_5_to_15_tt
+			add_political_power = 20
+
+			aus_clamp_soldiers_support = yes
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	aus_organize_award_ceremony = {
+		icon = border_war
+
+	    available = {
+	    }	
+	    	
+		visible = {
+		}
+
+		fire_only_once = no
+
+		days_remove = 125
+		days_re_enable = 550 # year + 125 days + 2 months
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 40
+
+		complete_effect = {
+
+			set_variable = { aus_ceremony_sol_var = 0.05 }
+			set_variable = { aus_ceremony_gen_var = 0.05 }
+
+			hidden_effect = {
+				country_event = {
+					id = EugenCeremony.1
+					days = 25
+				}
+			}
+		}
+
+		modifier = {
+		}
+
+		remove_effect = {
+		}
+	}
+
+
+	
+}

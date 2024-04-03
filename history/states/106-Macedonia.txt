@@ -1,0 +1,27 @@
+state={
+	id=106
+	name="STATE_106"
+	resources={
+		wood=50.000
+		iron=16.000
+	}
+
+	history={
+		owner = GRE
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			3882 5
+		}
+		add_core_of = GRE
+	}
+
+	provinces={
+		907 974 3833 3865 3882 6886 11856 
+	}
+	manpower=231500
+	state_category=rural
+}

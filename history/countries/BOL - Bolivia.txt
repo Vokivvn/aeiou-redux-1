@@ -1,0 +1,38 @@
+﻿capital = 302
+
+oob = "BOL_1886"
+add_ideas = {
+	sam_idea_light_ties
+}
+# Starting tech
+set_technology = {
+	muskets0 = 1
+	melee = 1
+	basic_cavalry = 1
+	tech_support = 1		
+	tech_engineers = 1
+	gw_artillery = 1
+	fuel_silos = 1
+}
+
+set_politics = {
+	ruling_party = conservative
+	elections_allowed = no
+}
+
+set_popularities = {
+	conservative = 100
+}
+
+create_country_leader = {
+	name = "Narciso Campero"
+	desc = "POLITICS_NARCISO_CAMPERO_DESC"
+	picture = "Portrait_BOL_Narciso_Campero.dds"
+	expire = "1965.1.1"
+	ideology = conservative_moderate # liberalism, personally, but puppet for military
+	traits = {
+		#
+	}
+}
+
+add_to_array = { national_religion_array =  2 }

@@ -1,0 +1,15 @@
+﻿capital = 230 #Yerevan, Armenia
+
+#oob = "ARM_1886"
+
+set_research_slots = 3
+
+set_politics = {
+	ruling_party = absolutist
+	elections_allowed = no
+}
+set_popularities = {
+	absolutist = 100
+}
+
+

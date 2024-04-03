@@ -1,0 +1,31 @@
+state = {
+	id = 923
+	name = "STATE_923"
+	manpower = 3690362
+	resources = {
+	}
+	
+	state_category = town
+
+	history = {
+		owner = SPW
+		add_core_of = SPW
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			7622 = {
+				naval_base = 3
+			}
+			13262 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			7622 5 
+		}
+
+	}
+	provinces = {
+		4600 7622 13261 13262 13263
+	}
+}

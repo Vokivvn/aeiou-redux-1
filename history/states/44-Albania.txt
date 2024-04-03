@@ -1,0 +1,29 @@
+
+state={
+	id=44			### Bring back the Zog ### -ThisWW1guy
+	name="STATE_44"
+	manpower = 300531
+	resources={
+		iron=2 # was: 3
+		wood=2 # was: 3
+	}
+	
+	state_category = town
+	
+	history={
+		owner = ALB
+		victory_points = {
+			9875 10
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		add_core_of = ALB
+	}
+
+	provinces={
+		3884 3896 9875 11762 833 867 
+	}
+}

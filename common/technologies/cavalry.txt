@@ -1,0 +1,729 @@
+technologies = {
+	
+	@1860 = 0
+	@1870 = 2
+	@1880 = 4
+	@1885 = 6
+	@1890 = 8
+	@1895 = 10
+	@1900 = 12
+	@1905 = 14
+	@1910 = 16
+	@1915 = 18
+	@1920 = 20
+
+	basic_cavalry = {
+
+	
+		research_cost = 1.5
+		start_year = 1860
+		folder = {
+			name = cavalry_folder
+			position = { x = @1860 y = 6 }
+		}
+
+		enable_equipments = {
+			medium_cavalry_0 
+		}
+		
+		enable_subunits = {
+			medium_cavalry
+		}
+		
+		enable_equipments = {
+			heavy_cavalry_0 
+		}
+		
+		enable_subunits = {
+			heavy_cavalry
+		}
+		
+		categories = {
+			cavalry
+		}
+		
+		path = {
+			leads_to_tech = lancers
+			research_cost_coeff = 1
+		}	
+		
+		path = {
+			leads_to_tech = dragoons0
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = cuirassier0
+			research_cost_coeff = 1
+		}
+		
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 5
+				date > "1886.1.1"
+			}
+		}
+	}
+	
+	lancers = {
+
+
+		research_cost = 1.5
+		start_year = 1860
+		folder = {
+			name = cavalry_folder
+			position = { x = @1860 y = 0 }
+		}
+		
+		enable_equipments = {
+			light_cavalry_0 
+		}
+		
+		enable_subunits = {
+			light_cavalry
+		}
+		
+		path = {
+			leads_to_tech = improved_stirrups
+			research_cost_coeff = 1
+		}
+		
+		categories = {
+			cavalry
+		}
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 5
+				date > "1886.1.1"
+			}
+		}
+	}
+	
+	improved_stirrups = {
+
+		dependencies = {
+			lancers = 1
+			dragoons0 = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1880
+		folder = {
+			name = cavalry_folder
+			position = { x = @1880 y = 1 }
+		}
+		
+		path = {
+			leads_to_tech = light_hussars0
+			research_cost_coeff = 1
+		}
+		
+		category_light_cavalry = {
+			breakthrough = 0.05
+		}
+		
+		category_medium_cavalry = {
+			breakthrough = 0.05
+		}
+		
+		categories = {
+			cavalry
+		}
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 5
+				date > "1886.1.1"
+			}
+		}
+	}
+	
+	light_hussars0 = {
+
+		dependencies = {
+			improved_stirrups = 1
+			faster_horse_breeds = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1890
+		folder = {
+			name = cavalry_folder
+			position = { x = @1890 y = 0 }
+		}
+		
+		path = {
+			leads_to_tech = stronger_halters
+			research_cost_coeff = 1
+		}
+		
+		categories = {
+			cavalry
+		}
+		
+		enable_equipments = {
+			light_cavalry_1
+		}
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 5
+				date > "1886.1.1"
+			}
+		}
+	}
+	
+	stronger_halters = {
+
+		research_cost = 1.5
+		start_year = 1895
+		folder = {
+			name = cavalry_folder
+			position = { x = @1895 y = 1 }
+		}
+		
+		path = {
+			leads_to_tech = light_hussars1
+			research_cost_coeff = 1
+		}
+		
+		category_light_cavalry = {
+			reliability_factor = 0.01
+			default_morale = 0.05
+		}
+		
+		categories = {
+			cavalry
+		}
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 5
+				date > "1886.1.1"
+			}
+		}
+	}
+	
+	light_hussars1 = {
+
+		research_cost = 1.5
+		start_year = 1900
+		folder = {
+			name = cavalry_folder
+			position = { x = @1900 y = 0 }
+		}
+		
+		categories = {
+			cavalry
+		}
+		
+		enable_equipments = {
+			light_cavalry_2
+		}
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 5
+				date > "1886.1.1"
+			}
+		}
+	}
+	
+	dragoons0 = {
+		research_cost = 1.5
+		start_year = 1880
+		folder = {
+			name = cavalry_folder
+			position = { x = @1880 y = 4 }
+		}
+		
+		enable_equipments = {
+			medium_cavalry_1
+		}
+		
+		categories = {
+			cavalry
+		}
+		
+		path = {
+			leads_to_tech = improved_stirrups
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = faster_horse_breeds
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 5
+				date > "1886.1.1"
+			}
+		}
+	}
+	
+	faster_horse_breeds = {
+		research_cost = 1.5
+		start_year = 1885
+		folder = {
+			name = cavalry_folder
+			position = { x = @1885 y = 3 }
+		}		
+		
+		categories = {
+			cavalry
+		}
+		
+		category_cavalry = {
+			maximum_speed = 0.05
+		}
+		
+		path = {
+			leads_to_tech = dragoons1
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 5
+				date > "1886.1.1"
+			}
+		}
+	}
+	
+	dragoons1 = {
+		research_cost = 1.5
+		start_year = 1890
+		folder = {
+			name = cavalry_folder
+			position = { x = @1890 y = 4 }
+		}
+		
+		enable_equipments = {
+			medium_cavalry_2
+		}
+		
+		categories = {
+			cavalry
+		}
+		
+		path = {
+			leads_to_tech = improved_saddle_bags
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 5
+				date > "1886.1.1"
+			}
+		}
+	}
+	
+	improved_saddle_bags = {
+		research_cost = 1.5
+		start_year = 1895
+		folder = {
+			name = cavalry_folder
+			position = { x = @1895 y = 3 }
+		}
+		
+		categories = {
+			cavalry
+		}
+		
+		category_medium_cavalry = {
+			supply_consumption = -0.02
+		}
+		
+		path = {
+			leads_to_tech = dragoons2
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 5
+				date > "1886.1.1"
+			}
+		}
+	}
+	
+	dragoons2 = {
+		research_cost = 1.5
+		start_year = 1900
+		folder = {
+			name = cavalry_folder
+			position = { x = @1900 y = 4 }
+		}
+		
+		enable_equipments = {
+			medium_cavalry_3
+		}
+		
+		categories = {
+			cavalry
+		}
+		
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 5
+				date > "1886.1.1"
+			}
+		}
+	}
+	
+	cuirassier0 = {
+		research_cost = 1.5
+		start_year = 1880
+		folder = {
+			name = cavalry_folder
+			position = { x = @1880 y = 8 }
+		}
+		
+		enable_equipments = {
+			heavy_cavalry_1
+		}
+		
+		categories = {
+			cavalry
+		}
+		
+		path = {
+			leads_to_tech = reduced_armour
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 5
+				date > "1886.1.1"
+			}
+		}
+	}
+	
+	reduced_armour = {
+		research_cost = 1.5
+		start_year = 1885
+		folder = {
+			name = cavalry_folder
+			position = { x = @1885 y = 9 }
+		}
+		
+		categories = {
+			cavalry
+		}
+		
+		category_heavy_cavalry = {
+			defense = -0.02
+			breakthrough = 0.05
+			maximum_speed = 0.05
+		}
+		
+		path = {
+			leads_to_tech = cuirassier1
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 5
+				date > "1886.1.1"
+			}
+		}
+	}
+	
+	cuirassier1 = {
+		research_cost = 1.5
+		start_year = 1890
+		folder = {
+			name = cavalry_folder
+			position = { x = @1890 y = 8 }
+		}
+		
+		enable_equipments = {
+			heavy_cavalry_2
+		}
+		
+		categories = {
+			cavalry
+		}
+		
+		path = {
+			leads_to_tech = stronger_horse_breeds
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 5
+				date > "1886.1.1"
+			}
+		}
+	}
+	
+	stronger_horse_breeds = {
+		research_cost = 1.5
+		start_year = 1895
+		folder = {
+			name = cavalry_folder
+			position = { x = @1895 y = 9 }
+		}
+		
+		
+		categories = {
+			cavalry
+		}
+		
+		category_cavalry = {
+			reliability_factor = 0.02
+			soft_attack = 0.05
+		}
+		
+		path = {
+			leads_to_tech = cuirassier2
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = pintles
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 5
+				date > "1886.1.1"
+			}
+		}
+	}
+	
+	cuirassier2 = {
+		research_cost = 1.5
+		start_year = 1900
+		folder = {
+			name = cavalry_folder
+			position = { x = @1900 y = 8 }
+		}
+		
+		enable_equipments = {
+			heavy_cavalry_3
+		}
+		
+		categories = {
+			cavalry
+		}
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 5
+				date > "1886.1.1"
+			}
+		}
+	}
+	
+	pintles = {
+		research_cost = 1.5
+		start_year = 1895
+		folder = {
+			name = cavalry_folder
+			position = { x = @1895 y = 11 }
+		}
+		
+		
+		categories = {
+			cavalry
+		}
+		
+		artillery = {
+			reliability_factor = 0.05
+		}
+		artillery_brigade = {
+			reliability_factor = 0.05
+		}
+		mot_artillery_brigade = {
+			reliability_factor = 0.05
+		}
+		
+		path = {
+			leads_to_tech = early_limbers
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 5
+				date > "1886.1.1"
+			}
+		}
+	}
+	
+	early_limbers = {
+		research_cost = 1.5
+		start_year = 1900
+		folder = {
+			name = cavalry_folder
+			position = { x = @1900 y = 12 }
+		}
+		
+		
+		categories = {
+			cavalry
+		}
+		
+		path = {
+			leads_to_tech = ammunition_chests
+			research_cost_coeff = 1
+		}
+		
+		enable_equipments = {
+			limber_0 
+		}
+		
+		enable_subunits = {
+			horse_artillery
+		}
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 5
+				date > "1886.1.1"
+			}
+		}
+	}
+	
+	ammunition_chests = {
+		research_cost = 1.5
+		start_year = 1905
+		folder = {
+			name = cavalry_folder
+			position = { x = @1905 y = 11 }
+		}
+		
+		
+		categories = {
+			cavalry
+		}
+		
+		artillery = {
+			supply_consumption = -0.05
+		}
+		artillery_brigade = {
+			supply_consumption = -0.05
+		}
+		mot_artillery_brigade = {
+			supply_consumption = -0.05
+		}
+		
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 5
+				date > "1886.1.1"
+			}
+		}
+	}
+	
+	heavy_hussar = {
+		research_cost = 1.5
+		
+		dependencies = {
+			hussars = 1
+		}
+		
+		enable_equipments = {
+			heavy_cavalry_0h 
+		}
+		
+		path = {
+			leads_to_tech = lighter_designs
+			research_cost_coeff = 1
+		}
+
+		start_year = 1880
+		folder = {
+			name = cavalry_folder
+			position = { x = @1880 y = 12 }
+		}
+		
+		categories = {
+			cavalry
+		}
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 5
+				date > "1886.1.1"
+			}
+		}
+		
+	}
+	
+	lighter_designs = {
+		research_cost = 1.5
+
+		start_year = 1890
+		folder = {
+			name = cavalry_folder
+			position = { x = @1890 y = 12 }
+		}
+		
+		category_heavy_cavalry = {
+			maximum_speed = 0.05
+			breakthrough = 0.05
+		}
+		
+		categories = {
+			cavalry
+		}
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 5
+				date > "1886.1.1"
+			}
+		}
+		
+	}
+	
+	###Preventions
+	hussars = {
+		research_cost = 50
+
+		allow = {
+			always = no
+		}
+
+		categories = {
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

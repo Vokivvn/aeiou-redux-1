@@ -1,0 +1,38 @@
+
+state={
+	id=305
+	name="STATE_305"
+	manpower = 765051
+	resources={
+		iron=2
+		horses=2
+		wood=1
+		steel=2
+	}
+	
+	state_category = town
+
+	history={
+		owner = ECU
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
+			8252 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = ECU
+		victory_points = {
+			12798 5
+		}
+		victory_points = {
+			8252 1
+		}
+
+	}
+
+	provinces={
+		5051 5120 8047 8075 8252 10888 11020 12798 
+	}
+}

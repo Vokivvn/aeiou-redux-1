@@ -1,0 +1,27 @@
+
+state={
+	id=390
+	name="STATE_390"
+	manpower = 10814
+	state_category = rural
+
+	resources={
+		wood=2
+		iron=1
+	}
+
+	history={
+		owner = SLT
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SLT
+        victory_points = {
+			1836 1 
+		}
+	}
+
+	provinces={
+	   4880 7862 10569 10595 12620 12667 12577 1867 1836 4772 10685
+	}
+}

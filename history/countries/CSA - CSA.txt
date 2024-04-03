@@ -1,0 +1,25 @@
+﻿capital = 361
+
+#oob = "USA_1936"
+
+set_research_slots = 3
+set_stability = 0.75
+set_war_support = 0
+
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+}
+
+set_convoys = 100
+
+
+set_politics = {
+	ruling_party = conservative
+	last_election = "1932.11.8"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	conservative = 100
+}

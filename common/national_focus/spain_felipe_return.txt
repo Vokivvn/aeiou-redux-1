@@ -1,0 +1,378 @@
+
+focus_tree = {
+	id = Spain_felipe_return
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 11
+			tag = SPF
+		}
+		
+	}
+	default = no
+	continuous_focus_position = { x = 50 y = 2000 }
+
+
+	###########
+	#  Start  #
+	###########
+	
+	focus = { 
+		id = SPF_from_shadows
+		icon = GFX_AUS_focus_Threats_Actions
+		cost = 30
+	
+		x = 4
+		y = 0
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = { 
+		id = SPF_national_volunteers
+		icon = GFX_focus_generic_military_mission
+		cost = 30
+	
+		prerequisite = { focus = SPF_from_shadows }
+		relative_position_id = SPF_from_shadows
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			every_controlled_state = { 
+				create_unit = {
+					division = "division_template = \"Royal Felipian Knight Brigade\" start_experience_factor = 0.2" 
+					owner = SPF
+				}
+			}
+		}
+	}
+	#Diplomacy
+	focus = { 
+		id = SPF_arm_loyalists
+		icon = GFX_goal_generic_military_sphere
+		cost = 25
+	
+		prerequisite = { focus = SPF_national_volunteers }
+		relative_position_id = SPF_national_volunteers
+	
+		x = -2
+		y = 1
+		
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+		}
+	}
+	focus = { 
+		id = SPF_rally_cuba
+		icon = GFX_SPR_jewel_remains_loyal
+		cost = 30
+		available = {
+			CUB = {
+				exists = yes
+			}
+		}
+	
+		prerequisite = { focus = SPF_arm_loyalists }
+		relative_position_id = SPF_arm_loyalists
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			CUB = {
+				country_event = SPRFelipe.2
+			}
+		}
+	}
+	focus = { 
+		id = SPF_sale_of_sardinia
+		icon = GFX_SPR_circulo_economico_caribeno
+		cost = 30
+		available = {
+			TUS = {
+				exists = yes
+			}
+		}
+	
+		prerequisite = { focus = SPF_arm_loyalists }
+		relative_position_id = SPF_arm_loyalists
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			TUS = {
+				country_event = SPRFelipe.1
+			}
+		}
+	}
+	focus = { 
+		id = SPF_everything_for_king
+		icon = GFX_SPR_The_regency_shall_live_on
+		cost = 40
+	
+		prerequisite = { focus = SPF_arm_loyalists }
+		relative_position_id = SPF_arm_loyalists
+	
+		x = 0
+		y = 2
+		
+		completion_reward = {
+			add_ideas = spr_idea_everything_for_king
+		}
+	}
+	focus = { 
+		id = SPF_until_last_man
+		icon = GFX_focus_generic_little_entente
+		cost = 40
+		available = {
+			OR = {
+				SPP = {
+					surrender_progress < 0.50
+				}
+				SPR = {
+					surrender_progress < 0.50
+				}
+			}
+		}
+	
+		prerequisite = { focus = SPF_everything_for_king }
+		relative_position_id = SPF_everything_for_king
+		mutually_exclusive = { focus = SPF_one_last_push }
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_ideas = spr_idea_until_last_man
+		}
+	}
+	focus = { 
+		id = SPF_one_last_push
+		icon = GFX_goal_generic_political_pressure
+		cost = 40
+		available = {
+			SPP = {
+				surrender_progress > 0.50
+			}
+			SPR = {
+				surrender_progress > 0.50
+			}
+		}
+	
+		prerequisite = { focus = SPF_everything_for_king }
+		relative_position_id = SPF_everything_for_king
+		mutually_exclusive = { focus = SPF_until_last_man }
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_ideas = spr_idea_one_last_push
+		}
+	}
+	#Against Regency
+	focus = { 
+		id = SPF_crush_regency
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		cost = 25
+	
+		prerequisite = { focus = SPF_national_volunteers }
+		relative_position_id = SPF_national_volunteers
+	
+		x = 2
+		y = 1
+		
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = { 
+		id = SPF_fund_colonial_rebels
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		cost = 30
+	
+		prerequisite = { focus = SPF_crush_regency }
+		relative_position_id = SPF_crush_regency
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+				#East
+				327 = { 
+					create_unit = {
+						division = "division_template = \"Royal Felipian Guard Battalion\" start_experience_factor = 0.2" 
+						owner = SPF
+						allow_spawning_on_enemy_provs = yes
+						count = 2
+					}
+					create_unit = {
+						division = "division_template = \"Royal Felipian Cavalry Division\" start_experience_factor = 0.3" 
+						owner = SPF
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+				623 = { 
+					create_unit = {
+						division = "division_template = \"Royal Felipian Guard Battalion\" start_experience_factor = 0.2" 
+						owner = SPF
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+				627 = {
+					create_unit = {
+						division = "division_template = \"Royal Felipian Cavalry Division\" start_experience_factor = 0.3" 
+						owner = SPF
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+				#West
+				IF = {
+					LIMIT = {
+						CUB = {
+							exists = no
+						}
+					}
+					315 = { 
+						create_unit = {
+							division = "division_template = \"Royal Felipian Guard Battalion\" start_experience_factor = 0.2" 
+							owner = SPF
+							allow_spawning_on_enemy_provs = yes
+						}
+						create_unit = {
+							division = "division_template = \"Royal Felipian Cavalry Division\" start_experience_factor = 0.3" 
+							owner = SPF
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+					923 = { 
+						create_unit = {
+							division = "division_template = \"Royal Felipian Guard Battalion\" start_experience_factor = 0.2" 
+							owner = SPF
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+					924 = { 
+						create_unit = {
+							division = "division_template = \"Royal Felipian Guard Battalion\" start_experience_factor = 0.2" 
+							owner = SPF
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+					930 = { 
+						create_unit = {
+							division = "division_template = \"Royal Felipian Cavalry Division\" start_experience_factor = 0.3" 
+							owner = SPF
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+				318 = { 
+					create_unit = {
+						division = "division_template = \"Royal Felipian Guard Battalion\" start_experience_factor = 0.2" 
+						owner = SPF
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+				319 = {
+					create_unit = {
+						division = "division_template = \"Royal Felipian Cavalry Division\" start_experience_factor = 0.3" 
+						owner = SPF
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+		}
+	}
+	focus = { 
+		id = SPF_proclaim_old_order
+		icon = GFX_SPR_dawn_of_a_new_era
+		cost = 40
+	
+		prerequisite = { focus = SPF_fund_colonial_rebels }
+		relative_position_id = SPF_fund_colonial_rebels
+	
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.10
+			add_war_support = 0.10
+		}
+	}
+	focus = { 
+		id = SPF_unite_reactionaries
+		icon = GFX_goal_generic_major_alliance
+		cost = 40
+	
+		prerequisite = { focus = SPF_fund_colonial_rebels }
+		relative_position_id = SPF_fund_colonial_rebels
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = absolutist
+				popularity = 0.05
+			}
+		}
+	}
+	focus = { 
+		id = SPF_obliterate_resistance
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 40
+	
+		prerequisite = { focus = SPF_proclaim_old_order }
+		prerequisite = { focus = SPF_unite_reactionaries }
+		relative_position_id = SPF_proclaim_old_order
+	
+		x = 1
+		y = 1
+		
+		completion_reward = {
+			add_ideas = spr_idea_obliterate_resistance
+		}
+	}
+	focus = { 
+		id = SPF_felipe_is_back
+		icon = GFX_SPR_felipes_demise
+		cost = 60
+	
+		prerequisite = { focus = SPF_until_last_man focus = SPF_one_last_push }
+		prerequisite = { focus = SPF_obliterate_resistance }
+		relative_position_id = SPF_one_last_push
+	
+		x = 1
+		y = 2
+		
+		completion_reward = {
+			add_political_power = 100
+			add_ideas = spr_idea_felipe_back
+		}
+	}
+	focus = { 
+		id = SPF_definitive_purge
+		icon = GFX_goal_generic_secret_weapon
+		cost = 60
+	
+		prerequisite = { focus = SPF_felipe_is_back }
+		relative_position_id = SPF_felipe_is_back
+	
+		x = 0
+		y = 1
+		
+		completion_reward = {
+			add_ideas = spr_idea_definitive_purge
+			add_stability = 0.10
+		}
+	}
+}

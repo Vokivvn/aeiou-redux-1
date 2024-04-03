@@ -1,0 +1,41 @@
+﻿capital = 671 #Hanoi
+
+oob = "VIN_1886"
+
+set_research_slots = 3
+
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+	tech_support = 1
+	tech_recon = 1
+	grenade = 1
+
+	gw_artillery = 1
+	interwar_antiair = 1
+	trench_warfare = 1
+	fleet_in_being = 1
+}
+
+set_politics = {
+	ruling_party = absolutist
+	elections_allowed = no
+}
+set_popularities = {
+	absolutist = 100
+}
+add_to_array = { national_religion_array =  11 }
+add_to_array = { national_religion_array =  14 }
+add_to_array = { national_religion_array =  22 }
+
+create_country_leader = {
+	name = "Thanh Thai" 
+	desc = ""
+	picture = "Portrait_VIN_Thanh_Thai.dds"
+	expire = "1953.3.1"
+	ideology = absolutist_moderate 
+	traits = {
+		
+	}
+}
+

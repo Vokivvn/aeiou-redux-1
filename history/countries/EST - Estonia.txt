@@ -1,0 +1,25 @@
+﻿capital = 13
+
+#oob = "EST_1936"
+
+set_research_slots = 3
+
+add_ideas = {
+	limited_conscription
+}
+
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+}
+
+set_convoys = 5
+set_politics = {
+	ruling_party = absolutist
+	last_election = "1932.5.21"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	absolutist = 100
+}

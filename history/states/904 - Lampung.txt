@@ -1,0 +1,22 @@
+state= {
+	id=904
+	name="STATE_904"
+	manpower = 924485
+	resources={
+		wood=1
+	}
+	
+	state_category = pastoral
+
+	history= {
+		owner = POI
+		add_core_of = POI
+
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces={
+	  1342 4361 4320 12165 4276 1313 1246 12209 
+	}
+}

@@ -1,0 +1,62 @@
+scripted_gui = {
+	religion_bar = {
+       window_name = "religion_stuff_bar" 
+       parent_window_token = politics_tab
+	   
+       context_type = player_context
+  
+        visible = {
+		    is_ai = no 
+		}
+		
+ 		properties = {
+			national_religion = { 
+			    image = "[GetNationalReligion1Icon]"
+			} 
+		}
+		
+        effects = {
+        }
+		
+		dynamic_lists = {
+			show_grid = {
+				array = national_religion_array
+				entry_container = show_entry_2525
+			} 
+		}
+        triggers = {
+        }
+		ai_enabled = {
+		    always = no 
+		}	
+	}
+	culture_bar_foreign_diplo = {
+       window_name = "culture_stuff_bar_foreign_diplo"
+       parent_window_token = selected_country_view    
+	   context_type = selected_country_context 
+  
+        visible = {
+		}   
+		
+ 		properties = {
+			national_religion2 = { 
+			    image = "[GetNationalReligion1Icon]"
+			} 
+		}
+		
+        effects = {
+        }
+		
+		dynamic_lists = {
+			show_grid50 = {
+				array = national_religion_array
+				entry_container = culture_stuff_bar_foreign_diplo2 
+			} 
+		}
+        triggers = {
+        }
+		ai_enabled = {
+		    always = no 
+		}	
+	}
+}

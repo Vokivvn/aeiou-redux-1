@@ -1,0 +1,155 @@
+scripted_gui = {
+	aeiou_wiki_open = { #Scripted gui entry for the button
+       window_name = "aeiou_wiki_button"
+       parent_window_token = topbar
+	   
+       context_type = player_context
+  
+        visible = { 
+		    always = no 
+		}
+		
+ 		properties = {
+			# ideology_icon = { 
+			    # image = "[GetSubcultureLogo]"
+			# } 
+		}
+		
+        effects = {
+		    aeiou_wiki_open_button_click = { #Opens the main scripted gui for the wiki 
+                set_temp_variable = { show = 1 }
+				clear_variable = aeiou_wiki 
+                subtract_from_temp_variable = { show = show_aeiou_wiki }
+                set_variable = { show_aeiou_wiki = show }			
+			}
+        }
+		
+		dynamic_lists = {
+			# show_grid = {
+				# array = ideology_array
+				# entry_container = show_entry_ideologies
+			# } 
+		}
+		
+        triggers = {
+        }
+		
+		ai_enabled = {
+		    always = no 
+		}	
+	}
+	
+	aeiou_wiki = {
+       window_name = "aeiou_wiki"
+	   
+       context_type = player_context
+  
+        visible = { #Checks that the wiki is opened and that it is not at the mechanics scripted gui (aeiou_wiki =4)
+            check_variable = { show_aeiou_wiki > 0 }		
+			NOT = { check_variable = { aeiou_wiki = 4 } }
+		}
+		
+ 		properties = {
+			aeiou_wiki_country_flag = { 
+			    image = "[?Root.GetFlag]" #Gets the country flag
+			} 
+		}
+		
+        effects = {
+		    aeiou_wiki_close_button_click = { #Closes the wiki 
+                set_temp_variable = { show = 1 }
+                subtract_from_temp_variable = { show = show_aeiou_wiki }
+				set_variable = { aeiou_wiki = 0 }	
+                set_variable = { show_aeiou_wiki = show }			
+			}
+		    aeiou_wiki_mod_description_button_click = { #The following buttons change the content of the wiki depending on which button you click
+                set_variable = { aeiou_wiki = 0 }	
+			}
+		    aeiou_wiki_country_description_button_click = {
+                set_variable = { aeiou_wiki = 1 }	
+			}
+		    aeiou_wiki_region_description_button_click = {
+                set_variable = { aeiou_wiki = 2 }	
+			}
+		    aeiou_wiki_religion_description_button_click = {
+                set_variable = { aeiou_wiki = 3 }	
+			}
+			aeiou_wiki_mechanics_description_button_click = {
+			    set_variable = { aeiou_wiki = 4 }	
+			}
+        }
+		
+		dynamic_lists = {
+			# show_grid = {
+				# array = ideology_array
+				# entry_container = show_entry_ideologies
+			# } 
+		}
+		
+        triggers = {
+		    aeiou_wiki_country_flag_visible = { #If you are on the country slide the flag shows up
+			    check_variable = { aeiou_wiki = 1 }		
+			}
+        }
+		
+		ai_enabled = {
+		    always = no 
+		}	
+	}
+	
+
+	aeiou_wiki_mechanics = {
+       window_name = "aeiou_wiki_copy" #This is an identical copy of the main wiki save for the fact that it only displays the special mechanics slide
+	   
+       context_type = player_context
+  
+        visible = {
+            check_variable = { show_aeiou_wiki > 0 }		
+            check_variable = { aeiou_wiki = 4 }		
+		}
+		
+ 		properties = {
+		}
+		
+        effects = {
+		    aeiou_wiki_close_button1_click = {
+                set_temp_variable = { show = 1 }
+                subtract_from_temp_variable = { show = show_aeiou_wiki }
+				set_variable = { aeiou_wiki = 0 }	
+                set_variable = { show_aeiou_wiki = show }			
+			}
+		    aeiou_wiki_mod_description_button1_click = {
+                set_variable = { aeiou_wiki = 0 }	
+			}
+		    aeiou_wiki_country_description_button1_click = {
+                set_variable = { aeiou_wiki = 1 }	
+			}
+		    aeiou_wiki_region_description_button1_click = {
+                set_variable = { aeiou_wiki = 2 }	
+			}
+		    aeiou_wiki_religion_description_button1_click = {
+                set_variable = { aeiou_wiki = 3 }	
+			}
+			aeiou_wiki_mechanics_description_button1_click = {
+			    set_variable = { aeiou_wiki = 4 }	
+			}
+			aeiou_wiki_mechanics_bg2_new_ideology_button = { #Click on this button to see the text for the new ideologies
+			    set_variable = { aeiou_wiki_mechanics = 0 }	
+			}
+        }
+		
+		dynamic_lists = {
+			# show_grid = {
+				# array = ideology_array
+				# entry_container = show_entry_ideologies
+			# } 
+		}
+		
+        triggers = {
+        }
+		
+		ai_enabled = {
+		    always = no 
+		}	
+	}
+}

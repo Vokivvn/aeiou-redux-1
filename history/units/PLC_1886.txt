@@ -1,0 +1,142 @@
+division_template = {
+	name = "Royal Polish-Lithuanian Guard Battalion"
+
+	division_names_group = PLC_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+		line_infantry = { x = 0 y = 4 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+		line_infantry = { x = 1 y = 2 }
+		line_infantry = { x = 1 y = 3 }
+		line_infantry = { x = 1 y = 4 }
+		line_infantry = { x = 2 y = 0 }
+		line_infantry = { x = 2 y = 1 }
+		line_infantry = { x = 2 y = 2 }
+		line_infantry = { x = 2 y = 3 }
+		line_infantry = { x = 2 y = 4 }
+		line_infantry = { x = 3 y = 0 }
+		line_infantry = { x = 3 y = 1 }
+		line_infantry = { x = 3 y = 2 }
+		line_infantry = { x = 3 y = 3 }
+		line_infantry = { x = 3 y = 4 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Polish-Lithuanian Winged Hussars Division"
+
+	division_names_group = PLC_ARM_01
+
+	regiments = {
+		heavy_cavalry = { x = 0 y = 0 }
+		heavy_cavalry = { x = 0 y = 1 }
+		heavy_cavalry = { x = 0 y = 2 }
+		heavy_cavalry = { x = 0 y = 3 }
+		heavy_cavalry = { x = 0 y = 4 }
+		heavy_cavalry = { x = 1 y = 0 }
+		heavy_cavalry = { x = 1 y = 1 }
+		heavy_cavalry = { x = 1 y = 2 }
+		heavy_cavalry = { x = 1 y = 3 }
+		heavy_cavalry = { x = 1 y = 4 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Polish-Lithuanian Knight Brigade"
+
+	division_names_group = PLC_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Royal Polish-Lithuanian Guard Battalion"
+		location = 3544
+		division_template = "Royal Polish-Lithuanian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Polish-Lithuanian Guard Battalion"
+		location = 9427
+		division_template = "Royal Polish-Lithuanian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3rd Royal Polish-Lithuanian Guard Battalion"
+		location = 11370
+		division_template = "Royal Polish-Lithuanian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4th Royal Polish-Lithuanian Guard Battalion"
+		location = 6593
+		division_template = "Royal Polish-Lithuanian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "5th Royal Polish-Lithuanian Guard Battalion"
+		location = 11479
+		division_template = "Royal Polish-Lithuanian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "6th Royal Polish-Lithuanian Guard Battalion"
+		location = 279
+		division_template = "Royal Polish-Lithuanian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "7th Royal Polish-Lithuanian Guard Battalion"
+		location = 279
+		division_template = "Royal Polish-Lithuanian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Polish-Lithuanian Winged Hussars Division"
+		location = 402
+		division_template = "Royal Polish-Lithuanian Winged Hussars Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Polish-Lithuanian Winged Hussars Division"
+		location = 3230
+		division_template = "Royal Polish-Lithuanian Winged Hussars Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3rd Royal Polish-Lithuanian Winged Hussars Division"
+		location = 6558
+		division_template = "Royal Polish-Lithuanian Winged Hussars Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4th Royal Polish-Lithuanian Winged Hussars Division"
+		location = 476
+		division_template = "Royal Polish-Lithuanian Winged Hussars Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "5th Royal Polish-Lithuanian Winged Hussars Division"
+		location = 476
+		division_template = "Royal Polish-Lithuanian Winged Hussars Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Polish-Lithuanian Knight Brigade"
+		location = 362
+		division_template = "Royal Polish-Lithuanian Knight Brigade"
+		start_experience_factor = 0.3
+	}
+}

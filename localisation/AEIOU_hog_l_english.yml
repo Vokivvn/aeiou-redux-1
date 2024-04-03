@@ -1,0 +1,74 @@
+﻿l_english:
+ ## Head of Government ##
+ HOG_LABEL:0 "Head of Government"
+ HOG_LABEL_NAME:0 "[GetHOGPortraitLeaderName][GetHOGPortraitLeaderSurname]"
+ 
+ ###Decisions
+ hog_actions:0 "Head of Government"
+ hog_actions_desc:0 "Decisions based around the current Head of Government"
+ combat_hog_influence:0 "Combat HoG Influence"
+ combat_hog_influence_desc:0 "In recent days, it seems that our HoG has gained too much influence over our politics and it may be time to combat their power over it. However, this will likely damage their loyalty to us and harm our stability."
+ invest_navy:0 "Invest in the Navy"
+ invest_navy_desc:0 "In order to maintian our strength at sea, we must invest in our naval forces for a greater result."
+ invest_army:0 "Invest in the Army"
+ invest_army_desc:0 "."
+ military_parade_hog:0 "Military Parade in [ROOT.GetName]"
+ military_parade_hog_desc:0 "."
+ goods_to_the_people:0 "Civilian Satisfaction Through Goods"
+ goods_to_the_people_desc:0 "."
+ unite_government_on_common_issues:0 "Unite Government on Common Issues"
+ unite_government_on_common_issues_desc:0 "."
+ goods_for_loyalty:0 "Goods for Loyalty"
+ goods_for_loyalty_desc:0 "."
+ passive_military:0 "A Passive Military"
+ passive_military_desc:0 "."
+ promote_industrial_growth:0 "Promote Industrial Growth"
+ promote_industrial_growth_desc:0 "."
+ more_goods_for_the_state:0 "More Goods for the State"
+ more_goods_for_the_state_desc:0 "."
+ silence_powerful_politicians:0 "Silence Powerful Politicians"
+ silence_powerful_politicians_desc:0 "."
+
+ ###Events
+ hogEvent.2.t:0 "Retirement of [GetHOGPortraitLeaderName]"
+ hogEvent.2.d:0 ""
+ hogEvent.2.a:0 "We wish them well"
+ 
+ hogEvent.3.t:0 "Death of [GetHOGPortraitLeaderName]"
+ hogEvent.3.d:0 ""
+ hogEvent.3.a:0 "A Lost [GetHOGPortraitLeaderTitle]"
+ 
+ hogEvent.4.t:0 "Assassination of [GetHOGPortraitLeaderName]"
+ hogEvent.4.d:0 ""
+ hogEvent.4.a:0 "The Government is Falling Apart"
+ 
+ hogEvent.5.t:0 "[GetHOGPortraitLeaderName] Dies on Front Lines"
+ hogEvent.5.d:0 ""
+ hogEvent.5.a:0 "We Will Seek Revenge"
+ 
+ hogEvent.3.t:0 "[GetHOGPortraitLeaderName] Divides Government"
+ hogEvent.3.d:0 ""
+ hogEvent.3.a:0 "We Shall Recover"
+ 
+ hogEvent.4.t:0 "[GetHOGPortraitLeaderName] Questions our Experience"
+ hogEvent.4.d:0 ""
+ hogEvent.4.a:0 "How Dare They!"
+ 
+ hogEvent.5.t:0 "[GetHOGPortraitLeaderName] Pledges Full Support"
+ hogEvent.5.d:0 ""
+ hogEvent.5.a:0 "A Great [GetHOGPortraitLeaderTitle]"
+ 
+ hogEvent.9.t:0 "Corruption in the Government"
+ hogEvent.9.d:0 "After the most recent bribe of the [GetHOGPortraitLeaderTitle], a mole, whose identity remains a mystery, has managed to inform the people of our nation about the corruption that happens behind closed doors. Even though the spread of information is quite slow, it is still imperative for us to address this issue to the public before any movement gets too far out of hand."
+ hogEvent.9.a:0 "Hopefully the People Forgive Us"
+ 
+ ###ideas
+ hog_generic_divided_government:0 "Divided Government"
+ hog_generic_questioned_experience:0 "Questioned Experience"
+ hog_generic_all_for_the_ruler:0 "All for the Ruler"
+
+ hog_effect_modifier:0 "HoG Effect"
+ 
+ ##Tooltips
+ 
+ NEW_HOG_TOOLTIP:0 "This focus will make §Y[GetHOGPortraitLeaderName]§! our new §Y[GetHOGPortraitLeaderTitle]§!"

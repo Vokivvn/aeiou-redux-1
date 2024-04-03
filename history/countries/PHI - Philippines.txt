@@ -1,0 +1,24 @@
+﻿capital = 327
+
+oob = "PHI_1936"
+
+# Starting tech
+set_technology = {
+	muskets0 = 1
+	bayonet = 1
+	tech_support = 1		
+	tech_engineers = 1
+	gw_artillery = 1
+}
+
+set_convoys = 5
+
+set_politics = {
+	ruling_party = conservative
+	last_election = "1935.9.15"
+	election_frequency = 72
+	elections_allowed = yes
+}
+set_popularities = {
+	conservative = 100
+}

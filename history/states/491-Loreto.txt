@@ -1,0 +1,25 @@
+
+state={
+	id=491
+	name="STATE_491"
+	manpower = 97275
+
+	state_category = rural
+
+	resources = {
+		wood=2
+		gunpowder=1
+	}
+
+	history={
+		owner = PRU
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = PRU
+	}
+
+	provinces={
+		5162 8213 10970 2198 13257
+	}
+}

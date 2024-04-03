@@ -1,0 +1,88 @@
+﻿division_template = {
+	name = "Aquitanian Guard Battalion"
+
+	division_names_group = AQU_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+		line_infantry = { x = 0 y = 4 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+		line_infantry = { x = 1 y = 2 }
+		line_infantry = { x = 1 y = 3 }
+		line_infantry = { x = 1 y = 4 }
+		line_infantry = { x = 2 y = 0 }
+		line_infantry = { x = 2 y = 1 }
+		line_infantry = { x = 2 y = 2 }
+		line_infantry = { x = 2 y = 3 }
+		line_infantry = { x = 2 y = 4 }
+		line_infantry = { x = 3 y = 0 }
+		line_infantry = { x = 3 y = 1 }
+		line_infantry = { x = 3 y = 2 }
+		line_infantry = { x = 3 y = 3 }
+		line_infantry = { x = 3 y = 4 }
+	}
+	priority = 1
+}
+division_template = {
+	name = "Aquitanian Cavalry Division"
+
+	division_names_group = AQU_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Aquitanian Knight Brigade"
+
+	division_names_group = AQU_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 0 y = 2 }
+		melee_battalion = { x = 0 y = 3 }
+		melee_battalion = { x = 0 y = 4 }
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+		melee_battalion = { x = 1 y = 2 }
+		melee_battalion = { x = 1 y = 3 }
+		melee_battalion = { x = 1 y = 4 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "1st Aquitanian Guard Battalion"
+		location = 9737
+		division_template = "Aquitanian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Aquitanian Guard Battalion"
+		location = 13269
+		division_template = "Aquitanian Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Aquitanian Cavalry Division"
+		location = 11699
+		division_template = "Aquitanian Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Aquitanian Knight Brigade"
+		location = 6766
+		division_template = "Aquitanian Knight Brigade"
+		start_experience_factor = 0.3
+	}
+}

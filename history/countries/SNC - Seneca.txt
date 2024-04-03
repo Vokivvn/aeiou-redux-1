@@ -1,0 +1,30 @@
+﻿capital = 864
+
+#oob = "SNC_1886"
+
+set_research_slots = 1
+
+set_technology = {
+	muskets0 = 1
+}
+
+set_politics = {
+	ruling_party = apolitical 
+	elections_allowed = no
+}
+set_popularities = {
+	apolitical  = 100
+}
+
+set_stability = 0.50
+
+add_to_array = { national_religion_array =  22 }
+
+create_country_leader = {
+	name = "Sakuruta"
+	picture = "gfx/leaders/NorthAmerica/Portrait_Generic_North_America1.dds"
+	
+	#desc = ""
+	ideology = apolitical_sub 
+	expire = "1999.1.1"
+}

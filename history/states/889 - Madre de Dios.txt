@@ -1,0 +1,24 @@
+
+state={
+	id=889
+	name="STATE_889"
+	manpower = 29096
+	
+	state_category = pastoral
+
+	history={
+		owner = BOL
+		victory_points = {
+			10940 1 
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = BOL
+	}
+
+	provinces={
+		10940 8191 13253 13255 
+	}
+	
+}

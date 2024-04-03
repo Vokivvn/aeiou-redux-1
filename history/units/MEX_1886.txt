@@ -1,0 +1,140 @@
+﻿division_template = {
+	name = "División de Infanteria"
+	division_names_group = MEX_INF_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+		line_infantry = { x = 0 y = 4 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+		line_infantry = { x = 1 y = 2 }
+		line_infantry = { x = 1 y = 3 }
+		line_infantry = { x = 1 y = 4 }
+		line_infantry = { x = 2 y = 0 }
+		line_infantry = { x = 2 y = 1 }
+		line_infantry = { x = 2 y = 2 }
+		line_infantry = { x = 2 y = 3 }
+		line_infantry = { x = 2 y = 4 }
+		line_infantry = { x = 3 y = 0 }
+		line_infantry = { x = 3 y = 1 }
+		line_infantry = { x = 3 y = 2 }
+		line_infantry = { x = 3 y = 3 }
+		line_infantry = { x = 3 y = 4 }
+	}
+	support = {
+		
+	}
+}
+
+division_template = {
+	name = "Division de Caballeria"  		
+	division_names_group = MEX_CAV_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 0 y = 2 }
+		medium_cavalry = { x = 0 y = 3 }
+		medium_cavalry = { x = 0 y = 4 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+		medium_cavalry = { x = 1 y = 2 }
+		medium_cavalry = { x = 1 y = 3 }
+		medium_cavalry = { x = 1 y = 4 }
+	}
+	support = {
+		
+	}
+}
+
+division_template = {
+	name = "División de Riteros"  		
+	division_names_group = MEX_MEL_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 0 y = 2 }
+		melee_battalion = { x = 0 y = 3 }
+	}
+}
+
+units = {
+
+
+	division= {	
+		name = "1era Division de Caballeria"
+		location = 1965 
+		division_template = "Division de Caballeria"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Caballeria de Oaxaca"
+		location = 2021
+		division_template = "Division de Caballeria"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Caballeria de Montaña de Sacramento"
+		location = 9713 
+		division_template = "Division de Caballeria"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Caballeria Tejana"
+		location = 12782 
+		division_template = "Division de Caballeria"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1er Regimiento Imperial"
+		location = 1965 
+		division_template = "División de Infanteria"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "2o Regimiento Imperial"
+		location = 9814 
+		division_template = "División de Infanteria"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "3er Regimiento Imperial"
+		location = 9671 
+		division_template = "División de Infanteria"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Mosqueteros de Villahermosa"
+		location = 9671 
+		division_template = "División de Infanteria"
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "Riteros de Tamaulipas"
+		location = 5015 
+		division_template = "División de Riteros"
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "Riteros de Tamaulipas"
+		location = 7921 
+		division_template = "División de Riteros"
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "Riteros de la frontera"
+		location = 10651 
+		division_template = "División de Riteros"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "Riteros de Monterrey"
+		location = 12835 
+		division_template = "División de Riteros"
+		start_experience_factor = 0.1
+	}
+}

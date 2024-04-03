@@ -1,0 +1,20 @@
+state={
+	id=874
+	name="STATE_874"
+	
+    
+	history={
+		owner = APH
+		add_core_of = APH
+		buildings = {
+			infrastructure = 2
+		}
+	}
+
+	provinces={
+      9792 7999 868 1658 6887 10535 1756 12552 10645 7684
+	}
+	manpower = 9064
+	buildings_max_level_factor = 1.000
+	state_category = rural
+}

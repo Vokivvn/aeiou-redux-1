@@ -1,0 +1,18 @@
+state= {
+	id=914
+	name="STATE_914"
+	manpower = 7356
+	
+	state_category = pastoral
+
+	history= {
+		owner = ASI
+		add_core_of = ASI
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces={
+	     12688 3721 4218 12636 10656 12593 12663
+	}
+}

@@ -1,0 +1,37 @@
+
+state={
+	id=6
+	name="STATE_6" # Flanders
+	manpower = 2146710
+	resources={
+	    gunpowder=2
+	    horses=4
+	}
+	
+	state_category = large_city
+
+	history={
+		owner = SPN
+		victory_points = { 516 30 }
+		victory_points = { 6598 30 }
+		victory_points = { 6560 5 }
+		victory_points = { 13068 1 }
+		victory_points = { 3576 1 }
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 2
+			6560 = {
+				naval_base = 1
+			}
+			6598 = {
+				naval_base = 4
+			}
+		}	
+		add_core_of = SPN
+	}
+
+	provinces={
+		516 3576 6446 6560 6598 11419 13068 
+	}
+}

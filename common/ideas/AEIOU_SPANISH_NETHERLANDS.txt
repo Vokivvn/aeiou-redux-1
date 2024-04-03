@@ -1,0 +1,88 @@
+ideas = {
+	
+	country = {
+
+        spn_brabantian_nationalism = {
+            picture = SPN_Brabantian_Nationalism
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            modifier = {
+				conscription_factor = -0.05
+				stability_factor = -0.15 
+            }
+        }
+		spn_ongoing_industrialisation = {
+            picture = SPN_Ongoing_Industrialisation
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+
+            modifier = {
+				production_factory_max_efficiency_factor = 0.15
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				line_change_production_efficiency_factor = 0.08
+            }
+        }
+		spn_sociedad_flamencoespañola = {
+            picture = Sociedad_Industrial_Flamenco-Espanola
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+
+             modifier = {
+                offence = -0.03
+                defence = -0.03
+				local_resources_factor	= -0.10
+				min_export = 0.10
+            }
+			targeted_modifier = {
+				tag = SPR
+				trade_cost_for_target_factor = -0.10
+			}
+        }
+		spn_noble_banks = {
+            picture = SPN_Noble_Funded_Banks
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+
+             modifier = {
+                offence = -0.03
+                defence = -0.03
+				local_resources_factor	= -0.10
+				min_export = 0.10
+            }
+			targeted_modifier = {
+				tag = SPR
+				trade_cost_for_target_factor = -0.10
+			}
+        }
+	}
+}

@@ -1,0 +1,33 @@
+
+state={
+	id=300
+	name="STATE_300"
+	manpower = 530300
+	
+	state_category = rural
+	
+	resources={
+		horses=1
+		wood=2
+
+	}
+	history={
+		owner = ARG
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			10362 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = ARG
+		victory_points = {
+			10362 5
+		}
+
+	}
+
+	provinces={
+		1613 1654 4457 10362 10502 12336 12468 12496 
+	}
+}

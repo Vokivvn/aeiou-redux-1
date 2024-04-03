@@ -1,0 +1,103 @@
+﻿division_template = {
+	name = "Royal Neapolitan Guard Battalion"
+
+	division_names_group = NAP_ARM_01
+
+	regiments = {
+		line_infantry = { x = 0 y = 0 }
+		line_infantry = { x = 0 y = 1 }
+		line_infantry = { x = 0 y = 2 }
+		line_infantry = { x = 0 y = 3 }
+		line_infantry = { x = 0 y = 4 }
+		line_infantry = { x = 1 y = 0 }
+		line_infantry = { x = 1 y = 1 }
+		line_infantry = { x = 1 y = 2 }
+		line_infantry = { x = 1 y = 3 }
+		line_infantry = { x = 1 y = 4 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Neapolitan Cavalry Division"
+
+	division_names_group = NAP_ARM_01
+
+	regiments = {
+		medium_cavalry = { x = 0 y = 0 }
+		medium_cavalry = { x = 0 y = 1 }
+		medium_cavalry = { x = 0 y = 2 }
+		medium_cavalry = { x = 0 y = 3 }
+		medium_cavalry = { x = 0 y = 4 }
+		medium_cavalry = { x = 1 y = 0 }
+		medium_cavalry = { x = 1 y = 1 }
+		medium_cavalry = { x = 1 y = 2 }
+		medium_cavalry = { x = 1 y = 3 }
+		medium_cavalry = { x = 1 y = 4 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Royal Neapolitan Knight Brigade"
+
+	division_names_group = NAP_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 1 y = 0 }
+		melee_battalion = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+division_template = {
+	name = "Unorganized Neapolitan Crusader Group"
+
+	division_names_group = NAP_ARM_01
+
+	regiments = {
+		melee_battalion = { x = 0 y = 0 }
+		melee_battalion = { x = 0 y = 1 }
+		melee_battalion = { x = 0 y = 2 }
+		melee_battalion = { x = 0 y = 3 }
+	}
+	priority = 0
+}
+
+units = {
+	division = {
+		name = "1st Royal Neapolitan Guard Battalion"
+		location = 819
+		division_template = "Royal Neapolitan Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Neapolitan Guard Battalion"
+		location = 11969
+		division_template = "Royal Neapolitan Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3rd Royal Neapolitan Guard Battalion"
+		location = 10074
+		division_template = "Royal Neapolitan Guard Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Neapolitan Cavalry Division"
+		location = 6843
+		division_template = "Royal Neapolitan Cavalry Division"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Royal Neapolitan Knight Brigade"
+		location = 11803
+		division_template = "Royal Neapolitan Knight Brigade"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Royal Neapolitan Knight Brigade"
+		location = 9994
+		division_template = "Royal Neapolitan Knight Brigade"
+		start_experience_factor = 0.3
+	}
+}

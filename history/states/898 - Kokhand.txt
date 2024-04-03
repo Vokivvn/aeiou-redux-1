@@ -1,0 +1,24 @@
+
+state={
+	id=898
+	name="STATE_898" 
+	manpower = 125613
+	resources={
+		wood=2
+	}
+	
+	state_category = town
+
+	history={
+		owner = UZB
+		add_core_of = UZB
+		buildings = {
+			infrastructure = 2
+		}
+		
+	}
+
+	provinces={
+	    1632 7639 10671 12722 756 12239 10205
+	}
+}

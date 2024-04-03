@@ -1,0 +1,20 @@
+capital = 34
+
+set_technology = {
+	muskets0 = 1
+	melee = 1
+	basic_cavalry = 1
+	tech_support = 1		
+	tech_engineers = 1
+	gw_artillery = 1
+	fuel_silos = 1
+}
+
+set_politics = {
+	ruling_party = despotist
+	elections_allowed = no
+}
+
+set_popularities = {
+	despotist = 100
+}

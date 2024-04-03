@@ -1,0 +1,37 @@
+
+state={
+	id=336
+	name="STATE_336"
+	manpower = 1586047
+	
+	state_category = rural
+	
+	resources={
+		iron=2
+		wood=2
+	}
+
+	history={
+		owner = ACH
+		victory_points = {
+			7329 1 
+		}
+		victory_points = {
+			10297 1 
+		}
+		buildings = {
+			infrastructure = 3
+			7329 = {
+				naval_base = 1
+			}
+			10297 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = ACH
+	}
+
+	provinces={
+		1291 1348 1364 1376 1392 4310 4355 4384 7329 7342 7399 10227 10297 12144 12199 12215 12255 12271
+	}
+}

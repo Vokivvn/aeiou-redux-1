@@ -1,0 +1,30 @@
+
+state={
+	id=811
+	name="STATE_811"
+	manpower = 19600
+	resources={
+		wood = 2
+		fabric = 6
+	}
+	state_category = pastoral
+
+	history={
+		owner = AUS
+		victory_points = {
+			6626 10 
+		}
+		buildings = {
+			infrastructure = 3
+			6626 = {
+				naval_base = 5
+
+			}
+		}
+		add_core_of = AUS
+	}
+
+	provinces={
+		6626
+	}
+}

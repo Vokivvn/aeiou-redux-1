@@ -1,0 +1,19 @@
+state={
+	id=865
+	name="STATE_865"
+
+	history={
+		owner = OTT
+		add_core_of = OTT
+		victory_points = {
+			13229 3
+		}
+	}
+
+	provinces={
+		5047 5091 13229
+	}
+	manpower = 10
+	buildings_max_level_factor = 1.000
+	state_category = rural
+}

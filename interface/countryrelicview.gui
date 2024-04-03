@@ -1,0 +1,261 @@
+guiTypes = {  
+	
+	containerWindowType = {
+		name = "relicbutton"
+		position = { x = 0 y = 5 }
+		size = { width=100%% height=100%% }
+		clipping = no
+
+		buttonType = {
+			name ="relic_button"
+			spriteType = "GFX_button_ledger" 
+			position = { x = -450 y = 0 }
+			shortcut = "ctrl+r"
+			Orientation = "UPPER_RIGHT"
+			scale = 1.15   
+			pdx_tooltip = RELIC_BUTTON_TOOLTIP 
+		}
+	}
+	
+	containerWindowType = {    
+		name = "relicsystem"            
+		position = { x=820 y=90}	    
+		size = { width=750 height=500 }
+		moveable = no 
+
+		background = { 
+			name = "Background"		
+			quadTextureSprite ="GFX_tiled_window"
+		}
+		instantTextboxType = {
+			name = "relic_title"
+			position = { x = 0 y = 15 }
+			font = "vic_36s"
+			text = "Relics"
+			format = centre
+			fixedsize = yes
+			maxWidth = 750                 
+			maxHeight = 36
+			#pdx_tooltip = HOG_DESCRIPTION_TEST
+		}
+		buttonType = {
+			name = "relic_closebutton"
+			spriteType = "GFX_closebutton"
+			position = { x= 705 y = -45 }
+			Orientation = "LOWER_LEFT"
+			pdx_tooltip = RELIC_EXIT_TOOLTIP 			
+		}
+		containerWindowType = {
+			name = "relic_list_container_list"
+			position = { x = 0 y = 50 }
+			size = { width= 750 height= 400 }
+			margin = { top = 0 bottom = 0 left = 20 right = 20 }
+
+			background ={
+				name ="Background"
+				quadTextureSprite ="GFX_tiled_window"
+				position = { x=0 y=0 }
+			}
+			
+			iconType = {
+				name = "relic_label"
+				spriteType = "GFX_relic_tab"
+				position = { x = 275 y = 288 }
+			}
+			
+			iconType = {        
+				name = "relic_icon"     
+				position = { x= 0 y = 15 }
+				spriteType = "GFX_relic_background"
+				Orientation = "UPPER_LEFT"		
+				pdx_tooltip = RELIC_ICON_TOOLTIP          
+			}
+			
+			instantTextboxType = {
+				name = "relic_name"
+				position = { x = 275 y = 288 }
+				font = "vic_36"
+				text = "[GetRelicName]"
+				maxWidth = 200
+				maxHeight = 50
+				format = center
+			}
+			
+			instantTextboxType = {
+				name = "relic_date"
+				position = { x = 275 y = 338 }
+				font = "hoi_18mbs"
+				text = "[GetRelicDate]"
+				maxWidth = 200
+				maxHeight = 50
+				format = center
+			}
+			
+			buttonType ={
+				name = "relic_desc_button"
+				spriteType = "GFX_pol_power_icon"
+				position = { x= 665 y = 340 }
+				Orientation = "UPPER_LEFT"  
+				scale = 1.5     
+				pdx_tooltip = RELIC_DESC_TOOLTIP
+			}
+			
+			buttonType ={
+				name = "relic_content_button"
+				spriteType = "GFX_pol_power_icon"
+				position = { x= 615 y = 340 }
+				Orientation = "UPPER_LEFT"  
+				scale = 1.5     
+				pdx_tooltip = RELIC_CONTENT_TOOLTIP
+			}
+			
+			
+			buttonType ={
+				name = "relic_sound_button"
+				spriteType = "GFX_pol_power_icon"
+				position = { x= 15 y = 340 }
+				Orientation = "UPPER_LEFT"  
+				scale = 1.5     
+				pdx_tooltip = RELIC_SOUND_TOOLTIP
+			}
+		}
+		buttonType = {
+			name = "relic_left"
+			quadTextureSprite = "GFX_scroll_left"
+			position = { x= 100 y = -50 }
+			Orientation = "LOWER_LEFT"	
+			clicksound = click_scroll
+			scale = 2.0
+			pdx_tooltip = RELIC_LEFT_TOOLTIP  
+		}
+		
+		buttonType = {
+			name = "relic_right"
+			quadTextureSprite = "GFX_scroll_right"
+			position = { x= 628 y = -50 }
+			Orientation = "LOWER_LEFT"	
+			clicksound = click_scroll
+			scale = 2.0
+			pdx_tooltip = RELIC_RIGHT_TOOLTIP 
+		}
+		
+	}
+	containerWindowType = {
+		name = "relic_desc_interface"
+		position = { x = 1170 y = 575 }
+		size = { width= 400 height= 300 }
+		clipping = no
+		
+		containerWindowType = {
+			name = "relic_desc_text"
+			position = { x = 0 y = 0 }
+			size = { width= 400 height= 300 }
+			clipping = yes
+			verticalScrollbar = "right_vertical_slider"
+			margin = { top = 15 left = 0 bottom = 15 right = 0}
+			
+			background = {
+				name = "relic_desc_background"
+				quadTextureSprite= "GFX_tiled_window"
+			} 
+			
+			instantTextboxType = {
+				name = "relic_desc_name"
+				position = { x = 0 y = 0 }
+				font = "vic_36"
+				text = "[GetRelicName]"
+				maxWidth = 400
+				maxHeight = 36
+				format = center
+			}
+			
+			instantTextBoxType = {
+				name = "relic_desc_desc"
+				position = { x = 25 y = 40 }
+				font = "gothic_22"
+				borderSize = {x = 0 y = 0}
+				text = "Relic_desc"	
+				maxWidth = 350
+				#maxHeight = 1000
+				format = left
+			}
+			
+			instantTextboxType = {
+				name = "relic_desc_length"
+				position = { x = 0 y = 400 }
+				font = "vic_36"
+				text = "Relic_scrollbar"
+				maxWidth = 400
+				#maxHeight = 36
+				format = center
+			}
+			
+
+		}
+		buttonType = {
+			name = "relic_desc_closebutton"
+			spriteType = "GFX_closebutton"
+			position = { x= 10 y = -40 }
+			Orientation = "LOWER_LEFT"	
+		}
+	}
+	containerWindowType = {
+		name = "relic_content_interface"
+		position = { x = 820 y = 575 }
+		size = { width= 750 height= 300 }
+		clipping = no
+		
+		containerWindowType = {
+			name = "relic_content_text"
+			position = { x = 0 y = 0 }
+			size = { width= 750 height= 300 }
+			clipping = yes
+			verticalScrollbar = "right_vertical_slider"
+			margin = { top = 15 left = 0 bottom = 15 right = 0}
+			
+			background = {
+				name = "relic_content_background"
+				quadTextureSprite= "GFX_tiled_window"
+			} 
+			
+			instantTextboxType = {
+				name = "relic_content_name"
+				position = { x = 0 y = 0 }
+				font = "vic_36"
+				text = "[GetRelicName]"
+				maxWidth = 750
+				maxHeight = 36
+				format = center
+			}
+			
+			instantTextBoxType = {
+				name = "relic_content_desc"
+				position = { x = 25 y = 40 }
+				font = "gothic_22"
+				borderSize = {x = 0 y = 0}
+				text = "Relic_desc"	
+				maxWidth = 700
+				#maxHeight = 1000
+				format = left
+			}
+			
+			instantTextboxType = {
+				name = "relic_content_length"
+				position = { x = 0 y = 400 }
+				font = "vic_36"
+				text = "Relic_scrollbar"
+				maxWidth = 750
+				#maxHeight = 36
+				format = center
+			}
+			
+
+		}
+		buttonType = {
+			name = "relic_content_closebutton"
+			spriteType = "GFX_closebutton"
+			position = { x= 10 y = -40 }
+			Orientation = "LOWER_LEFT"	
+		}
+	}
+}

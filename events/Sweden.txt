@@ -1,0 +1,22 @@
+﻿###########################
+#
+# Sweden Events
+#
+###########################
+
+add_namespace = SWEMarketcrash
+
+country_event = { #Reaction to the market crash
+	id = SWEMarketcrash.1
+	title = SWEMarketcrash.1.t
+	desc = SWEMarketcrash.1.d
+	
+	#picture = GFX_report_news_event_rome_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SWEMarketcrash.1.a 
+		add_ideas = swe_collapse_bruh
+	}
+}
